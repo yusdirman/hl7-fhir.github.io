@@ -1,0 +1,131 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Protocol",
+  "resourceType": "Protocol",
+  "Resource.id": {
+    "value": "example"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p>\n\t\t<b>id: </b>example, </p>\n\t\n\t<p>\n\t\t<b>identifier: </b>, <b>system: </b>http://acme.org, <b>value: </b>example-1, </p>\n\t<p>\n\t\t<b>title: </b>Obesity Assessment Protocol, </p>\n\t<p>\n\t\t<b>status: </b>draft, </p>\n\t<p>\n\t\t<b>type: </b>condition, </p>\n\t<p>\n\t\t<b>purpose: </b>Example of A medical algorithm for assessment and treatment of overweight and obesity, </p>\n\t<p>\n\t\t<b>author: </b>, <b>display: </b>National Heart, Lung, and Blood Institute http://www.nhlbi.nih.gov/health-pro/guidelines/current/obesity-guidelines/e_textbook/txgd/algorthm/algorthm.htm, </p>\n\t<p>\n\t\t<b>step: </b>, <b>name: </b>Measure BMI, <b>description: </b>Measure, Weight, Height, Waist, Circumference; Calculate BMI  Weight must be measured so that the BMI can be calculated. Most charts are based on weights obtained with the patient wearing undergarments and no shoes. BMI can be manually calculated (kg/[height in meters]2), but is more easily obtained from a nomogram. Waist circumference is important because evidence suggests that abdominal fat is a particularly strong determinant of cardiovascular risk in those with a BMI of 25 to 34.9 kg/m2. Increased waist circumference can also be a marker of increased risk even in persons of normal weight. The technique for measuring waist circumference is described in the text. A nutrition assessment will also help to assess the diet and physical activity habits of overweight patients, <b>precondition: </b>, <b>union: </b>, <b>description: </b>The practitioner must seek to determine whether the patient has ever been overweight. While a technical definition is provided, a simple question such as 'Have you ever been overweight?' will accomplish the same goal. Questions directed towards weight history, dietary habits, physical activities, and medications may provide useful information about the origins of obesity in particular patients., <b>condition: </b>, <b>type: </b>, <b>coding: </b>, <b>system: </b>http://acme.org, <b>code: </b>1234, <b>display: </b>Obesity, <b>valueBoolean: </b>true, <b>union: </b>, <b>description: </b>BMI Measured in Past 2 Years  For those who have not been overweight, a 2 year interval is appropriate for the reassessment of BMI. While this time span is not evidence-based, it is believed to be a reasonable compromise between the need to identify weight gain at an early stage and the need to limit the time, effort, and cost of repeated measurements., <b>condition: </b>, <b>type: </b>, <b>text: </b>BMI in last 2 years, <b>valueBoolean: </b>false, <b>activity: </b>, <b>detail: </b>, <b>category: </b>procedure, <b>code: </b>, <b>coding: </b>, <b>system: </b>http://loinc.org, <b>code: </b>39156-5, <b>display: </b>Body mass index (BMI) [Ratio], <b>performer: </b>, <b>display: </b>Nurse Ratched, <b>description: </b>Extra information on activity , </p>\n\t\t</div>"
+    }
+  },
+  "Protocol.identifier": [
+    {
+      "Identifier.system": {
+        "value": "http://acme.org"
+      },
+      "Identifier.value": {
+        "value": "example-1"
+      }
+    }
+  ],
+  "Protocol.title": {
+    "value": "Obesity Assessment Protocol"
+  },
+  "Protocol.status": {
+    "value": "draft"
+  },
+  "Protocol.type": {
+    "value": "condition"
+  },
+  "Protocol.purpose": {
+    "value": "Example of A medical algorithm for assessment and treatment of overweight and obesity"
+  },
+  "Protocol.author": {
+    "Reference.display": {
+      "value": "National Heart, Lung, and Blood Institute http://www.nhlbi.nih.gov/health-pro/guidelines/current/obesity-guidelines/e_textbook/txgd/algorthm/algorthm.htm"
+    }
+  },
+  "Protocol.step": [
+    {
+      "Protocol.step.name": {
+        "value": "Measure BMI"
+      },
+      "Protocol.step.description": {
+        "value": "Measure, Weight, Height, Waist, Circumference; Calculate BMI  Weight must be measured so that the BMI can be calculated. Most charts are based on weights obtained with the patient wearing undergarments and no shoes. BMI can be manually calculated (kg/[height in meters]2), but is more easily obtained from a nomogram. Waist circumference is important because evidence suggests that abdominal fat is a particularly strong determinant of cardiovascular risk in those with a BMI of 25 to 34.9 kg/m2. Increased waist circumference can also be a marker of increased risk even in persons of normal weight. The technique for measuring waist circumference is described in the text. A nutrition assessment will also help to assess the diet and physical activity habits of overweight patients"
+      },
+      "Protocol.step.precondition": {
+        "Protocol.step.precondition.union": [
+          {
+            "Protocol.step.precondition.description": {
+              "value": "The practitioner must seek to determine whether the patient has ever been overweight. While a technical definition is provided, a simple question such as 'Have you ever been overweight?' will accomplish the same goal. Questions directed towards weight history, dietary habits, physical activities, and medications may provide useful information about the origins of obesity in particular patients."
+            },
+            "Protocol.step.precondition.condition": {
+              "Protocol.step.precondition.condition.type": {
+                "CodeableConcept.coding": [
+                  {
+                    "Coding.system": {
+                      "value": "http://acme.org"
+                    },
+                    "Coding.code": {
+                      "value": "1234"
+                    },
+                    "Coding.display": {
+                      "value": "Obesity"
+                    }
+                  }
+                ]
+              },
+              "Protocol.step.precondition.condition.valueBoolean": {
+                "value": true
+              }
+            }
+          },
+          {
+            "Protocol.step.precondition.description": {
+              "value": "BMI Measured in Past 2 Years  For those who have not been overweight, a 2 year interval is appropriate for the reassessment of BMI. While this time span is not evidence-based, it is believed to be a reasonable compromise between the need to identify weight gain at an early stage and the need to limit the time, effort, and cost of repeated measurements."
+            },
+            "Protocol.step.precondition.condition": {
+              "Protocol.step.precondition.condition.type": {
+                "CodeableConcept.text": {
+                  "value": "BMI in last 2 years"
+                }
+              },
+              "Protocol.step.precondition.condition.valueBoolean": {
+                "value": false
+              }
+            }
+          }
+        ]
+      },
+      "Protocol.step.activity": [
+        {
+          "Protocol.step.activity.detail": {
+            "Protocol.step.activity.detail.category": {
+              "value": "procedure"
+            },
+            "Protocol.step.activity.detail.code": {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "value": "http://loinc.org"
+                  },
+                  "Coding.code": {
+                    "value": "39156-5"
+                  },
+                  "Coding.display": {
+                    "value": "Body mass index (BMI) [Ratio]"
+                  }
+                }
+              ],
+              "concept": "http://loinc.org/owl#39156-5"
+            },
+            "Protocol.step.activity.detail.performer": [
+              {
+                "Reference.display": {
+                  "value": "Nurse Ratched"
+                }
+              }
+            ],
+            "Protocol.step.activity.detail.description": {
+              "value": "Extra information on activity "
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

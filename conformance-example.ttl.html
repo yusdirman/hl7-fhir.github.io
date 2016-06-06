@@ -1,0 +1,388 @@
+﻿<!DOCTYPE HTML>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Conformance-example.ttl - FHIR v1.4.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+  <link rel="Prev" href="http://hl7.org/fhir/conformance-example.ttl.html"/>
+
+  <!-- Bootstrap core CSS -->
+  <link href="./dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="./assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="./assets/css/project.css" rel="stylesheet"/>
+  <link href="./assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment"><!-- segment-header -->	
+		<div class="container"><!-- container -->
+			<a id="logo" href="http://hl7.org/fhir" no-external="true"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a id="hl7-logo" href="http://www.hl7.org" no-external="true">
+					<img src="./assets/images/hl7-logo.png" width="42" height="50" alt="visit the hl7 website"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="./assets/images/search.png"/></a></div> 
+		</div>
+		<div class="container"><!-- container -->
+	</div></div><!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment"><!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container"><!-- container -->
+ <!-- HEADER CONTENT -->
+ 	      		
+ 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="documentation.html">Documentation</a></li>
+              <li><a href="implementation.html">Implementation</a></li>
+              <li><a href="resourcelist.html">Resources</a></li>
+              <li><a href="clinical.html">Clinical</a></li>
+              <li><a href="administration.html">Administrative</a></li>
+              <li><a href="infrastructure.html">Infrastructure</a></li>
+              <li><a href="financial.html">Financial</a></li>
+
+						</ul>
+					</div><!-- /.nav-collapse -->
+				</div><!-- /.container -->
+			</nav><!-- /.navbar -->
+      		
+				
+<!-- /HEADER CONTENT -->				
+		</div><!-- /container -->
+	</div><!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment"><!-- segment-breadcrumb -->
+		<div class="container"><!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="infrastructure.html">Infrastructure</a></li>        <li><a href="conformance.html">Conformance</a></li>        <li><b>Example Instance</b></li>        <!-- conformance-example.ttl.html / resource-instance:Conformance / Example-->
+
+			</ul>	
+		</div><!-- /container -->
+	</div><!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment"><!-- segment-content -->
+	<div class="container"><!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+<!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<h1>Conformance-example.ttl</h1>
+
+<p>
+<a href="conformance-example.ttl">Raw Turtle</a>, 
+<a href="conformance-example.jsonld">JSON-LD</a> 
+</p>
+
+<div class="example">
+<p>General Condition Example</p>
+<pre class="json">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+# - resource -------------------------------------------------------------------
+
+&lt;http://hl7.org/fhir/Conformanceexample&gt; a fhir:Conformance;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value &quot;example&quot;];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value &quot;generated&quot; ];
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n      \n      &lt;p&gt;The EHR Server supports the following transactions for the resource Person: read, vread, \n        update, history, search(name,gender), create and updates.&lt;/p&gt;\n      \n      &lt;p&gt;The EHR System supports the following message: admin-notify::Person.&lt;/p&gt;\n      \n      &lt;p&gt;The EHR Application has a \n        &lt;a href=\&quot;http://fhir.hl7.org/base/Profilebc054d23-75e1-4dc6-aca5-838b6b1ac81d/_history/b5fdd9fc-b021-4ea1-911a-721a60663796\&quot;&gt;general document profile&lt;/a&gt;.\n      &lt;/p&gt;\n    \n    &lt;/div&gt;&quot;
+  ];
+  fhir:Conformance.url [ fhir:value &quot;68D043B5-9ECF-4559-A57A-396E0D452311&quot;];
+  fhir:Conformance.version [ fhir:value &quot;20130510&quot;];
+  fhir:Conformance.name [ fhir:value &quot;ACME EHR Conformance statement&quot;];
+  fhir:Conformance.status [ fhir:value &quot;draft&quot;];
+  fhir:Conformance.experimental [ fhir:value &quot;true&quot;^^xsd:boolean];
+  fhir:Conformance.date [ fhir:value &quot;2012-01-04&quot;^^xsd:date];
+  fhir:Conformance.publisher [ fhir:value &quot;ACME Corporation&quot;];
+  fhir:Conformance.contact [
+     fhir:index 0;
+     fhir:Conformance.contact.name [ fhir:value &quot;System Administrator&quot; ];
+     fhir:Conformance.contact.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value &quot;email&quot; ];
+       fhir:ContactPoint.value [ fhir:value &quot;wile@acme.org&quot; ]
+     ]
+  ];
+  fhir:Conformance.description [ fhir:value &quot;This is the FHIR conformance statement for the main EHR at ACME for the private interface - it does not describe the public interface&quot;];
+  fhir:Conformance.requirements [ fhir:value &quot;Main EHR conformance statement, published for contracting and operational support&quot;];
+  fhir:Conformance.copyright [ fhir:value &quot;Copyright © Acme Healthcare and GoodCorp EHR Systems&quot;];
+  fhir:Conformance.kind [ fhir:value &quot;instance&quot;];
+  fhir:Conformance.software [
+     fhir:Conformance.software.name [ fhir:value &quot;EHR&quot; ];
+     fhir:Conformance.software.version [ fhir:value &quot;0.00.020.2134&quot; ];
+     fhir:Conformance.software.releaseDate [ fhir:value &quot;2012-01-04&quot;^^xsd:date ]
+  ];
+  fhir:Conformance.implementation [
+     fhir:Conformance.implementation.description [ fhir:value &quot;main EHR at ACME&quot; ];
+     fhir:Conformance.implementation.url [ fhir:value &quot;http://10.2.3.4/fhir&quot; ]
+  ];
+  fhir:Conformance.fhirVersion [ fhir:value &quot;1.0.0&quot;];
+  fhir:Conformance.acceptUnknown [ fhir:value &quot;both&quot;];
+  fhir:Conformance.format [
+     fhir:value &quot;xml&quot;;
+     fhir:index 0
+  ], [
+     fhir:value &quot;json&quot;;
+     fhir:index 1
+  ];
+  fhir:Conformance.rest [
+     fhir:index 0;
+     fhir:Conformance.rest.mode [ fhir:value &quot;server&quot; ];
+     fhir:Conformance.rest.documentation [ fhir:value &quot;Main FHIR endpoint for acem health&quot; ];
+     fhir:Conformance.rest.security [
+       fhir:Conformance.rest.security.cors [ fhir:value &quot;true&quot;^^xsd:boolean ];
+       fhir:Conformance.rest.security.service [
+         fhir:index 0;
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value &quot;http://hl7.org/fhir/restful-security-service&quot; ];
+           fhir:Coding.code [ fhir:value &quot;SMART-on-FHIR&quot; ]
+         ]
+       ];
+       fhir:Conformance.rest.security.description [ fhir:value &quot;See Smart on FHIR documentation&quot; ];
+       fhir:Conformance.rest.security.certificate [
+         fhir:index 0;
+         fhir:Conformance.rest.security.certificate.type [ fhir:value &quot;application/jwt&quot; ];
+         fhir:Conformance.rest.security.certificate.blob [ fhir:value &quot;IHRoaXMgYmxvYiBpcyBub3QgdmFsaWQ=&quot;^^xsd:base64Binary ]
+       ]
+     ];
+     fhir:Conformance.rest.resource [
+       fhir:index 0;
+       fhir:Conformance.rest.resource.type [ fhir:value &quot;Patient&quot; ];
+       fhir:Conformance.rest.resource.profile [
+         fhir:link &lt;http://fhir.hl7.org/base/Profile7896271d-57f6-4231-89dc-dcc91eab2416&gt;;
+         fhir:Reference.reference [ fhir:value &quot;http://fhir.hl7.org/base/Profile7896271d-57f6-4231-89dc-dcc91eab2416&quot; ]
+       ];
+       fhir:Conformance.rest.resource.interaction [
+         fhir:index 0;
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;read&quot; ]
+       ], [
+         fhir:index 1;
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;vread&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Only supported for patient records since 12-Dec 2012&quot; ]
+       ], [
+         fhir:index 2;
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;update&quot; ]
+       ], [
+         fhir:index 3;
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;history-instance&quot; ]
+       ], [
+         fhir:index 4;
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;create&quot; ]
+       ], [
+         fhir:index 5;
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;history-type&quot; ]
+       ];
+       fhir:Conformance.rest.resource.versioning [ fhir:value &quot;versioned-update&quot; ];
+       fhir:Conformance.rest.resource.readHistory [ fhir:value &quot;true&quot;^^xsd:boolean ];
+       fhir:Conformance.rest.resource.updateCreate [ fhir:value &quot;false&quot;^^xsd:boolean ];
+       fhir:Conformance.rest.resource.conditionalCreate [ fhir:value &quot;true&quot;^^xsd:boolean ];
+       fhir:Conformance.rest.resource.conditionalUpdate [ fhir:value &quot;false&quot;^^xsd:boolean ];
+       fhir:Conformance.rest.resource.conditionalDelete [ fhir:value &quot;not-supported&quot; ];
+       fhir:Conformance.rest.resource.searchInclude [
+         fhir:value &quot;Organization&quot;;
+         fhir:index 0
+       ];
+       fhir:Conformance.rest.resource.searchRevInclude [
+         fhir:value &quot;Person&quot;;
+         fhir:index 0
+       ];
+       fhir:Conformance.rest.resource.searchParam [
+         fhir:index 0;
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;identifier&quot; ];
+         fhir:Conformance.rest.resource.searchParam.definition [ fhir:value &quot;http://hl7.org/fhir/SearchParameter/Patient-identifier&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;token&quot; ];
+         fhir:Conformance.rest.resource.searchParam.documentation [ fhir:value &quot;Only supports search by institution MRN&quot; ];
+         fhir:Conformance.rest.resource.searchParam.modifier [
+           fhir:value &quot;missing&quot;;
+           fhir:index 0
+         ]
+       ], [
+         fhir:index 1;
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;careprovider&quot; ];
+         fhir:Conformance.rest.resource.searchParam.definition [ fhir:value &quot;http://hl7.org/fhir/SearchParameter/Patient-careprovider&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;reference&quot; ];
+         fhir:Conformance.rest.resource.searchParam.target [
+           fhir:value &quot;Organization&quot;;
+           fhir:index 0
+         ];
+         fhir:Conformance.rest.resource.searchParam.modifier [
+           fhir:value &quot;missing&quot;;
+           fhir:index 0
+         ];
+         fhir:Conformance.rest.resource.searchParam.chain [
+           fhir:value &quot;name&quot;;
+           fhir:index 0
+         ], [
+           fhir:value &quot;identifier&quot;;
+           fhir:index 1
+         ]
+       ]
+     ];
+     fhir:Conformance.rest.interaction [
+       fhir:index 0;
+       fhir:Conformance.rest.interaction.code [ fhir:value &quot;transaction&quot; ]
+     ], [
+       fhir:index 1;
+       fhir:Conformance.rest.interaction.code [ fhir:value &quot;history-system&quot; ]
+     ];
+     fhir:Conformance.rest.compartment [
+       fhir:value &quot;http://hl7.org/fhir/compartment/Patient&quot;;
+       fhir:index 0
+     ]
+  ];
+  fhir:Conformance.messaging [
+     fhir:index 0;
+     fhir:Conformance.messaging.endpoint [
+       fhir:index 0;
+       fhir:Conformance.messaging.endpoint.protocol [
+         fhir:Coding.system [ fhir:value &quot;http://hl7.org/fhir/message-transport&quot; ];
+         fhir:Coding.code [ fhir:value &quot;mllp&quot; ]
+       ];
+       fhir:Conformance.messaging.endpoint.address [ fhir:value &quot;mllp:10.1.1.10:9234&quot; ]
+     ];
+     fhir:Conformance.messaging.reliableCache [ fhir:value &quot;30&quot;^^xsd:nonNegativeInteger ];
+     fhir:Conformance.messaging.documentation [ fhir:value &quot;ADT A08 equivalent for external system notifications&quot; ];
+     fhir:Conformance.messaging.event [
+       fhir:index 0;
+       fhir:Conformance.messaging.event.code [
+         fhir:Coding.system [ fhir:value &quot;http://hl7.org/fhir/message-type&quot; ];
+         fhir:Coding.code [ fhir:value &quot;admin-notify&quot; ]
+       ];
+       fhir:Conformance.messaging.event.category [ fhir:value &quot;Consequence&quot; ];
+       fhir:Conformance.messaging.event.mode [ fhir:value &quot;receiver&quot; ];
+       fhir:Conformance.messaging.event.focus [ fhir:value &quot;Patient&quot; ];
+       fhir:Conformance.messaging.event.request [
+         fhir:link &lt;http://hl7.org/fhir/StructureDefinition/daf-patient&gt;;
+         fhir:Reference.reference [ fhir:value &quot;StructureDefinition/daf-patient&quot; ]
+       ];
+       fhir:Conformance.messaging.event.response [
+         fhir:link &lt;http://hl7.org/fhir/StructureDefinition/MessageHeader&gt;;
+         fhir:Reference.reference [ fhir:value &quot;StructureDefinition/MessageHeader&quot; ]
+       ];
+       fhir:Conformance.messaging.event.documentation [ fhir:value &quot;Notification of an update to a patient resource. changing the links is not supported&quot; ]
+     ]
+  ];
+  fhir:Conformance.document [
+     fhir:index 0;
+     fhir:Conformance.document.mode [ fhir:value &quot;consumer&quot; ];
+     fhir:Conformance.document.documentation [ fhir:value &quot;Basic rules for all documents in the EHR system&quot; ];
+     fhir:Conformance.document.profile [
+       fhir:link &lt;http://fhir.hl7.org/base/Profilebc054d23-75e1-4dc6-aca5-838b6b1ac81d/_history/b5fdd9fc-b021-4ea1-911a-721a60663796&gt;;
+       fhir:Reference.reference [ fhir:value &quot;http://fhir.hl7.org/base/Profilebc054d23-75e1-4dc6-aca5-838b6b1ac81d/_history/b5fdd9fc-b021-4ea1-911a-721a60663796&quot; ]
+     ]
+  ].
+
+# -------------------------------------------------------------------------------------
+
+
+</pre>
+</div>
+
+
+<p>
+Usage note: every effort has been made to ensure that the
+examples are correct and useful, but they are not a normative part 
+of the specification. 
+</p>
+
+</div>
+
+
+				</div><!-- /inner-wrapper -->
+            </div><!-- /row -->
+        </div><!-- /container -->
+        
+    </div><!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment"><!-- segment-footer -->
+		<div class="container"><!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        © HL7.org 2011+. FHIR STU3 Candidate (v1.4.0-8453) generated on Mon, Jun 6, 2016 20:20+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search</a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fconformance-example.ttl.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fconformance-example.ttl.html">Compare to DSTU2</a> |                
+               <a style="color: #81BEF7" rel="license" href="license.html"><img src="cc0.png" style="border-style: none;" alt="CC0"/></a> | 
+               <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>   
+        </span>
+        </p>
+			</div><!-- /inner-wrapper -->
+		</div><!-- /container -->
+	</div><!-- /segment-footer -->
+<!-- disqus thread -->
+<!--disqus-->
+<!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden"><!-- segment-post-footer -->
+		<div class="container"><!-- container -->
+		</div><!-- /container -->
+	</div><!-- /segment-post-footer -->
+    
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>   <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

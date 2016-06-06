@@ -1,0 +1,128 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Contract",
+  "resourceType": "Contract",
+  "Resource.id": {
+    "value": "pcd-example-notAuthor"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">The following scenario is based on existing jurisdictional policy and are realized in existing systems in Canada. \n\tThe default policy is one of implied consent for the provision of care, so these scenarios all deal with withdrawal or withholding consent for that purpose. \n\tIn other jurisdictions, where an express consent model is used (Opt-In), these would examples would contain the phrase &quot;consent to&quot; rather \n\tthan &quot;withhold&quot; or &quot;withdraw&quot; consent for.\n    <p>\n\tspecific to use-case 5) Withhold or withdraw consent for disclosure of records that were authored by a specific organization (or service delivery location).  \n\t</p><p>\n    Patient &quot;P. van de Heuvel&quot; wishes to have all of the PHI collected at the Good Health Psychiatric Hospital \n   restricted from disclosure to every provider.\n   </p>\n   </div>"
+    }
+  },
+  "Contract.issued": {
+    "value": "2015-11-18"
+  },
+  "Contract.subject": [
+    {
+      "Reference.reference": {
+        "value": "Patient/f001"
+      },
+      "Reference.display": {
+        "value": "P. van de Heuvel"
+      }
+    }
+  ],
+  "Contract.authority": [
+    {
+      "Reference.reference": {
+        "value": "Organization/Infoway"
+      },
+      "Reference.display": {
+        "value": "Canada Infoway"
+      }
+    }
+  ],
+  "Contract.domain": [
+    {
+      "Reference.reference": {
+        "value": "Location/Infoway"
+      },
+      "Reference.display": {
+        "value": "Canada Infoway"
+      }
+    }
+  ],
+  "Contract.type": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://loinc.org"
+        },
+        "Coding.code": {
+          "value": "57016-8"
+        }
+      }
+    ],
+    "concept": "http://loinc.org/owl#57016-8"
+  },
+  "Contract.subType": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "value": "http://www.infoway-inforoute.ca.org/Consent-subtype-codes"
+          },
+          "Coding.code": {
+            "value": "Opt-In"
+          },
+          "Coding.display": {
+            "value": "Default Authorization with exceptions."
+          }
+        }
+      ]
+    }
+  ],
+  "Contract.term": [
+    {
+      "Contract.term.type": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://hl7.org/fhir/consent-term-type-codes"
+            },
+            "Coding.code": {
+              "value": "withhold-authored-by"
+            },
+            "Coding.display": {
+              "value": "Withhold all data authored by specified actor entity."
+            }
+          }
+        ]
+      },
+      "Contract.term.topic": [
+        {
+          "Reference.reference": {
+            "value": "Organization/2.16.840.1.113883.19.5"
+          },
+          "Reference.display": {
+            "value": "Good Health Clinic"
+          }
+        }
+      ],
+      "Contract.term.text": {
+        "value": "Withhold all data authored by Good Health provider."
+      }
+    }
+  ],
+  "Contract.friendly": [
+    {
+      "Contract.friendly.contentAttachment": {
+        "Attachment.title": {
+          "value": "The terms of the consent in friendly consumer speak."
+        }
+      }
+    }
+  ],
+  "Contract.legal": [
+    {
+      "Contract.legal.contentAttachment": {
+        "Attachment.title": {
+          "value": "The terms of the consent in lawyer speak."
+        }
+      }
+    }
+  ]
+}

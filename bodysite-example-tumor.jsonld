@@ -1,0 +1,83 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/BodySite",
+  "resourceType": "BodySite",
+  "Resource.id": {
+    "value": "tumor"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: tumor</p><p><b>patient</b>: <a>Patient/example</a></p><p><b>identifier</b>: 12345</p><p><b>code</b>: Splenic mass <span>(Details : {SNOMED CT code '4147007' = 'Mass (morphologic abnormality)', given as 'Mass (morphologic abnormality)'})</span></p><p><b>modifier</b>: Splenic mass <span>(Details : {SNOMED CT code '78961009' = 'Splenic structure (body structure)', given as 'Splenic structure (body structure)'})</span></p><p><b>description</b>: 7 cm maximum diameter</p><p><b>image</b>: </p></div>"
+    }
+  },
+  "BodySite.patient": {
+    "Reference.reference": {
+      "value": "Patient/example"
+    },
+    "reference": "http://hl7.org/fhir//Patient/example"
+  },
+  "BodySite.identifier": [
+    {
+      "Identifier.system": {
+        "value": "http://goodhealth.org/bodysite/identifiers"
+      },
+      "Identifier.value": {
+        "value": "12345"
+      }
+    }
+  ],
+  "BodySite.code": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "value": "4147007"
+        },
+        "Coding.display": {
+          "value": "Mass (morphologic abnormality)"
+        }
+      }
+    ],
+    "CodeableConcept.text": {
+      "value": "Splenic mass"
+    },
+    "concept": "http://snomed.info/sct#4147007"
+  },
+  "BodySite.modifier": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "value": "http://snomed.info/sct"
+          },
+          "Coding.code": {
+            "value": "78961009"
+          },
+          "Coding.display": {
+            "value": "Splenic structure (body structure)"
+          }
+        }
+      ],
+      "CodeableConcept.text": {
+        "value": "Splenic mass"
+      }
+    }
+  ],
+  "BodySite.description": {
+    "value": "7 cm maximum diameter"
+  },
+  "BodySite.image": [
+    {
+      "Attachment.contentType": {
+        "value": "application/dicom"
+      },
+      "Attachment.url": {
+        "value": "http://10.1.2.3:1000/wado?requestType=WADO&amp;wado_details…"
+      }
+    }
+  ]
+}

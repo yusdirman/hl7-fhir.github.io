@@ -1,0 +1,112 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/MedicationOrder",
+  "resourceType": "MedicationOrder",
+  "Resource.id": {
+    "value": "medrx006"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p><big>Capecitabine (Recurrent/Metastatic)</big></p>\n      <p>Course:</p>\n      <p>Name: Capecitabine</p>\n      <p>Agent Protocols Options:</p>\n      <p><b>Capecitabine 1000-1250 mg/m^2 PO twice daily D1-14</b></p>\n      <p>Offset: None</p>\n      <p>Cycle length: Q21D</p>\n    </div>"
+    }
+  },
+  "MedicationOrder.status": {
+    "value": "on-hold",
+    "string.extension": [
+      {
+        "Extension.url": {
+          "value": "http://localhost:3000/MedicationOrder/mscode#original-status"
+        },
+        "Extension.valueCode": {
+          "value": "pending"
+        }
+      }
+    ]
+  },
+  "MedicationOrder.medicationReference": {
+    "Reference.reference": {
+      "value": "Medication/MedicationExample15"
+    },
+    "reference": "http://hl7.org/fhir//Medication/MedicationExample15"
+  },
+  "MedicationOrder.patient": {
+    "Reference.reference": {
+      "value": "Patient/f001"
+    },
+    "reference": "http://hl7.org/fhir//Patient/f001"
+  },
+  "MedicationOrder.dosageInstruction": [
+    {
+      "MedicationOrder.dosageInstruction.text": {
+        "value": "Capecitabine 1000 mg/m^2 PO twice daily D1-14"
+      },
+      "MedicationOrder.dosageInstruction.timing": {
+        "Timing.repeat": {
+          "Timing.repeat.duration": {
+            "value": 21
+          },
+          "Timing.repeat.durationUnit": {
+            "value": "d"
+          },
+          "Timing.repeat.frequency": {
+            "value": 2
+          },
+          "Timing.repeat.period": {
+            "value": 1
+          },
+          "Timing.repeat.periodUnit": {
+            "value": "d"
+          }
+        }
+      },
+      "MedicationOrder.dosageInstruction.route": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "value": "394899003"
+            },
+            "Coding.display": {
+              "value": "oral administration of treatment"
+            }
+          }
+        ],
+        "concept": "http://snomed.info/sct#394899003"
+      },
+      "MedicationOrder.dosageInstruction.doseQuantity": {
+        "Quantity.value": {
+          "value": 1000
+        },
+        "Quantity.unit": {
+          "value": "mg/m^2"
+        },
+        "Quantity.system": {
+          "value": "http://unitsofmeasure.org"
+        },
+        "Quantity.code": {
+          "value": "ml"
+        }
+      }
+    }
+  ],
+  "MedicationOrder.dispenseRequest": {
+    "MedicationOrder.dispenseRequest.quantity": {
+      "Quantity.value": {
+        "value": 1700
+      },
+      "Quantity.unit": {
+        "value": "mg"
+      },
+      "Quantity.system": {
+        "value": "http://unitsofmeasure.org"
+      },
+      "Quantity.code": {
+        "value": "mg"
+      }
+    }
+  }
+}

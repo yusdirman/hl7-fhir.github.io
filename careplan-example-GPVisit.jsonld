@@ -1,0 +1,274 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/CarePlan",
+  "resourceType": "CarePlan",
+  "Resource.id": {
+    "value": "gpvisit"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "additional"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>  Represents the flow of a patient within a practice. The plan is created when\n        they arrive and represents the 'care' of the patient over the course of that encounter.\n        They first see the nurse for basic observations (BP, pulse, temp) then the doctor for\n        the consultation and finally the nurse again for a tetanus immunization. As the plan is\n        updated (e.g. a new activity added), different versions of the plan exist, and workflow timings\n        for reporting can be gained by examining the plan history. This example is the version after\n        seeing the doctor, and waiting for the nurse.The plan can either be created 'ad hoc' and modified as\n        the parient progresses, or start with a standard template (which can, of course, be altered to suit the patient.</p>\n    </div>"
+    }
+  },
+  "Condition": [
+    {
+      "Resource.id": {
+        "value": "p1"
+      },
+      "Condition.patient": {
+        "Reference.reference": {
+          "value": "Patient/100"
+        },
+        "Reference.display": {
+          "value": "Peter James Chalmers"
+        },
+        "reference": "http://hl7.org/fhir//Patient/100"
+      },
+      "Condition.code": {
+        "CodeableConcept.text": {
+          "value": "Overseas encounter"
+        }
+      },
+      "Condition.verificationStatus": {
+        "value": "confirmed"
+      }
+    },
+    {
+      "Resource.id": {
+        "value": "careteam"
+      },
+      "CareTeam.participant": [
+        {
+          "Element.id": {
+            "value": "part1"
+          },
+          "CareTeam.participant.role": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://example.org/local"
+                },
+                "Coding.code": {
+                  "value": "nur"
+                }
+              }
+            ],
+            "CodeableConcept.text": {
+              "value": "nurse"
+            }
+          },
+          "CareTeam.participant.member": {
+            "Reference.reference": {
+              "value": "Practitioner/13"
+            },
+            "Reference.display": {
+              "value": "Nurse Nancy"
+            },
+            "reference": "http://hl7.org/fhir//Practitioner/13"
+          }
+        },
+        {
+          "Element.id": {
+            "value": "part2"
+          },
+          "CareTeam.participant.role": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://example.org/local"
+                },
+                "Coding.code": {
+                  "value": "doc"
+                }
+              }
+            ],
+            "CodeableConcept.text": {
+              "value": "doctor"
+            }
+          },
+          "CareTeam.participant.member": {
+            "Reference.reference": {
+              "value": "Practitioner/14"
+            },
+            "Reference.display": {
+              "value": "Doctor Dave"
+            },
+            "reference": "http://hl7.org/fhir//Practitioner/14"
+          }
+        }
+      ]
+    },
+    {
+      "Resource.id": {
+        "value": "goal"
+      },
+      "Goal.subject": {
+        "Reference.reference": {
+          "value": "Patient/100"
+        },
+        "Reference.display": {
+          "value": "Peter James Chalmers"
+        },
+        "reference": "http://hl7.org/fhir//Patient/100"
+      },
+      "Goal.description": {
+        "value": "Complete consultation"
+      },
+      "Goal.status": {
+        "value": "planned"
+      }
+    }
+  ],
+  "CarePlan.subject": {
+    "Reference.reference": {
+      "value": "Patient/100"
+    },
+    "Reference.display": {
+      "value": "Peter James Chalmers"
+    },
+    "reference": "http://hl7.org/fhir//Patient/100"
+  },
+  "CarePlan.status": {
+    "value": "active"
+  },
+  "CarePlan.period": {
+    "Period.start": {
+      "value": "2013-01-01T10:30:00+00:00"
+    }
+  },
+  "CarePlan.addresses": [
+    {
+      "Reference.reference": {
+        "value": "#p1"
+      },
+      "Reference.display": {
+        "value": "obesity"
+      }
+    }
+  ],
+  "CarePlan.careTeam": {
+    "Reference.reference": {
+      "value": "#careteam"
+    }
+  },
+  "CarePlan.goal": [
+    {
+      "Reference.reference": {
+        "value": "#goal"
+      }
+    }
+  ],
+  "CarePlan.activity": [
+    {
+      "CarePlan.activity.actionResulting": [
+        {
+          "Reference.reference": {
+            "value": "Encounter/example"
+          }
+        }
+      ],
+      "CarePlan.activity.detail": {
+        "CarePlan.activity.detail.category": {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "value": "http://hl7.org/fhir/care-plan-activity-category"
+              },
+              "Coding.code": {
+                "value": "encounter"
+              }
+            }
+          ]
+        },
+        "CarePlan.activity.detail.code": {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "value": "http://example.org/local"
+              },
+              "Coding.code": {
+                "value": "nursecon"
+              }
+            }
+          ],
+          "CodeableConcept.text": {
+            "value": "Nurse Consultation"
+          }
+        },
+        "CarePlan.activity.detail.status": {
+          "value": "completed"
+        },
+        "CarePlan.activity.detail.prohibited": {
+          "value": false
+        },
+        "CarePlan.activity.detail.scheduledPeriod": {
+          "Period.start": {
+            "value": "2013-01-01T10:38:00+00:00"
+          },
+          "Period.end": {
+            "value": "2013-01-01T10:50:00+00:00"
+          }
+        },
+        "CarePlan.activity.detail.performer": [
+          {
+            "Reference.reference": {
+              "value": "Practitioner/13"
+            },
+            "Reference.display": {
+              "value": "Nurse Nancy"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "CarePlan.activity.detail": {
+        "CarePlan.activity.detail.category": {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "value": "http://hl7.org/fhir/care-plan-activity-category"
+              },
+              "Coding.code": {
+                "value": "encounter"
+              }
+            }
+          ]
+        },
+        "CarePlan.activity.detail.code": {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "value": "http://example.org/local"
+              },
+              "Coding.code": {
+                "value": "doccon"
+              }
+            }
+          ],
+          "CodeableConcept.text": {
+            "value": "Doctor Consultation"
+          }
+        },
+        "CarePlan.activity.detail.status": {
+          "value": "scheduled"
+        },
+        "CarePlan.activity.detail.prohibited": {
+          "value": false
+        },
+        "CarePlan.activity.detail.performer": [
+          {
+            "Reference.reference": {
+              "value": "Practitioner/14"
+            },
+            "Reference.display": {
+              "value": "Doctor Dave"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

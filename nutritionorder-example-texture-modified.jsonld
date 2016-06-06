@@ -1,0 +1,144 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/NutritionOrder",
+  "resourceType": "NutritionOrder",
+  "Resource.id": {
+    "value": "texturemodified"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: texturemodified</p><p><b>identifier</b>: 123</p><p><b>status</b>: active</p><p><b>patient</b>: <a>Peter Chalmers</a></p><p><b>dateTime</b>: Sep 17, 2014</p><p><b>orderer</b>: <a>Dr Adam Careful</a></p><blockquote><p><b>oralDiet</b></p><p><b>type</b>: Texture modified diet <span>(Details : {SNOMED CT code '435801000124108' = 'Texture modified diet (regime/therapy)', given as 'Texture modified diet'}; {http://goodhealthhospital.org/diet-type-codes code '1010' = '??', given as 'Texture modified diet'})</span></p><p><b>schedule</b>: Starting Feb 10, 2015, Do 3 per 1 days</p><h3>Textures</h3><table><tr><td>-</td><td><b>Modifier</b></td><td><b>FoodType</b></td></tr><tr><td>*</td><td>Regular, Chopped Meat <span>(Details : {SNOMED CT code '228049004' = 'Chopped food (substance)', given as 'Chopped food'})</span></td><td>Regular, Chopped Meat <span>(Details : {SNOMED CT code '28647000' = 'Meat (substance)', given as 'Meat'})</span></td></tr></table></blockquote></div>"
+    }
+  },
+  "NutritionOrder.identifier": [
+    {
+      "Identifier.system": {
+        "value": "http://goodhealthhospital.org/nutrition-orders"
+      },
+      "Identifier.value": {
+        "value": "123"
+      }
+    }
+  ],
+  "NutritionOrder.status": {
+    "value": "active"
+  },
+  "NutritionOrder.patient": {
+    "Reference.reference": {
+      "value": "Patient/example"
+    },
+    "Reference.display": {
+      "value": "Peter Chalmers"
+    },
+    "reference": "http://hl7.org/fhir//Patient/example"
+  },
+  "NutritionOrder.dateTime": {
+    "value": "2014-09-17"
+  },
+  "NutritionOrder.orderer": {
+    "Reference.reference": {
+      "value": "Practitioner/example"
+    },
+    "Reference.display": {
+      "value": "Dr Adam Careful"
+    },
+    "reference": "http://hl7.org/fhir//Practitioner/example"
+  },
+  "NutritionOrder.oralDiet": {
+    "NutritionOrder.oralDiet.type": [
+      {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "value": "435801000124108"
+            },
+            "Coding.display": {
+              "value": "Texture modified diet"
+            }
+          },
+          {
+            "Coding.system": {
+              "value": "http://goodhealthhospital.org/diet-type-codes"
+            },
+            "Coding.code": {
+              "value": "1010"
+            },
+            "Coding.display": {
+              "value": "Texture modified diet"
+            }
+          }
+        ],
+        "CodeableConcept.text": {
+          "value": "Texture modified diet"
+        }
+      }
+    ],
+    "NutritionOrder.oralDiet.schedule": [
+      {
+        "Timing.repeat": {
+          "Timing.repeat.boundsPeriod": {
+            "Period.start": {
+              "value": "2015-02-10"
+            }
+          },
+          "Timing.repeat.frequency": {
+            "value": 3
+          },
+          "Timing.repeat.period": {
+            "value": 1
+          },
+          "Timing.repeat.periodUnit": {
+            "value": "d"
+          }
+        }
+      }
+    ],
+    "NutritionOrder.oralDiet.texture": [
+      {
+        "NutritionOrder.oralDiet.texture.modifier": {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "value": "http://snomed.info/sct"
+              },
+              "Coding.code": {
+                "value": "228049004"
+              },
+              "Coding.display": {
+                "value": "Chopped food"
+              }
+            }
+          ],
+          "CodeableConcept.text": {
+            "value": "Regular, Chopped Meat"
+          },
+          "concept": "http://snomed.info/sct#228049004"
+        },
+        "NutritionOrder.oralDiet.texture.foodType": {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "value": "http://snomed.info/sct"
+              },
+              "Coding.code": {
+                "value": "28647000"
+              },
+              "Coding.display": {
+                "value": "Meat"
+              }
+            }
+          ],
+          "CodeableConcept.text": {
+            "value": "Regular, Chopped Meat"
+          },
+          "concept": "http://snomed.info/sct#28647000"
+        }
+      }
+    ]
+  }
+}

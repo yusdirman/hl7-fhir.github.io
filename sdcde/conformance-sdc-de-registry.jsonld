@@ -1,0 +1,832 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Conformance",
+  "resourceType": "Conformance",
+  "Resource.id": {
+    "value": "conformance-sdc-de-registry"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t\t\t\n      <h2>SDC Data Element Manager</h2>\n\t\t\t\n      <p>(Requirements Definition)</p>\n\t\t\t\n      <p>Published: 2014-07-06 (draft)</p>\n\t\t\t\n      <p>Published by: \n        <b>U.S. Office of the National Coordinator (ONC)</b>\n\t\t\t\n      </p>\n\t\t\t\n      <p>This profile defines the expected capabilities of the \n        <i>SDC Data Element Manager</i> role when conforming to the S&amp;I Framework's \n        <a href=\"sdc.html\">Structured Data Capture FHIR implementation guide</a>.  This role is responsible for defining maintaining a repository of data elements used in designing forms, profiles and templates in support of SDC use-cases, including the pre-population and auto-population of forms.\n      </p>\n\t\t\t\n      <h2>General</h2>\n\t\t\t\n      <table>\n\t\t\t\t\n        <tbody>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>FHIR Version:</th>\n\t\t\t\t\t\t\n            <td>1.4.0</td>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>Supported formats:</th>\n\t\t\t\t\t\t\n            <td>xml, json</td>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\n        </tbody>\n\t\t\t\n      </table>\n\t\t\t\n      <h2>REST  behavior</h2>\n\t\t\t\n      <p>The primary focus of the repository is the definition of \n        <a href=\"../dataelement.html\">DataElement</a>s.  However, \n        <a href=\"../valueset.html\">ValueSet</a>s must also be supported to allow definition of coded data elements.  Some data elements will choose to maintain value sets as 'contained' resources, meaning the value set exists only in the context of the data element and cannot be referenced or maintained without also updating the data element.  However, systems should support value set re-use across data elements.  (Version-specific referencing can be used to avoid value sets from changing independent of the referencing \n        <a href=\"../questionnaire.html\">Questionnaire</a>.)\n      </p>\n\t\t\t\n      <p>\n\t\t\t\t\n        <b>Security:</b>\n\t\t\t\n      </p>\n\t\t\t\n      <p>Implementations must meet the general security requirements documented in the \n        <a href=\"sdc-security.html\">SDC implementation guide</a>.\n      </p>\n\t\t\t\n      <h3>Resource summary</h3>\n\t\t\t\n      <table class=\"grid\">\n\t\t\t\t\n        <thead>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>Resource</th>\n\t\t\t\t\t\t\n            <th>Search</th>\n\t\t\t\t\t\t\n            <th>Read</th>\n\t\t\t\t\t\t\n            <th>Read Version</th>\n\t\t\t\t\t\t\n            <th>Instance History</th>\n\t\t\t\t\t\t\n            <th>Resource History</th>\n\t\t\t\t\t\t\n            <th>Create</th>\n\t\t\t\t\t\t\n            <th>Update</th>\n\t\t\t\t\t\t\n            <th>Delete</th>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\n        </thead>\n\t\t\t\t\n        <tbody>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>DataElement (\n              <a href=\"http://hl7.org/fhir/StructureDefinition/valueset-sdc\">Profile</a>)\n            </th>\n\t\t\t\t\t\t\n            <td>\n\t\t\t\t\t\t\t\n              <a href=\"#DataElement-search-type\" title=\"Allows a user to search for existing data elements\">SHALL</a>\n\t\t\t\t\t\t\n            </td>\n\t\t\t\t\t\t\n            <td>\n\t\t\t\t\t\t\t\n              <a href=\"#DataElement-read\" title=\"Allows retrieval of a specific known data element\">SHALL</a>\n\t\t\t\t\t\t\n            </td>\n\t\t\t\t\t\t\n            <td>\n\t\t\t\t\t\t\t\n              <a href=\"#DataElement-vread\" title=\"Allows retrieval of a specific version of a data element\">SHALL</a>\n\t\t\t\t\t\t\n            </td>\n\t\t\t\t\t\t\n            <td>\n\t\t\t\t\t\t\t\n              <a href=\"#DataElement-history-instance\" title=\"Allows review of changes to a data element over time\">SHALL</a>\n\t\t\t\t\t\t\n            </td>\n\t\t\t\t\t\t\n            <td/>\n\t\t\t\t\t\t\n            <td>\n\t\t\t\t\t\t\t\n              <a href=\"#DataElement-create\" title=\"Allows defining a new data element.  Repositories requiring curation of submitted data elements may require all new data elements to have a status of 'draft'.\">SHALL</a>\n\t\t\t\t\t\t\n            </td>\n\t\t\t\t\t\t\n            <td>\n\t\t\t\t\t\t\t\n              <a href=\"#DataElement-update\" title=\"Allows maintaining data elements while creating and editing forms.  Servers may choose to prohibit certain types of edits, instead requiring the creation of a new data element (and potentially the retiring of the existing data element).  Servers may also limit who can change particular data elements.\">SHALL</a>\n\t\t\t\t\t\t\n            </td>\n\t\t\t\t\t\t\n            <td>\n\t\t\t\t\t\t\t\n              <a href=\"#DataElement-delete\" title=\"Allows removal of an existing data element.  Servers may choose to not support deletions or may limit deletions to data elements meeting certain requirements.  E.g. only elements with a status of draft or only elements that have been retired for at least two years, etc.\">MAY</a>\n\t\t\t\t\t\t\n            </td>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>ValueSet (\n              <a href=\"http://hl7.org/fhir/StructureDefinition/valueset-sdc\">Profile</a>)\n            </th>\n\t\t\t\t\t\t\n            <td>\n\t\t\t\t\t\t\t\n              <a href=\"#ValueSet-search-type\" title=\"Allows discovery of existing value sets for use in authoring data elements\">SHALL</a>\n\t\t\t\t\t\t\n            </td>\n\t\t\t\t\t\t\n            <td>\n\t\t\t\t\t\t\t\n              <a href=\"#ValueSet-read\" title=\"Allows retrieval of a specific value set referenced within a data element\">SHALL</a>\n\t\t\t\t\t\t\n            </td>\n\t\t\t\t\t\t\n            <td>\n\t\t\t\t\t\t\t\n              <a href=\"#ValueSet-vread\" title=\"Allows retrieval of a historical version of a value set as referenced within a data element\">SHALL</a>\n\t\t\t\t\t\t\n            </td>\n\t\t\t\t\t\t\n            <td>\n\t\t\t\t\t\t\t\n              <a href=\"#ValueSet-history-instance\" title=\"Allows review of changes to a value set over time\">SHALL</a>\n\t\t\t\t\t\t\n            </td>\n\t\t\t\t\t\t\n            <td/>\n\t\t\t\t\t\t\n            <td>\n\t\t\t\t\t\t\t\n              <a href=\"#ValueSet-create\" title=\"Allows definition of a new value set used by one or more data elements\">SHALL</a>\n\t\t\t\t\t\t\n            </td>\n\t\t\t\t\t\t\n            <td>\n\t\t\t\t\t\t\t\n              <a href=\"#ValueSet-update\" title=\"Allows existing value sets referenced by one or more data elements to be maintained\">SHALL</a>\n\t\t\t\t\t\t\n            </td>\n\t\t\t\t\t\t\n            <td>\n\t\t\t\t\t\t\t\n              <a href=\"#ValueSet-delete\" title=\"Not all servers will support deletion of value sets.  Status change to 'retired' will be more typical, though deletion of draft value sets may keep repositories cleaner.\">MAY</a>\n\t\t\t\t\t\t\n            </td>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\n        </tbody>\n\t\t\t\n      </table>\n\t\t\t\n      <br/>\n\t\t\t\n      <br/>\n\t\t\t\n      <h3>\n\t\t\t\t\n        <a href=\"../dataelement.html\">DataElement</a>\n\t\t\t\n      </h3>\n\t\t\t\n      <h4>Interactions</h4>\n\t\t\t\n      <table class=\"list\">\n\t\t\t\t\n        <thead>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>Name</th>\n\t\t\t\t\t\t\n            <th>Conformance</th>\n\t\t\t\t\t\t\n            <th>Description</th>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\n        </thead>\n\t\t\t\t\n        <tbody>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>\n\t\t\t\t\t\t\t\n              <a name=\"DataElement-search-type\"> </a>\n\t\t\t\t\t\t\t\n              <span>search-type</span>\n\t\t\t\t\t\t\n            </th>\n\t\t\t\t\t\t\n            <td>SHALL</td>\n\t\t\t\t\t\t\n            <td>\n\t\t\t\t\t\t\t\n              <p>Allows a user to search for existing data elements</p>\n\t\t\t\t\t\t\n            </td>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>\n\t\t\t\t\t\t\t\n              <a name=\"DataElement-read\"> </a>\n\t\t\t\t\t\t\t\n              <span>read</span>\n\t\t\t\t\t\t\n            </th>\n\t\t\t\t\t\t\n            <td>SHALL</td>\n\t\t\t\t\t\t\n            <td>\n\t\t\t\t\t\t\t\n              <p>Allows retrieval of a specific known data element</p>\n\t\t\t\t\t\t\n            </td>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>\n\t\t\t\t\t\t\t\n              <a name=\"DataElement-vread\"> </a>\n\t\t\t\t\t\t\t\n              <span>vread</span>\n\t\t\t\t\t\t\n            </th>\n\t\t\t\t\t\t\n            <td>SHALL</td>\n\t\t\t\t\t\t\n            <td>\n\t\t\t\t\t\t\t\n              <p>Allows retrieval of a specific version of a data element</p>\n\t\t\t\t\t\t\n            </td>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>\n\t\t\t\t\t\t\t\n              <a name=\"DataElement-history-instance\"> </a>\n\t\t\t\t\t\t\t\n              <span>history-instance</span>\n\t\t\t\t\t\t\n            </th>\n\t\t\t\t\t\t\n            <td>SHALL</td>\n\t\t\t\t\t\t\n            <td>\n\t\t\t\t\t\t\t\n              <p>Allows review of changes to a data element over time</p>\n\t\t\t\t\t\t\n            </td>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>\n\t\t\t\t\t\t\t\n              <a name=\"DataElement-create\"> </a>\n\t\t\t\t\t\t\t\n              <span>create</span>\n\t\t\t\t\t\t\n            </th>\n\t\t\t\t\t\t\n            <td>SHALL</td>\n\t\t\t\t\t\t\n            <td>\n\t\t\t\t\t\t\t\n              <p>Allows defining a new data element.  Repositories requiring curation of submitted data elements may require all new data elements to have a status of 'draft'.</p>\n\t\t\t\t\t\t\n            </td>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>\n\t\t\t\t\t\t\t\n              <a name=\"DataElement-update\"> </a>\n\t\t\t\t\t\t\t\n              <span>update</span>\n\t\t\t\t\t\t\n            </th>\n\t\t\t\t\t\t\n            <td>SHALL</td>\n\t\t\t\t\t\t\n            <td>\n\t\t\t\t\t\t\t\n              <p>Allows maintaining data elements while creating and editing forms.  Servers may choose to prohibit certain types of edits, instead requiring the creation of a new data element (and potentially the retiring of the existing data element).  Servers may also limit who can change particular data elements.</p>\n\t\t\t\t\t\t\n            </td>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>\n\t\t\t\t\t\t\t\n              <a name=\"DataElement-validate\"> </a>\n\t\t\t\t\t\t\t\n              <span>validate</span>\n\t\t\t\t\t\t\n            </th>\n\t\t\t\t\t\t\n            <td>SHOULD</td>\n\t\t\t\t\t\t\n            <td>\n\t\t\t\t\t\t\t\n              <p>Allows a client to verify whether a particular new data element or revision of an existing data element would be accepted based on validation and other business rules.  Useful for some workflows</p>\n\t\t\t\t\t\t\n            </td>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>\n\t\t\t\t\t\t\t\n              <a name=\"DataElement-delete\"> </a>\n\t\t\t\t\t\t\t\n              <span>delete</span>\n\t\t\t\t\t\t\n            </th>\n\t\t\t\t\t\t\n            <td>MAY</td>\n\t\t\t\t\t\t\n            <td>\n\t\t\t\t\t\t\t\n              <p>Allows removal of an existing data element.  Servers may choose to not support deletions or may limit deletions to data elements meeting certain requirements.  E.g. only elements with a status of draft or only elements that have been retired for at least two years, etc.</p>\n\t\t\t\t\t\t\n            </td>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\n        </tbody>\n\t\t\t\n      </table>\n\t\t\t\n      <h4>Search</h4>\n\t\t\t\n      <p>Supported Includes: DataElement.binding.valueSet</p>\n\t\t\t\n      <table class=\"list\">\n\t\t\t\t\n        <thead>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>Parameter</th>\n\t\t\t\t\t\t\n            <th>Conformance</th>\n\t\t\t\t\t\t\n            <th>Type</th>\n\t\t\t\t\t\t\n            <th>Definition &amp; Chaining</th>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\n        </thead>\n\t\t\t\t\n        <tbody>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>category</th>\n\t\t\t\t\t\t\n            <td>SHALL</td>\n\t\t\t\t\t\t\n            <td>token</td>\n\t\t\t\t\t\t\n            <td/>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>code</th>\n\t\t\t\t\t\t\n            <td>SHALL</td>\n\t\t\t\t\t\t\n            <td>token</td>\n\t\t\t\t\t\t\n            <td/>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>date</th>\n\t\t\t\t\t\t\n            <td>SHALL</td>\n\t\t\t\t\t\t\n            <td>date</td>\n\t\t\t\t\t\t\n            <td/>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>description</th>\n\t\t\t\t\t\t\n            <td>SHALL</td>\n\t\t\t\t\t\t\n            <td>string</td>\n\t\t\t\t\t\t\n            <td/>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>identifier</th>\n\t\t\t\t\t\t\n            <td>SHALL</td>\n\t\t\t\t\t\t\n            <td>token</td>\n\t\t\t\t\t\t\n            <td/>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>name</th>\n\t\t\t\t\t\t\n            <td>SHALL</td>\n\t\t\t\t\t\t\n            <td>string</td>\n\t\t\t\t\t\t\n            <td/>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>publisher</th>\n\t\t\t\t\t\t\n            <td>SHALL</td>\n\t\t\t\t\t\t\n            <td>string</td>\n\t\t\t\t\t\t\n            <td/>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>status</th>\n\t\t\t\t\t\t\n            <td>SHALL</td>\n\t\t\t\t\t\t\n            <td>token</td>\n\t\t\t\t\t\t\n            <td/>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>version</th>\n\t\t\t\t\t\t\n            <td>SHALL</td>\n\t\t\t\t\t\t\n            <td>string</td>\n\t\t\t\t\t\t\n            <td/>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>meaning</th>\n\t\t\t\t\t\t\n            <td>SHALL</td>\n\t\t\t\t\t\t\n            <td>token</td>\n\t\t\t\t\t\t\n            <td/>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>objectClass</th>\n\t\t\t\t\t\t\n            <td>SHALL</td>\n\t\t\t\t\t\t\n            <td>token</td>\n\t\t\t\t\t\t\n            <td/>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>property</th>\n\t\t\t\t\t\t\n            <td>SHALL</td>\n\t\t\t\t\t\t\n            <td>token</td>\n\t\t\t\t\t\t\n            <td/>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\n        </tbody>\n\t\t\t\n      </table>\n\t\t\t\n      <br/>\n\t\t\t\n      <br/>\n\t\t\t\n      <h3>\n\t\t\t\t\n        <a href=\"../valueset.html\">ValueSet</a>\n\t\t\t\n      </h3>\n\t\t\t\n      <h4>Interactions</h4>\n\t\t\t\n      <table class=\"list\">\n\t\t\t\t\n        <thead>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>Name</th>\n\t\t\t\t\t\t\n            <th>Conformance</th>\n\t\t\t\t\t\t\n            <th>Description</th>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\n        </thead>\n\t\t\t\t\n        <tbody>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>\n\t\t\t\t\t\t\t\n              <a name=\"ValueSet-search-type\"> </a>\n\t\t\t\t\t\t\t\n              <span>search-type</span>\n\t\t\t\t\t\t\n            </th>\n\t\t\t\t\t\t\n            <td>SHALL</td>\n\t\t\t\t\t\t\n            <td>\n\t\t\t\t\t\t\t\n              <p>Allows discovery of existing value sets for use in authoring data elements</p>\n\t\t\t\t\t\t\n            </td>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>\n\t\t\t\t\t\t\t\n              <a name=\"ValueSet-read\"> </a>\n\t\t\t\t\t\t\t\n              <span>read</span>\n\t\t\t\t\t\t\n            </th>\n\t\t\t\t\t\t\n            <td>SHALL</td>\n\t\t\t\t\t\t\n            <td>\n\t\t\t\t\t\t\t\n              <p>Allows retrieval of a specific value set referenced within a data element</p>\n\t\t\t\t\t\t\n            </td>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>\n\t\t\t\t\t\t\t\n              <a name=\"ValueSet-vread\"> </a>\n\t\t\t\t\t\t\t\n              <span>vread</span>\n\t\t\t\t\t\t\n            </th>\n\t\t\t\t\t\t\n            <td>SHALL</td>\n\t\t\t\t\t\t\n            <td>\n\t\t\t\t\t\t\t\n              <p>Allows retrieval of a historical version of a value set as referenced within a data element</p>\n\t\t\t\t\t\t\n            </td>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>\n\t\t\t\t\t\t\t\n              <a name=\"ValueSet-history-instance\"> </a>\n\t\t\t\t\t\t\t\n              <span>history-instance</span>\n\t\t\t\t\t\t\n            </th>\n\t\t\t\t\t\t\n            <td>SHALL</td>\n\t\t\t\t\t\t\n            <td>\n\t\t\t\t\t\t\t\n              <p>Allows review of changes to a value set over time</p>\n\t\t\t\t\t\t\n            </td>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>\n\t\t\t\t\t\t\t\n              <a name=\"ValueSet-create\"> </a>\n\t\t\t\t\t\t\t\n              <span>create</span>\n\t\t\t\t\t\t\n            </th>\n\t\t\t\t\t\t\n            <td>SHALL</td>\n\t\t\t\t\t\t\n            <td>\n\t\t\t\t\t\t\t\n              <p>Allows definition of a new value set used by one or more data elements</p>\n\t\t\t\t\t\t\n            </td>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>\n\t\t\t\t\t\t\t\n              <a name=\"ValueSet-update\"> </a>\n\t\t\t\t\t\t\t\n              <span>update</span>\n\t\t\t\t\t\t\n            </th>\n\t\t\t\t\t\t\n            <td>SHALL</td>\n\t\t\t\t\t\t\n            <td>\n\t\t\t\t\t\t\t\n              <p>Allows existing value sets referenced by one or more data elements to be maintained</p>\n\t\t\t\t\t\t\n            </td>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>\n\t\t\t\t\t\t\t\n              <a name=\"ValueSet-validate\"> </a>\n\t\t\t\t\t\t\t\n              <span>validate</span>\n\t\t\t\t\t\t\n            </th>\n\t\t\t\t\t\t\n            <td>SHOULD</td>\n\t\t\t\t\t\t\n            <td>\n\t\t\t\t\t\t\t\n              <p>Allows verification that a value set is valid prior to submission - useful for some workflows.</p>\n\t\t\t\t\t\t\n            </td>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>\n\t\t\t\t\t\t\t\n              <a name=\"ValueSet-delete\"> </a>\n\t\t\t\t\t\t\t\n              <span>delete</span>\n\t\t\t\t\t\t\n            </th>\n\t\t\t\t\t\t\n            <td>MAY</td>\n\t\t\t\t\t\t\n            <td>\n\t\t\t\t\t\t\t\n              <p>Not all servers will support deletion of value sets.  Status change to 'retired' will be more typical, though deletion of draft value sets may keep repositories cleaner.</p>\n\t\t\t\t\t\t\n            </td>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\n        </tbody>\n\t\t\t\n      </table>\n\t\t\t\n      <h4>Search</h4>\n\t\t\t\n      <p>Supported Includes: ValueSet.compose.import</p>\n\t\t\t\n      <table class=\"list\">\n\t\t\t\t\n        <thead>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>Parameter</th>\n\t\t\t\t\t\t\n            <th>Conformance</th>\n\t\t\t\t\t\t\n            <th>Type</th>\n\t\t\t\t\t\t\n            <th>Definition &amp; Chaining</th>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\n        </thead>\n\t\t\t\t\n        <tbody>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>code</th>\n\t\t\t\t\t\t\n            <td>SHALL</td>\n\t\t\t\t\t\t\n            <td>token</td>\n\t\t\t\t\t\t\n            <td/>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>date</th>\n\t\t\t\t\t\t\n            <td>SHALL</td>\n\t\t\t\t\t\t\n            <td>date</td>\n\t\t\t\t\t\t\n            <td/>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>description</th>\n\t\t\t\t\t\t\n            <td>SHALL</td>\n\t\t\t\t\t\t\n            <td>string</td>\n\t\t\t\t\t\t\n            <td/>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>identifier</th>\n\t\t\t\t\t\t\n            <td>SHALL</td>\n\t\t\t\t\t\t\n            <td>token</td>\n\t\t\t\t\t\t\n            <td/>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>name</th>\n\t\t\t\t\t\t\n            <td>SHALL</td>\n\t\t\t\t\t\t\n            <td>string</td>\n\t\t\t\t\t\t\n            <td/>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>publisher</th>\n\t\t\t\t\t\t\n            <td>SHALL</td>\n\t\t\t\t\t\t\n            <td>string</td>\n\t\t\t\t\t\t\n            <td/>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>reference</th>\n\t\t\t\t\t\t\n            <td>SHALL</td>\n\t\t\t\t\t\t\n            <td>string</td>\n\t\t\t\t\t\t\n            <td/>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>status</th>\n\t\t\t\t\t\t\n            <td>SHALL</td>\n\t\t\t\t\t\t\n            <td>token</td>\n\t\t\t\t\t\t\n            <td/>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>system</th>\n\t\t\t\t\t\t\n            <td>SHALL</td>\n\t\t\t\t\t\t\n            <td>string</td>\n\t\t\t\t\t\t\n            <td/>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>version</th>\n\t\t\t\t\t\t\n            <td>SHALL</td>\n\t\t\t\t\t\t\n            <td>string</td>\n\t\t\t\t\t\t\n            <td/>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\n        </tbody>\n\t\t\t\n      </table>\n\t\t\n    </div>"
+    }
+  },
+  "Conformance.name": {
+    "value": "SDC Data Element Manager"
+  },
+  "Conformance.status": {
+    "value": "draft"
+  },
+  "Conformance.date": {
+    "value": "2014-07-06"
+  },
+  "Conformance.publisher": {
+    "value": "U.S. Office of the National Coordinator (ONC)"
+  },
+  "Conformance.contact": [
+    {
+      "Conformance.contact.telecom": [
+        {
+          "ContactPoint.system": {
+            "value": "other"
+          },
+          "ContactPoint.value": {
+            "value": "http://wiki.siframework.org/Structured+Data+Capture+Initiative"
+          }
+        }
+      ]
+    }
+  ],
+  "Conformance.description": {
+    "value": "This profile defines the expected capabilities of the ''SDC Data Element Manager'' role when conforming to the S&I Framework's [[sdc|Structured Data Capture FHIR implementation guide]].  This role is responsible for defining maintaining a repository of data elements used in designing forms, profiles and templates in support of SDC use-cases, including the pre-population and auto-population of forms."
+  },
+  "Conformance.kind": {
+    "value": "requirements"
+  },
+  "Conformance.fhirVersion": {
+    "value": "1.4.0"
+  },
+  "Conformance.acceptUnknown": {
+    "value": "extensions"
+  },
+  "Conformance.format": [
+    {
+      "value": "xml"
+    },
+    {
+      "value": "json"
+    }
+  ],
+  "Conformance.rest": [
+    {
+      "Conformance.rest.mode": {
+        "value": "server"
+      },
+      "Conformance.rest.documentation": {
+        "value": "The primary focus of the repository is the definition of [[DataElement]]s.  However, [[ValueSet]]s must also be supported to allow definition of coded data elements.  Some data elements will choose to maintain value sets as 'contained' resources, meaning the value set exists only in the context of the data element and cannot be referenced or maintained without also updating the data element.  However, systems should support value set re-use across data elements.  (Version-specific referencing can be used to avoid value sets from changing independent of the referencing [[Questionnaire]].)"
+      },
+      "Conformance.rest.security": {
+        "Conformance.rest.security.description": {
+          "value": "Implementations must meet the general security requirements documented in the [[sdc-security|SDC implementation guide]]."
+        }
+      },
+      "Conformance.rest.resource": [
+        {
+          "Conformance.rest.resource.type": {
+            "value": "DataElement"
+          },
+          "Conformance.rest.resource.profile": {
+            "Reference.reference": {
+              "value": "http://hl7.org/fhir/StructureDefinition/valueset-sdc"
+            },
+            "reference": "http://hl7.org/fhir/StructureDefinition/valueset-sdc"
+          },
+          "Conformance.rest.resource.interaction": [
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHALL"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "search-type"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows a user to search for existing data elements"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHALL"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "read"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows retrieval of a specific known data element"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHALL"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "vread"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows retrieval of a specific version of a data element"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHALL"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "history-instance"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows review of changes to a data element over time"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHALL"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "create"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows defining a new data element.  Repositories requiring curation of submitted data elements may require all new data elements to have a status of 'draft'."
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHALL"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "update"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows maintaining data elements while creating and editing forms.  Servers may choose to prohibit certain types of edits, instead requiring the creation of a new data element (and potentially the retiring of the existing data element).  Servers may also limit who can change particular data elements."
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "MAY"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "delete"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows removal of an existing data element.  Servers may choose to not support deletions or may limit deletions to data elements meeting certain requirements.  E.g. only elements with a status of draft or only elements that have been retired for at least two years, etc."
+              }
+            }
+          ],
+          "Conformance.rest.resource.searchInclude": [
+            {
+              "value": "DataElement.binding.valueSet"
+            }
+          ],
+          "Conformance.rest.resource.searchParam": [
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHALL"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "category"
+              },
+              "Conformance.rest.resource.searchParam.definition": {
+                "value": "http://hl7.org/fhir/SearchParameter/dataelement#category"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "token"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHALL"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "code"
+              },
+              "Conformance.rest.resource.searchParam.definition": {
+                "value": "http://hl7.org/fhir/SearchParameter/dataelement#code"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "token"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHALL"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "date"
+              },
+              "Conformance.rest.resource.searchParam.definition": {
+                "value": "http://hl7.org/fhir/SearchParameter/dataelement#date"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "date"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHALL"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "description"
+              },
+              "Conformance.rest.resource.searchParam.definition": {
+                "value": "http://hl7.org/fhir/SearchParameter/dataelement#description"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "string"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHALL"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "identifier"
+              },
+              "Conformance.rest.resource.searchParam.definition": {
+                "value": "http://hl7.org/fhir/SearchParameter/dataelement#identifier"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "token"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHALL"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "name"
+              },
+              "Conformance.rest.resource.searchParam.definition": {
+                "value": "http://hl7.org/fhir/SearchParameter/dataelement#name"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "string"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHALL"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "publisher"
+              },
+              "Conformance.rest.resource.searchParam.definition": {
+                "value": "http://hl7.org/fhir/SearchParameter/dataelement#publisher"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "string"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHALL"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "status"
+              },
+              "Conformance.rest.resource.searchParam.definition": {
+                "value": "http://hl7.org/fhir/SearchParameter/dataelement#status"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "token"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHALL"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "version"
+              },
+              "Conformance.rest.resource.searchParam.definition": {
+                "value": "http://hl7.org/fhir/SearchParameter/dataelement#version"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "string"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHALL"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "meaning"
+              },
+              "Conformance.rest.resource.searchParam.definition": {
+                "value": "http://hl7.org/fhir/SearchParameter/11179-meaning"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "token"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHALL"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "objectClass"
+              },
+              "Conformance.rest.resource.searchParam.definition": {
+                "value": "http://hl7.org/fhir/SearchParameter/11179-objectClass"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "token"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHALL"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "property"
+              },
+              "Conformance.rest.resource.searchParam.definition": {
+                "value": "http://hl7.org/fhir/SearchParameter/11179-property"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "token"
+              }
+            }
+          ]
+        },
+        {
+          "Conformance.rest.resource.type": {
+            "value": "ValueSet"
+          },
+          "Conformance.rest.resource.profile": {
+            "Reference.reference": {
+              "value": "http://hl7.org/fhir/StructureDefinition/valueset-sdc"
+            },
+            "reference": "http://hl7.org/fhir/StructureDefinition/valueset-sdc"
+          },
+          "Conformance.rest.resource.interaction": [
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHALL"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "search-type"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows discovery of existing value sets for use in authoring data elements"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHALL"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "read"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows retrieval of a specific value set referenced within a data element"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHALL"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "vread"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows retrieval of a historical version of a value set as referenced within a data element"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHALL"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "history-instance"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows review of changes to a value set over time"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHALL"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "create"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows definition of a new value set used by one or more data elements"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHALL"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "update"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows existing value sets referenced by one or more data elements to be maintained"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "MAY"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "delete"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Not all servers will support deletion of value sets.  Status change to 'retired' will be more typical, though deletion of draft value sets may keep repositories cleaner."
+              }
+            }
+          ],
+          "Conformance.rest.resource.searchInclude": [
+            {
+              "value": "ValueSet.compose.import"
+            }
+          ],
+          "Conformance.rest.resource.searchParam": [
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHALL"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "code"
+              },
+              "Conformance.rest.resource.searchParam.definition": {
+                "value": "http://hl7.org/fhir/SearchParameter/valueset#code"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "token"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHALL"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "date"
+              },
+              "Conformance.rest.resource.searchParam.definition": {
+                "value": "http://hl7.org/fhir/SearchParameter/valueset#date"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "date"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHALL"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "description"
+              },
+              "Conformance.rest.resource.searchParam.definition": {
+                "value": "http://hl7.org/fhir/SearchParameter/valueset#description"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "string"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHALL"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "identifier"
+              },
+              "Conformance.rest.resource.searchParam.definition": {
+                "value": "http://hl7.org/fhir/SearchParameter/valueset#identifier"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "token"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHALL"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "name"
+              },
+              "Conformance.rest.resource.searchParam.definition": {
+                "value": "http://hl7.org/fhir/SearchParameter/valueset#name"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "string"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHALL"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "publisher"
+              },
+              "Conformance.rest.resource.searchParam.definition": {
+                "value": "http://hl7.org/fhir/SearchParameter/valueset#publisher"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "string"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHALL"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "reference"
+              },
+              "Conformance.rest.resource.searchParam.definition": {
+                "value": "http://hl7.org/fhir/SearchParameter/valueset#reference"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "string"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHALL"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "status"
+              },
+              "Conformance.rest.resource.searchParam.definition": {
+                "value": "http://hl7.org/fhir/SearchParameter/valueset#status"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "token"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHALL"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "system"
+              },
+              "Conformance.rest.resource.searchParam.definition": {
+                "value": "http://hl7.org/fhir/SearchParameter/valueset#system"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "string"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHALL"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "version"
+              },
+              "Conformance.rest.resource.searchParam.definition": {
+                "value": "http://hl7.org/fhir/SearchParameter/valueset#version"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "string"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

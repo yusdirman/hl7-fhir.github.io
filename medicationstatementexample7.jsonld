@@ -1,0 +1,45 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/MedicationStatement",
+  "resourceType": "MedicationStatement",
+  "Resource.id": {
+    "value": "example007"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>Ventolin inhaler - Will take during seasonal allergy season</p>\n    </div>"
+    }
+  },
+  "MedicationStatement.status": {
+    "value": "active"
+  },
+  "MedicationStatement.medicationReference": {
+    "Reference.reference": {
+      "value": "Medication/MedicationExample12"
+    },
+    "reference": "http://hl7.org/fhir//Medication/MedicationExample12"
+  },
+  "MedicationStatement.patient": {
+    "Reference.reference": {
+      "value": "Patient/example"
+    },
+    "reference": "http://hl7.org/fhir//Patient/example"
+  },
+  "MedicationStatement.effectiveDateTime": {
+    "value": "2015-05-23"
+  },
+  "MedicationStatement.informationSource": {
+    "Reference.reference": {
+      "value": "Patient/example"
+    },
+    "reference": "http://hl7.org/fhir//Patient/example"
+  },
+  "MedicationStatement.dateAsserted": {
+    "value": "2015-02-22"
+  },
+  "MedicationStatement.wasNotTaken": {
+    "value": false
+  }
+}

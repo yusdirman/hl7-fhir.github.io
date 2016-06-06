@@ -1,0 +1,77 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/MedicationOrder",
+  "resourceType": "MedicationOrder",
+  "Resource.id": {
+    "value": "medrx007"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p><big>AC followed by Paclitaxel + Trastuzumab Course 2</big></p>\n      <p>Name: Paclitaxel in Dose-dense Paclitaxel (Q14D) + Trastuzumab (Q7D)</p>\n      <p>Course: 2</p>\n      <p>Agent Protocols Options:</p>\n      <p><b>Paclitaxel 175 mg/m^2 IV over 3 hours D1 in cycles 1-4</b></p>\n      <p>Offset: None</p>\n      <p>Cycle length: Q14D x 4 cycles</p>\n    </div>"
+    }
+  },
+  "MedicationOrder.status": {
+    "value": "on-hold"
+  },
+  "MedicationOrder.medicationReference": {
+    "Reference.reference": {
+      "value": "Medication/medicationexample16"
+    },
+    "reference": "http://hl7.org/fhir//Medication/medicationexample16"
+  },
+  "MedicationOrder.dosageInstruction": [
+    {
+      "MedicationOrder.dosageInstruction.text": {
+        "value": "Paclitaxel 175 mg/m^2 IV over 3 hours D1"
+      },
+      "MedicationOrder.dosageInstruction.route": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "value": "47625008"
+            },
+            "Coding.display": {
+              "value": "Intravenous route"
+            }
+          }
+        ],
+        "concept": "http://snomed.info/sct#47625008"
+      },
+      "MedicationOrder.dosageInstruction.rateRatio": {
+        "Ratio.numerator": {
+          "Quantity.value": {
+            "value": 175
+          },
+          "Quantity.unit": {
+            "value": "mg/m^2"
+          },
+          "Quantity.system": {
+            "value": "http://snomed.info/sct"
+          },
+          "Quantity.code": {
+            "value": "258682000"
+          }
+        },
+        "Ratio.denominator": {
+          "Quantity.value": {
+            "value": 3
+          },
+          "Quantity.unit": {
+            "value": "hours"
+          },
+          "Quantity.system": {
+            "value": "http://snomed.info/sct"
+          },
+          "Quantity.code": {
+            "value": "258702006"
+          }
+        }
+      }
+    }
+  ]
+}

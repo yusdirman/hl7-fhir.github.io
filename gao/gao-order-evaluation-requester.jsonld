@@ -1,0 +1,141 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Conformance",
+  "resourceType": "Conformance",
+  "Resource.id": {
+    "value": "gao-order-evaluation-requester"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <h2>GAO Order Evaluation Requester</h2>\n      <p>The Order Evaluation Requester actor invokes the $evaluate operation to determine      whether an order is appropriate according to clinical guidelines.</p>\n      <table>\n        <tr>\n          <td>Mode</td>\n          <td>CLIENT</td>\n        </tr>\n        <tr>\n          <td>Description</td>\n          <td/>\n        </tr>\n        <tr>\n          <td>Transaction</td>\n          <td/>\n        </tr>\n        <tr>\n          <td>System History</td>\n          <td/>\n        </tr>\n        <tr>\n          <td>System Search</td>\n          <td/>\n        </tr>\n      </table>\n      <table>\n        <tr>\n          <th>\n            <b>Resource Type</b>\n          </th>\n          <th>\n            <b>Profile</b>\n          </th>\n          <th>\n            <b>Read</b>\n          </th>\n          <th>\n            <b>V-Read</b>\n          </th>\n          <th>\n            <b>Search</b>\n          </th>\n          <th>\n            <b>Update</b>\n          </th>\n          <th>\n            <b>Updates</b>\n          </th>\n          <th>\n            <b>Create</b>\n          </th>\n          <th>\n            <b>Delete</b>\n          </th>\n          <th>\n            <b>History</b>\n          </th>\n        </tr>\n        <tr>\n          <td>Order</td>\n          <td>\n            <a href=\"http://hl7.org/fhir/StructureDefinition/gao-order\">http://hl7.org/fhir/StructureDefinition/gao-order</a>\n          </td>\n          <td>y</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n      </table>\n    </div>"
+    }
+  },
+  "Conformance.url": {
+    "value": "http://hl7.org/fhir/Conformance/gao-order-evaluation-requester"
+  },
+  "Conformance.name": {
+    "value": "GAO Order Evaluation Requester"
+  },
+  "Conformance.status": {
+    "value": "draft"
+  },
+  "Conformance.experimental": {
+    "value": false
+  },
+  "Conformance.date": {
+    "value": "2015-11-19"
+  },
+  "Conformance.publisher": {
+    "value": "HL7"
+  },
+  "Conformance.description": {
+    "value": "The Order Evaluation Requester actor invokes the $evaluate operation to determine      whether an order is appropriate according to clinical guidelines."
+  },
+  "Conformance.requirements": {
+    "value": "An Order Evaluation Requestor actor must implement the requirements expressed in this conformance resource."
+  },
+  "Conformance.kind": {
+    "value": "requirements"
+  },
+  "Conformance.fhirVersion": {
+    "value": "1.4.0"
+  },
+  "Conformance.acceptUnknown": {
+    "value": "extensions"
+  },
+  "Conformance.format": [
+    {
+      "value": "xml"
+    },
+    {
+      "value": "json"
+    }
+  ],
+  "Conformance.profile": [
+    {
+      "Reference.reference": {
+        "value": "http://hl7.org/fhir/StructureDefinition/gao-order"
+      }
+    },
+    {
+      "Reference.reference": {
+        "value": "http://hl7.org/fhir/StructureDefinition/gao-questionnaireresponse"
+      }
+    },
+    {
+      "Reference.reference": {
+        "value": "http://hl7.org/fhir/StructureDefinition/gao-diagnosticorder"
+      }
+    },
+    {
+      "Reference.reference": {
+        "value": "http://hl7.org/fhir/StructureDefinition/gao-medicationorder"
+      }
+    },
+    {
+      "Reference.reference": {
+        "value": "http://hl7.org/fhir/StructureDefinition/gao-referralrequest"
+      }
+    },
+    {
+      "Reference.reference": {
+        "value": "http://hl7.org/fhir/StructureDefinition/gao-procedurerequest"
+      }
+    },
+    {
+      "Reference.reference": {
+        "value": "http://hl7.org/fhir/StructureDefinition/gao-patient"
+      }
+    },
+    {
+      "Reference.reference": {
+        "value": "http://hl7.org/fhir/StructureDefinition/gao-practitioner"
+      }
+    }
+  ],
+  "Conformance.rest": [
+    {
+      "Conformance.rest.mode": {
+        "value": "client"
+      },
+      "Conformance.rest.resource": [
+        {
+          "Conformance.rest.resource.type": {
+            "value": "Order"
+          },
+          "Conformance.rest.resource.profile": {
+            "Reference.reference": {
+              "value": "http://hl7.org/fhir/StructureDefinition/gao-order"
+            },
+            "reference": "http://hl7.org/fhir/StructureDefinition/gao-order"
+          },
+          "Conformance.rest.resource.interaction": [
+            {
+              "Conformance.rest.resource.interaction.code": {
+                "value": "read"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "A Order Evaluation Requestor invoke the $evaluate operation on Order.             At present, there is no way to express this in the Interaction component in a compliance resource."
+              }
+            }
+          ]
+        }
+      ],
+      "Conformance.rest.operation": [
+        {
+          "Conformance.rest.operation.name": {
+            "value": "GAO Evaluate Order"
+          },
+          "Conformance.rest.operation.definition": {
+            "Reference.reference": {
+              "value": "http://hl7.org/fhir/OperationDefinition/gao-order-evaluate"
+            },
+            "reference": "http://hl7.org/fhir/OperationDefinition/gao-order-evaluate"
+          }
+        }
+      ]
+    }
+  ]
+}

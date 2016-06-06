@@ -1,0 +1,494 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>OrderSet - FHIR v1.4.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link rel="stylesheet" href="fhir.css"/>
+  <link rel="Prev" href="http://hl7.org/fhir/orderset.html"/>
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="./dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="./assets/css/bootstrap-fhir.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href="./assets/css/project.css"/>
+  <link rel="stylesheet" href="./assets/css/pygments-manni.css"/>
+	<link rel="stylesheet" href="jquery-ui.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif] -->
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment">  <!-- segment-header -->	
+		<div class="container">  <!-- container -->
+			<a no-external="true" id="logo" href="http://hl7.org/fhir"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a no-external="true" id="hl7-logo" href="http://www.hl7.org">
+					<img src="./assets/images/hl7-logo.png" width="42" alt="visit the hl7 website" height="50"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a no-external="true" id="hl7-logo" href="http://hl7.org/fhir/search.cfm"><img src="./assets/images/search.png" alt="Search FHIR"/></a></div> 
+		</div>
+		<div class="container">  <!-- container -->
+	</div></div>  <!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+ 	      		
+ 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="documentation.html">Documentation</a></li>
+              <li><a href="implementation.html">Implementation</a></li>
+              <li><a href="resourcelist.html">Resources</a></li>
+              <li><a href="clinical.html">Clinical</a></li>
+              <li><a href="administration.html">Administrative</a></li>
+              <li><a href="infrastructure.html">Infrastructure</a></li>
+              <li><a href="financial.html">Financial</a></li>
+
+						</ul>
+					</div>  <!-- /.nav-collapse -->
+				</div>  <!-- /.container -->
+			</nav>  <!-- /.navbar -->
+      		
+				
+  <!-- /HEADER CONTENT -->				
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+		<div class="container">  <!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="documentation.html">Documentation</a></li>        <li><b>OrderSet</b></li>          <!-- orderset.html / resource / OrderSet -->
+
+			</ul>	
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment">  <!-- segment-content -->
+	<div class="container">  <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<ul class="nav nav-tabs"><li class="active"><a href="#">Content</a></li><li><a href="orderset-examples.html">Examples</a></li><li><a href="orderset-definitions.html">Detailed Descriptions</a></li><li><a href="orderset-mappings.html">Mappings</a></li><li><a href="orderset-profiles.html">Profiles</a></li><li><a href="orderset-operations.html">Operations</a></li></ul>
+
+<h1><span class="sectioncount">4.19<a name="4.19"> </a></span> Resource OrderSet - Content <a href="orderset.html#4.19" title="link to here" class="self-link"><img src="target.png"/></a></h1>
+
+
+<table class="cols">
+ <tr><td><a href="http://www.hl7.org/Special/committees/dss/index.cfm" _target="blank">Clinical Decision Support <img src="external.png" style="text-align: baseline"/></a> Work Group</td><td><a href="resource.html#maturity">Maturity Level</a>: 0</td><td><a href="compartments.html">Compartments</a>: Not linked to any defined compartments</td></tr>
+</table>
+
+
+
+<p> 
+This resource allows for the definition of an order set as a sharable, consumable, and executable artifact in support of clinical decision support. 
+</p>
+
+
+<div>
+<a name="bnc"> </a>
+<h2><span class="sectioncount">4.19.1</span> Scope and Usage <a href="orderset.html#bnc" title="link to here" class="self-link"><img src="target.png"/></a></h2>
+<p>
+<i>This resource is a draft proposal for use as part of an approach to Clinical Quality within FHIR, and is documented as part of the <a href="cqif/cqif.html">Clinical Quality Improvement Framework Implementation Guide</a>.</i>
+</p>
+
+<p>An order set is a pre-defined and approved group of orders related to a particular clinical condition (e.g. hypertension treatment and monitoring) or stage of care (e.g. hospital admission to Coronary Care Unit). An order set is used as a checklist for the clinician when managing a patient with a specific condition. It is a structured collection of orders relevant to that condition and presented to the clinician in a computerized provider order entry (CPOE) system.</p>
+
+<p>The OrderSet resource represents order sets with three main components:</p>
+
+<ul>
+	<li>Metadata</li>
+	<li>Library</li>
+	<li>Action</li>
+</ul>
+
+<p>The Metadata component represents topical metadata such as the title, description, publication information and lifecycle, as well as usage documentation and supporting evidence. The Library component allows order sets to reference logic that can be used to control conditional behavior as the order set is realized. And finally, the Action component provides the ability to define hierarchical groups of actions, where each specific action defines an orderable line item, together with behaviors that determine how the orderable items are related to each other.</p>
+
+<p>If the order set contains only static items (i.e. there are no context-dependent values that must be provided to complete the orderable), then the resource element contains a reference to a complete resource instance representing the orderable.</p>
+
+<p>However, each orderable item usually needs to be completed with contextual information based on the particular patient that the order set is being used with. In this case, either the user completing the order set must provide a value, or the order set definition can provide an expression that provides the necessary value based on the patient in context. These expressions are defined for each item using the customization element. Each customization specifies a <i>path</i> and the name of an <i>expression</i> that, when evaluated in context, provides a value for the element defined by the path.</p>
+
+<p>Note that the OrderSet itself does not contain any logic; rather a Library resource is referenced that contains the logic required by the order set, and the various expression elements, such as customization expression, reference named expressions within that library (or libraries). In addition, if the OrderSet references multiple libraries, then any expression references within the resource must be qualified with the name of the library that contains the referenced expression.</p>
+
+<p>This mixture of static and dynamic description of each orderable allows the order set to be presented structurally in terms of native resources, while still allowing for complete flexibility and customization of the contents based on the patient, encounter, and setting at the point-of-care.</p>
+
+<p>As an example, the Low Suicide Risk example order set from the Clinical Decision Support Knowledge Artifact Specification was represented using the OrderSet structure: <a href="orderset-example.html">Low Suicide Risk Example Order Set</a>.</p>
+
+<p>In addition to the representation of OrderSets, the <a href="orderset-operations.html#place">$place</a> operation allows OrderSets to be realized for a specific patient. In general, this operation is expected to place the orders defined by the order set, consistent with the service functional requirements defined by the Order Set Service specification.</p>
+
+</div>
+
+  <!-- (recommended): 
+<div>
+<h2>Boundaries and Relationships</h2>
+<p>
+Explains how this resource relates to others. Particularly important is to differentiate between appropriate usages for related resources when an implementer might be confused about what to reference when.
+</p>
+</div> -->
+
+  <!-- (optional):
+<div>
+<h2>Background and Context</h2>
+<p>
+Provides additional detail on exactly how the resource is to be used
+</p>
+</div> -->
+
+
+
+
+
+<a name="resource"/>
+<h2><span class="sectioncount">4.19.2</span> 
+Resource Content
+ <a href="orderset.html#resource" title="link to here" class="self-link"><img src="target.png"/></a></h2>
+<a name="def"> </a>
+<a name="orderset"> </a>
+<a name="OrderSet"> </a>
+
+<div id="tabs">
+  <ul>
+    <li><a href="#tabs-struc">Structure</a></li>
+    <li><a href="#tabs-uml">UML</a></li>
+    <li><a href="#tabs-xml">XML</a></li>
+    <li><a href="#tabs-json">JSON</a></li>
+    <li><a href="#tabs-ttl">Turtle</a></li>
+    <li><a href="#tabs-all">All</a></li>
+  </ul>
+  <div id="tabs-struc">
+
+<div id="tbl">
+<p><b>Structure</b></p>
+ <div id="tbl-inner">
+  <table border="0" cellpadding="0" cellspacing="0" style="border: 0px; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="The logical name of the element">Name</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Information about the use of the element">Flags</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Minimum and Maximum # of times the the element can appear in the instance">Card.</a></th><th style="width: 100px" class="hierarchy"><a href="formats.html#table" title="Reference to the type of the element">Type</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Additional information about the element">Description &amp; Constraints</a><span style="float: right"><a href="formats.html#table" title="Legend for this format"><img src="help16.png" alt="doco" style="background-color: inherit"/></a></span></th></tr><tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: white; background-color: inherit" title="Resource" class="hierarchy"/> <a href="orderset-definitions.html#OrderSet" title="OrderSet : This resource allows for the definition of an order set as a sharable, consumable, and executable artifact in support of clinical decision support.">OrderSet</a><a name="OrderSet"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="domainresource.html">DomainResource</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">The definition of an order set</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="orderset-definitions.html#OrderSet.moduleMetadata" title="OrderSet.moduleMetadata : A reference to a ModuleMetadata resource containing metadata for the orderset.">moduleMetadata</a><a name="OrderSet.moduleMetadata"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="modulemetadata.html#ModuleMetadata">ModuleMetadata</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">The metadata for the orderset</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_reference.png" alt="." style="background-color: white; background-color: inherit" title="Reference to another Resource" class="hierarchy"/> <a href="orderset-definitions.html#OrderSet.library" title="OrderSet.library : A reference to a Library resource containing any formal logic used by the orderset.">library</a><a name="OrderSet.library"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="references.html">Reference</a>(<a href="library.html">Library</a>)</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Logic used by the orderset</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="orderset-definitions.html#OrderSet.action" title="OrderSet.action : The definition of the actions that make up the order set. Order set groups and sections are represented as actions which contain sub-actions.">action</a><a name="OrderSet.action"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="actiondefinition.html#ActionDefinition">ActionDefinition</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Groups, sections, and line items of the order set</td></tr>
+<tr><td colspan="5" class="hierarchy"><br/><a href="formats.html#table" title="Legend for this format"><img src="help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table>
+ </div>
+</div>
+
+  </div>
+  <div id="tabs-uml">
+  
+<div id="uml">
+<p><b>UML Diagram</b></p>
+ <div id="uml-inner">
+ <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="267.20000000000005" version="1.1" height="88.0">  <defs>
+    <filter x="0" width="200%" y="0" id="shadowA" height="200%">
+      <feOffset result="offOut" dx="3" in="SourceGraphic" dy="3"/>
+      <feColorMatrix result="matrixOut" in="offOut" values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0" type="matrix"/>
+      <feGaussianBlur result="blurOut" stdDeviation="2" in="matrixOut"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="blurOut"/>
+    </filter>
+  </defs><g><rect filter="url(#shadowA)" rx="4" ry="4" x="0.0" width="167.20000000000002" y="0.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="78.0"/><line y1="28.0" x1="0.0" y2="28.0" x2="167.20000000000002" style="stroke:dimgrey;stroke-width:1"/><text x="83.60000000000001" y="20.0" fill="black" class="diagram-class-title  diagram-class-resource">OrderSet<tspan class="diagram-class-title-link"> (<a class="diagram-class-reference" xlink:href="domainresource.html">DomainResource</a>)</tspan></text><text x="6.0" y="42.0" fill="black" class="diagram-class-detail"><a xlink:href="orderset-definitions.html#OrderSet.moduleMetadata"><title>A reference to a ModuleMetadata resource containing metadata for the orderset</title>moduleMetadata</a> : <a xlink:href="modulemetadata.html#ModuleMetadata">ModuleMetadata</a> [0..1]</text><text x="6.0" y="56.0" fill="black" class="diagram-class-detail"><a xlink:href="orderset-definitions.html#OrderSet.library"><title>A reference to a Library resource containing any formal logic used by the orderset</title>library</a> : <a xlink:href="references.html#Reference">Reference</a> [0..*] « <a xlink:href="library.html#Library">Library</a> »</text><text x="6.0" y="70.0" fill="black" class="diagram-class-detail"><a xlink:href="orderset-definitions.html#OrderSet.action"><title>The definition of the actions that make up the order set. Order set groups and sections are represented as actions which contain sub-actions</title>action</a> : <a xlink:href="actiondefinition.html#ActionDefinition">ActionDefinition</a> [0..*]</text></g></svg>
+ </div>
+</div>
+
+  </div>
+  <div id="tabs-xml">
+
+<div id="xml">
+<p><b>XML Template</b></p>
+ <div id="xml-inner">
+  <pre class="spec">
+&lt;<a href="orderset-definitions.html#OrderSet" title="This resource allows for the definition of an order set as a sharable, consumable, and executable artifact in support of clinical decision support." class="dict"><b>OrderSet</b></a> xmlns=&quot;http://hl7.org/fhir&quot;&gt; <span style="float: right"><a href="xml.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+ &lt;!-- from <a href="resource.html">Resource</a>: <a href="resource.html#id">id</a>, <a href="resource.html#meta">meta</a>, <a href="resource.html#implicitRules">implicitRules</a>, and <a href="resource.html#language">language</a> --&gt;
+ &lt;!-- from <a href="domainresource.html">DomainResource</a>: <a href="narrative.html#Narrative">text</a>, <a href="references.html#contained">contained</a>, <a href="extensibility.html">extension</a>, and <a href="extensibility.html#modifierExtension">modifierExtension</a> --&gt;
+ &lt;<a href="orderset-definitions.html#OrderSet.moduleMetadata" title="A reference to a ModuleMetadata resource containing metadata for the orderset." class="dict"><b>moduleMetadata</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: darkgreen"><a href="modulemetadata.html#ModuleMetadata">ModuleMetadata</a></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">The metadata for the orderset</a></span><span style="color: Gray"> --&gt;</span>&lt;/moduleMetadata&gt;
+ &lt;<a href="orderset-definitions.html#OrderSet.library" title="A reference to a Library resource containing any formal logic used by the orderset." class="dict"><b>library</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..*</b></span> <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="library.html#Library">Library</a>)</span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Logic used by the orderset</a></span><span style="color: Gray"> --&gt;</span>&lt;/library&gt;
+ &lt;<a href="orderset-definitions.html#OrderSet.action" title="The definition of the actions that make up the order set. Order set groups and sections are represented as actions which contain sub-actions." class="dict"><b>action</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..*</b></span> <span style="color: darkgreen"><a href="actiondefinition.html#ActionDefinition">ActionDefinition</a></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Groups, sections, and line items of the order set</a></span><span style="color: Gray"> --&gt;</span>&lt;/action&gt;
+&lt;/OrderSet&gt;
+</pre>
+
+ </div>
+</div>
+
+  </div>
+  <div id="tabs-json">
+
+<div id="json">
+<p><b>JSON Template</b></p>
+ <div id="json-inner">
+  <pre class="spec">
+{<span style="float: right"><a href="json.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+  &quot;resourceType&quot; : &quot;<a href="orderset-definitions.html#OrderSet" title="This resource allows for the definition of an order set as a sharable, consumable, and executable artifact in support of clinical decision support." class="dict"><b>OrderSet</b></a>&quot;,
+  // from <a href="resource.html">Resource</a>: <a href="resource.html#id">id</a>, <a href="resource.html#meta">meta</a>, <a href="resource.html#implicitRules">implicitRules</a>, and <a href="resource.html#language">language</a>
+  // from <a href="domainresource.html">DomainResource</a>: <a href="narrative.html#Narrative">text</a>, <a href="references.html#contained">contained</a>, <a href="extensibility.html">extension</a>, and <a href="extensibility.html#modifierExtension">modifierExtension</a>
+  &quot;<a href="orderset-definitions.html#OrderSet.moduleMetadata" title="A reference to a ModuleMetadata resource containing metadata for the orderset." class="dict">moduleMetadata</a>&quot; : { <span style="color: darkgreen"><a href="modulemetadata.html#ModuleMetadata">ModuleMetadata</a></span> }, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">The metadata for the orderset</a></span>
+  &quot;<a href="orderset-definitions.html#OrderSet.library" title="A reference to a Library resource containing any formal logic used by the orderset." class="dict">library</a>&quot; : [{ <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="library.html#Library">Library</a>)</span> }], <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Logic used by the orderset</a></span>
+  &quot;<a href="orderset-definitions.html#OrderSet.action" title="The definition of the actions that make up the order set. Order set groups and sections are represented as actions which contain sub-actions." class="dict">action</a>&quot; : [{ <span style="color: darkgreen"><a href="actiondefinition.html#ActionDefinition">ActionDefinition</a></span> }] <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Groups, sections, and line items of the order set</a></span>
+}
+</pre>
+
+ </div>
+</div>
+
+  </div>
+  <div id="tabs-ttl">
+
+<div id="ttl">
+<p><b>Turtle Template</b></p>
+ <div id="json-inner">
+  <pre class="spec">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .<span style="float: right"><a href="rdf.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+
+
+[ a fhir:<a href="orderset-definitions.html#OrderSet" title="This resource allows for the definition of an order set as a sharable, consumable, and executable artifact in support of clinical decision support." class="dict"><b>OrderSet</b></a>;
+  fhir:nodeRole fhir:treeRoot; # if this is the parser root
+
+  # from <a href="resource.html">Resource</a>: <a href="resource.html#id">.id</a>, <a href="resource.html#meta">.meta</a>, <a href="resource.html#implicitRules">.implicitRules</a>, and <a href="resource.html#language">.language</a>
+  # from <a href="domainresource.html">DomainResource</a>: <a href="narrative.html#Narrative">.text</a>, <a href="references.html#contained">.contained</a>, <a href="extensibility.html">.extension</a>, and <a href="extensibility.html#modifierExtension">.modifierExtension</a>
+  fhir:<a href="orderset-definitions.html#OrderSet.moduleMetadata" title="A reference to a ModuleMetadata resource containing metadata for the orderset." class="dict">OrderSet.moduleMetadata</a><a name="ttl-moduleMetadata"> </a>[ <a href="modulemetadata.html#ModuleMetadata">ModuleMetadata</a> ]; # 0..1 <span style="color: navy">The metadata for the orderset</span>
+  fhir:<a href="orderset-definitions.html#OrderSet.library" title="A reference to a Library resource containing any formal logic used by the orderset." class="dict">OrderSet.library</a><a name="ttl-library"> </a>[ <a href="references.html#Reference">Reference</a>(<a href="library.html#Library">Library</a>) ], ... ; # 0..* <span style="color: navy">Logic used by the orderset</span>
+  fhir:<a href="orderset-definitions.html#OrderSet.action" title="The definition of the actions that make up the order set. Order set groups and sections are represented as actions which contain sub-actions." class="dict">OrderSet.action</a><a name="ttl-action"> </a>[ <a href="actiondefinition.html#ActionDefinition">ActionDefinition</a> ], ... ; # 0..* <span style="color: navy">Groups, sections, and line items of the order set</span>
+]
+</pre>
+
+ </div>
+</div>
+
+  </div>
+  <div id="tabs-all">
+
+<div id="tbl">
+<a name="tbl"> </a>
+<p><b>Structure</b></p>
+ <div id="tbl-inner">
+  <table border="0" cellpadding="0" cellspacing="0" style="border: 0px; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="The logical name of the element">Name</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Information about the use of the element">Flags</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Minimum and Maximum # of times the the element can appear in the instance">Card.</a></th><th style="width: 100px" class="hierarchy"><a href="formats.html#table" title="Reference to the type of the element">Type</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Additional information about the element">Description &amp; Constraints</a><span style="float: right"><a href="formats.html#table" title="Legend for this format"><img src="help16.png" alt="doco" style="background-color: inherit"/></a></span></th></tr><tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: white; background-color: inherit" title="Resource" class="hierarchy"/> <a href="orderset-definitions.html#OrderSet" title="OrderSet : This resource allows for the definition of an order set as a sharable, consumable, and executable artifact in support of clinical decision support.">OrderSet</a><a name="OrderSet"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="domainresource.html">DomainResource</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">The definition of an order set</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="orderset-definitions.html#OrderSet.moduleMetadata" title="OrderSet.moduleMetadata : A reference to a ModuleMetadata resource containing metadata for the orderset.">moduleMetadata</a><a name="OrderSet.moduleMetadata"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="modulemetadata.html#ModuleMetadata">ModuleMetadata</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">The metadata for the orderset</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_reference.png" alt="." style="background-color: white; background-color: inherit" title="Reference to another Resource" class="hierarchy"/> <a href="orderset-definitions.html#OrderSet.library" title="OrderSet.library : A reference to a Library resource containing any formal logic used by the orderset.">library</a><a name="OrderSet.library"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="references.html">Reference</a>(<a href="library.html">Library</a>)</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Logic used by the orderset</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="orderset-definitions.html#OrderSet.action" title="OrderSet.action : The definition of the actions that make up the order set. Order set groups and sections are represented as actions which contain sub-actions.">action</a><a name="OrderSet.action"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="actiondefinition.html#ActionDefinition">ActionDefinition</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Groups, sections, and line items of the order set</td></tr>
+<tr><td colspan="5" class="hierarchy"><br/><a href="formats.html#table" title="Legend for this format"><img src="help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table>
+ </div>
+</div>
+
+ 
+<div id="uml">
+<a name="uml"> </a>
+<p><b>UML Diagram</b></p>
+ <div id="uml-inner">
+ <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="267.20000000000005" version="1.1" height="88.0">  <defs>
+    <filter x="0" width="200%" y="0" id="shadowB" height="200%">
+      <feOffset result="offOut" dx="3" in="SourceGraphic" dy="3"/>
+      <feColorMatrix result="matrixOut" in="offOut" values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0" type="matrix"/>
+      <feGaussianBlur result="blurOut" stdDeviation="2" in="matrixOut"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="blurOut"/>
+    </filter>
+  </defs><g><rect filter="url(#shadowB)" rx="4" ry="4" x="0.0" width="167.20000000000002" y="0.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="78.0"/><line y1="28.0" x1="0.0" y2="28.0" x2="167.20000000000002" style="stroke:dimgrey;stroke-width:1"/><text x="83.60000000000001" y="20.0" fill="black" class="diagram-class-title  diagram-class-resource">OrderSet<tspan class="diagram-class-title-link"> (<a class="diagram-class-reference" xlink:href="domainresource.html">DomainResource</a>)</tspan></text><text x="6.0" y="42.0" fill="black" class="diagram-class-detail"><a xlink:href="orderset-definitions.html#OrderSet.moduleMetadata"><title>A reference to a ModuleMetadata resource containing metadata for the orderset</title>moduleMetadata</a> : <a xlink:href="modulemetadata.html#ModuleMetadata">ModuleMetadata</a> [0..1]</text><text x="6.0" y="56.0" fill="black" class="diagram-class-detail"><a xlink:href="orderset-definitions.html#OrderSet.library"><title>A reference to a Library resource containing any formal logic used by the orderset</title>library</a> : <a xlink:href="references.html#Reference">Reference</a> [0..*] « <a xlink:href="library.html#Library">Library</a> »</text><text x="6.0" y="70.0" fill="black" class="diagram-class-detail"><a xlink:href="orderset-definitions.html#OrderSet.action"><title>The definition of the actions that make up the order set. Order set groups and sections are represented as actions which contain sub-actions</title>action</a> : <a xlink:href="actiondefinition.html#ActionDefinition">ActionDefinition</a> [0..*]</text></g></svg>
+ </div>
+</div>
+
+<div id="xml">
+<a name="xml"> </a>
+<p><b>XML Template</b></p>
+ <div id="xml-inner">
+  <pre class="spec">
+&lt;<a href="orderset-definitions.html#OrderSet" title="This resource allows for the definition of an order set as a sharable, consumable, and executable artifact in support of clinical decision support." class="dict"><b>OrderSet</b></a> xmlns=&quot;http://hl7.org/fhir&quot;&gt; <span style="float: right"><a href="xml.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+ &lt;!-- from <a href="resource.html">Resource</a>: <a href="resource.html#id">id</a>, <a href="resource.html#meta">meta</a>, <a href="resource.html#implicitRules">implicitRules</a>, and <a href="resource.html#language">language</a> --&gt;
+ &lt;!-- from <a href="domainresource.html">DomainResource</a>: <a href="narrative.html#Narrative">text</a>, <a href="references.html#contained">contained</a>, <a href="extensibility.html">extension</a>, and <a href="extensibility.html#modifierExtension">modifierExtension</a> --&gt;
+ &lt;<a href="orderset-definitions.html#OrderSet.moduleMetadata" title="A reference to a ModuleMetadata resource containing metadata for the orderset." class="dict"><b>moduleMetadata</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: darkgreen"><a href="modulemetadata.html#ModuleMetadata">ModuleMetadata</a></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">The metadata for the orderset</a></span><span style="color: Gray"> --&gt;</span>&lt;/moduleMetadata&gt;
+ &lt;<a href="orderset-definitions.html#OrderSet.library" title="A reference to a Library resource containing any formal logic used by the orderset." class="dict"><b>library</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..*</b></span> <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="library.html#Library">Library</a>)</span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Logic used by the orderset</a></span><span style="color: Gray"> --&gt;</span>&lt;/library&gt;
+ &lt;<a href="orderset-definitions.html#OrderSet.action" title="The definition of the actions that make up the order set. Order set groups and sections are represented as actions which contain sub-actions." class="dict"><b>action</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..*</b></span> <span style="color: darkgreen"><a href="actiondefinition.html#ActionDefinition">ActionDefinition</a></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Groups, sections, and line items of the order set</a></span><span style="color: Gray"> --&gt;</span>&lt;/action&gt;
+&lt;/OrderSet&gt;
+</pre>
+
+ </div>
+</div>
+
+<div id="json2">
+<a name="json"> </a>
+<p><b>JSON Template</b></p>
+ <div id="json-inner">
+  <pre class="spec">
+{<span style="float: right"><a href="json.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+  &quot;resourceType&quot; : &quot;<a href="orderset-definitions.html#OrderSet" title="This resource allows for the definition of an order set as a sharable, consumable, and executable artifact in support of clinical decision support." class="dict"><b>OrderSet</b></a>&quot;,
+  // from <a href="resource.html">Resource</a>: <a href="resource.html#id">id</a>, <a href="resource.html#meta">meta</a>, <a href="resource.html#implicitRules">implicitRules</a>, and <a href="resource.html#language">language</a>
+  // from <a href="domainresource.html">DomainResource</a>: <a href="narrative.html#Narrative">text</a>, <a href="references.html#contained">contained</a>, <a href="extensibility.html">extension</a>, and <a href="extensibility.html#modifierExtension">modifierExtension</a>
+  &quot;<a href="orderset-definitions.html#OrderSet.moduleMetadata" title="A reference to a ModuleMetadata resource containing metadata for the orderset." class="dict">moduleMetadata</a>&quot; : { <span style="color: darkgreen"><a href="modulemetadata.html#ModuleMetadata">ModuleMetadata</a></span> }, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">The metadata for the orderset</a></span>
+  &quot;<a href="orderset-definitions.html#OrderSet.library" title="A reference to a Library resource containing any formal logic used by the orderset." class="dict">library</a>&quot; : [{ <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="library.html#Library">Library</a>)</span> }], <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Logic used by the orderset</a></span>
+  &quot;<a href="orderset-definitions.html#OrderSet.action" title="The definition of the actions that make up the order set. Order set groups and sections are represented as actions which contain sub-actions." class="dict">action</a>&quot; : [{ <span style="color: darkgreen"><a href="actiondefinition.html#ActionDefinition">ActionDefinition</a></span> }] <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Groups, sections, and line items of the order set</a></span>
+}
+</pre>
+
+ </div>
+</div>
+  
+<div id="ttl2">
+<a name="ttl"> </a>
+<p><b>Turtle Template</b></p>
+ <div id="ttl-inner">
+  <pre class="spec">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .<span style="float: right"><a href="rdf.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+
+
+[ a fhir:<a href="orderset-definitions.html#OrderSet" title="This resource allows for the definition of an order set as a sharable, consumable, and executable artifact in support of clinical decision support." class="dict"><b>OrderSet</b></a>;
+  fhir:nodeRole fhir:treeRoot; # if this is the parser root
+
+  # from <a href="resource.html">Resource</a>: <a href="resource.html#id">.id</a>, <a href="resource.html#meta">.meta</a>, <a href="resource.html#implicitRules">.implicitRules</a>, and <a href="resource.html#language">.language</a>
+  # from <a href="domainresource.html">DomainResource</a>: <a href="narrative.html#Narrative">.text</a>, <a href="references.html#contained">.contained</a>, <a href="extensibility.html">.extension</a>, and <a href="extensibility.html#modifierExtension">.modifierExtension</a>
+  fhir:<a href="orderset-definitions.html#OrderSet.moduleMetadata" title="A reference to a ModuleMetadata resource containing metadata for the orderset." class="dict">OrderSet.moduleMetadata</a><a name="ttl-moduleMetadata"> </a>[ <a href="modulemetadata.html#ModuleMetadata">ModuleMetadata</a> ]; # 0..1 <span style="color: navy">The metadata for the orderset</span>
+  fhir:<a href="orderset-definitions.html#OrderSet.library" title="A reference to a Library resource containing any formal logic used by the orderset." class="dict">OrderSet.library</a><a name="ttl-library"> </a>[ <a href="references.html#Reference">Reference</a>(<a href="library.html#Library">Library</a>) ], ... ; # 0..* <span style="color: navy">Logic used by the orderset</span>
+  fhir:<a href="orderset-definitions.html#OrderSet.action" title="The definition of the actions that make up the order set. Order set groups and sections are represented as actions which contain sub-actions." class="dict">OrderSet.action</a><a name="ttl-action"> </a>[ <a href="actiondefinition.html#ActionDefinition">ActionDefinition</a> ], ... ; # 0..* <span style="color: navy">Groups, sections, and line items of the order set</span>
+]
+</pre>
+
+ </div>
+</div>
+  
+  </div>
+</div>
+  
+<p>&nbsp;</p>  
+<p>Alternate definitions: 
+Master Definition (<a href="orderset.profile.xml.html">XML</a>, <a href="orderset.profile.json.html">JSON</a>),
+<a href="xml.html">XML</a> <a href="orderset.xsd">Schema</a>/<a href="orderset.sch">Schematron</a> (for ) + <a href="json.html">JSON</a> <a href="orderset.schema.json">Schema</a>, <a href="orderset.shex.html">ShEx</a> (for <a href="rdf.html">Turtle</a>), 
+<a href="orderset-questionnaire.html">Questionnaire</a></p>
+
+
+<a name="tx"> </a>
+
+
+
+
+
+  <!-- insert xhtml content here -->
+
+
+
+<a name="search"> </a>
+<h2><span class="sectioncount">4.19.3</span> Search Parameters <a href="orderset.html#search" title="link to here" class="self-link"><img src="target.png"/></a></h2>
+<p>Search parameters for this resource. The <a href="search.html#all">common parameters</a> also apply. See <a href="search.html">Searching</a> for more information about searching in REST, messaging, and services.</p>
+<table class="list">
+<tr><td><b>Name</b></td><td><b>Type</b></td><td><b>Description</b></td><td><b>Paths</b></td></tr>
+<tr><td>description</td><td><a href="search.html#string">string</a></td><td>Text search against the description</td><td>OrderSet.moduleMetadata.description</td></tr>
+<tr><td>identifier</td><td><a href="search.html#token">token</a></td><td>Logical identifier for the module (e.g. CMS-143)</td><td>OrderSet.moduleMetadata.identifier</td></tr>
+<tr><td>status</td><td><a href="search.html#token">token</a></td><td>Status of the module</td><td>OrderSet.moduleMetadata.status</td></tr>
+<tr><td>title</td><td><a href="search.html#string">string</a></td><td>Text search against the title</td><td>OrderSet.moduleMetadata.title</td></tr>
+<tr><td>topic</td><td><a href="search.html#token">token</a></td><td>Topics associated with the module</td><td>OrderSet.moduleMetadata.topic</td></tr>
+<tr><td>version</td><td><a href="search.html#string">string</a></td><td>Version of the module (e.g. 1.0.0)</td><td>OrderSet.moduleMetadata.version</td></tr>
+</table>
+
+
+
+</div>
+
+
+				</div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+        
+    </div>  <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">  <!-- segment-footer -->
+		<div class="container">  <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.4.0-8453) generated on Mon, Jun 6, 2016 20:21+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img src="external.png" style="text-align: baseline"/></a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Forderset.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Forderset.html">Compare to DSTU2 <img src="external.png" style="text-align: baseline"/></a> |                
+               <a rel="license" style="color: #81BEF7" href="license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a> | 
+               <a style="color: #81BEF7" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank">Propose a change <img src="external.png" style="text-align: baseline"/></a>   
+        </span>
+        </p>
+			</div>  <!-- /inner-wrapper -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+    
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+
+
+
+<script src="external/jquery/jquery.js"> </script>
+<script src="jquery-ui.min.js"> </script>
+<script>
+try {
+  var currentTabIndex = sessionStorage.getItem('fhir-resource-tab-index');
+}
+catch(exception){ 
+}
+
+if (!currentTabIndex)
+  currentTabIndex = '0';
+
+$( '#tabs' ).tabs({
+         active: currentTabIndex,
+         activate: function( event, ui ) {
+             var active = $('.selector').tabs('option', 'active');
+             currentTabIndex = ui.newTab.index();
+             document.activeElement.blur();
+             try {
+               sessionStorage.setItem('fhir-resource-tab-index', currentTabIndex);
+             }
+             catch(exception){ 
+             }
+         }
+     });
+</script>
+    
+</body>
+</html>

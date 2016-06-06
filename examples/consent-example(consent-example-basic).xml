@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><Consent xmlns="http://hl7.org/fhir">
+  <id value="consent-example-basic"/>
+
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+    <p>
+	Authorize Normal access for Treatment
+	</p><p>
+    Patient &quot;P. van de Heuvel&quot; wishes to have all of the PHI collected at the Good Health Psychiatric Hospital 
+   available for normal treatment use.
+   </p>
+   </div>
+  </text>
+
+  <status value="active"/>
+   
+  <!--  Opt-In is explicit authorization with explicit exceptions  -->
+  <type>
+     <coding>
+	   <system value="http://hl7.org/fhir/consenttypecodes"/>
+	   <code value="Opt-In"/>
+	   <display value="Authorization with exceptions."/>
+	 </coding>
+  </type>
+ 
+  <issued value="2016-05-11"/>
+ <!--  bound by a timeframe between 1964 and 2016 - consent.applies  -->
+	 <applies>
+		  <start value="1964-01-01"/>
+		  <end value="2016-01-01"/>
+	 </applies>
+	 
+  <patient>
+    <reference value="Patient/f001"/>
+    <display value="P. van de Heuvel"/>
+  </patient>
+
+  <!--  I assume the example given is Canada Infoway wide???  AND I assume it is desired to state that in the consent.authority element  -->
+  <authority>
+      <reference value="Organization/Infoway"/>
+	  <display value="Canada Infoway"/>
+   </authority>
+	  
+   <!--  and/or would this [also] go into Consent.domain as a Jurisdiction?? (see the example on UK Pharamacy Juristiction)  -->
+  <domain>
+      <reference value="Location/Infoway"/>
+	  <display value="Canada Infoway"/>
+   </domain>
+
+ <!--  no special terms (exceptions)  -->
+ 
+   <!--  the terms of the consent as signed by the patient in ink  -->
+
+     <contentAttachment>
+	   <title value="The terms of the consent in lawyer speak."/>
+	   <!--  likely use url pointer to common text  -->
+	 </contentAttachment>
+
+</Consent>

@@ -1,0 +1,66 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Condition",
+  "resourceType": "Condition",
+  "Resource.id": {
+    "value": "example2"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mild Asthma (Date: 21-Nov 2012)</div>"
+    }
+  },
+  "Condition.patient": {
+    "Reference.reference": {
+      "value": "Patient/example"
+    },
+    "reference": "http://hl7.org/fhir//Patient/example"
+  },
+  "Condition.code": {
+    "CodeableConcept.text": {
+      "value": "Asthma"
+    }
+  },
+  "Condition.category": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/condition-category"
+        },
+        "Coding.code": {
+          "value": "finding"
+        },
+        "Coding.display": {
+          "value": "Finding"
+        }
+      }
+    ]
+  },
+  "Condition.clinicalStatus": {
+    "value": "active"
+  },
+  "Condition.verificationStatus": {
+    "value": "confirmed"
+  },
+  "Condition.severity": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "value": "255604002"
+        },
+        "Coding.display": {
+          "value": "Mild"
+        }
+      }
+    ],
+    "concept": "http://snomed.info/sct#255604002"
+  },
+  "Condition.onsetDateTime": {
+    "value": "2012-11-12"
+  }
+}

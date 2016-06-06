@@ -1,0 +1,152 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Observation",
+  "resourceType": "Observation",
+  "Resource.id": {
+    "value": "f203"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f203</p><p><b>identifier</b>: 1304-03720-Bicarbonate</p><p><b>status</b>: final</p><p><b>code</b>: Bicarbonate [Moles/?volume] in Serum <span>(Details : {LOINC code '1963-8' = 'Bicarbonate [Moles/volume] in Serum', given as 'Bicarbonate [Moles/?volume] in Serum'}; {SNOMED CT code '365722008' = 'Finding of bicarbonate level (finding)', given as 'Bicarbonate level'})</span></p><p><b>subject</b>: <a>Roel</a></p><p><b>issued</b>: Apr 4, 2013 2:34:00 PM</p><p><b>performer</b>: <a>Luigi Maas</a></p><p><b>value</b>: 28 mmol/L<span> (Details: SNOMED CT code 258813002 = 'Millimole/liter (qualifier value)')</span></p><p><b>interpretation</b>: Serum bicarbonate level normal <span>(Details : {SNOMED CT code '166698001' = 'Serum bicarbonate level normal (finding)', given as 'Serum bicarbonate level normal'}; {http://hl7.org/fhir/v2/0078 code 'N' = 'Normal)</span></p><p><b>method</b>: enzymatic method <span>(Details )</span></p><h3>ReferenceRanges</h3><table><tr><td>-</td><td><b>Low</b></td><td><b>High</b></td><td><b>Meaning</b></td></tr><tr><td>*</td><td>22</td><td>29</td><td>Normal Range <span>(Details : {http://hl7.org/fhir/referencerange-meaning code 'normal' = 'Normal Range', given as 'Normal Range'})</span></td></tr></table></div>"
+    }
+  },
+  "Observation.identifier": [
+    {
+      "Identifier.system": {
+        "value": "https://intranet.aumc.nl/labvalues"
+      },
+      "Identifier.value": {
+        "value": "1304-03720-Bicarbonate"
+      }
+    }
+  ],
+  "Observation.status": {
+    "value": "final"
+  },
+  "Observation.code": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://loinc.org"
+        },
+        "Coding.code": {
+          "value": "1963-8"
+        },
+        "Coding.display": {
+          "value": "Bicarbonate [Moles/?volume] in Serum"
+        }
+      },
+      {
+        "Coding.system": {
+          "value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "value": "365722008"
+        },
+        "Coding.display": {
+          "value": "Bicarbonate level"
+        }
+      }
+    ],
+    "concept": "http://loinc.org/owl#1963-8",
+    "concept": "http://snomed.info/sct#365722008"
+  },
+  "Observation.subject": {
+    "Reference.reference": {
+      "value": "Patient/f201"
+    },
+    "Reference.display": {
+      "value": "Roel"
+    },
+    "reference": "http://hl7.org/fhir//Patient/f201"
+  },
+  "Observation.issued": {
+    "value": "2013-04-04T14:34:00+01:00"
+  },
+  "Observation.performer": [
+    {
+      "Reference.reference": {
+        "value": "Practitioner/f202"
+      },
+      "Reference.display": {
+        "value": "Luigi Maas"
+      }
+    }
+  ],
+  "Observation.valueQuantity": {
+    "Quantity.value": {
+      "value": 28
+    },
+    "Quantity.unit": {
+      "value": "mmol/L"
+    },
+    "Quantity.system": {
+      "value": "http://snomed.info/sct"
+    },
+    "Quantity.code": {
+      "value": "258813002"
+    }
+  },
+  "Observation.interpretation": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "value": "166698001"
+        },
+        "Coding.display": {
+          "value": "Serum bicarbonate level normal"
+        }
+      },
+      {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/v2/0078"
+        },
+        "Coding.code": {
+          "value": "N"
+        }
+      }
+    ],
+    "concept": "http://snomed.info/sct#166698001"
+  },
+  "Observation.method": {
+    "CodeableConcept.text": {
+      "value": "enzymatic method"
+    }
+  },
+  "Observation.referenceRange": [
+    {
+      "Observation.referenceRange.low": {
+        "Quantity.value": {
+          "value": 22
+        }
+      },
+      "Observation.referenceRange.high": {
+        "Quantity.value": {
+          "value": 29
+        }
+      },
+      "Observation.referenceRange.meaning": [
+        {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "value": "http://hl7.org/fhir/referencerange-meaning"
+              },
+              "Coding.code": {
+                "value": "normal"
+              },
+              "Coding.display": {
+                "value": "Normal Range"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

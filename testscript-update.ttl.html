@@ -1,0 +1,317 @@
+﻿<!DOCTYPE HTML>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Testscript-update.ttl - FHIR v1.4.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+  <link rel="Prev" href="http://hl7.org/fhir/testscript-update.ttl.html"/>
+
+  <!-- Bootstrap core CSS -->
+  <link href="./dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="./assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="./assets/css/project.css" rel="stylesheet"/>
+  <link href="./assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment"><!-- segment-header -->	
+		<div class="container"><!-- container -->
+			<a id="logo" href="http://hl7.org/fhir" no-external="true"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a id="hl7-logo" href="http://www.hl7.org" no-external="true">
+					<img src="./assets/images/hl7-logo.png" width="42" height="50" alt="visit the hl7 website"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="./assets/images/search.png"/></a></div> 
+		</div>
+		<div class="container"><!-- container -->
+	</div></div><!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment"><!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container"><!-- container -->
+ <!-- HEADER CONTENT -->
+ 	      		
+ 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="documentation.html">Documentation</a></li>
+              <li><a href="implementation.html">Implementation</a></li>
+              <li><a href="resourcelist.html">Resources</a></li>
+              <li><a href="clinical.html">Clinical</a></li>
+              <li><a href="administration.html">Administrative</a></li>
+              <li><a href="infrastructure.html">Infrastructure</a></li>
+              <li><a href="financial.html">Financial</a></li>
+
+						</ul>
+					</div><!-- /.nav-collapse -->
+				</div><!-- /.container -->
+			</nav><!-- /.navbar -->
+      		
+				
+<!-- /HEADER CONTENT -->				
+		</div><!-- /container -->
+	</div><!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment"><!-- segment-breadcrumb -->
+		<div class="container"><!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="infrastructure.html">Infrastructure</a></li>        <li><a href="testscript.html">TestScript</a></li>        <li><b>Example Instance</b></li>        <!-- testscript-update.ttl.html / resource-instance:TestScript / Example-->
+
+			</ul>	
+		</div><!-- /container -->
+	</div><!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment"><!-- segment-content -->
+	<div class="container"><!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+<!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<h1>Testscript-update.ttl</h1>
+
+<p>
+<a href="testscript-update.ttl">Raw Turtle</a>, 
+<a href="testscript-update.jsonld">JSON-LD</a> 
+</p>
+
+<div class="example">
+<p>Update TestScript Example</p>
+<pre class="json">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+# - resource -------------------------------------------------------------------
+
+&lt;http://hl7.org/fhir/TestScriptupdate&gt; a fhir:TestScript;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value &quot;update&quot;];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value &quot;generated&quot; ];
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: update&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: Update Test Script&lt;/p&gt;&lt;p&gt;&lt;b&gt;description&lt;/b&gt;: Test Script for update of the patient resource&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;fixture&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;resource&lt;/b&gt;: &lt;a&gt;Patient/patient-example.xml&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;fixture&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;resource&lt;/b&gt;: &lt;a&gt;Patient/patient-example-updated.xml&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;setup&lt;/b&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;action&lt;/b&gt;&lt;/p&gt;&lt;h3&gt;Operations&lt;/h3&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;SourceId&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;create&lt;/td&gt;&lt;td&gt;example-patient&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;test&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: Update Patient&lt;/p&gt;&lt;p&gt;&lt;b&gt;description&lt;/b&gt;: Update a patient and validate response.&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;metadata&lt;/b&gt;&lt;/p&gt;&lt;h3&gt;Links&lt;/h3&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Url&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Description&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;&lt;a&gt;http://hl7.org/implement/standards/FHIR-Develop/patient.html&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FHIR Patient&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;operation&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: create&lt;/p&gt;&lt;p&gt;&lt;b&gt;resource&lt;/b&gt;: Patient&lt;/p&gt;&lt;p&gt;&lt;b&gt;description&lt;/b&gt;: Patient Create Operation&lt;/p&gt;&lt;p&gt;&lt;b&gt;link&lt;/b&gt;: &lt;a&gt;http://hl7.org/implement/standards/FHIR-Develop/http.html#create&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;required&lt;/b&gt;: true&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;operation&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: read&lt;/p&gt;&lt;p&gt;&lt;b&gt;resource&lt;/b&gt;: Patient&lt;/p&gt;&lt;p&gt;&lt;b&gt;description&lt;/b&gt;: Patient Read Operation&lt;/p&gt;&lt;p&gt;&lt;b&gt;link&lt;/b&gt;: &lt;a&gt;http://hl7.org/implement/standards/FHIR-Develop/http.html#read&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;required&lt;/b&gt;: true&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;operation&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: delete&lt;/p&gt;&lt;p&gt;&lt;b&gt;resource&lt;/b&gt;: Patient&lt;/p&gt;&lt;p&gt;&lt;b&gt;description&lt;/b&gt;: Patient Delete Operation&lt;/p&gt;&lt;p&gt;&lt;b&gt;link&lt;/b&gt;: &lt;a&gt;http://hl7.org/implement/standards/FHIR-Develop/http.html#delete&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;required&lt;/b&gt;: true&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;operation&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: update&lt;/p&gt;&lt;p&gt;&lt;b&gt;resource&lt;/b&gt;: Patient&lt;/p&gt;&lt;p&gt;&lt;b&gt;description&lt;/b&gt;: Patient Update Operation&lt;/p&gt;&lt;p&gt;&lt;b&gt;link&lt;/b&gt;: &lt;a&gt;http://hl7.org/implement/standards/FHIR-Develop/http.html#update&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;validated&lt;/b&gt;: true&lt;/p&gt;&lt;/blockquote&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;action&lt;/b&gt;&lt;/p&gt;&lt;h3&gt;Operations&lt;/h3&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;action&lt;/b&gt;&lt;/p&gt;&lt;h3&gt;Asserts&lt;/h3&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;action&lt;/b&gt;&lt;/p&gt;&lt;h3&gt;Asserts&lt;/h3&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;action&lt;/b&gt;&lt;/p&gt;&lt;h3&gt;Operations&lt;/h3&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;action&lt;/b&gt;&lt;/p&gt;&lt;h3&gt;Asserts&lt;/h3&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;teardown&lt;/b&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;action&lt;/b&gt;&lt;/p&gt;&lt;h3&gt;Operations&lt;/h3&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;&lt;/blockquote&gt;&lt;/div&gt;&quot;
+  ];
+  fhir:TestScript.url [ fhir:value &quot;http://hl7.org/fhir/TestScript/update&quot;];
+  fhir:TestScript.name [ fhir:value &quot;Update Test Script&quot;];
+  fhir:TestScript.status [ fhir:value &quot;draft&quot;];
+  fhir:TestScript.description [ fhir:value &quot;Test Script for update of the patient resource&quot;];
+  fhir:TestScript.fixture [
+     fhir:index 0;
+     fhir:Element.id [ fhir:value &quot;example-patient&quot; ];
+     fhir:TestScript.fixture.resource [
+       fhir:link &lt;http://hl7.org/fhir/Patient/example&gt;;
+       fhir:Reference.reference [ fhir:value &quot;Patient/example&quot; ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Element.id [ fhir:value &quot;example-patient-updated&quot; ];
+     fhir:TestScript.fixture.resource [
+       fhir:link &lt;http://hl7.org/fhir/Patient/pat1&gt;;
+       fhir:Reference.reference [ fhir:value &quot;Patient/pat1&quot; ]
+     ]
+  ];
+  fhir:TestScript.setup [
+     fhir:TestScript.setup.action [
+       fhir:index 0;
+       fhir:TestScript.setup.action.operation [
+         fhir:TestScript.setup.action.operation.type [
+           fhir:Coding.code [ fhir:value &quot;create&quot; ]
+         ];
+         fhir:TestScript.setup.action.operation.sourceId [ fhir:value &quot;example-patient&quot; ]
+       ]
+     ]
+  ];
+  fhir:TestScript.test [
+     fhir:index 0;
+     fhir:Element.id [ fhir:value &quot;UPDATE01&quot; ];
+     fhir:TestScript.test.name [ fhir:value &quot;Update Patient&quot; ];
+     fhir:TestScript.test.description [ fhir:value &quot;Update a patient and validate response.&quot; ];
+     fhir:TestScript.test.metadata [
+       fhir:TestScript.metadata.capability [
+         fhir:index 0;
+         fhir:TestScript.metadata.capability.required [ fhir:value &quot;true&quot;^^xsd:boolean ];
+         fhir:TestScript.metadata.capability.description [ fhir:value &quot;Patient Create, Read, and Delete Operations&quot; ];
+         fhir:TestScript.metadata.capability.link [
+           fhir:value &quot;http://hl7.org/implement/standards/FHIR-Develop/http.html#create&quot;;
+           fhir:index 0
+         ], [
+           fhir:value &quot;http://hl7.org/implement/standards/FHIR-Develop/http.html#read&quot;;
+           fhir:index 1
+         ], [
+           fhir:value &quot;http://hl7.org/implement/standards/FHIR-Develop/http.html#delete&quot;;
+           fhir:index 2
+         ];
+         fhir:TestScript.metadata.capability.conformance [
+           fhir:link &lt;http://hl7.org/fhir/Conformance/example&gt;;
+           fhir:Reference.reference [ fhir:value &quot;Conformance/example&quot; ]
+         ]
+       ], [
+         fhir:index 1;
+         fhir:TestScript.metadata.capability.validated [ fhir:value &quot;true&quot;^^xsd:boolean ];
+         fhir:TestScript.metadata.capability.description [ fhir:value &quot;Patient Update Operation&quot; ];
+         fhir:TestScript.metadata.capability.link [
+           fhir:value &quot;http://hl7.org/implement/standards/FHIR-Develop/http.html#update&quot;;
+           fhir:index 0
+         ];
+         fhir:TestScript.metadata.capability.conformance [
+           fhir:link &lt;http://hl7.org/fhir/Conformance/example&gt;;
+           fhir:Reference.reference [ fhir:value &quot;Conformance/example&quot; ]
+         ]
+       ]
+     ];
+     fhir:TestScript.test.action [
+       fhir:index 0;
+       fhir:TestScript.test.action.operation [
+         fhir:TestScript.setup.action.operation.type [
+           fhir:Coding.code [ fhir:value &quot;update&quot; ]
+         ];
+         fhir:TestScript.setup.action.operation.sourceId [ fhir:value &quot;example-patient-updated&quot; ];
+         fhir:TestScript.setup.action.operation.targetId [ fhir:value &quot;example-patient&quot; ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:TestScript.test.action.assert [
+         fhir:TestScript.setup.action.assert.responseCode [ fhir:value &quot;201&quot; ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:TestScript.test.action.assert [
+         fhir:TestScript.setup.action.assert.headerField [ fhir:value &quot;Last-Modified&quot; ];
+         fhir:TestScript.setup.action.assert.operator [ fhir:value &quot;notEmpty&quot; ]
+       ]
+     ], [
+       fhir:index 3;
+       fhir:TestScript.test.action.operation [
+         fhir:TestScript.setup.action.operation.type [
+           fhir:Coding.code [ fhir:value &quot;read&quot; ]
+         ];
+         fhir:TestScript.setup.action.operation.targetId [ fhir:value &quot;example-patient&quot; ]
+       ]
+     ], [
+       fhir:index 4;
+       fhir:TestScript.test.action.assert [
+         fhir:TestScript.setup.action.assert.response [ fhir:value &quot;okay&quot; ]
+       ]
+     ]
+  ];
+  fhir:TestScript.teardown [
+     fhir:TestScript.teardown.action [
+       fhir:index 0;
+       fhir:TestScript.teardown.action.operation [
+         fhir:TestScript.setup.action.operation.type [
+           fhir:Coding.code [ fhir:value &quot;delete&quot; ]
+         ];
+         fhir:TestScript.setup.action.operation.targetId [ fhir:value &quot;example-patient&quot; ]
+       ]
+     ]
+  ].
+
+# -------------------------------------------------------------------------------------
+
+
+</pre>
+</div>
+
+
+<p>
+Usage note: every effort has been made to ensure that the
+examples are correct and useful, but they are not a normative part 
+of the specification. 
+</p>
+
+</div>
+
+
+				</div><!-- /inner-wrapper -->
+            </div><!-- /row -->
+        </div><!-- /container -->
+        
+    </div><!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment"><!-- segment-footer -->
+		<div class="container"><!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        © HL7.org 2011+. FHIR STU3 Candidate (v1.4.0-8453) generated on Mon, Jun 6, 2016 20:22+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search</a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Ftestscript-update.ttl.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Ftestscript-update.ttl.html">Compare to DSTU2</a> |                
+               <a style="color: #81BEF7" rel="license" href="license.html"><img src="cc0.png" style="border-style: none;" alt="CC0"/></a> | 
+               <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>   
+        </span>
+        </p>
+			</div><!-- /inner-wrapper -->
+		</div><!-- /container -->
+	</div><!-- /segment-footer -->
+<!-- disqus thread -->
+<!--disqus-->
+<!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden"><!-- segment-post-footer -->
+		<div class="container"><!-- container -->
+		</div><!-- /container -->
+	</div><!-- /segment-post-footer -->
+    
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>   <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

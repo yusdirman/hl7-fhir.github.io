@@ -1,0 +1,119 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Patient",
+  "resourceType": "Patient",
+  "Resource.id": {
+    "value": "patient-uslab-example1"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: patient-uslab-example1</p><p><b>identifier</b>: 18547545 (USUAL)</p><p><b>name</b>: Todd G. Lerr (OFFICIAL)</p><p><b>gender</b>: male</p><p><b>birthDate</b>: Jun 7, 2012</p><p><b>deceased</b>: false</p><p><b>address</b>: 123 North 102nd Street Apt 4d Harrisburg PA 17102 USA (HOME)</p></div>"
+    }
+  },
+  "DomainResource.extension": [
+    {
+      "Extension.url": {
+        "value": "http://hl7.org/fhir/StructureDefinition/us-core-race"
+      },
+      "Extension.valueCodeableConcept": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.code": {
+              "value": "2106-3"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "Extension.url": {
+        "value": "http://hl7.org/fhir/StructureDefinition/us-core-ethnicity"
+      },
+      "Extension.valueCodeableConcept": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.code": {
+              "value": "2135-2"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "Patient.identifier": [
+    {
+      "Identifier.use": {
+        "value": "usual"
+      },
+      "Identifier.system": {
+        "value": "urn:oid:2.16.840.1.113883.3.72.5.30.2"
+      },
+      "Identifier.value": {
+        "value": "18547545"
+      }
+    }
+  ],
+  "Patient.name": [
+    {
+      "HumanName.use": {
+        "value": "official"
+      },
+      "HumanName.family": [
+        {
+          "value": "Lerr"
+        }
+      ],
+      "HumanName.given": [
+        {
+          "value": "Todd"
+        },
+        {
+          "value": "G."
+        }
+      ],
+      "HumanName.suffix": [
+        {
+          "value": "Jr"
+        }
+      ]
+    }
+  ],
+  "Patient.gender": {
+    "value": "male"
+  },
+  "Patient.birthDate": {
+    "value": "2012-06-07"
+  },
+  "Patient.deceasedBoolean": {
+    "value": false
+  },
+  "Patient.address": [
+    {
+      "Address.use": {
+        "value": "home"
+      },
+      "Address.line": [
+        {
+          "value": "123 North 102nd Street"
+        },
+        {
+          "value": "Apt 4d"
+        }
+      ],
+      "Address.city": {
+        "value": "Harrisburg"
+      },
+      "Address.state": {
+        "value": "PA"
+      },
+      "Address.postalCode": {
+        "value": "17102"
+      },
+      "Address.country": {
+        "value": "USA"
+      }
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Provenance",
+  "resourceType": "Provenance",
+  "Resource.id": {
+    "value": "signature"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">procedure record authored on 27-June 2015 by Harold Hippocrates, MD Content extracted from Referral received 26-June</div>"
+    }
+  },
+  "Provenance.target": [
+    {
+      "Reference.reference": {
+        "value": "DocumentReference/example"
+      }
+    }
+  ],
+  "Provenance.recorded": {
+    "value": "2015-08-27T08:39:24+10:00"
+  },
+  "Provenance.reason": [
+    {
+      "Coding.system": {
+        "value": "http://hl7.org/fhir/v3/ActReason"
+      },
+      "Coding.code": {
+        "value": "TREAT"
+      },
+      "Coding.display": {
+        "value": "treatment"
+      }
+    }
+  ],
+  "Provenance.activity": {
+    "Coding.system": {
+      "value": "http://hl7.org/fhir/v3/DocumentCompletion"
+    },
+    "Coding.code": {
+      "value": "AU"
+    },
+    "Coding.display": {
+      "value": "authenticated"
+    }
+  },
+  "Provenance.agent": [
+    {
+      "Provenance.agent.role": {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/provenance-participant-role"
+        },
+        "Coding.code": {
+          "value": "verifier"
+        }
+      },
+      "Provenance.agent.actor": {
+        "Reference.reference": {
+          "value": "Practitioner/xcda-author"
+        },
+        "reference": "http://hl7.org/fhir//Practitioner/xcda-author"
+      },
+      "Provenance.agent.userId": {
+        "Identifier.system": {
+          "value": "http://acme.com/fhir/users/sso"
+        },
+        "Identifier.value": {
+          "value": "hhd"
+        }
+      }
+    }
+  ],
+  "Provenance.signature": [
+    {
+      "Signature.type": [
+        {
+          "Coding.system": {
+            "value": "http://hl7.org/fhir/valueset-signature-type"
+          },
+          "Coding.code": {
+            "value": "1.2.840.10065.1.12.1.5"
+          },
+          "Coding.display": {
+            "value": "Verification Signature"
+          }
+        }
+      ],
+      "Signature.when": {
+        "value": "2015-08-27T08:39:24+10:00"
+      },
+      "Signature.whoReference": {
+        "Reference.reference": {
+          "value": "Practitioner/xcda-author"
+        },
+        "reference": "http://hl7.org/fhir//Practitioner/xcda-author"
+      },
+      "Signature.contentType": {
+        "value": "application/signature+xml"
+      },
+      "Signature.blob": {
+        "value": "Li4u"
+      }
+    }
+  ]
+}

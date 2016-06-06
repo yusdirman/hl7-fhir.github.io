@@ -1,0 +1,49 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/DecisionSupportRuleexample> a fhir:DecisionSupportRule;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "example"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Chalmydia Screening CDS Example Using Common</div>"
+  ];
+  fhir:DecisionSupportRule.moduleMetadata [
+     fhir:ModuleMetadata.identifier [
+       fhir:index 0;
+       fhir:Identifier.use [ fhir:value "official" ];
+       fhir:Identifier.value [ fhir:value "ChlamydiaScreening_CDS_UsingCommon" ]
+     ];
+     fhir:ModuleMetadata.version [ fhir:value "2.0.0" ];
+     fhir:ModuleMetadata.title [ fhir:value "Chalmydia Screening CDS Example Using Common" ];
+     fhir:ModuleMetadata.type [ fhir:value "module" ];
+     fhir:ModuleMetadata.status [ fhir:value "draft" ];
+     fhir:ModuleMetadata.description [ fhir:value "Chlamydia Screening CDS Example Using Common" ];
+     fhir:ModuleMetadata.publicationDate [ fhir:value "2015-07-22"^^xsd:date ];
+     fhir:ModuleMetadata.topic [
+       fhir:index 0;
+       fhir:CodeableConcept.text [ fhir:value "Chlamydia Screeening" ]
+     ]
+  ];
+  fhir:DecisionSupportRule.library [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/Library/ChlamydiaScreening_CDS_UsingCommon>;
+     fhir:Reference.reference [ fhir:value "Library/ChlamydiaScreening_CDS_UsingCommon" ]
+  ];
+  fhir:DecisionSupportRule.condition [ fhir:value "NoScreening"];
+  fhir:DecisionSupportRule.action [
+     fhir:index 0;
+     fhir:ActionDefinition.title [ fhir:value "Patient has not had chlamydia screening within the recommended timeframe..." ];
+     fhir:ActionDefinition.customization [
+       fhir:index 0;
+       fhir:ActionDefinition.customization.path [ fhir:value "~" ];
+       fhir:ActionDefinition.customization.expression [ fhir:value "ChlamydiaScreeningRequest" ]
+     ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

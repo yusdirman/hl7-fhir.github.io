@@ -1,0 +1,62 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/RiskAssessment",
+  "resourceType": "RiskAssessment",
+  "Resource.id": {
+    "value": "prognosis"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "additional"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>Moderate risk of permanent weakness of the left arm, but otherwise no permanent disability</p>\n    </div>"
+    }
+  },
+  "RiskAssessment.date": {
+    "value": "2010-11-22"
+  },
+  "RiskAssessment.condition": {
+    "Reference.reference": {
+      "value": "Condition/stroke"
+    },
+    "Reference.display": {
+      "value": "Ischemic Stroke"
+    },
+    "reference": "http://hl7.org/fhir//Condition/stroke"
+  },
+  "RiskAssessment.prediction": [
+    {
+      "RiskAssessment.prediction.outcome": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "value": "249943000:363698007=72098002,260868000=6934004"
+            }
+          }
+        ],
+        "CodeableConcept.text": {
+          "value": "permanent weakness of the left arm"
+        },
+        "concept": "http://snomed.info/sct#249943000:363698007=72098002,260868000=6934004"
+      },
+      "RiskAssessment.prediction.probabilityCodeableConcept": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://hl7.org/fhir/risk-probability"
+            },
+            "Coding.code": {
+              "value": "moderate"
+            },
+            "Coding.display": {
+              "value": "moderate likelihood"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

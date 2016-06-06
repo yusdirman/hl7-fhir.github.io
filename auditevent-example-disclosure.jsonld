@@ -1,0 +1,311 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/AuditEvent",
+  "resourceType": "AuditEvent",
+  "Resource.id": {
+    "value": "example-disclosure"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Disclosure by some idiot, for marketing reasons, to places unknown, of a Poor Sap, data about Everthing important.</div>"
+    }
+  },
+  "AuditEvent.type": {
+    "Coding.system": {
+      "value": "http://nema.org/dicom/dicm"
+    },
+    "Coding.code": {
+      "value": "110106"
+    },
+    "Coding.display": {
+      "value": "Export"
+    }
+  },
+  "AuditEvent.subtype": [
+    {
+      "Coding.code": {
+        "value": "Disclosure"
+      },
+      "Coding.display": {
+        "value": "HIPAA disclosure"
+      }
+    }
+  ],
+  "AuditEvent.action": {
+    "value": "R"
+  },
+  "AuditEvent.recorded": {
+    "value": "2013-09-22T00:08:00Z"
+  },
+  "AuditEvent.outcome": {
+    "value": "0"
+  },
+  "AuditEvent.outcomeDesc": {
+    "value": "Successful  Disclosure"
+  },
+  "AuditEvent.purposeOfEvent": [
+    {
+      "Coding.system": {
+        "value": "http://hl7.org/fhir/v3/ActReason"
+      },
+      "Coding.code": {
+        "value": "HMARKT"
+      },
+      "Coding.display": {
+        "value": "healthcare marketing"
+      }
+    }
+  ],
+  "AuditEvent.agent": [
+    {
+      "AuditEvent.agent.role": [
+        {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "value": "http://nema.org/dicom/dicm"
+              },
+              "Coding.code": {
+                "value": "110153"
+              },
+              "Coding.display": {
+                "value": "Source Role ID"
+              }
+            }
+          ]
+        }
+      ],
+      "AuditEvent.agent.userId": {
+        "Identifier.value": {
+          "value": "SomeIdiot@nowhere.com"
+        }
+      },
+      "AuditEvent.agent.altId": {
+        "value": "notMe"
+      },
+      "AuditEvent.agent.name": {
+        "value": "That guy everyone wishes would be caught"
+      },
+      "AuditEvent.agent.requestor": {
+        "value": true
+      },
+      "AuditEvent.agent.location": {
+        "Reference.reference": {
+          "value": "Location/1"
+        },
+        "reference": "http://hl7.org/fhir//Location/1"
+      },
+      "AuditEvent.agent.policy": [
+        {
+          "value": "http://consent.com/yes"
+        }
+      ],
+      "AuditEvent.agent.network": {
+        "AuditEvent.agent.network.address": {
+          "value": "custodian.net"
+        },
+        "AuditEvent.agent.network.type": {
+          "value": "1"
+        }
+      }
+    },
+    {
+      "AuditEvent.agent.role": [
+        {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "value": "http://nema.org/dicom/dicm"
+              },
+              "Coding.code": {
+                "value": "110152"
+              },
+              "Coding.display": {
+                "value": "Destination Role ID"
+              }
+            }
+          ]
+        }
+      ],
+      "AuditEvent.agent.reference": {
+        "Reference.reference": {
+          "value": "Practitioner/example"
+        },
+        "reference": "http://hl7.org/fhir//Practitioner/example"
+      },
+      "AuditEvent.agent.userId": {
+        "Identifier.value": {
+          "value": "Where"
+        }
+      },
+      "AuditEvent.agent.requestor": {
+        "value": false
+      },
+      "AuditEvent.agent.network": {
+        "AuditEvent.agent.network.address": {
+          "value": "marketing.land"
+        },
+        "AuditEvent.agent.network.type": {
+          "value": "1"
+        }
+      },
+      "AuditEvent.agent.purposeOfUse": [
+        {
+          "Coding.system": {
+            "value": "http://hl7.org/fhir/v3/ActReason"
+          },
+          "Coding.code": {
+            "value": "HMARKT"
+          },
+          "Coding.display": {
+            "value": "healthcare marketing"
+          }
+        }
+      ]
+    }
+  ],
+  "AuditEvent.source": {
+    "AuditEvent.source.site": {
+      "value": "Watcher"
+    },
+    "AuditEvent.source.identifier": {
+      "Identifier.value": {
+        "value": "Watchers Accounting of Disclosures Application"
+      }
+    },
+    "AuditEvent.source.type": [
+      {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/security-source-type"
+        },
+        "Coding.code": {
+          "value": "4"
+        },
+        "Coding.display": {
+          "value": "Application Server"
+        }
+      }
+    ]
+  },
+  "AuditEvent.entity": [
+    {
+      "AuditEvent.entity.reference": {
+        "Reference.reference": {
+          "value": "Patient/example"
+        },
+        "reference": "http://hl7.org/fhir//Patient/example"
+      },
+      "AuditEvent.entity.type": {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/object-type"
+        },
+        "Coding.code": {
+          "value": "1"
+        },
+        "Coding.display": {
+          "value": "Person"
+        }
+      },
+      "AuditEvent.entity.role": {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/valueset-object-role"
+        },
+        "Coding.code": {
+          "value": "1"
+        },
+        "Coding.display": {
+          "value": "Patient"
+        }
+      }
+    },
+    {
+      "AuditEvent.entity.identifier": {
+        "Identifier.value": {
+          "value": "What.id"
+        }
+      },
+      "AuditEvent.entity.reference": {
+        "Reference.reference": {
+          "value": "Patient/example/_history/1"
+        },
+        "reference": "http://hl7.org/fhir//Patient/example/_history/1"
+      },
+      "AuditEvent.entity.type": {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/object-type"
+        },
+        "Coding.code": {
+          "value": "2"
+        },
+        "Coding.display": {
+          "value": "System Object"
+        }
+      },
+      "AuditEvent.entity.role": {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/valueset-object-role"
+        },
+        "Coding.code": {
+          "value": "4"
+        },
+        "Coding.display": {
+          "value": "DomainResource"
+        }
+      },
+      "AuditEvent.entity.lifecycle": {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/object-lifecycle"
+        },
+        "Coding.code": {
+          "value": "11"
+        },
+        "Coding.display": {
+          "value": "Disclosure"
+        }
+      },
+      "AuditEvent.entity.securityLabel": [
+        {
+          "Coding.system": {
+            "value": "http://hl7.org/fhir/v3/Confidentiality"
+          },
+          "Coding.code": {
+            "value": "V"
+          },
+          "Coding.display": {
+            "value": "very restricted"
+          }
+        },
+        {
+          "Coding.system": {
+            "value": "http://hl7.org/fhir/v3/ActCode"
+          },
+          "Coding.code": {
+            "value": "STD"
+          },
+          "Coding.display": {
+            "value": "sexually transmitted disease information sensitivity"
+          }
+        },
+        {
+          "Coding.system": {
+            "value": "http://hl7.org/fhir/v3/ActCode"
+          },
+          "Coding.code": {
+            "value": "DELAU"
+          },
+          "Coding.display": {
+            "value": "delete after use"
+          }
+        }
+      ],
+      "AuditEvent.entity.name": {
+        "value": "Namne of What"
+      },
+      "AuditEvent.entity.description": {
+        "value": "data about Everthing important"
+      }
+    }
+  ]
+}

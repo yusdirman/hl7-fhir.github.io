@@ -1,0 +1,92 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Encounter",
+  "resourceType": "Encounter",
+  "Resource.id": {
+    "value": "encounter-example-qicore"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Encounter with patient @qicore</div>"
+    }
+  },
+  "DomainResource.extension": [
+    {
+      "Extension.url": {
+        "value": "http://hl7.org/fhir/StructureDefinition/encounter-relatedCondition"
+      },
+      "Element.extension": [
+        {
+          "Extension.url": {
+            "value": "condition"
+          },
+          "Extension.valueReference": {
+            "Reference.reference": {
+              "value": "Condition/qicore"
+            },
+            "reference": "http://hl7.org/fhir//Condition/qicore"
+          }
+        },
+        {
+          "Extension.url": {
+            "value": "role"
+          },
+          "Extension.valueCodeableConcept": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://snomed.info/sct"
+                },
+                "Coding.code": {
+                  "value": "8319008"
+                },
+                "Coding.display": {
+                  "value": "Principal diagnosis"
+                }
+              }
+            ],
+            "concept": "http://snomed.info/sct#8319008"
+          }
+        }
+      ]
+    }
+  ],
+  "Encounter.status": {
+    "value": "finished"
+  },
+  "Encounter.class": {
+    "value": "inpatient"
+  },
+  "Encounter.patient": {
+    "Reference.reference": {
+      "value": "patient-example"
+    }
+  },
+  "Encounter.period": {
+    "Period.start": {
+      "value": "2015-02-09T00:00:00Z"
+    },
+    "Period.end": {
+      "value": "2015-02-20T00:00:00Z"
+    }
+  },
+  "Encounter.hospitalization": {
+    "Encounter.hospitalization.dischargeDisposition": {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "value": "http://hl7.org/fhir/discharge-disposition"
+          },
+          "Coding.code": {
+            "value": "home"
+          },
+          "Coding.display": {
+            "value": "Home"
+          }
+        }
+      ]
+    }
+  }
+}

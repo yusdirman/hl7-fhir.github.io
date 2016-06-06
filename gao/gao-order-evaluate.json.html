@@ -1,0 +1,315 @@
+﻿<!DOCTYPE HTML>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Gao-order-evaluate.json - FHIR v1.4.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+  <link rel="Prev" href="http://hl7.org/fhir/gao-order-evaluate.json.html"/>
+
+  <!-- Bootstrap core CSS -->
+  <link href="./dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="./assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="./assets/css/project.css" rel="stylesheet"/>
+  <link href="./assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment"><!-- segment-header -->	
+		<div class="container"><!-- container -->
+			<a id="logo" href="http://hl7.org/fhir" no-external="true"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a id="hl7-logo" href="http://www.hl7.org" no-external="true">
+					<img src="./assets/images/hl7-logo.png" width="42" height="50" alt="visit the hl7 website"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="./assets/images/search.png"/></a></div> 
+		</div>
+		<div class="container"><!-- container -->
+	</div></div><!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment"><!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container"><!-- container -->
+ <!-- HEADER CONTENT -->
+ 	      		
+ 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="documentation.html">Documentation</a></li>
+              <li><a href="implementation.html">Implementation</a></li>
+              <li><a href="resourcelist.html">Resources</a></li>
+              <li><a href="clinical.html">Clinical</a></li>
+              <li><a href="administration.html">Administrative</a></li>
+              <li><a href="infrastructure.html">Infrastructure</a></li>
+              <li><a href="financial.html">Financial</a></li>
+
+						</ul>
+					</div><!-- /.nav-collapse -->
+				</div><!-- /.container -->
+			</nav><!-- /.navbar -->
+      		
+				
+<!-- /HEADER CONTENT -->				
+		</div><!-- /container -->
+	</div><!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment"><!-- segment-breadcrumb -->
+		<div class="container"><!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="infrastructure.html">Infrastructure</a></li>        <li><a href="operationdefinition.html">OperationDefinition</a></li>        <li><b>Example Instance</b></li>        <!-- gao-order-evaluate.json.html / resource-instance:OperationDefinition / Example-->
+
+			</ul>	
+		</div><!-- /container -->
+	</div><!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment"><!-- segment-content -->
+	<div class="container"><!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+<!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<h1>Gao-order-evaluate.json</h1>
+
+<p>
+<a href="gao-order-evaluate.json">Raw JSON</a> (<a href="gao-order-evaluate.canonical.json">canonical form</a>)
+</p>
+
+<div class="example">
+<p>The evaluate operation examines an order, comparing it against known guidelines for appropriate use and returns the result of that evaluation to the caller.</p>
+<pre class="json">
+{
+  &quot;resourceType&quot;: &quot;OperationDefinition&quot;,
+  &quot;id&quot;: &quot;gao-order-evaluate&quot;,
+  &quot;text&quot;: {
+    &quot;status&quot;: &quot;generated&quot;,
+    &quot;div&quot;: &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;h2&gt;Inputs&lt;/h2&gt;&lt;table class=\&quot;codes\&quot;&gt;\n        &lt;thead&gt;\n          &lt;tr&gt;\n            &lt;th&gt;&lt;b&gt;Parameters&lt;/b&gt;&lt;/th&gt;\n            &lt;th&gt;&lt;b&gt;Card.&lt;/b&gt;&lt;/th&gt;\n            &lt;th&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/th&gt;\n            &lt;th&gt;&lt;b&gt;Description&lt;/b&gt;&lt;/th&gt;\n          &lt;/tr&gt;\n        &lt;/thead&gt;\n        &lt;tbody&gt;\n          &lt;tr&gt;\n            &lt;td&gt;order&lt;/td&gt;\n            &lt;td&gt;1..1&lt;/td&gt;\n            &lt;td&gt;&lt;a href=\&quot;../order.html\&quot;&gt;Order&lt;/a&gt;&lt;br/&gt;(&lt;a href=\&quot;gao-order.html\&quot;&gt;Guideline\n                Appropriate Order&lt;/a&gt;)&lt;/td&gt;\n            &lt;td&gt;The order to evaluate&lt;/td&gt;\n          &lt;/tr&gt;\n          &lt;tr&gt;\n            &lt;td&gt;coverage&lt;/td&gt;\n            &lt;td&gt;0..*&lt;/td&gt;\n            &lt;td&gt;&lt;a href=\&quot;../coverage.html\&quot;&gt;Coverage&lt;/a&gt;&lt;/td&gt;\n            &lt;td&gt;Optional resources describing the patient’s coverage.&lt;/td&gt;\n          &lt;/tr&gt;\n          &lt;tr&gt;\n            &lt;td&gt;answers&lt;/td&gt;\n            &lt;td&gt;0..*&lt;/td&gt;\n            &lt;td&gt;&lt;a href=\&quot;../questionnaireresponse.html\&quot;&gt;QuestionnaireResponse&lt;/a&gt;&lt;br/&gt;(&lt;a href=\&quot;gao-questionnaireresponse.html\&quot;&gt;GAO Questionnaire Response&lt;/a&gt;)&lt;/td&gt;\n            &lt;td&gt;Optional answers to any questions which have been or may be posed by the Decision\n              Support Service&lt;/td&gt;\n          &lt;/tr&gt;\n        &lt;/tbody&gt;\n      &lt;/table&gt;&lt;h2&gt;Outputs&lt;/h2&gt;&lt;table class=\&quot;codes\&quot;&gt;\n        &lt;thead&gt;\n          &lt;tr&gt;\n            &lt;th&gt;&lt;b&gt;Parameters&lt;/b&gt;&lt;/th&gt;\n            &lt;th&gt;&lt;b&gt;Card.&lt;/b&gt;&lt;/th&gt;\n            &lt;th&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/th&gt;\n            &lt;th&gt;&lt;b&gt;Description&lt;/b&gt;&lt;/th&gt;\n          &lt;/tr&gt;\n        &lt;/thead&gt;\n        &lt;tbody&gt;\n          &lt;tr&gt;\n            &lt;td&gt;order&lt;/td&gt;\n            &lt;td&gt;1..1&lt;/td&gt;\n            &lt;td&gt;&lt;a href=\&quot;../order.html\&quot;&gt;Order&lt;/a&gt;&lt;br/&gt;(&lt;a href=\&quot;gao-order.html\&quot;&gt;Guideline\n                Appropriate Order&lt;/a&gt;)&lt;/td&gt;\n            &lt;td&gt;The order that was evaluated. This is a copy of the order provided on input.&lt;/td&gt;\n          &lt;/tr&gt;\n          &lt;tr&gt;\n            &lt;td&gt;answers&lt;/td&gt;\n            &lt;td&gt;0..*&lt;/td&gt;\n            &lt;td&gt;&lt;a href=\&quot;../questionnaireresponse.html\&quot;&gt;QuestionnaireResponse&lt;/a&gt;&lt;br/&gt;(&lt;a href=\&quot;gao-questionnaireresponse.html\&quot;&gt;GAO Questionnaire Response&lt;/a&gt;)&lt;/td&gt;\n            &lt;td&gt;Answers to any questions posed by the Decision Support Service. This SHALL be a copy\n              of the answers provided on input.&lt;/td&gt;\n          &lt;/tr&gt;\n          &lt;tr&gt;\n            &lt;td&gt;result&lt;/td&gt;\n            &lt;td&gt;1..1&lt;/td&gt;\n            &lt;td&gt;&lt;a href=\&quot;../basic.html\&quot;&gt;Basic&lt;/a&gt;&lt;br/&gt;(&lt;a href=\&quot;gao-result.html\&quot;&gt;GAO\n              Result&lt;/a&gt;)&lt;/td&gt;\n            &lt;td&gt;A Basic resource indicating the status of the evaluation produced by evaluating the\n              order.&lt;/td&gt;\n          &lt;/tr&gt;\n          &lt;tr&gt;\n            &lt;td&gt;alternative&lt;/td&gt;\n            &lt;td&gt;0..*&lt;/td&gt;\n            &lt;td&gt;&lt;a href=\&quot;../basic.html\&quot;&gt;Basic&lt;/a&gt;&lt;br/&gt;(&lt;a href=\&quot;gao-alternate.html\&quot;&gt;GAO\n                Alternate&lt;/a&gt;)&lt;/td&gt;\n            &lt;td&gt;Basic resources indicating the status of evaluations produced by evaluating\n              alternative orders suggested by the Decision Support Service Actor.&lt;/td&gt;\n          &lt;/tr&gt;\n          &lt;tr&gt;\n            &lt;td&gt;provenance&lt;/td&gt;\n            &lt;td&gt;0..*&lt;/td&gt;\n            &lt;td&gt;&lt;a href=\&quot;../provenance.html\&quot;&gt;Provenance&lt;/a&gt;&lt;/td&gt;\n            &lt;td&gt;Provenance resources for the Result and Alternatives that can be used to verify that\n              those Resources came from a specific Decision Support Service. If the Decision Support\n              Service implements the Digital Signature option, there SHALL be one Provenance\n              resource for each Result or Alternate present in the output parameters.&lt;/td&gt;\n          &lt;/tr&gt;\n          &lt;tr&gt;\n            &lt;td&gt;dss&lt;/td&gt;\n            &lt;td&gt;1..*&lt;/td&gt;\n            &lt;td&gt;&lt;a href=\&quot;../device.html\&quot;&gt;Device&lt;/a&gt;&lt;/td&gt;\n            &lt;td&gt;The Device resource shall identify the Decision Support Service device or devices\n              which evaluated the appropriateness of the order.&lt;/td&gt;\n          &lt;/tr&gt;\n          &lt;tr&gt;\n            &lt;td&gt;questions&lt;/td&gt;\n            &lt;td&gt;0..*&lt;/td&gt;\n            &lt;td&gt;&lt;a href=\&quot;../questionnaire.html\&quot;&gt;Questionnaire&lt;/a&gt;&lt;/td&gt;\n            &lt;td&gt;A reference to one or more Questionnaire resources, which, if completed might\n              generate a different response from the Decision Support Service.&lt;/td&gt;\n          &lt;/tr&gt;\n          &lt;tr&gt;\n            &lt;td&gt;questionaireURI&lt;/td&gt;\n            &lt;td&gt;0..1&lt;/td&gt;\n            &lt;td&gt;&lt;a href=\&quot;../datatypes.html#uri\&quot;&gt;uri&lt;/a&gt;&lt;/td&gt;\n            &lt;td&gt;Specifies a web endpoint where Questionnaire Resources returned by the Decision\n              Support Service can be invoked interactively. When the Decision Support Service\n              implements the Conversational Interaction Option and the questions parameter is\n              populated, this field SHALL be populated.&lt;/td&gt;\n          &lt;/tr&gt;\n        &lt;/tbody&gt;\n      &lt;/table&gt;&lt;/div&gt;&quot;
+  },
+  &quot;url&quot;: &quot;http://hl7.org/fhir/OperationDefinition/gao-order-evaluate&quot;,
+  &quot;name&quot;: &quot;GAO Evaluate Order&quot;,
+  &quot;status&quot;: &quot;draft&quot;,
+  &quot;kind&quot;: &quot;operation&quot;,
+  &quot;experimental&quot;: false,
+  &quot;description&quot;: &quot;The evaluate operation examines an order, comparing it against known guidelines for appropriate use and returns the result of that evaluation to the caller.&quot;,
+  &quot;requirements&quot;: &quot;This operation enables clinical decision support to be invoked prior to ordering to ensure appropriate use of resources.&quot;,
+  &quot;idempotent&quot;: true,
+  &quot;code&quot;: &quot;evaluate&quot;,
+  &quot;comment&quot;: &quot;This operation is normally idempotent, but can depend upon the algorithm used.&quot;,
+  &quot;system&quot;: false,
+  &quot;type&quot;: [
+    &quot;Order&quot;
+  ],
+  &quot;instance&quot;: false,
+  &quot;parameter&quot;: [
+    {
+      &quot;name&quot;: &quot;order&quot;,
+      &quot;use&quot;: &quot;in&quot;,
+      &quot;min&quot;: 1,
+      &quot;max&quot;: &quot;1&quot;,
+      &quot;documentation&quot;: &quot;The order to evaluate&quot;,
+      &quot;type&quot;: &quot;Order&quot;,
+      &quot;profile&quot;: {
+        &quot;reference&quot;: &quot;http://hl7.org/fhir/StructureDefinition/gao-order&quot;
+      }
+    },
+    {
+      &quot;name&quot;: &quot;coverage&quot;,
+      &quot;use&quot;: &quot;in&quot;,
+      &quot;min&quot;: 0,
+      &quot;max&quot;: &quot;*&quot;,
+      &quot;documentation&quot;: &quot;Optional resources describing the patient’s coverage.&quot;,
+      &quot;type&quot;: &quot;Coverage&quot;
+    },
+    {
+      &quot;name&quot;: &quot;answers&quot;,
+      &quot;use&quot;: &quot;in&quot;,
+      &quot;min&quot;: 0,
+      &quot;max&quot;: &quot;*&quot;,
+      &quot;documentation&quot;: &quot;Optional answers to any questions which have been or may be posed by the Decision Support Service&quot;,
+      &quot;type&quot;: &quot;QuestionnaireResponse&quot;,
+      &quot;profile&quot;: {
+        &quot;reference&quot;: &quot;http://hl7.org/fhir/StructureDefinition/gao-questionnaireresponse&quot;
+      }
+    },
+    {
+      &quot;name&quot;: &quot;order&quot;,
+      &quot;use&quot;: &quot;out&quot;,
+      &quot;min&quot;: 1,
+      &quot;max&quot;: &quot;1&quot;,
+      &quot;documentation&quot;: &quot;The order that was evaluated. This is a copy of the order provided on input.&quot;,
+      &quot;type&quot;: &quot;Order&quot;,
+      &quot;profile&quot;: {
+        &quot;reference&quot;: &quot;http://hl7.org/fhir/StructureDefinition/gao-order&quot;
+      }
+    },
+    {
+      &quot;name&quot;: &quot;answers&quot;,
+      &quot;use&quot;: &quot;out&quot;,
+      &quot;min&quot;: 0,
+      &quot;max&quot;: &quot;*&quot;,
+      &quot;documentation&quot;: &quot;Answers to any questions posed by the Decision Support Service. This SHALL be a copy of the answers provided on input.&quot;,
+      &quot;type&quot;: &quot;QuestionnaireResponse&quot;,
+      &quot;profile&quot;: {
+        &quot;reference&quot;: &quot;http://hl7.org/fhir/StructureDefinition/gao-questionnaireresponse&quot;
+      }
+    },
+    {
+      &quot;name&quot;: &quot;result&quot;,
+      &quot;use&quot;: &quot;out&quot;,
+      &quot;min&quot;: 1,
+      &quot;max&quot;: &quot;1&quot;,
+      &quot;documentation&quot;: &quot;A Basic resource indicating the status of the evaluation produced by evaluating the order.&quot;,
+      &quot;type&quot;: &quot;Basic&quot;,
+      &quot;profile&quot;: {
+        &quot;reference&quot;: &quot;http://hl7.org/fhir/StructureDefinition/gao-result&quot;
+      }
+    },
+    {
+      &quot;name&quot;: &quot;alternative&quot;,
+      &quot;use&quot;: &quot;out&quot;,
+      &quot;min&quot;: 0,
+      &quot;max&quot;: &quot;*&quot;,
+      &quot;documentation&quot;: &quot;Basic resources indicating the status of evaluations produced by evaluating alternative orders suggested by the Decision Support Service Actor.&quot;,
+      &quot;type&quot;: &quot;Basic&quot;,
+      &quot;profile&quot;: {
+        &quot;reference&quot;: &quot;http://hl7.org/fhir/StructureDefinition/gao-alternate&quot;
+      }
+    },
+    {
+      &quot;name&quot;: &quot;provenance&quot;,
+      &quot;use&quot;: &quot;out&quot;,
+      &quot;min&quot;: 0,
+      &quot;max&quot;: &quot;*&quot;,
+      &quot;documentation&quot;: &quot;Provenance resources for the Result and Alternatives that can be used to verify that those Resources came from a specific Decision Support Service.         If the Decision Support Service implements the Digital Signature option, there SHALL be one Provenance resource for each Result or Alternate present in the output parameters.&quot;,
+      &quot;type&quot;: &quot;Provenance&quot;
+    },
+    {
+      &quot;name&quot;: &quot;dss&quot;,
+      &quot;use&quot;: &quot;out&quot;,
+      &quot;min&quot;: 1,
+      &quot;max&quot;: &quot;*&quot;,
+      &quot;documentation&quot;: &quot;The Device resource shall identify the Decision Support Service device or devices which evaluated the appropriateness of the order.&quot;,
+      &quot;type&quot;: &quot;Device&quot;
+    },
+    {
+      &quot;name&quot;: &quot;questions&quot;,
+      &quot;use&quot;: &quot;out&quot;,
+      &quot;min&quot;: 0,
+      &quot;max&quot;: &quot;*&quot;,
+      &quot;documentation&quot;: &quot;A reference to one or more Questionnaire resources, which, if completed might generate a different response from the Decision Support Service.&quot;,
+      &quot;type&quot;: &quot;Questionnaire&quot;
+    },
+    {
+      &quot;name&quot;: &quot;questionaireURI&quot;,
+      &quot;use&quot;: &quot;out&quot;,
+      &quot;min&quot;: 0,
+      &quot;max&quot;: &quot;1&quot;,
+      &quot;documentation&quot;: &quot;Specifies a web endpoint where Questionnaire Resources returned by the Decision Support Service can be invoked interactively. When the Decision Support Service implements the Conversational Interaction Option and the questions parameter is populated, this field SHALL be populated.&quot;,
+      &quot;type&quot;: &quot;uri&quot;
+    }
+  ]
+}
+</pre>
+</div>
+
+
+<p>
+Usage note: every effort has been made to ensure that the
+examples are correct and useful, but they are not a normative part 
+of the specification. 
+</p>
+
+</div>
+
+
+				</div><!-- /inner-wrapper -->
+            </div><!-- /row -->
+        </div><!-- /container -->
+        
+    </div><!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment"><!-- segment-footer -->
+		<div class="container"><!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        © HL7.org 2011+. FHIR STU3 Candidate (v1.4.0-8453) generated on Mon, Jun 6, 2016 20:21+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search</a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fgao-order-evaluate.json.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fgao-order-evaluate.json.html">Compare to DSTU2</a> |                
+               <a style="color: #81BEF7" rel="license" href="license.html"><img src="cc0.png" style="border-style: none;" alt="CC0"/></a> | 
+               <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>   
+        </span>
+        </p>
+			</div><!-- /inner-wrapper -->
+		</div><!-- /container -->
+	</div><!-- /segment-footer -->
+<!-- disqus thread -->
+<!--disqus-->
+<!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden"><!-- segment-post-footer -->
+		<div class="container"><!-- container -->
+		</div><!-- /container -->
+	</div><!-- /segment-post-footer -->
+    
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>   <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

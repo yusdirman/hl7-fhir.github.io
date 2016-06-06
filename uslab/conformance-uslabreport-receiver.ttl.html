@@ -1,0 +1,314 @@
+﻿<!DOCTYPE HTML>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Conformance-uslabreport-receiver.ttl - FHIR v1.4.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+  <link rel="Prev" href="http://hl7.org/fhir/conformance-uslabreport-receiver.ttl.html"/>
+
+  <!-- Bootstrap core CSS -->
+  <link href="./dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="./assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="./assets/css/project.css" rel="stylesheet"/>
+  <link href="./assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment"><!-- segment-header -->	
+		<div class="container"><!-- container -->
+			<a id="logo" href="http://hl7.org/fhir" no-external="true"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a id="hl7-logo" href="http://www.hl7.org" no-external="true">
+					<img src="./assets/images/hl7-logo.png" width="42" height="50" alt="visit the hl7 website"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="./assets/images/search.png"/></a></div> 
+		</div>
+		<div class="container"><!-- container -->
+	</div></div><!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment"><!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container"><!-- container -->
+ <!-- HEADER CONTENT -->
+ 	      		
+ 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="documentation.html">Documentation</a></li>
+              <li><a href="implementation.html">Implementation</a></li>
+              <li><a href="resourcelist.html">Resources</a></li>
+              <li><a href="clinical.html">Clinical</a></li>
+              <li><a href="administration.html">Administrative</a></li>
+              <li><a href="infrastructure.html">Infrastructure</a></li>
+              <li><a href="financial.html">Financial</a></li>
+
+						</ul>
+					</div><!-- /.nav-collapse -->
+				</div><!-- /.container -->
+			</nav><!-- /.navbar -->
+      		
+				
+<!-- /HEADER CONTENT -->				
+		</div><!-- /container -->
+	</div><!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment"><!-- segment-breadcrumb -->
+		<div class="container"><!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="infrastructure.html">Infrastructure</a></li>        <li><a href="conformance.html">Conformance</a></li>        <li><b>Example Instance</b></li>        <!-- conformance-uslabreport-receiver.ttl.html / resource-instance:Conformance / Example-->
+
+			</ul>	
+		</div><!-- /container -->
+	</div><!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment"><!-- segment-content -->
+	<div class="container"><!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+<!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<h1>Conformance-uslabreport-receiver.ttl</h1>
+
+<p>
+<a href="conformance-uslabreport-receiver.ttl">Raw Turtle</a>, 
+<a href="conformance-uslabreport-receiver.jsonld">JSON-LD</a> 
+</p>
+
+<div class="example">
+<p>USLabReport Receiver</p>
+<pre class="json">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+# - resource -------------------------------------------------------------------
+
+&lt;http://hl7.org/fhir/Conformanceconformance-uslabreport-receiver&gt; a fhir:Conformance;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value &quot;conformance-uslabreport-receiver&quot;];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value &quot;generated&quot; ];
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n			\n      &lt;h2&gt;USLabReport Receiver&lt;/h2&gt;\n			\n      &lt;p&gt;(Requirements Definition)&lt;/p&gt;\n			\n      &lt;p&gt;Published: 2014-12-02 (draft)&lt;/p&gt;\n			\n      &lt;p&gt;Published by: \n        &lt;b&gt;\n					\n          &lt;a href=\&quot;http://www.hl7.org/\&quot;&gt;Published by: HL7 Orders and Observation Workgroup&lt;/a&gt;\n				\n        &lt;/b&gt; Primary Author: Eric Haas  Health eData Inc\n      &lt;/p&gt;\n			\n      &lt;p&gt;This profile defines the expected capabilities of the USLabReport Receiver actor when conforming to the \n        &lt;a href=\&quot;uslabreport.html\&quot;&gt;The US Receiver Report Implementation (USLabReport)&lt;/a&gt;.  This actor is the receiver of a laboratory test report and declares conformance to RESTful FHIR and FHIR profiles defined in this guide.  The order reference one or more FHIR resources conforming to profiles outlined in the USLabReport guide.\n      &lt;/p&gt;\n			\n      &lt;h2&gt;General&lt;/h2&gt;\n			\n      &lt;table&gt;\n				\n        &lt;tbody&gt;\n					\n          &lt;tr&gt;\n						\n            &lt;th&gt;FHIR Version:&lt;/th&gt;\n						\n            &lt;td&gt;0.8&lt;/td&gt;\n					\n          &lt;/tr&gt;\n					\n          &lt;tr&gt;\n						\n            &lt;th&gt;Supported formats:&lt;/th&gt;\n						\n            &lt;td&gt;xml, json&lt;/td&gt;\n					\n          &lt;/tr&gt;\n				\n        &lt;/tbody&gt;\n			\n      &lt;/table&gt;\n			\n      &lt;h2&gt;REST  behavior&lt;/h2&gt;\n			\n      &lt;p&gt;\n				\n        &lt;b&gt;Mode:&lt;/b&gt; Server\n			\n      &lt;/p&gt;\n			\n      &lt;p&gt;This conformance resource assumes the USLabReport Receiver is the server, in other words, operating in 'Pull'  or 'Push/Pull' RESTful interface.  The USLabReport Receiver MUST support querying one or more resources outlined by the \n        &lt;a href=\&quot;uslabreport-guide.html\&quot;&gt;USLabReport Guide&lt;/a&gt;. The USLabReport Receiver MUST use all the vocabularies and value set constraints defined by the individual resource profiles used by USLabReport. The USLabReport Receiver MUST implement REST behavior according to the \n        &lt;a href=\&quot;../http.html\&quot;&gt;FHIR specification&lt;/a&gt; and MUST be able to handle errors gracefully from Query Responders who may not support the submitted query.\n      &lt;/p&gt;\n			\n      &lt;p&gt;\n				\n        &lt;b&gt;Security:&lt;/b&gt;\n			\n      &lt;/p&gt;\n			\n      &lt;p&gt;Implementations must meet the security requirements documented in the \n        &lt;a href=\&quot;uslabreport-guide.html#assumptions\&quot;&gt;USLabReport Guide assumptions&lt;/a&gt;.\n      &lt;/p&gt;\n			\n      &lt;h3&gt;Summary&lt;/h3&gt;\n			\n      &lt;table class=\&quot;grid\&quot;&gt;\n				\n        &lt;thead&gt;\n					\n          &lt;tr&gt;\n						\n            &lt;th&gt;Resource&lt;/th&gt;\n						\n            &lt;th&gt;Search&lt;/th&gt;\n						\n            &lt;th&gt;Read&lt;/th&gt;\n						\n            &lt;th&gt;Read Version&lt;/th&gt;\n						\n            &lt;th&gt;Instance History&lt;/th&gt;\n						\n            &lt;th&gt;Resource History&lt;/th&gt;\n						\n            &lt;th&gt;Validate&lt;/th&gt;\n						\n            &lt;th&gt;Create&lt;/th&gt;\n						\n            &lt;th&gt;Update&lt;/th&gt;\n						\n            &lt;th&gt;Delete&lt;/th&gt;\n					\n          &lt;/tr&gt;\n				\n        &lt;/thead&gt;\n				\n        &lt;tbody&gt;\n					\n          &lt;tr&gt;\n						\n            &lt;th&gt;DiagnosticReport&lt;/th&gt;\n						\n            &lt;td&gt;\n							\n              &lt;a href=\&quot;#DiagnosticReport-search-type\&quot; title=\&quot;Allows a user to search for existing DiagnosticReport\&quot;&gt;Yes&lt;/a&gt;\n						\n            &lt;/td&gt;\n						\n            &lt;td&gt;\n							\n              &lt;a href=\&quot;#DiagnosticReport-read\&quot; title=\&quot;Allows retrieval of a specific known DiagnosticReport\&quot;&gt;Yes&lt;/a&gt;\n						\n            &lt;/td&gt;\n						\n            &lt;td&gt;\n							\n              &lt;a href=\&quot;#DiagnosticReport-vread\&quot; title=\&quot;Allows retrieval of a specific version of a DiagnosticReport\&quot;&gt;Yes&lt;/a&gt;\n						\n            &lt;/td&gt;\n						\n            &lt;td&gt;\n							\n              &lt;a href=\&quot;#DiagnosticReport-history-instance\&quot; title=\&quot;Allows review of changes to a DiagnosticReport over time\&quot;&gt;Yes&lt;/a&gt;\n						\n            &lt;/td&gt;\n						\n            &lt;td/&gt;\n						\n            &lt;td&gt;\n							\n              &lt;a href=\&quot;#DiagnosticReport-validate\&quot; title=\&quot;Allows a client to verify whether a particular new DiagnosticReport or revision of an existing DiagnosticReport would be accepted based on validation and other business rules.  Useful for some workflows\&quot;&gt;Yes&lt;/a&gt;\n						\n            &lt;/td&gt;\n						\n            &lt;td&gt;\n							\n              &lt;a href=\&quot;#DiagnosticReport-create\&quot; title=\&quot;Allows defining a new DiagnosticReport\&quot;&gt;Yes&lt;/a&gt;\n						\n            &lt;/td&gt;\n						\n            &lt;td&gt;\n							\n              &lt;a href=\&quot;#DiagnosticReport-update\&quot; title=\&quot;Allows editing of an existing DiagnosticReport.  Servers may choose to prohibit certain types of edits, instead requiring the creation of a new DiagnosticReport (and potentially the retiring of the existing DiagnosticReport).  Servers may also limit who can change particular DiagnosticReport.\&quot;&gt;Yes&lt;/a&gt;\n						\n            &lt;/td&gt;\n						\n            &lt;td/&gt;\n					\n          &lt;/tr&gt;\n				\n        &lt;/tbody&gt;\n			\n      &lt;/table&gt;\n			\n      &lt;br/&gt;\n			\n      &lt;br/&gt;\n			\n      &lt;h3&gt;\n				\n        &lt;a href=\&quot;../diagnosticreport.html\&quot;&gt;DiagnosticReport&lt;/a&gt;\n			\n      &lt;/h3&gt;\n			\n      &lt;h4&gt;Interactions&lt;/h4&gt;\n			\n      &lt;table class=\&quot;list\&quot;&gt;\n				\n        &lt;thead&gt;\n					\n          &lt;tr&gt;\n						\n            &lt;th&gt;Name&lt;/th&gt;\n						\n            &lt;th&gt;Description&lt;/th&gt;\n					\n          &lt;/tr&gt;\n				\n        &lt;/thead&gt;\n				\n        &lt;tbody&gt;\n					\n          &lt;tr&gt;\n						\n            &lt;th&gt;\n							\n              &lt;a name=\&quot;DiagnosticReport-search-type\&quot;&gt; &lt;/a&gt;\n							\n              &lt;span&gt;search-type&lt;/span&gt;\n						\n            &lt;/th&gt;\n						\n            &lt;td&gt;\n							\n              &lt;p&gt;Allows a user to search for existing DiagnosticReport&lt;/p&gt;\n						\n            &lt;/td&gt;\n					\n          &lt;/tr&gt;\n					\n          &lt;tr&gt;\n						\n            &lt;th&gt;\n							\n              &lt;a name=\&quot;DiagnosticReport-read\&quot;&gt; &lt;/a&gt;\n							\n              &lt;span&gt;read&lt;/span&gt;\n						\n            &lt;/th&gt;\n						\n            &lt;td&gt;\n							\n              &lt;p&gt;Allows retrieval of a specific known DiagnosticReport&lt;/p&gt;\n						\n            &lt;/td&gt;\n					\n          &lt;/tr&gt;\n					\n          &lt;tr&gt;\n						\n            &lt;th&gt;\n							\n              &lt;a name=\&quot;DiagnosticReport-vread\&quot;&gt; &lt;/a&gt;\n							\n              &lt;span&gt;vread&lt;/span&gt;\n						\n            &lt;/th&gt;\n						\n            &lt;td&gt;\n							\n              &lt;p&gt;Allows retrieval of a specific version of a DiagnosticReport&lt;/p&gt;\n						\n            &lt;/td&gt;\n					\n          &lt;/tr&gt;\n					\n          &lt;tr&gt;\n						\n            &lt;th&gt;\n							\n              &lt;a name=\&quot;DiagnosticReport-history-instance\&quot;&gt; &lt;/a&gt;\n							\n              &lt;span&gt;history-instance&lt;/span&gt;\n						\n            &lt;/th&gt;\n						\n            &lt;td&gt;\n							\n              &lt;p&gt;Allows review of changes to a DiagnosticReport over time&lt;/p&gt;\n						\n            &lt;/td&gt;\n					\n          &lt;/tr&gt;\n					\n          &lt;tr&gt;\n						\n            &lt;th&gt;\n							\n              &lt;a name=\&quot;DiagnosticReport-create\&quot;&gt; &lt;/a&gt;\n							\n              &lt;span&gt;create&lt;/span&gt;\n						\n            &lt;/th&gt;\n						\n            &lt;td&gt;\n							\n              &lt;p&gt;Allows defining a new DiagnosticReport&lt;/p&gt;\n						\n            &lt;/td&gt;\n					\n          &lt;/tr&gt;\n					\n          &lt;tr&gt;\n						\n            &lt;th&gt;\n							\n              &lt;a name=\&quot;DiagnosticReport-update\&quot;&gt; &lt;/a&gt;\n							\n              &lt;span&gt;update&lt;/span&gt;\n						\n            &lt;/th&gt;\n						\n            &lt;td&gt;\n							\n              &lt;p&gt;Allows editing of an existing DiagnosticReport.  Servers may choose to prohibit certain types of edits, instead requiring the creation of a new DiagnosticReport (and potentially the retiring of the existing DiagnosticReport).  Servers may also limit who can change particular DiagnosticReport.&lt;/p&gt;\n						\n            &lt;/td&gt;\n					\n          &lt;/tr&gt;\n					\n          &lt;tr&gt;\n						\n            &lt;th&gt;\n							\n              &lt;a name=\&quot;DiagnosticReport-validate\&quot;&gt; &lt;/a&gt;\n							\n              &lt;span&gt;validate&lt;/span&gt;\n						\n            &lt;/th&gt;\n						\n            &lt;td&gt;\n							\n              &lt;p&gt;Allows a client to verify whether a particular new DiagnosticReport or revision of an existing DiagnosticReport would be accepted based on validation and other business rules.  Useful for some workflows&lt;/p&gt;\n						\n            &lt;/td&gt;\n					\n          &lt;/tr&gt;\n				\n        &lt;/tbody&gt;\n			\n      &lt;/table&gt;\n			\n      &lt;h4&gt;Search&lt;/h4&gt;\n			\n      &lt;p&gt;Supported Includes: DiagnosticReport.subject, DiagnosticReport.performer, DiagnosticReport.request, DiagnosticReport.specimen, DiagnosticReport.report&lt;/p&gt;\n			\n      &lt;h2&gt;REST  behavior&lt;/h2&gt;\n			\n      &lt;p&gt;\n				\n        &lt;b&gt;Mode:&lt;/b&gt; Server\n			\n      &lt;/p&gt;\n			\n      &lt;p&gt;The following conformance rules assumes the USLabReport Receiver is the client, in other words, operating in 'Push'  RESTful interface.  The USLabReport Receiver MUST support querying one or more resources outlined by the \n        &lt;a href=\&quot;uslabreport.html\&quot;&gt;USLabReport Guide&lt;/a&gt;. The USLabReport Receiver MUST use all the vocabularies and value set constraints defined by the individual resource profiles used by USLabReport. The USLabReport Receiver MUST implement REST behavior according to the \n        &lt;a href=\&quot;../http.html\&quot;&gt;FHIR specification&lt;/a&gt; and MUST be able to handle errors gracefully from Query Responders who may not support the submitted query.\n      &lt;/p&gt;\n			\n      &lt;p&gt;\n				\n        &lt;b&gt;Security:&lt;/b&gt;\n			\n      &lt;/p&gt;\n			\n      &lt;p&gt;Implementations must meet the security requirements documented in the \n        &lt;a href=\&quot;uslabreport.html\&quot;&gt;USLabReport Guide assumptions&lt;/a&gt;.\n      &lt;/p&gt;\n			\n      &lt;h3&gt;Summary&lt;/h3&gt;\n			\n      &lt;table class=\&quot;grid\&quot;&gt;\n				\n        &lt;thead&gt;\n					\n          &lt;tr&gt;\n						\n            &lt;th&gt;Resource&lt;/th&gt;\n						\n            &lt;th&gt;Search&lt;/th&gt;\n						\n            &lt;th&gt;Read&lt;/th&gt;\n						\n            &lt;th&gt;Read Version&lt;/th&gt;\n						\n            &lt;th&gt;Instance History&lt;/th&gt;\n						\n            &lt;th&gt;Resource History&lt;/th&gt;\n						\n            &lt;th&gt;Validate&lt;/th&gt;\n						\n            &lt;th&gt;Create&lt;/th&gt;\n						\n            &lt;th&gt;Update&lt;/th&gt;\n						\n            &lt;th&gt;Delete&lt;/th&gt;\n					\n          &lt;/tr&gt;\n				\n        &lt;/thead&gt;\n				\n        &lt;tbody&gt;\n					\n          &lt;tr&gt;\n						\n            &lt;th&gt;DiagnosticReport&lt;/th&gt;\n						\n            &lt;td&gt;\n							\n              &lt;a href=\&quot;#DiagnosticReport-search-type\&quot; title=\&quot;Allows a user to search for existing DiagnosticReport\&quot;&gt;Yes&lt;/a&gt;\n						\n            &lt;/td&gt;\n						\n            &lt;td&gt;\n							\n              &lt;a href=\&quot;#DiagnosticReport-read\&quot; title=\&quot;Allows retrieval of a specific known DiagnosticReport\&quot;&gt;Yes&lt;/a&gt;\n						\n            &lt;/td&gt;\n						\n            &lt;td&gt;\n							\n              &lt;a href=\&quot;#DiagnosticReport-vread\&quot; title=\&quot;Allows retrieval of a specific version of a DiagnosticReport\&quot;&gt;Yes&lt;/a&gt;\n						\n            &lt;/td&gt;\n						\n            &lt;td&gt;\n							\n              &lt;a href=\&quot;#DiagnosticReport-history-instance\&quot; title=\&quot;Allows review of changes to a DiagnosticReport over time\&quot;&gt;Yes&lt;/a&gt;\n						\n            &lt;/td&gt;\n						\n            &lt;td/&gt;\n						\n            &lt;td&gt;\n							\n              &lt;a href=\&quot;#DiagnosticReport-validate\&quot; title=\&quot;Allows a client to verify whether a particular new DiagnosticReport or revision of an existing DiagnosticReport would be accepted based on validation and other business rules.  Useful for some workflows\&quot;&gt;Yes&lt;/a&gt;\n						\n            &lt;/td&gt;\n						\n            &lt;td&gt;\n							\n              &lt;a href=\&quot;#DiagnosticReport-create\&quot; title=\&quot;Allows defining a new DiagnosticReport\&quot;&gt;Yes&lt;/a&gt;\n						\n            &lt;/td&gt;\n						\n            &lt;td&gt;\n							\n              &lt;a href=\&quot;#DiagnosticReport-update\&quot; title=\&quot;Allows editing of an existing DiagnosticReport.  Servers may choose to prohibit certain types of edits, instead requiring the creation of a new DiagnosticReport (and potentially the retiring of the existing DiagnosticReport).  Servers may also limit who can change particular DiagnosticReport.\&quot;&gt;Yes&lt;/a&gt;\n						\n            &lt;/td&gt;\n						\n            &lt;td/&gt;\n					\n          &lt;/tr&gt;\n				\n        &lt;/tbody&gt;\n			\n      &lt;/table&gt;\n			\n      &lt;br/&gt;\n			\n      &lt;br/&gt;\n			\n      &lt;h3&gt;\n				\n        &lt;a href=\&quot;../diagnosticreport.html\&quot;&gt;DiagnosticReport&lt;/a&gt;\n			\n      &lt;/h3&gt;\n			\n      &lt;h4&gt;Interactions&lt;/h4&gt;\n			\n      &lt;table class=\&quot;list\&quot;&gt;\n				\n        &lt;thead&gt;\n					\n          &lt;tr&gt;\n						\n            &lt;th&gt;Name&lt;/th&gt;\n						\n            &lt;th&gt;Description&lt;/th&gt;\n					\n          &lt;/tr&gt;\n				\n        &lt;/thead&gt;\n				\n        &lt;tbody&gt;\n					\n          &lt;tr&gt;\n						\n            &lt;th&gt;\n							\n              &lt;a name=\&quot;DiagnosticReport-search-type\&quot;&gt; &lt;/a&gt;\n							\n              &lt;span&gt;search-type&lt;/span&gt;\n						\n            &lt;/th&gt;\n						\n            &lt;td&gt;\n							\n              &lt;p&gt;Allows a user to search for existing DiagnosticReport&lt;/p&gt;\n						\n            &lt;/td&gt;\n					\n          &lt;/tr&gt;\n					\n          &lt;tr&gt;\n						\n            &lt;th&gt;\n							\n              &lt;a name=\&quot;DiagnosticReport-read\&quot;&gt; &lt;/a&gt;\n							\n              &lt;span&gt;read&lt;/span&gt;\n						\n            &lt;/th&gt;\n						\n            &lt;td&gt;\n							\n              &lt;p&gt;Allows retrieval of a specific known DiagnosticReport&lt;/p&gt;\n						\n            &lt;/td&gt;\n					\n          &lt;/tr&gt;\n					\n          &lt;tr&gt;\n						\n            &lt;th&gt;\n							\n              &lt;a name=\&quot;DiagnosticReport-vread\&quot;&gt; &lt;/a&gt;\n							\n              &lt;span&gt;vread&lt;/span&gt;\n						\n            &lt;/th&gt;\n						\n            &lt;td&gt;\n							\n              &lt;p&gt;Allows retrieval of a specific version of a DiagnosticReport&lt;/p&gt;\n						\n            &lt;/td&gt;\n					\n          &lt;/tr&gt;\n					\n          &lt;tr&gt;\n						\n            &lt;th&gt;\n							\n              &lt;a name=\&quot;DiagnosticReport-history-instance\&quot;&gt; &lt;/a&gt;\n							\n              &lt;span&gt;history-instance&lt;/span&gt;\n						\n            &lt;/th&gt;\n						\n            &lt;td&gt;\n							\n              &lt;p&gt;Allows review of changes to a DiagnosticReport over time&lt;/p&gt;\n						\n            &lt;/td&gt;\n					\n          &lt;/tr&gt;\n					\n          &lt;tr&gt;\n						\n            &lt;th&gt;\n							\n              &lt;a name=\&quot;DiagnosticReport-create\&quot;&gt; &lt;/a&gt;\n							\n              &lt;span&gt;create&lt;/span&gt;\n						\n            &lt;/th&gt;\n						\n            &lt;td&gt;\n							\n              &lt;p&gt;Allows defining a new DiagnosticReport&lt;/p&gt;\n						\n            &lt;/td&gt;\n					\n          &lt;/tr&gt;\n					\n          &lt;tr&gt;\n						\n            &lt;th&gt;\n							\n              &lt;a name=\&quot;DiagnosticReport-update\&quot;&gt; &lt;/a&gt;\n							\n              &lt;span&gt;update&lt;/span&gt;\n						\n            &lt;/th&gt;\n						\n            &lt;td&gt;\n							\n              &lt;p&gt;Allows editing of an existing DiagnosticReport.  Servers may choose to prohibit certain types of edits, instead requiring the creation of a new DiagnosticReport (and potentially the retiring of the existing DiagnosticReport).  Servers may also limit who can change particular DiagnosticReport.&lt;/p&gt;\n						\n            &lt;/td&gt;\n					\n          &lt;/tr&gt;\n					\n          &lt;tr&gt;\n						\n            &lt;th&gt;\n							\n              &lt;a name=\&quot;DiagnosticReport-validate\&quot;&gt; &lt;/a&gt;\n							\n              &lt;span&gt;validate&lt;/span&gt;\n						\n            &lt;/th&gt;\n						\n            &lt;td&gt;\n							\n              &lt;p&gt;Allows a client to verify whether a particular new DiagnosticReport or revision of an existing DiagnosticReport would be accepted based on validation and other business rules.  Useful for some workflows&lt;/p&gt;\n						\n            &lt;/td&gt;\n					\n          &lt;/tr&gt;\n				\n        &lt;/tbody&gt;\n			\n      &lt;/table&gt;\n			\n      &lt;h4&gt;Search&lt;/h4&gt;\n			\n      &lt;p&gt;Supported Includes: DiagnosticReport.subject, DiagnosticReport.performer, DiagnosticReport.request, DiagnosticReport.specimen, DiagnosticReport.report&lt;/p&gt;\n		\n    &lt;/div&gt;&quot;
+  ];
+  fhir:Conformance.name [ fhir:value &quot;USLabReport Receiver&quot;];
+  fhir:Conformance.status [ fhir:value &quot;draft&quot;];
+  fhir:Conformance.date [ fhir:value &quot;2014-12-02&quot;^^xsd:date];
+  fhir:Conformance.publisher [ fhir:value &quot;Published by: HL7 Orders and Observation Workgroup. Primary Author: Eric Haas  Health eData Inc&quot;];
+  fhir:Conformance.contact [
+     fhir:index 0;
+     fhir:Conformance.contact.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value &quot;other&quot; ];
+       fhir:ContactPoint.value [ fhir:value &quot;http://www.hl7.org/&quot; ]
+     ]
+  ];
+  fhir:Conformance.description [ fhir:value &quot;This profile defines the expected capabilities of the USLabReport Receiver actor when conforming to the [[uslabreport.html|The US Receiver Report Implementation (USLabReport)]].  This actor is the receiver of a laboratory test report and declares conformance to RESTful FHIR and FHIR profiles defined in this guide.  The order reference one or more FHIR resources conforming to profiles outlined in the USLabReport guide.&quot;];
+  fhir:Conformance.kind [ fhir:value &quot;requirements&quot;];
+  fhir:Conformance.fhirVersion [ fhir:value &quot;1.0.0&quot;];
+  fhir:Conformance.acceptUnknown [ fhir:value &quot;extensions&quot;];
+  fhir:Conformance.format [
+     fhir:value &quot;xml&quot;;
+     fhir:index 0
+  ], [
+     fhir:value &quot;json&quot;;
+     fhir:index 1
+  ];
+  fhir:Conformance.rest [
+     fhir:index 0;
+     fhir:Conformance.rest.mode [ fhir:value &quot;server&quot; ];
+     fhir:Conformance.rest.documentation [ fhir:value &quot;This conformance resource assumes the USLabReport Receiver is the server, in other words, operating in 'Pull'  or 'Push/Pull' RESTful interface.  The USLabReport Receiver MUST support querying one or more resources outlined by the [[uslabreport|USLabReport Guide]]. The USLabReport Receiver MUST use all the vocabularies and value set constraints defined by the individual resource profiles used by USLabReport. The USLabReport Receiver MUST implement REST behavior according to the [[http|FHIR specification]] and MUST be able to handle errors gracefully from Query Responders who may not support the submitted query.&quot; ];
+     fhir:Conformance.rest.security [
+       fhir:Conformance.rest.security.description [ fhir:value &quot;Implementations must meet the security requirements documented in the [[uslabreport|USLabReport Guide assumptions]].&quot; ]
+     ];
+     fhir:Conformance.rest.resource [
+       fhir:index 0;
+       fhir:Conformance.rest.resource.type [ fhir:value &quot;DiagnosticReport&quot; ];
+       fhir:Conformance.rest.resource.profile [
+         fhir:Reference.reference [ fhir:value &quot;dr-uslab&quot; ]
+       ];
+       fhir:Conformance.rest.resource.interaction [
+         fhir:index 0;
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;search-type&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows a user to search for existing DiagnosticReport&quot; ]
+       ], [
+         fhir:index 1;
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;read&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows retrieval of a specific known DiagnosticReport&quot; ]
+       ], [
+         fhir:index 2;
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;vread&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows retrieval of a specific version of a DiagnosticReport&quot; ]
+       ], [
+         fhir:index 3;
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;history-instance&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows review of changes to a DiagnosticReport over time&quot; ]
+       ], [
+         fhir:index 4;
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;create&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows defining a new DiagnosticReport&quot; ]
+       ], [
+         fhir:index 5;
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;update&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows editing of an existing DiagnosticReport.  Servers may choose to prohibit certain types of edits, instead requiring the creation of a new DiagnosticReport (and potentially the retiring of the existing DiagnosticReport).  Servers may also limit who can change particular DiagnosticReport.&quot; ]
+       ];
+       fhir:Conformance.rest.resource.searchInclude [
+         fhir:value &quot;DiagnosticReport.subject, DiagnosticReport.performer, DiagnosticReport.request, DiagnosticReport.specimen, DiagnosticReport.report&quot;;
+         fhir:index 0
+       ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Conformance.rest.mode [ fhir:value &quot;client&quot; ];
+     fhir:Conformance.rest.documentation [ fhir:value &quot;The following conformance rules assumes the USLabReport Receiver is the client, in other words, operating in 'Push'  RESTful interface.  The USLabReport Receiver MUST support querying one or more resources outlined by the [[uslabreport|USLabReport Guide]]. The USLabReport Receiver MUST use all the vocabularies and value set constraints defined by the individual resource profiles used by USLabReport. The USLabReport Receiver MUST implement REST behavior according to the [[http|FHIR specification]] and MUST be able to handle errors gracefully from Query Responders who may not support the submitted query.&quot; ];
+     fhir:Conformance.rest.security [
+       fhir:Conformance.rest.security.description [ fhir:value &quot;Implementations must meet the security requirements documented in the [[uslabreport|USLabReport Guide assumptions]].&quot; ]
+     ];
+     fhir:Conformance.rest.resource [
+       fhir:index 0;
+       fhir:Conformance.rest.resource.type [ fhir:value &quot;DiagnosticReport&quot; ];
+       fhir:Conformance.rest.resource.profile [
+         fhir:link &lt;http://hl7.org/fhir/StructureDefinition/do-uslab&gt;;
+         fhir:Reference.reference [ fhir:value &quot;StructureDefinition/do-uslab&quot; ]
+       ];
+       fhir:Conformance.rest.resource.interaction [
+         fhir:index 0;
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;search-type&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows a user to search for existing DiagnosticReport&quot; ]
+       ], [
+         fhir:index 1;
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;read&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows retrieval of a specific known DiagnosticReport&quot; ]
+       ], [
+         fhir:index 2;
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;vread&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows retrieval of a specific version of a DiagnosticReport&quot; ]
+       ], [
+         fhir:index 3;
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;history-instance&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows review of changes to a DiagnosticReport over time&quot; ]
+       ], [
+         fhir:index 4;
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;create&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows defining a new DiagnosticReport&quot; ]
+       ], [
+         fhir:index 5;
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;update&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows editing of an existing DiagnosticReport.  Servers may choose to prohibit certain types of edits, instead requiring the creation of a new DiagnosticReport (and potentially the retiring of the existing DiagnosticReport).  Servers may also limit who can change particular DiagnosticReport.&quot; ]
+       ];
+       fhir:Conformance.rest.resource.searchInclude [
+         fhir:value &quot;DiagnosticReport.subject, DiagnosticReport.performer, DiagnosticReport.request, DiagnosticReport.specimen, DiagnosticReport.report&quot;;
+         fhir:index 0
+       ]
+     ]
+  ].
+
+# -------------------------------------------------------------------------------------
+
+
+</pre>
+</div>
+
+
+<p>
+Usage note: every effort has been made to ensure that the
+examples are correct and useful, but they are not a normative part 
+of the specification. 
+</p>
+
+</div>
+
+
+				</div><!-- /inner-wrapper -->
+            </div><!-- /row -->
+        </div><!-- /container -->
+        
+    </div><!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment"><!-- segment-footer -->
+		<div class="container"><!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        © HL7.org 2011+. FHIR STU3 Candidate (v1.4.0-8453) generated on Mon, Jun 6, 2016 20:20+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search</a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fconformance-uslabreport-receiver.ttl.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fconformance-uslabreport-receiver.ttl.html">Compare to DSTU2</a> |                
+               <a style="color: #81BEF7" rel="license" href="license.html"><img src="cc0.png" style="border-style: none;" alt="CC0"/></a> | 
+               <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>   
+        </span>
+        </p>
+			</div><!-- /inner-wrapper -->
+		</div><!-- /container -->
+	</div><!-- /segment-footer -->
+<!-- disqus thread -->
+<!--disqus-->
+<!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden"><!-- segment-post-footer -->
+		<div class="container"><!-- container -->
+		</div><!-- /container -->
+	</div><!-- /segment-post-footer -->
+    
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>   <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

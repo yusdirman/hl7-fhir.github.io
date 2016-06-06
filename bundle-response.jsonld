@@ -1,0 +1,199 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Bundle",
+  "resourceType": "Bundle",
+  "Resource.id": {
+    "value": "bundle-response"
+  },
+  "Resource.meta": {
+    "Meta.lastUpdated": {
+      "value": "2014-08-18T01:43:33Z"
+    }
+  },
+  "Bundle.type": {
+    "value": "transaction-response"
+  },
+  "Bundle.entry": [
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "http://example.org/fhir/Patient/12423"
+      },
+      "Patient": [
+        {
+          "Resource.id": {
+            "value": "12423"
+          },
+          "Resource.meta": {
+            "Meta.versionId": {
+              "value": "1"
+            },
+            "Meta.lastUpdated": {
+              "value": "2014-08-18T01:43:31Z"
+            }
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Some narrative</div>"
+            }
+          },
+          "Patient.active": {
+            "value": true
+          },
+          "Patient.name": [
+            {
+              "HumanName.use": {
+                "value": "official"
+              },
+              "HumanName.family": [
+                {
+                  "value": "Chalmers"
+                }
+              ],
+              "HumanName.given": [
+                {
+                  "value": "Peter"
+                },
+                {
+                  "value": "James"
+                }
+              ]
+            }
+          ],
+          "Patient.gender": {
+            "value": "male"
+          },
+          "Patient.birthDate": {
+            "value": "1974-12-25"
+          }
+        }
+      ],
+      "Bundle.entry.response": {
+        "Bundle.entry.response.status": {
+          "value": "201 Created"
+        },
+        "Bundle.entry.response.location": {
+          "value": "Patient/12423/_history/1"
+        },
+        "Bundle.entry.response.etag": {
+          "value": "W/\"1\""
+        },
+        "Bundle.entry.response.lastModified": {
+          "value": "2014-08-18T01:43:33Z"
+        }
+      }
+    },
+    {
+      "Bundle.entry.response": {
+        "Bundle.entry.response.status": {
+          "value": "200 OK"
+        }
+      }
+    },
+    {
+      "Bundle.entry.response": {
+        "Bundle.entry.response.status": {
+          "value": "200 OK"
+        },
+        "Bundle.entry.response.location": {
+          "value": "Patient/123/_history/4"
+        },
+        "Bundle.entry.response.etag": {
+          "value": "W/\"4\""
+        }
+      }
+    },
+    {
+      "Bundle.entry.response": {
+        "Bundle.entry.response.status": {
+          "value": "201 Created"
+        },
+        "Bundle.entry.response.location": {
+          "value": "Patient/12424/_history/1"
+        },
+        "Bundle.entry.response.etag": {
+          "value": "W/\"1\""
+        }
+      }
+    },
+    {
+      "Bundle.entry.response": {
+        "Bundle.entry.response.status": {
+          "value": "200 ok"
+        },
+        "Bundle.entry.response.location": {
+          "value": "Patient/123a/_history/3"
+        },
+        "Bundle.entry.response.etag": {
+          "value": "W/\"3\""
+        }
+      }
+    },
+    {
+      "Bundle.entry.response": {
+        "Bundle.entry.response.status": {
+          "value": "202 Accepted"
+        }
+      }
+    },
+    {
+      "Bundle.entry.response": {
+        "Bundle.entry.response.status": {
+          "value": "DELETE"
+        }
+      }
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "urn:uuid:7f9724ed-ef8d-4434-aacb-41869db83233"
+      },
+      "Parameters": [
+        {
+          "Parameters.parameter": [
+            {
+              "Parameters.parameter.name": {
+                "value": "name"
+              },
+              "Parameters.parameter.valueString": {
+                "value": "LOINC"
+              }
+            }
+          ]
+        }
+      ],
+      "Bundle.entry.response": {
+        "Bundle.entry.response.status": {
+          "value": "200 ok"
+        }
+      }
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "urn:uuid:e7bcef8e-5ef9-4d2b-87d5-b42b1eec9125"
+      },
+      "Bundle": [
+        {
+          "Resource.id": {
+            "value": "fb6ed6cb-324e-4588-87cd-0c92c68986ca"
+          },
+          "Bundle.type": {
+            "value": "searchset"
+          }
+        }
+      ],
+      "Bundle.entry.response": {
+        "Bundle.entry.response.status": {
+          "value": "200 OK"
+        }
+      }
+    },
+    {
+      "Bundle.entry.response": {
+        "Bundle.entry.response.status": {
+          "value": "304 Not Modified"
+        }
+      }
+    }
+  ]
+}

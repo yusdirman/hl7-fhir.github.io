@@ -1,0 +1,57 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Location",
+  "resourceType": "Location",
+  "Resource.id": {
+    "value": "ukp"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">UK Pharmacies</div>"
+    }
+  },
+  "Location.status": {
+    "value": "active"
+  },
+  "Location.name": {
+    "value": "UK Pharmacies"
+  },
+  "Location.description": {
+    "value": "All Pharmacies in the United Kingdom covered by the National Pharmacy Association"
+  },
+  "Location.mode": {
+    "value": "kind"
+  },
+  "Location.type": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/v3/RoleCode"
+        },
+        "Coding.code": {
+          "value": "PHARM"
+        },
+        "Coding.display": {
+          "value": "Pharmacy"
+        }
+      }
+    ]
+  },
+  "Location.physicalType": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/location-physical-type"
+        },
+        "Coding.code": {
+          "value": "jdn"
+        },
+        "Coding.display": {
+          "value": "Jurisdiction"
+        }
+      }
+    ]
+  }
+}

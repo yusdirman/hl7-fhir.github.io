@@ -1,0 +1,86 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/PractitionerRole",
+  "resourceType": "PractitionerRole",
+  "Resource.id": {
+    "value": "example"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t\t\t<p>\n\t\t\t\tDr Adam Careful is a Referring Practitioner for Acme Hospital from 1-Jan 2012 to 31-Mar\n\t\t\t\t2012\n\t\t\t</p>\n\t\t</div>"
+    }
+  },
+  "PractitionerRole.identifier": [
+    {
+      "Identifier.system": {
+        "value": "http://www.acme.org/practitioners"
+      },
+      "Identifier.value": {
+        "value": "23"
+      }
+    }
+  ],
+  "PractitionerRole.active": {
+    "value": true
+  },
+  "PractitionerRole.organization": {
+    "Reference.reference": {
+      "value": "Organization/f001"
+    },
+    "reference": "http://hl7.org/fhir//Organization/f001"
+  },
+  "PractitionerRole.role": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "value": "http://hl7.org/fhir/v2/0286"
+          },
+          "Coding.code": {
+            "value": "RP"
+          }
+        }
+      ]
+    }
+  ],
+  "PractitionerRole.location": [
+    {
+      "Reference.reference": {
+        "value": "Location/1"
+      },
+      "Reference.display": {
+        "value": "South Wing, second floor"
+      }
+    }
+  ],
+  "PractitionerRole.healthcareService": [
+    {
+      "Reference.reference": {
+        "value": "HealthcareService/example"
+      }
+    }
+  ],
+  "PractitionerRole.telecom": [
+    {
+      "ContactPoint.system": {
+        "value": "phone"
+      },
+      "ContactPoint.value": {
+        "value": "(03) 5555 6473"
+      },
+      "ContactPoint.use": {
+        "value": "home"
+      }
+    }
+  ],
+  "PractitionerRole.period": {
+    "Period.start": {
+      "value": "2012-01-01"
+    },
+    "Period.end": {
+      "value": "2012-03-31"
+    }
+  }
+}

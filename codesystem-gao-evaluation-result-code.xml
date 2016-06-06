@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="gao-evaluation-result-code"/>
+  <meta>
+    <lastUpdated value="2016-06-06T20:14:04.181+00:00"/>
+    <profile value="http://hl7.org/fhir/StructureDefinition/codesystem-shareable-definition"/>
+  </meta>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <h2>GAO Result Code</h2>
+      <p>Codes indicating the appropriateness of an order based upon established clinical guidelines.</p>
+      <p>This code system http://hl7.org/fhir/evaluation-result-code defines the following codes:</p>
+      <table class="codes">
+        <tr>
+          <td>
+            <b>Code</b>
+          </td>
+          <td>
+            <b>Display</b>
+          </td>
+          <td>
+            <b>Definition</b>
+          </td>
+        </tr>
+        <tr>
+          <td>within
+            <a name="within"> </a>
+          </td>
+          <td>Within Guidelines</td>
+          <td>Order is within identified guidelines.</td>
+        </tr>
+        <tr>
+          <td>outside
+            <a name="outside"> </a>
+          </td>
+          <td>Outside Guidelines</td>
+          <td>Order is outside identified guidelines.</td>
+        </tr>
+        <tr>
+          <td>noguidelines
+            <a name="noguidelines"> </a>
+          </td>
+          <td>No Guidelines Apply</td>
+          <td>No guidelines apply to order.</td>
+        </tr>
+        <tr>
+          <td>incomplete
+            <a name="incomplete"> </a>
+          </td>
+          <td>Evaluation not completed.</td>
+          <td>Evaluation was not completed (e.g., because more information is necessary).</td>
+        </tr>
+        <tr>
+          <td>manual
+            <a name="manual"> </a>
+          </td>
+          <td>Manual Evaluation</td>
+          <td>The evaluation was issued through a manual process.</td>
+        </tr>
+        <tr>
+          <td>notcovered
+            <a name="notcovered"> </a>
+          </td>
+          <td>Not covered</td>
+          <td>No evaluation was performed as the requested service is not covered for this patient.</td>
+        </tr>
+      </table>
+    </div>
+  </text>
+  <url value="http://hl7.org/fhir/evaluation-result-code"/>
+  <version value="1.0.0"/>
+  <name value="GAO Result Code"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <publisher value="HL7"/>
+  <description value="Codes indicating the appropriateness of an order based upon established clinical guidelines."/>
+  <requirements value="These values are needed to report the results of an evaluation of appropriateness for an order based upon specified guidelines."/>
+  <caseSensitive value="true"/>
+  <valueSet value="http://hl7.org/fhir/ValueSet/gao-evaluation-result-code"/>
+  <content value="complete"/>
+  <concept>
+    <code value="within"/>
+    <display value="Within Guidelines"/>
+    <definition value="Order is within identified guidelines."/>
+  </concept>
+  <concept>
+    <code value="outside"/>
+    <display value="Outside Guidelines"/>
+    <definition value="Order is outside identified guidelines."/>
+  </concept>
+  <concept>
+    <code value="noguidelines"/>
+    <display value="No Guidelines Apply"/>
+    <definition value="No guidelines apply to order."/>
+  </concept>
+  <concept>
+    <code value="incomplete"/>
+    <display value="Evaluation not completed."/>
+    <definition value="Evaluation was not completed (e.g., because more information is necessary)."/>
+  </concept>
+  <concept>
+    <code value="manual"/>
+    <display value="Manual Evaluation"/>
+    <definition value="The evaluation was issued through a manual process."/>
+  </concept>
+  <concept>
+    <code value="notcovered"/>
+    <display value="Not covered"/>
+    <definition value="No evaluation was performed as the requested service is not covered for this patient."/>
+  </concept>
+</CodeSystem>

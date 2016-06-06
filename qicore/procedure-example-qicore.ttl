@@ -1,0 +1,80 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Procedureprocedure-example-qicore> a fhir:Procedure;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "procedure-example-qicore"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: procedure-example-qicore</p><p><b>subject</b>: <a>Patient/example</a></p><p><b>status</b>: completed</p><p><b>code</b>: Appendectomy <span>(Details : {SNOMED CT code '80146002' = 'Appendicectomy', given as 'Appendectomy (Procedure)'})</span></p><p><b>bodySite</b>: Appendix structure <span>(Details : {SNOMED CT code '66754008' = 'Appendix structure (body structure)', given as 'Appendix structure'})</span></p><p><b>reason</b>: On examination - abdominal pain - right iliac <span>(Details : {SNOMED CT code '163220003' = 'On examination - abdominal pain - right iliac (finding)', given as 'On examination - abdominal pain - right iliac'})</span></p><h3>Performers</h3><table><tr><td>-</td><td><b>Actor</b></td></tr><tr><td>*</td><td><a>Dr Cecil Surgeon</a></td></tr></table><p><b>performed</b>: Apr 5, 2013 9:20:00 AM --&gt; Apr 5, 2013 10:30:00 AM</p><p><b>encounter</b>: <a>Encounter/example</a></p></div>"
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/procedure-approachBodySite" ];
+     fhir:Extension.valueReference [
+       fhir:link <http://hl7.org/fhir/BodySite/example>;
+       fhir:Reference.reference [ fhir:value "BodySite/example" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/procedure-incisionDateTime" ];
+     fhir:Extension.valueDateTime [ fhir:value "2013-04-05T09:30:00-04:00"^^xsd:dateTime ]
+  ];
+  fhir:Procedure.subject [
+     fhir:link <http://hl7.org/fhir/Patient/example>;
+     fhir:Reference.reference [ fhir:value "Patient/example" ]
+  ];
+  fhir:Procedure.status [ fhir:value "completed"];
+  fhir:Procedure.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:concept sct:80146002;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "80146002" ];
+       fhir:Coding.display [ fhir:value "Appendectomy (Procedure)" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "Appendectomy" ]
+  ];
+  fhir:Procedure.bodySite [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:concept sct:66754008;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "66754008" ];
+       fhir:Coding.display [ fhir:value "Appendix structure" ]
+     ]
+  ];
+  fhir:Procedure.reasonCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:concept sct:163220003;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "163220003" ];
+       fhir:Coding.display [ fhir:value "On examination - abdominal pain - right iliac" ]
+     ]
+  ];
+  fhir:Procedure.performer [
+     fhir:index 0;
+     fhir:Procedure.performer.actor [
+       fhir:link <http://hl7.org/fhir/Practitioner/example>;
+       fhir:Reference.reference [ fhir:value "Practitioner/example" ];
+       fhir:Reference.display [ fhir:value "Dr Cecil Surgeon" ]
+     ]
+  ];
+  fhir:Procedure.performedPeriod [
+     fhir:Period.start [ fhir:value "2013-04-05T09:20:00-04:00"^^xsd:dateTime ];
+     fhir:Period.end [ fhir:value "2013-04-05T10:30:00-04:00"^^xsd:dateTime ]
+  ];
+  fhir:Procedure.encounter [
+     fhir:link <http://hl7.org/fhir/Encounter/example>;
+     fhir:Reference.reference [ fhir:value "Encounter/example" ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

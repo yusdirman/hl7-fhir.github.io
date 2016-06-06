@@ -1,0 +1,146 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Library",
+  "resourceType": "Library",
+  "Resource.id": {
+    "value": "library-cbp"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Cohort Definition for Controlling Blood Pressure Measure</div>"
+    }
+  },
+  "Library.moduleMetadata": {
+    "ModuleMetadata.identifier": [
+      {
+        "Identifier.use": {
+          "value": "official"
+        },
+        "Identifier.value": {
+          "value": "CBP"
+        }
+      }
+    ],
+    "ModuleMetadata.version": {
+      "value": "1.0.0"
+    },
+    "ModuleMetadata.title": {
+      "value": "Cohort Definition for Controlling Blood Pressure Measure"
+    },
+    "ModuleMetadata.type": {
+      "value": "library"
+    },
+    "ModuleMetadata.status": {
+      "value": "active"
+    },
+    "ModuleMetadata.experimental": {
+      "value": true
+    },
+    "ModuleMetadata.publicationDate": {
+      "value": "2016-04-19"
+    },
+    "ModuleMetadata.topic": [
+      {
+        "CodeableConcept.text": {
+          "value": "something"
+        }
+      }
+    ]
+  },
+  "Library.model": [
+    {
+      "Library.model.identifier": {
+        "value": "FHIR"
+      }
+    }
+  ],
+  "Library.valueSet": [
+    {
+      "Library.valueSet.name": {
+        "value": "Systolic Blood Pressure"
+      },
+      "Library.valueSet.identifier": {
+        "value": "Systolic Blood Pressure"
+      }
+    },
+    {
+      "Library.valueSet.name": {
+        "value": "Diastolic Blood Pressure"
+      },
+      "Library.valueSet.identifier": {
+        "value": "Diastolic Blood Pressure"
+      }
+    }
+  ],
+  "Library.dataRequirement": [
+    {
+      "DataRequirement.type": {
+        "value": "Patient"
+      }
+    },
+    {
+      "DataRequirement.type": {
+        "value": "Observation"
+      },
+      "DataRequirement.codeFilter": [
+        {
+          "DataRequirement.codeFilter.path": {
+            "value": "code"
+          },
+          "DataRequirement.codeFilter.valueSetString": {
+            "value": "Systolic Blood Pressure"
+          }
+        }
+      ],
+      "DataRequirement.dateFilter": [
+        {
+          "DataRequirement.dateFilter.path": {
+            "value": "effectiveDateTime.value"
+          },
+          "DataRequirement.dateFilter.valuePeriod": {
+            "Period.start": {
+              "value": "2015-01-01"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "DataRequirement.type": {
+        "value": "Observation"
+      },
+      "DataRequirement.codeFilter": [
+        {
+          "DataRequirement.codeFilter.path": {
+            "value": "code"
+          },
+          "DataRequirement.codeFilter.valueSetString": {
+            "value": "Diastolic Blood Pressure"
+          }
+        }
+      ],
+      "DataRequirement.dateFilter": [
+        {
+          "DataRequirement.dateFilter.path": {
+            "value": "effectiveDateTime.value"
+          },
+          "DataRequirement.dateFilter.valuePeriod": {
+            "Period.start": {
+              "value": "2015-01-01"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "Library.document": {
+    "Attachment.contentType": {
+      "value": "application/xml+elm"
+    },
+    "Attachment.url": {
+      "value": "http://example.org/libraries/library-cpb.elm.xml"
+    }
+  }
+}

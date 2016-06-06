@@ -1,0 +1,337 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Questionnaire",
+  "resourceType": "Questionnaire",
+  "Resource.id": {
+    "value": "gcs"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: gcs</p><p><b>contained</b>: , , </p><p><b>url</b>: <a>http://hl7.org/fhir/Questionnaire/gcs</a></p><p><b>status</b>: draft</p><p><b>date</b>: Aug 3, 2015</p><p><b>publisher</b>: FHIR Project team</p><p><b>title</b>: Glasgow Coma Score</p><p><b>concept</b>: Glasgow coma score total (Details: LOINC code 9269-2 = 'Glasgow coma score total', stated as 'null')</p><p><b>subjectType</b>: Patient</p><blockquote><p><b>item</b></p><p><b>linkId</b>: 1.1</p><p><b>concept</b>: Glasgow coma score verbal (Details: LOINC code 9270-0 = 'Glasgow coma score verbal', stated as 'null')</p><p><b>type</b>: choice</p><p><b>options</b>: id: verbal; http://loinc.org/ValueSet/LL356-7; name: GCS Verbal Value Set; status: active; description: LOINC ANSWER LIST    (LL356-7)</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: 1.2</p><p><b>concept</b>: Glasgow coma score motor (Details: LOINC code 9268-4 = 'Glasgow coma score motor', stated as 'null')</p><p><b>type</b>: choice</p><p><b>options</b>: id: motor; http://loinc.org/ValueSet/LL357-5; name: GCS Motor Value Set; status: active; description: LOINC ANSWER LIST    (LL357-5)</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: 1.3</p><p><b>concept</b>: Glasgow coma score eye opening (Details: LOINC code 9267-6 = 'Glasgow coma score eye opening', stated as 'null')</p><p><b>type</b>: choice</p><p><b>options</b>: id: eye; http://loinc.org/ValueSet/LL355-9; name: GCS Eye Value Set; status: active; description: LOINC ANSWER LIST    (LL355-9)</p></blockquote></div>"
+    }
+  },
+  "ValueSet": [
+    {
+      "Resource.id": {
+        "value": "motor"
+      },
+      "ValueSet.identifier": {
+        "Identifier.system": {
+          "value": "http://loinc.org"
+        },
+        "Identifier.value": {
+          "value": "http://loinc.org/ValueSet/LL357-5"
+        }
+      },
+      "ValueSet.name": {
+        "value": "GCS Motor Value Set"
+      },
+      "ValueSet.status": {
+        "value": "active"
+      },
+      "ValueSet.description": {
+        "value": "LOINC ANSWER LIST    (LL357-5)"
+      },
+      "ValueSet.compose": {
+        "ValueSet.compose.include": [
+          {
+            "ValueSet.compose.include.system": {
+              "value": "http://loinc.org"
+            },
+            "ValueSet.compose.include.concept": [
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA6562-8"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "No motor response"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA6563-6"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Extension to pain"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA6564-4"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Flexion to pain"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA6565-1"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Withdrawl from pain"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA6566-9"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Localizing pain"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA6567-7"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Obeys commands"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Resource.id": {
+        "value": "verbal"
+      },
+      "ValueSet.identifier": {
+        "Identifier.system": {
+          "value": "http://loinc.org"
+        },
+        "Identifier.value": {
+          "value": "http://loinc.org/ValueSet/LL356-7"
+        }
+      },
+      "ValueSet.name": {
+        "value": "GCS Verbal Value Set"
+      },
+      "ValueSet.status": {
+        "value": "active"
+      },
+      "ValueSet.description": {
+        "value": "LOINC ANSWER LIST    (LL356-7)"
+      },
+      "ValueSet.compose": {
+        "ValueSet.compose.include": [
+          {
+            "ValueSet.compose.include.system": {
+              "value": "http://loinc.org"
+            },
+            "ValueSet.compose.include.concept": [
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA6557-8"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "No verbal response (>2yrs); no vocal response (<=2yrs)"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA6558-6"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Incomprehensible sounds"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA6559-4"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Inappropriate words"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA6560-2"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Confused"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA6561-0"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Oriented"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Resource.id": {
+        "value": "eye"
+      },
+      "ValueSet.identifier": {
+        "Identifier.system": {
+          "value": "http://loinc.org"
+        },
+        "Identifier.value": {
+          "value": "http://loinc.org/ValueSet/LL355-9"
+        }
+      },
+      "ValueSet.name": {
+        "value": "GCS Eye Value Set"
+      },
+      "ValueSet.status": {
+        "value": "active"
+      },
+      "ValueSet.description": {
+        "value": "LOINC ANSWER LIST    (LL355-9)"
+      },
+      "ValueSet.compose": {
+        "ValueSet.compose.include": [
+          {
+            "ValueSet.compose.include.system": {
+              "value": "http://loinc.org"
+            },
+            "ValueSet.compose.include.concept": [
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA6553-7"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "No eye opening"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA6554-5"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Eye opening to pain"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA6555-2"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Eye opening to verbal command"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA6556-0"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Eyes open spontaneously"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "Questionnaire.url": {
+    "value": "http://hl7.org/fhir/Questionnaire/gcs"
+  },
+  "Questionnaire.status": {
+    "value": "draft"
+  },
+  "Questionnaire.date": {
+    "value": "2015-08-03"
+  },
+  "Questionnaire.publisher": {
+    "value": "FHIR Project team"
+  },
+  "Questionnaire.title": {
+    "value": "Glasgow Coma Score"
+  },
+  "Questionnaire.concept": [
+    {
+      "Coding.system": {
+        "value": "http://loinc.org"
+      },
+      "Coding.code": {
+        "value": "9269-2"
+      }
+    }
+  ],
+  "Questionnaire.subjectType": [
+    {
+      "value": "Patient"
+    }
+  ],
+  "Questionnaire.item": [
+    {
+      "Questionnaire.item.linkId": {
+        "value": "1.1"
+      },
+      "Questionnaire.item.concept": [
+        {
+          "Coding.system": {
+            "value": "http://loinc.org"
+          },
+          "Coding.code": {
+            "value": "9270-0"
+          }
+        }
+      ],
+      "Questionnaire.item.type": {
+        "value": "choice"
+      },
+      "Questionnaire.item.options": {
+        "Reference.reference": {
+          "value": "#verbal"
+        }
+      }
+    },
+    {
+      "Questionnaire.item.linkId": {
+        "value": "1.2"
+      },
+      "Questionnaire.item.concept": [
+        {
+          "Coding.system": {
+            "value": "http://loinc.org"
+          },
+          "Coding.code": {
+            "value": "9268-4"
+          }
+        }
+      ],
+      "Questionnaire.item.type": {
+        "value": "choice"
+      },
+      "Questionnaire.item.options": {
+        "Reference.reference": {
+          "value": "#motor"
+        }
+      }
+    },
+    {
+      "Questionnaire.item.linkId": {
+        "value": "1.3"
+      },
+      "Questionnaire.item.concept": [
+        {
+          "Coding.system": {
+            "value": "http://loinc.org"
+          },
+          "Coding.code": {
+            "value": "9267-6"
+          }
+        }
+      ],
+      "Questionnaire.item.type": {
+        "value": "choice"
+      },
+      "Questionnaire.item.options": {
+        "Reference.reference": {
+          "value": "#eye"
+        }
+      }
+    }
+  ]
+}

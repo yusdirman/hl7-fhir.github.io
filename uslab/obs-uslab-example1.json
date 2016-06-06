@@ -1,0 +1,80 @@
+{
+  "resourceType": "Observation",
+  "id": "obs-uslab-example1",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: obs-uslab-example1</p><p><b>identifier</b>: lab test result ID = 1234 (OFFICIAL)</p><p><b>status</b>: final</p><p><b>code</b>: Capillary Blood Lead Screen <span>(Details : {LOINC code '10368-9' = 'Lead [Mass/volume] in Capillary blood', given as 'Lead [Mass/​volume] in Capillary blood'}; {urn:oid:2.16.840.1.113883.3.72.5.24 code 'CAPLD' = '??', given as 'Blood Lead, Capillary'})</span></p><p><b>subject</b>: <a>Todd Lerr</a></p><p><b>effective</b>: Dec 3, 2014</p><p><b>issued</b>: Dec 4, 2014 3:42:15 PM</p><p><b>performer</b>: <a>Dr Leonard T Bloodraw Jr</a></p><p><b>value</b>: 65 microgram per deciliter<span> (Details: http://unitsofmeasure.org code ug/dL = 'ug/dL')</span></p><p><b>interpretation</b>: High <span>(Details : {http://hl7.org/fhir/v2/0078 code 'H' = 'High)</span></p><p><b>specimen</b>: <a>Blood sample</a></p><h3>ReferenceRanges</h3><table><tr><td>-</td><td><b>High</b></td></tr><tr><td>*</td><td>5.0 microgram per deciliter<span> (Details: http://unitsofmeasure.org code ug/dL = 'ug/dL')</span></td></tr></table></div>"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/uslab-observationkind",
+      "valueCode": "result"
+    }
+  ],
+  "identifier": [
+    {
+      "use": "official",
+      "type": {
+        "text": "lab test result ID"
+      },
+      "system": "http://lis.acmelabs.org/identifiers/labtestresult",
+      "value": "1234"
+    }
+  ],
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "10368-9",
+        "display": "Lead [Mass/​volume] in Capillary blood"
+      },
+      {
+        "system": "urn:oid:2.16.840.1.113883.3.72.5.24",
+        "code": "CAPLD",
+        "display": "Blood Lead, Capillary"
+      }
+    ],
+    "text": "Capillary Blood Lead Screen"
+  },
+  "subject": {
+    "reference": "Patient/patient-uslab-example1",
+    "display": "Todd Lerr"
+  },
+  "effectiveDateTime": "2014-12-03",
+  "issued": "2014-12-04T15:42:15-08:00",
+  "performer": [
+    {
+      "reference": "Practitioner/pract-uslab-example1",
+      "display": "Dr Leonard T Bloodraw Jr"
+    }
+  ],
+  "valueQuantity": {
+    "value": 65,
+    "unit": "microgram per deciliter",
+    "system": "http://unitsofmeasure.org",
+    "code": "ug/dL"
+  },
+  "interpretation": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/v2/0078",
+        "code": "H"
+      }
+    ]
+  },
+  "specimen": {
+    "reference": "Specimen/spec-uslab-example1",
+    "display": "Blood sample"
+  },
+  "referenceRange": [
+    {
+      "high": {
+        "value": 5.0,
+        "unit": "microgram per deciliter",
+        "system": "http://unitsofmeasure.org",
+        "code": "ug/dL"
+      }
+    }
+  ]
+}

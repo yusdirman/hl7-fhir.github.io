@@ -1,0 +1,90 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/RelatedPerson",
+  "resourceType": "RelatedPerson",
+  "Resource.id": {
+    "value": "f001"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n     Sarah Abels\n    </div>"
+    }
+  },
+  "RelatedPerson.identifier": [
+    {
+      "Identifier.use": {
+        "value": "official"
+      },
+      "Identifier.type": {
+        "CodeableConcept.text": {
+          "value": "BSN"
+        }
+      },
+      "Identifier.system": {
+        "value": "urn:oid:2.16.840.1.113883.2.4.6.3"
+      }
+    }
+  ],
+  "RelatedPerson.patient": {
+    "Reference.reference": {
+      "value": "Patient/f001"
+    },
+    "reference": "http://hl7.org/fhir//Patient/f001"
+  },
+  "RelatedPerson.relationship": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/v3/RoleCode"
+        },
+        "Coding.code": {
+          "value": "SIGOTHR"
+        }
+      }
+    ]
+  },
+  "RelatedPerson.name": {
+    "HumanName.use": {
+      "value": "usual"
+    },
+    "HumanName.family": [
+      {
+        "value": "Abels"
+      }
+    ],
+    "HumanName.given": [
+      {
+        "value": "Sarah"
+      }
+    ]
+  },
+  "RelatedPerson.telecom": [
+    {
+      "ContactPoint.system": {
+        "value": "phone"
+      },
+      "ContactPoint.value": {
+        "value": "0690383372"
+      },
+      "ContactPoint.use": {
+        "value": "mobile"
+      }
+    },
+    {
+      "ContactPoint.system": {
+        "value": "email"
+      },
+      "ContactPoint.value": {
+        "value": "s.abels@kpn.nl"
+      },
+      "ContactPoint.use": {
+        "value": "home"
+      }
+    }
+  ],
+  "RelatedPerson.gender": {
+    "value": "female"
+  }
+}

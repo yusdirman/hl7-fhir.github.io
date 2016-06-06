@@ -1,0 +1,121 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/OperationDefinition",
+  "resourceType": "OperationDefinition",
+  "Resource.id": {
+    "value": "example"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: example</p><p><b>url</b>: <a>http://h7.org/fhir/OperationDefinition/example</a></p><p><b>version</b>: B</p><p><b>name</b>: Populate Questionnaire</p><p><b>status</b>: draft</p><p><b>kind</b>: operation</p><p><b>date</b>: Aug 4, 2015</p><p><b>publisher</b>: Acme Healthcare Services</p><h3>Contacts</h3><table><tr><td>-</td><td><b>Name</b></td><td><b>Telecom</b></td></tr><tr><td>*</td><td>System Administrator</td><td>beep@coyote.acme.com</td></tr></table><p><b>description</b>: Limited implementation of the Populate Questionnaire implemenation</p><p><b>code</b>: populate</p><p><b>comment</b>: Only implemented for Labs and Medications so far</p><p><b>base</b>: <a>OperationDefinition/Questionnaire-populate</a></p><p><b>system</b>: false</p><p><b>type</b>: Questionnaire</p><p><b>instance</b>: true</p><blockquote><p><b>parameter</b></p><p><b>name</b>: subject</p><p><b>use</b>: in</p><p><b>min</b>: 1</p><p><b>max</b>: 1</p><p><b>documentation</b>: The resource that is to be the *QuestionnaireResponse.subject*. The [[[QuestionnaireResponse]]]      instance will reference the provided subject.  In addition, if the *local* parameter is      set to true, server information about the specified subject will be used to populate the      instance.</p><p><b>type</b>: Reference</p></blockquote><blockquote><p><b>parameter</b></p><p><b>name</b>: return</p><p><b>use</b>: out</p><p><b>min</b>: 1</p><p><b>max</b>: 1</p><p><b>documentation</b>: The partially (or fully)-populated set of answers for the specified Questionnaire</p><p><b>type</b>: QuestionnaireResponse</p></blockquote></div>"
+    }
+  },
+  "OperationDefinition.url": {
+    "value": "http://h7.org/fhir/OperationDefinition/example"
+  },
+  "OperationDefinition.version": {
+    "value": "B"
+  },
+  "OperationDefinition.name": {
+    "value": "Populate Questionnaire"
+  },
+  "OperationDefinition.status": {
+    "value": "draft"
+  },
+  "OperationDefinition.kind": {
+    "value": "operation"
+  },
+  "OperationDefinition.date": {
+    "value": "2015-08-04"
+  },
+  "OperationDefinition.publisher": {
+    "value": "Acme Healthcare Services"
+  },
+  "OperationDefinition.contact": [
+    {
+      "OperationDefinition.contact.name": {
+        "value": "System Administrator"
+      },
+      "OperationDefinition.contact.telecom": [
+        {
+          "ContactPoint.system": {
+            "value": "email"
+          },
+          "ContactPoint.value": {
+            "value": "beep@coyote.acme.com"
+          }
+        }
+      ]
+    }
+  ],
+  "OperationDefinition.description": {
+    "value": "Limited implementation of the Populate Questionnaire implemenation"
+  },
+  "OperationDefinition.code": {
+    "value": "populate"
+  },
+  "OperationDefinition.comment": {
+    "value": "Only implemented for Labs and Medications so far"
+  },
+  "OperationDefinition.base": {
+    "Reference.reference": {
+      "value": "OperationDefinition/Questionnaire-populate"
+    },
+    "reference": "http://hl7.org/fhir//OperationDefinition/Questionnaire-populate"
+  },
+  "OperationDefinition.system": {
+    "value": false
+  },
+  "OperationDefinition.type": [
+    {
+      "value": "Questionnaire"
+    }
+  ],
+  "OperationDefinition.instance": {
+    "value": true
+  },
+  "OperationDefinition.parameter": [
+    {
+      "OperationDefinition.parameter.name": {
+        "value": "subject"
+      },
+      "OperationDefinition.parameter.use": {
+        "value": "in"
+      },
+      "OperationDefinition.parameter.min": {
+        "value": 1
+      },
+      "OperationDefinition.parameter.max": {
+        "value": "1"
+      },
+      "OperationDefinition.parameter.documentation": {
+        "value": "The resource that is to be the *QuestionnaireResponse.subject*. The [[[QuestionnaireResponse]]]      instance will reference the provided subject.  In addition, if the *local* parameter is      set to true, server information about the specified subject will be used to populate the      instance."
+      },
+      "OperationDefinition.parameter.type": {
+        "value": "Reference"
+      }
+    },
+    {
+      "OperationDefinition.parameter.name": {
+        "value": "return"
+      },
+      "OperationDefinition.parameter.use": {
+        "value": "out"
+      },
+      "OperationDefinition.parameter.min": {
+        "value": 1
+      },
+      "OperationDefinition.parameter.max": {
+        "value": "1"
+      },
+      "OperationDefinition.parameter.documentation": {
+        "value": "The partially (or fully)-populated set of answers for the specified Questionnaire"
+      },
+      "OperationDefinition.parameter.type": {
+        "value": "QuestionnaireResponse"
+      }
+    }
+  ]
+}

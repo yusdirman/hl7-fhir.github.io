@@ -1,0 +1,83 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Specimen",
+  "resourceType": "Specimen",
+  "Resource.id": {
+    "value": "spec-uslab-example2"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: spec-uslab-example2</p><p><b>identifier</b>: SID456 (OFFICIAL)</p><p><b>accessionIdentifier</b>: 21041205000001 (OFFICIAL)</p><p><b>type</b>: Urine, First Void <span>(Details : {SNOMED CT code '698276005' = 'First stream urine sample (specimen)', given as 'First stream urine sample'}; {http://ehr.goodhealthclinic.org code 'UFV' = '??', given as 'Urine, First Void'})</span></p><p><b>subject</b>: <a>Todd Lerr</a></p><h3>Collections</h3><table><tr><td>-</td><td><b>Collected[x]</b></td></tr><tr><td>*</td><td>Dec 5, 2014</td></tr></table></div>"
+    }
+  },
+  "Specimen.identifier": [
+    {
+      "Identifier.use": {
+        "value": "official"
+      },
+      "Identifier.system": {
+        "value": "http://ehr.goodhealthclinic.org/identifiers/specimen"
+      },
+      "Identifier.value": {
+        "value": "SID456"
+      }
+    }
+  ],
+  "Specimen.accessionIdentifier": {
+    "Identifier.use": {
+      "value": "official"
+    },
+    "Identifier.system": {
+      "value": "http://lis.acmelabs.org/identifiers/accession"
+    },
+    "Identifier.value": {
+      "value": "21041205000001"
+    }
+  },
+  "Specimen.type": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "value": "698276005"
+        },
+        "Coding.display": {
+          "value": "First stream urine sample"
+        }
+      },
+      {
+        "Coding.system": {
+          "value": "http://ehr.goodhealthclinic.org"
+        },
+        "Coding.code": {
+          "value": "UFV"
+        },
+        "Coding.display": {
+          "value": "Urine, First Void"
+        }
+      }
+    ],
+    "CodeableConcept.text": {
+      "value": "Urine, First Void"
+    },
+    "concept": "http://snomed.info/sct#698276005"
+  },
+  "Specimen.subject": {
+    "Reference.reference": {
+      "value": "Patient/patient-uslab-example1"
+    },
+    "Reference.display": {
+      "value": "Todd Lerr"
+    },
+    "reference": "http://hl7.org/fhir//Patient/patient-uslab-example1"
+  },
+  "Specimen.collection": {
+    "Specimen.collection.collectedDateTime": {
+      "value": "2014-12-05"
+    }
+  }
+}

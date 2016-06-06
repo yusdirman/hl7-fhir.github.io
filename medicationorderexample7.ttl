@@ -1,0 +1,50 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/MedicationOrdermedrx007> a fhir:MedicationOrder;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "medrx007"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p><big>AC followed by Paclitaxel + Trastuzumab Course 2</big></p>\n      <p>Name: Paclitaxel in Dose-dense Paclitaxel (Q14D) + Trastuzumab (Q7D)</p>\n      <p>Course: 2</p>\n      <p>Agent Protocols Options:</p>\n      <p><b>Paclitaxel 175 mg/m^2 IV over 3 hours D1 in cycles 1-4</b></p>\n      <p>Offset: None</p>\n      <p>Cycle length: Q14D x 4 cycles</p>\n    </div>"
+  ];
+  fhir:MedicationOrder.status [ fhir:value "on-hold"];
+  fhir:MedicationOrder.medicationReference [
+     fhir:link <http://hl7.org/fhir/Medication/medicationexample16>;
+     fhir:Reference.reference [ fhir:value "Medication/medicationexample16" ]
+  ];
+  fhir:MedicationOrder.dosageInstruction [
+     fhir:index 0;
+     fhir:MedicationOrder.dosageInstruction.text [ fhir:value "Paclitaxel 175 mg/m^2 IV over 3 hours D1" ];
+     fhir:MedicationOrder.dosageInstruction.route [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept sct:47625008;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "47625008" ];
+         fhir:Coding.display [ fhir:value "Intravenous route" ]
+       ]
+     ];
+     fhir:MedicationOrder.dosageInstruction.rateRatio [
+       fhir:Ratio.numerator [
+         fhir:Quantity.value [ fhir:value "175"^^xsd:decimal ];
+         fhir:Quantity.unit [ fhir:value "mg/m^2" ];
+         fhir:Quantity.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Quantity.code [ fhir:value "258682000" ]
+       ];
+       fhir:Ratio.denominator [
+         fhir:Quantity.value [ fhir:value "3"^^xsd:decimal ];
+         fhir:Quantity.unit [ fhir:value "hours" ];
+         fhir:Quantity.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Quantity.code [ fhir:value "258702006" ]
+       ]
+     ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

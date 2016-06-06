@@ -1,0 +1,83 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Contractpcd-example-notThis> a fhir:Contract;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "pcd-example-notThis"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">The following scenario is based on existing jurisdictional policy and are realized in existing systems in Canada. \n	The default policy is one of implied consent for the provision of care, so these scenarios all deal with withdrawal or withholding consent for that purpose. \n	In other jurisdictions, where an express consent model is used (Opt-In), these would examples would contain the phrase &quot;consent to&quot; rather \n	than &quot;withhold&quot; or &quot;withdraw&quot; consent for.\n    <p>\n	specific to use-case 2. Withhold or withdraw consent for disclosure of a specific record (e.g. Lab Order/Result) \n	</p><p>\n    Patient &quot;P. van de Heuvel&quot; Primary Care Provider, Dr. Philip Primary, has ordered a set of lab test which Adam \n   wishes to keep as private as possible.  At the sample collection facility, he indicates that he would \n   like withhold consent to disclose the order and all results associated with that specific order from \n   all other providers  \n   </p>\n   </div>"
+  ];
+  fhir:Contract.issued [ fhir:value "2015-11-18"^^xsd:date];
+  fhir:Contract.subject [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/Patient/f001>;
+     fhir:Reference.reference [ fhir:value "Patient/f001" ];
+     fhir:Reference.display [ fhir:value "P. van de Heuvel" ]
+  ];
+  fhir:Contract.authority [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/Organization/Infoway>;
+     fhir:Reference.reference [ fhir:value "Organization/Infoway" ];
+     fhir:Reference.display [ fhir:value "Canada Infoway" ]
+  ];
+  fhir:Contract.domain [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/Location/Infoway>;
+     fhir:Reference.reference [ fhir:value "Location/Infoway" ];
+     fhir:Reference.display [ fhir:value "Canada Infoway" ]
+  ];
+  fhir:Contract.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:concept loinc:57016-8;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "57016-8" ]
+     ]
+  ];
+  fhir:Contract.subType [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://www.infoway-inforoute.ca.org/Consent-subtype-codes" ];
+       fhir:Coding.code [ fhir:value "Opt-In" ];
+       fhir:Coding.display [ fhir:value "Default Authorization with exceptions." ]
+     ]
+  ];
+  fhir:Contract.term [
+     fhir:index 0;
+     fhir:Contract.term.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/consent-term-type-codes" ];
+         fhir:Coding.code [ fhir:value "withhold-identified-object-and-related" ];
+         fhir:Coding.display [ fhir:value "Withhold the identified object and any other resources that are related to this object." ]
+       ]
+     ];
+     fhir:Contract.term.topic [
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/Order/f201>;
+       fhir:Reference.reference [ fhir:value "Order/f201" ]
+     ];
+     fhir:Contract.term.text [ fhir:value "Withhold this order and any results or related objects from any provider." ]
+  ];
+  fhir:Contract.friendly [
+     fhir:index 0;
+     fhir:Contract.friendly.contentAttachment [
+       fhir:Attachment.title [ fhir:value "The terms of the consent in friendly consumer speak." ]
+     ]
+  ];
+  fhir:Contract.legal [
+     fhir:index 0;
+     fhir:Contract.legal.contentAttachment [
+       fhir:Attachment.title [ fhir:value "The terms of the consent in lawyer speak." ]
+     ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

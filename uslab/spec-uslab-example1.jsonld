@@ -1,0 +1,113 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Specimen",
+  "resourceType": "Specimen",
+  "Resource.id": {
+    "value": "spec-uslab-example1"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: spec-uslab-example1</p><p><b>identifier</b>: SID123 (OFFICIAL)</p><p><b>accessionIdentifier</b>: 21041205000001 (OFFICIAL)</p><p><b>type</b>: Blood sample <span>(Details : {SNOMED CT code '122555007' = 'Venous blood specimen (specimen)', given as 'Venous blood specimen'}; {http://ehr.goodhealthclinic.org code 'BLD' = '??', given as 'Blood'})</span></p><p><b>subject</b>: <a>Todd Lerr</a></p><h3>Collections</h3><table><tr><td>-</td><td><b>Collected[x]</b></td><td><b>BodySite</b></td></tr><tr><td>*</td><td>Dec 5, 2014</td><td>Drawn from Arm <span>(Details : {SNOMED CT code '53120007' = 'Upper limb structure (body structure)', given as 'Arm'}; {http://ehr.goodhealthclinic.org code 'ARM' = '??', given as 'Arm'})</span></td></tr></table></div>"
+    }
+  },
+  "Specimen.identifier": [
+    {
+      "Identifier.use": {
+        "value": "official"
+      },
+      "Identifier.system": {
+        "value": "http://ehr.goodhealthclinic.org/identifiers/specimen"
+      },
+      "Identifier.value": {
+        "value": "SID123"
+      }
+    }
+  ],
+  "Specimen.accessionIdentifier": {
+    "Identifier.use": {
+      "value": "official"
+    },
+    "Identifier.system": {
+      "value": "http://lis.acmelabs.org/identifiers/accession"
+    },
+    "Identifier.value": {
+      "value": "21041205000001"
+    }
+  },
+  "Specimen.type": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "value": "122555007"
+        },
+        "Coding.display": {
+          "value": "Venous blood specimen"
+        }
+      },
+      {
+        "Coding.system": {
+          "value": "http://ehr.goodhealthclinic.org"
+        },
+        "Coding.code": {
+          "value": "BLD"
+        },
+        "Coding.display": {
+          "value": "Blood"
+        }
+      }
+    ],
+    "CodeableConcept.text": {
+      "value": "Blood sample"
+    },
+    "concept": "http://snomed.info/sct#122555007"
+  },
+  "Specimen.subject": {
+    "Reference.reference": {
+      "value": "Patient/patient-uslab-example1"
+    },
+    "Reference.display": {
+      "value": "Todd Lerr"
+    },
+    "reference": "http://hl7.org/fhir//Patient/patient-uslab-example1"
+  },
+  "Specimen.collection": {
+    "Specimen.collection.collectedDateTime": {
+      "value": "2014-12-05"
+    },
+    "Specimen.collection.bodySite": {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "value": "http://snomed.info/sct"
+          },
+          "Coding.code": {
+            "value": "53120007"
+          },
+          "Coding.display": {
+            "value": "Arm"
+          }
+        },
+        {
+          "Coding.system": {
+            "value": "http://ehr.goodhealthclinic.org"
+          },
+          "Coding.code": {
+            "value": "ARM"
+          },
+          "Coding.display": {
+            "value": "Arm"
+          }
+        }
+      ],
+      "CodeableConcept.text": {
+        "value": "Drawn from Arm"
+      },
+      "concept": "http://snomed.info/sct#53120007"
+    }
+  }
+}

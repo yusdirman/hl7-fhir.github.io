@@ -1,0 +1,135 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/ReferralRequest",
+  "resourceType": "ReferralRequest",
+  "Resource.id": {
+    "value": "example"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Referral to Dr Dave for Beverly weaver to have grommets inserted in her r) ear</div>"
+    }
+  },
+  "ReferralRequest.identifier": [
+    {
+      "Identifier.system": {
+        "value": "http://orionhealth.com/fhir/apps/referralids"
+      },
+      "Identifier.value": {
+        "value": "ret4421"
+      }
+    }
+  ],
+  "ReferralRequest.status": {
+    "value": "active"
+  },
+  "ReferralRequest.category": {
+    "value": "request"
+  },
+  "ReferralRequest.type": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://orionhealth.com/fhir/apps/referraltypes"
+        },
+        "Coding.code": {
+          "value": "rfs"
+        },
+        "Coding.display": {
+          "value": "Referral for service"
+        }
+      }
+    ]
+  },
+  "ReferralRequest.priority": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://orionhealth.com/fhir/apps/prioritycodes"
+        },
+        "Coding.code": {
+          "value": "med"
+        },
+        "Coding.display": {
+          "value": "Medium"
+        }
+      }
+    ]
+  },
+  "ReferralRequest.patient": {
+    "Reference.reference": {
+      "value": "https://fhir.orionhealth.com/blaze/fhir/Patient/77662"
+    },
+    "Reference.display": {
+      "value": "Beverly Weaver"
+    },
+    "reference": "https://fhir.orionhealth.com/blaze/fhir/Patient/77662"
+  },
+  "ReferralRequest.authored": {
+    "value": "2014-02-14"
+  },
+  "ReferralRequest.requester": {
+    "Reference.reference": {
+      "value": "https://fhir.orionhealth.com/blaze/fhir/Practitioner/77272"
+    },
+    "Reference.display": {
+      "value": "Serena Shrink"
+    },
+    "reference": "https://fhir.orionhealth.com/blaze/fhir/Practitioner/77272"
+  },
+  "ReferralRequest.specialty": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://orionhealth.com/fhir/apps/specialties"
+        },
+        "Coding.code": {
+          "value": "ent"
+        },
+        "Coding.display": {
+          "value": "ENT"
+        }
+      }
+    ]
+  },
+  "ReferralRequest.recipient": [
+    {
+      "Reference.reference": {
+        "value": "https://fhir.orionhealth.com/blaze/fhir/Practitioner/76597"
+      },
+      "Reference.display": {
+        "value": "Dr Dave"
+      }
+    }
+  ],
+  "ReferralRequest.reason": {
+    "CodeableConcept.text": {
+      "value": "For consideration of Grommets"
+    }
+  },
+  "ReferralRequest.description": {
+    "value": "In the past 2 years Beverly has had 6 instances of r) sided Otitis media. She is     falling behind her peers at school, and displaying some learning difficulties."
+  },
+  "ReferralRequest.serviceRequested": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "value": "http://snomed.info/sct"
+          },
+          "Coding.code": {
+            "value": "172676009"
+          },
+          "Coding.display": {
+            "value": "Myringotomy and insertion of tympanic ventilation tube"
+          }
+        }
+      ],
+      "CodeableConcept.text": {
+        "value": "Insertion of grommets"
+      }
+    }
+  ]
+}

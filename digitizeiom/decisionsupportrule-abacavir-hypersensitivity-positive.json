@@ -1,0 +1,73 @@
+{
+  "resourceType": "DecisionSupportRule",
+  "id": "decisionsupportrule-abacavir-hypersensitivity-positive",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Abacavir Hypersensitivity Intervention - Positive</div>"
+  },
+  "moduleMetadata": {
+    "identifier": [
+      {
+        "use": "official",
+        "value": "abacavir-hypersensitivity-positive"
+      }
+    ],
+    "version": "1.0.0",
+    "title": "Abacavir Hypersensitivity Positive",
+    "type": "decision-support-rule",
+    "status": "active",
+    "description": "Abacavir hypersensitivity intervention to alert the user that the patient's genotype test results indicate a hypersensitivity to Abacavir.",
+    "publicationDate": "2016-04-01",
+    "topic": [
+      {
+        "text": "Abacavir Hypersensitivity - Positive Finding"
+      }
+    ]
+  },
+  "library": [
+    {
+      "reference": "Library/library-abacavir-hypersensitivity-cds-logic"
+    }
+  ],
+  "trigger": [
+    {
+      "type": "data-added",
+      "eventData": {
+        "type": "MedicationOrder",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueCodeableConcept": [
+              {
+                "coding": [
+                  {
+                    "system": "http://snomed.org/sct",
+                    "code": "387005008"
+                  }
+                ],
+                "text": "Abacavir (substance)"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "condition": "Should Notify User of Patient's Hypersensitivity",
+  "action": [
+    {
+      "title": "Patient Shows Hypersensitivity to Abacavir in Genotype Test Results.",
+      "textEquivalent": "The HLA-B*57:01 allele is present in the Patient's Genotype Test results.",
+      "participantType": [
+        "practitioner"
+      ],
+      "type": "create",
+      "customization": [
+        {
+          "path": "/",
+          "expression": "Hypersensitivity To Abacavir Alert"
+        }
+      ]
+    }
+  ]
+}

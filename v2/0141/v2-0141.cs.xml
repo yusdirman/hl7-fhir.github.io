@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="v2-0141"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/StructureDefinition/codesystem-shareable-definition"/>
+  </meta>
+  <text>
+    <status value="additional"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>Military Rank/Grade</p>
+
+      <table class="grid">
+        <tr>
+          <td>
+            <b>Code</b>
+          </td>
+          <td>
+            <b>Description</b>
+          </td>
+          <td>
+            <b>Nederlands (Dutch)</b>
+          </td>
+          <td>
+            <b>Comment</b>
+          </td>
+          <td>
+            <b>Version</b>
+          </td>
+        </tr>
+        <tr>
+          <td>e1 ... e9
+            <a name="e1.46.46.46e9"> </a>
+          </td>
+          <td>Enlisted</td>
+          <td></td>
+          <td>deprecated</td>
+          <td>added v2.3.1, removed after v2.4</td>
+        </tr>
+        <tr>
+          <td>e1... e9
+            <a name="e1.46.46.46e9"> </a>
+          </td>
+          <td>Enlisted</td>
+          <td></td>
+          <td/>
+          <td>added v2.5</td>
+        </tr>
+        <tr>
+          <td>o1 ... o10
+            <a name="o1.46.46.46o10"> </a>
+          </td>
+          <td>Officers</td>
+          <td>Officieren</td>
+          <td>deprecated</td>
+          <td>added v2.3.1, removed after v2.4</td>
+        </tr>
+        <tr>
+          <td>o1 ... o9
+            <a name="o1.46.46.46o9"> </a>
+          </td>
+          <td>Officers</td>
+          <td></td>
+          <td/>
+          <td>added v2.5</td>
+        </tr>
+        <tr>
+          <td>w1 ... w4
+            <a name="w1.46.46.46w4"> </a>
+          </td>
+          <td>Warrant Officers</td>
+          <td></td>
+          <td/>
+          <td>added v2.3.1</td>
+        </tr>
+      </table>
+
+    </div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/valueset-oid">
+    <valueUri value="urn:oid:2.16.840.1.133883.18.63"/>
+  </extension>
+  <url value="http://hl7.org/fhir/v2/0141"/>
+  <version value="2.8.2"/>
+  <name value="v2 Military Rank/Grade"/>
+  <status value="active"/>
+  <experimental value="true"/>
+  <publisher value="HL7, Inc"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="http://hl7.org"/>
+    </telecom>
+  </contact>
+  <description value="FHIR Value set/code system definition for HL7 v2 table 0141 ( Military Rank/Grade)"/>
+  <caseSensitive value="false"/>
+  <valueSet value="http://hl7.org/fhir/ValueSet/v2-0141"/>
+  <content value="complete"/>
+  <property>
+    <code value="deprecated"/>
+    <uri value="http://hl7.org/fhir/concept-properties#deprecated"/>
+    <description value="The date at which a concept was deprecated. Concepts that are deprecated but not inactive can still be used, but their use is discouraged"/>
+    <type value="dateTime"/>
+  </property>
+  <concept>
+    <code value="E1 ... E9"/>
+    <display value="Enlisted"/>
+    <property>
+      <code value="deprecated"/>
+      <valueDateTime value="2000-11"/>
+    </property>
+    <property>
+      <code value="deprecated"/>
+      <valueBoolean value="true"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="E1... E9"/>
+    <display value="Enlisted"/>
+  </concept>
+  <concept>
+    <code value="O1 ... O10"/>
+    <display value="Officers"/>
+    <designation>
+      <language value="nl"/>
+      <value value="Officieren"/>
+    </designation>
+    <property>
+      <code value="deprecated"/>
+      <valueDateTime value="2000-11"/>
+    </property>
+    <property>
+      <code value="deprecated"/>
+      <valueBoolean value="true"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="O1 ... O9"/>
+    <display value="Officers"/>
+  </concept>
+  <concept>
+    <code value="W1 ... W4"/>
+    <display value="Warrant Officers"/>
+  </concept>
+</CodeSystem>

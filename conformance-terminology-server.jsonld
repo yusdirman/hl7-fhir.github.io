@@ -1,0 +1,397 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Conformance",
+  "resourceType": "Conformance",
+  "Resource.id": {
+    "value": "conformance-terminology-server"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <h2>Terminology Service Conformance Statement</h2>\n      <p>Basic conformance statement for a Terminology Server. A server can support more fucntionality than defined here, but this is the minimum amount</p>\n      <table>\n        <tr>\n          <td>Mode</td>\n          <td>SERVER</td>\n        </tr>\n        <tr>\n          <td>Description</td>\n          <td>RESTful Terminology Server</td>\n        </tr>\n        <tr>\n          <td>Transaction</td>\n          <td/>\n        </tr>\n        <tr>\n          <td>System History</td>\n          <td/>\n        </tr>\n        <tr>\n          <td>System Search</td>\n          <td/>\n        </tr>\n      </table>\n      <table>\n        <tr>\n          <th>\n            <b>Resource Type</b>\n          </th>\n          <th>\n            <b>Profile</b>\n          </th>\n          <th>\n            <b>Read</b>\n          </th>\n          <th>\n            <b>V-Read</b>\n          </th>\n          <th>\n            <b>Search</b>\n          </th>\n          <th>\n            <b>Update</b>\n          </th>\n          <th>\n            <b>Updates</b>\n          </th>\n          <th>\n            <b>Create</b>\n          </th>\n          <th>\n            <b>Delete</b>\n          </th>\n          <th>\n            <b>History</b>\n          </th>\n        </tr>\n        <tr>\n          <td>ValueSet</td>\n          <td>\n            <a href=\"StructureDefinition/ValueSet\">StructureDefinition/ValueSet</a>\n          </td>\n          <td>y</td>\n          <td/>\n          <td>y</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n        <tr>\n          <td>ConceptMap</td>\n          <td>\n            <a href=\"StructureDefinition/ConceptMap\">StructureDefinition/ConceptMap</a>\n          </td>\n          <td>y</td>\n          <td/>\n          <td>y</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n      </table>\n    </div>"
+    }
+  },
+  "DomainResource.extension": [
+    {
+      "Extension.url": {
+        "value": "http://hl7.org/fhir/StructureDefinition/conformance-supported-system"
+      },
+      "Extension.valueUri": {
+        "value": "http://loinc.org"
+      }
+    }
+  ],
+  "Conformance.url": {
+    "value": "http://hl7.org/fhir/terminology-server"
+  },
+  "Conformance.name": {
+    "value": "Terminology Service Conformance Statement"
+  },
+  "Conformance.status": {
+    "value": "draft"
+  },
+  "Conformance.date": {
+    "value": "2015-07-05"
+  },
+  "Conformance.publisher": {
+    "value": "HL7, Inc"
+  },
+  "Conformance.contact": [
+    {
+      "Conformance.contact.name": {
+        "value": "FHIR Project"
+      },
+      "Conformance.contact.telecom": [
+        {
+          "ContactPoint.system": {
+            "value": "other"
+          },
+          "ContactPoint.value": {
+            "value": "http://hl7.org/fhir"
+          }
+        }
+      ]
+    }
+  ],
+  "Conformance.description": {
+    "value": "Basic conformance statement for a Terminology Server. A server can support more fucntionality than defined here, but this is the minimum amount"
+  },
+  "Conformance.kind": {
+    "value": "capability"
+  },
+  "Conformance.software": {
+    "Conformance.software.name": {
+      "value": "ACME Terminology Server"
+    }
+  },
+  "Conformance.fhirVersion": {
+    "value": "1.4.0"
+  },
+  "Conformance.acceptUnknown": {
+    "value": "both"
+  },
+  "Conformance.format": [
+    {
+      "value": "json"
+    },
+    {
+      "value": "xml"
+    }
+  ],
+  "Conformance.rest": [
+    {
+      "Conformance.rest.mode": {
+        "value": "server"
+      },
+      "Conformance.rest.documentation": {
+        "value": "RESTful Terminology Server"
+      },
+      "Conformance.rest.security": {
+        "Conformance.rest.security.cors": {
+          "value": true
+        },
+        "Conformance.rest.security.service": [
+          {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://hl7.org/fhir/restful-security-service"
+                },
+                "Coding.code": {
+                  "value": "Certificates"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "Conformance.rest.resource": [
+        {
+          "Conformance.rest.resource.type": {
+            "value": "ValueSet"
+          },
+          "Conformance.rest.resource.profile": {
+            "Reference.reference": {
+              "value": "StructureDefinition/ValueSet"
+            },
+            "reference": "http://hl7.org/fhir//StructureDefinition/ValueSet"
+          },
+          "Conformance.rest.resource.interaction": [
+            {
+              "Conformance.rest.resource.interaction.code": {
+                "value": "read"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Read allows clients to get the logical definitions of the value sets"
+              }
+            },
+            {
+              "Conformance.rest.resource.interaction.code": {
+                "value": "search-type"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Search allows clients to find value sets on the server"
+              }
+            }
+          ],
+          "Conformance.rest.resource.searchParam": [
+            {
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "code"
+              },
+              "Conformance.rest.resource.searchParam.definition": {
+                "value": "http://hl7.org/fhir/SearchParameter/ValueSet-code"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "token"
+              }
+            },
+            {
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "date"
+              },
+              "Conformance.rest.resource.searchParam.definition": {
+                "value": "http://hl7.org/fhir/SearchParameter/ValueSet-date"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "date"
+              }
+            },
+            {
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "name"
+              },
+              "Conformance.rest.resource.searchParam.definition": {
+                "value": "http://hl7.org/fhir/SearchParameter/ValueSet-name"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "string"
+              }
+            },
+            {
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "reference"
+              },
+              "Conformance.rest.resource.searchParam.definition": {
+                "value": "http://hl7.org/fhir/SearchParameter/ValueSet-reference"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "token"
+              }
+            },
+            {
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "status"
+              },
+              "Conformance.rest.resource.searchParam.definition": {
+                "value": "http://hl7.org/fhir/SearchParameter/ValueSet-status"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "token"
+              }
+            },
+            {
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "system"
+              },
+              "Conformance.rest.resource.searchParam.definition": {
+                "value": "http://hl7.org/fhir/SearchParameter/ValueSet-system"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "uri"
+              }
+            },
+            {
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "url"
+              },
+              "Conformance.rest.resource.searchParam.definition": {
+                "value": "http://hl7.org/fhir/SearchParameter/ValueSet-url"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "uri"
+              }
+            },
+            {
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "version"
+              },
+              "Conformance.rest.resource.searchParam.definition": {
+                "value": "http://hl7.org/fhir/SearchParameter/ValueSet-version"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "token"
+              }
+            }
+          ]
+        },
+        {
+          "Conformance.rest.resource.type": {
+            "value": "ConceptMap"
+          },
+          "Conformance.rest.resource.profile": {
+            "Reference.reference": {
+              "value": "StructureDefinition/ConceptMap"
+            },
+            "reference": "http://hl7.org/fhir//StructureDefinition/ConceptMap"
+          },
+          "Conformance.rest.resource.interaction": [
+            {
+              "Conformance.rest.resource.interaction.code": {
+                "value": "read"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Read allows clients to get the logical definitions of the concept maps"
+              }
+            },
+            {
+              "Conformance.rest.resource.interaction.code": {
+                "value": "search-type"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Search allows clients to find concept maps on the server"
+              }
+            }
+          ],
+          "Conformance.rest.resource.searchParam": [
+            {
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "date"
+              },
+              "Conformance.rest.resource.searchParam.definition": {
+                "value": "http://hl7.org/fhir/SearchParameter/ConceptMap-date"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "date"
+              }
+            },
+            {
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "name"
+              },
+              "Conformance.rest.resource.searchParam.definition": {
+                "value": "http://hl7.org/fhir/SearchParameter/ConceptMap-name"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "string"
+              }
+            },
+            {
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "status"
+              },
+              "Conformance.rest.resource.searchParam.definition": {
+                "value": "http://hl7.org/fhir/SearchParameter/ConceptMap-status"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "token"
+              }
+            },
+            {
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "source"
+              },
+              "Conformance.rest.resource.searchParam.definition": {
+                "value": "http://hl7.org/fhir/SearchParameter/ConceptMap-source"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "uri"
+              }
+            },
+            {
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "target"
+              },
+              "Conformance.rest.resource.searchParam.definition": {
+                "value": "http://hl7.org/fhir/SearchParameter/ConceptMap-target"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "uri"
+              }
+            },
+            {
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "url"
+              },
+              "Conformance.rest.resource.searchParam.definition": {
+                "value": "http://hl7.org/fhir/SearchParameter/ConceptMap-url"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "uri"
+              }
+            },
+            {
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "version"
+              },
+              "Conformance.rest.resource.searchParam.definition": {
+                "value": "http://hl7.org/fhir/SearchParameter/ConceptMap-version"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "token"
+              }
+            }
+          ]
+        }
+      ],
+      "Conformance.rest.operation": [
+        {
+          "Conformance.rest.operation.name": {
+            "value": "expand"
+          },
+          "Conformance.rest.operation.definition": {
+            "Reference.reference": {
+              "value": "OperationDefinition/ValueSet-expand"
+            },
+            "reference": "http://hl7.org/fhir//OperationDefinition/ValueSet-expand"
+          }
+        },
+        {
+          "Conformance.rest.operation.name": {
+            "value": "lookup"
+          },
+          "Conformance.rest.operation.definition": {
+            "Reference.reference": {
+              "value": "OperationDefinition/CodeSystem-lookup"
+            },
+            "reference": "http://hl7.org/fhir//OperationDefinition/CodeSystem-lookup"
+          }
+        },
+        {
+          "Conformance.rest.operation.name": {
+            "value": "validate-code"
+          },
+          "Conformance.rest.operation.definition": {
+            "Reference.reference": {
+              "value": "OperationDefinition/ValueSet-validate-code"
+            },
+            "reference": "http://hl7.org/fhir//OperationDefinition/ValueSet-validate-code"
+          }
+        },
+        {
+          "Conformance.rest.operation.name": {
+            "value": "translate"
+          },
+          "Conformance.rest.operation.definition": {
+            "Reference.reference": {
+              "value": "OperationDefinition/ConceptMap-translate"
+            },
+            "reference": "http://hl7.org/fhir//OperationDefinition/ConceptMap-translate"
+          }
+        },
+        {
+          "Conformance.rest.operation.name": {
+            "value": "closure"
+          },
+          "Conformance.rest.operation.definition": {
+            "Reference.reference": {
+              "value": "OperationDefinition/ConceptMap-closure"
+            },
+            "reference": "http://hl7.org/fhir//OperationDefinition/ConceptMap-closure"
+          }
+        }
+      ]
+    }
+  ]
+}

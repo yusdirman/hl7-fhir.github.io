@@ -1,0 +1,337 @@
+{
+  "resourceType": "DataElement",
+  "id": "dataelement-sdc-profile-example-de",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">TODO</div>"
+  },
+  "contained": [
+    {
+      "resourceType": "ValueSet",
+      "id": "vm-valueset",
+      "identifier": {
+        "system": "http://r.details.loinc.org/AnswerList",
+        "value": "LL2827-5"
+      },
+      "name": "AHRQ_M/F/UNK",
+      "status": "active",
+      "description": "AHRQ Common Formats answer list for Patient and Neonate Gender",
+      "compose": {
+        "include": [
+          {
+            "system": "http://loinc.org",
+            "concept": [
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                    "valueInteger": 1
+                  }
+                ],
+                "code": "a",
+                "display": "Male",
+                "designation": [
+                  {
+                    "use": {
+                      "display": "Answer ID"
+                    },
+                    "value": "LA2-8"
+                  }
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                    "valueInteger": 2
+                  }
+                ],
+                "code": "b",
+                "display": "Female",
+                "designation": [
+                  {
+                    "use": {
+                      "display": "Answer ID"
+                    },
+                    "value": "LA3-6"
+                  }
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                    "valueInteger": 3
+                  }
+                ],
+                "code": "c",
+                "display": "Unknown",
+                "designation": [
+                  {
+                    "use": {
+                      "display": "Answer ID"
+                    },
+                    "value": "LA4489-6"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resourceType": "ValueSet",
+      "id": "pv-valueset",
+      "status": "draft",
+      "compose": {
+        "include": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-systemName",
+                "valueString": "HL7 AdministrativeGender"
+              }
+            ],
+            "system": "http://hl7.org/fhir/v3/AdministrativeGender",
+            "version": "1",
+            "concept": [
+              {
+                "code": "M",
+                "display": "Male"
+              },
+              {
+                "code": "F",
+                "display": "Female"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-systemName",
+                "valueString": "HL7 NullFlavor"
+              }
+            ],
+            "system": "http://hl7.org/fhir/v3/NullFlavor",
+            "concept": [
+              {
+                "code": "UNK",
+                "display": "Unknown"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resourceType": "ConceptMap",
+      "id": "pv-conceptmap",
+      "status": "draft",
+      "sourceUri": "#vm-valueset",
+      "targetUri": "#pv-valueset",
+      "element": [
+        {
+          "system": "http://loinc.org",
+          "code": "a",
+          "target": [
+            {
+              "system": "http://hl7.org/fhir/v3/AdministrativeGender",
+              "code": "M",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "system": "http://loinc.org",
+          "code": "b",
+          "target": [
+            {
+              "system": "http://hl7.org/fhir/v3/AdministrativeGender",
+              "code": "F",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "system": "http://loinc.org",
+          "code": "c",
+          "target": [
+            {
+              "system": "http://hl7.org/fhir/v3/Unknown",
+              "code": "UNK",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "resourceType": "Organization",
+      "id": "sub-org",
+      "name": "Agency for Healthcare Research and Quality (AHRQ) Center for Patient Safety and Quality",
+      "address": [
+        {
+          "text": "540 Gaither Rd Rockvill MD 20850"
+        }
+      ],
+      "contact": [
+        {
+          "name": {
+            "text": "Bill Munier"
+          },
+          "telecom": [
+            {
+              "system": "email",
+              "value": "william.munier@ahrq.hhs.gov"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/11179-de-document-reference",
+      "valueReference": {
+        "reference": "#doc"
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/11179-de-effective-period",
+      "valuePeriod": {
+        "start": "2010-03-31"
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/11179-de-submitter-org",
+      "valueReference": {
+        "reference": "#sub-org"
+      }
+    }
+  ],
+  "identifier": [
+    {
+      "system": "http://nlm.nih.gov/some_other_text/data_element_identifier",
+      "value": "DE42AHRQ"
+    }
+  ],
+  "version": "1.2",
+  "status": "draft",
+  "publisher": "Agency for Healthcare Research and Quality (AHRQ) Center for Patient Safety and Quality",
+  "date": "2010-03-31",
+  "name": "Patient Gender",
+  "contact": [
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/11179-de-contact-address",
+          "valueAddress": {
+            "text": "540 Gaither Rd Rockville MD 20850"
+          }
+        }
+      ],
+      "name": "Bill Munier",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "william.munier@ahrq.hhs.gov"
+        }
+      ]
+    }
+  ],
+  "useContext": [
+    {
+      "coding": [
+        {
+          "code": "Healthcare Event Reporting Form",
+          "display": "Patient safety event report - hospital: healthcare event reporting form"
+        }
+      ]
+    }
+  ],
+  "mapping": [
+    {
+      "identity": "objclass",
+      "uri": "http://healthit.gov/sdc/objectclassproperty",
+      "name": "Structured Data Capture ObjectClass/Property"
+    }
+  ],
+  "element": [
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-question",
+          "valueString": "Patient's Gender"
+        },
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-question",
+          "valueString": "Patient-Gender,CD"
+        }
+      ],
+      "path": "gender",
+      "code": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/11179-de-is-data-element-concept",
+              "valueBoolean": true
+            }
+          ],
+          "system": "http://loinc.org",
+          "code": "74698-2"
+        }
+      ],
+      "definition": "The patient's documented gender on arrival at the hospital.",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "binding": {
+        "strength": "required",
+        "valueSetReference": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/11179-permitted-value-valueset",
+              "valueReference": {
+                "reference": "#pv-valueset"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/11179-permitted-value-valueset",
+              "valueReference": {
+                "reference": "#pv-conceptmap"
+              }
+            }
+          ],
+          "reference": "#vm-valueset"
+        }
+      },
+      "mapping": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/11179-objectClass",
+              "valueCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "116154003",
+                "display": "Patient"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/11179-objectClassProperty",
+              "valueCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "263495000",
+                "display": "Gender"
+              }
+            }
+          ],
+          "identity": "objclass",
+          "map": "http://snomed.info/sct#116154003 | http://snomed.info/sct | 263495000"
+        }
+      ]
+    }
+  ]
+}

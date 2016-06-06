@@ -1,0 +1,170 @@
+{
+  "resourceType": "Conformance",
+  "id": "conformance-sdc-form-receiver",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t\t\t\n      <h2>SDC Form Receiver</h2>\n\t\t\t\n      <p>(Requirements Definition)</p>\n\t\t\t\n      <p>Published: 2014-07-06 (draft)</p>\n\t\t\t\n      <p>Published by: \n        <b>U.S. Office of the National Coordinator (ONC)</b>\n\t\t\t\n      </p>\n\t\t\t\n      <p>This profile defines the expected capabilities of the \n        <i>SDC Form Receiver</i> role when conforming to the S&amp;I Framework's \n        <a href=\"sdc.html\">Structured Data Capture FHIR implementation guide</a>.  This role is responsible for storing and returning completed and partially-completed forms.\n      </p>\n\t\t\t\n      <h2>General</h2>\n\t\t\t\n      <table>\n\t\t\t\t\n        <tbody>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>FHIR Version:</th>\n\t\t\t\t\t\t\n            <td>1.4.0</td>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>Supported formats:</th>\n\t\t\t\t\t\t\n            <td>xml, json</td>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\n        </tbody>\n\t\t\t\n      </table>\n\t\t\t\n      <h2>REST  behavior</h2>\n\t\t\t\n      <p>\n\t\t\t\t\n        <b>Security:</b>\n\t\t\t\n      </p>\n\t\t\t\n      <p>Implementations must meet the general security requirements documented in the \n        <a href=\"sdc-security.html\">SDC implementation guide</a>.\n      </p>\n\t\t\t\n      <h3>Resource summary</h3>\n\t\t\t\n      <table class=\"grid\">\n\t\t\t\t\n        <thead>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>Resource</th>\n\t\t\t\t\t\t\n            <th>Search</th>\n\t\t\t\t\t\t\n            <th>Read</th>\n\t\t\t\t\t\t\n            <th>Read Version</th>\n\t\t\t\t\t\t\n            <th>Instance History</th>\n\t\t\t\t\t\t\n            <th>Resource History</th>\n\t\t\t\t\t\t\n            <th>Create</th>\n\t\t\t\t\t\t\n            <th>Update</th>\n\t\t\t\t\t\t\n            <th>Delete</th>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\n        </thead>\n\t\t\t\t\n        <tbody>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>QuestionnaireResponse (\n              <a href=\"http://hl7.org/fhir/StructureDefinition/sdc-element\">Profile</a>)\n            </th>\n\t\t\t\t\t\t\n            <td>\n\t\t\t\t\t\t\t\n              <a href=\"#QuestionnaireResponse-search-type\" title=\"Allows a user to search for existing completed or partially-completed forms.  Generally used to find partially-completed forms for update.\">SHALL</a>\n\t\t\t\t\t\t\n            </td>\n\t\t\t\t\t\t\n            <td/>\n\t\t\t\t\t\t\n            <td/>\n\t\t\t\t\t\t\n            <td>\n\t\t\t\t\t\t\t\n              <a href=\"#QuestionnaireResponse-history-instance\" title=\"Allows review of prior versions of an answer set - allows reversion to previously recorded versions\">SHALL</a>\n\t\t\t\t\t\t\n            </td>\n\t\t\t\t\t\t\n            <td/>\n\t\t\t\t\t\t\n            <td>\n\t\t\t\t\t\t\t\n              <a href=\"#QuestionnaireResponse-create\" title=\"Allows recording a completed or partially-completed form\">SHALL</a>\n\t\t\t\t\t\t\n            </td>\n\t\t\t\t\t\t\n            <td>\n\t\t\t\t\t\t\t\n              <a href=\"#QuestionnaireResponse-update\" title=\"Allows updating an existing completed or partially-completed form.  (Systems may place rules on who can update forms and under what circumstances.)\">SHALL</a>\n\t\t\t\t\t\t\n            </td>\n\t\t\t\t\t\t\n            <td>\n\t\t\t\t\t\t\t\n              <a href=\"#QuestionnaireResponse-delete\" title=\"Allows removal of a completed form from a repository.  Note that the removal may be logical rather than physical.  Some systems may have rules for who can remove a completed form and under what circumstances.\">SHALL</a>\n\t\t\t\t\t\t\n            </td>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\n        </tbody>\n\t\t\t\n      </table>\n\t\t\t\n      <br/>\n\t\t\t\n      <br/>\n\t\t\t\n      <h3>\n\t\t\t\t\n        <a href=\"../questionnaireresponse.html\">QuestionnaireResponse</a>\n\t\t\t\n      </h3>\n\t\t\t\n      <h4>Interactions</h4>\n\t\t\t\n      <table class=\"list\">\n\t\t\t\t\n        <thead>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>Name</th>\n\t\t\t\t\t\t\n            <th>Conformance</th>\n\t\t\t\t\t\t\n            <th>Description</th>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\n        </thead>\n\t\t\t\t\n        <tbody>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>\n\t\t\t\t\t\t\t\n              <a name=\"QuestionnaireResponse-search-type\"> </a>\n\t\t\t\t\t\t\t\n              <span>search-type</span>\n\t\t\t\t\t\t\n            </th>\n\t\t\t\t\t\t\n            <td>SHALL</td>\n\t\t\t\t\t\t\n            <td>\n\t\t\t\t\t\t\t\n              <p>Allows a user to search for existing completed or partially-completed forms.  Generally used to find partially-completed forms for update.</p>\n\t\t\t\t\t\t\n            </td>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>\n\t\t\t\t\t\t\t\n              <a name=\"QuestionnaireResponse-create\"> </a>\n\t\t\t\t\t\t\t\n              <span>create</span>\n\t\t\t\t\t\t\n            </th>\n\t\t\t\t\t\t\n            <td>SHALL</td>\n\t\t\t\t\t\t\n            <td>\n\t\t\t\t\t\t\t\n              <p>Allows recording a completed or partially-completed form</p>\n\t\t\t\t\t\t\n            </td>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>\n\t\t\t\t\t\t\t\n              <a name=\"QuestionnaireResponse-update\"> </a>\n\t\t\t\t\t\t\t\n              <span>update</span>\n\t\t\t\t\t\t\n            </th>\n\t\t\t\t\t\t\n            <td>SHALL</td>\n\t\t\t\t\t\t\n            <td>\n\t\t\t\t\t\t\t\n              <p>Allows updating an existing completed or partially-completed form.  (Systems may place rules on who can update forms and under what circumstances.)</p>\n\t\t\t\t\t\t\n            </td>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>\n\t\t\t\t\t\t\t\n              <a name=\"QuestionnaireResponse-delete\"> </a>\n\t\t\t\t\t\t\t\n              <span>delete</span>\n\t\t\t\t\t\t\n            </th>\n\t\t\t\t\t\t\n            <td>SHALL</td>\n\t\t\t\t\t\t\n            <td>\n\t\t\t\t\t\t\t\n              <p>Allows removal of a completed form from a repository.  Note that the removal may be logical rather than physical.  Some systems may have rules for who can remove a completed form and under what circumstances.</p>\n\t\t\t\t\t\t\n            </td>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>\n\t\t\t\t\t\t\t\n              <a name=\"QuestionnaireResponse-history-instance\"> </a>\n\t\t\t\t\t\t\t\n              <span>history-instance</span>\n\t\t\t\t\t\t\n            </th>\n\t\t\t\t\t\t\n            <td>SHALL</td>\n\t\t\t\t\t\t\n            <td>\n\t\t\t\t\t\t\t\n              <p>Allows review of prior versions of an answer set - allows reversion to previously recorded versions</p>\n\t\t\t\t\t\t\n            </td>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>\n\t\t\t\t\t\t\t\n              <a name=\"QuestionnaireResponse-validate\"> </a>\n\t\t\t\t\t\t\t\n              <span>validate</span>\n\t\t\t\t\t\t\n            </th>\n\t\t\t\t\t\t\n            <td>SHALL</td>\n\t\t\t\t\t\t\n            <td>\n\t\t\t\t\t\t\t\n              <p>Allows checking an answer set for validity against submission rules without persisting any data</p>\n\t\t\t\t\t\t\n            </td>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\n        </tbody>\n\t\t\t\n      </table>\n\t\t\t\n      <h4>Search</h4>\n\t\t\t\n      <p>Supported Includes: QuestionnaireResponse.questionnaire Questionnaire.group.question.options</p>\n\t\t\t\n      <table class=\"list\">\n\t\t\t\t\n        <thead>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>Parameter</th>\n\t\t\t\t\t\t\n            <th>Conformance</th>\n\t\t\t\t\t\t\n            <th>Type</th>\n\t\t\t\t\t\t\n            <th>Definition &amp; Chaining</th>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\n        </thead>\n\t\t\t\t\n        <tbody>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>author</th>\n\t\t\t\t\t\t\n            <td>SHALL</td>\n\t\t\t\t\t\t\n            <td>token</td>\n\t\t\t\t\t\t\n            <td/>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>authored</th>\n\t\t\t\t\t\t\n            <td>SHALL</td>\n\t\t\t\t\t\t\n            <td>date</td>\n\t\t\t\t\t\t\n            <td/>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>questionnaire</th>\n\t\t\t\t\t\t\n            <td>SHALL</td>\n\t\t\t\t\t\t\n            <td>token</td>\n\t\t\t\t\t\t\n            <td/>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>status</th>\n\t\t\t\t\t\t\n            <td>SHALL</td>\n\t\t\t\t\t\t\n            <td>token</td>\n\t\t\t\t\t\t\n            <td/>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>subject</th>\n\t\t\t\t\t\t\n            <td>SHALL</td>\n\t\t\t\t\t\t\n            <td>token</td>\n\t\t\t\t\t\t\n            <td/>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\t\n          <tr>\n\t\t\t\t\t\t\n            <th>encounter</th>\n\t\t\t\t\t\t\n            <td>SHOULD</td>\n\t\t\t\t\t\t\n            <td>token</td>\n\t\t\t\t\t\t\n            <td/>\n\t\t\t\t\t\n          </tr>\n\t\t\t\t\n        </tbody>\n\t\t\t\n      </table>\n\t\t\n    </div>"
+  },
+  "name": "SDC Form Receiver",
+  "status": "draft",
+  "date": "2014-07-06",
+  "publisher": "U.S. Office of the National Coordinator (ONC)",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "other",
+          "value": "http://wiki.siframework.org/Structured+Data+Capture+Initiative"
+        }
+      ]
+    }
+  ],
+  "description": "This profile defines the expected capabilities of the ''SDC Form Receiver'' role when conforming to the S&I Framework's [[sdc|Structured Data Capture FHIR implementation guide]].  This role is responsible for storing and returning completed and partially-completed forms.",
+  "kind": "requirements",
+  "fhirVersion": "1.4.0",
+  "acceptUnknown": "extensions",
+  "format": [
+    "xml",
+    "json"
+  ],
+  "rest": [
+    {
+      "mode": "server",
+      "security": {
+        "description": "Implementations must meet the general security requirements documented in the [[sdc-security|SDC implementation guide]]."
+      },
+      "resource": [
+        {
+          "type": "QuestionnaireResponse",
+          "profile": {
+            "reference": "http://hl7.org/fhir/StructureDefinition/sdc-element"
+          },
+          "interaction": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/conformance-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "code": "search-type",
+              "documentation": "Allows a user to search for existing completed or partially-completed forms.  Generally used to find partially-completed forms for update."
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/conformance-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "code": "create",
+              "documentation": "Allows recording a completed or partially-completed form"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/conformance-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "code": "update",
+              "documentation": "Allows updating an existing completed or partially-completed form.  (Systems may place rules on who can update forms and under what circumstances.)"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/conformance-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "code": "delete",
+              "documentation": "Allows removal of a completed form from a repository.  Note that the removal may be logical rather than physical.  Some systems may have rules for who can remove a completed form and under what circumstances."
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/conformance-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "code": "history-instance",
+              "documentation": "Allows review of prior versions of an answer set - allows reversion to previously recorded versions"
+            }
+          ],
+          "searchInclude": [
+            "QuestionnaireResponse.questionnaire",
+            "Questionnaire.group.question.options"
+          ],
+          "searchParam": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/conformance-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "author",
+              "definition": "http://hl7.org/fhir/SearchParameter/questionnaireresponse#author",
+              "type": "token"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/conformance-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "authored",
+              "definition": "http://hl7.org/fhir/SearchParameter/questionnaireresponse#authored",
+              "type": "date"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/conformance-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "questionnaire",
+              "definition": "http://hl7.org/fhir/SearchParameter/questionnaireresponse#questionnaire",
+              "type": "token"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/conformance-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "status",
+              "definition": "http://hl7.org/fhir/SearchParameter/questionnaireresponse#status",
+              "type": "token"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/conformance-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "subject",
+              "definition": "http://hl7.org/fhir/SearchParameter/questionnaireresponse#subject",
+              "type": "token"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/conformance-expectation",
+                  "valueCode": "SHOULD"
+                }
+              ],
+              "name": "encounter",
+              "definition": "http://hl7.org/fhir/SearchParameter/questionnaireresponse#encounter",
+              "type": "token"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

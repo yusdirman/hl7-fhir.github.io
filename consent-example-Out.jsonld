@@ -1,0 +1,70 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Consent",
+  "resourceType": "Consent",
+  "Resource.id": {
+    "value": "consent-example-Out"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">The following scenario is based on existing jurisdictional policy and are realized in existing systems in Canada. \n\tThe default policy is one of implied consent for the provision of care, so these scenarios all deal with withdrawal or withholding consent for that purpose. \n\tIn other jurisdictions, where an express consent model is used (Opt-In), these would examples would contain the phrase &quot;consent to&quot; rather \n\tthan &quot;withhold&quot; or &quot;withdraw&quot; consent for.\n    <p>\n\tspecific to use-case 0) Withhold Authorization for Treatment\n\t</p><p>\n    Patient &quot;P. van de Heuvel&quot; wishes to have no data at the Good Health Psychiatric Hospital \n   available for normal treatment use.\n   </p>\n   </div>"
+    }
+  },
+  "Consent.status": {
+    "value": "active"
+  },
+  "Consent.type": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/consenttypecodes"
+        },
+        "Coding.code": {
+          "value": "Opt-Out"
+        },
+        "Coding.display": {
+          "value": "Authorization refused with explicit exceptions."
+        }
+      }
+    ]
+  },
+  "Consent.issued": {
+    "value": "2016-05-11"
+  },
+  "Consent.patient": {
+    "Reference.reference": {
+      "value": "Patient/f001"
+    },
+    "Reference.display": {
+      "value": "P. van de Heuvel"
+    },
+    "reference": "http://hl7.org/fhir//Patient/f001"
+  },
+  "Consent.authority": [
+    {
+      "Reference.reference": {
+        "value": "Organization/Infoway"
+      },
+      "Reference.display": {
+        "value": "Canada Infoway"
+      }
+    }
+  ],
+  "Consent.domain": [
+    {
+      "Reference.reference": {
+        "value": "Location/Infoway"
+      },
+      "Reference.display": {
+        "value": "Canada Infoway"
+      }
+    }
+  ],
+  "Consent.contentAttachment": {
+    "Attachment.title": {
+      "value": "The terms of the consent in lawyer speak."
+    }
+  }
+}

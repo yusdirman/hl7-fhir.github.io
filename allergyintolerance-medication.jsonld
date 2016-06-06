@@ -1,0 +1,75 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/AllergyIntolerance",
+  "resourceType": "AllergyIntolerance",
+  "Resource.id": {
+    "value": "medication"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: medication</p><p><b>status</b>: unconfirmed</p><p><b>category</b>: medication</p><p><b>criticality</b>: high</p><p><b>substance</b>: ALLERGENIC EXTRACT, PENICILLIN <span>(Details : {RxNorm code '314422' = '??', given as 'ALLERGENIC EXTRACT, PENICILLIN'})</span></p><p><b>patient</b>: <a>Patient/example</a></p><p><b>recordedDate</b>: Mar 1, 2010</p><p><b>recorder</b>: <a>Practitioner/13</a></p><h3>Reactions</h3><table><tr><td>-</td><td><b>Manifestation</b></td></tr><tr><td>*</td><td>Hives <span>(Details : {SNOMED CT code '247472004' = 'Weal (disorder)', given as 'Hives'})</span></td></tr></table></div>"
+    }
+  },
+  "AllergyIntolerance.status": {
+    "value": "unconfirmed"
+  },
+  "AllergyIntolerance.category": {
+    "value": "medication"
+  },
+  "AllergyIntolerance.criticality": {
+    "value": "high"
+  },
+  "AllergyIntolerance.substance": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://www.nlm.nih.gov/research/umls/rxnorm"
+        },
+        "Coding.code": {
+          "value": "314422"
+        },
+        "Coding.display": {
+          "value": "ALLERGENIC EXTRACT, PENICILLIN"
+        }
+      }
+    ]
+  },
+  "AllergyIntolerance.patient": {
+    "Reference.reference": {
+      "value": "Patient/example"
+    },
+    "reference": "http://hl7.org/fhir//Patient/example"
+  },
+  "AllergyIntolerance.recordedDate": {
+    "value": "2010-03-01"
+  },
+  "AllergyIntolerance.recorder": {
+    "Reference.reference": {
+      "value": "Practitioner/13"
+    },
+    "reference": "http://hl7.org/fhir//Practitioner/13"
+  },
+  "AllergyIntolerance.reaction": [
+    {
+      "AllergyIntolerance.reaction.manifestation": [
+        {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "value": "http://snomed.info/sct"
+              },
+              "Coding.code": {
+                "value": "247472004"
+              },
+              "Coding.display": {
+                "value": "Hives"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

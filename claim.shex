@@ -1,0 +1,774 @@
+﻿PREFIX fhir: <http://hl7.org/fhir/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+BASE <http://hl7.org/fhir/shape/>
+
+start=<Claim>
+
+<Claim> CLOSED {	a [fhir:Claim];
+	fhir:nodeRole [fhir:treeRoot];
+	fhir:Resource.id @<id>?;
+	fhir:Resource.meta @<Meta>?;
+	fhir:Resource.implicitRules @<uri>?;
+	fhir:Resource.language @<code>?;
+	fhir:DomainResource.text @<Narrative>?;
+	fhir:DomainResource.contained @<Resource>*;
+	fhir:DomainResource.extension @<Extension>*;
+	fhir:DomainResource.modifierExtension @<Extension>*;
+	fhir:Claim.type @<code>;
+	fhir:Claim.subType @<Coding>*;
+	fhir:Claim.identifier @<Identifier>*;
+	fhir:Claim.ruleset @<Coding>?;
+	fhir:Claim.originalRuleset @<Coding>?;
+	fhir:Claim.created @<dateTime>?;
+	fhir:Claim.billablePeriod @<Period>?;
+	(	fhir:Claim.targetIdentifier @<Identifier> |
+		fhir:Claim.targetReference @<OrganizationReference>
+	)?;
+	(	fhir:Claim.providerIdentifier @<Identifier> |
+		fhir:Claim.providerReference @<PractitionerReference>
+	)?;
+	(	fhir:Claim.organizationIdentifier @<Identifier> |
+		fhir:Claim.organizationReference @<OrganizationReference>
+	)?;
+	fhir:Claim.use @<code>?;
+	fhir:Claim.priority @<Coding>?;
+	fhir:Claim.fundsReserve @<Coding>?;
+	(	fhir:Claim.entererIdentifier @<Identifier> |
+		fhir:Claim.entererReference @<PractitionerReference>
+	)?;
+	(	fhir:Claim.facilityIdentifier @<Identifier> |
+		fhir:Claim.facilityReference @<LocationReference>
+	)?;
+	fhir:Claim.related @<Claim.related>*;
+	(	fhir:Claim.prescriptionIdentifier @<Identifier> |
+		fhir:Claim.prescriptionReference @<MedicationOrderReference> |
+		fhir:Claim.prescriptionReference @<VisionPrescriptionReference>
+	)?;
+	(	fhir:Claim.originalPrescriptionIdentifier @<Identifier> |
+		fhir:Claim.originalPrescriptionReference @<MedicationOrderReference>
+	)?;
+	fhir:Claim.payee @<Claim.payee>?;
+	(	fhir:Claim.referralIdentifier @<Identifier> |
+		fhir:Claim.referralReference @<ReferralRequestReference>
+	)?;
+	fhir:Claim.information @<Claim.information>*;
+	fhir:Claim.diagnosis @<Claim.diagnosis>*;
+	fhir:Claim.procedure @<Claim.procedure>*;
+	(	fhir:Claim.patientIdentifier @<Identifier> |
+		fhir:Claim.patientReference @<PatientReference>
+	);
+	fhir:Claim.coverage @<Claim.coverage>*;
+	fhir:Claim.accident @<Claim.accident>?;
+	fhir:Claim.item @<Claim.item>*;
+	fhir:Claim.total @<Money>?;
+	fhir:Claim.missingTeeth @<Claim.missingTeeth>*;
+	fhir:index xsd:integer?
+}
+
+<Claim.diagnosis> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:BackboneElement.modifierExtension @<Extension>*;
+	fhir:Claim.diagnosis.sequence @<positiveInt>;
+	fhir:Claim.diagnosis.diagnosis @<Coding>;
+	fhir:Claim.diagnosis.type @<Coding>*;
+	fhir:Claim.diagnosis.drg @<Coding>?;
+	fhir:index xsd:integer?
+}
+
+<Claim.item> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:BackboneElement.modifierExtension @<Extension>*;
+	fhir:Claim.item.sequence @<positiveInt>;
+	fhir:Claim.item.type @<Coding>;
+	fhir:Claim.item.careTeam @<Claim.item.careTeam>*;
+	fhir:Claim.item.diagnosisLinkId @<positiveInt>*;
+	fhir:Claim.item.service @<Coding>;
+	fhir:Claim.item.serviceModifier @<Coding>*;
+	fhir:Claim.item.modifier @<Coding>*;
+	fhir:Claim.item.programCode @<Coding>*;
+	(	fhir:Claim.item.servicedDate @<date> |
+		fhir:Claim.item.servicedPeriod @<Period>
+	)?;
+	(	fhir:Claim.item.serviceLocationCoding @<Coding> |
+		fhir:Claim.item.serviceLocationAddress @<Address> |
+		fhir:Claim.item.serviceLocationReference @<LocationReference>
+	)?;
+	fhir:Claim.item.quantity @<SimpleQuantity>?;
+	fhir:Claim.item.unitPrice @<Money>?;
+	fhir:Claim.item.factor @<decimal>?;
+	fhir:Claim.item.points @<decimal>?;
+	fhir:Claim.item.net @<Money>?;
+	fhir:Claim.item.udi @<DeviceReference>*;
+	fhir:Claim.item.bodySite @<Coding>?;
+	fhir:Claim.item.subSite @<Coding>*;
+	fhir:Claim.item.detail @<Claim.item.detail>*;
+	fhir:Claim.item.prosthesis @<Claim.item.prosthesis>?;
+	fhir:index xsd:integer?
+}
+
+<Claim.related> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:BackboneElement.modifierExtension @<Extension>*;
+	(	fhir:Claim.related.claimIdentifier @<Identifier> |
+		fhir:Claim.related.claimReference @<ClaimReference>
+	)?;
+	fhir:Claim.related.relationship @<Coding>?;
+	fhir:Claim.related.reference @<Identifier>?;
+	fhir:index xsd:integer?
+}
+
+<Claim.coverage> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:BackboneElement.modifierExtension @<Extension>*;
+	fhir:Claim.coverage.sequence @<positiveInt>;
+	fhir:Claim.coverage.focal @<boolean>;
+	(	fhir:Claim.coverage.coverageIdentifier @<Identifier> |
+		fhir:Claim.coverage.coverageReference @<CoverageReference>
+	);
+	fhir:Claim.coverage.preAuthRef @<string>*;
+	fhir:Claim.coverage.claimResponse @<ClaimResponseReference>?;
+	fhir:Claim.coverage.originalRuleset @<Coding>?;
+	fhir:index xsd:integer?
+}
+
+<Claim.accident> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:BackboneElement.modifierExtension @<Extension>*;
+	fhir:Claim.accident.date @<date>;
+	fhir:Claim.accident.type @<Coding>?;
+	(	fhir:Claim.accident.locationAddress @<Address> |
+		fhir:Claim.accident.locationReference @<LocationReference>
+	)?;
+	fhir:index xsd:integer?
+}
+
+<Claim.information> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:BackboneElement.modifierExtension @<Extension>*;
+	fhir:Claim.information.category @<Coding>;
+	fhir:Claim.information.code @<Coding>?;
+	fhir:Claim.information.reason @<Coding>?;
+	(	fhir:Claim.information.timingDate @<date> |
+		fhir:Claim.information.timingPeriod @<Period>
+	)?;
+	(	fhir:Claim.information.valueString @<string> |
+		fhir:Claim.information.valueQuantity @<Quantity>
+	)?;
+	fhir:index xsd:integer?
+}
+
+<Claim.procedure> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:BackboneElement.modifierExtension @<Extension>*;
+	fhir:Claim.procedure.sequence @<positiveInt>;
+	fhir:Claim.procedure.date @<dateTime>?;
+	(	fhir:Claim.procedure.procedureCoding @<Coding> |
+		fhir:Claim.procedure.procedureReference @<ProcedureReference>
+	);
+	fhir:index xsd:integer?
+}
+
+<Claim.payee> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:BackboneElement.modifierExtension @<Extension>*;
+	fhir:Claim.payee.type @<Coding>;
+	fhir:Claim.payee.resourceType @<Coding>?;
+	(	fhir:Claim.payee.partyIdentifier @<Identifier> |
+		fhir:Claim.payee.partyReference @<PractitionerReference> |
+		fhir:Claim.payee.partyReference @<OrganizationReference> |
+		fhir:Claim.payee.partyReference @<PatientReference> |
+		fhir:Claim.payee.partyReference @<RelatedPersonReference>
+	)?;
+	fhir:index xsd:integer?
+}
+
+<Claim.missingTeeth> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:BackboneElement.modifierExtension @<Extension>*;
+	fhir:Claim.missingTeeth.tooth @<Coding>;
+	fhir:Claim.missingTeeth.reason @<Coding>?;
+	fhir:Claim.missingTeeth.extractionDate @<date>?;
+	fhir:index xsd:integer?
+}
+
+<Claim.item.detail> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:BackboneElement.modifierExtension @<Extension>*;
+	fhir:Claim.item.detail.sequence @<positiveInt>;
+	fhir:Claim.item.detail.type @<Coding>;
+	fhir:Claim.item.detail.service @<Coding>;
+	fhir:Claim.item.detail.programCode @<Coding>*;
+	fhir:Claim.item.detail.quantity @<SimpleQuantity>?;
+	fhir:Claim.item.detail.unitPrice @<Money>?;
+	fhir:Claim.item.detail.factor @<decimal>?;
+	fhir:Claim.item.detail.points @<decimal>?;
+	fhir:Claim.item.detail.net @<Money>?;
+	fhir:Claim.item.detail.udi @<DeviceReference>*;
+	fhir:Claim.item.detail.subDetail @<Claim.item.detail.subDetail>*;
+	fhir:index xsd:integer?
+}
+
+<Claim.item.prosthesis> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:BackboneElement.modifierExtension @<Extension>*;
+	fhir:Claim.item.prosthesis.initial @<boolean>?;
+	fhir:Claim.item.prosthesis.priorDate @<date>?;
+	fhir:Claim.item.prosthesis.priorMaterial @<Coding>?;
+	fhir:index xsd:integer?
+}
+
+<Claim.item.careTeam> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:BackboneElement.modifierExtension @<Extension>*;
+	(	fhir:Claim.item.careTeam.providerIdentifier @<Identifier> |
+		fhir:Claim.item.careTeam.providerReference @<PractitionerReference>
+	);
+	fhir:Claim.item.careTeam.responsible @<boolean>?;
+	fhir:Claim.item.careTeam.role @<Coding>?;
+	fhir:Claim.item.careTeam.qualification @<Coding>?;
+	fhir:index xsd:integer?
+}
+
+<Claim.item.detail.subDetail> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:BackboneElement.modifierExtension @<Extension>*;
+	fhir:Claim.item.detail.subDetail.sequence @<positiveInt>;
+	fhir:Claim.item.detail.subDetail.type @<Coding>;
+	fhir:Claim.item.detail.subDetail.service @<Coding>;
+	fhir:Claim.item.detail.subDetail.programCode @<Coding>*;
+	fhir:Claim.item.detail.subDetail.quantity @<SimpleQuantity>?;
+	fhir:Claim.item.detail.subDetail.unitPrice @<Money>?;
+	fhir:Claim.item.detail.subDetail.factor @<decimal>?;
+	fhir:Claim.item.detail.subDetail.points @<decimal>?;
+	fhir:Claim.item.detail.subDetail.net @<Money>?;
+	fhir:Claim.item.detail.subDetail.udi @<DeviceReference>*;
+	fhir:index xsd:integer?
+}
+
+#---------------------- Data Types -------------------
+
+<dateTime> CLOSED {fhir:id @<id>?;
+	fhir:extension @<Extension>*;
+	fhir:value xsd:gYear OR xsd:gYearMonth OR xsd:date OR xsd:dateTime?;
+	fhir:index xsd:integer?
+}
+
+<date> CLOSED {fhir:id @<id>?;
+	fhir:extension @<Extension>*;
+	fhir:value xsd:gYear OR xsd:gYearMonth OR xsd:date?;
+	fhir:index xsd:integer?
+}
+
+<Meta> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:Meta.versionId @<id>?;
+	fhir:Meta.lastUpdated @<instant>?;
+	fhir:Meta.profile @<uri>*;
+	fhir:Meta.security @<Coding>*;
+	fhir:Meta.tag @<Coding>*;
+	fhir:index xsd:integer?
+}
+
+<code> CLOSED {fhir:extension @<Extension>*;
+	fhir:value xsd:string?;
+	fhir:index xsd:integer?
+}
+
+<Address> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:Address.use @<code>?;
+	fhir:Address.type @<code>?;
+	fhir:Address.text @<string>?;
+	fhir:Address.line @<string>*;
+	fhir:Address.city @<string>?;
+	fhir:Address.district @<string>?;
+	fhir:Address.state @<string>?;
+	fhir:Address.postalCode @<string>?;
+	fhir:Address.country @<string>?;
+	fhir:Address.period @<Period>?;
+	fhir:index xsd:integer?
+}
+
+<string> CLOSED {fhir:id @<id>?;
+	fhir:extension @<Extension>*;
+	fhir:value xsd:string?;
+	fhir:index xsd:integer?
+}
+
+<Resource> {a .+;
+	fhir:Resource.id @<id>?;
+		fhir:Resource.meta @<Meta>?;
+		fhir:Resource.implicitRules @<uri>?;
+		fhir:Resource.language @<code>?;
+	fhir:index xsd:integer?
+}
+
+<SimpleQuantity> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:Quantity.value @<decimal>?;
+	fhir:Quantity.comparator @<code>?;
+	fhir:Quantity.unit @<string>?;
+	fhir:Quantity.system @<uri>?;
+	fhir:Quantity.code @<code>?;
+	fhir:index xsd:integer?
+}
+
+<Period> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:Period.start @<dateTime>?;
+	fhir:Period.end @<dateTime>?;
+	fhir:index xsd:integer?
+}
+
+<Quantity> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:Quantity.value @<decimal>?;
+	fhir:Quantity.comparator @<code>?;
+	fhir:Quantity.unit @<string>?;
+	fhir:Quantity.system @<uri>?;
+	fhir:Quantity.code @<code>?;
+	fhir:index xsd:integer?
+}
+
+<uri> CLOSED {fhir:id @<id>?;
+	fhir:extension @<Extension>*;
+	fhir:value xsd:string?;
+	fhir:index xsd:integer?
+}
+
+<Extension> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:Extension.url @<uri>;
+	(	fhir:Extension.valueBoolean @<boolean> |
+		fhir:Extension.valueInteger @<integer> |
+		fhir:Extension.valueDecimal @<decimal> |
+		fhir:Extension.valueBase64Binary @<base64Binary> |
+		fhir:Extension.valueInstant @<instant> |
+		fhir:Extension.valueString @<string> |
+		fhir:Extension.valueUri @<uri> |
+		fhir:Extension.valueDate @<date> |
+		fhir:Extension.valueDateTime @<dateTime> |
+		fhir:Extension.valueTime @<time> |
+		fhir:Extension.valueCode @<code> |
+		fhir:Extension.valueOid @<oid> |
+		fhir:Extension.valueId @<id> |
+		fhir:Extension.valueUnsignedInt @<unsignedInt> |
+		fhir:Extension.valuePositiveInt @<positiveInt> |
+		fhir:Extension.valueMarkdown @<markdown> |
+		fhir:Extension.valueAnnotation @<Annotation> |
+		fhir:Extension.valueAttachment @<Attachment> |
+		fhir:Extension.valueIdentifier @<Identifier> |
+		fhir:Extension.valueCodeableConcept @<CodeableConcept> |
+		fhir:Extension.valueCoding @<Coding> |
+		fhir:Extension.valueQuantity @<Quantity> |
+		fhir:Extension.valueCount @<Count> |
+		fhir:Extension.valueAge @<Age> |
+		fhir:Extension.valueDuration @<Duration> |
+		fhir:Extension.valueDistance @<Distance> |
+		fhir:Extension.valueMoney @<Money> |
+		fhir:Extension.valueRange @<Range> |
+		fhir:Extension.valuePeriod @<Period> |
+		fhir:Extension.valueRatio @<Ratio> |
+		fhir:Extension.valueSampledData @<SampledData> |
+		fhir:Extension.valueSignature @<Signature> |
+		fhir:Extension.valueHumanName @<HumanName> |
+		fhir:Extension.valueAddress @<Address> |
+		fhir:Extension.valueContactPoint @<ContactPoint> |
+		fhir:Extension.valueTiming @<Timing> |
+		fhir:Extension.valueReference @<Reference> |
+		fhir:Extension.valueMeta @<Meta>
+	)?;
+	fhir:index xsd:integer?
+}
+
+<Money> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:Quantity.value @<decimal>?;
+	fhir:Quantity.comparator @<code>?;
+	fhir:Quantity.unit @<string>?;
+	fhir:Quantity.system @<uri>?;
+	fhir:Quantity.code @<code>?;
+	fhir:index xsd:integer?
+}
+
+<Identifier> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:Identifier.use @<code>?;
+	fhir:Identifier.type @<CodeableConcept>?;
+	fhir:Identifier.system @<uri>?;
+	fhir:Identifier.value @<string>?;
+	fhir:Identifier.period @<Period>?;
+	fhir:Identifier.assigner @<OrganizationReference>?;
+	fhir:index xsd:integer?
+}
+
+<boolean> CLOSED {fhir:id @<id>?;
+	fhir:extension @<Extension>*;
+	fhir:value xsd:boolean?;
+	fhir:index xsd:integer?
+}
+
+<Narrative> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:Narrative.status @<code>;
+	fhir:Narrative.div xsd:string;
+	fhir:index xsd:integer?
+}
+
+<Coding> CLOSED {fhir:concept IRI?;
+	fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:Coding.system @<uri>?;
+	fhir:Coding.version @<string>?;
+	fhir:Coding.code @<code>?;
+	fhir:Coding.display @<string>?;
+	fhir:Coding.userSelected @<boolean>?;
+	fhir:index xsd:integer?
+}
+
+<id> CLOSED {fhir:extension @<Extension>*;
+	fhir:value xsd:string?;
+	fhir:index xsd:integer?
+}
+
+<positiveInt> CLOSED {fhir:extension @<Extension>*;
+	fhir:value xsd:positiveInteger?;
+	fhir:index xsd:integer?
+}
+
+<decimal> CLOSED {fhir:id @<id>?;
+	fhir:extension @<Extension>*;
+	fhir:value xsd:decimal?;
+	fhir:index xsd:integer?
+}
+
+<Attachment> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:Attachment.contentType @<code>?;
+	fhir:Attachment.language @<code>?;
+	fhir:Attachment.data @<base64Binary>?;
+	fhir:Attachment.url @<uri>?;
+	fhir:Attachment.size @<unsignedInt>?;
+	fhir:Attachment.hash @<base64Binary>?;
+	fhir:Attachment.title @<string>?;
+	fhir:Attachment.creation @<dateTime>?;
+	fhir:index xsd:integer?
+}
+
+<integer> CLOSED {fhir:id @<id>?;
+	fhir:extension @<Extension>*;
+	fhir:value xsd:int?;
+	fhir:index xsd:integer?
+}
+
+<oid> CLOSED {fhir:extension @<Extension>*;
+	fhir:value xsd:string?;
+	fhir:index xsd:integer?
+}
+
+<Count> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:Quantity.value @<decimal>?;
+	fhir:Quantity.comparator @<code>?;
+	fhir:Quantity.unit @<string>?;
+	fhir:Quantity.system @<uri>?;
+	fhir:Quantity.code @<code>?;
+	fhir:index xsd:integer?
+}
+
+<instant> CLOSED {fhir:id @<id>?;
+	fhir:extension @<Extension>*;
+	fhir:value xsd:dateTime?;
+	fhir:index xsd:integer?
+}
+
+<HumanName> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:HumanName.use @<code>?;
+	fhir:HumanName.text @<string>?;
+	fhir:HumanName.family @<string>*;
+	fhir:HumanName.given @<string>*;
+	fhir:HumanName.prefix @<string>*;
+	fhir:HumanName.suffix @<string>*;
+	fhir:HumanName.period @<Period>?;
+	fhir:index xsd:integer?
+}
+
+<ContactPoint> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:ContactPoint.system @<code>?;
+	fhir:ContactPoint.value @<string>?;
+	fhir:ContactPoint.use @<code>?;
+	fhir:ContactPoint.rank @<positiveInt>?;
+	fhir:ContactPoint.period @<Period>?;
+	fhir:index xsd:integer?
+}
+
+<markdown> CLOSED {fhir:extension @<Extension>*;
+	fhir:value xsd:string?;
+	fhir:index xsd:integer?
+}
+
+<SampledData> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:SampledData.origin @<SimpleQuantity>;
+	fhir:SampledData.period @<decimal>;
+	fhir:SampledData.factor @<decimal>?;
+	fhir:SampledData.lowerLimit @<decimal>?;
+	fhir:SampledData.upperLimit @<decimal>?;
+	fhir:SampledData.dimensions @<positiveInt>;
+	fhir:SampledData.data @<string>;
+	fhir:index xsd:integer?
+}
+
+<Ratio> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:Ratio.numerator @<Quantity>?;
+	fhir:Ratio.denominator @<Quantity>?;
+	fhir:index xsd:integer?
+}
+
+<Age> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:Quantity.value @<decimal>?;
+	fhir:Quantity.comparator @<code>?;
+	fhir:Quantity.unit @<string>?;
+	fhir:Quantity.system @<uri>?;
+	fhir:Quantity.code @<code>?;
+	fhir:index xsd:integer?
+}
+
+<Distance> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:Quantity.value @<decimal>?;
+	fhir:Quantity.comparator @<code>?;
+	fhir:Quantity.unit @<string>?;
+	fhir:Quantity.system @<uri>?;
+	fhir:Quantity.code @<code>?;
+	fhir:index xsd:integer?
+}
+
+<Reference> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:Reference.reference @<string>?;
+	fhir:Reference.display @<string>?;
+	fhir:index xsd:integer?
+}
+
+<Duration> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:Quantity.value @<decimal>?;
+	fhir:Quantity.comparator @<code>?;
+	fhir:Quantity.unit @<string>?;
+	fhir:Quantity.system @<uri>?;
+	fhir:Quantity.code @<code>?;
+	fhir:index xsd:integer?
+}
+
+<Range> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:Range.low @<SimpleQuantity>?;
+	fhir:Range.high @<SimpleQuantity>?;
+	fhir:index xsd:integer?
+}
+
+<Annotation> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	(	fhir:Annotation.authorReference @<PractitionerReference> |
+		fhir:Annotation.authorReference @<PatientReference> |
+		fhir:Annotation.authorReference @<RelatedPersonReference> |
+		fhir:Annotation.authorString @<string>
+	)?;
+	fhir:Annotation.time @<dateTime>?;
+	fhir:Annotation.text @<string>;
+	fhir:index xsd:integer?
+}
+
+<base64Binary> CLOSED {fhir:id @<id>?;
+	fhir:extension @<Extension>*;
+	fhir:value xsd:base64Binary?;
+	fhir:index xsd:integer?
+}
+
+<Signature> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:Signature.type @<Coding>+;
+	fhir:Signature.when @<instant>;
+	(	fhir:Signature.whoUri @<uri> |
+		fhir:Signature.whoReference @<PractitionerReference> |
+		fhir:Signature.whoReference @<RelatedPersonReference> |
+		fhir:Signature.whoReference @<PatientReference> |
+		fhir:Signature.whoReference @<DeviceReference> |
+		fhir:Signature.whoReference @<OrganizationReference>
+	);
+	fhir:Signature.contentType @<code>?;
+	fhir:Signature.blob @<base64Binary>?;
+	fhir:index xsd:integer?
+}
+
+<unsignedInt> CLOSED {fhir:extension @<Extension>*;
+	fhir:value xsd:nonNegativeInteger?;
+	fhir:index xsd:integer?
+}
+
+<time> CLOSED {fhir:id @<id>?;
+	fhir:extension @<Extension>*;
+	fhir:value xsd:time?;
+	fhir:index xsd:integer?
+}
+
+<Timing> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:Timing.event @<dateTime>*;
+	fhir:Timing.repeat @<Timing.repeat>?;
+	fhir:Timing.code @<CodeableConcept>?;
+	fhir:index xsd:integer?
+}
+
+<CodeableConcept> CLOSED {fhir:concept IRI*;
+	fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:CodeableConcept.coding @<Coding>*;
+	fhir:CodeableConcept.text @<string>?;
+	fhir:index xsd:integer?
+}
+
+<Timing.repeat> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	(	fhir:Timing.repeat.boundsDuration @<Duration> |
+		fhir:Timing.repeat.boundsRange @<Range> |
+		fhir:Timing.repeat.boundsPeriod @<Period>
+	)?;
+	fhir:Timing.repeat.count @<integer>?;
+	fhir:Timing.repeat.countMax @<integer>?;
+	fhir:Timing.repeat.duration @<decimal>?;
+	fhir:Timing.repeat.durationMax @<decimal>?;
+	fhir:Timing.repeat.durationUnit @<code>?;
+	fhir:Timing.repeat.frequency @<integer>?;
+	fhir:Timing.repeat.frequencyMax @<integer>?;
+	fhir:Timing.repeat.period @<decimal>?;
+	fhir:Timing.repeat.periodMax @<decimal>?;
+	fhir:Timing.repeat.periodUnit @<code>?;
+	fhir:Timing.repeat.when @<code>?;
+	fhir:Timing.repeat.offset @<unsignedInt>?;
+	fhir:index xsd:integer?
+}
+
+#---------------------- Reference Types -------------------
+
+<ReferralRequestReference> CLOSED {
+	fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:link IRI?;
+	fhir:Reference.reference @<string>?;
+	fhir:Reference.display @<string>?;
+	fhir:index xsd:integer?
+}
+
+<OrganizationReference> CLOSED {
+	fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:link IRI?;
+	fhir:Reference.reference @<string>?;
+	fhir:Reference.display @<string>?;
+	fhir:index xsd:integer?
+}
+
+<ClaimResponseReference> CLOSED {
+	fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:link IRI?;
+	fhir:Reference.reference @<string>?;
+	fhir:Reference.display @<string>?;
+	fhir:index xsd:integer?
+}
+
+<DeviceReference> CLOSED {
+	fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:link IRI?;
+	fhir:Reference.reference @<string>?;
+	fhir:Reference.display @<string>?;
+	fhir:index xsd:integer?
+}
+
+<VisionPrescriptionReference> CLOSED {
+	fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:link IRI?;
+	fhir:Reference.reference @<string>?;
+	fhir:Reference.display @<string>?;
+	fhir:index xsd:integer?
+}
+
+<PatientReference> CLOSED {
+	fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:link IRI?;
+	fhir:Reference.reference @<string>?;
+	fhir:Reference.display @<string>?;
+	fhir:index xsd:integer?
+}
+
+<CoverageReference> CLOSED {
+	fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:link IRI?;
+	fhir:Reference.reference @<string>?;
+	fhir:Reference.display @<string>?;
+	fhir:index xsd:integer?
+}
+
+<RelatedPersonReference> CLOSED {
+	fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:link IRI?;
+	fhir:Reference.reference @<string>?;
+	fhir:Reference.display @<string>?;
+	fhir:index xsd:integer?
+}
+
+<PractitionerReference> CLOSED {
+	fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:link IRI?;
+	fhir:Reference.reference @<string>?;
+	fhir:Reference.display @<string>?;
+	fhir:index xsd:integer?
+}
+
+<ProcedureReference> CLOSED {
+	fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:link IRI?;
+	fhir:Reference.reference @<string>?;
+	fhir:Reference.display @<string>?;
+	fhir:index xsd:integer?
+}
+
+<MedicationOrderReference> CLOSED {
+	fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:link IRI?;
+	fhir:Reference.reference @<string>?;
+	fhir:Reference.display @<string>?;
+	fhir:index xsd:integer?
+}
+
+<ClaimReference> CLOSED {
+	fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:link IRI?;
+	fhir:Reference.reference @<string>?;
+	fhir:Reference.display @<string>?;
+	fhir:index xsd:integer?
+}
+
+<LocationReference> CLOSED {
+	fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:link IRI?;
+	fhir:Reference.reference @<string>?;
+	fhir:Reference.display @<string>?;
+	fhir:index xsd:integer?
+}

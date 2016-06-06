@@ -1,0 +1,246 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://hl7.org/fhir/json-schema/Library",
+  "$ref": "#/definitions/Library",
+  "description": "see http://hl7.org/fhir/json.html#schema for information about the FHIR Json Schemas",
+  "definitions": {
+    "Library": {
+      "allOf": [
+        {
+          "$ref": "DomainResource.schema.json/definitions/DomainResource"
+        },
+        {
+          "description": "The Library resource provides a representation container for knowledge artifact component definitions. It is effectively an exposure of the header information for a CQL/ELM library.",
+          "properties": {
+            "resourceType": {
+              "description": "This is a Library resource",
+              "type": "string",
+              "enum": [
+                "Library"
+              ]
+            },
+            "moduleMetadata": {
+              "description": "The metadata for the library, including publishing, life-cycle, version, documentation, and supporting evidence.",
+              "$ref": "ModuleMetadata.schema.json/definitions/ModuleMetadata"
+            },
+            "model": {
+              "description": "A model element describes the model and version used by the library.",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Library.Model"
+              }
+            },
+            "library": {
+              "description": "A library element describes a library referenced by this library.",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Library.Library"
+              }
+            },
+            "codeSystem": {
+              "description": "A code system definition used within the library.",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Library.CodeSystem"
+              }
+            },
+            "valueSet": {
+              "description": "A value set definition referenced by the library.",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Library.ValueSet"
+              }
+            },
+            "parameter": {
+              "description": "The parameter element defines parameters used by the library.",
+              "type": "array",
+              "items": {
+                "$ref": "ParameterDefinition.schema.json/definitions/ParameterDefinition"
+              }
+            },
+            "dataRequirement": {
+              "description": "The dataRequirement element specifies a data requirement used by some expression within the library.",
+              "type": "array",
+              "items": {
+                "$ref": "DataRequirement.schema.json/definitions/DataRequirement"
+              }
+            },
+            "document": {
+              "description": "The content of the library as an Attachment. The content may be a reference to a url, or may be directly embedded as a base-64 string. Either way, the content is expected to be a CQL or ELM document.",
+              "$ref": "Attachment.schema.json/definitions/Attachment"
+            }
+          },
+          "required": [
+            "document",
+            "resourceType"
+          ]
+        }
+      ]
+    },
+    "Library.Model": {
+      "allOf": [
+        {
+          "$ref": "BackboneElement.schema.json/definitions/BackboneElement"
+        },
+        {
+          "description": "The Library resource provides a representation container for knowledge artifact component definitions. It is effectively an exposure of the header information for a CQL/ELM library.",
+          "properties": {
+            "name": {
+              "description": "The name element defines the local name of the model as used within the library.",
+              "type": "string"
+            },
+            "name_": {
+              "description": "Extensions for name",
+              "$ref": "Element.schema.json/definitions/Element"
+            },
+            "identifier": {
+              "description": "The identifier element specifies the global, non-version-specific identifier for the model.",
+              "type": "string"
+            },
+            "identifier_": {
+              "description": "Extensions for identifier",
+              "$ref": "Element.schema.json/definitions/Element"
+            },
+            "version": {
+              "description": "The version element, if present, identifies the specific version of the model to be used. If no version is specified, the most recent published version of the model is implied.",
+              "type": "string"
+            },
+            "version_": {
+              "description": "Extensions for version",
+              "$ref": "Element.schema.json/definitions/Element"
+            }
+          }
+        }
+      ]
+    },
+    "Library.Library": {
+      "allOf": [
+        {
+          "$ref": "BackboneElement.schema.json/definitions/BackboneElement"
+        },
+        {
+          "description": "The Library resource provides a representation container for knowledge artifact component definitions. It is effectively an exposure of the header information for a CQL/ELM library.",
+          "properties": {
+            "name": {
+              "description": "The name element defines the local name of the referenced library.",
+              "type": "string"
+            },
+            "name_": {
+              "description": "Extensions for name",
+              "$ref": "Element.schema.json/definitions/Element"
+            },
+            "identifier": {
+              "description": "The identifier element specifies the global, non-version-specific identifier for the library.",
+              "type": "string"
+            },
+            "identifier_": {
+              "description": "Extensions for identifier",
+              "$ref": "Element.schema.json/definitions/Element"
+            },
+            "version": {
+              "description": "The version element, if present, identifies the specific version of the library to be used. If no version is specified, the most recent published version of the library is implied.",
+              "type": "string"
+            },
+            "version_": {
+              "description": "Extensions for version",
+              "$ref": "Element.schema.json/definitions/Element"
+            },
+            "documentAttachment": {
+              "description": "The content of the referenced library as an Attachment, or a reference to the Library resource. If the document is an attachment, it may be a reference to a url from which the library document may be retrieved, or it may be directly embedded as a base-64 string. Either way, the content is expected to be a CQL or ELM document.",
+              "$ref": "Attachment.schema.json/definitions/Attachment"
+            },
+            "documentReference": {
+              "description": "The content of the referenced library as an Attachment, or a reference to the Library resource. If the document is an attachment, it may be a reference to a url from which the library document may be retrieved, or it may be directly embedded as a base-64 string. Either way, the content is expected to be a CQL or ELM document.",
+              "$ref": "Reference.schema.json/definitions/Reference"
+            }
+          }
+        }
+      ]
+    },
+    "Library.CodeSystem": {
+      "allOf": [
+        {
+          "$ref": "BackboneElement.schema.json/definitions/BackboneElement"
+        },
+        {
+          "description": "The Library resource provides a representation container for knowledge artifact component definitions. It is effectively an exposure of the header information for a CQL/ELM library.",
+          "properties": {
+            "name": {
+              "description": "The name element specifies the local name of the code system as used within the library. This name is also used when the code system is referenced from a value set element to determine the version of the code system to be used when computed the expansion of the value set definition.",
+              "type": "string"
+            },
+            "name_": {
+              "description": "Extensions for name",
+              "$ref": "Element.schema.json/definitions/Element"
+            },
+            "identifier": {
+              "description": "The identifier element specifies the global, non-version-specific identifier for the code system.",
+              "type": "string"
+            },
+            "identifier_": {
+              "description": "Extensions for identifier",
+              "$ref": "Element.schema.json/definitions/Element"
+            },
+            "version": {
+              "description": "The version element, if present, identifies the specific version of the library to be used. If no code system is specified, the most recent published version of the code system is implied.",
+              "type": "string"
+            },
+            "version_": {
+              "description": "Extensions for version",
+              "$ref": "Element.schema.json/definitions/Element"
+            }
+          }
+        }
+      ]
+    },
+    "Library.ValueSet": {
+      "allOf": [
+        {
+          "$ref": "BackboneElement.schema.json/definitions/BackboneElement"
+        },
+        {
+          "description": "The Library resource provides a representation container for knowledge artifact component definitions. It is effectively an exposure of the header information for a CQL/ELM library.",
+          "properties": {
+            "name": {
+              "description": "The name element specifies the local name of the value set used within the library.",
+              "type": "string"
+            },
+            "name_": {
+              "description": "Extensions for name",
+              "$ref": "Element.schema.json/definitions/Element"
+            },
+            "identifier": {
+              "description": "The identifier element specifies the global, non-version-specific identifier for the value set.",
+              "type": "string"
+            },
+            "identifier_": {
+              "description": "Extensions for identifier",
+              "$ref": "Element.schema.json/definitions/Element"
+            },
+            "version": {
+              "description": "The version element, if present, determines the specific version of the value set definition that is used by the library. If no version is specified, the latest published version of the value set definition is implied.",
+              "type": "string"
+            },
+            "version_": {
+              "description": "Extensions for version",
+              "$ref": "Element.schema.json/definitions/Element"
+            },
+            "codeSystem": {
+              "description": "The codeSystem element determines which code system binding to use to compute the expansion of the value set definition. The codeSystem element specified here will correspond to a code system element, which is used to determine the code system version.",
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "codeSystem_": {
+              "description": "Extensions for codeSystem",
+              "items": {
+                "$ref": "Element.schema.json/definitions/Element"
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

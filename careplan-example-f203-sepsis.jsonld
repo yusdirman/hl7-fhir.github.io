@@ -1,0 +1,183 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/CarePlan",
+  "resourceType": "CarePlan",
+  "Resource.id": {
+    "value": "f203"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f203</p><p><b>contained</b>: , </p><p><b>subject</b>: <a>Roel</a></p><p><b>status</b>: completed</p><p><b>period</b>: Apr 14, 2013 --&gt; Apr 21, 2013</p><p><b>modified</b>: Mar 11, 2013</p><p><b>addresses</b>: <a>Roel's sepsis</a></p><p><b>careTeam</b>: id: careteam</p><p><b>goal</b>: id: goal; Roel; description: Check whether further treatment of sepsis/pulmonary abcess is required; status: cancelled</p><blockquote><p><b>activity</b></p><h3>Details</h3><table><tr><td>-</td><td><b>Category</b></td><td><b>Code</b></td><td><b>Status</b></td><td><b>Prohibited</b></td></tr><tr><td>*</td><td>Observation <span>(Details : {http://hl7.org/fhir/care-plan-activity-category code 'observation' = 'Observation)</span></td><td>High resolution computed tomography of lungs <span>(Details : {SNOMED CT code '241541005' = 'High resolution computed tomography of lungs (procedure)', given as 'High resolution computed tomography of lungs'})</span></td><td>not-started</td><td>false</td></tr></table></blockquote></div>"
+    }
+  },
+  "CareTeam": [
+    {
+      "Resource.id": {
+        "value": "careteam"
+      },
+      "CareTeam.participant": [
+        {
+          "CareTeam.participant.role": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://snomed.info/sct"
+                },
+                "Coding.code": {
+                  "value": "425268008"
+                },
+                "Coding.display": {
+                  "value": "Review of care plan"
+                }
+              }
+            ],
+            "concept": "http://snomed.info/sct#425268008"
+          },
+          "CareTeam.participant.member": {
+            "Reference.reference": {
+              "value": "Practitioner/f201"
+            },
+            "Reference.display": {
+              "value": "Dokter Bronsig"
+            },
+            "reference": "http://hl7.org/fhir//Practitioner/f201"
+          }
+        },
+        {
+          "CareTeam.participant.role": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://snomed.info/sct"
+                },
+                "Coding.code": {
+                  "value": "278110001"
+                },
+                "Coding.display": {
+                  "value": "Radiographic imaging"
+                }
+              }
+            ],
+            "concept": "http://snomed.info/sct#278110001"
+          },
+          "CareTeam.participant.member": {
+            "Reference.reference": {
+              "value": "Practitioner/f202"
+            },
+            "Reference.display": {
+              "value": "Luigi Maas"
+            },
+            "reference": "http://hl7.org/fhir//Practitioner/f202"
+          }
+        }
+      ]
+    },
+    {
+      "Resource.id": {
+        "value": "goal"
+      },
+      "Goal.subject": {
+        "Reference.reference": {
+          "value": "Patient/f201"
+        },
+        "Reference.display": {
+          "value": "Roel"
+        },
+        "reference": "http://hl7.org/fhir//Patient/f201"
+      },
+      "Goal.description": {
+        "value": "Check whether further treatment of sepsis/pulmonary abcess is required"
+      },
+      "Goal.status": {
+        "value": "cancelled"
+      }
+    }
+  ],
+  "CarePlan.subject": {
+    "Reference.reference": {
+      "value": "Patient/f201"
+    },
+    "Reference.display": {
+      "value": "Roel"
+    },
+    "reference": "http://hl7.org/fhir//Patient/f201"
+  },
+  "CarePlan.status": {
+    "value": "completed"
+  },
+  "CarePlan.period": {
+    "Period.start": {
+      "value": "2013-04-14"
+    },
+    "Period.end": {
+      "value": "2013-04-21"
+    }
+  },
+  "CarePlan.modified": {
+    "value": "2013-03-11"
+  },
+  "CarePlan.addresses": [
+    {
+      "Reference.reference": {
+        "value": "Condition/f203"
+      },
+      "Reference.display": {
+        "value": "Roel's sepsis"
+      }
+    }
+  ],
+  "CarePlan.careTeam": {
+    "Reference.reference": {
+      "value": "#careteam"
+    }
+  },
+  "CarePlan.goal": [
+    {
+      "Reference.reference": {
+        "value": "#goal"
+      }
+    }
+  ],
+  "CarePlan.activity": [
+    {
+      "CarePlan.activity.detail": {
+        "CarePlan.activity.detail.category": {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "value": "http://hl7.org/fhir/care-plan-activity-category"
+              },
+              "Coding.code": {
+                "value": "observation"
+              }
+            }
+          ]
+        },
+        "CarePlan.activity.detail.code": {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "value": "http://snomed.info/sct"
+              },
+              "Coding.code": {
+                "value": "241541005"
+              },
+              "Coding.display": {
+                "value": "High resolution computed tomography of lungs"
+              }
+            }
+          ],
+          "concept": "http://snomed.info/sct#241541005"
+        },
+        "CarePlan.activity.detail.status": {
+          "value": "not-started"
+        },
+        "CarePlan.activity.detail.prohibited": {
+          "value": false
+        }
+      }
+    }
+  ]
+}

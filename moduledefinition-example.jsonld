@@ -1,0 +1,62 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/ModuleDefinition",
+  "resourceType": "ModuleDefinition",
+  "Resource.id": {
+    "value": "example"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">[Put rendering here]</div>"
+    }
+  },
+  "ModuleDefinition.identifier": [
+    {
+      "Identifier.use": {
+        "value": "official"
+      },
+      "Identifier.value": {
+        "value": "ChalmydiaScreening_Common"
+      }
+    }
+  ],
+  "ModuleDefinition.version": {
+    "value": "2.0.0"
+  },
+  "ModuleDefinition.model": [
+    {
+      "ModuleDefinition.model.identifier": {
+        "value": "QUICK"
+      }
+    }
+  ],
+  "ModuleDefinition.valueSet": [
+    {
+      "ModuleDefinition.valueSet.name": {
+        "value": "Female Administrative Sex"
+      },
+      "ModuleDefinition.valueSet.identifier": {
+        "value": "2.16.840.1.113883.3.560.100.2"
+      }
+    }
+  ],
+  "ModuleDefinition.data": [
+    {
+      "ModuleDefinition.data.type": {
+        "value": "Condition"
+      },
+      "ModuleDefinition.data.codeFilter": [
+        {
+          "ModuleDefinition.data.codeFilter.path": {
+            "value": "code"
+          },
+          "ModuleDefinition.data.codeFilter.valueSetString": {
+            "value": "Other Female Reproductive Conditions"
+          }
+        }
+      ]
+    }
+  ]
+}

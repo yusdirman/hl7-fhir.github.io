@@ -1,0 +1,94 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/ValueSet",
+  "resourceType": "ValueSet",
+  "Resource.id": {
+    "value": "yesnodontknow"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <h3>Value Set Contents</h3>\n      <p>This value set contains 3 concepts</p>\n      <table class=\"codes\">\n        <tr>\n          <td>\n            <b>Code</b>\n          </td>\n          <td>\n            <b>System</b>\n          </td>\n          <td>\n            <b>Display</b>\n          </td>\n          <td>\n            <b>Definition</b>\n          </td>\n        </tr>\n        <tr>\n          <td>\n            <a name=\"http---hl7.org-fhir-v2-0136-Y\"> </a>\n            <a href=\"v2/0136/index.html#Y\">Y</a>\n          </td>\n          <td>http://hl7.org/fhir/v2/0136</td>\n          <td>Yes</td>\n          <td/>\n        </tr>\n        <tr>\n          <td>\n            <a name=\"http---hl7.org-fhir-v2-0136-N\"> </a>\n            <a href=\"v2/0136/index.html#N\">N</a>\n          </td>\n          <td>http://hl7.org/fhir/v2/0136</td>\n          <td>No</td>\n          <td/>\n        </tr>\n        <tr>\n          <td>\n            <a name=\"http---hl7.org-fhir-data-absent-reason-asked\"> </a>\n            <a href=\"codesystem-data-absent-reason.html#asked\">asked</a>\n          </td>\n          <td>http://hl7.org/fhir/data-absent-reason</td>\n          <td>Don't know</td>\n          <td>The source human does not know the value.</td>\n        </tr>\n      </table>\n      <h2>Yes/No/Don't Know</h2>\n      <p>For Capturing simple yes-no-don't know answers</p>\n      <p>This value set includes codes from the following code systems:</p>\n      <ul>\n        <li>Import all the codes that are contained in \n          <a href=\"v2/0136/index.html\">http://hl7.org/fhir/ValueSet/v2-0136</a>\n        </li>\n        <li>Include these codes as defined in \n          <a href=\"codesystem-data-absent-reason.html\">http://hl7.org/fhir/data-absent-reason</a>\n          <table>\n            <tr>\n              <td>\n                <b>Code</b>\n              </td>\n              <td>\n                <b>Display</b>\n              </td>\n            </tr>\n            <tr>\n              <td>asked</td>\n              <td>Don't know</td>\n              <td>The source human does not know the value.</td>\n            </tr>\n          </table>\n        </li>\n      </ul>\n    </div>"
+    }
+  },
+  "ValueSet.url": {
+    "value": "http://hl7.org/fhir/ValueSet/yesnodontknow"
+  },
+  "ValueSet.name": {
+    "value": "Yes/No/Don't Know"
+  },
+  "ValueSet.status": {
+    "value": "draft"
+  },
+  "ValueSet.description": {
+    "value": "For Capturing simple yes-no-don't know answers"
+  },
+  "ValueSet.compose": {
+    "ValueSet.compose.import": [
+      {
+        "value": "http://hl7.org/fhir/ValueSet/v2-0136"
+      }
+    ],
+    "ValueSet.compose.include": [
+      {
+        "ValueSet.compose.include.system": {
+          "value": "http://hl7.org/fhir/data-absent-reason"
+        },
+        "ValueSet.compose.include.concept": [
+          {
+            "ValueSet.compose.include.concept.code": {
+              "value": "asked"
+            },
+            "ValueSet.compose.include.concept.display": {
+              "value": "Don't know"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "ValueSet.expansion": {
+    "ValueSet.expansion.identifier": {
+      "value": "urn:uuid:bf99fe50-2c2b-41ad-bd63-bee6919810b4"
+    },
+    "ValueSet.expansion.timestamp": {
+      "value": "2015-07-14T10:00:00Z"
+    },
+    "ValueSet.expansion.contains": [
+      {
+        "ValueSet.expansion.contains.system": {
+          "value": "http://hl7.org/fhir/v2/0136"
+        },
+        "ValueSet.expansion.contains.code": {
+          "value": "Y"
+        },
+        "ValueSet.expansion.contains.display": {
+          "value": "Yes"
+        }
+      },
+      {
+        "ValueSet.expansion.contains.system": {
+          "value": "http://hl7.org/fhir/v2/0136"
+        },
+        "ValueSet.expansion.contains.code": {
+          "value": "N"
+        },
+        "ValueSet.expansion.contains.display": {
+          "value": "No"
+        }
+      },
+      {
+        "ValueSet.expansion.contains.system": {
+          "value": "http://hl7.org/fhir/data-absent-reason"
+        },
+        "ValueSet.expansion.contains.code": {
+          "value": "asked"
+        },
+        "ValueSet.expansion.contains.display": {
+          "value": "Don't know"
+        }
+      }
+    ]
+  }
+}

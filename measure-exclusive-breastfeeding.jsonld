@@ -1,0 +1,188 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Measure",
+  "resourceType": "Measure",
+  "Resource.id": {
+    "value": "measure-exclusive-breastfeeding"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Exclusive Breastfeeding Measure</div>"
+    }
+  },
+  "Measure.moduleMetadata": {
+    "ModuleMetadata.identifier": [
+      {
+        "Identifier.use": {
+          "value": "official"
+        },
+        "Identifier.value": {
+          "value": "exclusive-breastfeeding-measure"
+        }
+      }
+    ],
+    "ModuleMetadata.version": {
+      "value": "1.0.0"
+    },
+    "ModuleMetadata.title": {
+      "value": "Exclusive Breastfeeding Measure"
+    },
+    "ModuleMetadata.type": {
+      "value": "decision-support-rule"
+    },
+    "ModuleMetadata.status": {
+      "value": "active"
+    },
+    "ModuleMetadata.description": {
+      "value": "Exclusive breastfeeding measure of outcomes for exclusive breastmilk feeding of newborns."
+    },
+    "ModuleMetadata.publicationDate": {
+      "value": "2015-03-08"
+    },
+    "ModuleMetadata.topic": [
+      {
+        "CodeableConcept.text": {
+          "value": "Exclusive Breastfeeding"
+        }
+      }
+    ]
+  },
+  "Measure.library": [
+    {
+      "Reference.reference": {
+        "value": "Library/library-exclusive-breastfeeding-cqm-logic"
+      }
+    }
+  ],
+  "Measure.type": [
+    {
+      "value": "outcome"
+    }
+  ],
+  "Measure.group": [
+    {
+      "Measure.group.identifier": {
+        "Identifier.value": {
+          "value": "Population Group 1"
+        }
+      },
+      "Measure.group.population": [
+        {
+          "Measure.group.population.type": {
+            "value": "initial-population"
+          },
+          "Measure.group.population.identifier": {
+            "Identifier.value": {
+              "value": "initial-population-1-identifier"
+            }
+          },
+          "Measure.group.population.criteria": {
+            "value": "InitialPopulation1"
+          }
+        },
+        {
+          "Measure.group.population.type": {
+            "value": "denominator"
+          },
+          "Measure.group.population.identifier": {
+            "Identifier.value": {
+              "value": "denominator-1-identifier"
+            }
+          },
+          "Measure.group.population.criteria": {
+            "value": "Denominator1"
+          }
+        },
+        {
+          "Measure.group.population.type": {
+            "value": "denominator-exclusion"
+          },
+          "Measure.group.population.identifier": {
+            "Identifier.value": {
+              "value": "denominator-exclusions-1-identifier"
+            }
+          },
+          "Measure.group.population.criteria": {
+            "value": "DenominatorExclusions1"
+          }
+        },
+        {
+          "Measure.group.population.type": {
+            "value": "numerator"
+          },
+          "Measure.group.population.identifier": {
+            "Identifier.value": {
+              "value": "numerator-1-identifier"
+            }
+          },
+          "Measure.group.population.criteria": {
+            "value": "Numerator1"
+          }
+        }
+      ]
+    },
+    {
+      "Measure.group.identifier": {
+        "Identifier.value": {
+          "value": "Population Group 2"
+        }
+      },
+      "Measure.group.population": [
+        {
+          "Measure.group.population.type": {
+            "value": "initial-population"
+          },
+          "Measure.group.population.identifier": {
+            "Identifier.value": {
+              "value": "initial-population-2-identifier"
+            }
+          },
+          "Measure.group.population.criteria": {
+            "value": "InitialPopulation2"
+          }
+        },
+        {
+          "Measure.group.population.type": {
+            "value": "denominator"
+          },
+          "Measure.group.population.identifier": {
+            "Identifier.value": {
+              "value": "denominator-2-identifier"
+            }
+          },
+          "Measure.group.population.criteria": {
+            "value": "Denominator2"
+          }
+        },
+        {
+          "Measure.group.population.type": {
+            "value": "denominator-exclusion"
+          },
+          "Measure.group.population.identifier": {
+            "Identifier.value": {
+              "value": "denominator-exclusions-2-identifier"
+            }
+          },
+          "Measure.group.population.criteria": {
+            "value": "DenominatorExclusions2"
+          }
+        },
+        {
+          "Measure.group.population.type": {
+            "value": "numerator"
+          },
+          "Measure.group.population.identifier": {
+            "Identifier.value": {
+              "value": "numerator-2-identifier"
+            }
+          },
+          "Measure.group.population.criteria": {
+            "value": "Numerator2"
+          }
+        }
+      ]
+    }
+  ]
+}

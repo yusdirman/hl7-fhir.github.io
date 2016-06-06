@@ -1,0 +1,90 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Organization",
+  "resourceType": "Organization",
+  "Resource.id": {
+    "value": "org-uslab-example3"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: org-uslab-example3</p><p><b>identifier</b>: 01D1111111 (OFFICIAL)</p><p><b>name</b>: Acme Labs</p><p><b>address</b>: Firstcare Way Building 2 Harrisburg PA 42043 USA (WORK)</p><h3>Contacts</h3><table><tr><td>-</td><td><b>Name</b></td></tr><tr><td>*</td><td>Gregory F House </td></tr></table></div>"
+    }
+  },
+  "Organization.identifier": [
+    {
+      "Identifier.use": {
+        "value": "official"
+      },
+      "Identifier.system": {
+        "value": "http://www.cms.gov/Regulations-and-Guidance/Legislation/CLIA/index.html"
+      },
+      "Identifier.value": {
+        "value": "01D1111111"
+      }
+    }
+  ],
+  "Organization.name": {
+    "value": "Acme Labs"
+  },
+  "Organization.address": [
+    {
+      "Address.use": {
+        "value": "work"
+      },
+      "Address.line": [
+        {
+          "value": "Firstcare Way"
+        },
+        {
+          "value": "Building 2"
+        }
+      ],
+      "Address.city": {
+        "value": "Harrisburg"
+      },
+      "Address.district": {
+        "value": "42043"
+      },
+      "Address.state": {
+        "value": "PA"
+      },
+      "Address.postalCode": {
+        "value": "42043"
+      },
+      "Address.country": {
+        "value": "USA"
+      }
+    }
+  ],
+  "Organization.contact": [
+    {
+      "Organization.contact.name": {
+        "HumanName.family": [
+          {
+            "value": "House"
+          }
+        ],
+        "HumanName.given": [
+          {
+            "value": "Gregory"
+          },
+          {
+            "value": "F"
+          }
+        ],
+        "HumanName.prefix": [
+          {
+            "value": "Dr"
+          }
+        ],
+        "HumanName.suffix": [
+          {
+            "value": "PhD"
+          }
+        ]
+      }
+    }
+  ]
+}

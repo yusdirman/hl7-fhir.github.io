@@ -1,0 +1,729 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Resource - FHIR v1.4.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link rel="stylesheet" href="fhir.css"/>
+  <link rel="Prev" href="http://hl7.org/fhir/resource-operations.html"/>
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="./dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="./assets/css/bootstrap-fhir.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href="./assets/css/project.css"/>
+  <link rel="stylesheet" href="./assets/css/pygments-manni.css"/>
+	<link rel="stylesheet" href="jquery-ui.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif] -->
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment">  <!-- segment-header -->	
+		<div class="container">  <!-- container -->
+			<a no-external="true" id="logo" href="http://hl7.org/fhir"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a no-external="true" id="hl7-logo" href="http://www.hl7.org">
+					<img src="./assets/images/hl7-logo.png" width="42" alt="visit the hl7 website" height="50"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a no-external="true" id="hl7-logo" href="http://hl7.org/fhir/search.cfm"><img src="./assets/images/search.png" alt="Search FHIR"/></a></div> 
+		</div>
+		<div class="container">  <!-- container -->
+	</div></div>  <!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+ 	      		
+ 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="documentation.html">Documentation</a></li>
+              <li><a href="implementation.html">Implementation</a></li>
+              <li><a href="resourcelist.html">Resources</a></li>
+              <li><a href="clinical.html">Clinical</a></li>
+              <li><a href="administration.html">Administrative</a></li>
+              <li><a href="infrastructure.html">Infrastructure</a></li>
+              <li><a href="financial.html">Financial</a></li>
+
+						</ul>
+					</div>  <!-- /.nav-collapse -->
+				</div>  <!-- /.container -->
+			</nav>  <!-- /.navbar -->
+      		
+				
+  <!-- /HEADER CONTENT -->				
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+		<div class="container">  <!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="documentation.html">Documentation</a></li>        <li><a href="resource.html">Resource</a></li>        <li><b>Operations</b></li>          <!-- resource.html / res-Operations / Resource -->
+
+			</ul>	
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment">  <!-- segment-content -->
+	<div class="container">  <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<ul class="nav nav-tabs"><li><a href="resource.html">Content</a></li><li><a href="resource-definitions.html">Detailed Descriptions</a></li><li class="active"><a href="#">Operations</a></li></ul>
+
+<h2><span class="sectioncount">1.11.6<a name="1.11.6"> </a></span> Resource Resource - Operations <a href="resource-operations.html#1.11.6" title="link to here" class="self-link"><img src="target.png"/></a></h2>
+
+<p>
+This resource has 5 operations associated with it:
+</p>
+<table class="list">
+<tr><td><a href="#validate">$validate</a></td><td>Validate a resource</td></tr>
+<tr><td><a href="#meta">$meta</a></td><td>Access a list of profiles, tags, and security labels</td></tr>
+<tr><td><a href="#meta-add">$meta-add</a></td><td>Add profiles, tags, and security labels to a resource</td></tr>
+<tr><td><a href="#meta-delete">$meta-delete</a></td><td>Delete profiles, tags, and security labels for a resource</td></tr>
+<tr><td><a href="#cds-hook">$cds-hook</a></td><td>The CDS Hook operation is the core API request for CDS Hooks</td></tr>
+</table>
+
+<p>
+For more information about operations, including how they are invoked, see <a href="operations.html">Operations</a>.
+</p>
+
+<h3><span class="sectioncount">1.11.6.1<a name="1.11.6.1"> </a></span> Validate a resource<a name="validate"> </a> <a href="resource-operations.html#1.11.6.1" title="link to here" class="self-link"><img src="target.png"/></a></h3>
+<p>The validate operation checks whether the attached content would be acceptable either generally, as a create, an update or as a delete to an existing resource.  The action the server takes depends on the mode parameter:<br/></p>
+<ul>
+<li>[mode not provided]: The server checks the content of the resource against any schema, constraint rules, and other general terminology rules</li>
+<li>create: The server checks the content, and then checks that the content would be acceptable as a create (e.g. that the content would not violate any uniqueness constraints)</li>
+<li>update: The server checks the content, and then checks that it would accept it as an update against the nominated specific resource (e.g. that there are no changes to immutable fields the server does not allow to change, and checking version integrity if appropriate)</li>
+<li>delete: The server ignores the content, and checks that the nominated resource is allowed to be deleted (e.g. checking referential integrity rules)<br/></li>
+</ul>
+<p>Modes update and delete can only be used when the operation is invoked at the resource instance level.   The return from this operation is an <a href="operationoutcome.html">OperationOutcome</a></p>
+
+<p><a href="operation-resource-validate.html">Formal Definition</a> (as a <a href="operationdefinition.html">OperationDefinition</a>).</p>
+<p>URL: [base]/Resource/$validate</p>
+<p>URL: [base]/Resource/[id]/$validate</p>
+<table class="grid">
+<tr><td colspan="5"><b>In Parameters:</b></td></tr>
+<tr><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Profile</b></td><td><b>Documentation</b></td></tr><tr><td>resource</td><td>0..1</td><td><a href="resource.html#Resource">Resource</a></td><td/><td/><td><p>Must be present unless the mode is &quot;delete&quot;</p>
+</td></tr><tr><td>mode</td><td>0..1</td><td> (<a href="datatypes.html#code">code</a></td><td><a href="valueset-resource-validation-mode.html">ResourceValidationMode</a> (<a href="terminologies.html#required">Required</a>)</td><td/><td><p>Default is 'no action'; (e.g. general validation)</p>
+</td></tr><tr><td>profile</td><td>0..1</td><td> (<a href="datatypes.html#uri">uri</a></td><td/><td/><td><p>If this is nominated, then the resource is validated against this specific profile. If a profile is nominated, and the server cannot validate against the nominated profile, it SHALL return an error</p>
+</td></tr><tr><td colspan="5"><b>Out Parameters:</b></td></tr>
+<tr><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Profile</b></td><td><b>Documentation</b></td></tr><tr><td>return</td><td>1..1</td><td><a href="operationoutcome.html">OperationOutcome</a></td><td/><td/><td><p>If the operation outcome does not list any errors, and a mode was specified, then this is an indication that the operation would be expected to succeed (excepting for transactional integrity issues, see below)</p>
+<p>Note: as this the only out parameter, it is a resource, and it has the name 'return', the result of this operation is returned directly as a resource</p></td></tr></table>
+<p>This operation may be used during design and development to validate application design. It can also be used at run-time. One possible use might be that a client asks the server whether a proposed update is valid as the user is editing a dialog and displays an updated error to the user. The operation can be used as part of a light-weight two phase commit protocol but there is no expectation that the server will hold the content of the resource after this operation is used, or that the server guarantees to successfully perform an actual create, update or delete after the validation operation completes.</p>
+<p>This operation returns a 200 OK whether or not the resource is valid. A 4xx or 5xx error means that the validation itself could not be performed, and it is unknown whether the resource is valid or not.</p>
+
+<h4><span class="sectioncount">1.11.6.1.1<a name="1.11.6.1.1"> </a></span> Examples <a href="resource-operations.html#1.11.6.1.1" title="link to here" class="self-link"><img src="target.png"/></a></h4>
+<p>Validate a Patient against the DAF patient profile using POST directly. (Request):</p>
+<pre>
+POST /open/Patient/$validate?profile=http://hl7.org/fhir/StructureDefinition/daf-patient
+[other headers]
+
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+
+&lt;Patient xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+  &lt;id value=&quot;us01&quot;/&gt;
+  &lt;text&gt;
+    &lt;status value=&quot;generated&quot;/&gt;
+    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+      
+      &lt;table&gt;
+        
+        &lt;tbody&gt;
+          
+          &lt;tr&gt;
+            
+            &lt;td&gt;Name&lt;/td&gt;
+            
+            &lt;td&gt;Peter James 
+              &lt;b&gt;Chalmers&lt;/b&gt; (&amp;quot;Jim&amp;quot;)
+            &lt;/td&gt;
+          
+          &lt;/tr&gt;
+          
+          &lt;tr&gt;
+            
+            &lt;td&gt;Address&lt;/td&gt;
+            
+            &lt;td&gt;534 Erewhon, Pleasantville, Orange County, 3999&lt;/td&gt;
+          
+          &lt;/tr&gt;
+          
+          &lt;tr&gt;
+            
+            &lt;td&gt;Contacts&lt;/td&gt;
+            
+            &lt;td&gt;Home: unknown. Work: (03) 5555 6473&lt;/td&gt;
+          
+          &lt;/tr&gt;
+          
+          &lt;tr&gt;
+            
+            &lt;td&gt;Id&lt;/td&gt;
+            
+            &lt;td&gt;MRN: 12345 (Acme Healthcare)&lt;/td&gt;
+          
+          &lt;/tr&gt;
+        
+        &lt;/tbody&gt;
+      
+      &lt;/table&gt;
+    
+    &lt;/div&gt;
+  &lt;/text&gt;
+  &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/us-core-race&quot;&gt;
+    &lt;valueCodeableConcept&gt;
+      &lt;coding&gt;
+        &lt;system value=&quot;http://hl7.org/fhir/v3/Race&quot;/&gt;
+        &lt;code value=&quot;1096-7&quot;/&gt;
+      &lt;/coding&gt;
+    &lt;/valueCodeableConcept&gt;
+  &lt;/extension&gt;
+  &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/us-core-ethnicity&quot;&gt;
+    &lt;valueCodeableConcept&gt;
+      &lt;coding&gt;
+        &lt;system value=&quot;http://hl7.org/fhir/v3/Ethnicity&quot;/&gt;
+        &lt;code value=&quot;2162-6&quot;/&gt;
+      &lt;/coding&gt;
+    &lt;/valueCodeableConcept&gt;
+  &lt;/extension&gt;
+  &lt;active value=&quot;true&quot;/&gt;
+&lt;!--  Peter James Chalmers, but called &quot;Jim&quot;  --&gt;
+  &lt;name&gt;
+    &lt;use value=&quot;official&quot;/&gt;
+    &lt;family value=&quot;Chalmers&quot;/&gt;
+    &lt;given value=&quot;Peter&quot;/&gt;
+    &lt;given value=&quot;James&quot;/&gt;
+  &lt;/name&gt;
+  &lt;telecom&gt;
+    &lt;system value=&quot;phone&quot;/&gt;
+    &lt;value value=&quot;(03) 5555 6473&quot;/&gt;
+    &lt;use value=&quot;work&quot;/&gt;
+  &lt;/telecom&gt;
+  &lt;telecom&gt;
+    &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/us-core-direct&quot;&gt;
+      &lt;valueBoolean value=&quot;true&quot;/&gt;
+    &lt;/extension&gt;
+    &lt;system value=&quot;email&quot;/&gt;
+    &lt;value value=&quot;person@example.org&quot;/&gt;
+    &lt;use value=&quot;work&quot;/&gt;
+  &lt;/telecom&gt;
+  &lt;address&gt;
+    &lt;use value=&quot;home&quot;/&gt;
+    &lt;line value=&quot;534 Erewhon St&quot;/&gt;
+    &lt;city value=&quot;PleasantVille&quot;/&gt;
+    &lt;district value=&quot;Orange County&quot;/&gt;
+    &lt;state value=&quot;Vic&quot;/&gt;
+    &lt;postalCode value=&quot;3999&quot;/&gt;
+  &lt;/address&gt;
+&lt;/Patient&gt;
+</pre>
+<p>Validate a proposed patient update - and for this example, using the Parameters syntax (Request):</p>
+<pre>
+
+POST /open/Patient/example/$validate
+[other headers]
+
+&lt;Parameters xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+  &lt;parameter&gt;
+    &lt;name value=&quot;mode&quot;/&gt;
+    &lt;valueCode value=&quot;update&quot;/&gt;
+  &lt;parameter&gt;
+  &lt;parameter&gt;
+    &lt;name value=&quot;mode&quot;/&gt;
+    &lt;resource&gt;
+      &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+      
+      &lt;Patient xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+        &lt;id value=&quot;example&quot;/&gt;
+        &lt;text&gt;
+          &lt;status value=&quot;generated&quot;/&gt;
+          &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+            
+            &lt;table&gt;
+              
+              &lt;tbody&gt;
+                
+                &lt;tr&gt;
+                  
+                  &lt;td&gt;Name&lt;/td&gt;
+                  
+                  &lt;td&gt;Peter James 
+                    &lt;b&gt;Chalmers&lt;/b&gt; (&amp;quot;Jim&amp;quot;)
+                  &lt;/td&gt;
+                
+                &lt;/tr&gt;
+                
+                &lt;tr&gt;
+                  
+                  &lt;td&gt;Address&lt;/td&gt;
+                  
+                  &lt;td&gt;534 Erewhon, Pleasantville, Vic, 3999&lt;/td&gt;
+                
+                &lt;/tr&gt;
+                
+                &lt;tr&gt;
+                  
+                  &lt;td&gt;Contacts&lt;/td&gt;
+                  
+                  &lt;td&gt;Home: unknown. Work: (03) 5555 6473&lt;/td&gt;
+                
+                &lt;/tr&gt;
+                
+                &lt;tr&gt;
+                  
+                  &lt;td&gt;Id&lt;/td&gt;
+                  
+                  &lt;td&gt;MRN: 12345 (Acme Healthcare)&lt;/td&gt;
+                
+                &lt;/tr&gt;
+              
+              &lt;/tbody&gt;
+            
+            &lt;/table&gt;    
+          
+          &lt;/div&gt;
+        &lt;/text&gt;
+      &lt;!--  MRN assigned by ACME healthcare on 6-May 2001  --&gt;
+        &lt;identifier&gt;
+          &lt;use value=&quot;usual&quot;/&gt;
+          &lt;type&gt;
+            &lt;coding&gt;
+              &lt;system value=&quot;http://hl7.org/fhir/v2/0203&quot;/&gt;
+              &lt;code value=&quot;MR&quot;/&gt;
+            &lt;/coding&gt;
+          &lt;/type&gt;
+          &lt;system value=&quot;urn:oid:1.2.36.146.595.217.0.1&quot;/&gt;
+          &lt;value value=&quot;12345&quot;/&gt;
+          &lt;period&gt;
+            &lt;start value=&quot;2001-05-06&quot;/&gt;
+          &lt;/period&gt;
+          &lt;assigner&gt;
+            &lt;display value=&quot;Acme Healthcare&quot;/&gt;
+          &lt;/assigner&gt;
+        &lt;/identifier&gt;
+        &lt;active value=&quot;true&quot;/&gt;
+      &lt;!--  Peter James Chalmers, but called &quot;Jim&quot;  --&gt;
+        &lt;name&gt;
+          &lt;use value=&quot;official&quot;/&gt;
+          &lt;family value=&quot;Chalmers&quot;/&gt;
+          &lt;given value=&quot;Peter&quot;/&gt;
+          &lt;given value=&quot;James&quot;/&gt;
+        &lt;/name&gt;
+        &lt;name&gt;
+          &lt;use value=&quot;usual&quot;/&gt;
+          &lt;given value=&quot;Jim&quot;/&gt;
+        &lt;/name&gt;
+        &lt;telecom&gt;
+          &lt;use value=&quot;home&quot;/&gt;
+        &lt;!--  home communication details aren't known  --&gt;
+        &lt;/telecom&gt;
+        &lt;telecom&gt;
+          &lt;system value=&quot;phone&quot;/&gt;
+          &lt;value value=&quot;(03) 5555 6473&quot;/&gt;
+          &lt;use value=&quot;work&quot;/&gt;
+        &lt;/telecom&gt;
+      &lt;!--  use FHIR code system for male / female  --&gt;
+        &lt;gender value=&quot;male&quot;/&gt;
+        &lt;birthDate value=&quot;1974-12-25&quot;&gt;
+          &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/patient-birthTime&quot;&gt;
+            &lt;valueDateTime value=&quot;1974-12-25T14:35:45-05:00&quot;/&gt;
+          &lt;/extension&gt;
+        &lt;/birthDate&gt;
+        &lt;deceasedBoolean value=&quot;false&quot;/&gt;
+        &lt;address&gt;
+          &lt;use value=&quot;home&quot;/&gt;
+          &lt;type value=&quot;both&quot;/&gt;
+          &lt;line value=&quot;534 Erewhon St&quot;/&gt;
+          &lt;city value=&quot;PleasantVille&quot;/&gt;
+          &lt;district value=&quot;Rainbow&quot;/&gt;
+          &lt;state value=&quot;Vic&quot;/&gt;
+          &lt;postalCode value=&quot;3999&quot;/&gt;
+          &lt;period&gt;
+            &lt;start value=&quot;1974-12-25&quot;/&gt;
+          &lt;/period&gt;
+        &lt;/address&gt;
+        &lt;contact&gt;
+          &lt;relationship&gt;
+            &lt;coding&gt;
+              &lt;system value=&quot;http://hl7.org/fhir/patient-contact-relationship&quot;/&gt;
+              &lt;code value=&quot;partner&quot;/&gt;
+            &lt;/coding&gt;
+          &lt;/relationship&gt;
+          &lt;name&gt;
+            &lt;family value=&quot;du&quot;&gt;
+            &lt;!--  the &quot;du&quot; part is a family name prefix (VV in iso 21090)  --&gt;
+              &lt;extension url=&quot;http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier&quot;&gt;
+                &lt;valueCode value=&quot;VV&quot;/&gt;
+              &lt;/extension&gt;
+            &lt;/family&gt;
+            &lt;family value=&quot;Marché&quot;/&gt;
+            &lt;given value=&quot;Bénédicte&quot;/&gt;
+          &lt;/name&gt;
+          &lt;telecom&gt;
+            &lt;system value=&quot;phone&quot;/&gt;
+            &lt;value value=&quot;+33 (237) 998327&quot;/&gt;
+          &lt;/telecom&gt;
+          &lt;gender value=&quot;female&quot;/&gt;
+          &lt;period&gt;
+          &lt;!--  The contact relationship started in 2012  --&gt;
+            &lt;start value=&quot;2012&quot;/&gt;
+          &lt;/period&gt;
+        &lt;/contact&gt;
+        &lt;managingOrganization&gt;
+          &lt;reference value=&quot;Organization/1&quot;/&gt;
+        &lt;/managingOrganization&gt;
+      &lt;/Patient&gt;
+    &lt;/resource&gt;
+  &lt;parameter&gt;
+&lt;/Parameters&gt;
+</pre>
+<p>Returned when the resource is valid (Response):</p>
+<pre>
+
+HTTP/1.1 200 OK
+[other headers]
+
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;OperationOutcome xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+  &lt;id value=&quot;allok&quot;/&gt;
+  &lt;text&gt;
+    &lt;status value=&quot;additional&quot;/&gt;
+    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+      &lt;p&gt;All OK&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/text&gt;
+  &lt;issue&gt; 
+    &lt;severity value=&quot;information&quot;/&gt;
+    &lt;code value=&quot;informational&quot;/&gt;
+    &lt;details&gt;
+      &lt;text value=&quot;All OK&quot;/&gt;
+    &lt;/details&gt;
+ &lt;/issue&gt;
+&lt;/OperationOutcome&gt;
+</pre>
+<p>Returned when the resource is not valid (Response):</p>
+<pre>
+
+HTTP/1.1 200 OK
+[other headers]
+
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;OperationOutcome xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+  &lt;id value=&quot;validationfail&quot;/&gt;
+  &lt;text&gt;
+    &lt;status value=&quot;generated&quot;/&gt;
+    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+      &lt;p&gt;Error parsing resource XML (Unknown Content &amp;quot;label&amp;quot; @ /Patient/identifier/label)&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/text&gt;
+  &lt;issue&gt;
+    &lt;severity value=&quot;error&quot;/&gt;
+    &lt;code value=&quot;structure&quot;/&gt;
+    &lt;details&gt;
+      &lt;text value=&quot;Error parsing resource XML (Unknown Content &amp;quot;label&amp;quot;&quot;/&gt;
+    &lt;/details&gt; 
+    &lt;location value=&quot;/f:Patient/f:identifier&quot;/&gt;    
+  &lt;/issue&gt;
+&lt;/OperationOutcome&gt;
+</pre>
+<p>&nbsp;</p><h3><span class="sectioncount">1.11.6.2<a name="1.11.6.2"> </a></span> Access a list of profiles, tags, and security labels<a name="meta"> </a> <a href="resource-operations.html#1.11.6.2" title="link to here" class="self-link"><img src="target.png"/></a></h3>
+<p>This operation retrieves a summary of the profiles, tags, and security labels for the given scope; e.g. for each scope:<br/></p>
+<ul>
+<li>system-wide: a list of all profiles, tags and security labels in use by the system</li>
+<li>resource-type level: A list of all profiles, tags, and security labels for the resource type</li>
+<li>individual resource level: A list of all profiles, tags, and security labels for the current version of the resource.  Also, as a special case, this operation (and other meta operations) can be performed on a historical version of a resource)</li>
+</ul>
+
+<p><a href="operation-resource-meta.html">Formal Definition</a> (as a <a href="operationdefinition.html">OperationDefinition</a>).</p>
+<p>URL: [base]/$meta</p>
+<p>URL: [base]/Resource/$meta</p>
+<p>URL: [base]/Resource/[id]/$meta</p>
+<table class="grid">
+<tr><td colspan="5"><b>Out Parameters:</b></td></tr>
+<tr><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Profile</b></td><td><b>Documentation</b></td></tr><tr><td>return</td><td>1..1</td><td><a href="resource.html#Meta">Meta</a></td><td/><td/><td><p>The meta returned by the operation</p>
+</td></tr></table>
+<p>At the system and type levels, the $meta operation is used to get a summary of all the labels that are in use across the system. The principle use for this operation is to support search e.g. what tags can be searched for. At these levels, the meta will not contain versionId, lastUpdated etc. Systems are not obligated to implement the operation at this level (and should return a 4xx error if they don't). At the resource and historical entry level, the $meta operation returns the same meta as would be returned by accessing the resource directly. This can be used to allow a system to get access to the meta-information for the resource without accessing the resource itself, e.g. for security reasons</p>
+
+<h4><span class="sectioncount">1.11.6.2.1<a name="1.11.6.2.1"> </a></span> Examples <a href="resource-operations.html#1.11.6.2.1" title="link to here" class="self-link"><img src="target.png"/></a></h4>
+<p>Get all the tags, profiles, and security labels used on patient resources (Request):</p>
+<pre>
+
+GET /fhir/Patient/$meta
+</pre>
+<p>All the tags, profiles, and security labels used on patient resources (Response):</p>
+<pre>
+
+HTTP/1.1 200 OK
+[other headers]
+
+&lt;Parameters&gt;
+  &lt;parameter&gt;
+    &lt;name value=&quot;return&quot;/&gt;
+    &lt;valueMeta&gt;
+      &lt;profile value=&quot;http://hl7.org/fhir/StructureDefinition/daf-patient&quot;/&gt;
+      &lt;profile value=&quot;http://hl7.org/fhir/StructureDefinition/uslab-patient&quot;/&gt;
+      &lt;security&gt;
+        &lt;system value=&quot;http://hl7.org/fhir/v3/ActCode&quot;/&gt;
+        &lt;code value=&quot;EMP&quot;/&gt;
+        &lt;display value=&quot;employee information sensitivity&quot;/&gt;
+      &lt;/security&gt;
+      &lt;tag&gt;
+        &lt;system value=&quot;http://example.org/codes/tags&quot;/&gt;
+        &lt;code value=&quot;current&quot;/&gt;
+        &lt;display value=&quot;Current Inpatient&quot;/&gt;
+      &lt;/tag&gt;
+    &lt;/valueMeta&gt;
+  &lt;/parameter&gt;
+&lt;/Parameters&gt;
+</pre>
+<p>&nbsp;</p><h3><span class="sectioncount">1.11.6.3<a name="1.11.6.3"> </a></span> Add profiles, tags, and security labels to a resource<a name="meta-add"> </a> <a href="resource-operations.html#1.11.6.3" title="link to here" class="self-link"><img src="target.png"/></a></h3>
+<p>This operation takes a meta, and adds the profiles, tags, and security labels found in it to the nominated resource.   This operation can also be used on historical entries - to update them without creating a different historical version</p>
+
+<p><a href="operation-resource-meta-add.html">Formal Definition</a> (as a <a href="operationdefinition.html">OperationDefinition</a>).</p>
+<p>URL: [base]/Resource/[id]/$meta-add</p>
+<table class="grid">
+<tr><td colspan="5"><b>In Parameters:</b></td></tr>
+<tr><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Profile</b></td><td><b>Documentation</b></td></tr><tr><td>meta</td><td>1..1</td><td><a href="resource.html#Meta">Meta</a></td><td/><td/><td><p>Profiles, tags, and security labels to add to the existing resource. Note that profiles, tags, and security labels are sets, and duplicates are not created.  The identity of a tag or security label is the system+code. When matching existing tags during adding, version and display are ignored. For profiles, matching is based on the full URL</p>
+</td></tr><tr><td colspan="5"><b>Out Parameters:</b></td></tr>
+<tr><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Profile</b></td><td><b>Documentation</b></td></tr><tr><td>return</td><td>1..1</td><td><a href="resource.html#Meta">Meta</a></td><td/><td/><td><p>Resulting meta for the resource</p>
+</td></tr></table>
+<p>This operation is special in that executing this operation does not cause a new version of the resource to be created. The meta is updated directly. This is because the content in meta does not affect the meaning of the resource, and the security labels (in particular) are used to apply access rules to existing versions of resources</p>
+
+<h4><span class="sectioncount">1.11.6.3.1<a name="1.11.6.3.1"> </a></span> Examples <a href="resource-operations.html#1.11.6.3.1" title="link to here" class="self-link"><img src="target.png"/></a></h4>
+<p>Add a 'paper record lost' tag to a resource (Request):</p>
+<pre>
+
+POST /fhir/Patient/example/$meta-add
+[Other headers]
+
+&lt;Parameters&gt;
+  &lt;parameter&gt;
+    &lt;name value=&quot;meta&quot;/&gt;
+    &lt;valueMeta&gt;
+      &lt;tag&gt;
+        &lt;system value=&quot;http://example.org/codes/tags&quot;/&gt;
+        &lt;code value=&quot;record-lost&quot;/&gt;
+        &lt;display value=&quot;Patient File Lost&quot;/&gt;
+      &lt;/tag&gt;
+    &lt;/valueMeta&gt;
+  &lt;/parameter&gt;
+&lt;/Parameters&gt;
+</pre>
+<p>All the tags, profiles, and security labels used on patient resources (Response):</p>
+<pre>
+
+HTTP/1.1 200 OK
+[other headers]
+
+&lt;Parameters&gt;
+  &lt;parameter&gt;
+    &lt;name value=&quot;return&quot;/&gt;
+    &lt;valueMeta&gt;
+      &lt;profile value=&quot;http://hl7.org/fhir/StructureDefinition/daf-patient&quot;/&gt;
+      &lt;tag&gt;
+        &lt;system value=&quot;http://example.org/codes/tags&quot;/&gt;
+        &lt;code value=&quot;current&quot;/&gt;
+        &lt;display value=&quot;Current Inpatient&quot;/&gt;
+      &lt;/tag&gt;
+      &lt;tag&gt;
+        &lt;system value=&quot;http://example.org/codes/tags&quot;/&gt;
+        &lt;code value=&quot;record-lost&quot;/&gt;
+        &lt;display value=&quot;Patient File Lost&quot;/&gt;
+      &lt;/tag&gt;    
+    &lt;/valueMeta&gt;
+  &lt;/parameter&gt;
+&lt;/Parameters&gt;
+</pre>
+<p>&nbsp;</p><h3><span class="sectioncount">1.11.6.4<a name="1.11.6.4"> </a></span> Delete profiles, tags, and security labels for a resource<a name="meta-delete"> </a> <a href="resource-operations.html#1.11.6.4" title="link to here" class="self-link"><img src="target.png"/></a></h3>
+<p>This operation takes a meta, and deletes the profiles, tags, and security labels found in it from the nominated resource.   This operation can also be used on historical entries</p>
+
+<p><a href="operation-resource-meta-delete.html">Formal Definition</a> (as a <a href="operationdefinition.html">OperationDefinition</a>).</p>
+<p>URL: [base]/Resource/[id]/$meta-delete</p>
+<table class="grid">
+<tr><td colspan="5"><b>In Parameters:</b></td></tr>
+<tr><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Profile</b></td><td><b>Documentation</b></td></tr><tr><td>meta</td><td>1..1</td><td><a href="resource.html#Meta">Meta</a></td><td/><td/><td><p>Profiles, tags, and security labels to delete from the existing resource. It is not an error if these tags, profiles, and labels do not exist.  The identity of a tag or security label is the system+code. When matching existing tags during deletion, version and display are ignored. For profiles, matching is based on the full URL</p>
+</td></tr><tr><td colspan="5"><b>Out Parameters:</b></td></tr>
+<tr><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Profile</b></td><td><b>Documentation</b></td></tr><tr><td>return</td><td>1..1</td><td><a href="resource.html#Meta">Meta</a></td><td/><td/><td><p>Resulting meta for the resource</p>
+</td></tr></table>
+<p>This operation is special in that executing this operation does not cause a new version of the resource to be created. The meta is updated directly. This is because the content in meta does not affect the meaning of the resource, and the security labels (in particular) are used to apply access rules to existing versions of resources</p>
+
+<h4><span class="sectioncount">1.11.6.4.1<a name="1.11.6.4.1"> </a></span> Examples <a href="resource-operations.html#1.11.6.4.1" title="link to here" class="self-link"><img src="target.png"/></a></h4>
+<p>Remove the 'current patient' tag from a resource (Request):</p>
+<pre>
+
+POST /fhir/Patient/example/$meta-delete
+[Other headers]
+
+&lt;Parameters&gt;
+  &lt;parameter&gt;
+    &lt;name value=&quot;meta&quot;/&gt;
+    &lt;valueMeta&gt;
+      &lt;tag&gt;
+        &lt;system value=&quot;http://example.org/codes/tags&quot;/&gt;
+        &lt;code value=&quot;current&quot;/&gt;
+        &lt;display value=&quot;Current Inpatient&quot;/&gt;
+      &lt;/tag&gt;
+    &lt;/valueMeta&gt;
+  &lt;/parameter&gt;
+&lt;/Parameters&gt;
+</pre>
+<p>All the tags, profiles, and security labels used on patient resources (Response):</p>
+<pre>
+
+HTTP/1.1 200 OK
+[other headers]
+
+&lt;Parameters&gt;
+  &lt;parameter&gt;
+    &lt;name value=&quot;return&quot;/&gt;
+    &lt;valueMeta&gt;
+      &lt;profile value=&quot;http://hl7.org/fhir/StructureDefinition/daf-patient&quot;/&gt;
+      &lt;tag&gt;
+        &lt;system value=&quot;http://example.org/codes/tags&quot;/&gt;
+        &lt;code value=&quot;record-lost&quot;/&gt;
+        &lt;display value=&quot;Patient File Lost&quot;/&gt;
+      &lt;/tag&gt;    
+    &lt;/valueMeta&gt;
+  &lt;/parameter&gt;
+&lt;/Parameters&gt;
+</pre>
+<p>&nbsp;</p><h3><span class="sectioncount">1.11.6.5<a name="1.11.6.5"> </a></span> The CDS Hook operation is the core API request for CDS Hooks<a name="cds-hook"> </a> <a href="resource-operations.html#1.11.6.5" title="link to here" class="self-link"><img src="target.png"/></a></h3>
+<p>It represents an outbound call from the EHR, in the context of a user session, and in the context of a specific activity within that user sesssion (e.g. opening a patient record; prescribing a new med; or reviewing orders before signing them).</p>
+
+<p><a href="operation-resource-cds-hook.html">Formal Definition</a> (as a <a href="operationdefinition.html">OperationDefinition</a>).</p>
+<p>URL: [base]/$cds-hook</p>
+<table class="grid">
+<tr><td colspan="5"><b>In Parameters:</b></td></tr>
+<tr><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Profile</b></td><td><b>Documentation</b></td></tr><tr><td>activity</td><td>1..1</td><td><a href="datatypes.html#Coding">Coding</a></td><td/><td/><td><p>Name of the Activity (expressed as a coding, preferably drawn from SMART's activity catalog) that the user is performing in the EHR, and for which this hook was triggered (e.g. patient-view, or medication-prescribe)</p>
+</td></tr><tr><td>activityInstance</td><td>1..1</td><td> (<a href="datatypes.html#string">string</a></td><td/><td/><td><p>While working in the EHR, a user can perform multiple activities in series or in parallel. For example, a clinician might prescribe two drugs in a row; each prescription activity would be assigned a unique activityInstance. The activity catalog provides a description of what events should initiate and terminate a given activity. This allows an external service to associate requests with activity state, which is necessary to support the following app-centric decision sequence, where the steps are tied together by a common activityInstance:</p>
+<p>EHR invokes CDS hook
+CDS service returns app link card
+User clicks app link and interacts with app
+Flow returns to EHR, which re-invokes CDS hook
+CDS service returns decision with user's choice
+Note: the activityInstance is globally unique and should contain enough entropy to be un-guessable.</p>
+</td></tr><tr><td>fhirServer</td><td>0..1</td><td> (<a href="datatypes.html#uri">uri</a></td><td/><td/><td><p>Base URL for the calling EHR's FHIR server. The scheme should be https</p>
+</td></tr><tr><td>oauth</td><td>0..1</td><td/><td/><td/><td><p>Security details allowing the CDS service to connect to the EHR's FHIR server. These fields allow the CDS service to access EHR data in a context limited by the current user's privileges</p>
+</td></tr><tr><td>oauth.token</td><td>1..1</td><td> (<a href="datatypes.html#string">string</a></td><td/><td/><td><p>is a bearer token to be presented with any API calls the CDS service makes to the EHR, by including it in an Authorization header like:</p>
+<p>Authorization: Bearer {{token}}</p>
+</td></tr><tr><td>oauth.scope</td><td>1..1</td><td> (<a href="datatypes.html#string">string</a></td><td/><td/><td><p>Represents the set of scopes assigned to this token (see SMART on FHIR scopes)</p>
+</td></tr><tr><td>oauth.expires</td><td>1..1</td><td> (<a href="datatypes.html#integer">integer</a></td><td/><td/><td><p>Expresses the token lifetime as an integer number of seconds</p>
+</td></tr><tr><td>redirect</td><td>1..1</td><td> (<a href="datatypes.html#uri">uri</a></td><td/><td/><td><p>This field is only used by services that will return an app link card: when a user clicks the card's link to launch an app, it becomes the app's job to send the user to this redirect URL upon completion of user interaction. (Design note: this field is supplied up-front, as part of the initial request, to avoid requiring the EHR to append any content to app launch links. This helps support an important &quot;degenerate&quot; use case for app link cards: pointing to static content. See below for details.)</p>
+</td></tr><tr><td>user</td><td>0..1</td><td> (<a href="datatypes.html#string">string</a></td><td/><td/><td/></tr><tr><td>patient</td><td>0..1</td><td> (<a href="datatypes.html#id">id</a></td><td/><td/><td><p>The FHIR resource id of the current patient. For example, 123.</p>
+</td></tr><tr><td>encounter</td><td>0..1</td><td> (<a href="datatypes.html#id">id</a></td><td/><td/><td><p>The FHIR resource id of the current encounter. For example, 123</p>
+</td></tr><tr><td>context</td><td>0..*</td><td>Any</td><td/><td/><td><p>activity-specific contextual data (see Activity) that an external service needs. (For exampe, with the order-review activity this will include MedicationOrder and Diagnostic resources, among others)</p>
+</td></tr><tr><td>preFetchData</td><td>0..1</td><td><a href="bundle.html">Bundle</a></td><td/><td/><td><p>as a performance tweak, the EHR may pass along data according to the service's Prefetch-Template. This helps provide the service with all the data it needs to efficiently compute a set of recommendations. (Note that in the absence of preFetchData, an external service can always execute FHIR REST API calls against the EHR server to obtain additional data ad-hoc.)</p>
+</td></tr><tr><td>card</td><td>1..1</td><td/><td/><td/><td><p>one CDS result for the EHR to present to the user. Cards can provide a combination of information (for reading), suggested actions (to be applied if a user selects them), and links (to launch an app if the user selects them). The EHR decides how to display cards, but we recommend displaying suggestions using buttons, and links using underlined text.</p>
+</td></tr><tr><td>card.summary</td><td>1..1</td><td> (<a href="datatypes.html#string">string</a></td><td/><td/><td><p>one-sentence, &lt;140-character summary message for display to the user inside of this card.</p>
+</td></tr><tr><td>card.detail</td><td>0..1</td><td> (<a href="datatypes.html#string">string</a></td><td/><td/><td><p>optional detailed information to display, represented in Markdown. (For non-urgent cards, the EHR may hide these details until the user clicks a link like &quot;view more details...&quot;.)</p>
+</td></tr><tr><td>card.indicator</td><td>1..1</td><td> (<a href="datatypes.html#code">code</a></td><td/><td/><td><p>Urgency/importance of what this card conveys. Allowed values, in order of increasing urgency, are: success, info, warning, hard-stop. The EHR can use this field to help make UI display decisions such as sort order or coloring. The value hard-stop indicates that the workflow should not be allowed to proceed.R[-12]C</p>
+</td></tr><tr><td>card.source</td><td>1..1</td><td/><td/><td/><td><p>grouping structure for a short, human-readable description (in source.label) of the source of the information displayed on this card, with an optional link (in source.url) where the user can learn more about the organization or data set that provided the information on this card. Note that source.url should not be used to supply a context-specific &quot;drill-down&quot; view of the information on this card. For that, use link.url instead.</p>
+</td></tr><tr><td>card.source.label</td><td>1..1</td><td> (<a href="datatypes.html#string">string</a></td><td/><td/><td><p>human-readable description (in source.label) of the source of the information displayed on this card</p>
+</td></tr><tr><td>card.source.url</td><td>0..1</td><td> (<a href="datatypes.html#uri">uri</a></td><td/><td/><td><p>Link (in source.url) where the user can learn more about the organization or data set that provided the information on this card</p>
+</td></tr><tr><td>card.suggestion</td><td>0..*</td><td/><td/><td/><td><p>grouping structure for suggestion cards, which allow a service to suggest a set of changes in the context of the current activity (e.g. changing the dose of the medication currently being prescribed, for the medication-prescribe activity)</p>
+</td></tr><tr><td>card.suggestion.label</td><td>0..1</td><td> (<a href="datatypes.html#string">string</a></td><td/><td/><td><p>human-readable label to display for this suggestion (e.g. the EHR might render this as the text on a button tied to this suggestion).</p>
+</td></tr><tr><td>card.suggestion.create</td><td>0..*</td><td><a href="resource.html#Resource">Resource</a></td><td/><td/><td><p>new resource(s) that this suggestion applies within the current activity (e.g. for medication-prescribe, this holds the updated prescription as proposed by the suggestion).</p>
+</td></tr><tr><td>card.suggestion.delete</td><td>0..*</td><td> (<a href="datatypes.html#id">id</a></td><td/><td/><td><p>id(s) of any resources to remove from the current activity (e.g. for the order-review activity, this would provide a way to remove orders from the pending list). In activities like medication-prescribe where only one &quot;content&quot; resource is ever relevant, this field may be omitted</p>
+</td></tr><tr><td>card.link</td><td>0..*</td><td/><td/><td/><td><p>grouping structure for a link to an app that the user might want to run for additional information or to help guide a decision</p>
+</td></tr><tr><td>card.link.label</td><td>0..1</td><td> (<a href="datatypes.html#string">string</a></td><td/><td/><td><p>human-readable label to display for this link (e.g. the EHR might render this as the underlined text of a clickable link)</p>
+</td></tr><tr><td>card.link.url</td><td>0..1</td><td> (<a href="datatypes.html#uri">uri</a></td><td/><td/><td><p>URL to load when a user clicks on this link. Note that this may be a &quot;deep link&quot; with context embedded in path segments, query parameters, or a hash. In general this URL should embed enough context for the app to determine the activityInstance, and redirect url upon downstream launch, because the EHR will simply use this url as-is, without appending any parameters at launch time.</p>
+</td></tr><tr><td colspan="5"><b>Out Parameters:</b></td></tr>
+<tr><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Profile</b></td><td><b>Documentation</b></td></tr><tr><td>decision</td><td>0..*</td><td/><td/><td/><td><p>grouping structure representing a decision to be applied directly to the user session. Note that a CDS service may only return a decision after interacting with the user through an app link. Decisions are designed to convey any choices the user made in an app session</p>
+</td></tr><tr><td>decision.create</td><td>0..*</td><td><a href="resource.html#Resource">Resource</a></td><td/><td/><td><p>new resource(s) that the EHR should create within the current activity (e.g. for medication-prescribe, this would be the updated prescription that a user had authored in an app session).</p>
+</td></tr><tr><td>decision.delete</td><td>0..*</td><td> (<a href="datatypes.html#id">id</a></td><td/><td/><td><p>id(s) of any resources to remove from the current activity (e.g. for the order-review activity, this would provide a way to remove orders from the pending list). In activities like medication-prescribe where only one &quot;content&quot; resource is ever relevant, this field may be omitted</p>
+</td></tr></table>
+
+<p>&nbsp;</p>
+
+</div>
+
+
+				</div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+        
+    </div>  <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">  <!-- segment-footer -->
+		<div class="container">  <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.4.0-8453) generated on Mon, Jun 6, 2016 20:20+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img src="external.png" style="text-align: baseline"/></a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fresource-operations.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fresource-operations.html">Compare to DSTU2 <img src="external.png" style="text-align: baseline"/></a> |                
+               <a rel="license" style="color: #81BEF7" href="license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a> | 
+               <a style="color: #81BEF7" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank">Propose a change <img src="external.png" style="text-align: baseline"/></a>   
+        </span>
+        </p>
+			</div>  <!-- /inner-wrapper -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+    
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

@@ -1,0 +1,140 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/MedicationStatement",
+  "resourceType": "MedicationStatement",
+  "Resource.id": {
+    "value": "example005"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>Amoxicillin 250mg capsule - one capsule three times daily</p>\n    </div>"
+    }
+  },
+  "MedicationStatement.status": {
+    "value": "entered-in-error"
+  },
+  "MedicationStatement.medicationReference": {
+    "Reference.reference": {
+      "value": "Medication/MedicationExample6"
+    },
+    "reference": "http://hl7.org/fhir//Medication/MedicationExample6"
+  },
+  "MedicationStatement.patient": {
+    "Reference.reference": {
+      "value": "Patient/example"
+    },
+    "reference": "http://hl7.org/fhir//Patient/example"
+  },
+  "MedicationStatement.effectiveDateTime": {
+    "value": "2014-01-23"
+  },
+  "MedicationStatement.informationSource": {
+    "Reference.reference": {
+      "value": "Patient/example"
+    },
+    "reference": "http://hl7.org/fhir//Patient/example"
+  },
+  "MedicationStatement.dateAsserted": {
+    "value": "2015-02-22"
+  },
+  "MedicationStatement.wasNotTaken": {
+    "value": false
+  },
+  "MedicationStatement.reasonForUseCode": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "value": "http://snomed.info/sct"
+          },
+          "Coding.code": {
+            "value": "65363002"
+          },
+          "Coding.display": {
+            "value": "Otitis Media"
+          }
+        }
+      ]
+    }
+  ],
+  "MedicationStatement.note": [
+    {
+      "Annotation.text": {
+        "value": "Patient indicates they miss the occasional dose"
+      }
+    }
+  ],
+  "MedicationStatement.dosage": [
+    {
+      "MedicationStatement.dosage.text": {
+        "value": "one capsule three times daily"
+      },
+      "MedicationStatement.dosage.timing": {
+        "Timing.repeat": {
+          "Timing.repeat.frequency": {
+            "value": 3
+          },
+          "Timing.repeat.period": {
+            "value": 1
+          },
+          "Timing.repeat.periodUnit": {
+            "value": "d"
+          }
+        }
+      },
+      "MedicationStatement.dosage.asNeededBoolean": {
+        "value": false
+      },
+      "MedicationStatement.dosage.route": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "value": "260548002"
+            },
+            "Coding.display": {
+              "value": "Oral"
+            }
+          }
+        ],
+        "concept": "http://snomed.info/sct#260548002"
+      },
+      "MedicationStatement.dosage.doseQuantity": {
+        "Quantity.value": {
+          "value": 1
+        }
+      },
+      "MedicationStatement.dosage.maxDosePerPeriod": {
+        "Ratio.numerator": {
+          "Quantity.value": {
+            "value": 3
+          },
+          "Quantity.unit": {
+            "value": "capsules"
+          },
+          "Quantity.system": {
+            "value": "http://snomed.info/sct"
+          },
+          "Quantity.code": {
+            "value": "385055001"
+          }
+        },
+        "Ratio.denominator": {
+          "Quantity.value": {
+            "value": 1
+          },
+          "Quantity.system": {
+            "value": "http://unitsofmeasure.org"
+          },
+          "Quantity.code": {
+            "value": "d"
+          }
+        }
+      }
+    }
+  ]
+}

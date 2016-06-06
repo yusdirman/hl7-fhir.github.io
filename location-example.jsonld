@@ -1,0 +1,146 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Location",
+  "resourceType": "Location",
+  "Resource.id": {
+    "value": "1"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Burgers UMC, South Wing, second floor</div>"
+    }
+  },
+  "DomainResource.extension": [
+    {
+      "Extension.url": {
+        "value": "http://hl7.org/fhir/StructureDefinition/location-alias"
+      },
+      "Extension.valueString": {
+        "value": "Burgers University Medical Center, South Wing, second floor"
+      }
+    },
+    {
+      "Extension.url": {
+        "value": "http://hl7.org/fhir/StructureDefinition/location-alias"
+      },
+      "Extension.valueString": {
+        "value": "BU MC, SW, F2"
+      }
+    }
+  ],
+  "Location.identifier": [
+    {
+      "Identifier.value": {
+        "value": "B1-S.F2"
+      }
+    }
+  ],
+  "Location.status": {
+    "value": "active"
+  },
+  "Location.name": {
+    "value": "South Wing, second floor"
+  },
+  "Location.description": {
+    "value": "Second floor of the Old South Wing, formerly in use by Psychiatry"
+  },
+  "Location.mode": {
+    "value": "instance"
+  },
+  "Location.telecom": [
+    {
+      "ContactPoint.system": {
+        "value": "phone"
+      },
+      "ContactPoint.value": {
+        "value": "2328"
+      },
+      "ContactPoint.use": {
+        "value": "work"
+      }
+    },
+    {
+      "ContactPoint.system": {
+        "value": "fax"
+      },
+      "ContactPoint.value": {
+        "value": "2329"
+      },
+      "ContactPoint.use": {
+        "value": "work"
+      }
+    },
+    {
+      "ContactPoint.system": {
+        "value": "email"
+      },
+      "ContactPoint.value": {
+        "value": "second wing admissions"
+      }
+    },
+    {
+      "ContactPoint.system": {
+        "value": "other"
+      },
+      "ContactPoint.value": {
+        "value": "http://sampleorg.com/southwing"
+      },
+      "ContactPoint.use": {
+        "value": "work"
+      }
+    }
+  ],
+  "Location.address": {
+    "Address.use": {
+      "value": "work"
+    },
+    "Address.line": [
+      {
+        "value": "Galapagosweg 91, Building A"
+      }
+    ],
+    "Address.city": {
+      "value": "Den Burg"
+    },
+    "Address.postalCode": {
+      "value": "9105 PZ"
+    },
+    "Address.country": {
+      "value": "NLD"
+    }
+  },
+  "Location.physicalType": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/location-physical-type"
+        },
+        "Coding.code": {
+          "value": "wi"
+        },
+        "Coding.display": {
+          "value": "Wing"
+        }
+      }
+    ]
+  },
+  "Location.position": {
+    "Location.position.longitude": {
+      "value": -83.6945691
+    },
+    "Location.position.latitude": {
+      "value": 42.25475478
+    },
+    "Location.position.altitude": {
+      "value": 0
+    }
+  },
+  "Location.managingOrganization": {
+    "Reference.reference": {
+      "value": "Organization/f001"
+    },
+    "reference": "http://hl7.org/fhir//Organization/f001"
+  }
+}

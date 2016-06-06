@@ -1,0 +1,164 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://hl7.org/fhir/json-schema/Consent",
+  "$ref": "#/definitions/Consent",
+  "description": "see http://hl7.org/fhir/json.html#schema for information about the FHIR Json Schemas",
+  "definitions": {
+    "Consent": {
+      "allOf": [
+        {
+          "$ref": "DomainResource.schema.json/definitions/DomainResource"
+        },
+        {
+          "description": "A record of a healthcare consumer’s privacy policy, which is in accordance with governing jurisdictional and organization privacy policies that grant or withhold consent:.",
+          "properties": {
+            "resourceType": {
+              "description": "This is a Consent resource",
+              "type": "string",
+              "enum": [
+                "Consent"
+              ]
+            },
+            "identifier": {
+              "description": "Unique identifier for this Consent.",
+              "$ref": "Identifier.schema.json/definitions/Identifier"
+            },
+            "status": {
+              "description": "Indicates the current state of this consent.",
+              "type": "string",
+              "pattern": "[^\\s]+([\\s]?[^\\s]+)*"
+            },
+            "status_": {
+              "description": "Extensions for status",
+              "$ref": "Element.schema.json/definitions/Element"
+            },
+            "type": {
+              "description": "Type of Consent such as an insurance policy, real estate consent, a will, power of attorny, Privacy or Security policy , trust framework agreement, etc. opt-in, opt-out, etc.",
+              "$ref": "CodeableConcept.schema.json/definitions/CodeableConcept"
+            },
+            "issued": {
+              "description": "When this  Consent was issued.",
+              "type": "string",
+              "pattern": "-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\\.[0-9]+)?(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)?)?"
+            },
+            "issued_": {
+              "description": "Extensions for issued",
+              "$ref": "Element.schema.json/definitions/Element"
+            },
+            "applies": {
+              "description": "Relevant time or time-period when this Consent is applicable.",
+              "$ref": "Period.schema.json/definitions/Period"
+            },
+            "patient": {
+              "description": "The patent under which this consent applies.",
+              "$ref": "Reference.schema.json/definitions/Reference"
+            },
+            "authority": {
+              "description": "A recognized organizations, or jurisdictions formed for the purpose of achieving some form of collective action such as the promulgation, administration and enforcement of consents and policies.  When empty, there Consent is under the authority of he Patient alone.",
+              "type": "array",
+              "items": {
+                "$ref": "Reference.schema.json/definitions/Reference"
+              }
+            },
+            "domain": {
+              "description": "Recognized governance framework or system operating with a circumscribed scope in accordance with specified principles, policies, processes or procedures for managing rights, actions, or behaviors of parties or principals relative to resources.",
+              "type": "array",
+              "items": {
+                "$ref": "Reference.schema.json/definitions/Reference"
+              }
+            },
+            "recipient": {
+              "description": "Who or what is granted authority under this Consent.",
+              "type": "array",
+              "items": {
+                "$ref": "Reference.schema.json/definitions/Reference"
+              }
+            },
+            "grantor": {
+              "description": "Who grants the authority under this Consent. If empty, the grantor is assumed to be the Patient themselves.",
+              "$ref": "Reference.schema.json/definitions/Reference"
+            },
+            "data": {
+              "description": "The data covered by this consent.",
+              "type": "array",
+              "items": {
+                "$ref": "Reference.schema.json/definitions/Reference"
+              }
+            },
+            "action": {
+              "description": "Actions controlled by this Consent.",
+              "type": "array",
+              "items": {
+                "$ref": "CodeableConcept.schema.json/definitions/CodeableConcept"
+              }
+            },
+            "except": {
+              "description": "One or more exceptions to the base policy of this Consent.",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Consent.Except"
+              }
+            },
+            "contentAttachment": {
+              "description": "Consent legal text in human renderable form.",
+              "$ref": "Attachment.schema.json/definitions/Attachment"
+            },
+            "contentReference": {
+              "description": "Consent legal text in human renderable form.",
+              "$ref": "Reference.schema.json/definitions/Reference"
+            }
+          },
+          "required": [
+            "patient",
+            "type",
+            "resourceType"
+          ]
+        }
+      ]
+    },
+    "Consent.Except": {
+      "allOf": [
+        {
+          "$ref": "BackboneElement.schema.json/definitions/BackboneElement"
+        },
+        {
+          "description": "A record of a healthcare consumer’s privacy policy, which is in accordance with governing jurisdictional and organization privacy policies that grant or withhold consent:.",
+          "properties": {
+            "type": {
+              "description": "Type exception to the base Consent policy such as specific requirements, purposes for actions, obligations, prohibitions, e.g. life time maximum benefit.",
+              "$ref": "CodeableConcept.schema.json/definitions/CodeableConcept"
+            },
+            "period": {
+              "description": "Relevant time or time-period when this Consent Exception is applicable.",
+              "$ref": "Period.schema.json/definitions/Period"
+            },
+            "actor": {
+              "description": "An Actor subject to this exception.",
+              "type": "array",
+              "items": {
+                "$ref": "Reference.schema.json/definitions/Reference"
+              }
+            },
+            "data": {
+              "description": "The Reference of concern in the context of this exception of the agrement.",
+              "type": "array",
+              "items": {
+                "$ref": "Reference.schema.json/definitions/Reference"
+              }
+            },
+            "action": {
+              "description": "Action stipulated by this Consent Exception.",
+              "type": "array",
+              "items": {
+                "$ref": "CodeableConcept.schema.json/definitions/CodeableConcept"
+              }
+            }
+          },
+          "required": [
+            "type"
+          ]
+        }
+      ]
+    }
+  }
+}

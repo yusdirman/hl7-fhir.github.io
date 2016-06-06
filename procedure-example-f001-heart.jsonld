@@ -1,0 +1,132 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Procedure",
+  "resourceType": "Procedure",
+  "Resource.id": {
+    "value": "f001"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f001</p><p><b>subject</b>: <a>P. van de Heuvel</a></p><p><b>status</b>: completed</p><p><b>code</b>: Heart valve replacement <span>(Details : {SNOMED CT code '34068001' = 'Heart valve replacement (procedure)', given as 'Heart valve replacement'})</span></p><p><b>bodySite</b>: Heart valve structure <span>(Details : {SNOMED CT code '17401000' = 'Cardiac valve structure (body structure)', given as 'Heart valve structure'})</span></p><p><b>reason</b>: Heart valve disorder <span>(Details )</span></p><h3>Performers</h3><table><tr><td>-</td><td><b>Actor</b></td><td><b>Role</b></td></tr><tr><td>*</td><td><a>P. Voigt</a></td><td>Care role <span>(Details : {urn:oid:2.16.840.1.113883.2.4.15.111 code '01.000' = '??', given as 'Arts'})</span></td></tr></table><p><b>performed</b>: Jun 26, 2011 --&gt; Jun 27, 2011</p><p><b>encounter</b>: <a>Encounter/f001</a></p><p><b>outcome</b>: improved blood circulation <span>(Details )</span></p><p><b>report</b>: <a>Lab results blood test</a></p><p><b>followUp</b>: described in care plan <span>(Details )</span></p></div>"
+    }
+  },
+  "Procedure.subject": {
+    "Reference.reference": {
+      "value": "Patient/f001"
+    },
+    "Reference.display": {
+      "value": "P. van de Heuvel"
+    },
+    "reference": "http://hl7.org/fhir//Patient/f001"
+  },
+  "Procedure.status": {
+    "value": "completed"
+  },
+  "Procedure.code": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "value": "34068001"
+        },
+        "Coding.display": {
+          "value": "Heart valve replacement"
+        }
+      }
+    ],
+    "concept": "http://snomed.info/sct#34068001"
+  },
+  "Procedure.bodySite": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "value": "http://snomed.info/sct"
+          },
+          "Coding.code": {
+            "value": "17401000"
+          },
+          "Coding.display": {
+            "value": "Heart valve structure"
+          }
+        }
+      ]
+    }
+  ],
+  "Procedure.reasonCodeableConcept": {
+    "CodeableConcept.text": {
+      "value": "Heart valve disorder"
+    }
+  },
+  "Procedure.performer": [
+    {
+      "Procedure.performer.actor": {
+        "Reference.reference": {
+          "value": "Practitioner/f002"
+        },
+        "Reference.display": {
+          "value": "P. Voigt"
+        },
+        "reference": "http://hl7.org/fhir//Practitioner/f002"
+      },
+      "Procedure.performer.role": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "urn:oid:2.16.840.1.113883.2.4.15.111"
+            },
+            "Coding.code": {
+              "value": "01.000"
+            },
+            "Coding.display": {
+              "value": "Arts"
+            }
+          }
+        ],
+        "CodeableConcept.text": {
+          "value": "Care role"
+        }
+      }
+    }
+  ],
+  "Procedure.performedPeriod": {
+    "Period.start": {
+      "value": "2011-06-26"
+    },
+    "Period.end": {
+      "value": "2011-06-27"
+    }
+  },
+  "Procedure.encounter": {
+    "Reference.reference": {
+      "value": "Encounter/f001"
+    },
+    "reference": "http://hl7.org/fhir//Encounter/f001"
+  },
+  "Procedure.outcome": {
+    "CodeableConcept.text": {
+      "value": "improved blood circulation"
+    }
+  },
+  "Procedure.report": [
+    {
+      "Reference.reference": {
+        "value": "DiagnosticReport/f001"
+      },
+      "Reference.display": {
+        "value": "Lab results blood test"
+      }
+    }
+  ],
+  "Procedure.followUp": [
+    {
+      "CodeableConcept.text": {
+        "value": "described in care plan"
+      }
+    }
+  ]
+}

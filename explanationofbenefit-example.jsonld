@@ -1,0 +1,193 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/ExplanationOfBenefit",
+  "resourceType": "ExplanationOfBenefit",
+  "Resource.id": {
+    "value": "EB3500"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">A human-readable rendering of the ExplanationOfBenefit</div>"
+    }
+  },
+  "ExplanationOfBenefit.identifier": [
+    {
+      "Identifier.system": {
+        "value": "http://www.BenefitsInc.com/fhir/explanationofbenefit"
+      },
+      "Identifier.value": {
+        "value": "987654321"
+      }
+    }
+  ],
+  "ExplanationOfBenefit.claimReference": {
+    "Reference.reference": {
+      "value": "Claim/100150"
+    },
+    "reference": "http://hl7.org/fhir//Claim/100150"
+  },
+  "ExplanationOfBenefit.type": {
+    "value": "oral"
+  },
+  "ExplanationOfBenefit.created": {
+    "value": "2014-08-16"
+  },
+  "ExplanationOfBenefit.outcome": {
+    "Coding.system": {
+      "value": "http://hl7.org/fhir/remittanceoutcome"
+    },
+    "Coding.code": {
+      "value": "complete"
+    }
+  },
+  "ExplanationOfBenefit.disposition": {
+    "value": "Claim settled as per contract."
+  },
+  "ExplanationOfBenefit.organizationReference": {
+    "Reference.reference": {
+      "value": "Organization/2"
+    },
+    "reference": "http://hl7.org/fhir//Organization/2"
+  },
+  "ExplanationOfBenefit.patientReference": {
+    "Reference.reference": {
+      "value": "Patient/pat1"
+    },
+    "reference": "http://hl7.org/fhir//Patient/pat1"
+  },
+  "ExplanationOfBenefit.coverage": {
+    "ExplanationOfBenefit.coverage.coverageReference": {
+      "Reference.reference": {
+        "value": "Coverage/9876B1"
+      },
+      "reference": "http://hl7.org/fhir//Coverage/9876B1"
+    }
+  },
+  "ExplanationOfBenefit.item": [
+    {
+      "ExplanationOfBenefit.item.sequence": {
+        "value": 1
+      },
+      "ExplanationOfBenefit.item.type": {
+        "Coding.code": {
+          "value": "service"
+        }
+      },
+      "ExplanationOfBenefit.item.careTeam": [
+        {
+          "ExplanationOfBenefit.item.careTeam.providerReference": {
+            "Reference.reference": {
+              "value": "Practitioner/example"
+            },
+            "reference": "http://hl7.org/fhir//Practitioner/example"
+          }
+        }
+      ],
+      "ExplanationOfBenefit.item.service": {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/service-uscls"
+        },
+        "Coding.code": {
+          "value": "1200"
+        }
+      },
+      "ExplanationOfBenefit.item.servicedDate": {
+        "value": "2014-08-16"
+      },
+      "ExplanationOfBenefit.item.unitPrice": {
+        "Quantity.value": {
+          "value": 135.57
+        },
+        "Quantity.system": {
+          "value": "urn:iso:std:iso:4217"
+        },
+        "Quantity.code": {
+          "value": "USD"
+        }
+      },
+      "ExplanationOfBenefit.item.net": {
+        "Quantity.value": {
+          "value": 135.57
+        },
+        "Quantity.system": {
+          "value": "urn:iso:std:iso:4217"
+        },
+        "Quantity.code": {
+          "value": "USD"
+        }
+      },
+      "ExplanationOfBenefit.item.adjudication": [
+        {
+          "ExplanationOfBenefit.item.adjudication.category": {
+            "Coding.code": {
+              "value": "eligible"
+            }
+          },
+          "ExplanationOfBenefit.item.adjudication.amount": {
+            "Quantity.value": {
+              "value": 120.00
+            },
+            "Quantity.system": {
+              "value": "urn:iso:std:iso:4217"
+            },
+            "Quantity.code": {
+              "value": "USD"
+            }
+          }
+        },
+        {
+          "ExplanationOfBenefit.item.adjudication.category": {
+            "Coding.code": {
+              "value": "eligpercent"
+            }
+          },
+          "ExplanationOfBenefit.item.adjudication.value": {
+            "value": 0.80
+          }
+        },
+        {
+          "ExplanationOfBenefit.item.adjudication.category": {
+            "Coding.code": {
+              "value": "benefit"
+            }
+          },
+          "ExplanationOfBenefit.item.adjudication.amount": {
+            "Quantity.value": {
+              "value": 96.00
+            },
+            "Quantity.system": {
+              "value": "urn:iso:std:iso:4217"
+            },
+            "Quantity.code": {
+              "value": "USD"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "ExplanationOfBenefit.totalCost": {
+    "Quantity.value": {
+      "value": 135.57
+    },
+    "Quantity.system": {
+      "value": "urn:iso:std:iso:4217"
+    },
+    "Quantity.code": {
+      "value": "USD"
+    }
+  },
+  "ExplanationOfBenefit.totalBenefit": {
+    "Quantity.value": {
+      "value": 96.00
+    },
+    "Quantity.system": {
+      "value": "urn:iso:std:iso:4217"
+    },
+    "Quantity.code": {
+      "value": "USD"
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "resourceType": "Measure",
+  "id": "measure-wcc-aba",
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      Cohort definition for Adult BMI Assessment.\n    </div>"
+  },
+  "moduleMetadata": {
+    "identifier": [
+      {
+        "use": "official",
+        "system": "http://hl7.org/fhir/cqi/ecqm/Measure/Identifier/payer-extract",
+        "value": "WCCABA"
+      }
+    ],
+    "version": "1.0.0",
+    "title": "Adult BMI Assessment Cohort Definition",
+    "type": "module",
+    "status": "active",
+    "experimental": true,
+    "description": "Adult BMI Assessment Cohort Definition",
+    "topic": [
+      {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/c80-doc-typecodes",
+            "code": "57024-2"
+          }
+        ]
+      }
+    ]
+  },
+  "library": [
+    {
+      "reference": "Library/library-wcc-aba"
+    }
+  ],
+  "scoring": "cohort",
+  "group": [
+    {
+      "identifier": {
+        "value": "WCCABA-cohort"
+      },
+      "population": [
+        {
+          "type": "initial-population",
+          "identifier": {
+            "value": "initial-population-identifier"
+          },
+          "criteria": "WCCABA.\"In Demographic\""
+        }
+      ]
+    }
+  ]
+}

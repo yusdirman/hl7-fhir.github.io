@@ -1,0 +1,267 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/MedicationOrder",
+  "resourceType": "MedicationOrder",
+  "Resource.id": {
+    "value": "medrx005"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: medrx005</p><p><b>identifier</b>: 12345 (OFFICIAL)</p><p><b>status</b>: active</p><p><b>medication</b>: <a>prescribed medication</a></p><p><b>patient</b>: <a>Eve Everywoman</a></p><p><b>encounter</b>: <a>encounter who leads to this priscription</a></p><p><b>dateWritten</b>: Jan 15, 2015</p><p><b>prescriber</b>: <a>Patrick Pump</a></p><p><b>reasonCode</b>: Otitis Media <span>(Details : {SNOMED CT code '65363002' = 'Otitis media (disorder)', given as 'Otitis Media'})</span></p><blockquote><p><b>dosageInstruction</b></p><p><b>text</b>: Take two capsules to start</p><p><b>additionalInstructions</b>: With or after food <span>(Details : {SNOMED CT code '311504000' = 'With or after food (qualifier value)', given as 'With or after food'})</span></p><p><b>timing</b>: Events: Jan 15, 2015, Duration 1days, Do Once per 1 days</p><p><b>site</b>: Entire oral cavity <span>(Details : {SNOMED CT code '181220002' = 'Entire oral cavity (body structure)', given as 'Entire oral cavity'})</span></p><p><b>route</b>: Oral Route <span>(Details : {SNOMED CT code '26643006' = 'Oral route (qualifier value)', given as 'Oral Route'})</span></p><p><b>dose</b>: 2 CAP<span> (Details: http://hl7.org/fhir/v3/orderableDrugForm code CAP = 'Capsule')</span></p></blockquote><blockquote><p><b>dosageInstruction</b></p><p><b>text</b>: Take one capsule three times daily</p><p><b>additionalInstructions</b>: With or after food <span>(Details : {SNOMED CT code '311504000' = 'With or after food (qualifier value)', given as 'With or after food'})</span></p><p><b>timing</b>: Events: Jan 15, 2015, Duration 11days, Do 2 per 1 days</p><p><b>site</b>: Entire oral cavity <span>(Details : {SNOMED CT code '181220002' = 'Entire oral cavity (body structure)', given as 'Entire oral cavity'})</span></p><p><b>route</b>: Oral Route <span>(Details : {SNOMED CT code '26643006' = 'Oral route (qualifier value)', given as 'Oral Route'})</span></p><p><b>dose</b>: 1 CAP<span> (Details: http://hl7.org/fhir/v3/orderableDrugForm code CAP = 'Capsule')</span></p></blockquote></div>"
+    }
+  },
+  "MedicationOrder.identifier": [
+    {
+      "Identifier.use": {
+        "value": "official"
+      },
+      "Identifier.system": {
+        "value": "http://www.bmc.nl/portal/prescriptions"
+      },
+      "Identifier.value": {
+        "value": "12345"
+      }
+    }
+  ],
+  "MedicationOrder.status": {
+    "value": "active"
+  },
+  "MedicationOrder.medicationReference": {
+    "Reference.reference": {
+      "value": "Medication/MedicationExample6"
+    },
+    "Reference.display": {
+      "value": "prescribed medication"
+    },
+    "reference": "http://hl7.org/fhir//Medication/MedicationExample6"
+  },
+  "MedicationOrder.patient": {
+    "Reference.reference": {
+      "value": "Patient/f001"
+    },
+    "Reference.display": {
+      "value": "Eve Everywoman"
+    },
+    "reference": "http://hl7.org/fhir//Patient/f001"
+  },
+  "MedicationOrder.encounter": {
+    "Reference.reference": {
+      "value": "Encounter/f002"
+    },
+    "Reference.display": {
+      "value": "encounter who leads to this priscription"
+    },
+    "reference": "http://hl7.org/fhir//Encounter/f002"
+  },
+  "MedicationOrder.dateWritten": {
+    "value": "2015-01-15"
+  },
+  "MedicationOrder.prescriber": {
+    "Reference.reference": {
+      "value": "Practitioner/f007"
+    },
+    "Reference.display": {
+      "value": "Patrick Pump"
+    },
+    "reference": "http://hl7.org/fhir//Practitioner/f007"
+  },
+  "MedicationOrder.reasonCode": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "value": "http://snomed.info/sct"
+          },
+          "Coding.code": {
+            "value": "65363002"
+          },
+          "Coding.display": {
+            "value": "Otitis Media"
+          }
+        }
+      ]
+    }
+  ],
+  "MedicationOrder.dosageInstruction": [
+    {
+      "MedicationOrder.dosageInstruction.text": {
+        "value": "Take two capsules to start"
+      },
+      "MedicationOrder.dosageInstruction.additionalInstructions": [
+        {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "value": "http://snomed.info/sct"
+              },
+              "Coding.code": {
+                "value": "311504000"
+              },
+              "Coding.display": {
+                "value": "With or after food"
+              }
+            }
+          ]
+        }
+      ],
+      "MedicationOrder.dosageInstruction.timing": {
+        "Timing.event": [
+          {
+            "value": "2015-01-15"
+          }
+        ],
+        "Timing.repeat": {
+          "Timing.repeat.duration": {
+            "value": 1
+          },
+          "Timing.repeat.durationUnit": {
+            "value": "d"
+          },
+          "Timing.repeat.frequency": {
+            "value": 1
+          },
+          "Timing.repeat.period": {
+            "value": 1
+          },
+          "Timing.repeat.periodUnit": {
+            "value": "d"
+          }
+        }
+      },
+      "MedicationOrder.dosageInstruction.siteCodeableConcept": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "value": "181220002"
+            },
+            "Coding.display": {
+              "value": "Entire oral cavity"
+            }
+          }
+        ],
+        "concept": "http://snomed.info/sct#181220002"
+      },
+      "MedicationOrder.dosageInstruction.route": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "value": "26643006"
+            },
+            "Coding.display": {
+              "value": "Oral Route"
+            }
+          }
+        ],
+        "concept": "http://snomed.info/sct#26643006"
+      },
+      "MedicationOrder.dosageInstruction.doseQuantity": {
+        "Quantity.value": {
+          "value": 2
+        },
+        "Quantity.system": {
+          "value": "http://hl7.org/fhir/v3/orderableDrugForm"
+        },
+        "Quantity.code": {
+          "value": "CAP"
+        }
+      }
+    },
+    {
+      "MedicationOrder.dosageInstruction.text": {
+        "value": "Take one capsule three times daily"
+      },
+      "MedicationOrder.dosageInstruction.additionalInstructions": [
+        {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "value": "http://snomed.info/sct"
+              },
+              "Coding.code": {
+                "value": "311504000"
+              },
+              "Coding.display": {
+                "value": "With or after food"
+              }
+            }
+          ]
+        }
+      ],
+      "MedicationOrder.dosageInstruction.timing": {
+        "Timing.event": [
+          {
+            "value": "2015-01-15"
+          }
+        ],
+        "Timing.repeat": {
+          "Timing.repeat.duration": {
+            "value": 11
+          },
+          "Timing.repeat.durationUnit": {
+            "value": "d"
+          },
+          "Timing.repeat.frequency": {
+            "value": 2
+          },
+          "Timing.repeat.period": {
+            "value": 1
+          },
+          "Timing.repeat.periodUnit": {
+            "value": "d"
+          }
+        }
+      },
+      "MedicationOrder.dosageInstruction.siteCodeableConcept": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "value": "181220002"
+            },
+            "Coding.display": {
+              "value": "Entire oral cavity"
+            }
+          }
+        ],
+        "concept": "http://snomed.info/sct#181220002"
+      },
+      "MedicationOrder.dosageInstruction.route": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "value": "26643006"
+            },
+            "Coding.display": {
+              "value": "Oral Route"
+            }
+          }
+        ],
+        "concept": "http://snomed.info/sct#26643006"
+      },
+      "MedicationOrder.dosageInstruction.doseQuantity": {
+        "Quantity.value": {
+          "value": 1
+        },
+        "Quantity.system": {
+          "value": "http://hl7.org/fhir/v3/orderableDrugForm"
+        },
+        "Quantity.code": {
+          "value": "CAP"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,647 @@
+﻿<!DOCTYPE HTML>
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Conformance-sdc-de-registry - FHIR v1.4.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="../fhir.css" rel="stylesheet"/>
+  <link rel="Prev" href="http://hl7.org/fhir/conformance-sdc-de-registry.html"/>
+
+  <!-- Bootstrap core CSS -->
+  <link href=".././dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href=".././assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href=".././assets/css/project.css" rel="stylesheet"/>
+  <link href=".././assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="../jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src=".././assets/js/html5shiv.js"></script>
+  <script src=".././assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href=".././assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href=".././assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href=".././assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href=".././assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href=".././assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment"><!-- segment-header -->	
+		<div class="container"><!-- container -->
+			<a id="logo" href="http://hl7.org/fhir" no-external="true"><img src=".././assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a id="hl7-logo" href="http://www.hl7.org" no-external="true">
+					<img src=".././assets/images/hl7-logo.png" width="42" height="50" alt="visit the hl7 website"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="./../assets/images/search.png"/></a></div> 
+		</div>
+		<div class="container"><!-- container -->
+	</div></div><!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment"><!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container"><!-- container -->
+ <!-- HEADER CONTENT -->
+ 	      		
+ 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="../index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../documentation.html">Documentation</a></li>
+              <li><a href="../implementation.html">Implementation</a></li>
+              <li><a href="../resourcelist.html">Resources</a></li>
+              <li><a href="../clinical.html">Clinical</a></li>
+              <li><a href="../administration.html">Administrative</a></li>
+              <li><a href="../infrastructure.html">Infrastructure</a></li>
+              <li><a href="../financial.html">Financial</a></li>
+
+						</ul>
+					</div><!-- /.nav-collapse -->
+				</div><!-- /.container -->
+			</nav><!-- /.navbar -->
+      		
+				
+<!-- /HEADER CONTENT -->				
+		</div><!-- /container -->
+	</div><!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment"><!-- segment-breadcrumb -->
+		<div class="container"><!-- container -->	
+			<ul class="breadcrumb">
+        <!-- conformance-sdc-de-registry / resource-instance:Conformance / Example -->
+        <li title="Structured Data Capture - Data Element Exchange"><a href="sdcde.html"><b>SDC-DE</b></a></li>
+        <li><a href="registry.html"><b>Registry</b></a></li>
+        <li><b>SDC DE Registry</b></li>
+
+			</ul>	
+		</div><!-- /container -->
+	</div><!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment"><!-- segment-content -->
+	<div class="container"><!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+<!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<h1>Conformance-sdc-de-registry</h1>
+
+<p>
+
+This is the narrative for the resource. See also the <a href="conformance-sdc-de-registry.xml.html">XML</a> or <a href="conformance-sdc-de-registry.json.html">JSON</a> format. This example conforms to the <a href="conformance.html">profile Conformance</a>.
+</p>
+
+<hr/>
+<div>
+			<h2>SDC Data Element Manager</h2>
+			<p>(Requirements Definition)</p>
+			<p>Published: 2014-07-06 (draft)</p>
+			<p>Published by: <b>U.S. Office of the National Coordinator (ONC)</b>
+			</p>
+			<p>This profile defines the expected capabilities of the <i>SDC Data Element Manager</i> role when conforming to the S&amp;I Framework's <a href="sdc.html">Structured Data Capture FHIR implementation guide</a>.  This role is responsible for defining maintaining a repository of data elements used in designing forms, profiles and templates in support of SDC use-cases, including the pre-population and auto-population of forms.</p>
+			<h2>General</h2>
+			<table>
+				<tbody>
+					<tr>
+						<th>FHIR Version:</th>
+						<td>1.4.0</td>
+					</tr>
+					<tr>
+						<th>Supported formats:</th>
+						<td>xml, json</td>
+					</tr>
+				</tbody>
+			</table>
+			<h2>REST  behavior</h2>
+			<p>The primary focus of the repository is the definition of <a href="../dataelement.html">DataElement</a>s.  However, <a href="../valueset.html">ValueSet</a>s must also be supported to allow definition of coded data elements.  Some data elements will choose to maintain value sets as 'contained' resources, meaning the value set exists only in the context of the data element and cannot be referenced or maintained without also updating the data element.  However, systems should support value set re-use across data elements.  (Version-specific referencing can be used to avoid value sets from changing independent of the referencing <a href="../questionnaire.html">Questionnaire</a>.)</p>
+			<p>
+				<b>Security:</b>
+			</p>
+			<p>Implementations must meet the general security requirements documented in the <a href="sdc-security.html">SDC implementation guide</a>.</p>
+			<h3>Resource summary</h3>
+			<table class="grid">
+				<thead>
+					<tr>
+						<th>Resource</th>
+						<th>Search</th>
+						<th>Read</th>
+						<th>Read Version</th>
+						<th>Instance History</th>
+						<th>Resource History</th>
+						<th>Create</th>
+						<th>Update</th>
+						<th>Delete</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>DataElement (<a href="http://hl7.org/fhir/StructureDefinition/valueset-sdc">Profile</a>)</th>
+						<td>
+							<a href="#DataElement-search-type" title="Allows a user to search for existing data elements">SHALL</a>
+						</td>
+						<td>
+							<a href="#DataElement-read" title="Allows retrieval of a specific known data element">SHALL</a>
+						</td>
+						<td>
+							<a href="#DataElement-vread" title="Allows retrieval of a specific version of a data element">SHALL</a>
+						</td>
+						<td>
+							<a href="#DataElement-history-instance" title="Allows review of changes to a data element over time">SHALL</a>
+						</td>
+						<td/>
+						<td>
+							<a href="#DataElement-create" title="Allows defining a new data element.  Repositories requiring curation of submitted data elements may require all new data elements to have a status of 'draft'.">SHALL</a>
+						</td>
+						<td>
+							<a href="#DataElement-update" title="Allows maintaining data elements while creating and editing forms.  Servers may choose to prohibit certain types of edits, instead requiring the creation of a new data element (and potentially the retiring of the existing data element).  Servers may also limit who can change particular data elements.">SHALL</a>
+						</td>
+						<td>
+							<a href="#DataElement-delete" title="Allows removal of an existing data element.  Servers may choose to not support deletions or may limit deletions to data elements meeting certain requirements.  E.g. only elements with a status of draft or only elements that have been retired for at least two years, etc.">MAY</a>
+						</td>
+					</tr>
+					<tr>
+						<th>ValueSet (<a href="http://hl7.org/fhir/StructureDefinition/valueset-sdc">Profile</a>)</th>
+						<td>
+							<a href="#ValueSet-search-type" title="Allows discovery of existing value sets for use in authoring data elements">SHALL</a>
+						</td>
+						<td>
+							<a href="#ValueSet-read" title="Allows retrieval of a specific value set referenced within a data element">SHALL</a>
+						</td>
+						<td>
+							<a href="#ValueSet-vread" title="Allows retrieval of a historical version of a value set as referenced within a data element">SHALL</a>
+						</td>
+						<td>
+							<a href="#ValueSet-history-instance" title="Allows review of changes to a value set over time">SHALL</a>
+						</td>
+						<td/>
+						<td>
+							<a href="#ValueSet-create" title="Allows definition of a new value set used by one or more data elements">SHALL</a>
+						</td>
+						<td>
+							<a href="#ValueSet-update" title="Allows existing value sets referenced by one or more data elements to be maintained">SHALL</a>
+						</td>
+						<td>
+							<a href="#ValueSet-delete" title="Not all servers will support deletion of value sets.  Status change to 'retired' will be more typical, though deletion of draft value sets may keep repositories cleaner.">MAY</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<br/>
+			<br/>
+			<h3>
+				<a href="../dataelement.html">DataElement</a>
+			</h3>
+			<h4>Interactions</h4>
+			<table class="list">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Conformance</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>
+							<a name="DataElement-search-type">&nbsp;</a>
+							<span>search-type</span>
+						</th>
+						<td>SHALL</td>
+						<td>
+							<p>Allows a user to search for existing data elements</p>
+						</td>
+					</tr>
+					<tr>
+						<th>
+							<a name="DataElement-read">&nbsp;</a>
+							<span>read</span>
+						</th>
+						<td>SHALL</td>
+						<td>
+							<p>Allows retrieval of a specific known data element</p>
+						</td>
+					</tr>
+					<tr>
+						<th>
+							<a name="DataElement-vread">&nbsp;</a>
+							<span>vread</span>
+						</th>
+						<td>SHALL</td>
+						<td>
+							<p>Allows retrieval of a specific version of a data element</p>
+						</td>
+					</tr>
+					<tr>
+						<th>
+							<a name="DataElement-history-instance">&nbsp;</a>
+							<span>history-instance</span>
+						</th>
+						<td>SHALL</td>
+						<td>
+							<p>Allows review of changes to a data element over time</p>
+						</td>
+					</tr>
+					<tr>
+						<th>
+							<a name="DataElement-create">&nbsp;</a>
+							<span>create</span>
+						</th>
+						<td>SHALL</td>
+						<td>
+							<p>Allows defining a new data element.  Repositories requiring curation of submitted data elements may require all new data elements to have a status of 'draft'.</p>
+						</td>
+					</tr>
+					<tr>
+						<th>
+							<a name="DataElement-update">&nbsp;</a>
+							<span>update</span>
+						</th>
+						<td>SHALL</td>
+						<td>
+							<p>Allows maintaining data elements while creating and editing forms.  Servers may choose to prohibit certain types of edits, instead requiring the creation of a new data element (and potentially the retiring of the existing data element).  Servers may also limit who can change particular data elements.</p>
+						</td>
+					</tr>
+					<tr>
+						<th>
+							<a name="DataElement-validate">&nbsp;</a>
+							<span>validate</span>
+						</th>
+						<td>SHOULD</td>
+						<td>
+							<p>Allows a client to verify whether a particular new data element or revision of an existing data element would be accepted based on validation and other business rules.  Useful for some workflows</p>
+						</td>
+					</tr>
+					<tr>
+						<th>
+							<a name="DataElement-delete">&nbsp;</a>
+							<span>delete</span>
+						</th>
+						<td>MAY</td>
+						<td>
+							<p>Allows removal of an existing data element.  Servers may choose to not support deletions or may limit deletions to data elements meeting certain requirements.  E.g. only elements with a status of draft or only elements that have been retired for at least two years, etc.</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<h4>Search</h4>
+			<p>Supported Includes: DataElement.binding.valueSet</p>
+			<table class="list">
+				<thead>
+					<tr>
+						<th>Parameter</th>
+						<th>Conformance</th>
+						<th>Type</th>
+						<th>Definition &amp; Chaining</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>category</th>
+						<td>SHALL</td>
+						<td>token</td>
+						<td/>
+					</tr>
+					<tr>
+						<th>code</th>
+						<td>SHALL</td>
+						<td>token</td>
+						<td/>
+					</tr>
+					<tr>
+						<th>date</th>
+						<td>SHALL</td>
+						<td>date</td>
+						<td/>
+					</tr>
+					<tr>
+						<th>description</th>
+						<td>SHALL</td>
+						<td>string</td>
+						<td/>
+					</tr>
+					<tr>
+						<th>identifier</th>
+						<td>SHALL</td>
+						<td>token</td>
+						<td/>
+					</tr>
+					<tr>
+						<th>name</th>
+						<td>SHALL</td>
+						<td>string</td>
+						<td/>
+					</tr>
+					<tr>
+						<th>publisher</th>
+						<td>SHALL</td>
+						<td>string</td>
+						<td/>
+					</tr>
+					<tr>
+						<th>status</th>
+						<td>SHALL</td>
+						<td>token</td>
+						<td/>
+					</tr>
+					<tr>
+						<th>version</th>
+						<td>SHALL</td>
+						<td>string</td>
+						<td/>
+					</tr>
+					<tr>
+						<th>meaning</th>
+						<td>SHALL</td>
+						<td>token</td>
+						<td/>
+					</tr>
+					<tr>
+						<th>objectClass</th>
+						<td>SHALL</td>
+						<td>token</td>
+						<td/>
+					</tr>
+					<tr>
+						<th>property</th>
+						<td>SHALL</td>
+						<td>token</td>
+						<td/>
+					</tr>
+				</tbody>
+			</table>
+			<br/>
+			<br/>
+			<h3>
+				<a href="../valueset.html">ValueSet</a>
+			</h3>
+			<h4>Interactions</h4>
+			<table class="list">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Conformance</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>
+							<a name="ValueSet-search-type">&nbsp;</a>
+							<span>search-type</span>
+						</th>
+						<td>SHALL</td>
+						<td>
+							<p>Allows discovery of existing value sets for use in authoring data elements</p>
+						</td>
+					</tr>
+					<tr>
+						<th>
+							<a name="ValueSet-read">&nbsp;</a>
+							<span>read</span>
+						</th>
+						<td>SHALL</td>
+						<td>
+							<p>Allows retrieval of a specific value set referenced within a data element</p>
+						</td>
+					</tr>
+					<tr>
+						<th>
+							<a name="ValueSet-vread">&nbsp;</a>
+							<span>vread</span>
+						</th>
+						<td>SHALL</td>
+						<td>
+							<p>Allows retrieval of a historical version of a value set as referenced within a data element</p>
+						</td>
+					</tr>
+					<tr>
+						<th>
+							<a name="ValueSet-history-instance">&nbsp;</a>
+							<span>history-instance</span>
+						</th>
+						<td>SHALL</td>
+						<td>
+							<p>Allows review of changes to a value set over time</p>
+						</td>
+					</tr>
+					<tr>
+						<th>
+							<a name="ValueSet-create">&nbsp;</a>
+							<span>create</span>
+						</th>
+						<td>SHALL</td>
+						<td>
+							<p>Allows definition of a new value set used by one or more data elements</p>
+						</td>
+					</tr>
+					<tr>
+						<th>
+							<a name="ValueSet-update">&nbsp;</a>
+							<span>update</span>
+						</th>
+						<td>SHALL</td>
+						<td>
+							<p>Allows existing value sets referenced by one or more data elements to be maintained</p>
+						</td>
+					</tr>
+					<tr>
+						<th>
+							<a name="ValueSet-validate">&nbsp;</a>
+							<span>validate</span>
+						</th>
+						<td>SHOULD</td>
+						<td>
+							<p>Allows verification that a value set is valid prior to submission - useful for some workflows.</p>
+						</td>
+					</tr>
+					<tr>
+						<th>
+							<a name="ValueSet-delete">&nbsp;</a>
+							<span>delete</span>
+						</th>
+						<td>MAY</td>
+						<td>
+							<p>Not all servers will support deletion of value sets.  Status change to 'retired' will be more typical, though deletion of draft value sets may keep repositories cleaner.</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<h4>Search</h4>
+			<p>Supported Includes: ValueSet.compose.import</p>
+			<table class="list">
+				<thead>
+					<tr>
+						<th>Parameter</th>
+						<th>Conformance</th>
+						<th>Type</th>
+						<th>Definition &amp; Chaining</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>code</th>
+						<td>SHALL</td>
+						<td>token</td>
+						<td/>
+					</tr>
+					<tr>
+						<th>date</th>
+						<td>SHALL</td>
+						<td>date</td>
+						<td/>
+					</tr>
+					<tr>
+						<th>description</th>
+						<td>SHALL</td>
+						<td>string</td>
+						<td/>
+					</tr>
+					<tr>
+						<th>identifier</th>
+						<td>SHALL</td>
+						<td>token</td>
+						<td/>
+					</tr>
+					<tr>
+						<th>name</th>
+						<td>SHALL</td>
+						<td>string</td>
+						<td/>
+					</tr>
+					<tr>
+						<th>publisher</th>
+						<td>SHALL</td>
+						<td>string</td>
+						<td/>
+					</tr>
+					<tr>
+						<th>reference</th>
+						<td>SHALL</td>
+						<td>string</td>
+						<td/>
+					</tr>
+					<tr>
+						<th>status</th>
+						<td>SHALL</td>
+						<td>token</td>
+						<td/>
+					</tr>
+					<tr>
+						<th>system</th>
+						<td>SHALL</td>
+						<td>string</td>
+						<td/>
+					</tr>
+					<tr>
+						<th>version</th>
+						<td>SHALL</td>
+						<td>string</td>
+						<td/>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+<hr/>
+
+<p>
+<!-- spacer -->
+&nbsp;
+</p>
+
+
+
+<p>
+<!-- spacer -->
+&nbsp;
+</p>
+
+
+<p>
+Usage note: every effort has been made to ensure that the 
+examples are correct and useful, but they are not a normative part 
+of the specification. 
+</p>
+
+
+</div>
+
+
+				</div><!-- /inner-wrapper -->
+            </div><!-- /row -->
+        </div><!-- /container -->
+        
+    </div><!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment"><!-- segment-footer -->
+		<div class="container"><!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        © HL7.org 2011+. FHIR STU3 Candidate (v1.4.0-8453) generated on Mon, Jun 6, 2016 20:20+0000. <a href="../qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search</a> | 
+               <a style="color: #81BEF7" href="../history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="../toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fconformance-sdc-de-registry.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fconformance-sdc-de-registry.html">Compare to DSTU2</a> |                
+               <a style="color: #81BEF7" rel="license" href="../license.html"><img src="../cc0.png" style="border-style: none;" alt="CC0"/></a> | 
+               <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>   
+        </span>
+        </p>
+			</div><!-- /inner-wrapper -->
+		</div><!-- /container -->
+	</div><!-- /segment-footer -->
+<!-- disqus thread -->
+<!--disqus-->
+<!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden"><!-- segment-post-footer -->
+		<div class="container"><!-- container -->
+		</div><!-- /container -->
+	</div><!-- /segment-post-footer -->
+    
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src=".././assets/js/jquery.js"> </script>   <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src=".././dist/js/bootstrap.min.js"> </script>
+<script src=".././assets/js/respond.min.js"> </script>
+
+<script src=".././assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

@@ -1,0 +1,57 @@
+{
+  "resourceType": "Specimen",
+  "id": "spec-uslab-example1",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: spec-uslab-example1</p><p><b>identifier</b>: SID123 (OFFICIAL)</p><p><b>accessionIdentifier</b>: 21041205000001 (OFFICIAL)</p><p><b>type</b>: Blood sample <span>(Details : {SNOMED CT code '122555007' = 'Venous blood specimen (specimen)', given as 'Venous blood specimen'}; {http://ehr.goodhealthclinic.org code 'BLD' = '??', given as 'Blood'})</span></p><p><b>subject</b>: <a>Todd Lerr</a></p><h3>Collections</h3><table><tr><td>-</td><td><b>Collected[x]</b></td><td><b>BodySite</b></td></tr><tr><td>*</td><td>Dec 5, 2014</td><td>Drawn from Arm <span>(Details : {SNOMED CT code '53120007' = 'Upper limb structure (body structure)', given as 'Arm'}; {http://ehr.goodhealthclinic.org code 'ARM' = '??', given as 'Arm'})</span></td></tr></table></div>"
+  },
+  "identifier": [
+    {
+      "use": "official",
+      "system": "http://ehr.goodhealthclinic.org/identifiers/specimen",
+      "value": "SID123"
+    }
+  ],
+  "accessionIdentifier": {
+    "use": "official",
+    "system": "http://lis.acmelabs.org/identifiers/accession",
+    "value": "21041205000001"
+  },
+  "type": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "122555007",
+        "display": "Venous blood specimen"
+      },
+      {
+        "system": "http://ehr.goodhealthclinic.org",
+        "code": "BLD",
+        "display": "Blood"
+      }
+    ],
+    "text": "Blood sample"
+  },
+  "subject": {
+    "reference": "Patient/patient-uslab-example1",
+    "display": "Todd Lerr"
+  },
+  "collection": {
+    "collectedDateTime": "2014-12-05",
+    "bodySite": {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "53120007",
+          "display": "Arm"
+        },
+        {
+          "system": "http://ehr.goodhealthclinic.org",
+          "code": "ARM",
+          "display": "Arm"
+        }
+      ],
+      "text": "Drawn from Arm"
+    }
+  }
+}

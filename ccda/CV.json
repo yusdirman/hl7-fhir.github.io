@@ -1,0 +1,302 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "CV",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+      "valueUri": "urn:hl7-org:v3"
+    }
+  ],
+  "url": "http://hl7.org/fhir/StructureDefinition/CV",
+  "name": "V3 Data type CV (CodedValue)",
+  "display": "V3 Data type CV (CodedValue)",
+  "status": "active",
+  "experimental": false,
+  "publisher": "HL7",
+  "description": "Coded data, specifying only a code, code system, and optionally display name and original text. Used only as the data type for other data types' properties.",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/CE",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "path": "CV",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "CV.nullFlavor",
+        "representation": [
+          "xmlAttr"
+        ],
+        "label": "Exceptional Value Detail",
+        "definition": "If a value is an exceptional value (NULL-value), this specifies in what way and why proper information is missing.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/v3-NullFlavor"
+          }
+        }
+      },
+      {
+        "path": "CV.code",
+        "representation": [
+          "xmlAttr"
+        ],
+        "label": "Code",
+        "definition": "The plain code symbol defined by the code system. For example, \"784.0\" is the code symbol of the ICD-9 code \"784.0\" for headache.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "CV.codeSystem",
+        "representation": [
+          "xmlAttr"
+        ],
+        "label": "Code System",
+        "definition": "Specifies the code system that defines the code.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "CV.codeSystemName",
+        "representation": [
+          "xmlAttr"
+        ],
+        "label": "Code System Name",
+        "definition": "The common name of the coding system.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "CV.codeSystemVersion",
+        "representation": [
+          "xmlAttr"
+        ],
+        "label": "Code System Version",
+        "definition": "If applicable, a version descriptor defined specifically for the given code system.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "CV.displayName",
+        "representation": [
+          "xmlAttr"
+        ],
+        "label": "Display Name",
+        "definition": "A name or title for the code, under which the sending system shows the code value to its users.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "CV.originalText",
+        "label": "Original Text",
+        "definition": "The text or phrase used as the basis for the coding.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "ED"
+          }
+        ]
+      },
+      {
+        "path": "CV.translation",
+        "label": "Translation",
+        "definition": "A set of other concept descriptors that translate this concept descriptor into other code systems.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CD"
+          }
+        ]
+      },
+      {
+        "path": "CV.qualifier",
+        "label": "Qualifier",
+        "definition": "Specifies additional codes that increase the specificity of the the primary code.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CR"
+          }
+        ]
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+            "valueUri": "urn:hl7-org:sdtc"
+          }
+        ],
+        "path": "CV.valueSetVersion",
+        "representation": [
+          "xmlAttr"
+        ],
+        "definition": "The valueSetVersion extension adds an attribute for elements with a CD dataType which indicates the version of the particular value set constraining the coded concept.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "path": "CV",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "CV.code",
+        "representation": [
+          "xmlAttr"
+        ],
+        "label": "Code",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "CV.codeSystem",
+        "representation": [
+          "xmlAttr"
+        ],
+        "label": "Code System",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "CV.codeSystemName",
+        "representation": [
+          "xmlAttr"
+        ],
+        "label": "Code System Name",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "CV.codeSystemVersion",
+        "representation": [
+          "xmlAttr"
+        ],
+        "label": "Code System Version",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "CV.displayName",
+        "representation": [
+          "xmlAttr"
+        ],
+        "label": "Display Name",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "CV.originalText",
+        "label": "Original Text",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "ED"
+          }
+        ]
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+            "valueUri": "urn:hl7-org:sdtc"
+          }
+        ],
+        "path": "CV.valueSetVersion",
+        "representation": [
+          "xmlAttr"
+        ],
+        "definition": "The valueSetVersion extension adds an attribute for elements with a CD dataType which indicates the version of the particular value set constraining the coded concept.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      }
+    ]
+  }
+}

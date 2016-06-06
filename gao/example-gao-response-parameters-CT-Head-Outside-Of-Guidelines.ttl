@@ -1,0 +1,197 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+[a fhir:Parameters;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "example-gao-response-parameters-CT-Head-Outside-Of-Guidelines"];
+  fhir:Parameters.parameter [
+     fhir:index 0;
+     fhir:Parameters.parameter.name [ fhir:value "order" ];
+     fhir:Bundle.entry.resource [
+       a fhir:Order;
+       fhir:index 0;
+       fhir:Resource.id [ fhir:value "order" ];
+       fhir:Resource.meta [
+         fhir:Meta.profile [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/gao-order";
+           fhir:index 0
+         ]
+       ];
+       fhir:DomainResource.text [
+         fhir:Narrative.status [ fhir:value "generated" ];
+         fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <p>A 50-year-old male is ordered a CT of the Head for his headache by an identified practitioner.</p>\n          </div>"
+       ];
+       fhir:DomainResource.contained [
+         a fhir:Patient;
+         fhir:index 0;
+         fhir:Resource.id [ fhir:value "patient" ];
+         fhir:Resource.meta [
+           fhir:Meta.profile [
+             fhir:value "http://hl7.org/fhir/StructureDefinition/gao-patient";
+             fhir:index 0
+           ]
+         ];
+         fhir:Patient.gender [ fhir:value "male" ];
+         fhir:Patient.birthDate [ fhir:value "1965-11-20"^^xsd:date ]
+       ], [
+         a fhir:Practitioner;
+         fhir:index 1;
+         fhir:Resource.id [ fhir:value "practitioner" ];
+         fhir:Resource.meta [
+           fhir:Meta.profile [
+             fhir:value "http://hl7.org/fhir/StructureDefinition/gao-practitioner";
+             fhir:index 0
+           ]
+         ];
+         fhir:Practitioner.identifier [
+           fhir:index 0;
+           fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/sid/us-npi" ];
+           fhir:Identifier.value [ fhir:value "9999999999" ]
+         ]
+       ], [
+         a fhir:DiagnosticOrder;
+         fhir:index 2;
+         fhir:Resource.id [ fhir:value "diagnosticorder" ];
+         fhir:Resource.meta [
+           fhir:Meta.profile [
+             fhir:value "http://hl7.org/fhir/StructureDefinition/gao-diagnosticorder";
+             fhir:index 0
+           ]
+         ];
+         fhir:DiagnosticOrder.subject [
+           fhir:Reference.reference [ fhir:value "order#patient" ]
+         ];
+         fhir:DiagnosticOrder.orderer [
+           fhir:Reference.reference [ fhir:value "order#practitioner" ]
+         ];
+         fhir:DiagnosticOrder.item [
+           fhir:index 0;
+           fhir:DiagnosticOrder.item.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               fhir:concept loinc:30799-1;
+               fhir:Coding.system [ fhir:value "http://loinc.org" ];
+               fhir:Coding.code [ fhir:value "30799-1" ];
+               fhir:Coding.display [ fhir:value "Head CT WO contrast" ]
+             ];
+             fhir:CodeableConcept.text [ fhir:value "CT Head without contrast" ]
+           ]
+         ]
+       ];
+       fhir:Order.identifier [
+         fhir:index 0;
+         fhir:Identifier.system [ fhir:value "http://example.com/OrderIdentifier" ];
+         fhir:Identifier.value [ fhir:value "123" ]
+       ];
+       fhir:Order.date [ fhir:value "2015-11-20"^^xsd:date ];
+       fhir:Order.subject [
+         fhir:Reference.reference [ fhir:value "#patient" ]
+       ];
+       fhir:Order.source [
+         fhir:Reference.reference [ fhir:value "#practitioner" ]
+       ];
+       fhir:Order.reasonCodeableConcept [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://example.com" ];
+           fhir:Coding.code [ fhir:value "x" ]
+         ];
+         fhir:CodeableConcept.text [ fhir:value "Headache" ]
+       ];
+       fhir:Order.detail [
+         fhir:index 0;
+         fhir:Reference.reference [ fhir:value "#diagnosticorder" ]
+       ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Parameters.parameter.name [ fhir:value "result" ];
+     fhir:Bundle.entry.resource [
+       a fhir:Basic;
+       fhir:index 0;
+       fhir:Resource.meta [
+         fhir:Meta.profile [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/gao-result";
+           fhir:index 0
+         ]
+       ];
+       fhir:DomainResource.text [
+         fhir:Narrative.status [ fhir:value "extensions" ];
+         fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <p>CT Head outside of guidelines for headache.</p>\n          </div>"
+       ];
+       fhir:DomainResource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/gao-extension-score" ];
+         fhir:Extension.valueDecimal [ fhir:value "3"^^xsd:decimal ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/gao-extension-item" ];
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "code" ];
+           fhir:Extension.valueCodeableConcept [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               fhir:concept loinc:30799-1;
+               fhir:Coding.system [ fhir:value "http://loinc.org" ];
+               fhir:Coding.code [ fhir:value "30799-1" ];
+               fhir:Coding.display [ fhir:value "Head CT WO contrast" ]
+             ];
+             fhir:CodeableConcept.text [ fhir:value "CT Head without contrast" ]
+           ]
+         ]
+       ], [
+         fhir:index 2;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/gao-extension-device" ];
+         fhir:Extension.valueReference [
+           fhir:Reference.reference [ fhir:value "dss" ]
+         ]
+       ], [
+         fhir:index 3;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/gao-extension-practitioner" ];
+         fhir:Extension.valueReference [
+           fhir:Reference.reference [ fhir:value "order#practitioner" ]
+         ]
+       ];
+       fhir:Basic.code [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/evaluation-result-code" ];
+           fhir:Coding.code [ fhir:value "outside" ];
+           fhir:Coding.display [ fhir:value "Outside Guidelines" ]
+         ]
+       ];
+       fhir:Basic.subject [
+         fhir:Reference.reference [ fhir:value "order" ]
+       ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:Parameters.parameter.name [ fhir:value "dss" ];
+     fhir:Bundle.entry.resource [
+       a fhir:Device;
+       fhir:index 0;
+       fhir:Resource.id [ fhir:value "dss" ];
+       fhir:Device.identifier [
+         fhir:index 0;
+         fhir:Identifier.system [ fhir:value "http://example.com/RegisteredDecisionSupportId" ];
+         fhir:Identifier.value [ fhir:value "456" ]
+       ];
+       fhir:Device.type [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://ncimeta.nci.nih.gov" ];
+           fhir:Coding.code [ fhir:value "C1961478" ];
+           fhir:Coding.display [ fhir:value "Information Systems, Decision Support, Clinical" ]
+         ]
+       ]
+     ]
+  ]].
+
+# -------------------------------------------------------------------------------------
+

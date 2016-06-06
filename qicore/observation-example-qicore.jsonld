@@ -1,0 +1,159 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Observation",
+  "resourceType": "Observation",
+  "Resource.id": {
+    "value": "observation-example-qicore"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: observation-example-qicore</p><p><b>status</b>: final</p><p><b>code</b>: Hemoglobin [Mass/volume] in Venous blood <span>(Details : {LOINC code '30350-3' = 'Hemoglobin [Mass/volume] in Venous blood', given as 'Hemoglobin [Mass/volume] in Venous blood'})</span></p><p><b>subject</b>: <a>Patient/example</a></p><p><b>effective</b>: Apr 2, 2013 10:30:10 AM --&gt; Apr 5, 2013 10:30:10 AM</p><p><b>issued</b>: Apr 3, 2013 3:30:10 PM</p><p><b>value</b>: 7.2 g/dl<span> (Details: http://unitsofmeasure.org code g/dL = 'g/dL')</span></p><p><b>interpretation</b>: Below low normal <span>(Details : {http://hl7.org/fhir/v2/0078 code 'L' = 'Low', given as 'Low'})</span></p><p><b>bodySite</b>: Superficial forearm vein <span>(Details : {SNOMED CT code '308046002' = 'Structure of superficial forearm vein (body structure)', given as 'Superficial forearm vein'})</span></p><p><b>method</b>: Injection to forearm <span>(Details : {SNOMED CT code '120220003' = 'Injection to forearm (procedure)', given as 'Injection to forearm'})</span></p></div>"
+    }
+  },
+  "DomainResource.extension": [
+    {
+      "Extension.url": {
+        "value": "http://hl7.org/fhir/StructureDefinition/observation-bodyPosition"
+      },
+      "Extension.valueCodeableConcept": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "value": "33586001"
+            },
+            "Coding.display": {
+              "value": "Sitting position (finding)"
+            }
+          }
+        ],
+        "concept": "http://snomed.info/sct#33586001"
+      }
+    },
+    {
+      "Extension.url": {
+        "value": "http://hl7.org/fhir/StructureDefinition/observation-delta"
+      },
+      "Extension.valueCodeableConcept": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "value": "1250004"
+            },
+            "Coding.display": {
+              "value": "Decreased (qualifier value)"
+            }
+          }
+        ],
+        "concept": "http://snomed.info/sct#1250004"
+      }
+    }
+  ],
+  "Observation.status": {
+    "value": "final"
+  },
+  "Observation.code": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://loinc.org"
+        },
+        "Coding.code": {
+          "value": "30350-3"
+        },
+        "Coding.display": {
+          "value": "Hemoglobin [Mass/volume] in Venous blood"
+        }
+      }
+    ],
+    "concept": "http://loinc.org/owl#30350-3"
+  },
+  "Observation.subject": {
+    "Reference.reference": {
+      "value": "Patient/example"
+    },
+    "reference": "http://hl7.org/fhir//Patient/example"
+  },
+  "Observation.effectivePeriod": {
+    "Period.start": {
+      "value": "2013-04-02T10:30:10+01:00"
+    },
+    "Period.end": {
+      "value": "2013-04-05T10:30:10+01:00"
+    }
+  },
+  "Observation.issued": {
+    "value": "2013-04-03T15:30:10+01:00"
+  },
+  "Observation.valueQuantity": {
+    "Quantity.value": {
+      "value": 7.2
+    },
+    "Quantity.unit": {
+      "value": "g/dl"
+    },
+    "Quantity.system": {
+      "value": "http://unitsofmeasure.org"
+    },
+    "Quantity.code": {
+      "value": "g/dL"
+    }
+  },
+  "Observation.interpretation": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/v2/0078"
+        },
+        "Coding.code": {
+          "value": "L"
+        },
+        "Coding.display": {
+          "value": "Low"
+        }
+      }
+    ],
+    "CodeableConcept.text": {
+      "value": "Below low normal"
+    }
+  },
+  "Observation.bodySite": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "value": "308046002"
+        },
+        "Coding.display": {
+          "value": "Superficial forearm vein"
+        }
+      }
+    ],
+    "concept": "http://snomed.info/sct#308046002"
+  },
+  "Observation.method": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "value": "120220003"
+        },
+        "Coding.display": {
+          "value": "Injection to forearm"
+        }
+      }
+    ],
+    "concept": "http://snomed.info/sct#120220003"
+  }
+}

@@ -1,0 +1,74 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/DecisionSupportServiceModuleexample> a fhir:DecisionSupportServiceModule;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "example"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Guideline Appropriate Ordering Module</div>"
+  ];
+  fhir:DecisionSupportServiceModule.moduleMetadata [
+     fhir:ModuleMetadata.identifier [
+       fhir:index 0;
+       fhir:Identifier.use [ fhir:value "official" ];
+       fhir:Identifier.value [ fhir:value "guildeline-appropriate-ordering" ]
+     ];
+     fhir:ModuleMetadata.version [ fhir:value "1.0.0" ];
+     fhir:ModuleMetadata.title [ fhir:value "Guideline Appropriate Ordering Module" ];
+     fhir:ModuleMetadata.type [ fhir:value "module" ];
+     fhir:ModuleMetadata.status [ fhir:value "draft" ];
+     fhir:ModuleMetadata.description [ fhir:value "Guideline appropriate ordering is used to assess appropriateness of an order given a patient, a proposed order, and a set of clinical indications." ];
+     fhir:ModuleMetadata.publicationDate [ fhir:value "2015-07-22"^^xsd:date ];
+     fhir:ModuleMetadata.topic [
+       fhir:index 0;
+       fhir:CodeableConcept.text [ fhir:value "Guideline Appropriate Ordering" ]
+     ], [
+       fhir:index 1;
+       fhir:CodeableConcept.text [ fhir:value "Appropriate Use Criteria" ]
+     ]
+  ];
+  fhir:DecisionSupportServiceModule.parameter [
+     fhir:index 0;
+     fhir:ParameterDefinition.name [ fhir:value "patient" ];
+     fhir:ParameterDefinition.use [ fhir:value "in" ];
+     fhir:ParameterDefinition.type [ fhir:value "Patient" ];
+     fhir:ParameterDefinition.profile [
+       fhir:link <http://hl7.org/fhir/StructureDefinition/gao-patient>;
+       fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/StructureDefinition/gao-patient" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:ParameterDefinition.name [ fhir:value "order" ];
+     fhir:ParameterDefinition.use [ fhir:value "in" ];
+     fhir:ParameterDefinition.type [ fhir:value "Order" ];
+     fhir:ParameterDefinition.profile [
+       fhir:link <http://hl7.org/fhir/StructureDefinition/gao-order>;
+       fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/StructureDefinition/gao-order" ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:ParameterDefinition.name [ fhir:value "order" ];
+     fhir:ParameterDefinition.use [ fhir:value "out" ];
+     fhir:ParameterDefinition.type [ fhir:value "Order" ];
+     fhir:ParameterDefinition.profile [
+       fhir:link <http://hl7.org/fhir/StructureDefinition/gao-order>;
+       fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/StructureDefinition/gao-order" ]
+     ]
+  ], [
+     fhir:index 3;
+     fhir:ParameterDefinition.name [ fhir:value "result" ];
+     fhir:ParameterDefinition.use [ fhir:value "out" ];
+     fhir:ParameterDefinition.type [ fhir:value "Basic" ];
+     fhir:ParameterDefinition.profile [
+       fhir:link <http://hl7.org/fhir/StructureDefinition/gao-result>;
+       fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/StructureDefinition/gao-result" ]
+     ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

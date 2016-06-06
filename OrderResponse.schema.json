@@ -1,0 +1,79 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://hl7.org/fhir/json-schema/OrderResponse",
+  "$ref": "#/definitions/OrderResponse",
+  "description": "see http://hl7.org/fhir/json.html#schema for information about the FHIR Json Schemas",
+  "definitions": {
+    "OrderResponse": {
+      "allOf": [
+        {
+          "$ref": "DomainResource.schema.json/definitions/DomainResource"
+        },
+        {
+          "description": "A response to an order.",
+          "properties": {
+            "resourceType": {
+              "description": "This is a OrderResponse resource",
+              "type": "string",
+              "enum": [
+                "OrderResponse"
+              ]
+            },
+            "identifier": {
+              "description": "Identifiers assigned to this order. The identifiers are usually assigned by the system responding to the order, but they may be provided or added to by other systems.",
+              "type": "array",
+              "items": {
+                "$ref": "Identifier.schema.json/definitions/Identifier"
+              }
+            },
+            "request": {
+              "description": "A reference to the order that this is in response to.",
+              "$ref": "Reference.schema.json/definitions/Reference"
+            },
+            "date": {
+              "description": "The date and time at which this order response was made (created/posted).",
+              "type": "string",
+              "pattern": "-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\\.[0-9]+)?(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)?)?"
+            },
+            "date_": {
+              "description": "Extensions for date",
+              "$ref": "Element.schema.json/definitions/Element"
+            },
+            "who": {
+              "description": "The person, organization, or device credited with making the response.",
+              "$ref": "Reference.schema.json/definitions/Reference"
+            },
+            "orderStatus": {
+              "description": "What this response says about the status of the original order.",
+              "type": "string",
+              "pattern": "[^\\s]+([\\s]?[^\\s]+)*"
+            },
+            "orderStatus_": {
+              "description": "Extensions for orderStatus",
+              "$ref": "Element.schema.json/definitions/Element"
+            },
+            "description": {
+              "description": "Additional description about the response - e.g. a text description provided by a human user when making decisions about the order.",
+              "type": "string"
+            },
+            "description_": {
+              "description": "Extensions for description",
+              "$ref": "Element.schema.json/definitions/Element"
+            },
+            "fulfillment": {
+              "description": "Links to resources that provide details of the outcome of performing the order; e.g. Diagnostic Reports in a response that is made to an order that referenced a diagnostic order.",
+              "type": "array",
+              "items": {
+                "$ref": "Reference.schema.json/definitions/Reference"
+              }
+            }
+          },
+          "required": [
+            "request",
+            "resourceType"
+          ]
+        }
+      ]
+    }
+  }
+}

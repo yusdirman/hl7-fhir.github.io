@@ -1,0 +1,75 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Organization",
+  "resourceType": "Organization",
+  "Resource.id": {
+    "value": "hl7"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      Health Level Seven International\n      <br/>\n\t\t\t\t3300 Washtenaw Avenue, Suite 227\n      <br/>\n\t\t\t\tAnn Arbor, MI 48104\n      <br/>\n\t\t\t\tUSA\n      <br/>\n\t\t\t\t(+1) 734-677-7777 (phone)\n      <br/>\n\t\t\t\t(+1) 734-677-6622 (fax)\n      <br/>\n\t\t\t\tE-mail:  \n      <a href=\"mailto:hq@HL7.org\">hq@HL7.org</a>\n    \n    </div>"
+    }
+  },
+  "DomainResource.extension": [
+    {
+      "Extension.url": {
+        "value": "http://hl7.org/fhir/StructureDefinition/organization-alias"
+      },
+      "Extension.valueString": {
+        "value": "HL7 International"
+      }
+    }
+  ],
+  "Organization.name": {
+    "value": "Health Level Seven International"
+  },
+  "Organization.telecom": [
+    {
+      "ContactPoint.system": {
+        "value": "phone"
+      },
+      "ContactPoint.value": {
+        "value": "(+1) 734-677-7777"
+      }
+    },
+    {
+      "ContactPoint.system": {
+        "value": "fax"
+      },
+      "ContactPoint.value": {
+        "value": "(+1) 734-677-6622"
+      }
+    },
+    {
+      "ContactPoint.system": {
+        "value": "email"
+      },
+      "ContactPoint.value": {
+        "value": "hq@HL7.org"
+      }
+    }
+  ],
+  "Organization.address": [
+    {
+      "Address.line": [
+        {
+          "value": "3300 Washtenaw Avenue, Suite 227"
+        }
+      ],
+      "Address.city": {
+        "value": "Ann Arbor"
+      },
+      "Address.state": {
+        "value": "MI"
+      },
+      "Address.postalCode": {
+        "value": "48104"
+      },
+      "Address.country": {
+        "value": "USA"
+      }
+    }
+  ]
+}

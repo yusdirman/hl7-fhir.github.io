@@ -1,0 +1,677 @@
+﻿<!DOCTYPE HTML>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Protocol-study-profile-example.json - FHIR v1.4.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+  <link rel="Prev" href="http://hl7.org/fhir/protocol-study-profile-example.json.html"/>
+
+  <!-- Bootstrap core CSS -->
+  <link href="./dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="./assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="./assets/css/project.css" rel="stylesheet"/>
+  <link href="./assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment"><!-- segment-header -->	
+		<div class="container"><!-- container -->
+			<a id="logo" href="http://hl7.org/fhir" no-external="true"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a id="hl7-logo" href="http://www.hl7.org" no-external="true">
+					<img src="./assets/images/hl7-logo.png" width="42" height="50" alt="visit the hl7 website"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="./assets/images/search.png"/></a></div> 
+		</div>
+		<div class="container"><!-- container -->
+	</div></div><!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment"><!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container"><!-- container -->
+ <!-- HEADER CONTENT -->
+ 	      		
+ 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="documentation.html">Documentation</a></li>
+              <li><a href="implementation.html">Implementation</a></li>
+              <li><a href="resourcelist.html">Resources</a></li>
+              <li><a href="clinical.html">Clinical</a></li>
+              <li><a href="administration.html">Administrative</a></li>
+              <li><a href="infrastructure.html">Infrastructure</a></li>
+              <li><a href="financial.html">Financial</a></li>
+
+						</ul>
+					</div><!-- /.nav-collapse -->
+				</div><!-- /.container -->
+			</nav><!-- /.navbar -->
+      		
+				
+<!-- /HEADER CONTENT -->				
+		</div><!-- /container -->
+	</div><!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment"><!-- segment-breadcrumb -->
+		<div class="container"><!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="clinical.html">Clinical</a></li>        <li><a href="protocol.html">Protocol</a></li>        <li><b>Example Instance</b></li>        <!-- protocol-study-profile-example.json.html / resource-instance:Protocol / Example-->
+
+			</ul>	
+		</div><!-- /container -->
+	</div><!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment"><!-- segment-content -->
+	<div class="container"><!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+<!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<h1>Protocol-study-profile-example.json</h1>
+
+<p>
+<a href="protocol-study-profile-example.json">Raw JSON</a> (<a href="protocol-study-profile-example.canonical.json">canonical form</a>)
+</p>
+
+<div class="example">
+<p>Study protocol example</p>
+<pre class="json">
+{
+  &quot;resourceType&quot;: &quot;Protocol&quot;,
+  &quot;id&quot;: &quot;study&quot;,
+  &quot;text&quot;: {
+    &quot;status&quot;: &quot;generated&quot;,
+    &quot;div&quot;: &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n\t\t\t&lt;p&gt;\n\t\t\t\t&lt;b&gt;id: &lt;/b&gt;study, &lt;/p&gt;\n\t\t\t&lt;p&gt;\n\t\t\t\t&lt;b&gt;extension: &lt;/b&gt;http://example.org/example-do-not-use/Profilestudyprotocol#arm arm-dose1, &lt;/p&gt;\n\t\t\t&lt;p&gt;\n\t\t\t\t&lt;b&gt;extension: &lt;/b&gt;http://example.org/example-do-not-use/Profilestudyprotocol#arm arm-dose2, &lt;/p&gt;\n\t\t\t&lt;p&gt;\n\t\t\t\t&lt;b&gt;extension: &lt;/b&gt;http://example.org/example-do-not-use/Profilestudyprotocol#epoch epoch-screening, &lt;/p&gt;\n\t\t\t&lt;p&gt;\n\t\t\t\t&lt;b&gt;extension: &lt;/b&gt;http://example.org/example-do-not-use/Profilestudyprotocol#epoch epoch-single-blind-run-in, &lt;/p&gt;\n\t\t\t&lt;p&gt;\n\t\t\t\t&lt;b&gt;extension: &lt;/b&gt;http://example.org/example-do-not-use/Profilestudyprotocol#epoch epoch-treatment-phase, &lt;/p&gt;\n\t\t\t&lt;p&gt;\n\t\t\t\t&lt;b&gt;extension: &lt;/b&gt;http://example.org/example-do-not-use/Profilestudyprotocol#epoch epoch-follow-up, &lt;/p&gt;\n\t\t\t&lt;p&gt;\n\t\t\t\t&lt;b&gt;status: &lt;/b&gt;active, &lt;/p&gt;\n\t\t\t&lt;p&gt;\n\t\t\t\t&lt;b&gt;type: &lt;/b&gt;study, &lt;/p&gt;\n\t\t\t&lt;p&gt;\n\t\t\t\t&lt;b&gt;purpose: &lt;/b&gt;Defines the execution of study AD-4833PNFP-341, &lt;/p&gt;\n\t\t\t&lt;p&gt;\n\t\t\t\t&lt;b&gt;step: &lt;/b&gt;, &lt;b&gt;extension: &lt;/b&gt;http://example.org/example-do-not-use/Profilestudyprotocol#step.arm, &lt;b&gt;extension: &lt;/b&gt;http://example.org/example-do-not-use/Profilestudyprotocol#step.epoch, &lt;b&gt;extension: &lt;/b&gt;http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence, &lt;b&gt;name: &lt;/b&gt;SCRN, &lt;b&gt;description: &lt;/b&gt;Screen, &lt;b&gt;precondition: &lt;/b&gt;, &lt;b&gt;description: &lt;/b&gt;Informed Consent, &lt;b&gt;exit: &lt;/b&gt;, &lt;b&gt;description: &lt;/b&gt;Screening assessments complete, &lt;/p&gt;\n\t\t\t&lt;p&gt;\n\t\t\t\t&lt;b&gt;step: &lt;/b&gt;, &lt;b&gt;extension: &lt;/b&gt;http://example.org/example-do-not-use/Profilestudyprotocol#step.arm, &lt;b&gt;extension: &lt;/b&gt;http://example.org/example-do-not-use/Profilestudyprotocol#step.epoch, &lt;b&gt;extension: &lt;/b&gt;http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence, &lt;b&gt;extension: &lt;/b&gt;http://example.org/example-do-not-use/Profilestudyprotocol#step.armAssignment, &lt;b&gt;name: &lt;/b&gt;SBRI, &lt;b&gt;description: &lt;/b&gt;Single Blind Run-In, &lt;b&gt;duration: &lt;/b&gt;, &lt;b&gt;value: &lt;/b&gt;1, &lt;b&gt;system: &lt;/b&gt;http://unitsofmeasure.org, &lt;b&gt;code: &lt;/b&gt;wk, &lt;b&gt;precondition: &lt;/b&gt;, &lt;b&gt;description: &lt;/b&gt;Initial Single Blind Placebo dose, &lt;b&gt;exit: &lt;/b&gt;, &lt;b&gt;description: &lt;/b&gt;1 week after start of Element, &lt;/p&gt;\n\t\t\t&lt;p&gt;\n\t\t\t\t&lt;b&gt;step: &lt;/b&gt;, &lt;b&gt;extension: &lt;/b&gt;http://example.org/example-do-not-use/Profilestudyprotocol#step.arm, &lt;b&gt;extension: &lt;/b&gt;http://example.org/example-do-not-use/Profilestudyprotocol#step.epoch, &lt;b&gt;extension: &lt;/b&gt;http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence, &lt;b&gt;name: &lt;/b&gt;DOSE 1, &lt;b&gt;description: &lt;/b&gt;Administer 0.5mg [Drug A] QD, &lt;b&gt;duration: &lt;/b&gt;, &lt;b&gt;value: &lt;/b&gt;30, &lt;b&gt;system: &lt;/b&gt;http://unitsofmeasure.org, &lt;b&gt;code: &lt;/b&gt;wk, &lt;b&gt;precondition: &lt;/b&gt;, &lt;b&gt;description: &lt;/b&gt;First dose of treatment where total drug dose of [Drug A] per day is 0.5 mg., &lt;b&gt;exit: &lt;/b&gt;, &lt;b&gt;description: &lt;/b&gt;30 weeks after start of Element, &lt;/p&gt;\n\t\t\t&lt;p&gt;\n\t\t\t\t&lt;b&gt;step: &lt;/b&gt;, &lt;b&gt;extension: &lt;/b&gt;http://example.org/example-do-not-use/Profilestudyprotocol#step.arm, &lt;b&gt;extension: &lt;/b&gt;http://example.org/example-do-not-use/Profilestudyprotocol#step.epoch, &lt;b&gt;extension: &lt;/b&gt;http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence, &lt;b&gt;name: &lt;/b&gt;FLWUP, &lt;b&gt;description: &lt;/b&gt;Follow-Up, &lt;b&gt;precondition: &lt;/b&gt;, &lt;b&gt;description: &lt;/b&gt;Last dose of treatment, &lt;b&gt;exit: &lt;/b&gt;, &lt;b&gt;description: &lt;/b&gt;2 weeks after start of Element, &lt;/p&gt;\n\t\t\t&lt;p&gt;\n\t\t\t\t&lt;b&gt;step: &lt;/b&gt;, &lt;b&gt;extension: &lt;/b&gt;http://example.org/example-do-not-use/Profilestudyprotocol#step.arm, &lt;b&gt;extension: &lt;/b&gt;http://example.org/example-do-not-use/Profilestudyprotocol#step.epoch, &lt;b&gt;extension: &lt;/b&gt;http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence, &lt;b&gt;name: &lt;/b&gt;SCRN, &lt;b&gt;description: &lt;/b&gt;Screen, &lt;b&gt;precondition: &lt;/b&gt;, &lt;b&gt;description: &lt;/b&gt;Informed Consent, &lt;b&gt;exit: &lt;/b&gt;, &lt;b&gt;description: &lt;/b&gt;Screening assessments complete, &lt;/p&gt;\n\t\t\t&lt;p&gt;\n\t\t\t\t&lt;b&gt;step: &lt;/b&gt;, &lt;b&gt;extension: &lt;/b&gt;http://example.org/example-do-not-use/Profilestudyprotocol#step.arm, &lt;b&gt;extension: &lt;/b&gt;http://example.org/example-do-not-use/Profilestudyprotocol#step.epoch, &lt;b&gt;extension: &lt;/b&gt;http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence, &lt;b&gt;extension: &lt;/b&gt;http://example.org/example-do-not-use/Profilestudyprotocol#step.armAssignment, &lt;b&gt;name: &lt;/b&gt;SBRI, &lt;b&gt;description: &lt;/b&gt;Single Blind Run-In, &lt;b&gt;duration: &lt;/b&gt;, &lt;b&gt;value: &lt;/b&gt;1, &lt;b&gt;system: &lt;/b&gt;http://unitsofmeasure.org, &lt;b&gt;code: &lt;/b&gt;wk, &lt;b&gt;precondition: &lt;/b&gt;, &lt;b&gt;description: &lt;/b&gt;First dose of Single Blind Placebo, &lt;b&gt;exit: &lt;/b&gt;, &lt;b&gt;description: &lt;/b&gt;1 week after start of Element, &lt;/p&gt;\n\t\t\t&lt;p&gt;\n\t\t\t\t&lt;b&gt;step: &lt;/b&gt;, &lt;b&gt;extension: &lt;/b&gt;http://example.org/example-do-not-use/Profilestudyprotocol#step.arm, &lt;b&gt;extension: &lt;/b&gt;http://example.org/example-do-not-use/Profilestudyprotocol#step.epoch, &lt;b&gt;extension: &lt;/b&gt;http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence, &lt;b&gt;name: &lt;/b&gt;1.0 mg Dose, &lt;b&gt;description: &lt;/b&gt;Administer 1.0 mg [Drug A] QD, &lt;b&gt;duration: &lt;/b&gt;, &lt;b&gt;value: &lt;/b&gt;30, &lt;b&gt;system: &lt;/b&gt;http://unitsofmeasure.org, &lt;b&gt;code: &lt;/b&gt;wk, &lt;b&gt;precondition: &lt;/b&gt;, &lt;b&gt;description: &lt;/b&gt;Intial dose of treatment where total drug dose of [Drug A] per day is 1.0 mg., &lt;b&gt;exit: &lt;/b&gt;, &lt;b&gt;description: &lt;/b&gt;30 weeks after start of Element, &lt;/p&gt;\n\t\t\t&lt;p&gt;\n\t\t\t\t&lt;b&gt;step: &lt;/b&gt;, &lt;b&gt;extension: &lt;/b&gt;http://example.org/example-do-not-use/Profilestudyprotocol#step.arm, &lt;b&gt;extension: &lt;/b&gt;http://example.org/example-do-not-use/Profilestudyprotocol#step.epoch, &lt;b&gt;extension: &lt;/b&gt;http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence, &lt;b&gt;name: &lt;/b&gt;FLWUP, &lt;b&gt;description: &lt;/b&gt;Follow-Up, &lt;b&gt;precondition: &lt;/b&gt;, &lt;b&gt;description: &lt;/b&gt;Last dose of treatment, &lt;b&gt;exit: &lt;/b&gt;, &lt;b&gt;description: &lt;/b&gt;2 weeks after start of Element, &lt;/p&gt;\n\t\t\t&lt;p&gt;\n\t\t\t\t&lt;b&gt;step: &lt;/b&gt;, &lt;b&gt;extension: &lt;/b&gt;http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence, &lt;b&gt;name: &lt;/b&gt;VISIT 1, &lt;b&gt;precondition: &lt;/b&gt;, &lt;b&gt;description: &lt;/b&gt;Screening, &lt;b&gt;activity: &lt;/b&gt;, &lt;b&gt;detail: &lt;/b&gt;, &lt;b&gt;category: &lt;/b&gt;encounter, &lt;/p&gt;\n\t\t\t&lt;p&gt;\n\t\t\t\t&lt;b&gt;step: &lt;/b&gt;, &lt;b&gt;extension: &lt;/b&gt;http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence, &lt;b&gt;name: &lt;/b&gt;VISIT 2, &lt;b&gt;precondition: &lt;/b&gt;, &lt;b&gt;description: &lt;/b&gt;single-blind placebo start, &lt;b&gt;activity: &lt;/b&gt;, &lt;b&gt;detail: &lt;/b&gt;, &lt;b&gt;category: &lt;/b&gt;encounter, &lt;/p&gt;\n\t\t\t&lt;p&gt;\n\t\t\t\t&lt;b&gt;step: &lt;/b&gt;, &lt;b&gt;extension: &lt;/b&gt;http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence, &lt;b&gt;name: &lt;/b&gt;VISIT 3, &lt;b&gt;precondition: &lt;/b&gt;, &lt;b&gt;description: &lt;/b&gt;Treatment start, &lt;b&gt;activity: &lt;/b&gt;, &lt;b&gt;detail: &lt;/b&gt;, &lt;b&gt;category: &lt;/b&gt;encounter, &lt;/p&gt;\n\t\t\t&lt;p&gt;\n\t\t\t\t&lt;b&gt;step: &lt;/b&gt;, &lt;b&gt;extension: &lt;/b&gt;http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence, &lt;b&gt;name: &lt;/b&gt;VISIT 4, &lt;b&gt;precondition: &lt;/b&gt;, &lt;b&gt;description: &lt;/b&gt;5 weeks after treatment start, &lt;b&gt;activity: &lt;/b&gt;, &lt;b&gt;detail: &lt;/b&gt;, &lt;b&gt;category: &lt;/b&gt;encounter, &lt;/p&gt;\n\t\t\t&lt;p&gt;\n\t\t\t\t&lt;b&gt;step: &lt;/b&gt;, &lt;b&gt;extension: &lt;/b&gt;http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence, &lt;b&gt;name: &lt;/b&gt;VISIT 5, &lt;b&gt;precondition: &lt;/b&gt;, &lt;b&gt;description: &lt;/b&gt;10 weeks after treatment start, &lt;b&gt;activity: &lt;/b&gt;, &lt;b&gt;detail: &lt;/b&gt;, &lt;b&gt;category: &lt;/b&gt;encounter, &lt;/p&gt;\n\t\t\t&lt;p&gt;\n\t\t\t\t&lt;b&gt;step: &lt;/b&gt;, &lt;b&gt;extension: &lt;/b&gt;http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence, &lt;b&gt;name: &lt;/b&gt;VISIT 6, &lt;b&gt;precondition: &lt;/b&gt;, &lt;b&gt;description: &lt;/b&gt;15 weeks after treatment start, &lt;b&gt;activity: &lt;/b&gt;, &lt;b&gt;detail: &lt;/b&gt;, &lt;b&gt;category: &lt;/b&gt;encounter, &lt;/p&gt;\n\t\t\t&lt;p&gt;\n\t\t\t\t&lt;b&gt;step: &lt;/b&gt;, &lt;b&gt;extension: &lt;/b&gt;http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence, &lt;b&gt;name: &lt;/b&gt;VISIT 7, &lt;b&gt;precondition: &lt;/b&gt;, &lt;b&gt;description: &lt;/b&gt;20 weeks after treatment start, &lt;b&gt;activity: &lt;/b&gt;, &lt;b&gt;detail: &lt;/b&gt;, &lt;b&gt;category: &lt;/b&gt;encounter, &lt;/p&gt;\n\t\t\t&lt;p&gt;\n\t\t\t\t&lt;b&gt;step: &lt;/b&gt;, &lt;b&gt;extension: &lt;/b&gt;http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence, &lt;b&gt;name: &lt;/b&gt;VISIT 8, &lt;b&gt;precondition: &lt;/b&gt;, &lt;b&gt;description: &lt;/b&gt;25 weeks after treatment start, &lt;b&gt;activity: &lt;/b&gt;, &lt;b&gt;detail: &lt;/b&gt;, &lt;b&gt;category: &lt;/b&gt;encounter, &lt;/p&gt;\n\t\t\t&lt;p&gt;\n\t\t\t\t&lt;b&gt;step: &lt;/b&gt;, &lt;b&gt;extension: &lt;/b&gt;http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence, &lt;b&gt;name: &lt;/b&gt;VISIT 9, &lt;b&gt;precondition: &lt;/b&gt;, &lt;b&gt;description: &lt;/b&gt;30 weeks after treatment start, &lt;b&gt;activity: &lt;/b&gt;, &lt;b&gt;detail: &lt;/b&gt;, &lt;b&gt;category: &lt;/b&gt;encounter, &lt;/p&gt;\n\t\t\t&lt;p&gt;\n\t\t\t\t&lt;b&gt;step: &lt;/b&gt;, &lt;b&gt;extension: &lt;/b&gt;http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence, &lt;b&gt;name: &lt;/b&gt;VISIT 10, &lt;b&gt;precondition: &lt;/b&gt;, &lt;b&gt;description: &lt;/b&gt;start of follow-up, &lt;b&gt;activity: &lt;/b&gt;, &lt;b&gt;detail: &lt;/b&gt;, &lt;b&gt;category: &lt;/b&gt;encounter, &lt;/p&gt;\n\t\t&lt;/div&gt;&quot;
+  },
+  &quot;extension&quot;: [
+    {
+      &quot;id&quot;: &quot;arm-dose1&quot;,
+      &quot;url&quot;: &quot;http://example.org/example-do-not-use/Profilestudyprotocol#arm&quot;,
+      &quot;extension&quot;: [
+        {
+          &quot;url&quot;: &quot;http://example.org/example-do-not-use/Profilestudyprotocol#arm.name&quot;,
+          &quot;valueString&quot;: &quot;0.5 mg Dose&quot;
+        },
+        {
+          &quot;url&quot;: &quot;http://example.org/example-do-not-use/Profilestudyprotocol#arm.description&quot;,
+          &quot;valueString&quot;: &quot;Administering 0.5mg of [Drug A]&quot;
+        }
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;arm-dose2&quot;,
+      &quot;url&quot;: &quot;http://example.org/example-do-not-use/Profilestudyprotocol#arm&quot;,
+      &quot;extension&quot;: [
+        {
+          &quot;url&quot;: &quot;http://example.org/example-do-not-use/Profilestudyprotocol#arm.name&quot;,
+          &quot;valueString&quot;: &quot;dose2&quot;
+        },
+        {
+          &quot;url&quot;: &quot;http://example.org/example-do-not-use/Profilestudyprotocol#arm.description&quot;,
+          &quot;valueString&quot;: &quot;Administering 1.0mg of [Drug A]&quot;
+        }
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;epoch-screening&quot;,
+      &quot;url&quot;: &quot;http://example.org/example-do-not-use/Profilestudyprotocol#epoch&quot;,
+      &quot;extension&quot;: [
+        {
+          &quot;url&quot;: &quot;http://example.org/example-do-not-use/Profilestudyprotocol#epoch.name&quot;,
+          &quot;valueString&quot;: &quot;Screening&quot;
+        }
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;epoch-single-blind-run-in&quot;,
+      &quot;url&quot;: &quot;http://example.org/example-do-not-use/Profilestudyprotocol#epoch&quot;,
+      &quot;extension&quot;: [
+        {
+          &quot;url&quot;: &quot;http://example.org/example-do-not-use/Profilestudyprotocol#epoch.name&quot;,
+          &quot;valueString&quot;: &quot;Single blind run-in&quot;
+        }
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;epoch-treatment-phase&quot;,
+      &quot;url&quot;: &quot;http://example.org/example-do-not-use/Profilestudyprotocol#epoch&quot;,
+      &quot;extension&quot;: [
+        {
+          &quot;url&quot;: &quot;http://example.org/example-do-not-use/Profilestudyprotocol#epoch.name&quot;,
+          &quot;valueString&quot;: &quot;Treatment&quot;
+        }
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;epoch-follow-up&quot;,
+      &quot;url&quot;: &quot;http://example.org/example-do-not-use/Profilestudyprotocol#epoch&quot;,
+      &quot;extension&quot;: [
+        {
+          &quot;url&quot;: &quot;http://example.org/example-do-not-use/Profilestudyprotocol#epoch.name&quot;,
+          &quot;valueString&quot;: &quot;Follow up&quot;
+        }
+      ]
+    }
+  ],
+  &quot;status&quot;: &quot;active&quot;,
+  &quot;type&quot;: &quot;study&quot;,
+  &quot;purpose&quot;: &quot;Defines the execution of study AD-4833PNFP-341&quot;,
+  &quot;step&quot;: [
+    {
+      &quot;extension&quot;: [
+        {
+          &quot;url&quot;: &quot;http://example.org/example-do-not-use/Profilestudyprotocol#step.arm&quot;,
+          &quot;valueUri&quot;: &quot;#arm-dose1&quot;
+        },
+        {
+          &quot;url&quot;: &quot;http://example.org/example-do-not-use/Profilestudyprotocol#step.epoch&quot;,
+          &quot;valueUri&quot;: &quot;#epoch-screening&quot;
+        },
+        {
+          &quot;url&quot;: &quot;http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence&quot;,
+          &quot;valueInteger&quot;: 1
+        }
+      ],
+      &quot;name&quot;: &quot;SCRN&quot;,
+      &quot;description&quot;: &quot;Screen&quot;,
+      &quot;precondition&quot;: {
+        &quot;description&quot;: &quot;Informed Consent&quot;
+      },
+      &quot;exit&quot;: {
+        &quot;description&quot;: &quot;Screening assessments complete&quot;
+      }
+    },
+    {
+      &quot;extension&quot;: [
+        {
+          &quot;url&quot;: &quot;http://example.org/example-do-not-use/Profilestudyprotocol#step.arm&quot;,
+          &quot;valueUri&quot;: &quot;#arm-dose1&quot;
+        },
+        {
+          &quot;url&quot;: &quot;http://example.org/example-do-not-use/Profilestudyprotocol#step.epoch&quot;,
+          &quot;valueUri&quot;: &quot;#epoch-single-blind-run-in&quot;
+        },
+        {
+          &quot;url&quot;: &quot;http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence&quot;,
+          &quot;valueInteger&quot;: 2
+        },
+        {
+          &quot;url&quot;: &quot;http://example.org/example-do-not-use/Profilestudyprotocol#step.armAssignment&quot;,
+          &quot;valueString&quot;: &quot;Randomized to Dose 1&quot;
+        }
+      ],
+      &quot;name&quot;: &quot;SBRI&quot;,
+      &quot;description&quot;: &quot;Single Blind Run-In&quot;,
+      &quot;duration&quot;: {
+        &quot;value&quot;: 1,
+        &quot;system&quot;: &quot;http://unitsofmeasure.org&quot;,
+        &quot;code&quot;: &quot;wk&quot;
+      },
+      &quot;precondition&quot;: {
+        &quot;description&quot;: &quot;Initial Single Blind Placebo dose&quot;
+      },
+      &quot;exit&quot;: {
+        &quot;description&quot;: &quot;1 week after start of Element&quot;
+      }
+    },
+    {
+      &quot;extension&quot;: [
+        {
+          &quot;url&quot;: &quot;http://example.org/example-do-not-use/Profilestudyprotocol#step.arm&quot;,
+          &quot;valueUri&quot;: &quot;#arm-dose1&quot;
+        },
+        {
+          &quot;url&quot;: &quot;http://example.org/example-do-not-use/Profilestudyprotocol#step.epoch&quot;,
+          &quot;valueUri&quot;: &quot;#epoch-treatment-phase&quot;
+        },
+        {
+          &quot;url&quot;: &quot;http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence&quot;,
+          &quot;valueInteger&quot;: 3
+        }
+      ],
+      &quot;name&quot;: &quot;DOSE 1&quot;,
+      &quot;description&quot;: &quot;Administer 0.5mg [Drug A] QD&quot;,
+      &quot;duration&quot;: {
+        &quot;value&quot;: 30,
+        &quot;system&quot;: &quot;http://unitsofmeasure.org&quot;,
+        &quot;code&quot;: &quot;wk&quot;
+      },
+      &quot;precondition&quot;: {
+        &quot;description&quot;: &quot;First dose of treatment where total drug dose of [Drug A] per day is 0.5 mg.&quot;
+      },
+      &quot;exit&quot;: {
+        &quot;description&quot;: &quot;30 weeks after start of Element&quot;
+      }
+    },
+    {
+      &quot;extension&quot;: [
+        {
+          &quot;url&quot;: &quot;http://example.org/example-do-not-use/Profilestudyprotocol#step.arm&quot;,
+          &quot;valueUri&quot;: &quot;#arm-dose1&quot;
+        },
+        {
+          &quot;url&quot;: &quot;http://example.org/example-do-not-use/Profilestudyprotocol#step.epoch&quot;,
+          &quot;valueUri&quot;: &quot;#epoch-follow-up&quot;
+        },
+        {
+          &quot;url&quot;: &quot;http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence&quot;,
+          &quot;valueInteger&quot;: 4
+        }
+      ],
+      &quot;name&quot;: &quot;FLWUP&quot;,
+      &quot;description&quot;: &quot;Follow-Up&quot;,
+      &quot;precondition&quot;: {
+        &quot;description&quot;: &quot;Last dose of treatment&quot;
+      },
+      &quot;exit&quot;: {
+        &quot;description&quot;: &quot;2 weeks after start of Element&quot;
+      }
+    },
+    {
+      &quot;extension&quot;: [
+        {
+          &quot;url&quot;: &quot;http://example.org/example-do-not-use/Profilestudyprotocol#step.arm&quot;,
+          &quot;valueUri&quot;: &quot;#arm-dose2&quot;
+        },
+        {
+          &quot;url&quot;: &quot;http://example.org/example-do-not-use/Profilestudyprotocol#step.epoch&quot;,
+          &quot;valueUri&quot;: &quot;#epoch-screening&quot;
+        },
+        {
+          &quot;url&quot;: &quot;http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence&quot;,
+          &quot;valueInteger&quot;: 1
+        }
+      ],
+      &quot;name&quot;: &quot;SCRN&quot;,
+      &quot;description&quot;: &quot;Screen&quot;,
+      &quot;precondition&quot;: {
+        &quot;description&quot;: &quot;Informed Consent&quot;
+      },
+      &quot;exit&quot;: {
+        &quot;description&quot;: &quot;Screening assessments complete&quot;
+      }
+    },
+    {
+      &quot;extension&quot;: [
+        {
+          &quot;url&quot;: &quot;http://example.org/example-do-not-use/Profilestudyprotocol#step.arm&quot;,
+          &quot;valueUri&quot;: &quot;#arm-dose2&quot;
+        },
+        {
+          &quot;url&quot;: &quot;http://example.org/example-do-not-use/Profilestudyprotocol#step.epoch&quot;,
+          &quot;valueUri&quot;: &quot;#epoch-single-blind-run-in&quot;
+        },
+        {
+          &quot;url&quot;: &quot;http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence&quot;,
+          &quot;valueInteger&quot;: 2
+        },
+        {
+          &quot;url&quot;: &quot;http://example.org/example-do-not-use/Profilestudyprotocol#step.armAssignment&quot;,
+          &quot;valueString&quot;: &quot;Randomized to 1.0 mg&quot;
+        }
+      ],
+      &quot;name&quot;: &quot;SBRI&quot;,
+      &quot;description&quot;: &quot;Single Blind Run-In&quot;,
+      &quot;duration&quot;: {
+        &quot;value&quot;: 1,
+        &quot;system&quot;: &quot;http://unitsofmeasure.org&quot;,
+        &quot;code&quot;: &quot;wk&quot;
+      },
+      &quot;precondition&quot;: {
+        &quot;description&quot;: &quot;First dose of Single Blind Placebo&quot;
+      },
+      &quot;exit&quot;: {
+        &quot;description&quot;: &quot;1 week after start of Element&quot;
+      }
+    },
+    {
+      &quot;extension&quot;: [
+        {
+          &quot;url&quot;: &quot;http://example.org/example-do-not-use/Profilestudyprotocol#step.arm&quot;,
+          &quot;valueUri&quot;: &quot;#arm-dose2&quot;
+        },
+        {
+          &quot;url&quot;: &quot;http://example.org/example-do-not-use/Profilestudyprotocol#step.epoch&quot;,
+          &quot;valueUri&quot;: &quot;#epoch-treatment-phase&quot;
+        },
+        {
+          &quot;url&quot;: &quot;http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence&quot;,
+          &quot;valueInteger&quot;: 3
+        }
+      ],
+      &quot;name&quot;: &quot;1.0 mg Dose&quot;,
+      &quot;description&quot;: &quot;Administer 1.0 mg [Drug A] QD&quot;,
+      &quot;duration&quot;: {
+        &quot;value&quot;: 30,
+        &quot;system&quot;: &quot;http://unitsofmeasure.org&quot;,
+        &quot;code&quot;: &quot;wk&quot;
+      },
+      &quot;precondition&quot;: {
+        &quot;description&quot;: &quot;Intial dose of treatment where total drug dose of [Drug A] per day is 1.0 mg.&quot;
+      },
+      &quot;exit&quot;: {
+        &quot;description&quot;: &quot;30 weeks after start of Element&quot;
+      }
+    },
+    {
+      &quot;extension&quot;: [
+        {
+          &quot;url&quot;: &quot;http://example.org/example-do-not-use/Profilestudyprotocol#step.arm&quot;,
+          &quot;valueUri&quot;: &quot;#arm-pio45mgs&quot;
+        },
+        {
+          &quot;url&quot;: &quot;http://example.org/example-do-not-use/Profilestudyprotocol#step.epoch&quot;,
+          &quot;valueUri&quot;: &quot;#epoch-follow-up&quot;
+        },
+        {
+          &quot;url&quot;: &quot;http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence&quot;,
+          &quot;valueInteger&quot;: 4
+        }
+      ],
+      &quot;name&quot;: &quot;FLWUP&quot;,
+      &quot;description&quot;: &quot;Follow-Up&quot;,
+      &quot;precondition&quot;: {
+        &quot;description&quot;: &quot;Last dose of treatment&quot;
+      },
+      &quot;exit&quot;: {
+        &quot;description&quot;: &quot;2 weeks after start of Element&quot;
+      }
+    },
+    {
+      &quot;extension&quot;: [
+        {
+          &quot;url&quot;: &quot;http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence&quot;,
+          &quot;valueInteger&quot;: 1
+        }
+      ],
+      &quot;name&quot;: &quot;VISIT 1&quot;,
+      &quot;precondition&quot;: {
+        &quot;description&quot;: &quot;Screening&quot;
+      },
+      &quot;activity&quot;: [
+        {
+          &quot;detail&quot;: {
+            &quot;category&quot;: &quot;encounter&quot;
+          }
+        }
+      ]
+    },
+    {
+      &quot;extension&quot;: [
+        {
+          &quot;url&quot;: &quot;http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence&quot;,
+          &quot;valueInteger&quot;: 2
+        }
+      ],
+      &quot;name&quot;: &quot;VISIT 2&quot;,
+      &quot;precondition&quot;: {
+        &quot;description&quot;: &quot;single-blind placebo start&quot;
+      },
+      &quot;activity&quot;: [
+        {
+          &quot;detail&quot;: {
+            &quot;category&quot;: &quot;encounter&quot;
+          }
+        }
+      ]
+    },
+    {
+      &quot;extension&quot;: [
+        {
+          &quot;url&quot;: &quot;http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence&quot;,
+          &quot;valueInteger&quot;: 3
+        }
+      ],
+      &quot;name&quot;: &quot;VISIT 3&quot;,
+      &quot;precondition&quot;: {
+        &quot;description&quot;: &quot;Treatment start&quot;
+      },
+      &quot;activity&quot;: [
+        {
+          &quot;detail&quot;: {
+            &quot;category&quot;: &quot;encounter&quot;
+          }
+        }
+      ]
+    },
+    {
+      &quot;extension&quot;: [
+        {
+          &quot;url&quot;: &quot;http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence&quot;,
+          &quot;valueInteger&quot;: 4
+        }
+      ],
+      &quot;name&quot;: &quot;VISIT 4&quot;,
+      &quot;precondition&quot;: {
+        &quot;description&quot;: &quot;5 weeks after treatment start&quot;
+      },
+      &quot;activity&quot;: [
+        {
+          &quot;detail&quot;: {
+            &quot;category&quot;: &quot;encounter&quot;
+          }
+        }
+      ]
+    },
+    {
+      &quot;extension&quot;: [
+        {
+          &quot;url&quot;: &quot;http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence&quot;,
+          &quot;valueInteger&quot;: 5
+        }
+      ],
+      &quot;name&quot;: &quot;VISIT 5&quot;,
+      &quot;precondition&quot;: {
+        &quot;description&quot;: &quot;10 weeks after treatment start&quot;
+      },
+      &quot;activity&quot;: [
+        {
+          &quot;detail&quot;: {
+            &quot;category&quot;: &quot;encounter&quot;
+          }
+        }
+      ]
+    },
+    {
+      &quot;extension&quot;: [
+        {
+          &quot;url&quot;: &quot;http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence&quot;,
+          &quot;valueInteger&quot;: 6
+        }
+      ],
+      &quot;name&quot;: &quot;VISIT 6&quot;,
+      &quot;precondition&quot;: {
+        &quot;description&quot;: &quot;15 weeks after treatment start&quot;
+      },
+      &quot;activity&quot;: [
+        {
+          &quot;detail&quot;: {
+            &quot;category&quot;: &quot;encounter&quot;
+          }
+        }
+      ]
+    },
+    {
+      &quot;extension&quot;: [
+        {
+          &quot;url&quot;: &quot;http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence&quot;,
+          &quot;valueInteger&quot;: 7
+        }
+      ],
+      &quot;name&quot;: &quot;VISIT 7&quot;,
+      &quot;precondition&quot;: {
+        &quot;description&quot;: &quot;20 weeks after treatment start&quot;
+      },
+      &quot;activity&quot;: [
+        {
+          &quot;detail&quot;: {
+            &quot;category&quot;: &quot;encounter&quot;
+          }
+        }
+      ]
+    },
+    {
+      &quot;extension&quot;: [
+        {
+          &quot;url&quot;: &quot;http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence&quot;,
+          &quot;valueInteger&quot;: 8
+        }
+      ],
+      &quot;name&quot;: &quot;VISIT 8&quot;,
+      &quot;precondition&quot;: {
+        &quot;description&quot;: &quot;25 weeks after treatment start&quot;
+      },
+      &quot;activity&quot;: [
+        {
+          &quot;detail&quot;: {
+            &quot;category&quot;: &quot;encounter&quot;
+          }
+        }
+      ]
+    },
+    {
+      &quot;extension&quot;: [
+        {
+          &quot;url&quot;: &quot;http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence&quot;,
+          &quot;valueInteger&quot;: 9
+        }
+      ],
+      &quot;name&quot;: &quot;VISIT 9&quot;,
+      &quot;precondition&quot;: {
+        &quot;description&quot;: &quot;30 weeks after treatment start&quot;
+      },
+      &quot;activity&quot;: [
+        {
+          &quot;detail&quot;: {
+            &quot;category&quot;: &quot;encounter&quot;
+          }
+        }
+      ]
+    },
+    {
+      &quot;extension&quot;: [
+        {
+          &quot;url&quot;: &quot;http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence&quot;,
+          &quot;valueInteger&quot;: 10
+        }
+      ],
+      &quot;name&quot;: &quot;VISIT 10&quot;,
+      &quot;precondition&quot;: {
+        &quot;description&quot;: &quot;start of follow-up&quot;
+      },
+      &quot;activity&quot;: [
+        {
+          &quot;detail&quot;: {
+            &quot;category&quot;: &quot;encounter&quot;
+          }
+        }
+      ]
+    }
+  ]
+}
+</pre>
+</div>
+
+
+<p>
+Usage note: every effort has been made to ensure that the
+examples are correct and useful, but they are not a normative part 
+of the specification. 
+</p>
+
+</div>
+
+
+				</div><!-- /inner-wrapper -->
+            </div><!-- /row -->
+        </div><!-- /container -->
+        
+    </div><!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment"><!-- segment-footer -->
+		<div class="container"><!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        © HL7.org 2011+. FHIR STU3 Candidate (v1.4.0-8453) generated on Mon, Jun 6, 2016 20:22+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search</a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fprotocol-study-profile-example.json.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fprotocol-study-profile-example.json.html">Compare to DSTU2</a> |                
+               <a style="color: #81BEF7" rel="license" href="license.html"><img src="cc0.png" style="border-style: none;" alt="CC0"/></a> | 
+               <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>   
+        </span>
+        </p>
+			</div><!-- /inner-wrapper -->
+		</div><!-- /container -->
+	</div><!-- /segment-footer -->
+<!-- disqus thread -->
+<!--disqus-->
+<!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden"><!-- segment-post-footer -->
+		<div class="container"><!-- container -->
+		</div><!-- /container -->
+	</div><!-- /segment-post-footer -->
+    
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>   <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

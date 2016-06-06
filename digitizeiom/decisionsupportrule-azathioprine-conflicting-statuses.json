@@ -1,0 +1,73 @@
+{
+  "resourceType": "DecisionSupportRule",
+  "id": "decisionsupportrule-azathioprine-conflicting-statuses",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Azathioprine Myelotoxicity Intervention - Conflicting Statuses</div>"
+  },
+  "moduleMetadata": {
+    "identifier": [
+      {
+        "use": "official",
+        "value": "azathioprine-myelotoxicity-conflicting-statuses"
+      }
+    ],
+    "version": "1.0.0",
+    "title": "Azathioprine Myelotoxicity Conflicting Statuses",
+    "type": "decision-support-rule",
+    "status": "active",
+    "description": "Azathioprine myelotoxicity intervention to alert the user that conflicting statuses were found in the patient's TPMT genotype test results.",
+    "publicationDate": "2016-04-01",
+    "topic": [
+      {
+        "text": "Azathioprine Myelotoxicity - Conflicting Statuses"
+      }
+    ]
+  },
+  "library": [
+    {
+      "reference": "Library/library-azathioprine-myelotoxicity-cds-logic"
+    }
+  ],
+  "trigger": [
+    {
+      "type": "data-added",
+      "eventData": {
+        "type": "MedicationOrder",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueCodeableConcept": [
+              {
+                "coding": [
+                  {
+                    "system": "http://snomed.org/sct",
+                    "code": "372574004"
+                  }
+                ],
+                "text": "Azathioprine (substance)"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "condition": "Should Notify User of Conflicting Statuses",
+  "action": [
+    {
+      "title": "Patient Shows Conflicting Statuses in TPMT Genotype Test Results.",
+      "textEquivalent": "The Patient has conflicting statuses in their TPMT Genotype Test results.",
+      "participantType": [
+        "practitioner"
+      ],
+      "type": "create",
+      "customization": [
+        {
+          "path": "/",
+          "expression": "Conflicting TPMT Test Results Alert"
+        }
+      ]
+    }
+  ]
+}

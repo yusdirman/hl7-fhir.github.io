@@ -1,0 +1,86 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Location",
+  "resourceType": "Location",
+  "Resource.id": {
+    "value": "2"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Burgers UMC, South Wing, second floor, Neuro Radiology Operation Room 1</div>"
+    }
+  },
+  "Location.identifier": [
+    {
+      "Identifier.value": {
+        "value": "B1-S.F2.1.00"
+      }
+    }
+  ],
+  "Location.status": {
+    "value": "suspended"
+  },
+  "Location.name": {
+    "value": "South Wing Neuro OR 1"
+  },
+  "Location.description": {
+    "value": "Old South Wing, Neuro Radiology Operation Room 1 on second floor"
+  },
+  "Location.mode": {
+    "value": "instance"
+  },
+  "Location.type": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/v3/RoleCode"
+        },
+        "Coding.code": {
+          "value": "RNEU"
+        },
+        "Coding.display": {
+          "value": "Neuroradiology unit"
+        }
+      }
+    ]
+  },
+  "Location.telecom": [
+    {
+      "ContactPoint.system": {
+        "value": "phone"
+      },
+      "ContactPoint.value": {
+        "value": "2329"
+      }
+    }
+  ],
+  "Location.physicalType": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/location-physical-type"
+        },
+        "Coding.code": {
+          "value": "ro"
+        },
+        "Coding.display": {
+          "value": "Room"
+        }
+      }
+    ]
+  },
+  "Location.managingOrganization": {
+    "Reference.reference": {
+      "value": "Organization/f001"
+    },
+    "reference": "http://hl7.org/fhir//Organization/f001"
+  },
+  "Location.partOf": {
+    "Reference.reference": {
+      "value": "Location/1"
+    },
+    "reference": "http://hl7.org/fhir//Location/1"
+  }
+}

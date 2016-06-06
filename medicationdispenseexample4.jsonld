@@ -1,0 +1,355 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/MedicationDispense",
+  "resourceType": "MedicationDispense",
+  "Resource.id": {
+    "value": "meddisp004"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: meddisp004</p><p><b>status</b>: completed</p><p><b>medication</b>: <a>prescribed medication</a></p><p><b>patient</b>: <a>Patient/example</a></p><p><b>dispenser</b>: <a>Practitioner/example</a></p><p><b>authorizingPrescription</b>: <a>MedicationOrder/medrx003</a></p><p><b>type</b>: First Fill <span>(Details : {http:hl7.org/fhir code 'FF' = '??', given as 'First Fill'})</span></p><p><b>quantity</b>: 36 tbl<span> (Details: http://unitsofmeasure.org code tbl = 'tbl')</span></p><p><b>daysSupply</b>: 9 Day<span> (Details: http://unitsofmeasure.org code D = 'D')</span></p><p><b>whenPrepared</b>: Mar 1, 2015 4:20:00 PM</p><p><b>whenHandedOver</b>: Mar 2, 2015 5:20:00 PM</p><blockquote><p><b>dosageInstruction</b></p><p><b>additionalInstructions</b>: With or after food <span>(Details : {SNOMED CT code '311504000' = 'With or after food (qualifier value)', given as 'With or after food'})</span></p><p><b>timing</b>: Events: Mar 1, 2015, Duration 3days, Do 2 per 1 days</p><p><b>site</b>: Entire oral cavity <span>(Details : {SNOMED CT code '181220002' = 'Entire oral cavity (body structure)', given as 'Entire oral cavity'})</span></p><p><b>route</b>: Oral Route <span>(Details : {SNOMED CT code '26643006' = 'Oral route (qualifier value)', given as 'Oral Route'})</span></p><p><b>dose</b>: 1 TAB<span> (Details: http://hl7.org/fhir/v3/orderableDrugForm code TAB = 'Tablet')</span></p></blockquote><blockquote><p><b>dosageInstruction</b></p><p><b>additionalInstructions</b>: With or after food <span>(Details : {SNOMED CT code '311504000' = 'With or after food (qualifier value)', given as 'With or after food'})</span></p><p><b>timing</b>: Events: Mar 4, 2015, Duration 3days, Do 2 per 1 days</p><p><b>site</b>: Entire oral cavity <span>(Details : {SNOMED CT code '181220002' = 'Entire oral cavity (body structure)', given as 'Entire oral cavity'})</span></p><p><b>route</b>: Oral Route <span>(Details : {SNOMED CT code '26643006' = 'Oral route (qualifier value)', given as 'Oral Route'})</span></p><p><b>dose</b>: 2 TAB<span> (Details: http://hl7.org/fhir/v3/orderableDrugForm code TAB = 'Tablet')</span></p></blockquote><blockquote><p><b>dosageInstruction</b></p><p><b>additionalInstructions</b>: With or after food <span>(Details : {SNOMED CT code '311504000' = 'With or after food (qualifier value)', given as 'With or after food'})</span></p><p><b>timing</b>: Events: Mar 7, 2015, Duration 3days, Do 2 per 1 days</p><p><b>site</b>: Entire oral cavity <span>(Details : {SNOMED CT code '181220002' = 'Entire oral cavity (body structure)', given as 'Entire oral cavity'})</span></p><p><b>route</b>: Oral Route <span>(Details : {SNOMED CT code '26643006' = 'Oral route (qualifier value)', given as 'Oral Route'})</span></p><p><b>dose</b>: 3 TAB<span> (Details: http://hl7.org/fhir/v3/orderableDrugForm code TAB = 'Tablet')</span></p></blockquote></div>"
+    }
+  },
+  "MedicationDispense.status": {
+    "value": "completed"
+  },
+  "MedicationDispense.medicationReference": {
+    "Reference.reference": {
+      "value": "Medication/medexample011"
+    },
+    "Reference.display": {
+      "value": "prescribed medication"
+    },
+    "reference": "http://hl7.org/fhir//Medication/medexample011"
+  },
+  "MedicationDispense.patient": {
+    "Reference.reference": {
+      "value": "Patient/example"
+    },
+    "reference": "http://hl7.org/fhir//Patient/example"
+  },
+  "MedicationDispense.dispenser": {
+    "Reference.reference": {
+      "value": "Practitioner/example"
+    },
+    "reference": "http://hl7.org/fhir//Practitioner/example"
+  },
+  "MedicationDispense.authorizingPrescription": [
+    {
+      "Reference.reference": {
+        "value": "MedicationOrder/medrx003"
+      }
+    }
+  ],
+  "MedicationDispense.type": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http:hl7.org/fhir"
+        },
+        "Coding.code": {
+          "value": "FF"
+        },
+        "Coding.display": {
+          "value": "First Fill"
+        }
+      }
+    ]
+  },
+  "MedicationDispense.quantity": {
+    "Quantity.value": {
+      "value": 36
+    },
+    "Quantity.unit": {
+      "value": "tbl"
+    },
+    "Quantity.system": {
+      "value": "http://unitsofmeasure.org"
+    },
+    "Quantity.code": {
+      "value": "tbl"
+    }
+  },
+  "MedicationDispense.daysSupply": {
+    "Quantity.value": {
+      "value": 9
+    },
+    "Quantity.unit": {
+      "value": "Day"
+    },
+    "Quantity.system": {
+      "value": "http://unitsofmeasure.org"
+    },
+    "Quantity.code": {
+      "value": "D"
+    }
+  },
+  "MedicationDispense.whenPrepared": {
+    "value": "2015-03-01T16:20:00Z"
+  },
+  "MedicationDispense.whenHandedOver": {
+    "value": "2015-03-02T17:20:00Z"
+  },
+  "MedicationDispense.dosageInstruction": [
+    {
+      "MedicationDispense.dosageInstruction.additionalInstructions": [
+        {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "value": "http://snomed.info/sct"
+              },
+              "Coding.code": {
+                "value": "311504000"
+              },
+              "Coding.display": {
+                "value": "With or after food"
+              }
+            }
+          ]
+        }
+      ],
+      "MedicationDispense.dosageInstruction.timing": {
+        "Timing.event": [
+          {
+            "value": "2015-03-01"
+          }
+        ],
+        "Timing.repeat": {
+          "Timing.repeat.duration": {
+            "value": 3
+          },
+          "Timing.repeat.durationUnit": {
+            "value": "d"
+          },
+          "Timing.repeat.frequency": {
+            "value": 2
+          },
+          "Timing.repeat.period": {
+            "value": 1
+          },
+          "Timing.repeat.periodUnit": {
+            "value": "d"
+          }
+        }
+      },
+      "MedicationDispense.dosageInstruction.siteCodeableConcept": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "value": "181220002"
+            },
+            "Coding.display": {
+              "value": "Entire oral cavity"
+            }
+          }
+        ],
+        "concept": "http://snomed.info/sct#181220002"
+      },
+      "MedicationDispense.dosageInstruction.route": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "value": "26643006"
+            },
+            "Coding.display": {
+              "value": "Oral Route"
+            }
+          }
+        ],
+        "concept": "http://snomed.info/sct#26643006"
+      },
+      "MedicationDispense.dosageInstruction.doseQuantity": {
+        "Quantity.value": {
+          "value": 1
+        },
+        "Quantity.system": {
+          "value": "http://hl7.org/fhir/v3/orderableDrugForm"
+        },
+        "Quantity.code": {
+          "value": "TAB"
+        }
+      }
+    },
+    {
+      "MedicationDispense.dosageInstruction.additionalInstructions": [
+        {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "value": "http://snomed.info/sct"
+              },
+              "Coding.code": {
+                "value": "311504000"
+              },
+              "Coding.display": {
+                "value": "With or after food"
+              }
+            }
+          ]
+        }
+      ],
+      "MedicationDispense.dosageInstruction.timing": {
+        "Timing.event": [
+          {
+            "value": "2015-03-04"
+          }
+        ],
+        "Timing.repeat": {
+          "Timing.repeat.duration": {
+            "value": 3
+          },
+          "Timing.repeat.durationUnit": {
+            "value": "d"
+          },
+          "Timing.repeat.frequency": {
+            "value": 2
+          },
+          "Timing.repeat.period": {
+            "value": 1
+          },
+          "Timing.repeat.periodUnit": {
+            "value": "d"
+          }
+        }
+      },
+      "MedicationDispense.dosageInstruction.siteCodeableConcept": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "value": "181220002"
+            },
+            "Coding.display": {
+              "value": "Entire oral cavity"
+            }
+          }
+        ],
+        "concept": "http://snomed.info/sct#181220002"
+      },
+      "MedicationDispense.dosageInstruction.route": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "value": "26643006"
+            },
+            "Coding.display": {
+              "value": "Oral Route"
+            }
+          }
+        ],
+        "concept": "http://snomed.info/sct#26643006"
+      },
+      "MedicationDispense.dosageInstruction.doseQuantity": {
+        "Quantity.value": {
+          "value": 2
+        },
+        "Quantity.system": {
+          "value": "http://hl7.org/fhir/v3/orderableDrugForm"
+        },
+        "Quantity.code": {
+          "value": "TAB"
+        }
+      }
+    },
+    {
+      "MedicationDispense.dosageInstruction.additionalInstructions": [
+        {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "value": "http://snomed.info/sct"
+              },
+              "Coding.code": {
+                "value": "311504000"
+              },
+              "Coding.display": {
+                "value": "With or after food"
+              }
+            }
+          ]
+        }
+      ],
+      "MedicationDispense.dosageInstruction.timing": {
+        "Timing.event": [
+          {
+            "value": "2015-03-07"
+          }
+        ],
+        "Timing.repeat": {
+          "Timing.repeat.duration": {
+            "value": 3
+          },
+          "Timing.repeat.durationUnit": {
+            "value": "d"
+          },
+          "Timing.repeat.frequency": {
+            "value": 2
+          },
+          "Timing.repeat.period": {
+            "value": 1
+          },
+          "Timing.repeat.periodUnit": {
+            "value": "d"
+          }
+        }
+      },
+      "MedicationDispense.dosageInstruction.siteCodeableConcept": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "value": "181220002"
+            },
+            "Coding.display": {
+              "value": "Entire oral cavity"
+            }
+          }
+        ],
+        "concept": "http://snomed.info/sct#181220002"
+      },
+      "MedicationDispense.dosageInstruction.route": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "value": "26643006"
+            },
+            "Coding.display": {
+              "value": "Oral Route"
+            }
+          }
+        ],
+        "concept": "http://snomed.info/sct#26643006"
+      },
+      "MedicationDispense.dosageInstruction.doseQuantity": {
+        "Quantity.value": {
+          "value": 3
+        },
+        "Quantity.system": {
+          "value": "http://hl7.org/fhir/v3/orderableDrugForm"
+        },
+        "Quantity.code": {
+          "value": "TAB"
+        }
+      }
+    }
+  ]
+}

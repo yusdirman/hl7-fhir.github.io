@@ -1,0 +1,179 @@
+{
+  "resourceType": "Library",
+  "id": "library-ccs",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Cohort Definition for Cervical Cancer Screening Measure</div>"
+  },
+  "moduleMetadata": {
+    "identifier": [
+      {
+        "use": "official",
+        "value": "CCS"
+      }
+    ],
+    "version": "1.0.0",
+    "title": "Cohort Definition for Cervical Cancer Screening Measure",
+    "type": "library",
+    "status": "active",
+    "experimental": true,
+    "publicationDate": "2016-04-19",
+    "topic": [
+      {
+        "text": "something"
+      }
+    ]
+  },
+  "model": [
+    {
+      "identifier": "FHIR"
+    }
+  ],
+  "valueSet": [
+    {
+      "name": "HPVTests",
+      "identifier": "HPV Tests"
+    },
+    {
+      "name": "Cervical Cytology",
+      "identifier": "2.16.840.1.113883.3.464.1004.1208"
+    },
+    {
+      "name": "Hysterectomy",
+      "identifier": "Hysterectomy"
+    },
+    {
+      "name": "Absence of Cervix",
+      "identifier": "Absence of Cervix"
+    }
+  ],
+  "dataRequirement": [
+    {
+      "type": "Patient"
+    },
+    {
+      "type": "Procedure",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSetString": "Cervical Cytology"
+        }
+      ],
+      "dateFilter": [
+        {
+          "path": "performedDateTime.value",
+          "valuePeriod": {
+            "start": "2011-01-01"
+          }
+        }
+      ]
+    },
+    {
+      "type": "DiagnosticReport",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSetString": "Cervical Cytology"
+        }
+      ],
+      "dateFilter": [
+        {
+          "path": "effectiveDateTime.value",
+          "valuePeriod": {
+            "start": "2011-01-01"
+          }
+        }
+      ]
+    },
+    {
+      "type": "Observation",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSetString": "Cervical Cytology"
+        }
+      ],
+      "dateFilter": [
+        {
+          "path": "effectiveDateTime.value",
+          "valuePeriod": {
+            "start": "2011-01-01"
+          }
+        }
+      ]
+    },
+    {
+      "type": "Procedure",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSetString": "HPV Tests"
+        }
+      ],
+      "dateFilter": [
+        {
+          "path": "performedDateTime.value",
+          "valuePeriod": {
+            "start": "2011-01-01"
+          }
+        }
+      ]
+    },
+    {
+      "type": "DiagnosticReport",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSetString": "HPV Tests"
+        }
+      ],
+      "dateFilter": [
+        {
+          "path": "effectiveDateTime.value",
+          "valuePeriod": {
+            "start": "2011-01-01"
+          }
+        }
+      ]
+    },
+    {
+      "type": "Observation",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSetString": "HPV Tests"
+        }
+      ],
+      "dateFilter": [
+        {
+          "path": "effectiveDateTime.value",
+          "valuePeriod": {
+            "start": "2011-01-01"
+          }
+        }
+      ]
+    },
+    {
+      "type": "Procedure",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSetString": "Hysterectomy"
+        }
+      ]
+    },
+    {
+      "type": "Procedure",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSetString": "Absence of Cervix"
+        }
+      ]
+    }
+  ],
+  "document": {
+    "contentType": "application/xml+elm",
+    "url": "http://example.org/libraries/library-ccs.elm.xml"
+  }
+}

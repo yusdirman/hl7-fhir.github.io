@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="v2-0725"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/StructureDefinition/codesystem-shareable-definition"/>
+  </meta>
+  <text>
+    <status value="additional"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>Mood Codes</p>
+
+      <table class="grid">
+        <tr>
+          <td>
+            <b>Code</b>
+          </td>
+          <td>
+            <b>Description</b>
+          </td>
+          <td>
+            <b>Comment</b>
+          </td>
+          <td>
+            <b>Version</b>
+          </td>
+        </tr>
+        <tr>
+          <td>apt
+            <a name="apt"> </a>
+          </td>
+          <td>Appointment</td>
+          <td>Planned act for specific time and place</td>
+          <td>added v2.6</td>
+        </tr>
+        <tr>
+          <td>arq
+            <a name="arq"> </a>
+          </td>
+          <td>Appointment Request</td>
+          <td>Request for Booking of an Appointment</td>
+          <td>added v2.6</td>
+        </tr>
+        <tr>
+          <td>e.g. use in care plans,
+            <a name="e.46g.46useincareplans.44"> </a>
+          </td>
+          <td/>
+          <td/>
+          <td>added v2.8.1</td>
+        </tr>
+        <tr>
+          <td>evn
+            <a name="evn"> </a>
+          </td>
+          <td>Event</td>
+          <td>Service actually happens or happened or is ongoing.</td>
+          <td>added v2.6</td>
+        </tr>
+        <tr>
+          <td>evn.crt
+            <a name="evn.46crt"> </a>
+          </td>
+          <td>Event Criterion</td>
+          <td>Criterion applying to Events for another Service to be applied.&lt;p&gt;This is an Act Mood Predicate.</td>
+          <td>added v2.6</td>
+        </tr>
+        <tr>
+          <td>exp
+            <a name="exp"> </a>
+          </td>
+          <td>Expectation</td>
+          <td>Expecting that something will occur independently of  deliberate intent; e.g. expect a patient will discard medications.</td>
+          <td>added v2.6</td>
+        </tr>
+        <tr>
+          <td>int
+            <a name="int"> </a>
+          </td>
+          <td>Intent</td>
+          <td>Plan to perform a service</td>
+          <td>added v2.6</td>
+        </tr>
+        <tr>
+          <td>prms
+            <a name="prms"> </a>
+          </td>
+          <td>Promise</td>
+          <td>An intent to perform a service</td>
+          <td>added v2.6</td>
+        </tr>
+        <tr>
+          <td>prp
+            <a name="prp"> </a>
+          </td>
+          <td>Proposal</td>
+          <td>Non-mandated intent to perform an act</td>
+          <td>added v2.6</td>
+        </tr>
+        <tr>
+          <td>rqo
+            <a name="rqo"> </a>
+          </td>
+          <td>Request-Order</td>
+          <td>Request or Order for a service</td>
+          <td>added v2.6</td>
+        </tr>
+        <tr>
+          <td>similar uses of above moods ma
+            <a name="similarusesofabovemoodsma"> </a>
+          </td>
+          <td/>
+          <td/>
+          <td>added v2.8.1</td>
+        </tr>
+      </table>
+
+    </div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/valueset-oid">
+    <valueUri value="urn:oid:2.16.840.1.133883.18.390"/>
+  </extension>
+  <url value="http://hl7.org/fhir/v2/0725"/>
+  <version value="2.8.2"/>
+  <name value="v2 Mood Codes"/>
+  <status value="active"/>
+  <experimental value="true"/>
+  <publisher value="HL7, Inc"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="http://hl7.org"/>
+    </telecom>
+  </contact>
+  <description value="FHIR Value set/code system definition for HL7 v2 table 0725 ( Mood Codes)"/>
+  <caseSensitive value="false"/>
+  <valueSet value="http://hl7.org/fhir/ValueSet/v2-0725"/>
+  <content value="complete"/>
+  <concept>
+    <extension url="http://hl7.org/fhir/StructureDefinition/valueset-comments">
+      <valueString value="Planned act for specific time and place"/>
+    </extension>
+    <code value="APT"/>
+    <display value="Appointment"/>
+  </concept>
+  <concept>
+    <extension url="http://hl7.org/fhir/StructureDefinition/valueset-comments">
+      <valueString value="Request for Booking of an Appointment"/>
+    </extension>
+    <code value="ARQ"/>
+    <display value="Appointment Request"/>
+  </concept>
+  <concept>
+    <code value="E.g. Use in Care Plans,"/>
+  </concept>
+  <concept>
+    <extension url="http://hl7.org/fhir/StructureDefinition/valueset-comments">
+      <valueString value="Service actually happens or happened or is ongoing."/>
+    </extension>
+    <code value="EVN"/>
+    <display value="Event"/>
+  </concept>
+  <concept>
+    <extension url="http://hl7.org/fhir/StructureDefinition/valueset-comments">
+      <valueString value="Criterion applying to Events for another Service to be applied.&lt;p&gt;This is an Act Mood Predicate."/>
+    </extension>
+    <code value="EVN.CRT"/>
+    <display value="Event Criterion"/>
+  </concept>
+  <concept>
+    <extension url="http://hl7.org/fhir/StructureDefinition/valueset-comments">
+      <valueString value="Expecting that something will occur independently of  deliberate intent; e.g. expect a patient will discard medications."/>
+    </extension>
+    <code value="EXP"/>
+    <display value="Expectation"/>
+  </concept>
+  <concept>
+    <extension url="http://hl7.org/fhir/StructureDefinition/valueset-comments">
+      <valueString value="Plan to perform a service"/>
+    </extension>
+    <code value="INT"/>
+    <display value="Intent"/>
+  </concept>
+  <concept>
+    <extension url="http://hl7.org/fhir/StructureDefinition/valueset-comments">
+      <valueString value="An intent to perform a service"/>
+    </extension>
+    <code value="PRMS"/>
+    <display value="Promise"/>
+  </concept>
+  <concept>
+    <extension url="http://hl7.org/fhir/StructureDefinition/valueset-comments">
+      <valueString value="Non-mandated intent to perform an act"/>
+    </extension>
+    <code value="PRP"/>
+    <display value="Proposal"/>
+  </concept>
+  <concept>
+    <extension url="http://hl7.org/fhir/StructureDefinition/valueset-comments">
+      <valueString value="Request or Order for a service"/>
+    </extension>
+    <code value="RQO"/>
+    <display value="Request-Order"/>
+  </concept>
+  <concept>
+    <code value="Similar uses of above moods ma"/>
+  </concept>
+</CodeSystem>

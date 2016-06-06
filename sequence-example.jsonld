@@ -1,0 +1,79 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Sequence",
+  "resourceType": "Sequence",
+  "Resource.id": {
+    "value": "example"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: example</p><p><b>type</b>: DNA</p><p><b>coordinateSystem</b>: 0</p><p><b>patient</b>: <a>Patient/example</a></p><h3>ReferenceSeqs</h3><table><tr><td>-</td><td><b>ReferenceSeqId</b></td><td><b>Strand</b></td><td><b>WindowStart</b></td><td><b>WindowEnd</b></td></tr><tr><td>*</td><td>?? <span>(Details : {http://www.ncbi.nlm.nih.gov/nuccore code 'NC_000007.14' = '??)</span></td><td>1</td><td>55227970</td><td>55227980</td></tr></table><h3>Variants</h3><table><tr><td>-</td><td><b>Start</b></td><td><b>End</b></td><td><b>ObservedAllele</b></td><td><b>ReferenceAllele</b></td></tr><tr><td>*</td><td>55227976</td><td>55227977</td><td>T</td><td>A</td></tr></table><h3>Repositories</h3><table><tr><td>-</td><td><b>Url</b></td><td><b>Name</b></td><td><b>VariantId</b></td></tr><tr><td>*</td><td><a>https://www.googleapis.com/genomics/v1beta2</a></td><td>ga4gh</td><td>A1A2</td></tr></table></div>"
+    }
+  },
+  "Sequence.type": {
+    "value": "DNA"
+  },
+  "Sequence.coordinateSystem": {
+    "value": 0
+  },
+  "Sequence.patient": {
+    "Reference.reference": {
+      "value": "Patient/example"
+    },
+    "reference": "http://hl7.org/fhir//Patient/example"
+  },
+  "Sequence.referenceSeq": {
+    "Sequence.referenceSeq.referenceSeqId": {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "value": "http://www.ncbi.nlm.nih.gov/nuccore"
+          },
+          "Coding.code": {
+            "value": "NC_000007.14"
+          }
+        }
+      ]
+    },
+    "Sequence.referenceSeq.strand": {
+      "value": 1
+    },
+    "Sequence.referenceSeq.windowStart": {
+      "value": 55227970
+    },
+    "Sequence.referenceSeq.windowEnd": {
+      "value": 55227980
+    }
+  },
+  "Sequence.variant": [
+    {
+      "Sequence.variant.start": {
+        "value": 55227976
+      },
+      "Sequence.variant.end": {
+        "value": 55227977
+      },
+      "Sequence.variant.observedAllele": {
+        "value": "T"
+      },
+      "Sequence.variant.referenceAllele": {
+        "value": "A"
+      }
+    }
+  ],
+  "Sequence.repository": [
+    {
+      "Sequence.repository.url": {
+        "value": "https://www.googleapis.com/genomics/v1beta2"
+      },
+      "Sequence.repository.name": {
+        "value": "ga4gh"
+      },
+      "Sequence.repository.variantId": {
+        "value": "A1A2"
+      }
+    }
+  ]
+}

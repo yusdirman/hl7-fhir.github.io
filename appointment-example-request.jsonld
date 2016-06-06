@@ -1,0 +1,171 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Appointment",
+  "resourceType": "Appointment",
+  "Resource.id": {
+    "value": "examplereq"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Brian MRI results discussion</div>"
+    }
+  },
+  "Appointment.identifier": [
+    {
+      "Identifier.system": {
+        "value": "http://example.org/sampleappointment-identifier"
+      },
+      "Identifier.value": {
+        "value": "123"
+      }
+    }
+  ],
+  "Appointment.status": {
+    "value": "proposed"
+  },
+  "Appointment.serviceCategory": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://example.org/service-category"
+        },
+        "Coding.code": {
+          "value": "gp"
+        },
+        "Coding.display": {
+          "value": "General Practice"
+        }
+      }
+    ]
+  },
+  "Appointment.specialty": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "value": "http://example.org/specialty"
+          },
+          "Coding.code": {
+            "value": "gp"
+          },
+          "Coding.display": {
+            "value": "General Practice"
+          }
+        }
+      ]
+    }
+  ],
+  "Appointment.appointmentType": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://example.org/appointment-type"
+        },
+        "Coding.code": {
+          "value": "wi"
+        },
+        "Coding.display": {
+          "value": "Walk in"
+        }
+      }
+    ]
+  },
+  "Appointment.reason": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "value": "413095006"
+        }
+      }
+    ],
+    "CodeableConcept.text": {
+      "value": "Clinical Review"
+    },
+    "concept": "http://snomed.info/sct#413095006"
+  },
+  "Appointment.priority": {
+    "value": 5
+  },
+  "Appointment.description": {
+    "value": "Discussion on the results of your recent MRI"
+  },
+  "Appointment.minutesDuration": {
+    "value": 15
+  },
+  "Appointment.slot": [
+    {
+      "Reference.reference": {
+        "value": "Slot/example"
+      }
+    }
+  ],
+  "Appointment.created": {
+    "value": "2015-12-02"
+  },
+  "Appointment.comment": {
+    "value": "Further expand on the results of the MRI and determine the next actions that may be appropriate."
+  },
+  "Appointment.participant": [
+    {
+      "Appointment.participant.actor": {
+        "Reference.reference": {
+          "value": "Patient/example"
+        },
+        "Reference.display": {
+          "value": "Peter James Chalmers"
+        },
+        "reference": "http://hl7.org/fhir//Patient/example"
+      },
+      "Appointment.participant.required": {
+        "value": "required"
+      },
+      "Appointment.participant.status": {
+        "value": "needs-action"
+      }
+    },
+    {
+      "Appointment.participant.type": [
+        {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "value": "http://hl7.org/fhir/v3/ParticipationType"
+              },
+              "Coding.code": {
+                "value": "ATND"
+              }
+            }
+          ]
+        }
+      ],
+      "Appointment.participant.required": {
+        "value": "required"
+      },
+      "Appointment.participant.status": {
+        "value": "needs-action"
+      }
+    },
+    {
+      "Appointment.participant.actor": {
+        "Reference.reference": {
+          "value": "Location/1"
+        },
+        "Reference.display": {
+          "value": "South Wing, second floor"
+        },
+        "reference": "http://hl7.org/fhir//Location/1"
+      },
+      "Appointment.participant.required": {
+        "value": "required"
+      },
+      "Appointment.participant.status": {
+        "value": "accepted"
+      }
+    }
+  ]
+}

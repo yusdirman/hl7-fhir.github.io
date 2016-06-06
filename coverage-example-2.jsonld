@@ -1,0 +1,76 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Coverage",
+  "resourceType": "Coverage",
+  "Resource.id": {
+    "value": "7546D"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">A human-readable rendering of the coverage</div>"
+    }
+  },
+  "Coverage.issuerReference": {
+    "Reference.reference": {
+      "value": "Organization/2"
+    },
+    "reference": "http://hl7.org/fhir//Organization/2"
+  },
+  "Coverage.period": {
+    "Period.start": {
+      "value": "2011-03-17"
+    },
+    "Period.end": {
+      "value": "2012-03-17"
+    }
+  },
+  "Coverage.type": {
+    "Coding.system": {
+      "value": "http://hl7.org/fhir/v3/ActCode"
+    },
+    "Coding.code": {
+      "value": "EHCPOL"
+    },
+    "Coding.display": {
+      "value": "extended healthcare"
+    }
+  },
+  "Coverage.planholderReference": {
+    "Reference.reference": {
+      "value": "Patient/5"
+    },
+    "reference": "http://hl7.org/fhir//Patient/5"
+  },
+  "Coverage.beneficiaryReference": {
+    "Reference.reference": {
+      "value": "Patient/5"
+    },
+    "reference": "http://hl7.org/fhir//Patient/5"
+  },
+  "Coverage.relationship": {
+    "Coding.code": {
+      "value": "self"
+    }
+  },
+  "Coverage.identifier": [
+    {
+      "Identifier.system": {
+        "value": "http://xyz.com/codes/identifier"
+      },
+      "Identifier.value": {
+        "value": "AB9876"
+      }
+    }
+  ],
+  "Coverage.plan": {
+    "value": "11024"
+  },
+  "Coverage.subPlan": {
+    "value": "D15C9"
+  },
+  "Coverage.dependent": {
+    "value": 1
+  }
+}

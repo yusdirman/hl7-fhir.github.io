@@ -1,0 +1,55 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ANY",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+      "valueUri": "urn:hl7-org:v3"
+    }
+  ],
+  "url": "http://hl7.org/fhir/StructureDefinition/ANY",
+  "name": "V3 Data type ANY (DataValue)",
+  "display": "V3 Data type ANY (DataValue)",
+  "status": "active",
+  "experimental": false,
+  "publisher": "HL7",
+  "description": "Defines the basic properties of every data value. This is an abstract type, meaning that no value can be just a data value without belonging to any concrete type. Every concrete type is a specialization of this general abstract DataValue type.",
+  "kind": "logical",
+  "abstract": true,
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "path": "ANY",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "ANY.nullFlavor",
+        "representation": [
+          "xmlAttr"
+        ],
+        "label": "Exceptional Value Detail",
+        "definition": "If a value is an exceptional value (NULL-value), this specifies in what way and why proper information is missing.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/v3-NullFlavor"
+          }
+        }
+      }
+    ]
+  }
+}

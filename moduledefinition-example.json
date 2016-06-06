@@ -1,0 +1,37 @@
+{
+  "resourceType": "ModuleDefinition",
+  "id": "example",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">[Put rendering here]</div>"
+  },
+  "identifier": [
+    {
+      "use": "official",
+      "value": "ChalmydiaScreening_Common"
+    }
+  ],
+  "version": "2.0.0",
+  "model": [
+    {
+      "identifier": "QUICK"
+    }
+  ],
+  "valueSet": [
+    {
+      "name": "Female Administrative Sex",
+      "identifier": "2.16.840.1.113883.3.560.100.2"
+    }
+  ],
+  "data": [
+    {
+      "type": "Condition",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSetString": "Other Female Reproductive Conditions"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3948 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/QuestionnaireResponse",
+  "resourceType": "QuestionnaireResponse",
+  "Resource.id": {
+    "value": "questionnaireresponse-sdc-example-ussg-fht-answers"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: questionnaireresponse-sdc-example-ussg-fht-answers</p><p><b>questionnaire</b>: <a>Questionnaire/43127-6</a></p><p><b>status</b>: in-progress</p><p><b>subject</b>: <a>Patient/proband</a></p><p><b>authored</b>: Jan 17, 2008</p><blockquote><p><b>item</b></p><p><b>linkId</b>: 0</p><h3>Items</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: 1</p><p><b>text</b>: Your health information</p><h3>Items</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: 2</p><p><b>text</b>: Family member health information</p><h3>Items</h3><table><tr><td>-</td></tr><tr><td>*</td></tr><tr><td>*</td></tr><tr><td>*</td></tr><tr><td>*</td></tr><tr><td>*</td></tr><tr><td>*</td></tr><tr><td>*</td></tr><tr><td>*</td></tr><tr><td>*</td></tr><tr><td>*</td></tr><tr><td>*</td></tr><tr><td>*</td></tr><tr><td>*</td></tr><tr><td>*</td></tr><tr><td>*</td></tr><tr><td>*</td></tr><tr><td>*</td></tr></table></blockquote></div>"
+    }
+  },
+  "QuestionnaireResponse.questionnaire": {
+    "Reference.reference": {
+      "value": "Questionnaire/43127-6"
+    },
+    "reference": "http://hl7.org/fhir//Questionnaire/43127-6"
+  },
+  "QuestionnaireResponse.status": {
+    "value": "in-progress"
+  },
+  "QuestionnaireResponse.subject": {
+    "Reference.reference": {
+      "value": "Patient/proband"
+    },
+    "reference": "http://hl7.org/fhir//Patient/proband"
+  },
+  "QuestionnaireResponse.authored": {
+    "value": "2008-01-17"
+  },
+  "QuestionnaireResponse.item": [
+    {
+      "QuestionnaireResponse.item.linkId": {
+        "value": "0"
+      },
+      "QuestionnaireResponse.item.item": [
+        {
+          "QuestionnaireResponse.item.linkId": {
+            "value": "0.1"
+          },
+          "QuestionnaireResponse.item.text": {
+            "value": "Date Done"
+          },
+          "QuestionnaireResponse.item.answer": [
+            {
+              "QuestionnaireResponse.item.answer.valueDate": {
+                "value": "2008-01-17"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "QuestionnaireResponse.item.linkId": {
+        "value": "1"
+      },
+      "QuestionnaireResponse.item.text": {
+        "value": "Your health information"
+      },
+      "QuestionnaireResponse.item.item": [
+        {
+          "QuestionnaireResponse.item.linkId": {
+            "value": "1.1"
+          },
+          "QuestionnaireResponse.item.item": [
+            {
+              "QuestionnaireResponse.item.linkId": {
+                "value": "1.1.1"
+              },
+              "QuestionnaireResponse.item.text": {
+                "value": "Name"
+              },
+              "QuestionnaireResponse.item.answer": [
+                {
+                  "QuestionnaireResponse.item.answer.valueString": {
+                    "value": "Annie Proband"
+                  }
+                }
+              ]
+            },
+            {
+              "QuestionnaireResponse.item.linkId": {
+                "value": "1.1.2"
+              },
+              "QuestionnaireResponse.item.text": {
+                "value": "Gender"
+              },
+              "QuestionnaireResponse.item.answer": [
+                {
+                  "QuestionnaireResponse.item.answer.valueCoding": {
+                    "Coding.system": {
+                      "value": "http://loinc.org"
+                    },
+                    "Coding.code": {
+                      "value": "LA3-6"
+                    },
+                    "Coding.display": {
+                      "value": "Female"
+                    },
+                    "concept": "http://loinc.org/owl#LA3-6"
+                  }
+                }
+              ]
+            },
+            {
+              "QuestionnaireResponse.item.linkId": {
+                "value": "1.1.3"
+              },
+              "QuestionnaireResponse.item.text": {
+                "value": "Date of Birth"
+              },
+              "QuestionnaireResponse.item.answer": [
+                {
+                  "QuestionnaireResponse.item.answer.valueDate": {
+                    "value": "1966-04-04"
+                  }
+                }
+              ]
+            },
+            {
+              "QuestionnaireResponse.item.linkId": {
+                "value": "1.1.4"
+              },
+              "QuestionnaireResponse.item.text": {
+                "value": "Were you born a twin?"
+              },
+              "QuestionnaireResponse.item.answer": [
+                {
+                  "QuestionnaireResponse.item.answer.valueCoding": {
+                    "Coding.system": {
+                      "value": "http://loinc.org"
+                    },
+                    "Coding.code": {
+                      "value": "LA32-8"
+                    },
+                    "Coding.display": {
+                      "value": "No"
+                    },
+                    "concept": "http://loinc.org/owl#LA32-8"
+                  }
+                }
+              ]
+            },
+            {
+              "QuestionnaireResponse.item.linkId": {
+                "value": "1.1.5"
+              },
+              "QuestionnaireResponse.item.text": {
+                "value": "Were you adopted?"
+              },
+              "QuestionnaireResponse.item.answer": [
+                {
+                  "QuestionnaireResponse.item.answer.valueCoding": {
+                    "Coding.system": {
+                      "value": "http://loinc.org"
+                    },
+                    "Coding.code": {
+                      "value": "LA32-8"
+                    },
+                    "Coding.display": {
+                      "value": "No"
+                    },
+                    "concept": "http://loinc.org/owl#LA32-8"
+                  }
+                }
+              ]
+            },
+            {
+              "QuestionnaireResponse.item.linkId": {
+                "value": "1.1.6"
+              },
+              "QuestionnaireResponse.item.text": {
+                "value": "Are your parents related to each other in any way other than marriage?"
+              },
+              "QuestionnaireResponse.item.answer": [
+                {
+                  "QuestionnaireResponse.item.answer.valueCoding": {
+                    "Coding.system": {
+                      "value": "http://loinc.org"
+                    },
+                    "Coding.code": {
+                      "value": "LA32-8"
+                    },
+                    "Coding.display": {
+                      "value": "No"
+                    },
+                    "concept": "http://loinc.org/owl#LA32-8"
+                  }
+                }
+              ]
+            },
+            {
+              "QuestionnaireResponse.item.linkId": {
+                "value": "1.1.7"
+              },
+              "QuestionnaireResponse.item.text": {
+                "value": "Height"
+              },
+              "QuestionnaireResponse.item.answer": [
+                {
+                  "QuestionnaireResponse.item.answer.valueDecimal": {
+                    "value": 63
+                  },
+                  "QuestionnaireResponse.item.answer.item": [
+                    {
+                      "QuestionnaireResponse.item.linkId": {
+                        "value": "1.1.7.1"
+                      },
+                      "QuestionnaireResponse.item.item": [
+                        {
+                          "QuestionnaireResponse.item.linkId": {
+                            "value": "1.1.7.1.1"
+                          },
+                          "QuestionnaireResponse.item.text": {
+                            "value": "Units"
+                          },
+                          "QuestionnaireResponse.item.answer": [
+                            {
+                              "QuestionnaireResponse.item.answer.valueCoding": {
+                                "Coding.system": {
+                                  "value": "http://unitsofmeasure.org"
+                                },
+                                "Coding.code": {
+                                  "value": "[in_i]"
+                                },
+                                "Coding.display": {
+                                  "value": "inches"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "QuestionnaireResponse.item.linkId": {
+                "value": "1.1.8"
+              },
+              "QuestionnaireResponse.item.text": {
+                "value": "Weight"
+              },
+              "QuestionnaireResponse.item.answer": [
+                {
+                  "QuestionnaireResponse.item.answer.valueDecimal": {
+                    "value": 127
+                  },
+                  "QuestionnaireResponse.item.answer.item": [
+                    {
+                      "QuestionnaireResponse.item.linkId": {
+                        "value": "1.1.8.1"
+                      },
+                      "QuestionnaireResponse.item.item": [
+                        {
+                          "QuestionnaireResponse.item.linkId": {
+                            "value": "1.1.8.1.1"
+                          },
+                          "QuestionnaireResponse.item.text": {
+                            "value": "Units"
+                          },
+                          "QuestionnaireResponse.item.answer": [
+                            {
+                              "QuestionnaireResponse.item.answer.valueCoding": {
+                                "Coding.system": {
+                                  "value": "http://unitsofmeasure.org"
+                                },
+                                "Coding.code": {
+                                  "value": "lb"
+                                },
+                                "Coding.display": {
+                                  "value": "pounds"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "QuestionnaireResponse.item.linkId": {
+                "value": "1.1.9"
+              },
+              "QuestionnaireResponse.item.text": {
+                "value": "Body mass index (BMI) [Ratio]"
+              },
+              "QuestionnaireResponse.item.answer": [
+                {
+                  "QuestionnaireResponse.item.answer.valueDecimal": {
+                    "value": 22.5
+                  }
+                }
+              ]
+            },
+            {
+              "QuestionnaireResponse.item.linkId": {
+                "value": "1.1.10"
+              },
+              "QuestionnaireResponse.item.text": {
+                "value": "Race"
+              },
+              "QuestionnaireResponse.item.answer": [
+                {
+                  "QuestionnaireResponse.item.answer.valueCoding": {
+                    "Coding.system": {
+                      "value": "http://loinc.org"
+                    },
+                    "Coding.code": {
+                      "value": "LA4457-3"
+                    },
+                    "Coding.display": {
+                      "value": "White"
+                    },
+                    "concept": "http://loinc.org/owl#LA4457-3"
+                  }
+                }
+              ]
+            },
+            {
+              "QuestionnaireResponse.item.linkId": {
+                "value": "1.1.11"
+              },
+              "QuestionnaireResponse.item.text": {
+                "value": "Ethnicity"
+              },
+              "QuestionnaireResponse.item.answer": [
+                {
+                  "QuestionnaireResponse.item.answer.valueCoding": {
+                    "Coding.system": {
+                      "value": "http://loinc.org"
+                    },
+                    "Coding.code": {
+                      "value": "LA10602-3"
+                    },
+                    "Coding.display": {
+                      "value": "-- Mexican"
+                    },
+                    "concept": "http://loinc.org/owl#LA10602-3"
+                  }
+                },
+                {
+                  "QuestionnaireResponse.item.answer.valueCoding": {
+                    "Coding.system": {
+                      "value": "http://loinc.org"
+                    },
+                    "Coding.code": {
+                      "value": "LA10606-4"
+                    },
+                    "Coding.display": {
+                      "value": "-- South American"
+                    },
+                    "concept": "http://loinc.org/owl#LA10606-4"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "QuestionnaireResponse.item.linkId": {
+        "value": "2"
+      },
+      "QuestionnaireResponse.item.text": {
+        "value": "Family member health information"
+      },
+      "QuestionnaireResponse.item.item": [
+        {
+          "QuestionnaireResponse.item.linkId": {
+            "value": "2.1"
+          },
+          "QuestionnaireResponse.item.item": [
+            {
+              "QuestionnaireResponse.item.linkId": {
+                "value": "2.1.1"
+              },
+              "QuestionnaireResponse.item.item": [
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.1"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Relationship to you"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA10405-1"
+                        },
+                        "Coding.display": {
+                          "value": "Daughter"
+                        },
+                        "concept": "http://loinc.org/owl#LA10405-1"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.2"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Name"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueString": {
+                        "value": "Susan"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.3"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Gender"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA3-6"
+                        },
+                        "Coding.display": {
+                          "value": "Female"
+                        },
+                        "concept": "http://loinc.org/owl#LA3-6"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.4"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Living?"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA33-6"
+                        },
+                        "Coding.display": {
+                          "value": "Yes"
+                        },
+                        "concept": "http://loinc.org/owl#LA33-6"
+                      },
+                      "QuestionnaireResponse.item.answer.item": [
+                        {
+                          "QuestionnaireResponse.item.linkId": {
+                            "value": "2.1.1.4.2"
+                          },
+                          "QuestionnaireResponse.item.item": [
+                            {
+                              "QuestionnaireResponse.item.linkId": {
+                                "value": "2.1.1.4.2.2"
+                              },
+                              "QuestionnaireResponse.item.text": {
+                                "value": "Age"
+                              },
+                              "QuestionnaireResponse.item.answer": [
+                                {
+                                  "QuestionnaireResponse.item.answer.valueDecimal": {
+                                    "value": 17
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.5"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Was this person born a twin?"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA32-8"
+                        },
+                        "Coding.display": {
+                          "value": "No"
+                        },
+                        "concept": "http://loinc.org/owl#LA32-8"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.6"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Was this person adopted?"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA32-8"
+                        },
+                        "Coding.display": {
+                          "value": "No"
+                        },
+                        "concept": "http://loinc.org/owl#LA32-8"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "QuestionnaireResponse.item.linkId": {
+            "value": "2.1"
+          },
+          "QuestionnaireResponse.item.item": [
+            {
+              "QuestionnaireResponse.item.linkId": {
+                "value": "2.1.1"
+              },
+              "QuestionnaireResponse.item.item": [
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.1"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Relationship to you"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA10415-0"
+                        },
+                        "Coding.display": {
+                          "value": "Brother"
+                        },
+                        "concept": "http://loinc.org/owl#LA10415-0"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.2"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Name"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueString": {
+                        "value": "Brian"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.3"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Gender"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA2-8"
+                        },
+                        "Coding.display": {
+                          "value": "Male"
+                        },
+                        "concept": "http://loinc.org/owl#LA2-8"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.4"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Living?"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA33-6"
+                        },
+                        "Coding.display": {
+                          "value": "Yes"
+                        },
+                        "concept": "http://loinc.org/owl#LA33-6"
+                      },
+                      "QuestionnaireResponse.item.answer.item": [
+                        {
+                          "QuestionnaireResponse.item.linkId": {
+                            "value": "2.1.1.4.2"
+                          },
+                          "QuestionnaireResponse.item.item": [
+                            {
+                              "QuestionnaireResponse.item.linkId": {
+                                "value": "2.1.1.4.2.2"
+                              },
+                              "QuestionnaireResponse.item.text": {
+                                "value": "Age"
+                              },
+                              "QuestionnaireResponse.item.answer": [
+                                {
+                                  "QuestionnaireResponse.item.answer.valueDecimal": {
+                                    "value": 32
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.5"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Was this person born a twin?"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA32-8"
+                        },
+                        "Coding.display": {
+                          "value": "No"
+                        },
+                        "concept": "http://loinc.org/owl#LA32-8"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.6"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Was this person adopted?"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA32-8"
+                        },
+                        "Coding.display": {
+                          "value": "No"
+                        },
+                        "concept": "http://loinc.org/owl#LA32-8"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "QuestionnaireResponse.item.linkId": {
+                "value": "2.1.2"
+              },
+              "QuestionnaireResponse.item.text": {
+                "value": "This family member's history of disease"
+              },
+              "QuestionnaireResponse.item.item": [
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.2.1"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Disease or Condition"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA10550-4"
+                        },
+                        "Coding.display": {
+                          "value": "-- Other Cancer"
+                        },
+                        "concept": "http://loinc.org/owl#LA10550-4"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.2.2"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Age at Diagnosis"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA10397-0"
+                        },
+                        "Coding.display": {
+                          "value": "30-39"
+                        },
+                        "concept": "http://loinc.org/owl#LA10397-0"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "QuestionnaireResponse.item.linkId": {
+            "value": "2.1"
+          },
+          "QuestionnaireResponse.item.item": [
+            {
+              "QuestionnaireResponse.item.linkId": {
+                "value": "2.1.1"
+              },
+              "QuestionnaireResponse.item.item": [
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.1"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Relationship to you"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA10418-4"
+                        },
+                        "Coding.display": {
+                          "value": "Sister"
+                        },
+                        "concept": "http://loinc.org/owl#LA10418-4"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.2"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Name"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueString": {
+                        "value": "Janet"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.3"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Gender"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA3-6"
+                        },
+                        "Coding.display": {
+                          "value": "Female"
+                        },
+                        "concept": "http://loinc.org/owl#LA3-6"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.4"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Living?"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA33-6"
+                        },
+                        "Coding.display": {
+                          "value": "Yes"
+                        },
+                        "concept": "http://loinc.org/owl#LA33-6"
+                      },
+                      "QuestionnaireResponse.item.answer.item": [
+                        {
+                          "QuestionnaireResponse.item.linkId": {
+                            "value": "2.1.1.4.2"
+                          },
+                          "QuestionnaireResponse.item.item": [
+                            {
+                              "QuestionnaireResponse.item.linkId": {
+                                "value": "2.1.1.4.2.2"
+                              },
+                              "QuestionnaireResponse.item.text": {
+                                "value": "Age"
+                              },
+                              "QuestionnaireResponse.item.answer": [
+                                {
+                                  "QuestionnaireResponse.item.answer.valueDecimal": {
+                                    "value": 36
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.5"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Was this person born a twin?"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA32-8"
+                        },
+                        "Coding.display": {
+                          "value": "No"
+                        },
+                        "concept": "http://loinc.org/owl#LA32-8"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.6"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Was this person adopted?"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA32-8"
+                        },
+                        "Coding.display": {
+                          "value": "No"
+                        },
+                        "concept": "http://loinc.org/owl#LA32-8"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "QuestionnaireResponse.item.linkId": {
+                "value": "2.1.2"
+              },
+              "QuestionnaireResponse.item.text": {
+                "value": "This family member's history of disease"
+              },
+              "QuestionnaireResponse.item.item": [
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.2.1"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Disease or Condition"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA10536-3"
+                        },
+                        "Coding.display": {
+                          "value": "-- Breast Cancer"
+                        },
+                        "concept": "http://loinc.org/owl#LA10536-3"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.2.2"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Age at Diagnosis"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA10397-0"
+                        },
+                        "Coding.display": {
+                          "value": "30-39"
+                        },
+                        "concept": "http://loinc.org/owl#LA10397-0"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "QuestionnaireResponse.item.linkId": {
+            "value": "2.1"
+          },
+          "QuestionnaireResponse.item.item": [
+            {
+              "QuestionnaireResponse.item.linkId": {
+                "value": "2.1.1"
+              },
+              "QuestionnaireResponse.item.item": [
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.1"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Relationship to you"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA10419-2"
+                        },
+                        "Coding.display": {
+                          "value": "Nephew"
+                        },
+                        "concept": "http://loinc.org/owl#LA10419-2"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.2"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Name"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueString": {
+                        "value": "Ian"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.3"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Gender"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA2-8"
+                        },
+                        "Coding.display": {
+                          "value": "Male"
+                        },
+                        "concept": "http://loinc.org/owl#LA2-8"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.4"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Living?"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA33-6"
+                        },
+                        "Coding.display": {
+                          "value": "Yes"
+                        },
+                        "concept": "http://loinc.org/owl#LA33-6"
+                      },
+                      "QuestionnaireResponse.item.answer.item": [
+                        {
+                          "QuestionnaireResponse.item.linkId": {
+                            "value": "2.1.1.4.2"
+                          },
+                          "QuestionnaireResponse.item.item": [
+                            {
+                              "QuestionnaireResponse.item.linkId": {
+                                "value": "2.1.1.4.2.2"
+                              },
+                              "QuestionnaireResponse.item.text": {
+                                "value": "Age"
+                              },
+                              "QuestionnaireResponse.item.answer": [
+                                {
+                                  "QuestionnaireResponse.item.answer.valueDecimal": {
+                                    "value": 16
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.5"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Was this person born a twin?"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA32-8"
+                        },
+                        "Coding.display": {
+                          "value": "No"
+                        },
+                        "concept": "http://loinc.org/owl#LA32-8"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.6"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Was this person adopted?"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA32-8"
+                        },
+                        "Coding.display": {
+                          "value": "No"
+                        },
+                        "concept": "http://loinc.org/owl#LA32-8"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "QuestionnaireResponse.item.linkId": {
+            "value": "2.1"
+          },
+          "QuestionnaireResponse.item.item": [
+            {
+              "QuestionnaireResponse.item.linkId": {
+                "value": "2.1.1"
+              },
+              "QuestionnaireResponse.item.item": [
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.1"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Relationship to you"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA10420-0"
+                        },
+                        "Coding.display": {
+                          "value": "Niece"
+                        },
+                        "concept": "http://loinc.org/owl#LA10420-0"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.2"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Name"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueString": {
+                        "value": "Helen"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.3"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Gender"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA3-6"
+                        },
+                        "Coding.display": {
+                          "value": "Female"
+                        },
+                        "concept": "http://loinc.org/owl#LA3-6"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.4"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Living?"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA33-6"
+                        },
+                        "Coding.display": {
+                          "value": "Yes"
+                        },
+                        "concept": "http://loinc.org/owl#LA33-6"
+                      },
+                      "QuestionnaireResponse.item.answer.item": [
+                        {
+                          "QuestionnaireResponse.item.linkId": {
+                            "value": "2.1.1.4.2"
+                          },
+                          "QuestionnaireResponse.item.item": [
+                            {
+                              "QuestionnaireResponse.item.linkId": {
+                                "value": "2.1.1.4.2.2"
+                              },
+                              "QuestionnaireResponse.item.text": {
+                                "value": "Age"
+                              },
+                              "QuestionnaireResponse.item.answer": [
+                                {
+                                  "QuestionnaireResponse.item.answer.valueDecimal": {
+                                    "value": 15
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.5"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Was this person born a twin?"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA32-8"
+                        },
+                        "Coding.display": {
+                          "value": "No"
+                        },
+                        "concept": "http://loinc.org/owl#LA32-8"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.6"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Was this person adopted?"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA32-8"
+                        },
+                        "Coding.display": {
+                          "value": "No"
+                        },
+                        "concept": "http://loinc.org/owl#LA32-8"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "QuestionnaireResponse.item.linkId": {
+            "value": "2.1"
+          },
+          "QuestionnaireResponse.item.item": [
+            {
+              "QuestionnaireResponse.item.linkId": {
+                "value": "2.1.1"
+              },
+              "QuestionnaireResponse.item.item": [
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.1"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Relationship to you"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA10416-8"
+                        },
+                        "Coding.display": {
+                          "value": "Father"
+                        },
+                        "concept": "http://loinc.org/owl#LA10416-8"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.2"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Name"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueString": {
+                        "value": "Donald"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.3"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Gender"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA2-8"
+                        },
+                        "Coding.display": {
+                          "value": "Male"
+                        },
+                        "concept": "http://loinc.org/owl#LA2-8"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.4"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Living?"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA33-6"
+                        },
+                        "Coding.display": {
+                          "value": "Yes"
+                        },
+                        "concept": "http://loinc.org/owl#LA33-6"
+                      },
+                      "QuestionnaireResponse.item.answer.item": [
+                        {
+                          "QuestionnaireResponse.item.linkId": {
+                            "value": "2.1.1.4.2"
+                          },
+                          "QuestionnaireResponse.item.item": [
+                            {
+                              "QuestionnaireResponse.item.linkId": {
+                                "value": "2.1.1.4.2.2"
+                              },
+                              "QuestionnaireResponse.item.text": {
+                                "value": "Age"
+                              },
+                              "QuestionnaireResponse.item.answer": [
+                                {
+                                  "QuestionnaireResponse.item.answer.valueDecimal": {
+                                    "value": 52
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.5"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Was this person born a twin?"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA32-8"
+                        },
+                        "Coding.display": {
+                          "value": "No"
+                        },
+                        "concept": "http://loinc.org/owl#LA32-8"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.6"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Was this person adopted?"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA32-8"
+                        },
+                        "Coding.display": {
+                          "value": "No"
+                        },
+                        "concept": "http://loinc.org/owl#LA32-8"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "QuestionnaireResponse.item.linkId": {
+            "value": "2.1"
+          },
+          "QuestionnaireResponse.item.item": [
+            {
+              "QuestionnaireResponse.item.linkId": {
+                "value": "2.1.1"
+              },
+              "QuestionnaireResponse.item.item": [
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.1"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Relationship to you"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA10425-9"
+                        },
+                        "Coding.display": {
+                          "value": "Paternal Uncle"
+                        },
+                        "concept": "http://loinc.org/owl#LA10425-9"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.2"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Name"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueString": {
+                        "value": "Eric"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.3"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Gender"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA2-8"
+                        },
+                        "Coding.display": {
+                          "value": "Male"
+                        },
+                        "concept": "http://loinc.org/owl#LA2-8"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.4"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Living?"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA33-6"
+                        },
+                        "Coding.display": {
+                          "value": "Yes"
+                        },
+                        "concept": "http://loinc.org/owl#LA33-6"
+                      },
+                      "QuestionnaireResponse.item.answer.item": [
+                        {
+                          "QuestionnaireResponse.item.linkId": {
+                            "value": "2.1.1.4.2"
+                          },
+                          "QuestionnaireResponse.item.item": [
+                            {
+                              "QuestionnaireResponse.item.linkId": {
+                                "value": "2.1.1.4.2.2"
+                              },
+                              "QuestionnaireResponse.item.text": {
+                                "value": "Age"
+                              },
+                              "QuestionnaireResponse.item.answer": [
+                                {
+                                  "QuestionnaireResponse.item.answer.valueDecimal": {
+                                    "value": 56
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.5"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Was this person born a twin?"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA32-8"
+                        },
+                        "Coding.display": {
+                          "value": "No"
+                        },
+                        "concept": "http://loinc.org/owl#LA32-8"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.6"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Was this person adopted?"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA32-8"
+                        },
+                        "Coding.display": {
+                          "value": "No"
+                        },
+                        "concept": "http://loinc.org/owl#LA32-8"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "QuestionnaireResponse.item.linkId": {
+            "value": "2.1"
+          },
+          "QuestionnaireResponse.item.item": [
+            {
+              "QuestionnaireResponse.item.linkId": {
+                "value": "2.1.1"
+              },
+              "QuestionnaireResponse.item.item": [
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.1"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Relationship to you"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA10421-8"
+                        },
+                        "Coding.display": {
+                          "value": "Paternal Aunt"
+                        },
+                        "concept": "http://loinc.org/owl#LA10421-8"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.2"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Name"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueString": {
+                        "value": "Fiona"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.3"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Gender"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA3-6"
+                        },
+                        "Coding.display": {
+                          "value": "Female"
+                        },
+                        "concept": "http://loinc.org/owl#LA3-6"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.4"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Living?"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA33-6"
+                        },
+                        "Coding.display": {
+                          "value": "Yes"
+                        },
+                        "concept": "http://loinc.org/owl#LA33-6"
+                      },
+                      "QuestionnaireResponse.item.answer.item": [
+                        {
+                          "QuestionnaireResponse.item.linkId": {
+                            "value": "2.1.1.4.2"
+                          },
+                          "QuestionnaireResponse.item.item": [
+                            {
+                              "QuestionnaireResponse.item.linkId": {
+                                "value": "2.1.1.4.2.2"
+                              },
+                              "QuestionnaireResponse.item.text": {
+                                "value": "Age"
+                              },
+                              "QuestionnaireResponse.item.answer": [
+                                {
+                                  "QuestionnaireResponse.item.answer.valueDecimal": {
+                                    "value": 57
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.5"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Was this person born a twin?"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA32-8"
+                        },
+                        "Coding.display": {
+                          "value": "No"
+                        },
+                        "concept": "http://loinc.org/owl#LA32-8"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.6"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Was this person adopted?"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA32-8"
+                        },
+                        "Coding.display": {
+                          "value": "No"
+                        },
+                        "concept": "http://loinc.org/owl#LA32-8"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "QuestionnaireResponse.item.linkId": {
+                "value": "2.1.2"
+              },
+              "QuestionnaireResponse.item.text": {
+                "value": "This family member's history of disease"
+              },
+              "QuestionnaireResponse.item.item": [
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.2.1"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Disease or Condition"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA10543-9"
+                        },
+                        "Coding.display": {
+                          "value": "-- Skin Cancer"
+                        },
+                        "concept": "http://loinc.org/owl#LA10543-9"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "QuestionnaireResponse.item.linkId": {
+            "value": "2.1"
+          },
+          "QuestionnaireResponse.item.item": [
+            {
+              "QuestionnaireResponse.item.linkId": {
+                "value": "2.1.1"
+              },
+              "QuestionnaireResponse.item.item": [
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.1"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Relationship to you"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA10423-4"
+                        },
+                        "Coding.display": {
+                          "value": "Paternal Grandfather"
+                        },
+                        "concept": "http://loinc.org/owl#LA10423-4"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.2"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Name"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueString": {
+                        "value": "Bob"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.3"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Gender"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA2-8"
+                        },
+                        "Coding.display": {
+                          "value": "Male"
+                        },
+                        "concept": "http://loinc.org/owl#LA2-8"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.4"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Living?"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA32-8"
+                        },
+                        "Coding.display": {
+                          "value": "No"
+                        },
+                        "concept": "http://loinc.org/owl#LA32-8"
+                      },
+                      "QuestionnaireResponse.item.answer.item": [
+                        {
+                          "QuestionnaireResponse.item.linkId": {
+                            "value": "2.1.1.4.1"
+                          },
+                          "QuestionnaireResponse.item.item": [
+                            {
+                              "QuestionnaireResponse.item.linkId": {
+                                "value": "2.1.1.4.1.1"
+                              },
+                              "QuestionnaireResponse.item.text": {
+                                "value": "Cause of Death"
+                              },
+                              "QuestionnaireResponse.item.answer": [
+                                {
+                                  "QuestionnaireResponse.item.answer.valueCoding": {
+                                    "Coding.system": {
+                                      "value": "http://loinc.org"
+                                    },
+                                    "Coding.code": {
+                                      "value": "LA10537-1"
+                                    },
+                                    "Coding.display": {
+                                      "value": "-- Colon Cancer"
+                                    },
+                                    "concept": "http://loinc.org/owl#LA10537-1"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "QuestionnaireResponse.item.linkId": {
+                                "value": "2.1.1.4.1.2"
+                              },
+                              "QuestionnaireResponse.item.text": {
+                                "value": "Age at Death"
+                              },
+                              "QuestionnaireResponse.item.answer": [
+                                {
+                                  "QuestionnaireResponse.item.answer.valueCoding": {
+                                    "Coding.system": {
+                                      "value": "http://loinc.org"
+                                    },
+                                    "Coding.code": {
+                                      "value": "LA10400-2"
+                                    },
+                                    "Coding.display": {
+                                      "value": "OVER 60"
+                                    },
+                                    "concept": "http://loinc.org/owl#LA10400-2"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.5"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Was this person born a twin?"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA32-8"
+                        },
+                        "Coding.display": {
+                          "value": "No"
+                        },
+                        "concept": "http://loinc.org/owl#LA32-8"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.6"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Was this person adopted?"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA32-8"
+                        },
+                        "Coding.display": {
+                          "value": "No"
+                        },
+                        "concept": "http://loinc.org/owl#LA32-8"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "QuestionnaireResponse.item.linkId": {
+                "value": "2.1.2"
+              },
+              "QuestionnaireResponse.item.text": {
+                "value": "This family member's history of disease"
+              },
+              "QuestionnaireResponse.item.item": [
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.2.1"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Disease or Condition"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA10537-1"
+                        },
+                        "Coding.display": {
+                          "value": "-- Colon Cancer"
+                        },
+                        "concept": "http://loinc.org/owl#LA10537-1"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.2.2"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Age at Diagnosis"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA10400-2"
+                        },
+                        "Coding.display": {
+                          "value": "OVER 60"
+                        },
+                        "concept": "http://loinc.org/owl#LA10400-2"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "QuestionnaireResponse.item.linkId": {
+            "value": "2.1"
+          },
+          "QuestionnaireResponse.item.item": [
+            {
+              "QuestionnaireResponse.item.linkId": {
+                "value": "2.1.1"
+              },
+              "QuestionnaireResponse.item.item": [
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.1"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Relationship to you"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA10424-2"
+                        },
+                        "Coding.display": {
+                          "value": "Paternal Grandmother"
+                        },
+                        "concept": "http://loinc.org/owl#LA10424-2"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.2"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Name"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueString": {
+                        "value": "Claire"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.3"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Gender"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA3-6"
+                        },
+                        "Coding.display": {
+                          "value": "Female"
+                        },
+                        "concept": "http://loinc.org/owl#LA3-6"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.4"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Living?"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA32-8"
+                        },
+                        "Coding.display": {
+                          "value": "No"
+                        },
+                        "concept": "http://loinc.org/owl#LA32-8"
+                      },
+                      "QuestionnaireResponse.item.answer.item": [
+                        {
+                          "QuestionnaireResponse.item.linkId": {
+                            "value": "2.1.1.4.1"
+                          },
+                          "QuestionnaireResponse.item.item": [
+                            {
+                              "QuestionnaireResponse.item.linkId": {
+                                "value": "2.1.1.4.1.1"
+                              },
+                              "QuestionnaireResponse.item.text": {
+                                "value": "Cause of Death"
+                              },
+                              "QuestionnaireResponse.item.answer": [
+                                {
+                                  "QuestionnaireResponse.item.answer.valueCoding": {
+                                    "Coding.system": {
+                                      "value": "http://loinc.org"
+                                    },
+                                    "Coding.code": {
+                                      "value": "LA10589-2"
+                                    },
+                                    "Coding.display": {
+                                      "value": "-- Other/Unexpected"
+                                    },
+                                    "concept": "http://loinc.org/owl#LA10589-2"
+                                  },
+                                  "QuestionnaireResponse.item.answer.item": [
+                                    {
+                                      "QuestionnaireResponse.item.linkId": {
+                                        "value": "2.1.1.4.1.1.1"
+                                      },
+                                      "QuestionnaireResponse.item.item": [
+                                        {
+                                          "QuestionnaireResponse.item.text": {
+                                            "value": "Please specify"
+                                          },
+                                          "QuestionnaireResponse.item.answer": [
+                                            {
+                                              "QuestionnaireResponse.item.answer.valueString": {
+                                                "value": "Lou Gehrigs"
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "QuestionnaireResponse.item.linkId": {
+                                "value": "2.1.1.4.1.2"
+                              },
+                              "QuestionnaireResponse.item.text": {
+                                "value": "Age at Death"
+                              },
+                              "QuestionnaireResponse.item.answer": [
+                                {
+                                  "QuestionnaireResponse.item.answer.valueCoding": {
+                                    "Coding.system": {
+                                      "value": "http://loinc.org"
+                                    },
+                                    "Coding.code": {
+                                      "value": "LA10400-2"
+                                    },
+                                    "Coding.display": {
+                                      "value": "OVER 60"
+                                    },
+                                    "concept": "http://loinc.org/owl#LA10400-2"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.5"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Was this person born a twin?"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA32-8"
+                        },
+                        "Coding.display": {
+                          "value": "No"
+                        },
+                        "concept": "http://loinc.org/owl#LA32-8"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.6"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Was this person adopted?"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA32-8"
+                        },
+                        "Coding.display": {
+                          "value": "No"
+                        },
+                        "concept": "http://loinc.org/owl#LA32-8"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "QuestionnaireResponse.item.linkId": {
+            "value": "2.1"
+          },
+          "QuestionnaireResponse.item.item": [
+            {
+              "QuestionnaireResponse.item.linkId": {
+                "value": "2.1.1"
+              },
+              "QuestionnaireResponse.item.item": [
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.1"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Relationship to you"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA10417-6"
+                        },
+                        "Coding.display": {
+                          "value": "Mother"
+                        },
+                        "concept": "http://loinc.org/owl#LA10417-6"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.2"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Name"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueString": {
+                        "value": "Harriet"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.3"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Gender"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA3-6"
+                        },
+                        "Coding.display": {
+                          "value": "Female"
+                        },
+                        "concept": "http://loinc.org/owl#LA3-6"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.4"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Living?"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA32-8"
+                        },
+                        "Coding.display": {
+                          "value": "No"
+                        },
+                        "concept": "http://loinc.org/owl#LA32-8"
+                      },
+                      "QuestionnaireResponse.item.answer.item": [
+                        {
+                          "QuestionnaireResponse.item.linkId": {
+                            "value": "2.1.1.4.1"
+                          },
+                          "QuestionnaireResponse.item.item": [
+                            {
+                              "QuestionnaireResponse.item.linkId": {
+                                "value": "2.1.1.4.1.1"
+                              },
+                              "QuestionnaireResponse.item.text": {
+                                "value": "Cause of Death"
+                              },
+                              "QuestionnaireResponse.item.answer": [
+                                {
+                                  "QuestionnaireResponse.item.answer.valueCoding": {
+                                    "Coding.system": {
+                                      "value": "http://loinc.org"
+                                    },
+                                    "Coding.code": {
+                                      "value": "LA10539-7"
+                                    },
+                                    "Coding.display": {
+                                      "value": "-- Ovarian Cancer"
+                                    },
+                                    "concept": "http://loinc.org/owl#LA10539-7"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "QuestionnaireResponse.item.linkId": {
+                                "value": "2.1.1.4.1.2"
+                              },
+                              "QuestionnaireResponse.item.text": {
+                                "value": "Age at Death"
+                              },
+                              "QuestionnaireResponse.item.answer": [
+                                {
+                                  "QuestionnaireResponse.item.answer.valueCoding": {
+                                    "Coding.system": {
+                                      "value": "http://loinc.org"
+                                    },
+                                    "Coding.code": {
+                                      "value": "LA10399-6"
+                                    },
+                                    "Coding.display": {
+                                      "value": "50-59"
+                                    },
+                                    "concept": "http://loinc.org/owl#LA10399-6"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.5"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Was this person born a twin?"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA32-8"
+                        },
+                        "Coding.display": {
+                          "value": "No"
+                        },
+                        "concept": "http://loinc.org/owl#LA32-8"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.6"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Was this person adopted?"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA32-8"
+                        },
+                        "Coding.display": {
+                          "value": "No"
+                        },
+                        "concept": "http://loinc.org/owl#LA32-8"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "QuestionnaireResponse.item.linkId": {
+                "value": "2.1.2"
+              },
+              "QuestionnaireResponse.item.text": {
+                "value": "This family member's history of disease"
+              },
+              "QuestionnaireResponse.item.item": [
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.2.1"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Disease or Condition"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA10539-7"
+                        },
+                        "Coding.display": {
+                          "value": "-- Ovarian Cancer"
+                        },
+                        "concept": "http://loinc.org/owl#LA10539-7"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.2.2"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Age at Diagnosis"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA10398-8"
+                        },
+                        "Coding.display": {
+                          "value": "40-49"
+                        },
+                        "concept": "http://loinc.org/owl#LA10398-8"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "QuestionnaireResponse.item.linkId": {
+            "value": "2.1"
+          },
+          "QuestionnaireResponse.item.item": [
+            {
+              "QuestionnaireResponse.item.linkId": {
+                "value": "2.1.1"
+              },
+              "QuestionnaireResponse.item.item": [
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.1"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Relationship to you"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA10414-3"
+                        },
+                        "Coding.display": {
+                          "value": "Maternal Uncle"
+                        },
+                        "concept": "http://loinc.org/owl#LA10414-3"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.2"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Name"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueString": {
+                        "value": "Rudy"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.3"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Gender"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA2-8"
+                        },
+                        "Coding.display": {
+                          "value": "Male"
+                        },
+                        "concept": "http://loinc.org/owl#LA2-8"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.4"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Living?"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA33-6"
+                        },
+                        "Coding.display": {
+                          "value": "Yes"
+                        },
+                        "concept": "http://loinc.org/owl#LA33-6"
+                      },
+                      "QuestionnaireResponse.item.answer.item": [
+                        {
+                          "QuestionnaireResponse.item.linkId": {
+                            "value": "2.1.1.4.2"
+                          },
+                          "QuestionnaireResponse.item.item": [
+                            {
+                              "QuestionnaireResponse.item.linkId": {
+                                "value": "2.1.1.4.2.2"
+                              },
+                              "QuestionnaireResponse.item.text": {
+                                "value": "Age"
+                              },
+                              "QuestionnaireResponse.item.answer": [
+                                {
+                                  "QuestionnaireResponse.item.answer.valueDecimal": {
+                                    "value": 60
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.5"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Was this person born a twin?"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA32-8"
+                        },
+                        "Coding.display": {
+                          "value": "No"
+                        },
+                        "concept": "http://loinc.org/owl#LA32-8"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.6"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Was this person adopted?"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA32-8"
+                        },
+                        "Coding.display": {
+                          "value": "No"
+                        },
+                        "concept": "http://loinc.org/owl#LA32-8"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "QuestionnaireResponse.item.linkId": {
+            "value": "2.1"
+          },
+          "QuestionnaireResponse.item.item": [
+            {
+              "QuestionnaireResponse.item.linkId": {
+                "value": "2.1.1"
+              },
+              "QuestionnaireResponse.item.item": [
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.1"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Relationship to you"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA10410-1"
+                        },
+                        "Coding.display": {
+                          "value": "Maternal Aunt"
+                        },
+                        "concept": "http://loinc.org/owl#LA10410-1"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.2"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Name"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueString": {
+                        "value": "Julie"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.3"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Gender"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA3-6"
+                        },
+                        "Coding.display": {
+                          "value": "Female"
+                        },
+                        "concept": "http://loinc.org/owl#LA3-6"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.4"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Living?"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA33-6"
+                        },
+                        "Coding.display": {
+                          "value": "Yes"
+                        },
+                        "concept": "http://loinc.org/owl#LA33-6"
+                      },
+                      "QuestionnaireResponse.item.answer.item": [
+                        {
+                          "QuestionnaireResponse.item.linkId": {
+                            "value": "2.1.1.4.2"
+                          },
+                          "QuestionnaireResponse.item.item": [
+                            {
+                              "QuestionnaireResponse.item.linkId": {
+                                "value": "2.1.1.4.2.2"
+                              },
+                              "QuestionnaireResponse.item.text": {
+                                "value": "Age"
+                              },
+                              "QuestionnaireResponse.item.answer": [
+                                {
+                                  "QuestionnaireResponse.item.answer.valueDecimal": {
+                                    "value": 57
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.5"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Was this person born a twin?"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA32-8"
+                        },
+                        "Coding.display": {
+                          "value": "No"
+                        },
+                        "concept": "http://loinc.org/owl#LA32-8"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.6"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Was this person adopted?"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA32-8"
+                        },
+                        "Coding.display": {
+                          "value": "No"
+                        },
+                        "concept": "http://loinc.org/owl#LA32-8"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "QuestionnaireResponse.item.linkId": {
+            "value": "2.1"
+          },
+          "QuestionnaireResponse.item.item": [
+            {
+              "QuestionnaireResponse.item.linkId": {
+                "value": "2.1.1"
+              },
+              "QuestionnaireResponse.item.item": [
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.1"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Relationship to you"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA10412-7"
+                        },
+                        "Coding.display": {
+                          "value": "Maternal Grandfather"
+                        },
+                        "concept": "http://loinc.org/owl#LA10412-7"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.2"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Name"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueString": {
+                        "value": "Ian"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.3"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Gender"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA2-8"
+                        },
+                        "Coding.display": {
+                          "value": "Male"
+                        },
+                        "concept": "http://loinc.org/owl#LA2-8"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.4"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Living?"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA32-8"
+                        },
+                        "Coding.display": {
+                          "value": "No"
+                        },
+                        "concept": "http://loinc.org/owl#LA32-8"
+                      },
+                      "QuestionnaireResponse.item.answer.item": [
+                        {
+                          "QuestionnaireResponse.item.linkId": {
+                            "value": "2.1.1.4.1"
+                          },
+                          "QuestionnaireResponse.item.item": [
+                            {
+                              "QuestionnaireResponse.item.linkId": {
+                                "value": "2.1.1.4.1.1"
+                              },
+                              "QuestionnaireResponse.item.text": {
+                                "value": "Cause of Death"
+                              },
+                              "QuestionnaireResponse.item.answer": [
+                                {
+                                  "QuestionnaireResponse.item.answer.valueCoding": {
+                                    "Coding.system": {
+                                      "value": "http://loinc.org"
+                                    },
+                                    "Coding.code": {
+                                      "value": "LA10558-7"
+                                    },
+                                    "Coding.display": {
+                                      "value": "-- Heart Attack"
+                                    },
+                                    "concept": "http://loinc.org/owl#LA10558-7"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "QuestionnaireResponse.item.linkId": {
+                                "value": "2.1.1.4.1.2"
+                              },
+                              "QuestionnaireResponse.item.text": {
+                                "value": "Age at Death"
+                              },
+                              "QuestionnaireResponse.item.answer": [
+                                {
+                                  "QuestionnaireResponse.item.answer.valueCoding": {
+                                    "Coding.system": {
+                                      "value": "http://loinc.org"
+                                    },
+                                    "Coding.code": {
+                                      "value": "LA10400-2"
+                                    },
+                                    "Coding.display": {
+                                      "value": "OVER 60"
+                                    },
+                                    "concept": "http://loinc.org/owl#LA10400-2"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.5"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Was this person born a twin?"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA32-8"
+                        },
+                        "Coding.display": {
+                          "value": "No"
+                        },
+                        "concept": "http://loinc.org/owl#LA32-8"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.6"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Was this person adopted?"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA32-8"
+                        },
+                        "Coding.display": {
+                          "value": "No"
+                        },
+                        "concept": "http://loinc.org/owl#LA32-8"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "QuestionnaireResponse.item.linkId": {
+            "value": "2.1"
+          },
+          "QuestionnaireResponse.item.item": [
+            {
+              "QuestionnaireResponse.item.linkId": {
+                "value": "2.1.1"
+              },
+              "QuestionnaireResponse.item.item": [
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.1"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Relationship to you"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA10413-5"
+                        },
+                        "Coding.display": {
+                          "value": "Maternal Grandmother"
+                        },
+                        "concept": "http://loinc.org/owl#LA10413-5"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.2"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Name"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueString": {
+                        "value": "Gladys"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.3"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Gender"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA3-6"
+                        },
+                        "Coding.display": {
+                          "value": "Female"
+                        },
+                        "concept": "http://loinc.org/owl#LA3-6"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.4"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Living?"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA32-8"
+                        },
+                        "Coding.display": {
+                          "value": "No"
+                        },
+                        "concept": "http://loinc.org/owl#LA32-8"
+                      },
+                      "QuestionnaireResponse.item.answer.item": [
+                        {
+                          "QuestionnaireResponse.item.linkId": {
+                            "value": "2.1.1.4.1"
+                          },
+                          "QuestionnaireResponse.item.item": [
+                            {
+                              "QuestionnaireResponse.item.linkId": {
+                                "value": "2.1.1.4.1.1"
+                              },
+                              "QuestionnaireResponse.item.text": {
+                                "value": "Cause of Death"
+                              },
+                              "QuestionnaireResponse.item.answer": [
+                                {
+                                  "QuestionnaireResponse.item.answer.valueCoding": {
+                                    "Coding.system": {
+                                      "value": "http://loinc.org"
+                                    },
+                                    "Coding.code": {
+                                      "value": "LA10571-0"
+                                    },
+                                    "Coding.display": {
+                                      "value": "-- Other/Unknown"
+                                    },
+                                    "concept": "http://loinc.org/owl#LA10571-0"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "QuestionnaireResponse.item.linkId": {
+                                "value": "2.1.1.4.1.2"
+                              },
+                              "QuestionnaireResponse.item.text": {
+                                "value": "Age at Death"
+                              },
+                              "QuestionnaireResponse.item.answer": [
+                                {
+                                  "QuestionnaireResponse.item.answer.valueCoding": {
+                                    "Coding.system": {
+                                      "value": "http://loinc.org"
+                                    },
+                                    "Coding.code": {
+                                      "value": "LA10400-2"
+                                    },
+                                    "Coding.display": {
+                                      "value": "OVER 60"
+                                    },
+                                    "concept": "http://loinc.org/owl#LA10400-2"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.5"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Was this person born a twin?"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA32-8"
+                        },
+                        "Coding.display": {
+                          "value": "No"
+                        },
+                        "concept": "http://loinc.org/owl#LA32-8"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.6"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Was this person adopted?"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA32-8"
+                        },
+                        "Coding.display": {
+                          "value": "No"
+                        },
+                        "concept": "http://loinc.org/owl#LA32-8"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "QuestionnaireResponse.item.linkId": {
+                "value": "2.1.2"
+              },
+              "QuestionnaireResponse.item.text": {
+                "value": "This family member's history of disease"
+              },
+              "QuestionnaireResponse.item.item": [
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.2.1"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Disease or Condition"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA10536-3"
+                        },
+                        "Coding.display": {
+                          "value": "-- Breast Cancer"
+                        },
+                        "concept": "http://loinc.org/owl#LA10536-3"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.2.2"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Age at Diagnosis"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA10399-6"
+                        },
+                        "Coding.display": {
+                          "value": "50-59"
+                        },
+                        "concept": "http://loinc.org/owl#LA10399-6"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "QuestionnaireResponse.item.linkId": {
+                "value": "2.1.2"
+              },
+              "QuestionnaireResponse.item.text": {
+                "value": "This family member's history of disease"
+              },
+              "QuestionnaireResponse.item.item": [
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.2.1"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Disease or Condition"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA10564-5"
+                        },
+                        "Coding.display": {
+                          "value": "-- Asthma"
+                        },
+                        "concept": "http://loinc.org/owl#LA10564-5"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.2.2"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Age at Diagnosis"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA10395-4"
+                        },
+                        "Coding.display": {
+                          "value": "Childhood"
+                        },
+                        "concept": "http://loinc.org/owl#LA10395-4"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "QuestionnaireResponse.item.linkId": {
+            "value": "2.1"
+          },
+          "QuestionnaireResponse.item.item": [
+            {
+              "QuestionnaireResponse.item.linkId": {
+                "value": "2.1.1"
+              },
+              "QuestionnaireResponse.item.item": [
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.1"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Relationship to you"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA10411-9"
+                        },
+                        "Coding.display": {
+                          "value": "Maternal Cousin"
+                        },
+                        "concept": "http://loinc.org/owl#LA10411-9"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.2"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Name"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueString": {
+                        "value": "Karren"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.3"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Gender"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA3-6"
+                        },
+                        "Coding.display": {
+                          "value": "Female"
+                        },
+                        "concept": "http://loinc.org/owl#LA3-6"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.4"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Living?"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA33-6"
+                        },
+                        "Coding.display": {
+                          "value": "Yes"
+                        },
+                        "concept": "http://loinc.org/owl#LA33-6"
+                      },
+                      "QuestionnaireResponse.item.answer.item": [
+                        {
+                          "QuestionnaireResponse.item.linkId": {
+                            "value": "2.1.1.4.2"
+                          },
+                          "QuestionnaireResponse.item.item": [
+                            {
+                              "QuestionnaireResponse.item.linkId": {
+                                "value": "2.1.1.4.2.2"
+                              },
+                              "QuestionnaireResponse.item.text": {
+                                "value": "Age"
+                              },
+                              "QuestionnaireResponse.item.answer": [
+                                {
+                                  "QuestionnaireResponse.item.answer.valueDecimal": {
+                                    "value": 30
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.5"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Was this person born a twin?"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA32-8"
+                        },
+                        "Coding.display": {
+                          "value": "No"
+                        },
+                        "concept": "http://loinc.org/owl#LA32-8"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.6"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Was this person adopted?"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA32-8"
+                        },
+                        "Coding.display": {
+                          "value": "No"
+                        },
+                        "concept": "http://loinc.org/owl#LA32-8"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "QuestionnaireResponse.item.linkId": {
+                "value": "2.1.2"
+              },
+              "QuestionnaireResponse.item.text": {
+                "value": "This family member's history of disease"
+              },
+              "QuestionnaireResponse.item.item": [
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.2.1"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Disease or Condition"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA10536-3"
+                        },
+                        "Coding.display": {
+                          "value": "-- Breast Cancer"
+                        },
+                        "concept": "http://loinc.org/owl#LA10536-3"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.2.2"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Age at Diagnosis"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA10397-0"
+                        },
+                        "Coding.display": {
+                          "value": "30-39"
+                        },
+                        "concept": "http://loinc.org/owl#LA10397-0"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "QuestionnaireResponse.item.linkId": {
+            "value": "2.1"
+          },
+          "QuestionnaireResponse.item.item": [
+            {
+              "QuestionnaireResponse.item.linkId": {
+                "value": "2.1.1"
+              },
+              "QuestionnaireResponse.item.item": [
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.1"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Relationship to you"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA10411-9"
+                        },
+                        "Coding.display": {
+                          "value": "Maternal Cousin"
+                        },
+                        "concept": "http://loinc.org/owl#LA10411-9"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.2"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Name"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueString": {
+                        "value": "Mary"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.3"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Gender"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA3-6"
+                        },
+                        "Coding.display": {
+                          "value": "Female"
+                        },
+                        "concept": "http://loinc.org/owl#LA3-6"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.4"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Living?"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA33-6"
+                        },
+                        "Coding.display": {
+                          "value": "Yes"
+                        },
+                        "concept": "http://loinc.org/owl#LA33-6"
+                      },
+                      "QuestionnaireResponse.item.answer.item": [
+                        {
+                          "QuestionnaireResponse.item.linkId": {
+                            "value": "2.1.1.4.2"
+                          },
+                          "QuestionnaireResponse.item.item": [
+                            {
+                              "QuestionnaireResponse.item.linkId": {
+                                "value": "2.1.1.4.2.2"
+                              },
+                              "QuestionnaireResponse.item.text": {
+                                "value": "Age"
+                              },
+                              "QuestionnaireResponse.item.answer": [
+                                {
+                                  "QuestionnaireResponse.item.answer.valueDecimal": {
+                                    "value": 31
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.5"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Was this person born a twin?"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA32-8"
+                        },
+                        "Coding.display": {
+                          "value": "No"
+                        },
+                        "concept": "http://loinc.org/owl#LA32-8"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "QuestionnaireResponse.item.linkId": {
+                    "value": "2.1.1.6"
+                  },
+                  "QuestionnaireResponse.item.text": {
+                    "value": "Was this person adopted?"
+                  },
+                  "QuestionnaireResponse.item.answer": [
+                    {
+                      "QuestionnaireResponse.item.answer.valueCoding": {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "LA32-8"
+                        },
+                        "Coding.display": {
+                          "value": "No"
+                        },
+                        "concept": "http://loinc.org/owl#LA32-8"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

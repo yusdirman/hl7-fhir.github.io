@@ -1,0 +1,77 @@
+{
+  "resourceType": "Observation",
+  "id": "obs-uslab-example4",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: obs-uslab-example4</p><p><b>identifier</b>: lab test result ID = 4567 (OFFICIAL)</p><p><b>status</b>: final</p><p><b>code</b>: Dengue IgM Titer <span>(Details : {LOINC code '6812-2' = 'Dengue virus IgM Ab [Titer] in Serum', given as 'Dengue virus IgM Ab [Titer] in Serum'}; {urn:oid:2.16.840.1.113883.3.72.5.24 code 'DGIGM' = '??', given as 'Dengue IgM QN'})</span></p><p><b>subject</b>: <a>Todd Lerr</a></p><p><b>effective</b>: Dec 5, 2014</p><p><b>issued</b>: Dec 6, 2014 3:42:15 PM</p><p><b>performer</b>: <a>Dr Leonard T Bloodraw Jr</a></p><p><b>value</b>: 1/256</p><p><b>interpretation</b>: High <span>(Details : {http://hl7.org/fhir/v2/0078 code 'H' = 'High)</span></p><p><b>specimen</b>: <a>Bloo sample</a></p><h3>ReferenceRanges</h3><table><tr><td>-</td><td><b>Text</b></td></tr><tr><td>*</td><td>&lt;1:64</td></tr></table></div>"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/uslab-observationkind",
+      "valueCode": "result"
+    }
+  ],
+  "identifier": [
+    {
+      "use": "official",
+      "type": {
+        "text": "lab test result ID"
+      },
+      "system": "http://lis.acmelabs.org/identifiers/labtestresult",
+      "value": "4567"
+    }
+  ],
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "6812-2",
+        "display": "Dengue virus IgM Ab [Titer] in Serum"
+      },
+      {
+        "system": "urn:oid:2.16.840.1.113883.3.72.5.24",
+        "code": "DGIGM",
+        "display": "Dengue IgM QN"
+      }
+    ],
+    "text": "Dengue IgM Titer"
+  },
+  "subject": {
+    "reference": "Patient/patient-uslab-example1",
+    "display": "Todd Lerr"
+  },
+  "effectiveDateTime": "2014-12-05",
+  "issued": "2014-12-06T15:42:15-08:00",
+  "performer": [
+    {
+      "reference": "Practitioner/pract-uslab-example1",
+      "display": "Dr Leonard T Bloodraw Jr"
+    }
+  ],
+  "valueRatio": {
+    "numerator": {
+      "value": 1
+    },
+    "denominator": {
+      "value": 256
+    }
+  },
+  "interpretation": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/v2/0078",
+        "code": "H"
+      }
+    ]
+  },
+  "specimen": {
+    "reference": "Specimen/spec-uslab-example1",
+    "display": "Bloo sample"
+  },
+  "referenceRange": [
+    {
+      "text": "<1:64"
+    }
+  ]
+}

@@ -1,0 +1,279 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+   <head>
+        <title>Uslab/uslabphreport - FHIR v1.4.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link rel="stylesheet" href="../fhir.css"/>
+  <link rel="Prev" href="http://hl7.org/fhir/uslab/uslabphreport.html"/>
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href=".././dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href=".././assets/css/bootstrap-fhir.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href=".././assets/css/project.css"/>
+  <link rel="stylesheet" href=".././assets/css/pygments-manni.css"/>
+	<link rel="stylesheet" href="../jquery-ui.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src=".././assets/js/html5shiv.js"></script>
+  <script src=".././assets/js/respond.min.js"></script>
+  <![endif] -->
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href=".././assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href=".././assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href=".././assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href=".././assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href=".././assets/ico/favicon.png"/>
+
+   </head>
+   <body>
+      	<div id="segment-header" class="segment">  <!-- segment-header -->	
+		<div class="container">  <!-- container -->
+			<a no-external="true" id="logo" href="http://hl7.org/fhir"><img src=".././assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a no-external="true" id="hl7-logo" href="http://www.hl7.org">
+					<img src=".././assets/images/hl7-logo.png" width="42" alt="visit the hl7 website" height="50"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a no-external="true" id="hl7-logo" href="http://hl7.org/fhir/search.cfm"><img src="./../assets/images/search.png" alt="Search FHIR"/></a></div> 
+		</div>
+		<div class="container">  <!-- container -->
+	</div></div>  <!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+ 	      		
+ 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="../index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../documentation.html">Documentation</a></li>
+              <li><a href="../implementation.html">Implementation</a></li>
+              <li><a href="../resourcelist.html">Resources</a></li>
+              <li><a href="../clinical.html">Clinical</a></li>
+              <li><a href="../administration.html">Administrative</a></li>
+              <li><a href="../infrastructure.html">Infrastructure</a></li>
+              <li><a href="../financial.html">Financial</a></li>
+
+						</ul>
+					</div>  <!-- /.nav-collapse -->
+				</div>  <!-- /.container -->
+			</nav>  <!-- /.navbar -->
+      		
+				
+  <!-- /HEADER CONTENT -->				
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+		<div class="container">  <!-- container -->	
+			<ul class="breadcrumb">
+          <!-- uslab/uslabphreport / page / uslabphreport -->
+        <li title="US Lab Implementation Guides"><a href="uslab.html"><b>USLAB</b></a></li>
+        <li title="Work in Progress yet"><b>unsorted</b></li>
+
+			</ul>	
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment">  <!-- segment-content -->
+	<div class="container">  <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+      <div class="col-9">
+         <a name="USLabPHReport"> </a>
+        <p>Published by:  HL7 Orders and Observations Workgroup</p>
+		<p>Primary Author/Editor:  Eric M Haas, Health eData Inc.</p>
+         <h2><span class="sectioncount">A.4.0<a name="A.4.0"> </a></span> US Laboratory Report to Public Health Implementation <a href="uslabphreport.html#A.4.0" title="link to here" class="self-link"><img src="../target.png"/></a></h2>
+         <p>
+            The <i>US Laboratory Report to Public Health Implementation (USLabPHReport)</i> consists of the guidance documentation,  profiles, operations, value sets and conformance
+            statements it defines.  This implementation has been prepared as a U.S. Realm Specification on behalf of the HL7 Orders and Observation Workgroup.
+         </p>
+
+               <b>US Realm Laboratory Reporting to Public Health (USLabPHReport) -</b>  This use case is based upon existing regulatory requirements for laboratories to report &quot;reportable&quot; laboratory test results to local public health agencies.  The content has been modeled after the same content as the USLabResult above and the HL7 Public Health and Emergency Care Workgroup (PHER) <a href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=329">HL7 Version 2.5.1 Implementation Guide: Electronic Laboratory Reporting  (ELR) to Public Health, Release 2  <img src="../external.png" style="text-align: baseline"/></a>.
+               <h4><span class="sectioncount">A.4.0.0.1<a name="A.4.0.0.1"> </a></span> <a href="uslabphreport-guide.html">USLabPHResult Documentation</a> <a href="uslabphreport.html#A.4.0.0.1" title="link to here" class="self-link"><img src="../target.png"/></a></h4>
+               <ul>
+                  <li><a href="uslabphreport-guide.html#purpose">Purpose</a>- How this project came to be and what it is trying to achieve</li>
+                  <li><a href="uslabphreport-guide.html#usecase">Use case</a>- Describes the Scope, Assumptions, Pre and Post Conditions and Use Cases for this guide</li>
+                  <li><a href="uslabphreport-guide.html#keytechdecisions">Key Technical Decisions</a>- List of key technical decisions in creating this guide</li>
+                  <li><a href="uslabphreport-guide.html#addlguidance">Additional Guidance</a> Additional Guidance and Glossary of laboratory terms defined for this implementation</li>
+               </ul>
+  <!-- <p><b>  Questions for Balloters:</b></p>
+		             <ol>
+		             <li>Should this implementation support all ways to exchange resources which include REST (current focus), Documents, Messaging, and Services?</li>
+		             <li>Considering the scope and use case are there any important omissions from this implementation?</li>
+
+		             <li>Are there any operations that <i>USLabPHReport</i> should consider ( see below )?</li>
+		             <li>What are reasonable conformance expectations including the concept of must support for profiles ( see conformance section below)?</li>
+		            <li> Comments regarding organization and design of the implementation?</li>
+           </ol> -->
+         <h3><span class="sectioncount">A.4.0.1<a name="A.4.0.1"> </a></span> Specification <a href="uslabphreport.html#A.4.0.1" title="link to here" class="self-link"><img src="../target.png"/></a></h3>
+         <p>
+            The <i>USLabPHReport</i> is built on top of the <a href="../index.html">HL7 FHIR</a> standard.
+            Basic aspects of the FHIR protocol, including <a href="../http.html">RESTful operations</a>,
+            <a href="../datatypes.html">data types</a>, <a href="../search.html">search</a>, etc. apply.
+         </p>
+
+         <p>  <b>Profiles</b> -The current focus of implementing <i>USLabPHReport</i> is using a FHIR <a href="../bundle.html">Bundle Resource</a>   <!-- create profiles for bundles too --> to exchange a <a href="../diagnosticreport.html">DiagnosticReport Profile</a> and the Resource Profiles it references.  This FHIR bundle completely defines the laboratory results report.  The Resource Profiles that may be used in the bundle are outlined below: (This list is not meant to be exhaustive as additional resources may also to be used)</p>
+         <ul>
+          <li><a href="dr-uslab.html">US Lab DiagnosticReport</a> constrains and extends <a href="../diagnosticreport.html">DiagnosticReport</a> which is used to define the laboratory results report.   This Resources references the following profiles:
+          <ul>
+  <!-- <li><a href="patient-uslab.html">USlabPHPatient</a> constrains and extends <a href="../patient.html">Patient</a> which is used as the subject of the report.  .</li> -->
+
+			<li><a href="patient-uslab.html">USlabPHPatient</a> constrains and extends <a href="../patient.html">Patient</a> which is used the subject of the report for use cases where additional patient information is needed, such as for tests that may be reportable to public health.</li>
+			<li><a href="pract-uslab.html">USlabPHPractitioner</a> constrains and extends <a href="../practitioner.html">Practitioner</a> is used to define the laboratory contact for the report.</li>
+  <!-- in DO
+			<li><a href="pract-uslab.html">USlabPHPractitioner</a> constrains and extends <a href="../practitioner.html">Practitioner</a> which is defined for use cases where additional provider information is needed, such as for tests that may be reportable to public health.  This Resource references the following profile:
+			<ul>
+					<li><a href="org-uslab.html">USLabPHReportFacility</a> constrains and extends <a href="../organization.html">Organization</a> which is used to define a the orderer organizaton.</li>
+			</ul>
+
+</li> -->
+	          <li><a href="do-uslab.html">US Lab DiagnosticOrder</a> constrains and extends <a href="../diagnosticorder.html">DiagnosticOrder</a> which is used to define the laboratory order.   This Resources references these <a href="uslaborder.html#doprofiles">USLabOrder Profiles</a> </li>
+			<li><a href="spec-uslab.html">USlabSpec</a> constrains and extends <a href="../specimen.html">Specimen</a> which is used to define what, when, and how the specimen was collected.</li>
+			<li><a href="obs-uslab.html">USLabObsCode | USLabObsQuantity | USLabObsRange | USLabObsRatio | USLabObsOther | USLabObsPanel</a> constrains and extends <a href="../observation.html">Observation</a> which are used to support the various result types for recording laboratory observations.
+						<ul>
+					<li><a href="org-uslab.html">USLabPerformingLab</a> constrains and extends <a href="../organization.html">Organization</a> which is used to define a the organization that is responsible for the observation.</li>
+			</ul>
+			</li>
+  <!-- <li><a href="cond-uslab.html">USlabCond</a> constrains and extends <a href="condition.html">Condition</a> which is used to record reasons for performing the requested test and possibly other clinically relevant information to the laboratorian or pathologist.</li>
+			<li><a href="org-uslab.html">USLabCCTarget</a> constrains and extends <a href="organization.html">Organization</a> which is used to define a third party organization to which the orderer instructs the laboratory to send the results.</li> -->
+		</ul>
+		</li>
+		</ul>
+
+
+
+<p>
+In addition to defining the the <i>USLabPHReport</i> bundle this implementation consists of the following components:
+</p>
+
+<ul>
+            <li>
+            <b>Operations</b> - None  <!-- a href="#todo">Some USLabPHReport Operation</a>Question for balloters are there any operations that <i>USLabPHReport</i> should consider? -->
+           </li>
+           <li>
+
+               <b>Conformance statements</b> - Definitions for the expected capabilities of each of the actors involved supporting <i>USLabPHReport</i>  functionality:
+               <ul>
+                 <!-- <li><a href="conformance-USLabPHReport-orderer.html">USLabPHReport orderer conformance</a> - Some conformance stuff for orderer - todo</li>
+                  <li><a href="conformance-USLabPHReport-filler.html">USLabPHReport laboratory conformance</a> - Some conformance stuff for filler - todo</li> -->
+                  <li><a href="conformance-uslabreport-sender.html">USLabPHReport sender conformance</a></li>
+                  <li><a href="conformance-uslabreport-receiver.html">USLabPHReport receiver conformance</a></li>
+
+               </ul>
+            </li>
+           <li>
+      <b>Value Sets</b> - <a href="registry.html">USLab Value Sets</a>
+
+            </li>
+                            <li>
+               <b>Mappings</b> -   <!-- a href="conceptmap-elr-uslabphreport.html">ELR to USLabPHReport Concept Codes Cross-mapping</a --> are translation of  the concept codes for ELR to <i>USLabPHReport</i> - Note this is a stub entry for future work.
+               </li>
+
+                         <li>
+			               <b>Examples</b> - Example instances of <i>USLabReport</i> Resources:  Note these have not yet been validated by profile specific schema and schematrons and are provided as informational only:
+
+			                 <ul>
+							<li><a href="do-uslab-example1.html">USLab DiagnosticOrder Example</a></li>
+							<li><a href="dr-uslab-example1.html">USLab DiagnosticReport Example</a></li>
+							<li><a href="patient-uslab-example1.html">USLab Patient Example</a></li>
+							<li><a href="patient-uslab-example2.html">USLab PHPatient Example</a></li>
+							<li><a href="pract-uslab-example1.html">USLab Practitioner Example</a></li>
+							<li><a href="pract-uslab-example2.html">USLab PHPractitioner Example</a></li>
+							<li><a href="pract-uslab-example3.html">USLab Practitioner Example</a></li>
+							<li><a href="org-uslab-example1.html">USLab Ordering Organization Example</a></li>
+							<li><a href="org-uslab-example2.html">USLab Copy to Organization Example</a></li>
+							<li><a href="org-uslab-example3.html">USLab Performing Lab Example</a></li>
+							<li><a href="obs-uslab-example1.html">USLab Quantitative Observation Example</a></li>
+							<li><a href="obs-uslab-example2.html">USLab Coded Observation Example</a></li>
+							<li><a href="obs-uslab-example3.html">USLab Other (string) Observation Example</a></li>
+							<li><a href="obs-uslab-example4.html">USLab Ratio Observation Example</a></li>
+							<li><a href="obs-uslab-example5.html">USLab Quantitative Observation Profile Example: Blood Lead</a></li>			
+							<li><a href="obs-uslab-example6.html">USLab Panel Observation Profile Example: GC/CT Aptima 2 Combo panel</a></li>
+							<li><a href="obs-uslab-example7.html">USLab Coded Observation Profile Example: C trachomatis PCR</a></li>							
+							<li><a href="obs-uslab-example8.html">USLab Range Observation Profile  Example: WBCs in Urine</a></li>
+							<li><a href="cond-uslab-example1.html">USLab Condition Example</a></li>
+							<li><a href="spec-uslab-example1.html">USLab Specimen Profile Canonical Example: Blood</a></li>
+							<li><a href="spec-uslab-example2.html">USLab Specimen Profile Example: Urine- first catch</a></li>
+			               </ul>
+
+            </li>
+         </ul>
+      </div>
+      
+				</div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+        
+    </div>  <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">  <!-- segment-footer -->
+		<div class="container">  <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.4.0-8453) generated on Mon, Jun 6, 2016 20:22+0000. <a href="../qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img src="../external.png" style="text-align: baseline"/></a> | 
+               <a style="color: #81BEF7" href="../history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="../toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fuslab%2Fuslabphreport.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fuslab%2Fuslabphreport.html">Compare to DSTU2 <img src="../external.png" style="text-align: baseline"/></a> |                
+               <a rel="license" style="color: #81BEF7" href="../license.html"><img src="../cc0.png" alt="CC0" style="border-style: none;"/></a> | 
+               <a style="color: #81BEF7" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank">Propose a change <img src="../external.png" style="text-align: baseline"/></a>   
+        </span>
+        </p>
+			</div>  <!-- /inner-wrapper -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+    
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src=".././assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src=".././dist/js/bootstrap.min.js"> </script>
+<script src=".././assets/js/respond.min.js"> </script>
+
+<script src=".././assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+   </body>
+</html>

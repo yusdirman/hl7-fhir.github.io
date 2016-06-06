@@ -1,0 +1,254 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Patient",
+  "resourceType": "Patient",
+  "Resource.id": {
+    "value": "f201"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f201</p><p><b>identifier</b>: BSN = 123456789 (OFFICIAL), BSN = 123456789 (OFFICIAL)</p><p><b>active</b>: true</p><p><b>name</b>: Roel(OFFICIAL)</p><p><b>telecom</b>: ph: +31612345678(MOBILE), ph: +31201234567(HOME)</p><p><b>gender</b>: male</p><p><b>birthDate</b>: Mar 13, 1960</p><p><b>deceased</b>: false</p><p><b>address</b>: Bos en Lommerplein 280 Amsterdam 1055RW NLD (HOME)</p><p><b>maritalStatus</b>: Legally married <span>(Details : {SNOMED CT code '36629006' = 'Legally married (finding)', given as 'Legally married'}; {http://hl7.org/fhir/v3/MaritalStatus code 'M' = 'Married)</span></p><p><b>multipleBirth</b>: false</p><p><b>photo</b>: </p><h3>Contacts</h3><table><tr><td>-</td><td><b>Relationship</b></td><td><b>Name</b></td><td><b>Telecom</b></td></tr><tr><td>*</td><td>Wife <span>(Details : {SNOMED CT code '127850001' = 'Wife (person)', given as 'Wife'}; {http://hl7.org/fhir/patient-contact-relationship code 'partner' = 'Partner)</span></td><td>Ariadne Bor-Jansma</td><td>ph: +31201234567(HOME)</td></tr></table><h3>Communications</h3><table><tr><td>-</td><td><b>Language</b></td><td><b>Preferred</b></td></tr><tr><td>*</td><td>Dutch <span>(Details : {urn:ietf:bcp:47 code 'nl-NL' = '??', given as 'Dutch'})</span></td><td>true</td></tr></table><p><b>managingOrganization</b>: <a>AUMC</a></p></div>"
+    }
+  },
+  "Patient.identifier": [
+    {
+      "Identifier.use": {
+        "value": "official"
+      },
+      "Identifier.type": {
+        "CodeableConcept.text": {
+          "value": "BSN"
+        }
+      },
+      "Identifier.system": {
+        "value": "urn:oid:2.16.840.1.113883.2.4.6.3"
+      },
+      "Identifier.value": {
+        "value": "123456789"
+      }
+    },
+    {
+      "Identifier.use": {
+        "value": "official"
+      },
+      "Identifier.type": {
+        "CodeableConcept.text": {
+          "value": "BSN"
+        }
+      },
+      "Identifier.system": {
+        "value": "urn:oid:2.16.840.1.113883.2.4.6.3"
+      },
+      "Identifier.value": {
+        "value": "123456789"
+      }
+    }
+  ],
+  "Patient.active": {
+    "value": true
+  },
+  "Patient.name": [
+    {
+      "HumanName.use": {
+        "value": "official"
+      },
+      "HumanName.text": {
+        "value": "Roel"
+      },
+      "HumanName.family": [
+        {
+          "value": "Bor"
+        }
+      ],
+      "HumanName.given": [
+        {
+          "value": "Roelof Olaf"
+        }
+      ],
+      "HumanName.prefix": [
+        {
+          "value": "Drs."
+        }
+      ],
+      "HumanName.suffix": [
+        {
+          "value": "PDEng."
+        }
+      ]
+    }
+  ],
+  "Patient.telecom": [
+    {
+      "ContactPoint.system": {
+        "value": "phone"
+      },
+      "ContactPoint.value": {
+        "value": "+31612345678"
+      },
+      "ContactPoint.use": {
+        "value": "mobile"
+      }
+    },
+    {
+      "ContactPoint.system": {
+        "value": "phone"
+      },
+      "ContactPoint.value": {
+        "value": "+31201234567"
+      },
+      "ContactPoint.use": {
+        "value": "home"
+      }
+    }
+  ],
+  "Patient.gender": {
+    "value": "male"
+  },
+  "Patient.birthDate": {
+    "value": "1960-03-13"
+  },
+  "Patient.deceasedBoolean": {
+    "value": false
+  },
+  "Patient.address": [
+    {
+      "Address.use": {
+        "value": "home"
+      },
+      "Address.line": [
+        {
+          "value": "Bos en Lommerplein 280"
+        }
+      ],
+      "Address.city": {
+        "value": "Amsterdam"
+      },
+      "Address.postalCode": {
+        "value": "1055RW"
+      },
+      "Address.country": {
+        "value": "NLD"
+      }
+    }
+  ],
+  "Patient.maritalStatus": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "value": "36629006"
+        },
+        "Coding.display": {
+          "value": "Legally married"
+        }
+      },
+      {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/v3/MaritalStatus"
+        },
+        "Coding.code": {
+          "value": "M"
+        }
+      }
+    ],
+    "concept": "http://snomed.info/sct#36629006"
+  },
+  "Patient.multipleBirthBoolean": {
+    "value": false
+  },
+  "Patient.photo": [
+    {
+      "Attachment.contentType": {
+        "value": "image/jpeg"
+      },
+      "Attachment.url": {
+        "value": "Binary/f006"
+      }
+    }
+  ],
+  "Patient.contact": [
+    {
+      "Patient.contact.relationship": [
+        {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "value": "http://snomed.info/sct"
+              },
+              "Coding.code": {
+                "value": "127850001"
+              },
+              "Coding.display": {
+                "value": "Wife"
+              }
+            },
+            {
+              "Coding.system": {
+                "value": "http://hl7.org/fhir/patient-contact-relationship"
+              },
+              "Coding.code": {
+                "value": "partner"
+              }
+            }
+          ]
+        }
+      ],
+      "Patient.contact.name": {
+        "HumanName.use": {
+          "value": "usual"
+        },
+        "HumanName.text": {
+          "value": "Ariadne Bor-Jansma"
+        }
+      },
+      "Patient.contact.telecom": [
+        {
+          "ContactPoint.system": {
+            "value": "phone"
+          },
+          "ContactPoint.value": {
+            "value": "+31201234567"
+          },
+          "ContactPoint.use": {
+            "value": "home"
+          }
+        }
+      ]
+    }
+  ],
+  "Patient.communication": [
+    {
+      "Patient.communication.language": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "urn:ietf:bcp:47"
+            },
+            "Coding.code": {
+              "value": "nl-NL"
+            },
+            "Coding.display": {
+              "value": "Dutch"
+            }
+          }
+        ]
+      },
+      "Patient.communication.preferred": {
+        "value": true
+      }
+    }
+  ],
+  "Patient.managingOrganization": {
+    "Reference.reference": {
+      "value": "Organization/f201"
+    },
+    "Reference.display": {
+      "value": "AUMC"
+    },
+    "reference": "http://hl7.org/fhir//Organization/f201"
+  }
+}

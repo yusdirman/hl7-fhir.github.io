@@ -1,0 +1,101 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "v2-0909",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/codesystem-shareable-definition"
+    ]
+  },
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Patient Results Release Categorization Scheme</p>\r\n<table class=\"grid\"><tr><td><b>Code</b></td><td><b>Description</b></td><td><b>Comment</b></td><td><b>Version</b></td></tr><tr><td>sid<a name=\"sid\"> </a></td><td>Share In1 Day -&lt;p&gt;Share result regardless of reference/therapeutic range after 1 or more business day as agreed to by the systems in play.</td><td>1 day</td><td>added v2.7</td></tr><tr><td>sidc<a name=\"sidc\"> </a></td><td>Share in 1 Day Conditionally -&lt;p&gt;Share result in reference ranges/therapeutic with patient after 1 or more business day as agreed to by the systems in play.&lt;p&gt;Withhold result out of reference/therapeutic range until physician release</td><td>1 day&lt;p&gt;Withhold</td><td>added v2.7</td></tr><tr><td>simm<a name=\"simm\"> </a></td><td>Share Immediately -&lt;p&gt;Share result with patient immediately</td><td>Immediate</td><td>added v2.7</td></tr><tr><td>stbd<a name=\"stbd\"> </a></td><td>Share To Be Determined -&lt;p&gt;Category to be determined</td><td>NA</td><td>added v2.7</td></tr><tr><td>swnl<a name=\"swnl\"> </a></td><td>Share Within Normal Limits -&lt;p&gt;Share result in reference/therapeutic range with patient immediately&lt;p&gt;Share result out of reference/therapeutic ranges with patient after 1 or more business day as agreed to by the systems in play.</td><td>immediate&lt;p&gt;1 day</td><td>added v2.7</td></tr><tr><td>swth<a name=\"swth\"> </a></td><td>Share Withhold -&lt;p&gt;Withhold result regardless of reference/therapeutic ranges</td><td>Withhold</td><td>added v2.7</td></tr></table>\r\n</div>"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/valueset-oid",
+      "valueUri": "urn:oid:2.16.840.1.133883.18.419"
+    }
+  ],
+  "url": "http://hl7.org/fhir/v2/0909",
+  "version": "2.8.2",
+  "name": "v2 Patient Results Release Categorization Scheme",
+  "status": "active",
+  "experimental": true,
+  "publisher": "HL7, Inc",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "other",
+          "value": "http://hl7.org"
+        }
+      ]
+    }
+  ],
+  "description": "FHIR Value set/code system definition for HL7 v2 table 0909 ( Patient Results Release Categorization Scheme)",
+  "caseSensitive": false,
+  "valueSet": "http://hl7.org/fhir/ValueSet/v2-0909",
+  "content": "complete",
+  "concept": [
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-comments",
+          "valueString": "1 day"
+        }
+      ],
+      "code": "SID",
+      "display": "Share In1 Day -<p>Share result regardless of reference/therapeutic range after 1 or more business day as agreed to by the systems in play."
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-comments",
+          "valueString": "1 day<p>Withhold"
+        }
+      ],
+      "code": "SIDC",
+      "display": "Share in 1 Day Conditionally -<p>Share result in reference ranges/therapeutic with patient after 1 or more business day as agreed to by the systems in play.<p>Withhold result out of reference/therapeutic range until physician release"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-comments",
+          "valueString": "Immediate"
+        }
+      ],
+      "code": "SIMM",
+      "display": "Share Immediately -<p>Share result with patient immediately"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-comments",
+          "valueString": "NA"
+        }
+      ],
+      "code": "STBD",
+      "display": "Share To Be Determined -<p>Category to be determined"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-comments",
+          "valueString": "immediate<p>1 day"
+        }
+      ],
+      "code": "SWNL",
+      "display": "Share Within Normal Limits -<p>Share result in reference/therapeutic range with patient immediately<p>Share result out of reference/therapeutic ranges with patient after 1 or more business day as agreed to by the systems in play."
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-comments",
+          "valueString": "Withhold"
+        }
+      ],
+      "code": "SWTH",
+      "display": "Share Withhold -<p>Withhold result regardless of reference/therapeutic ranges"
+    }
+  ]
+}

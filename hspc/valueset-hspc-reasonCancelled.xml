@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="hspc-reasonCancelled"/>
+  <meta>
+    <lastUpdated value="2016-06-06T20:14:04.181+00:00"/>
+    <profile value="http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"/>
+  </meta>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <h2>HSPC Reason Cancelled value set.</h2>
+      <p>Select HL7 Act Reason and SNOMED codes.</p>
+      <p>
+        <b>Copyright Statement:</b> TBD
+      </p>
+      <p>This value set includes codes from the following code systems:</p>
+      <ul>
+        <li>Include these codes as defined in 
+          <a href="../v3/ActReason/cs.html">http://hl7.org/fhir/v3/ActReason</a>
+          <table>
+            <tr>
+              <td>
+                <b>Code</b>
+              </td>
+              <td>
+                <b>Display</b>
+              </td>
+            </tr>
+            <tr>
+              <td>BLK</td>
+              <td>Unexpected Block (of Schedule)</td>
+              <td>The time slots previously allocated are now blocked and no longer available for booking Appointments</td>
+            </tr>
+            <tr>
+              <td>DEC</td>
+              <td>Patient Deceased</td>
+              <td>The Patient is deceased</td>
+            </tr>
+            <tr>
+              <td>FIN</td>
+              <td>No Financial Backing</td>
+              <td>Patient unable to pay and not covered by insurance</td>
+            </tr>
+            <tr>
+              <td>MED</td>
+              <td>Medical Status Altered</td>
+              <td>The medical condition of the Patient has changed</td>
+            </tr>
+            <tr>
+              <td>ALTD</td>
+              <td>altered decision</td>
+              <td>Description:The decision on which the recorded information was based was changed before the decision had an effect.
+                <br/>
+                        
+                           Example:Aborted prescription before patient left office, released prescription before suspend took effect.
+              </td>
+            </tr>
+            <tr>
+              <td>PAT</td>
+              <td>Patient request</td>
+              <td>The Patient requested the action</td>
+            </tr>
+            <tr>
+              <td>PHY</td>
+              <td>Physician request</td>
+              <td>The Physician requested the action</td>
+            </tr>
+          </table>
+        </li>
+        <li>Include these codes as defined in http://snomed.info/sct
+          <table>
+            <tr>
+              <td>
+                <b>Code</b>
+              </td>
+              <td>
+                <b>Display</b>
+              </td>
+            </tr>
+            <tr>
+              <td>89925002</td>
+              <td>Canceled (qualifier value)</td>
+              <td/>
+            </tr>
+            <tr>
+              <td>385647007</td>
+              <td>Rejected by performer (qualifier value)</td>
+              <td/>
+            </tr>
+            <tr>
+              <td>385648002</td>
+              <td>Rejected by recipient (qualifier value)</td>
+              <td/>
+            </tr>
+            <tr>
+              <td>410528005</td>
+              <td>Not wanted (qualifier value)</td>
+              <td/>
+            </tr>
+            <tr>
+              <td>410529002</td>
+              <td>Not needed (qualifier value)</td>
+              <td/>
+            </tr>
+            <tr>
+              <td>410530007</td>
+              <td>Not offered (qualifier value)</td>
+              <td/>
+            </tr>
+            <tr>
+              <td>441889009</td>
+              <td>Denied (qualifier value)</td>
+              <td/>
+            </tr>
+            <tr>
+              <td>443390004</td>
+              <td>Refused (qualifier value)</td>
+              <td/>
+            </tr>
+            <tr>
+              <td>609589008</td>
+              <td>Refused by parents of subject (qualifier value)</td>
+              <td/>
+            </tr>
+          </table>
+        </li>
+      </ul>
+    </div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/valueset-oid">
+    <valueUri value="urn:oid:2.16.840.1.113883.4.642.2.768"/>
+  </extension>
+  <url value="http://hl7.org/fhir/ValueSet/hspc-reasonCancelled"/>
+  <version value="0.01"/>
+  <name value="HSPC Reason Cancelled value set."/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <publisher value="Health Services Platform Consortium (HSPC)"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="http://hl7.org/fhir"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="fhir@lists.hl7.org"/>
+    </telecom>
+  </contact>
+  <date value="2015-08-06"/>
+  <description value="Select HL7 Act Reason and SNOMED codes."/>
+  <immutable value="true"/>
+  <copyright value="TBD"/>
+  <extensible value="true"/>
+  <compose>
+    <include>
+      <system value="http://hl7.org/fhir/v3/ActReason"/>
+      <concept>
+        <code value="BLK"/>
+        <display value="Unexpected Block (of Schedule)"/>
+      </concept>
+      <concept>
+        <code value="DEC"/>
+        <display value="Patient Deceased"/>
+      </concept>
+      <concept>
+        <code value="FIN"/>
+        <display value="No Financial Backing"/>
+      </concept>
+      <concept>
+        <code value="MED"/>
+        <display value="Medical Status Altered"/>
+      </concept>
+      <concept>
+        <code value="ALTD"/>
+        <display value="altered decision"/>
+      </concept>
+      <concept>
+        <code value="PAT"/>
+        <display value="Patient request"/>
+      </concept>
+      <concept>
+        <code value="PHY"/>
+        <display value="Physician request"/>
+      </concept>
+    </include>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <concept>
+        <code value="89925002"/>
+        <display value="Canceled (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="385647007"/>
+        <display value="Rejected by performer (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="385648002"/>
+        <display value="Rejected by recipient (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="410528005"/>
+        <display value="Not wanted (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="410529002"/>
+        <display value="Not needed (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="410530007"/>
+        <display value="Not offered (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="441889009"/>
+        <display value="Denied (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="443390004"/>
+        <display value="Refused (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="609589008"/>
+        <display value="Refused by parents of subject (qualifier value)"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

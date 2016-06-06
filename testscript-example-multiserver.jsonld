@@ -1,0 +1,522 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/TestScript",
+  "resourceType": "TestScript",
+  "Resource.id": {
+    "value": "multiserver"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: multiserver</p><p><b>name</b>: Multiserver Test Script</p><p><b>description</b>: Multiserver Test Script</p><h3>Fixtures</h3><table><tr><td>-</td><td><b>Resource</b></td></tr><tr><td>*</td><td><a>Patient/patient-example.xml</a></td></tr></table><blockquote><p><b>setup</b></p><blockquote><p><b>action</b></p><h3>Operations</h3><table><tr><td>-</td><td><b>Type</b></td><td><b>ContentType</b></td><td><b>Destination</b></td><td><b>SourceId</b></td></tr><tr><td>*</td><td>create</td><td>xml</td><td>0</td><td>F1</td></tr></table></blockquote></blockquote><blockquote><p><b>test</b></p><p><b>name</b>: Read Patient</p><p><b>description</b>: Read the patient from server 0.</p><blockquote><p><b>metadata</b></p><h3>Links</h3><table><tr><td>-</td><td><b>Url</b></td><td><b>Description</b></td></tr><tr><td>*</td><td><a>http://hl7.org/implement/standards/FHIR-Develop/patient.html</a></td><td>FHIR Patient</td></tr></table><blockquote><p><b>operation</b></p><p><b>type</b>: create</p><p><b>resource</b>: Patient</p><p><b>description</b>: Patient Create Operation</p><p><b>link</b>: <a>http://hl7.org/implement/standards/FHIR-Develop/http.html#create</a></p><p><b>required</b>: true</p></blockquote><blockquote><p><b>operation</b></p><p><b>type</b>: read</p><p><b>resource</b>: Patient</p><p><b>description</b>: Patient Read Operation</p><p><b>link</b>: <a>http://hl7.org/implement/standards/FHIR-Develop/http.html#read</a></p><p><b>validated</b>: true</p></blockquote></blockquote><blockquote><p><b>action</b></p><h3>Operations</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote></blockquote><blockquote><p><b>test</b></p><p><b>name</b>: Write Patient</p><p><b>description</b>: Write the patient read from server 0 to server 1.</p><blockquote><p><b>metadata</b></p><h3>Links</h3><table><tr><td>-</td><td><b>Url</b></td><td><b>Description</b></td></tr><tr><td>*</td><td><a>http://hl7.org/implement/standards/FHIR-Develop/patient.html</a></td><td>FHIR Patient</td></tr></table><blockquote><p><b>operation</b></p><p><b>type</b>: create</p><p><b>resource</b>: Patient</p><p><b>description</b>: Patient Create Operation</p><p><b>link</b>: <a>http://hl7.org/implement/standards/FHIR-Develop/http.html#create</a></p><p><b>required</b>: true</p></blockquote><blockquote><p><b>operation</b></p><p><b>type</b>: read</p><p><b>resource</b>: Patient</p><p><b>description</b>: Patient Read Operation</p><p><b>link</b>: <a>http://hl7.org/implement/standards/FHIR-Develop/http.html#read</a></p><p><b>validated</b>: true</p></blockquote></blockquote><blockquote><p><b>action</b></p><h3>Operations</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Operations</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote></blockquote><blockquote><p><b>test</b></p><p><b>name</b>: Update Patient</p><p><b>description</b>: Update the patient on server 0 with the one read from server 1.</p><blockquote><p><b>metadata</b></p><h3>Links</h3><table><tr><td>-</td><td><b>Url</b></td><td><b>Description</b></td></tr><tr><td>*</td><td><a>http://hl7.org/implement/standards/FHIR-Develop/patient.html</a></td><td>FHIR Patient</td></tr></table><blockquote><p><b>operation</b></p><p><b>type</b>: create</p><p><b>resource</b>: Patient</p><p><b>description</b>: Patient Create Operation</p><p><b>link</b>: <a>http://hl7.org/implement/standards/FHIR-Develop/http.html#create</a></p><p><b>required</b>: true</p></blockquote><blockquote><p><b>operation</b></p><p><b>type</b>: read</p><p><b>resource</b>: Patient</p><p><b>description</b>: Patient Read Operation</p><p><b>link</b>: <a>http://hl7.org/implement/standards/FHIR-Develop/http.html#read</a></p><p><b>validated</b>: true</p></blockquote></blockquote><blockquote><p><b>action</b></p><h3>Operations</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Operations</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote></blockquote><blockquote><p><b>teardown</b></p><blockquote><p><b>action</b></p><h3>Operations</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Operations</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote></blockquote></div>"
+    }
+  },
+  "TestScript.url": {
+    "value": "http://hl7.org/fhir/TestScript/multiserver"
+  },
+  "TestScript.name": {
+    "value": "Multiserver Test Script"
+  },
+  "TestScript.status": {
+    "value": "draft"
+  },
+  "TestScript.description": {
+    "value": "Multiserver Test Script"
+  },
+  "TestScript.origin": [
+    {
+      "TestScript.origin.index": {
+        "value": 1
+      },
+      "TestScript.origin.profile": {
+        "Coding.code": {
+          "value": "FHIR-Client"
+        }
+      }
+    }
+  ],
+  "TestScript.destination": [
+    {
+      "TestScript.destination.index": {
+        "value": 1
+      },
+      "TestScript.destination.profile": {
+        "Coding.code": {
+          "value": "FHIR-Server"
+        }
+      }
+    }
+  ],
+  "TestScript.fixture": [
+    {
+      "Element.id": {
+        "value": "F1"
+      },
+      "TestScript.fixture.resource": {
+        "Reference.reference": {
+          "value": "Patient/example"
+        },
+        "reference": "http://hl7.org/fhir//Patient/example"
+      }
+    }
+  ],
+  "TestScript.setup": {
+    "TestScript.setup.metadata": {
+      "TestScript.metadata.link": [
+        {
+          "TestScript.metadata.link.url": {
+            "value": "http://hl7.org/implement/standards/FHIR-Develop/patient.html"
+          },
+          "TestScript.metadata.link.description": {
+            "value": "FHIR Patient"
+          }
+        }
+      ],
+      "TestScript.metadata.capability": [
+        {
+          "TestScript.metadata.capability.required": {
+            "value": true
+          },
+          "TestScript.metadata.capability.validated": {
+            "value": true
+          },
+          "TestScript.metadata.capability.description": {
+            "value": "Patient Create Operation"
+          },
+          "TestScript.metadata.capability.origin": [
+            {
+              "value": 1
+            }
+          ],
+          "TestScript.metadata.capability.destination": {
+            "value": 1
+          },
+          "TestScript.metadata.capability.link": [
+            {
+              "value": "http://hl7.org/implement/standards/FHIR-Develop/http.html#create"
+            }
+          ],
+          "TestScript.metadata.capability.conformance": {
+            "Reference.reference": {
+              "value": "Conformance/example"
+            },
+            "reference": "http://hl7.org/fhir//Conformance/example"
+          }
+        }
+      ]
+    },
+    "TestScript.setup.action": [
+      {
+        "TestScript.setup.action.operation": {
+          "TestScript.setup.action.operation.type": {
+            "Coding.code": {
+              "value": "create"
+            }
+          },
+          "TestScript.setup.action.operation.contentType": {
+            "value": "xml"
+          },
+          "TestScript.setup.action.operation.destination": {
+            "value": 0
+          },
+          "TestScript.setup.action.operation.origin": {
+            "value": 0
+          },
+          "TestScript.setup.action.operation.sourceId": {
+            "value": "F1"
+          }
+        }
+      }
+    ]
+  },
+  "TestScript.test": [
+    {
+      "Element.id": {
+        "value": "READ01"
+      },
+      "TestScript.test.name": {
+        "value": "Read Patient"
+      },
+      "TestScript.test.description": {
+        "value": "Read the patient from server 0."
+      },
+      "TestScript.test.metadata": {
+        "TestScript.metadata.capability": [
+          {
+            "TestScript.metadata.capability.required": {
+              "value": true
+            },
+            "TestScript.metadata.capability.validated": {
+              "value": true
+            },
+            "TestScript.metadata.capability.description": {
+              "value": "Patient Read Operation"
+            },
+            "TestScript.metadata.capability.origin": [
+              {
+                "value": 1
+              }
+            ],
+            "TestScript.metadata.capability.destination": {
+              "value": 1
+            },
+            "TestScript.metadata.capability.link": [
+              {
+                "value": "http://hl7.org/implement/standards/FHIR-Develop/http.html#read"
+              }
+            ],
+            "TestScript.metadata.capability.conformance": {
+              "Reference.reference": {
+                "value": "Conformance/example"
+              },
+              "reference": "http://hl7.org/fhir//Conformance/example"
+            }
+          }
+        ]
+      },
+      "TestScript.test.action": [
+        {
+          "TestScript.test.action.operation": {
+            "TestScript.setup.action.operation.type": {
+              "Coding.code": {
+                "value": "read"
+              }
+            },
+            "TestScript.setup.action.operation.destination": {
+              "value": 0
+            },
+            "TestScript.setup.action.operation.responseId": {
+              "value": "R1"
+            },
+            "TestScript.setup.action.operation.targetId": {
+              "value": "F1"
+            }
+          }
+        },
+        {
+          "TestScript.test.action.assert": {
+            "TestScript.setup.action.assert.response": {
+              "value": "okay"
+            }
+          }
+        },
+        {
+          "TestScript.test.action.assert": {
+            "TestScript.setup.action.assert.headerField": {
+              "value": "Last-Modified"
+            },
+            "TestScript.setup.action.assert.operator": {
+              "value": "notEmpty"
+            }
+          }
+        },
+        {
+          "TestScript.test.action.assert": {
+            "TestScript.setup.action.assert.resource": {
+              "value": "Patient"
+            }
+          }
+        },
+        {
+          "TestScript.test.action.assert": {
+            "TestScript.setup.action.assert.minimumId": {
+              "value": "F1"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Element.id": {
+        "value": "WRITE01"
+      },
+      "TestScript.test.name": {
+        "value": "Write Patient"
+      },
+      "TestScript.test.description": {
+        "value": "Write the patient read from server 0 to server 1."
+      },
+      "TestScript.test.metadata": {
+        "TestScript.metadata.capability": [
+          {
+            "TestScript.metadata.capability.validated": {
+              "value": true
+            },
+            "TestScript.metadata.capability.description": {
+              "value": "Patient Create Operation"
+            },
+            "TestScript.metadata.capability.link": [
+              {
+                "value": "http://hl7.org/implement/standards/FHIR-Develop/http.html#create"
+              }
+            ],
+            "TestScript.metadata.capability.conformance": {
+              "Reference.reference": {
+                "value": "Conformance/example"
+              },
+              "reference": "http://hl7.org/fhir//Conformance/example"
+            }
+          },
+          {
+            "TestScript.metadata.capability.validated": {
+              "value": true
+            },
+            "TestScript.metadata.capability.description": {
+              "value": "Patient Read Operation"
+            },
+            "TestScript.metadata.capability.link": [
+              {
+                "value": "http://hl7.org/implement/standards/FHIR-Develop/http.html#read"
+              }
+            ],
+            "TestScript.metadata.capability.conformance": {
+              "Reference.reference": {
+                "value": "Conformance/example"
+              },
+              "reference": "http://hl7.org/fhir//Conformance/example"
+            }
+          }
+        ]
+      },
+      "TestScript.test.action": [
+        {
+          "TestScript.test.action.operation": {
+            "TestScript.setup.action.operation.type": {
+              "Coding.code": {
+                "value": "create"
+              }
+            },
+            "TestScript.setup.action.operation.destination": {
+              "value": 1
+            },
+            "TestScript.setup.action.operation.sourceId": {
+              "value": "R1"
+            }
+          }
+        },
+        {
+          "TestScript.test.action.assert": {
+            "TestScript.setup.action.assert.response": {
+              "value": "okay"
+            }
+          }
+        },
+        {
+          "TestScript.test.action.operation": {
+            "TestScript.setup.action.operation.type": {
+              "Coding.code": {
+                "value": "read"
+              }
+            },
+            "TestScript.setup.action.operation.destination": {
+              "value": 1
+            },
+            "TestScript.setup.action.operation.responseId": {
+              "value": "R2"
+            },
+            "TestScript.setup.action.operation.targetId": {
+              "value": "R1"
+            }
+          }
+        },
+        {
+          "TestScript.test.action.assert": {
+            "TestScript.setup.action.assert.response": {
+              "value": "okay"
+            }
+          }
+        },
+        {
+          "TestScript.test.action.assert": {
+            "TestScript.setup.action.assert.headerField": {
+              "value": "Last-Modified"
+            },
+            "TestScript.setup.action.assert.operator": {
+              "value": "notEmpty"
+            }
+          }
+        },
+        {
+          "TestScript.test.action.assert": {
+            "TestScript.setup.action.assert.resource": {
+              "value": "Patient"
+            }
+          }
+        },
+        {
+          "TestScript.test.action.assert": {
+            "TestScript.setup.action.assert.minimumId": {
+              "value": "F1"
+            }
+          }
+        },
+        {
+          "TestScript.test.action.assert": {
+            "TestScript.setup.action.assert.minimumId": {
+              "value": "R1"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Element.id": {
+        "value": "UPDATE01"
+      },
+      "TestScript.test.name": {
+        "value": "Update Patient"
+      },
+      "TestScript.test.description": {
+        "value": "Update the patient on server 0 with the one read from server 1."
+      },
+      "TestScript.test.metadata": {
+        "TestScript.metadata.capability": [
+          {
+            "TestScript.metadata.capability.validated": {
+              "value": true
+            },
+            "TestScript.metadata.capability.description": {
+              "value": "Patient Update Operation"
+            },
+            "TestScript.metadata.capability.link": [
+              {
+                "value": "http://hl7.org/implement/standards/FHIR-Develop/http.html#update"
+              }
+            ],
+            "TestScript.metadata.capability.conformance": {
+              "Reference.reference": {
+                "value": "Conformance/example"
+              },
+              "reference": "http://hl7.org/fhir//Conformance/example"
+            }
+          }
+        ]
+      },
+      "TestScript.test.action": [
+        {
+          "TestScript.test.action.operation": {
+            "TestScript.setup.action.operation.type": {
+              "Coding.code": {
+                "value": "update"
+              }
+            },
+            "TestScript.setup.action.operation.destination": {
+              "value": 0
+            },
+            "TestScript.setup.action.operation.sourceId": {
+              "value": "R2"
+            },
+            "TestScript.setup.action.operation.targetId": {
+              "value": "R1"
+            }
+          }
+        },
+        {
+          "TestScript.test.action.assert": {
+            "TestScript.setup.action.assert.response": {
+              "value": "okay"
+            }
+          }
+        },
+        {
+          "TestScript.test.action.operation": {
+            "TestScript.setup.action.operation.type": {
+              "Coding.code": {
+                "value": "read"
+              }
+            },
+            "TestScript.setup.action.operation.destination": {
+              "value": 0
+            },
+            "TestScript.setup.action.operation.responseId": {
+              "value": "R3"
+            },
+            "TestScript.setup.action.operation.targetId": {
+              "value": "R1"
+            }
+          }
+        },
+        {
+          "TestScript.test.action.assert": {
+            "TestScript.setup.action.assert.response": {
+              "value": "okay"
+            }
+          }
+        },
+        {
+          "TestScript.test.action.assert": {
+            "TestScript.setup.action.assert.headerField": {
+              "value": "Last-Modified"
+            },
+            "TestScript.setup.action.assert.operator": {
+              "value": "notEmpty"
+            }
+          }
+        },
+        {
+          "TestScript.test.action.assert": {
+            "TestScript.setup.action.assert.resource": {
+              "value": "Patient"
+            }
+          }
+        },
+        {
+          "TestScript.test.action.assert": {
+            "TestScript.setup.action.assert.minimumId": {
+              "value": "F1"
+            }
+          }
+        },
+        {
+          "TestScript.test.action.assert": {
+            "TestScript.setup.action.assert.minimumId": {
+              "value": "R1"
+            }
+          }
+        },
+        {
+          "TestScript.test.action.assert": {
+            "TestScript.setup.action.assert.minimumId": {
+              "value": "R2"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "TestScript.teardown": {
+    "TestScript.teardown.action": [
+      {
+        "TestScript.teardown.action.operation": {
+          "TestScript.setup.action.operation.type": {
+            "Coding.code": {
+              "value": "delete"
+            }
+          },
+          "TestScript.setup.action.operation.destination": {
+            "value": 0
+          },
+          "TestScript.setup.action.operation.targetId": {
+            "value": "F1"
+          }
+        }
+      },
+      {
+        "TestScript.teardown.action.operation": {
+          "TestScript.setup.action.operation.type": {
+            "Coding.code": {
+              "value": "delete"
+            }
+          },
+          "TestScript.setup.action.operation.destination": {
+            "value": 1
+          },
+          "TestScript.setup.action.operation.targetId": {
+            "value": "F1"
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Condition",
+  "resourceType": "Condition",
+  "Resource.id": {
+    "value": "example"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Severe burn of left ear (Date: 24-May 2012)</div>"
+    }
+  },
+  "Condition.patient": {
+    "Reference.reference": {
+      "value": "Patient/example"
+    },
+    "reference": "http://hl7.org/fhir//Patient/example"
+  },
+  "Condition.code": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "value": "39065001"
+        },
+        "Coding.display": {
+          "value": "Burn of ear"
+        }
+      }
+    ],
+    "CodeableConcept.text": {
+      "value": "Burnt Ear"
+    },
+    "concept": "http://snomed.info/sct#39065001"
+  },
+  "Condition.category": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/condition-category"
+        },
+        "Coding.code": {
+          "value": "diagnosis"
+        },
+        "Coding.display": {
+          "value": "Diagnosis"
+        }
+      },
+      {
+        "Coding.system": {
+          "value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "value": "439401001"
+        },
+        "Coding.display": {
+          "value": "Diagnosis"
+        }
+      }
+    ],
+    "concept": "http://snomed.info/sct#439401001"
+  },
+  "Condition.verificationStatus": {
+    "value": "confirmed"
+  },
+  "Condition.severity": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "value": "24484000"
+        },
+        "Coding.display": {
+          "value": "Severe"
+        }
+      }
+    ],
+    "concept": "http://snomed.info/sct#24484000"
+  },
+  "Condition.onsetDateTime": {
+    "value": "2012-05-24"
+  },
+  "Condition.bodySite": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "value": "http://snomed.info/sct"
+          },
+          "Coding.code": {
+            "value": "49521004"
+          },
+          "Coding.display": {
+            "value": "Left external ear structure"
+          }
+        }
+      ],
+      "CodeableConcept.text": {
+        "value": "Left Ear"
+      }
+    }
+  ]
+}

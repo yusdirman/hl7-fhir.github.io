@@ -1,0 +1,156 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/ReferralRequest",
+  "resourceType": "ReferralRequest",
+  "Resource.id": {
+    "value": "referralrequest-example-qicore"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Referral to Dr Dave for Beverly weaver to have grommets inserted in her r) ear</div>"
+    }
+  },
+  "DomainResource.extension": [
+    {
+      "Extension.url": {
+        "value": "http://hl7.org/fhir/StructureDefinition/referralrequest-reasonRefused"
+      },
+      "Extension.valueCodeableConcept": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "value": "609589008"
+            },
+            "Coding.display": {
+              "value": "Refused by parents of subject"
+            }
+          }
+        ],
+        "concept": "http://snomed.info/sct#609589008"
+      }
+    }
+  ],
+  "ReferralRequest.status": {
+    "value": "cancelled"
+  },
+  "ReferralRequest.category": {
+    "value": "request"
+  },
+  "ReferralRequest.type": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "value": "700274009"
+        },
+        "Coding.display": {
+          "value": "Referral for procedure"
+        }
+      }
+    ],
+    "concept": "http://snomed.info/sct#700274009"
+  },
+  "ReferralRequest.priority": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "value": "394848005"
+        },
+        "Coding.display": {
+          "value": "Normal priority"
+        }
+      }
+    ],
+    "concept": "http://snomed.info/sct#394848005"
+  },
+  "ReferralRequest.patient": {
+    "Reference.reference": {
+      "value": "https://fhir.orionhealth.com/blaze/fhir/Patient/77662"
+    },
+    "Reference.display": {
+      "value": "Beverly Weaver"
+    },
+    "reference": "https://fhir.orionhealth.com/blaze/fhir/Patient/77662"
+  },
+  "ReferralRequest.authored": {
+    "value": "2014-02-14"
+  },
+  "ReferralRequest.requester": {
+    "Reference.reference": {
+      "value": "https://fhir.orionhealth.com/blaze/fhir/Practitioner/77272"
+    },
+    "Reference.display": {
+      "value": "Serena Shrink"
+    },
+    "reference": "https://fhir.orionhealth.com/blaze/fhir/Practitioner/77272"
+  },
+  "ReferralRequest.specialty": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "value": "417887005"
+        },
+        "Coding.display": {
+          "value": "Pediatric otolaryngology"
+        }
+      }
+    ],
+    "concept": "http://snomed.info/sct#417887005"
+  },
+  "ReferralRequest.recipient": [
+    {
+      "Reference.reference": {
+        "value": "https://fhir.orionhealth.com/blaze/fhir/Practitioner/76597"
+      },
+      "Reference.display": {
+        "value": "Dr Dave"
+      }
+    }
+  ],
+  "ReferralRequest.reason": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "value": "65363002"
+        },
+        "Coding.display": {
+          "value": "Otitis media"
+        }
+      }
+    ],
+    "concept": "http://snomed.info/sct#65363002"
+  },
+  "ReferralRequest.serviceRequested": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "value": "http://snomed.info/sct"
+          },
+          "Coding.code": {
+            "value": "172676009"
+          },
+          "Coding.display": {
+            "value": "Myringotomy and insertion of short-term tympanic ventilation tube (procedure)"
+          }
+        }
+      ]
+    }
+  ]
+}

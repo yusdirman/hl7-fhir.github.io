@@ -1,0 +1,145 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/MedicationOrder",
+  "resourceType": "MedicationOrder",
+  "Resource.id": {
+    "value": "f202"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f202</p><p><b>status</b>: completed</p><p><b>medication</b>: <a>Flucloxacilline</a></p><p><b>patient</b>: <a>Roel</a></p><p><b>encounter</b>: <a>Roel's encounter on March eleventh 2013</a></p><p><b>dateWritten</b>: Mar 11, 2013</p><p><b>prescriber</b>: <a>Practitioner/f201</a></p><p><b>reasonReference</b>: <a>sepsis</a></p><h3>DosageInstructions</h3><table><tr><td>-</td><td><b>Text</b></td><td><b>Timing</b></td><td><b>Route</b></td><td><b>Method</b></td><td><b>MaxDosePerPeriod</b></td></tr><tr><td>*</td><td>Flucloxacilline 12g/24h</td><td>Starting Mar 11, 2013, Do Once, Until Mar 21, 2013</td><td>Intravenous route <span>(Details : {SNOMED CT code '47625008' = 'Intravenous route (qualifier value)', given as 'Intravenous route'})</span></td><td>Injected floxacillin <span>(Details : {SNOMED CT code '323493005' = 'Floxacillin 1g powder for injection solution vial (product)', given as 'Injected floxacillin'})</span></td><td>12 gram<span> (Details: SNOMED CT code 258682000 = 'gram (qualifier value)')</span>/24 hours<span> (Details: SNOMED CT code 258702006 = 'hour (qualifier value)')</span></td></tr></table></div>"
+    }
+  },
+  "MedicationOrder.status": {
+    "value": "completed"
+  },
+  "MedicationOrder.medicationReference": {
+    "Reference.reference": {
+      "value": "Medication/f202"
+    },
+    "Reference.display": {
+      "value": "Flucloxacilline"
+    },
+    "reference": "http://hl7.org/fhir//Medication/f202"
+  },
+  "MedicationOrder.patient": {
+    "Reference.reference": {
+      "value": "Patient/f201"
+    },
+    "Reference.display": {
+      "value": "Roel"
+    },
+    "reference": "http://hl7.org/fhir//Patient/f201"
+  },
+  "MedicationOrder.encounter": {
+    "Reference.reference": {
+      "value": "Encounter/f203"
+    },
+    "Reference.display": {
+      "value": "Roel's encounter on March eleventh 2013"
+    },
+    "reference": "http://hl7.org/fhir//Encounter/f203"
+  },
+  "MedicationOrder.dateWritten": {
+    "value": "2013-03-11"
+  },
+  "MedicationOrder.prescriber": {
+    "Reference.reference": {
+      "value": "Practitioner/f201"
+    },
+    "reference": "http://hl7.org/fhir//Practitioner/f201"
+  },
+  "MedicationOrder.reasonReference": [
+    {
+      "Reference.reference": {
+        "value": "Condition/f203"
+      },
+      "Reference.display": {
+        "value": "sepsis"
+      }
+    }
+  ],
+  "MedicationOrder.dosageInstruction": [
+    {
+      "MedicationOrder.dosageInstruction.text": {
+        "value": "Flucloxacilline 12g/24h"
+      },
+      "MedicationOrder.dosageInstruction.timing": {
+        "Timing.repeat": {
+          "Timing.repeat.boundsPeriod": {
+            "Period.start": {
+              "value": "2013-03-11"
+            },
+            "Period.end": {
+              "value": "2013-03-21"
+            }
+          }
+        }
+      },
+      "MedicationOrder.dosageInstruction.route": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "value": "47625008"
+            },
+            "Coding.display": {
+              "value": "Intravenous route"
+            }
+          }
+        ],
+        "concept": "http://snomed.info/sct#47625008"
+      },
+      "MedicationOrder.dosageInstruction.method": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "value": "323493005"
+            },
+            "Coding.display": {
+              "value": "Injected floxacillin"
+            }
+          }
+        ],
+        "concept": "http://snomed.info/sct#323493005"
+      },
+      "MedicationOrder.dosageInstruction.maxDosePerPeriod": {
+        "Ratio.numerator": {
+          "Quantity.value": {
+            "value": 12
+          },
+          "Quantity.unit": {
+            "value": "gram"
+          },
+          "Quantity.system": {
+            "value": "http://snomed.info/sct"
+          },
+          "Quantity.code": {
+            "value": "258682000"
+          }
+        },
+        "Ratio.denominator": {
+          "Quantity.value": {
+            "value": 24
+          },
+          "Quantity.unit": {
+            "value": "hours"
+          },
+          "Quantity.system": {
+            "value": "http://snomed.info/sct"
+          },
+          "Quantity.code": {
+            "value": "258702006"
+          }
+        }
+      }
+    }
+  ]
+}

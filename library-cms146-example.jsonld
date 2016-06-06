@@ -1,0 +1,277 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Library",
+  "resourceType": "Library",
+  "Resource.id": {
+    "value": "library-cms146-example"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">CMS 146 Logic</div>"
+    }
+  },
+  "Library.moduleMetadata": {
+    "ModuleMetadata.identifier": [
+      {
+        "Identifier.use": {
+          "value": "official"
+        },
+        "Identifier.value": {
+          "value": "CMS146"
+        }
+      }
+    ],
+    "ModuleMetadata.version": {
+      "value": "2.0.0"
+    },
+    "ModuleMetadata.title": {
+      "value": "Appropriate Testing for Children with Pharyngitis"
+    },
+    "ModuleMetadata.type": {
+      "value": "library"
+    },
+    "ModuleMetadata.status": {
+      "value": "draft"
+    },
+    "ModuleMetadata.description": {
+      "value": "Logic for CMS 146: Appropriate Testing for Children with Pharyngitis"
+    },
+    "ModuleMetadata.publicationDate": {
+      "value": "2015-07-22"
+    }
+  },
+  "Library.model": [
+    {
+      "Library.model.identifier": {
+        "value": "QUICK"
+      }
+    }
+  ],
+  "Library.valueSet": [
+    {
+      "Library.valueSet.name": {
+        "value": "Female Administrative Sex"
+      },
+      "Library.valueSet.identifier": {
+        "value": "2.16.840.1.113883.3.560.100.2"
+      }
+    }
+  ],
+  "Library.dataRequirement": [
+    {
+      "DataRequirement.type": {
+        "value": "Condition"
+      },
+      "DataRequirement.codeFilter": [
+        {
+          "DataRequirement.codeFilter.path": {
+            "value": "code"
+          },
+          "DataRequirement.codeFilter.valueSetString": {
+            "value": "Other Female Reproductive Conditions"
+          }
+        }
+      ]
+    },
+    {
+      "DataRequirement.type": {
+        "value": "Patient"
+      }
+    },
+    {
+      "DataRequirement.type": {
+        "value": "Condition"
+      },
+      "DataRequirement.codeFilter": [
+        {
+          "DataRequirement.codeFilter.path": {
+            "value": "category"
+          },
+          "DataRequirement.codeFilter.valueCode": [
+            {
+              "value": "diagnosis"
+            }
+          ]
+        },
+        {
+          "DataRequirement.codeFilter.path": {
+            "value": "clinicalStatus"
+          },
+          "DataRequirement.codeFilter.valueCode": [
+            {
+              "value": "confirmed"
+            }
+          ]
+        },
+        {
+          "DataRequirement.codeFilter.path": {
+            "value": "code"
+          },
+          "DataRequirement.codeFilter.valueSetString": {
+            "value": "2.16.840.1.113883.3.464.1003.102.12.1011"
+          }
+        }
+      ]
+    },
+    {
+      "DataRequirement.type": {
+        "value": "Condition"
+      },
+      "DataRequirement.codeFilter": [
+        {
+          "DataRequirement.codeFilter.path": {
+            "value": "category"
+          },
+          "DataRequirement.codeFilter.valueCode": [
+            {
+              "value": "diagnosis"
+            }
+          ]
+        },
+        {
+          "DataRequirement.codeFilter.path": {
+            "value": "clinicalStatus"
+          },
+          "DataRequirement.codeFilter.valueCode": [
+            {
+              "value": "confirmed"
+            }
+          ]
+        },
+        {
+          "DataRequirement.codeFilter.path": {
+            "value": "code"
+          },
+          "DataRequirement.codeFilter.valueSetString": {
+            "value": "2.16.840.1.113883.3.464.1003.102.12.1012"
+          }
+        }
+      ]
+    },
+    {
+      "DataRequirement.type": {
+        "value": "Encounter"
+      },
+      "DataRequirement.codeFilter": [
+        {
+          "DataRequirement.codeFilter.path": {
+            "value": "status"
+          },
+          "DataRequirement.codeFilter.valueCode": [
+            {
+              "value": "finished"
+            }
+          ]
+        },
+        {
+          "DataRequirement.codeFilter.path": {
+            "value": "class"
+          },
+          "DataRequirement.codeFilter.valueCode": [
+            {
+              "value": "ambulatory"
+            }
+          ]
+        },
+        {
+          "DataRequirement.codeFilter.path": {
+            "value": "type"
+          },
+          "DataRequirement.codeFilter.valueSetString": {
+            "value": "2.16.840.1.113883.3.464.1003.101.12.1061"
+          }
+        }
+      ]
+    },
+    {
+      "DataRequirement.type": {
+        "value": "DiagnosticReport"
+      },
+      "DataRequirement.codeFilter": [
+        {
+          "DataRequirement.codeFilter.path": {
+            "value": "diagnosis"
+          },
+          "DataRequirement.codeFilter.valueSetString": {
+            "value": "2.16.840.1.113883.3.464.1003.198.12.1012"
+          }
+        }
+      ]
+    },
+    {
+      "DataRequirement.type": {
+        "value": "Medication"
+      },
+      "DataRequirement.codeFilter": [
+        {
+          "DataRequirement.codeFilter.path": {
+            "value": "code"
+          },
+          "DataRequirement.codeFilter.valueSetString": {
+            "value": "2.16.840.1.113883.3.464.1003.196.12.1001"
+          }
+        }
+      ]
+    },
+    {
+      "DataRequirement.type": {
+        "value": "MedicationOrder"
+      },
+      "DataRequirement.codeFilter": [
+        {
+          "DataRequirement.codeFilter.path": {
+            "value": "status"
+          },
+          "DataRequirement.codeFilter.valueCode": [
+            {
+              "value": "active"
+            }
+          ]
+        },
+        {
+          "DataRequirement.codeFilter.path": {
+            "value": "medication.code"
+          },
+          "DataRequirement.codeFilter.valueSetString": {
+            "value": "2.16.840.1.113883.3.464.1003.196.12.1001"
+          }
+        }
+      ]
+    },
+    {
+      "DataRequirement.type": {
+        "value": "MedicationStatement"
+      },
+      "DataRequirement.codeFilter": [
+        {
+          "DataRequirement.codeFilter.path": {
+            "value": "status"
+          },
+          "DataRequirement.codeFilter.valueCode": [
+            {
+              "value": "completed"
+            }
+          ]
+        },
+        {
+          "DataRequirement.codeFilter.path": {
+            "value": "medication.code"
+          },
+          "DataRequirement.codeFilter.valueSetString": {
+            "value": "2.16.840.1.113883.3.464.1003.196.12.1001"
+          }
+        }
+      ]
+    }
+  ],
+  "Library.document": {
+    "Attachment.contentType": {
+      "value": "application/cql+text"
+    },
+    "Attachment.url": {
+      "value": "http://cqlrepository.org/CMS146.cql"
+    }
+  }
+}

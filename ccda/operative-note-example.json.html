@@ -1,0 +1,622 @@
+﻿<!DOCTYPE HTML>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Operative-note-example.json - FHIR v1.4.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+  <link rel="Prev" href="http://hl7.org/fhir/operative-note-example.json.html"/>
+
+  <!-- Bootstrap core CSS -->
+  <link href="./dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="./assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="./assets/css/project.css" rel="stylesheet"/>
+  <link href="./assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment"><!-- segment-header -->	
+		<div class="container"><!-- container -->
+			<a id="logo" href="http://hl7.org/fhir" no-external="true"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a id="hl7-logo" href="http://www.hl7.org" no-external="true">
+					<img src="./assets/images/hl7-logo.png" width="42" height="50" alt="visit the hl7 website"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="./assets/images/search.png"/></a></div> 
+		</div>
+		<div class="container"><!-- container -->
+	</div></div><!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment"><!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container"><!-- container -->
+ <!-- HEADER CONTENT -->
+ 	      		
+ 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="documentation.html">Documentation</a></li>
+              <li><a href="implementation.html">Implementation</a></li>
+              <li><a href="resourcelist.html">Resources</a></li>
+              <li><a href="clinical.html">Clinical</a></li>
+              <li><a href="administration.html">Administrative</a></li>
+              <li><a href="infrastructure.html">Infrastructure</a></li>
+              <li><a href="financial.html">Financial</a></li>
+
+						</ul>
+					</div><!-- /.nav-collapse -->
+				</div><!-- /.container -->
+			</nav><!-- /.navbar -->
+      		
+				
+<!-- /HEADER CONTENT -->				
+		</div><!-- /container -->
+	</div><!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment"><!-- segment-breadcrumb -->
+		<div class="container"><!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="infrastructure.html">Infrastructure</a></li>        <li><a href="composition.html">Composition</a></li>        <li><b>Example Instance</b></li>        <!-- operative-note-example.json.html / resource-instance:Composition / Example-->
+
+			</ul>	
+		</div><!-- /container -->
+	</div><!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment"><!-- segment-content -->
+	<div class="container"><!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+<!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<h1>Operative-note-example.json</h1>
+
+<p>
+<a href="operative-note-example.json">Raw JSON</a> (<a href="operative-note-example.canonical.json">canonical form</a>)
+</p>
+
+<div class="example">
+<p>Example Operative Note</p>
+<pre class="json">
+{
+  &quot;resourceType&quot;: &quot;Composition&quot;,
+  &quot;id&quot;: &quot;operative-note-example&quot;,
+  &quot;text&quot;: {
+    &quot;status&quot;: &quot;generated&quot;,
+    &quot;div&quot;: &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: operative-note-example&lt;/p&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: 1&lt;/p&gt;&lt;p&gt;&lt;b&gt;date&lt;/b&gt;: Mar 22, 2016 9:10:14 AM&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: Provider-unspecified Operation Note &lt;span&gt;(Details : {LOINC code '11504-8' = 'Provider-unspecified Operation note', given as 'Provider-unspecified Operation Note'})&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;title&lt;/b&gt;: Operative Note&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: preliminary&lt;/p&gt;&lt;p&gt;&lt;b&gt;confidentiality&lt;/b&gt;: N&lt;/p&gt;&lt;p&gt;&lt;b&gt;author&lt;/b&gt;: &lt;a&gt;Adam Everyman, MD&lt;/a&gt;&lt;/p&gt;&lt;h3&gt;Attesters&lt;/h3&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Mode&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Time&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Party&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;legal&lt;/td&gt;&lt;td&gt;Jan 4, 2012 9:10:14 AM&lt;/td&gt;&lt;td&gt;&lt;a&gt;Adam Everyman, MD&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;b&gt;custodian&lt;/b&gt;: &lt;a&gt;Community Health and Hospitals&lt;/a&gt;&lt;/p&gt;&lt;h3&gt;Events&lt;/h3&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Period&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;Colonoscopy &lt;span&gt;(Details : {SNOMED CT code '73761001' = 'Colonoscopy', given as 'Colonoscopy'})&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Nov 18, 2015 --&amp;gt; Dec 12, 2015&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;b&gt;encounter&lt;/b&gt;: &lt;a&gt;http://fhir3.healthintersections.com.au/open/Encounter2ae55203-ff47-46ff-9877-c5249b191c/_history/1&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&quot;
+  },
+  &quot;extension&quot;: [
+    {
+      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/ccda-data-enterer-extension&quot;,
+      &quot;valueUri&quot;: &quot;http://fhir3.healthintersections.com.au/open/Practitioner/d2c66c52-5a31-4158-b5a5-a6534c0f9c/_history/1&quot;
+    },
+    {
+      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/ccda-informant-extension&quot;,
+      &quot;valueUri&quot;: &quot;http://fhir3.healthintersections.com.au/open/Practitioner/d2c66c52-5a31-4158-b5a5-a6534c0f9c/_history/1&quot;
+    },
+    {
+      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/ccda-information-recipient-extension&quot;,
+      &quot;valueUri&quot;: &quot;http://fhir3.healthintersections.com.au/open/Practitioner/d2c66c52-5a31-4158-b5a5-a6534c0f9c/_history/1&quot;
+    },
+    {
+      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/ccda-participant-extension&quot;,
+      &quot;valueUri&quot;: &quot;http://fhir3.healthintersections.com.au/open/RelatedPerson/ab019e53-9c1d-4158-b2fd-1a022acdb1/_history/1&quot;
+    },
+    {
+      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/ccda-performer-extension&quot;,
+      &quot;valueUri&quot;: &quot;http://fhir3.healthintersections.com.au/open/Practitioner/d2c66c52-5a31-4158-b5a5-a6534c0f9c/_history/1&quot;
+    },
+    {
+      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/ccda-authorization-extension&quot;,
+      &quot;valueUri&quot;: &quot;http://hl7.org/fhir/StructureDefinition/ccda-consent&quot;
+    }
+  ],
+  &quot;identifier&quot;: {
+    &quot;system&quot;: &quot;http://hl7.org/fhir/StructureDefinition/ccda-operative-note-composition&quot;,
+    &quot;value&quot;: &quot;1&quot;
+  },
+  &quot;date&quot;: &quot;2016-03-22T09:10:14Z&quot;,
+  &quot;type&quot;: {
+    &quot;coding&quot;: [
+      {
+        &quot;system&quot;: &quot;http://loinc.org&quot;,
+        &quot;code&quot;: &quot;11504-8&quot;,
+        &quot;display&quot;: &quot;Provider-unspecified Operation Note&quot;
+      }
+    ]
+  },
+  &quot;title&quot;: &quot;Operative Note&quot;,
+  &quot;status&quot;: &quot;preliminary&quot;,
+  &quot;confidentiality&quot;: &quot;N&quot;,
+  &quot;subject&quot;: {
+    &quot;reference&quot;: &quot;http://fhir3.healthintersections.com.au/open/Patient/c30b3fdb-1e9b-4add-bbfe-4e0fbd959a/_history/1&quot;,
+    &quot;display&quot;: &quot;Henry Jones&quot;
+  },
+  &quot;author&quot;: [
+    {
+      &quot;reference&quot;: &quot;http://fhir3.healthintersections.com.au/open/Practitioner/d2c66c52-5a31-4158-b5a5-a6534c0f9c/_history/1&quot;,
+      &quot;display&quot;: &quot;Adam Everyman, MD&quot;
+    }
+  ],
+  &quot;attester&quot;: [
+    {
+      &quot;mode&quot;: [
+        &quot;legal&quot;
+      ],
+      &quot;time&quot;: &quot;2012-01-04T09:10:14Z&quot;,
+      &quot;party&quot;: {
+        &quot;reference&quot;: &quot;http://fhir3.healthintersections.com.au/open/Practitioner/d2c66c52-5a31-4158-b5a5-a6534c0f9c/_history/1&quot;,
+        &quot;display&quot;: &quot;Adam Everyman, MD&quot;
+      }
+    }
+  ],
+  &quot;custodian&quot;: {
+    &quot;reference&quot;: &quot;http://fhir3.healthintersections.com.au/open/Organization/2c9c2215-23b5-4936-983a-9cd1bf3b8f/_history/1&quot;,
+    &quot;display&quot;: &quot;Community Health and Hospitals&quot;
+  },
+  &quot;event&quot;: [
+    {
+      &quot;code&quot;: [
+        {
+          &quot;coding&quot;: [
+            {
+              &quot;system&quot;: &quot;http://snomed.info/sct&quot;,
+              &quot;code&quot;: &quot;73761001&quot;,
+              &quot;display&quot;: &quot;Colonoscopy&quot;
+            }
+          ]
+        }
+      ],
+      &quot;period&quot;: {
+        &quot;start&quot;: &quot;2015-11-18&quot;,
+        &quot;end&quot;: &quot;2015-12-12&quot;
+      }
+    }
+  ],
+  &quot;encounter&quot;: {
+    &quot;reference&quot;: &quot;http://fhir3.healthintersections.com.au/open/Encounter2ae55203-ff47-46ff-9877-c5249b191c/_history/1&quot;
+  },
+  &quot;section&quot;: [
+    {
+      &quot;title&quot;: &quot;Allergies and Intolerances Section&quot;,
+      &quot;code&quot;: {
+        &quot;coding&quot;: [
+          {
+            &quot;system&quot;: &quot;http://loinc.org&quot;,
+            &quot;code&quot;: &quot;48765-2&quot;,
+            &quot;display&quot;: &quot;Allergies and adverse reactions&quot;
+          }
+        ]
+      },
+      &quot;text&quot;: {
+        &quot;status&quot;: &quot;generated&quot;,
+        &quot;div&quot;: &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n                &lt;table&gt;\n                    &lt;tr&gt;\n                        &lt;td&gt;\n                            &lt;b&gt;Substance&lt;/b&gt;\n                        &lt;/td&gt;\n                        &lt;td&gt;\n                            &lt;b&gt;Overall Severity&lt;/b&gt;\n                        &lt;/td&gt;\n                        &lt;td&gt;\n                            &lt;b&gt;Reaction&lt;/b&gt;\n                        &lt;/td&gt;\n                        &lt;td&gt;\n                            &lt;b&gt;Reaction Severity&lt;/b&gt;\n                        &lt;/td&gt;\n                        &lt;td&gt;\n                            &lt;b&gt;Status&lt;/b&gt;\n                        &lt;/td&gt;\n                    &lt;/tr&gt;\n                    &lt;tr&gt;\n                        &lt;td&gt;Cashew Nut&lt;/td&gt;\n                        &lt;td&gt;Severe&lt;/td&gt;\n                        &lt;td&gt;Anaphylactic reaction&lt;/td&gt;\n                        &lt;td&gt;Mild&lt;/td&gt;\n                        &lt;td&gt;Active&lt;/td&gt;\n                    &lt;/tr&gt;\n                &lt;/table&gt;\n            &lt;/div&gt;&quot;
+      },
+      &quot;mode&quot;: &quot;snapshot&quot;,
+      &quot;orderedBy&quot;: {
+        &quot;coding&quot;: [
+          {
+            &quot;system&quot;: &quot;http://hl7.org/fhir/list-order&quot;,
+            &quot;code&quot;: &quot;event-date&quot;,
+            &quot;display&quot;: &quot;Sorted by Event Date&quot;
+          }
+        ]
+      },
+      &quot;entry&quot;: [
+        {
+          &quot;reference&quot;: &quot;http://fhir3.healthintersections.com.au/open/AllergyIntolerance/9ef4fe0f-44bb-4c4e-9c1d-9926efda91/_history/1&quot;
+        }
+      ]
+    },
+    {
+      &quot;title&quot;: &quot;Anesthesia Section&quot;,
+      &quot;code&quot;: {
+        &quot;coding&quot;: [
+          {
+            &quot;system&quot;: &quot;http://loinc.org&quot;,
+            &quot;code&quot;: &quot;59774-0&quot;,
+            &quot;display&quot;: &quot;Anesthesia&quot;
+          }
+        ]
+      },
+      &quot;text&quot;: {
+        &quot;status&quot;: &quot;generated&quot;,
+        &quot;div&quot;: &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n                &lt;p&gt;Conscious sedation with propofol 200 mg IV&lt;/p&gt;\n            &lt;/div&gt;&quot;
+      },
+      &quot;entry&quot;: [
+        {
+          &quot;reference&quot;: &quot;http://fhir3.healthintersections.com.au/open/Procedure/e1092c01-8f65-4e21-a790-7ede873177/_history/1&quot;
+        },
+        {
+          &quot;reference&quot;: &quot;http://fhir3.healthintersections.com.au/open/Medication/c1227151-4a79-415c-b582-e11e78068c/_history/1&quot;
+        }
+      ]
+    },
+    {
+      &quot;title&quot;: &quot; Assessment Section&quot;,
+      &quot;code&quot;: {
+        &quot;coding&quot;: [
+          {
+            &quot;system&quot;: &quot;http://loinc.org&quot;,
+            &quot;code&quot;: &quot;51848-0&quot;,
+            &quot;display&quot;: &quot;Assessment (evaluation)&quot;
+          }
+        ]
+      },
+      &quot;text&quot;: {
+        &quot;status&quot;: &quot;generated&quot;,
+        &quot;div&quot;: &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n                &lt;p&gt;Obesity.&lt;/p&gt;\n                &lt;p&gt;Uncontrolled brittle Type II diabetic.&lt;/p&gt;\n                &lt;p&gt;Shortness of breath, mild wheezing.&lt;/p&gt;\n                &lt;p&gt;Pressure ulder on left knee.&lt;/p&gt;\n            &lt;/div&gt;&quot;
+      }
+    },
+    {
+      &quot;title&quot;: &quot;Assessment and Plan Section&quot;,
+      &quot;code&quot;: {
+        &quot;coding&quot;: [
+          {
+            &quot;system&quot;: &quot;http://loinc.org&quot;,
+            &quot;code&quot;: &quot;51847-2&quot;,
+            &quot;display&quot;: &quot;Assessment (evaluation) and plan&quot;
+          }
+        ]
+      },
+      &quot;text&quot;: {
+        &quot;status&quot;: &quot;generated&quot;,
+        &quot;div&quot;: &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n                &lt;p&gt;Recurrent GI bleed of unknown etiology; hypotension perhaps\n                    secondary to this but as likely secondary to polypharmacy&lt;/p&gt;\n                &lt;p&gt;Acute on chronic anemia secondary to #1.&lt;/p&gt;\n                &lt;p&gt;Azotemia, acute renal failure with volume loss secondary tom#1.&lt;/p&gt;\n                &lt;p&gt;Hyperkalemia secondary to #3 and on ACE and K+ supplement.&lt;/p&gt;\n                &lt;p&gt;Other chronic diagnoses as noted above, currently stable.&lt;/p&gt;\n            &lt;/div&gt;&quot;
+      }
+    },
+    {
+      &quot;title&quot;: &quot;Complications Section&quot;,
+      &quot;code&quot;: {
+        &quot;coding&quot;: [
+          {
+            &quot;system&quot;: &quot;http://loinc.org&quot;,
+            &quot;code&quot;: &quot;55109-3&quot;,
+            &quot;display&quot;: &quot;Complications&quot;
+          }
+        ]
+      },
+      &quot;text&quot;: {
+        &quot;status&quot;: &quot;generated&quot;,
+        &quot;div&quot;: &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n                &lt;p&gt;Asthmatic symptoms while under general anesthesia.&lt;/p&gt;\n            &lt;/div&gt;&quot;
+      },
+      &quot;entry&quot;: [
+        {
+          &quot;reference&quot;: &quot;http://fhir3.healthintersections.com.au/open/Condition/7688fe5b-7ccc-4a60-83f5-e87ccda6af/_history/1&quot;
+        }
+      ]
+    },
+    {
+      &quot;title&quot;: &quot;Preoperative Diagnosis Section&quot;,
+      &quot;code&quot;: {
+        &quot;coding&quot;: [
+          {
+            &quot;system&quot;: &quot;http://loinc.org&quot;,
+            &quot;code&quot;: &quot;10219-4&quot;,
+            &quot;display&quot;: &quot;Preoperative Diagnosis&quot;
+          }
+        ]
+      },
+      &quot;text&quot;: {
+        &quot;status&quot;: &quot;generated&quot;,
+        &quot;div&quot;: &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n                &lt;p&gt;Appendicitis&lt;/p&gt;\n            &lt;/div&gt;&quot;
+      }
+    },
+    {
+      &quot;title&quot;: &quot;Operative Note Surgical Procedure Section&quot;,
+      &quot;code&quot;: {
+        &quot;coding&quot;: [
+          {
+            &quot;system&quot;: &quot;http://loinc.org&quot;,
+            &quot;code&quot;: &quot;10223-6&quot;,
+            &quot;display&quot;: &quot;Operative Note Surgical Procedure&quot;
+          }
+        ]
+      },
+      &quot;text&quot;: {
+        &quot;status&quot;: &quot;generated&quot;,
+        &quot;div&quot;: &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n                &lt;p&gt;Laparoscopic Appendectomy&lt;/p&gt;\n            &lt;/div&gt;&quot;
+      }
+    },
+    {
+      &quot;title&quot;: &quot;Planned Procedure Section&quot;,
+      &quot;code&quot;: {
+        &quot;coding&quot;: [
+          {
+            &quot;system&quot;: &quot;http://loinc.org&quot;,
+            &quot;code&quot;: &quot;59772-4&quot;,
+            &quot;display&quot;: &quot;Planned procedure&quot;
+          }
+        ]
+      },
+      &quot;text&quot;: {
+        &quot;status&quot;: &quot;generated&quot;,
+        &quot;div&quot;: &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n                &lt;p&gt;Colonoscopy&lt;/p&gt;\n            &lt;/div&gt;&quot;
+      }
+    },
+    {
+      &quot;title&quot;: &quot;Procedure Indications Section&quot;,
+      &quot;code&quot;: {
+        &quot;coding&quot;: [
+          {
+            &quot;system&quot;: &quot;http://loinc.org&quot;,
+            &quot;code&quot;: &quot;59768-2&quot;,
+            &quot;display&quot;: &quot;Procedure indications&quot;
+          }
+        ]
+      },
+      &quot;text&quot;: {
+        &quot;status&quot;: &quot;generated&quot;,
+        &quot;div&quot;: &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n                &lt;p&gt;The procedure is performed for screening in a low risk individual.&lt;/p&gt;\n            &lt;/div&gt;&quot;
+      }
+    },
+    {
+      &quot;title&quot;: &quot;Procedure Description Section&quot;,
+      &quot;code&quot;: {
+        &quot;coding&quot;: [
+          {
+            &quot;system&quot;: &quot;http://loinc.org&quot;,
+            &quot;code&quot;: &quot;29554-3&quot;,
+            &quot;display&quot;: &quot;Procedure description&quot;
+          }
+        ]
+      },
+      &quot;text&quot;: {
+        &quot;status&quot;: &quot;generated&quot;,
+        &quot;div&quot;: &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n                &lt;p&gt;The patient was brought to the operating room, placed in the supine position, and\n                    general anesthesia was induced. A detailed technical narrative of a laparoscopic\n                    appendectomy from initial incision to placement of any dressings follows.  &lt;/p&gt;      \n            &lt;/div&gt;&quot;
+      }
+    },
+    {
+      &quot;title&quot;: &quot;Procedure Estimated Blood Loss Section&quot;,
+      &quot;code&quot;: {
+        &quot;coding&quot;: [
+          {
+            &quot;system&quot;: &quot;http://loinc.org&quot;,
+            &quot;code&quot;: &quot;59770-8&quot;,
+            &quot;display&quot;: &quot;Procedure Estimated Blood Loss&quot;
+          }
+        ]
+      },
+      &quot;text&quot;: {
+        &quot;status&quot;: &quot;generated&quot;,
+        &quot;div&quot;: &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n                &lt;p&gt;Minimal&lt;/p&gt;\n            &lt;/div&gt;&quot;
+      }
+    },
+    {
+      &quot;title&quot;: &quot;Procedure Findings Section&quot;,
+      &quot;code&quot;: {
+        &quot;coding&quot;: [
+          {
+            &quot;system&quot;: &quot;http://loinc.org&quot;,
+            &quot;code&quot;: &quot;59776-5&quot;,
+            &quot;display&quot;: &quot;Procedure findings&quot;
+          }
+        ]
+      },
+      &quot;text&quot;: {
+        &quot;status&quot;: &quot;generated&quot;,
+        &quot;div&quot;: &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n                &lt;p&gt;A 6 mm sessile polyp was found in the ascending colon and \n                    removed by snare, no cautery. Bleeding was controlled. \n                    Moderate diverticulosis and hemorrhoids were incidentally noted.&lt;/p&gt;\n            &lt;/div&gt;&quot;
+      },
+      &quot;entry&quot;: [
+        {
+          &quot;reference&quot;: &quot;http://fhir3.healthintersections.com.au/open/Condition/7688fe5b-7ccc-4a60-83f5-e87ccda6af/_history/1&quot;
+        }
+      ]
+    },
+    {
+      &quot;title&quot;: &quot;Procedure Specimens Taken Section&quot;,
+      &quot;code&quot;: {
+        &quot;coding&quot;: [
+          {
+            &quot;system&quot;: &quot;http://loinc.org&quot;,
+            &quot;code&quot;: &quot;59773-2&quot;,
+            &quot;display&quot;: &quot;Procedure specimens taken&quot;
+          }
+        ]
+      },
+      &quot;text&quot;: {
+        &quot;status&quot;: &quot;generated&quot;,
+        &quot;div&quot;: &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n                &lt;p&gt;Ascending colon polyp&lt;/p&gt;\n            &lt;/div&gt;&quot;
+      }
+    },
+    {
+      &quot;title&quot;: &quot;Operative Note Fluids Section&quot;,
+      &quot;code&quot;: {
+        &quot;coding&quot;: [
+          {
+            &quot;system&quot;: &quot;http://loinc.org&quot;,
+            &quot;code&quot;: &quot;10216-0&quot;,
+            &quot;display&quot;: &quot;Operative Note Fluids&quot;
+          }
+        ]
+      },
+      &quot;text&quot;: {
+        &quot;status&quot;: &quot;generated&quot;,
+        &quot;div&quot;: &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n                &lt;p&gt;250 ML Ringers Lactate&lt;/p&gt;\n            &lt;/div&gt;&quot;
+      }
+    },
+    {
+      &quot;title&quot;: &quot;Surgical Drains Section&quot;,
+      &quot;code&quot;: {
+        &quot;coding&quot;: [
+          {
+            &quot;system&quot;: &quot;http://loinc.org&quot;,
+            &quot;code&quot;: &quot;11537-8&quot;,
+            &quot;display&quot;: &quot;Surgical Drains&quot;
+          }
+        ]
+      },
+      &quot;text&quot;: {
+        &quot;status&quot;: &quot;generated&quot;,
+        &quot;div&quot;: &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n                &lt;p&gt;Penrose drain placed&lt;/p&gt;\n            &lt;/div&gt;&quot;
+      }
+    },
+    {
+      &quot;title&quot;: &quot;Procedure Implants Section&quot;,
+      &quot;code&quot;: {
+        &quot;coding&quot;: [
+          {
+            &quot;system&quot;: &quot;http://loinc.org&quot;,
+            &quot;code&quot;: &quot;59771-6&quot;,
+            &quot;display&quot;: &quot;Procedure implants&quot;
+          }
+        ]
+      },
+      &quot;text&quot;: {
+        &quot;status&quot;: &quot;generated&quot;,
+        &quot;div&quot;: &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n                &lt;p&gt;No implants were placed.&lt;/p&gt;\n            &lt;/div&gt;&quot;
+      }
+    },
+    {
+      &quot;title&quot;: &quot;Procedure Disposition Section&quot;,
+      &quot;code&quot;: {
+        &quot;coding&quot;: [
+          {
+            &quot;system&quot;: &quot;http://loinc.org&quot;,
+            &quot;code&quot;: &quot;59775-7&quot;,
+            &quot;display&quot;: &quot;Procedure disposition&quot;
+          }
+        ]
+      },
+      &quot;text&quot;: {
+        &quot;status&quot;: &quot;generated&quot;,
+        &quot;div&quot;: &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n                &lt;p&gt;The patient was taken to the Endoscopy Recovery Unit in stable condition.&lt;/p&gt;\n            &lt;/div&gt;&quot;
+      }
+    },
+    {
+      &quot;title&quot;: &quot;Postoperative Diagnosis Section&quot;,
+      &quot;code&quot;: {
+        &quot;coding&quot;: [
+          {
+            &quot;system&quot;: &quot;http://loinc.org&quot;,
+            &quot;code&quot;: &quot;10218-6&quot;,
+            &quot;display&quot;: &quot;Postoperative Diagnosis&quot;
+          }
+        ]
+      },
+      &quot;text&quot;: {
+        &quot;status&quot;: &quot;generated&quot;,
+        &quot;div&quot;: &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n                &lt;p&gt;Appendicitis with periappendiceal abscess&lt;/p&gt;\n            &lt;/div&gt;&quot;
+      }
+    },
+    {
+      &quot;title&quot;: &quot;Plan of Treatment Section&quot;,
+      &quot;code&quot;: {
+        &quot;coding&quot;: [
+          {
+            &quot;system&quot;: &quot;http://loinc.org&quot;,
+            &quot;code&quot;: &quot;18776-5&quot;,
+            &quot;display&quot;: &quot;Plan of treatment&quot;
+          }
+        ]
+      },
+      &quot;text&quot;: {
+        &quot;status&quot;: &quot;generated&quot;,
+        &quot;div&quot;: &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n                &lt;table&gt;\n                    &lt;tr&gt;\n                        &lt;td&gt;\n                            &lt;b&gt;Planned Activity&lt;/b&gt;\n                        &lt;/td&gt;\n                        &lt;td&gt;\n                            &lt;b&gt;Period&lt;/b&gt;\n                        &lt;/td&gt;\n                        &lt;td&gt;\n                            &lt;b&gt;Status&lt;/b&gt;\n                        &lt;/td&gt;\n                    &lt;/tr&gt;\n                    &lt;tr&gt;\n                        &lt;td&gt;Colonoscopy&lt;/td&gt;\n                        &lt;td&gt;2010/08/16 - 2010/08/16&lt;/td&gt;\n                        &lt;td&gt;Completed&lt;/td&gt;\n                    &lt;/tr&gt;\n                    &lt;tr&gt;\n                        &lt;td&gt;Recommendation to Exercise&lt;/td&gt;\n                        &lt;td&gt;2015/10/29&lt;/td&gt;\n                        &lt;td&gt;Ongoing&lt;/td&gt;\n                    &lt;/tr&gt;\n                &lt;/table&gt;\n            &lt;/div&gt;&quot;
+      }
+    }
+  ]
+}
+</pre>
+</div>
+
+
+<p>
+Usage note: every effort has been made to ensure that the
+examples are correct and useful, but they are not a normative part 
+of the specification. 
+</p>
+
+</div>
+
+
+				</div><!-- /inner-wrapper -->
+            </div><!-- /row -->
+        </div><!-- /container -->
+        
+    </div><!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment"><!-- segment-footer -->
+		<div class="container"><!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        © HL7.org 2011+. FHIR STU3 Candidate (v1.4.0-8453) generated on Mon, Jun 6, 2016 20:20+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search</a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Foperative-note-example.json.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Foperative-note-example.json.html">Compare to DSTU2</a> |                
+               <a style="color: #81BEF7" rel="license" href="license.html"><img src="cc0.png" style="border-style: none;" alt="CC0"/></a> | 
+               <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>   
+        </span>
+        </p>
+			</div><!-- /inner-wrapper -->
+		</div><!-- /container -->
+	</div><!-- /segment-footer -->
+<!-- disqus thread -->
+<!--disqus-->
+<!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden"><!-- segment-post-footer -->
+		<div class="container"><!-- container -->
+		</div><!-- /container -->
+	</div><!-- /segment-post-footer -->
+    
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>   <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

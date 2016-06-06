@@ -1,0 +1,1984 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="EventSummary"/>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">to do</div>
+  </text>
+  <url value="http://hl7.org/fhir/StructureDefinition/EventSummary"/>
+  <name value="EventSummary"/>
+  <display value="nehta-event-summary"/>
+  <status value="draft"/>
+  <publisher value="Health Level Seven International fhir"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="http://hl7.org/fhir"/>
+    </telecom>
+  </contact>
+  <date value="2016-06-06T20:14:04+00:00"/>
+  <description value="Logical Model: A record, reported by a clinician, of one significant health care event involving the subject of care."/>
+  <fhirVersion value="1.4.0"/>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <snapshot>
+    <element>
+      <path value="EventSummary"/>
+      <short value="Event Summary"/>
+      <definition value="A record, reported by a clinician, of one significant health care event involving the subject of care."/>
+      <min value="0"/>
+      <max value="*"/>
+    </element>
+    <element>
+      <path value="EventSummary.subjectofCare"/>
+      <short value="Subject of Care"/>
+      <definition value="Person who receives healthcare services."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/Patient"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.documentAuthor"/>
+      <short value="Document Author"/>
+      <definition value="Composer of the document."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/Patient"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/Device"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.encounter"/>
+      <short value="Encounter"/>
+      <definition value="Encounter between a subject of care and a health system."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Element"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.encounter.dateTimeHealthEventStarted"/>
+      <short value="DateTime Health Event Started"/>
+      <definition value="The date or date and time that the health event to which the Event Summary document relates was started."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="dateTime"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.encounter.dateTimeHealthEventEnded"/>
+      <short value="DateTime Health Event Ended"/>
+      <definition value="The date or date and time that the health event to which the Event Summary document relates was completed."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="dateTime"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.documentType"/>
+      <short value="Document Type"/>
+      <definition value="Type of document."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Identifier"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.dateTimeAttested"/>
+      <short value="DateTime Attested"/>
+      <definition value="The date and time that the document author or document authoriser or approver confirms that a document is complete and genuine."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="dateTime"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.eventOverview"/>
+      <short value="Event Overview"/>
+      <definition value="Summary information concerning the event."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Element"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.eventOverview.clinicalSynopsis"/>
+      <short value="Clinical Synopsis"/>
+      <definition value="Summary information or comments about the clinical management of the patient, and the prognosis of diagnoses or problems identified during the healthcare encounter. It may also include health-related information pertinent to the patient, and a clinical interpretation of relevant investigations and observations performed on the patient (including pathology and diagnostic imaging)."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Element"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.eventOverview.clinicalSynopsis.description"/>
+      <short value="Clinical Synopsis Description"/>
+      <definition value="Short description, overview or summary of a clinical event and its reasons."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.adverseReactions"/>
+      <short value="Adverse Reactions"/>
+      <definition value="Information about adverse reactions of the patient (including allergies and intolerances), and any relevant reaction details. This includes statements about adverse reactions that need to be positively recorded as absent or excluded."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Element"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.adverseReactions.adverseReaction"/>
+      <short value="Adverse Reaction"/>
+      <definition value="A harmful or undesirable effect associated with exposure to any substance or agent."/>
+      <min value="1"/>
+      <max value="*"/>
+      <type>
+        <code value="Element"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.adverseReactions.adverseReaction.substanceAgent"/>
+      <short value="Substance/Agent"/>
+      <definition value="Identification of a substance, agent, or a class of substance, that is considered to be responsible for the adverse reaction."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <description value="The set of values for the agent or substance causing the adverse reaction experienced by the subject of care."/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/nehta-nehta-SubstanceAgentValues"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element>
+      <path value="EventSummary.adverseReactions.adverseReaction.event"/>
+      <short value="Reaction Event"/>
+      <definition value="Details about each adverse reaction event."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Element"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.adverseReactions.adverseReaction.event.manifestation"/>
+      <short value="Manifestation"/>
+      <definition value="Presentation or exhibition of signs and symptoms of the adverse reaction expressed as a single word, phrase or brief description."/>
+      <min value="1"/>
+      <max value="*"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <description value="The set of values for recording clinical manifestation of an adverse reaction."/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/nehta-nehta-ClinicalManifestationValues"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element>
+      <path value="EventSummary.adverseReactions.adverseReaction.event.reactionType"/>
+      <short value="Reaction Type"/>
+      <definition value="The type of reaction, as determined by the clinician."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="example"/>
+        <description value="The set of values for the type of adverse reaction."/>
+      </binding>
+    </element>
+    <element>
+      <path value="EventSummary.medicationOrders"/>
+      <short value="Medication Orders"/>
+      <definition value="Medicines that the subject of care is using."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Element"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.medicationOrders.medicationInstruction"/>
+      <short value="Medication Instruction"/>
+      <definition value="Information pertaining to one or more therapeutic goods that is represented to achieve, or is likely to achieve, its principal intended action by pharmacological, chemical, immunological or metabolic means in or on the body of a human."/>
+      <min value="1"/>
+      <max value="*"/>
+      <type>
+        <code value="Element"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.medicationOrders.medicationInstruction.therapeuticGoodIdentification"/>
+      <short value="Therapeutic Good Identification"/>
+      <definition value="The medicine, vaccine or other therapeutic good being ordered for, administered to or used by the subject of care."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <description value="A set of values used to refer to medicines and other therapeutic goods."/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/nehta-nehta-MedicinesTerminology"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element>
+      <path value="EventSummary.medicationOrders.medicationInstruction.directions"/>
+      <short value="Directions"/>
+      <definition value="A complete narrative description of how much, when and how to use the medicine, vaccine or other therapeutic good."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.medicationOrders.medicationInstruction.clinicalIndication"/>
+      <short value="Clinical Indication"/>
+      <definition value="Reason for ordering the medicine, vaccine or other therapeutic good."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.medicationOrders.medicationInstruction.comment"/>
+      <short value="Medication Instruction Comment"/>
+      <definition value="Any additional information that may be needed to ensure the continuity of supply, rationale for current dose and timing, or safe and appropriate use."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.medicationOrders.medicationInstruction.changeType"/>
+      <short value="Change Type"/>
+      <definition value="The way in which this instruction differs from the previous instruction."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="example"/>
+        <description value="The set of values for Change Type ."/>
+      </binding>
+    </element>
+    <element>
+      <path value="EventSummary.medicationOrders.medicationInstruction.changeStatus"/>
+      <short value="Change Status"/>
+      <definition value="Identifies whether the change has already been made or is a recommendation that has not been made."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="example"/>
+        <description value="The set of values for Change Status ."/>
+      </binding>
+    </element>
+    <element>
+      <path value="EventSummary.medicationOrders.medicationInstruction.changeDescription"/>
+      <short value="Change Description"/>
+      <definition value="Description of the change in the subject of care&#39;s medication item information."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.medicationOrders.medicationInstruction.changeorRecommendationReason"/>
+      <short value="Change or Recommendation Reason"/>
+      <definition value="The justification for the stated change in medication."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.medicalHistory"/>
+      <short value="Medical History"/>
+      <definition value="Information about the subject of care&#39;s problems, diagnoses and medical or surgical procedures."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Element"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.medicalHistory.problemDiagnosis"/>
+      <short value="Problem/Diagnosis"/>
+      <definition value="A health condition that, as determined by a clinician, may have impact on the physical, mental or social well-being of a person. A diagnosis is determined by scientific evaluation of pathological and pathophysiological findings identified from the patient&#39;s clinical history, family history, physical examination and diagnostic investigations."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Element"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.medicalHistory.problemDiagnosis.identification"/>
+      <short value="Problem/Diagnosis Identification"/>
+      <definition value="Identification of the problem or diagnosis."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="example"/>
+        <description value="The Problem/Diagnosis reference set provides terminology to support the recording of a subject of care problem or diagnosis for medical records within Australia."/>
+      </binding>
+    </element>
+    <element>
+      <path value="EventSummary.medicalHistory.problemDiagnosis.dateofOnset"/>
+      <short value="Date of Onset"/>
+      <definition value="Estimated or actual date the problem or diagnosis began, as indicated or identified by the clinician."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="dateTime"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.medicalHistory.problemDiagnosis.comment"/>
+      <short value="Problem/Diagnosis Comment"/>
+      <definition value="Additional narrative about the problem or diagnosis not captured in other fields."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.medicalHistory.procedure"/>
+      <short value="Procedure"/>
+      <definition value="A clinical activity carried out for therapeutic, evaluative, investigative, screening or diagnostic purposes."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Element"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.medicalHistory.procedure.name"/>
+      <short value="Procedure Name"/>
+      <definition value="The name of the procedure (to be) performed."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="example"/>
+        <description value="The Procedure foundation reference set provides the broadest possible terminology to support the recording of clinical interventions in Australian eHealth implementations."/>
+      </binding>
+    </element>
+    <element>
+      <path value="EventSummary.medicalHistory.procedure.comment"/>
+      <short value="Procedure Comment"/>
+      <definition value="Additional narrative about the procedure not captured in other fields."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.medicalHistory.procedure.dateTime"/>
+      <short value="Procedure DateTime"/>
+      <definition value="Date, and optionally time, of the Procedure action."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Period"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.medicalHistory.uncategorisedMedicalHistoryItem"/>
+      <short value="Uncategorised Medical History Item"/>
+      <definition value="A medical history entry that has not been categorised as either Procedure or Problem/Diagnosis ."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Element"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.medicalHistory.uncategorisedMedicalHistoryItem.description"/>
+      <short value="Medical History Item Description"/>
+      <definition value="A description of the problem, diagnosis or procedure as a medical history item."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.medicalHistory.uncategorisedMedicalHistoryItem.timeInterval"/>
+      <short value="Medical History Item TimeInterval"/>
+      <definition value="The date range during which the problem or diagnosis applied or the procedure occurred."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Period"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.medicalHistory.uncategorisedMedicalHistoryItem.comment"/>
+      <short value="Medical History Item Comment"/>
+      <definition value="Additional narrative about the problem, diagnosis or procedure."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.immunisations"/>
+      <short value="Immunisations"/>
+      <definition value="Information about vaccines given to the subject of care."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Element"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.immunisations.medicationAction"/>
+      <short value="Medication Action"/>
+      <definition value="The act of administering a dose of a vaccine to a person for the purpose of preventing or minimising the effects of a disease by producing immunity or to counter the effects of an infectious organism."/>
+      <min value="1"/>
+      <max value="*"/>
+      <type>
+        <code value="Element"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.immunisations.medicationAction.therapeuticGoodIdentification"/>
+      <short value="Therapeutic Good Identification"/>
+      <definition value="The medicine, vaccine or other therapeutic good being ordered for, administered to or used by the subject of care."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <description value="A set of values used to refer to medicines and other therapeutic goods."/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/nehta-nehta-MedicinesTerminology"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element>
+      <path value="EventSummary.immunisations.medicationAction.dateTime"/>
+      <short value="Medication Action DateTime"/>
+      <definition value="Date, and optionally time, that the medication action is completed."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="dateTime"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations"/>
+      <short value="Diagnostic Investigations"/>
+      <definition value="Describes the diagnostic tests or procedures performed on or requested for the subject of care during the healthcare event, that are considered to be relevant to the subject of care’s ongoing care."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Element"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult"/>
+      <short value="Pathology Test Result"/>
+      <definition value="The result of a laboratory test which may be used to record a single valued test but will often be specialised or templated to represent multiple value or &#39;panel&#39; tests."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Element"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.name"/>
+      <short value="Pathology Test Result Name"/>
+      <definition value="Identification of the pathology test performed, sometimes including specimen type."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="example"/>
+        <description value="Set of values for the names of pathology tests requested or performed."/>
+      </binding>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.diagnosticService"/>
+      <short value="Diagnostic Service"/>
+      <definition value="The diagnostic service that performs the examination."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="example"/>
+        <description value="Set of values for the type of diagnostic service."/>
+      </binding>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.specimen"/>
+      <short value="Specimen"/>
+      <definition value="Details about specimens to which this test result refers."/>
+      <min value="1"/>
+      <max value="*"/>
+      <type>
+        <code value="Element"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.tissueType"/>
+      <short value="Specimen Tissue Type"/>
+      <definition value="The type of specimen to be collected."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="example"/>
+        <description value="The set of values for the categorisation of the sample taken from an individual and submitted for pathology investigation."/>
+      </binding>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.collectionProcedure"/>
+      <short value="Collection Procedure"/>
+      <definition value="The method of collection to be used."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="example"/>
+        <description value="The set of values for the method of collection to be used, e.g. venepuncture, biopsy, resection."/>
+      </binding>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.anatomicalLocation"/>
+      <short value="Anatomical Location"/>
+      <definition value="The anatomical site from where the specimen was taken."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Element"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.anatomicalLocation.specificLocation"/>
+      <short value="Specific Location"/>
+      <definition value="Specific and identified anatomical location."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Element"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.anatomicalLocation.specificLocation.anatomicalLocationName"/>
+      <short value="Anatomical Location Name"/>
+      <definition value="The name of the anatomical location."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="example"/>
+        <description value="The set of values for named anatomical locations."/>
+      </binding>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.anatomicalLocation.specificLocation.side"/>
+      <short value="Side"/>
+      <definition value="The laterality of the anatomical location."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="example"/>
+        <description value="The set of values for identifying the laterality of an anatomical location."/>
+      </binding>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.anatomicalLocation.description"/>
+      <short value="Anatomical Location Description"/>
+      <definition value="Description of the anatomical location."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.anatomicalLocation.image"/>
+      <short value="Anatomical Location Image"/>
+      <definition value="An image or images used to identify a location."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="base64Binary"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.physicalPropertiesofanObject"/>
+      <short value="Physical Properties of an Object"/>
+      <definition value="Record of physical details, such as weight and dimensions, of a body part, device, lesion or specimen."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Element"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.physicalPropertiesofanObject.weight"/>
+      <short value="Weight"/>
+      <definition value="Property of a body – commonly, but inadequately, defined as the quantity of matter in it – to which its inertia is ascribed, and expressed as the weight of the body divided by the acceleration due to gravity."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Quantity"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.physicalPropertiesofanObject.dimensions"/>
+      <short value="Dimensions"/>
+      <definition value="The dimensions of the object."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Element"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.physicalPropertiesofanObject.dimensions.volume"/>
+      <short value="Volume"/>
+      <definition value="Size, measure or amount of anything in three dimensions; space occupied by a body or substance measured in cubic units."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Quantity"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.physicalPropertiesofanObject.objectDescription"/>
+      <short value="Object Description"/>
+      <definition value="A description of other physical characteristics of the object."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.physicalPropertiesofanObject.image"/>
+      <short value="Image"/>
+      <definition value="A picture of the object."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="base64Binary"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.collectionandHandling"/>
+      <short value="Collection and Handling"/>
+      <definition value="Collection and handling requirements."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Element"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.collectionandHandling.samplingPreconditions"/>
+      <short value="Sampling Preconditions"/>
+      <definition value="Any conditions to be met before the sample should be taken."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="example"/>
+        <description value="The set of values for any conditions to be met before the sample should be taken e.g. fasting, &#39;full bladder&#39;, &#39;sterile field&#39; or any special instructions on the handling or immediate processing of the sample e.g. centrifuge on receipt."/>
+      </binding>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.handlingandProcessing"/>
+      <short value="Handling and Processing"/>
+      <definition value="Workflow of specimen processing or handling."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Element"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.handlingandProcessing.collectionDateTime"/>
+      <short value="Collection DateTime"/>
+      <definition value="The date and time that the collection has been ordered to take place or has taken place."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="dateTime"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.handlingandProcessing.collectionSetting"/>
+      <short value="Collection Setting"/>
+      <definition value="Identification of the setting at which the specimen was collected from a subject of care."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.handlingandProcessing.dateTimeReceived"/>
+      <short value="DateTime Received"/>
+      <definition value="The date and time that the sample was received at the laboratory."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="dateTime"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.identifiers"/>
+      <short value="Identifiers"/>
+      <definition value="Sample identifications."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Element"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.identifiers.specimenIdentifier"/>
+      <short value="Specimen Identifier"/>
+      <definition value="Unique identifier of the specimen, normally assigned by the laboratory."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Identifier"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.identifiers.parentSpecimenIdentifier"/>
+      <short value="Parent Specimen Identifier"/>
+      <definition value="Unique identifier of the parent specimen where the specimen is split into sub-samples."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Identifier"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.identifiers.containerIdentifier"/>
+      <short value="Container Identifier"/>
+      <definition value="Unique identifier given to the container in which the specimen is transported or processed."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Identifier"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.overallPathologyTestResultStatus"/>
+      <short value="Overall Pathology Test Result Status"/>
+      <definition value="The status of the pathology test result as a whole."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <description value="Set of values for the pathology test result status."/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/nehta-pathology-test-result-status-va"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.clinicalInformationProvided"/>
+      <short value="Clinical Information Provided"/>
+      <definition value="Description or summary of relevant, prior clinical information that may help in determining the test(s) to be performed, or interpreting the result when compiling or reading the report."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.group"/>
+      <short value="Pathology Test Result Group"/>
+      <definition value="A group of results that form all or part of a recognisable pathology test."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Element"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.group.name"/>
+      <short value="Pathology Test Result Group Name"/>
+      <definition value="The name of a group of pathology test results."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="example"/>
+        <description value="Set of values for the names of pathology tests requested or performed."/>
+      </binding>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.group.individualPathologyTestResult"/>
+      <short value="Individual Pathology Test Result"/>
+      <definition value="Specific detailed result of a pathology test, including both the value of the result item, and additional information that may be useful for clinical interpretation."/>
+      <min value="1"/>
+      <max value="*"/>
+      <type>
+        <code value="Element"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.group.individualPathologyTestResult.name"/>
+      <short value="Individual Pathology Test Result Name"/>
+      <definition value="The name of an individual pathology test result."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="example"/>
+        <description value="Set of values for the names of individual pathology tests performed."/>
+      </binding>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.group.individualPathologyTestResult.value"/>
+      <short value="Individual Pathology Test Result Value"/>
+      <definition value="Value of the result, with reference range information."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Element"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.group.individualPathologyTestResult.value.value"/>
+      <short value="Individual Pathology Test Result Value"/>
+      <definition value="The actual value of the result."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="example"/>
+        <description value="Set of values for Pathology Test Result Value ."/>
+      </binding>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.group.individualPathologyTestResult.value.referenceRangeDetails"/>
+      <short value="Reference Range Details"/>
+      <definition value="One or more reference ranges applicable to the Individual Pathology Test Result Value ."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Element"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.group.individualPathologyTestResult.value.referenceRangeDetails.normalStatus"/>
+      <short value="Normal Status"/>
+      <definition value="An indication of the degree of diagnostically significant abnormality of the value, based on available clinical information (including but not limited to the reference range)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="example"/>
+      </binding>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.group.individualPathologyTestResult.value.referenceRangeDetails.referenceRange"/>
+      <short value="Reference Range"/>
+      <definition value="A named range to be associated with any quantity datum."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Element"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.group.individualPathologyTestResult.value.referenceRangeDetails.referenceRange.meaning"/>
+      <short value="Reference Range Meaning"/>
+      <definition value="Term whose value indicates the meaning of this range."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="example"/>
+      </binding>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.group.individualPathologyTestResult.value.referenceRangeDetails.referenceRange.referenceRange"/>
+      <short value="Reference Range"/>
+      <definition value="The data range for the associated Reference Range Meaning data element ."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Range"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.group.individualPathologyTestResult.comment"/>
+      <short value="Individual Pathology Test Result Comment"/>
+      <definition value="Comments that may include statements about significant, unexpected or unreliable values, or information about the source of the value where this may be relevant to the interpretation of the result."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.group.individualPathologyTestResult.referenceRangeGuidance"/>
+      <short value="Individual Pathology Test Result Reference Range Guidance"/>
+      <definition value="Additional advice on the applicability of the reference range."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.group.individualPathologyTestResult.status"/>
+      <short value="Individual Pathology Test Result Status"/>
+      <definition value="The status of the result value."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <description value="Set of values for the pathology test result status."/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/nehta-pathology-test-result-status-va"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen"/>
+      <short value="Specimen"/>
+      <definition value="Details about the individual specimen to which these result group test results refer, where testing of multiple specimens is required."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Element"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.tissueType"/>
+      <short value="Specimen Tissue Type"/>
+      <definition value="The type of specimen to be collected."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="example"/>
+        <description value="The set of values for the categorisation of the sample taken from an individual and submitted for pathology investigation."/>
+      </binding>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.collectionProcedure"/>
+      <short value="Collection Procedure"/>
+      <definition value="The method of collection to be used."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="example"/>
+        <description value="The set of values for the method of collection to be used, e.g. venepuncture, biopsy, resection."/>
+      </binding>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.anatomicalLocation"/>
+      <short value="Anatomical Location"/>
+      <definition value="The anatomical site from where the specimen was taken."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Element"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.anatomicalLocation.specificLocation"/>
+      <short value="Specific Location"/>
+      <definition value="Specific and identified anatomical location."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Element"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.anatomicalLocation.specificLocation.anatomicalLocationName"/>
+      <short value="Anatomical Location Name"/>
+      <definition value="The name of the anatomical location."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="example"/>
+        <description value="The set of values for named anatomical locations."/>
+      </binding>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.anatomicalLocation.specificLocation.side"/>
+      <short value="Side"/>
+      <definition value="The laterality of the anatomical location."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="example"/>
+        <description value="The set of values for identifying the laterality of an anatomical location."/>
+      </binding>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.anatomicalLocation.description"/>
+      <short value="Anatomical Location Description"/>
+      <definition value="Description of the anatomical location."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.anatomicalLocation.image"/>
+      <short value="Anatomical Location Image"/>
+      <definition value="An image or images used to identify a location."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="base64Binary"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.physicalPropertiesofanObject"/>
+      <short value="Physical Properties of an Object"/>
+      <definition value="Record of physical details, such as weight and dimensions, of a body part, device, lesion or specimen."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Element"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.physicalPropertiesofanObject.weight"/>
+      <short value="Weight"/>
+      <definition value="Property of a body – commonly, but inadequately, defined as the quantity of matter in it – to which its inertia is ascribed, and expressed as the weight of the body divided by the acceleration due to gravity."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Quantity"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.physicalPropertiesofanObject.dimensions"/>
+      <short value="Dimensions"/>
+      <definition value="The dimensions of the object."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Element"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.physicalPropertiesofanObject.dimensions.volume"/>
+      <short value="Volume"/>
+      <definition value="Size, measure or amount of anything in three dimensions; space occupied by a body or substance measured in cubic units."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Quantity"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.physicalPropertiesofanObject.objectDescription"/>
+      <short value="Object Description"/>
+      <definition value="A description of other physical characteristics of the object."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.physicalPropertiesofanObject.image"/>
+      <short value="Image"/>
+      <definition value="A picture of the object."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="base64Binary"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.collectionandHandling"/>
+      <short value="Collection and Handling"/>
+      <definition value="Collection and handling requirements."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Element"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.collectionandHandling.samplingPreconditions"/>
+      <short value="Sampling Preconditions"/>
+      <definition value="Any conditions to be met before the sample should be taken."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="example"/>
+        <description value="The set of values for any conditions to be met before the sample should be taken e.g. fasting, &#39;full bladder&#39;, &#39;sterile field&#39; or any special instructions on the handling or immediate processing of the sample e.g. centrifuge on receipt."/>
+      </binding>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.handlingandProcessing"/>
+      <short value="Handling and Processing"/>
+      <definition value="Workflow of specimen processing or handling."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Element"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.handlingandProcessing.collectionDateTime"/>
+      <short value="Collection DateTime"/>
+      <definition value="The date and time that the collection has been ordered to take place or has taken place."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="dateTime"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.handlingandProcessing.collectionSetting"/>
+      <short value="Collection Setting"/>
+      <definition value="Identification of the setting at which the specimen was collected from a subject of care."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.handlingandProcessing.dateTimeReceived"/>
+      <short value="DateTime Received"/>
+      <definition value="The date and time that the sample was received at the laboratory."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="dateTime"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.identifiers"/>
+      <short value="Identifiers"/>
+      <definition value="Sample identifications."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Element"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.identifiers.specimenIdentifier"/>
+      <short value="Specimen Identifier"/>
+      <definition value="Unique identifier of the specimen, normally assigned by the laboratory."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Identifier"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.identifiers.parentSpecimenIdentifier"/>
+      <short value="Parent Specimen Identifier"/>
+      <definition value="Unique identifier of the parent specimen where the specimen is split into sub-samples."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Identifier"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.identifiers.containerIdentifier"/>
+      <short value="Container Identifier"/>
+      <definition value="Unique identifier given to the container in which the specimen is transported or processed."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Identifier"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.pathologicalDiagnosis"/>
+      <short value="Pathological Diagnosis"/>
+      <definition value="Single word, phrase or brief description representing the diagnostic statement as asserted by the reporting pathologist."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="example"/>
+      </binding>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.pathologyTestConclusion"/>
+      <short value="Pathology Test Conclusion"/>
+      <definition value="Concise and clinically contextualised narrative interpretation of the pathology test results."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.representation"/>
+      <short value="Test Result Representation"/>
+      <definition value="Rich text representation of the entire result as issued by the diagnostic service."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="base64Binary"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.testComment"/>
+      <short value="Test Comment"/>
+      <definition value="Additional narrative about the test that is not captured in other fields."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.testRequestDetails"/>
+      <short value="Test Request Details"/>
+      <definition value="Details concerning a single requested pathology test."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Element"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.testRequestDetails.testRequestedName"/>
+      <short value="Test Requested Name"/>
+      <definition value="Identification of the pathology test which was requested."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="example"/>
+        <description value="Set of values for the names of pathology tests requested or performed."/>
+      </binding>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.testRequestDetails.laboratoryTestResultIdentifier"/>
+      <short value="Laboratory Test Result Identifier"/>
+      <definition value="The identifier given to the laboratory test result of a pathology investigation."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Identifier"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.pathologyTestResult.observationDateTime"/>
+      <short value="Observation DateTime"/>
+      <definition value="Date, and optionally time, when an observation is clinically significant to the condition of the subject of the observation."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="dateTime"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.imagingExaminationResult"/>
+      <short value="Imaging Examination Result"/>
+      <definition value="The result of an imaging examination which may be used to record a single valued test but will often be specialised or templated to represent multiple value or &#39;panel&#39; tests."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Element"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.imagingExaminationResult.name"/>
+      <short value="Imaging Examination Result Name"/>
+      <definition value="Identification of the imaging examination or procedure performed, typically including modality and anatomical location (including laterality)."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="example"/>
+        <description value="A terminology for Examination Result name, potientially pre-coordinated terms specifying both modality and anatomical location. Possible candidate terminologies: LOINC, SNOMED CT or RadLex."/>
+      </binding>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.imagingExaminationResult.imagingModality"/>
+      <short value="Imaging Modality"/>
+      <definition value="The imaging method used to perform the examination."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="example"/>
+        <description value="Values of imaging method, e.g. Ultrasound, CT, X-ray."/>
+      </binding>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.imagingExaminationResult.anatomicalLocation"/>
+      <short value="Anatomical Location"/>
+      <definition value="Details about the anatomical locations to which this examination result refers."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Element"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.imagingExaminationResult.anatomicalLocation.specificLocation"/>
+      <short value="Specific Location"/>
+      <definition value="Specific and identified anatomical location."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Element"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.imagingExaminationResult.anatomicalLocation.specificLocation.anatomicalLocationName"/>
+      <short value="Anatomical Location Name"/>
+      <definition value="The name of the anatomical location."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="example"/>
+        <description value="The set of values for named anatomical locations."/>
+      </binding>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.imagingExaminationResult.anatomicalLocation.specificLocation.side"/>
+      <short value="Side"/>
+      <definition value="The laterality of the anatomical location."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="example"/>
+        <description value="The set of values for identifying the laterality of an anatomical location."/>
+      </binding>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.imagingExaminationResult.anatomicalLocation.description"/>
+      <short value="Anatomical Location Description"/>
+      <definition value="Description of the anatomical location."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.imagingExaminationResult.anatomicalLocation.image"/>
+      <short value="Anatomical Location Image"/>
+      <definition value="An image or images used to identify a location."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="base64Binary"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.imagingExaminationResult.status"/>
+      <short value="Imaging Examination Result Status"/>
+      <definition value="The status of the examination result as a whole."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <description value="Set of values for the imaging examination result status."/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/nehta-imaging-examination-result-stat"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.imagingExaminationResult.clinicalInformationProvided"/>
+      <short value="Clinical Information Provided"/>
+      <definition value="Description of clinical information available at the time of interpretation of results, or a link to the original clinical information provided in the examination request."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.imagingExaminationResult.findings"/>
+      <short value="Findings"/>
+      <definition value="Clinical assessment and opinion based on one or more observations and examinations."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.imagingExaminationResult.group"/>
+      <short value="Imaging Examination Result Group"/>
+      <definition value="A group of structured results."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Element"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.imagingExaminationResult.group.name"/>
+      <short value="Imaging Examination Result Group Name"/>
+      <definition value="The name of a group of structured results."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="example"/>
+        <description value="Results may be grouped by anatomical location or by some other name or code to describe what binds all the results together. If a name or code is used, it is provided by run-time re-naming of the &#39;Result group&#39; element or may be fixed in a specialised archetype or template. Should be coded with LOINC or SNOMED CT."/>
+      </binding>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.imagingExaminationResult.group.individualImagingExaminationResult"/>
+      <short value="Individual Imaging Examination Result"/>
+      <definition value="Specific detailed result of an imaging examination, including both the value of the result item and additional information that may be useful for clinical interpretation."/>
+      <min value="1"/>
+      <max value="*"/>
+      <type>
+        <code value="Element"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.imagingExaminationResult.group.individualImagingExaminationResult.name"/>
+      <short value="Individual Imaging Examination Result Name"/>
+      <definition value="The name of a specific detailed result."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="example"/>
+        <description value="A terminology for Examination Result name, potientially pre-coordinated terms specifying both modality and anatomical location. Possible candidate terminologies: LOINC, SNOMED CT or RadLex."/>
+      </binding>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.imagingExaminationResult.group.individualImagingExaminationResult.value"/>
+      <short value="Imaging Examination Result Value"/>
+      <definition value="Value of the result, with reference range information."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Element"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.imagingExaminationResult.group.individualImagingExaminationResult.value.value"/>
+      <short value="Imaging Examination Result Value"/>
+      <definition value="The actual value of the result."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="example"/>
+        <description value="Set of values for Pathology Test Result Value ."/>
+      </binding>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.imagingExaminationResult.group.individualImagingExaminationResult.value.referenceRangeDetails"/>
+      <short value="Reference Range Details"/>
+      <definition value="One or more reference ranges applicable to the Imaging Examination Result Value ."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Element"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.imagingExaminationResult.group.individualImagingExaminationResult.value.referenceRangeDetails.normalStatus"/>
+      <short value="Normal Status"/>
+      <definition value="An indication of the degree of diagnostically significant abnormality of the value, based on available clinical information (including but not limited to the reference range)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="example"/>
+      </binding>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.imagingExaminationResult.group.individualImagingExaminationResult.value.referenceRangeDetails.referenceRange"/>
+      <short value="Reference Range"/>
+      <definition value="A named range to be associated with any quantity datum."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Element"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.imagingExaminationResult.group.individualImagingExaminationResult.value.referenceRangeDetails.referenceRange.meaning"/>
+      <short value="Reference Range Meaning"/>
+      <definition value="Term whose value indicates the meaning of this range."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="example"/>
+      </binding>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.imagingExaminationResult.group.individualImagingExaminationResult.value.referenceRangeDetails.referenceRange.referenceRange"/>
+      <short value="Reference Range"/>
+      <definition value="The data range for the associated Reference Range Meaning data element ."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Range"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.imagingExaminationResult.group.individualImagingExaminationResult.resultComment"/>
+      <short value="Result Comment"/>
+      <definition value="May include statements about significant, unexpected or unreliable values, or information about the source of the value where this may be relevant to the interpretation of the result."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.imagingExaminationResult.group.anatomicalLocation"/>
+      <short value="Anatomical Location"/>
+      <definition value="Details about the individual anatomical location to which these result group examination results refer, where finer-grained representation of Anatomical Location is required."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Element"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.imagingExaminationResult.group.anatomicalLocation.specificLocation"/>
+      <short value="Specific Location"/>
+      <definition value="Specific and identified anatomical location."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Element"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.imagingExaminationResult.group.anatomicalLocation.specificLocation.anatomicalLocationName"/>
+      <short value="Anatomical Location Name"/>
+      <definition value="The name of the anatomical location."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="example"/>
+        <description value="The set of values for named anatomical locations."/>
+      </binding>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.imagingExaminationResult.group.anatomicalLocation.specificLocation.side"/>
+      <short value="Side"/>
+      <definition value="The laterality of the anatomical location."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="example"/>
+        <description value="The set of values for identifying the laterality of an anatomical location."/>
+      </binding>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.imagingExaminationResult.group.anatomicalLocation.description"/>
+      <short value="Anatomical Location Description"/>
+      <definition value="Description of the anatomical location."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.imagingExaminationResult.group.anatomicalLocation.image"/>
+      <short value="Anatomical Location Image"/>
+      <definition value="An image or images used to identify a location."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="base64Binary"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.imagingExaminationResult.representation"/>
+      <short value="Examination Result Representation"/>
+      <definition value="Rich text representation of the entire result as issued by the diagnostic service."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="base64Binary"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.imagingExaminationResult.examinationRequestDetails"/>
+      <short value="Examination Request Details"/>
+      <definition value="Details concerning a single requested examination."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Element"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.imagingExaminationResult.examinationRequestDetails.examinationRequestedName"/>
+      <short value="Examination Requested Name"/>
+      <definition value="Identification of the imaging examination which was requested."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.imagingExaminationResult.examinationRequestDetails.dICOMStudyIdentifier"/>
+      <short value="DICOM Study Identifier"/>
+      <definition value="Unique identifier of this study allocated by the imaging service."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Identifier"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.imagingExaminationResult.examinationRequestDetails.reportIdentifier"/>
+      <short value="Report Identifier"/>
+      <definition value="The local identifier given to the imaging examination report."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Identifier"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.imagingExaminationResult.examinationRequestDetails.imageDetails"/>
+      <short value="Image Details"/>
+      <definition value="Images referenced or provided to assist clinical understanding of the examination."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Element"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.imagingExaminationResult.examinationRequestDetails.imageDetails.imageIdentifier"/>
+      <short value="Image Identifier"/>
+      <definition value="Unique identifier of this image allocated by the imaging service."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Identifier"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.imagingExaminationResult.examinationRequestDetails.imageDetails.dICOMSeriesIdentifier"/>
+      <short value="DICOM Series Identifier"/>
+      <definition value="Unique identifier of this series allocated by the imaging service."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Identifier"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.imagingExaminationResult.examinationRequestDetails.imageDetails.imageViewName"/>
+      <short value="Image View Name"/>
+      <definition value="The name of the imaging view."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="example"/>
+        <description value="The set of values for the description of the view taken."/>
+      </binding>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.imagingExaminationResult.examinationRequestDetails.imageDetails.subjectPosition"/>
+      <short value="Subject Position"/>
+      <definition value="Description of the subject of care&#39;s position when the imaging examination was performed."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.imagingExaminationResult.examinationRequestDetails.imageDetails.imageDateTime"/>
+      <short value="Image DateTime"/>
+      <definition value="Date, and optionally time, the imaging examination was performed."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="dateTime"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.imagingExaminationResult.examinationRequestDetails.imageDetails.image"/>
+      <short value="Image"/>
+      <definition value="An attached or referenced image of a current view."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="base64Binary"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.imagingExaminationResult.observationDateTime"/>
+      <short value="Observation DateTime"/>
+      <definition value="Date, and optionally time, when an observation is clinically significant to the condition of the subject of the observation."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="dateTime"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.requestedService"/>
+      <short value="Requested Service"/>
+      <definition value="A request for a diagnostic investigation of the subject of care."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Element"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.requestedService.description"/>
+      <short value="Requested Service Description"/>
+      <definition value="Describes the service arranged for, or provided to, the subject of care."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="example"/>
+        <description value="The set of values for the service arranged for, or provided to, the patient."/>
+      </binding>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.requestedService.dateTimeServiceScheduled"/>
+      <short value="DateTime Service Scheduled"/>
+      <definition value="The date and, optionally, time at which the arranged service is scheduled to be provided to the subject of care."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="dateTime"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.requestedService.commencementWindow"/>
+      <short value="Service Commencement Window"/>
+      <definition value="The datetime or date range at or during which the arranged service is scheduled to be provided to the subject of care."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Period"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.requestedService.bookingStatus"/>
+      <short value="Service Booking Status"/>
+      <definition value="An indication of the booking status of the arranged service."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <description value="The set of values that indicate the booking status of the arranged service."/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/nehta-service-booking-status-values"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.requestedService.subjectofCareInstructionDescription"/>
+      <short value="Subject of Care Instruction Description"/>
+      <definition value="Describes the instructions, advice or information that has been given to the subject of care from a healthcare provider in relation to the requested service."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.requestedService.provider"/>
+      <short value="Service Provider"/>
+      <definition value="The provider (individual or organisation) that has been arranged to provide the service."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/Patient"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/Device"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
+      </type>
+    </element>
+    <element>
+      <path value="EventSummary.diagnosticInvestigations.requestedService.dateTime"/>
+      <short value="Requested Service DateTime"/>
+      <definition value="The point in time at which the Requested Service action is completed."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="dateTime"/>
+      </type>
+    </element>
+  </snapshot>
+</StructureDefinition>

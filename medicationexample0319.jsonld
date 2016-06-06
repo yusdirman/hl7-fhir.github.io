@@ -1,0 +1,167 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Medication",
+  "resourceType": "Medication",
+  "Resource.id": {
+    "value": "med0319"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: med0319</p><p><b>isBrand</b>: false</p><blockquote><p><b>product</b></p><p><b>form</b>: Ointment <span>(Details : {SNOMED CT code '385101003' = 'Ointment', given as 'Ointment'})</span></p><blockquote><p><b>ingredient</b></p><p><b>item</b>: Salicyclic Acid (substance) <span>(Details : {SNOMED CT code '387253001' = 'Salicylic acid (substance)', given as 'Salicyclic Acid (substance)'})</span></p><p><b>amount</b>: 5 g<span> (Details: http://unitsofmeasure.org code g = 'g')</span>/100 g<span> (Details: http://unitsofmeasure.org code g = 'g')</span></p></blockquote><blockquote><p><b>ingredient</b></p><p><b>item</b>: Salicyclic Acid (substance) <span>(Details : {SNOMED CT code '396458002' = 'Hydrocortisone (substance)', given as 'Salicyclic Acid (substance)'})</span></p><p><b>amount</b>: 1 g<span> (Details: http://unitsofmeasure.org code g = 'g')</span>/100 g<span> (Details: http://unitsofmeasure.org code g = 'g')</span></p></blockquote><blockquote><p><b>ingredient</b></p><p><b>item</b>: White Petrolatum (substance) <span>(Details : {SNOMED CT code '126066007' = 'White petroleum', given as 'White Petrolatum (substance)'})</span></p><p><b>amount</b>: 94 g<span> (Details: http://unitsofmeasure.org code g = 'g')</span>/100 g<span> (Details: http://unitsofmeasure.org code g = 'g')</span></p></blockquote></blockquote></div>"
+    }
+  },
+  "Medication.isBrand": {
+    "value": false
+  },
+  "Medication.product": {
+    "Medication.product.form": {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "value": "http://snomed.info/sct"
+          },
+          "Coding.code": {
+            "value": "385101003"
+          },
+          "Coding.display": {
+            "value": "Ointment"
+          }
+        }
+      ],
+      "CodeableConcept.text": {
+        "value": "Ointment"
+      },
+      "concept": "http://snomed.info/sct#385101003"
+    },
+    "Medication.product.ingredient": [
+      {
+        "Medication.product.ingredient.itemCodeableConcept": {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "value": "http://snomed.info/sct"
+              },
+              "Coding.code": {
+                "value": "387253001"
+              },
+              "Coding.display": {
+                "value": "Salicyclic Acid (substance)"
+              }
+            }
+          ],
+          "concept": "http://snomed.info/sct#387253001"
+        },
+        "Medication.product.ingredient.amount": {
+          "Ratio.numerator": {
+            "Quantity.value": {
+              "value": 5
+            },
+            "Quantity.system": {
+              "value": "http://unitsofmeasure.org"
+            },
+            "Quantity.code": {
+              "value": "g"
+            }
+          },
+          "Ratio.denominator": {
+            "Quantity.value": {
+              "value": 100
+            },
+            "Quantity.system": {
+              "value": "http://unitsofmeasure.org"
+            },
+            "Quantity.code": {
+              "value": "g"
+            }
+          }
+        }
+      },
+      {
+        "Medication.product.ingredient.itemCodeableConcept": {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "value": "http://snomed.info/sct"
+              },
+              "Coding.code": {
+                "value": "396458002"
+              },
+              "Coding.display": {
+                "value": "Salicyclic Acid (substance)"
+              }
+            }
+          ],
+          "concept": "http://snomed.info/sct#396458002"
+        },
+        "Medication.product.ingredient.amount": {
+          "Ratio.numerator": {
+            "Quantity.value": {
+              "value": 1
+            },
+            "Quantity.system": {
+              "value": "http://unitsofmeasure.org"
+            },
+            "Quantity.code": {
+              "value": "g"
+            }
+          },
+          "Ratio.denominator": {
+            "Quantity.value": {
+              "value": 100
+            },
+            "Quantity.system": {
+              "value": "http://unitsofmeasure.org"
+            },
+            "Quantity.code": {
+              "value": "g"
+            }
+          }
+        }
+      },
+      {
+        "Medication.product.ingredient.itemCodeableConcept": {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "value": "http://snomed.info/sct"
+              },
+              "Coding.code": {
+                "value": "126066007"
+              },
+              "Coding.display": {
+                "value": "White Petrolatum (substance)"
+              }
+            }
+          ],
+          "concept": "http://snomed.info/sct#126066007"
+        },
+        "Medication.product.ingredient.amount": {
+          "Ratio.numerator": {
+            "Quantity.value": {
+              "value": 94
+            },
+            "Quantity.system": {
+              "value": "http://unitsofmeasure.org"
+            },
+            "Quantity.code": {
+              "value": "g"
+            }
+          },
+          "Ratio.denominator": {
+            "Quantity.value": {
+              "value": 100
+            },
+            "Quantity.system": {
+              "value": "http://unitsofmeasure.org"
+            },
+            "Quantity.code": {
+              "value": "g"
+            }
+          }
+        }
+      }
+    ]
+  }
+}

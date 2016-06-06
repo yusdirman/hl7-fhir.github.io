@@ -1,0 +1,439 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/DataElement",
+  "resourceType": "DataElement",
+  "Resource.id": {
+    "value": "gender"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t\t\t<p>\n\t\t\t\t<b>Gender Code</b>: The code representing the gender of a person\n      \n      \n      \n      </p>\n\t\t\t<table>\n\t\t\t\t<tbody>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<th>Code</th>\n\t\t\t\t\t\t<th>Display</th>\n\t\t\t\t\t\t<th>Definition</th>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td>0</td>\n\t\t\t\t\t\t<td>Unknown</td>\n\t\t\t\t\t\t<td>Not known, not observed, not recorded, or refused.</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td>1</td>\n\t\t\t\t\t\t<td>Male</td>\n\t\t\t\t\t\t<td>A person who belongs to the sex that normally produces sperm. The term is used to indicate biological sex distinctions, cultural gender role distinctions, or both.</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td>2</td>\n\t\t\t\t\t\t<td>Female</td>\n\t\t\t\t\t\t<td>A person who belongs to the sex that normally produces ova. The term is used to indicate biological sex distinctions, or cultural gender role distinctions, or both.</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td>3</td>\n\t\t\t\t\t\t<td>Not specified</td>\n\t\t\t\t\t\t<td>Not specified</td>\n\t\t\t\t\t</tr>\n\t\t\t\t</tbody>\n\t\t\t</table>\n\t\t\t<ul>\n\t\t\t\t<li/>\n\t\t\t</ul>\n\t\t</div>"
+    }
+  },
+  "ValueSet": [
+    {
+      "Resource.id": {
+        "value": "2179414"
+      },
+      "ValueSet.url": {
+        "value": "http://example.org/2179414"
+      },
+      "ValueSet.version": {
+        "value": "1.0"
+      },
+      "ValueSet.name": {
+        "value": "Gender Code"
+      },
+      "ValueSet.status": {
+        "value": "active"
+      },
+      "ValueSet.description": {
+        "value": "All codes representing the gender of a person."
+      },
+      "ValueSet.compose": {
+        "ValueSet.compose.include": [
+          {
+            "ValueSet.compose.include.system": {
+              "value": "http://example.ncit.nci.nih.gov"
+            },
+            "ValueSet.compose.include.concept": [
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "C17998"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Unknown"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "C20197"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Male"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "C16576"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Female"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "C38046"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Not specified"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Resource.id": {
+        "value": "2179414-permitted-cs"
+      },
+      "CodeSystem.url": {
+        "value": "http://example.org/fhir/2179414"
+      },
+      "CodeSystem.status": {
+        "value": "active"
+      },
+      "CodeSystem.caseSensitive": {
+        "value": true
+      },
+      "CodeSystem.content": {
+        "value": "complete"
+      },
+      "CodeSystem.concept": [
+        {
+          "CodeSystem.concept.code": {
+            "value": "0"
+          }
+        },
+        {
+          "CodeSystem.concept.code": {
+            "value": "1"
+          }
+        },
+        {
+          "CodeSystem.concept.code": {
+            "value": "2"
+          }
+        },
+        {
+          "CodeSystem.concept.code": {
+            "value": "3"
+          }
+        }
+      ]
+    },
+    {
+      "Resource.id": {
+        "value": "2179414-permitted"
+      },
+      "ValueSet.status": {
+        "value": "active"
+      },
+      "ValueSet.compose": {
+        "ValueSet.compose.include": [
+          {
+            "ValueSet.compose.include.system": {
+              "value": "http://example.org/fhir/2179414"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "Resource.id": {
+        "value": "2179414-cm"
+      },
+      "ConceptMap.status": {
+        "value": "active"
+      },
+      "ConceptMap.sourceReference": {
+        "Reference.reference": {
+          "value": "#2179414"
+        }
+      },
+      "ConceptMap.targetReference": {
+        "Reference.reference": {
+          "value": "#2179414-permitted"
+        }
+      },
+      "ConceptMap.element": [
+        {
+          "ConceptMap.element.code": {
+            "value": "C17998"
+          },
+          "ConceptMap.element.target": [
+            {
+              "ConceptMap.element.target.code": {
+                "value": "0"
+              },
+              "ConceptMap.element.target.equivalence": {
+                "value": "equal"
+              }
+            }
+          ]
+        },
+        {
+          "ConceptMap.element.code": {
+            "value": "C20197"
+          },
+          "ConceptMap.element.target": [
+            {
+              "ConceptMap.element.target.code": {
+                "value": "1"
+              },
+              "ConceptMap.element.target.equivalence": {
+                "value": "equal"
+              }
+            }
+          ]
+        },
+        {
+          "ConceptMap.element.code": {
+            "value": "C16576"
+          },
+          "ConceptMap.element.target": [
+            {
+              "ConceptMap.element.target.code": {
+                "value": "2"
+              },
+              "ConceptMap.element.target.equivalence": {
+                "value": "equal"
+              }
+            }
+          ]
+        },
+        {
+          "ConceptMap.element.code": {
+            "value": "C38046"
+          },
+          "ConceptMap.element.target": [
+            {
+              "ConceptMap.element.target.code": {
+                "value": "3"
+              },
+              "ConceptMap.element.target.equivalence": {
+                "value": "equal"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "DataElement.identifier": [
+    {
+      "Identifier.value": {
+        "value": "2179650"
+      }
+    }
+  ],
+  "DataElement.version": {
+    "value": "1.0"
+  },
+  "DataElement.status": {
+    "value": "active"
+  },
+  "DataElement.publisher": {
+    "value": "DCP"
+  },
+  "DataElement.name": {
+    "value": "Gender Code"
+  },
+  "DataElement.useContext": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "value": "http://example.org/FBPP"
+          },
+          "Coding.display": {
+            "value": "FBPP Pooled Database"
+          }
+        },
+        {
+          "Coding.system": {
+            "value": "http://example.org/PhenX"
+          },
+          "Coding.display": {
+            "value": "Demographics"
+          }
+        },
+        {
+          "Coding.system": {
+            "value": "http://example.org/EligibilityCriteria"
+          },
+          "Coding.display": {
+            "value": "Pt. Administrative"
+          }
+        },
+        {
+          "Coding.system": {
+            "value": "http://example.org/UAMSClinicalResearch"
+          },
+          "Coding.display": {
+            "value": "UAMS New CDEs"
+          }
+        },
+        {
+          "Coding.system": {
+            "value": "http://example.org/PhenX"
+          },
+          "Coding.display": {
+            "value": "Substance Abuse and "
+          }
+        },
+        {
+          "Coding.system": {
+            "value": "http://example.org/Category"
+          },
+          "Coding.display": {
+            "value": "CSAERS Adverse Event"
+          }
+        },
+        {
+          "Coding.system": {
+            "value": "http://example.org/PhenX"
+          },
+          "Coding.display": {
+            "value": "Core: Tier 1"
+          }
+        },
+        {
+          "Coding.system": {
+            "value": "http://example.org/Category"
+          },
+          "Coding.display": {
+            "value": "Case Report Forms"
+          }
+        },
+        {
+          "Coding.system": {
+            "value": "http://example.org/Category"
+          },
+          "Coding.display": {
+            "value": "CSAERS Review Set"
+          }
+        },
+        {
+          "Coding.system": {
+            "value": "http://example.org/Demonstration%20Applications"
+          },
+          "Coding.display": {
+            "value": "CIAF"
+          }
+        },
+        {
+          "Coding.system": {
+            "value": "http://example.org/NIDA%20CTN%20Usage"
+          },
+          "Coding.display": {
+            "value": "Clinical Research"
+          }
+        },
+        {
+          "Coding.system": {
+            "value": "http://example.org/NIDA%20CTN%20Usage"
+          },
+          "Coding.display": {
+            "value": "Electronic Health Re"
+          }
+        },
+        {
+          "Coding.system": {
+            "value": "http://example.org/Condition"
+          },
+          "Coding.display": {
+            "value": "Barretts Esophagus"
+          }
+        },
+        {
+          "Coding.system": {
+            "value": "http://example.org/Condition"
+          },
+          "Coding.display": {
+            "value": "Bladder Cancer"
+          }
+        },
+        {
+          "Coding.system": {
+            "value": "http://example.org/Condition"
+          },
+          "Coding.display": {
+            "value": "Oral Leukoplakia"
+          }
+        },
+        {
+          "Coding.system": {
+            "value": "http://example.org/Condition"
+          },
+          "Coding.display": {
+            "value": "Sulindac for Breast"
+          }
+        }
+      ]
+    }
+  ],
+  "DataElement.element": [
+    {
+      "Element.extension": [
+        {
+          "Extension.url": {
+            "value": "http://hl7.org/fhir/StructureDefinition/minLength"
+          },
+          "Extension.valueInteger": {
+            "value": 1
+          }
+        },
+        {
+          "Extension.url": {
+            "value": "http://hl7.org/fhir/StructureDefinition/elementdefinition-question"
+          },
+          "Extension.valueString": {
+            "value": "Gender"
+          }
+        }
+      ],
+      "ElementDefinition.path": {
+        "value": "Gender"
+      },
+      "ElementDefinition.definition": {
+        "value": "The code representing the gender of a person."
+      },
+      "ElementDefinition.type": [
+        {
+          "ElementDefinition.type.code": {
+            "value": "CodeableConcept"
+          }
+        }
+      ],
+      "ElementDefinition.maxLength": {
+        "value": 13
+      },
+      "ElementDefinition.binding": {
+        "ElementDefinition.binding.strength": {
+          "value": "required"
+        },
+        "ElementDefinition.binding.valueSetReference": {
+          "Element.extension": [
+            {
+              "Extension.url": {
+                "value": "http://hl7.org/fhir/StructureDefinition/11179-permitted-value-valueset"
+              },
+              "Extension.valueReference": {
+                "Reference.reference": {
+                  "value": "#2179414-permitted"
+                }
+              }
+            },
+            {
+              "Extension.url": {
+                "value": "http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap"
+              },
+              "Extension.valueReference": {
+                "Reference.reference": {
+                  "value": "#2179414-cm"
+                }
+              }
+            }
+          ],
+          "Reference.reference": {
+            "value": "#2179414"
+          }
+        }
+      }
+    }
+  ]
+}

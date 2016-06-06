@@ -1,0 +1,63 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/MedicationOrdermedrx008> a fhir:MedicationOrder;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "medrx008"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>Name: Gentamicin 80mg/100ml IV</p>\n      <p><b>80mg IV over one hour</b></p>\n    </div>"
+  ];
+  fhir:MedicationOrder.status [ fhir:value "active"];
+  fhir:MedicationOrder.medicationReference [
+     fhir:link <http://hl7.org/fhir/Medication/medicationexample17>;
+     fhir:Reference.reference [ fhir:value "Medication/medicationexample17" ]
+  ];
+  fhir:MedicationOrder.dosageInstruction [
+     fhir:index 0;
+     fhir:MedicationOrder.dosageInstruction.text [ fhir:value "Gentamicin 80mg IV over one hour" ];
+     fhir:MedicationOrder.dosageInstruction.timing [
+       fhir:Timing.repeat [
+         fhir:Timing.repeat.frequency [ fhir:value "3"^^xsd:int ];
+         fhir:Timing.repeat.period [ fhir:value "1"^^xsd:decimal ];
+         fhir:Timing.repeat.periodUnit [ fhir:value "d" ]
+       ]
+     ];
+     fhir:MedicationOrder.dosageInstruction.route [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept sct:47625008;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "47625008" ];
+         fhir:Coding.display [ fhir:value "Intravenous route" ]
+       ]
+     ];
+     fhir:MedicationOrder.dosageInstruction.doseQuantity [
+       fhir:Quantity.value [ fhir:value "80"^^xsd:decimal ];
+       fhir:Quantity.unit [ fhir:value "mg" ];
+       fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+       fhir:Quantity.code [ fhir:value "mg" ]
+     ];
+     fhir:MedicationOrder.dosageInstruction.rateRatio [
+       fhir:Ratio.numerator [
+         fhir:Quantity.value [ fhir:value "80"^^xsd:decimal ];
+         fhir:Quantity.unit [ fhir:value "mg" ];
+         fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+         fhir:Quantity.code [ fhir:value "mg" ]
+       ];
+       fhir:Ratio.denominator [
+         fhir:Quantity.value [ fhir:value "60"^^xsd:decimal ];
+         fhir:Quantity.unit [ fhir:value "minutes" ];
+         fhir:Quantity.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Quantity.code [ fhir:value "258702006" ]
+       ]
+     ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

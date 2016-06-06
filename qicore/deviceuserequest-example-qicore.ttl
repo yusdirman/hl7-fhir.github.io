@@ -1,0 +1,38 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/DeviceUseRequestdeviceuserequest-example-qicore> a fhir:DeviceUseRequest;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "deviceuserequest-example-qicore"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">To be filled out at a later time</div>"
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/deviceuserequest-reasonRejected" ];
+     fhir:Extension.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v3/ActReason" ];
+         fhir:Coding.code [ fhir:value "MEDPREC" ];
+         fhir:Coding.display [ fhir:value "medical precaution" ]
+       ]
+     ]
+  ];
+  fhir:DeviceUseRequest.status [ fhir:value "rejected"];
+  fhir:DeviceUseRequest.device [
+     fhir:link <http://hl7.org/fhir/Device/example>;
+     fhir:Reference.reference [ fhir:value "Device/example" ]
+  ];
+  fhir:DeviceUseRequest.subject [
+     fhir:link <http://hl7.org/fhir/Patient/example>;
+     fhir:Reference.reference [ fhir:value "Patient/example" ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

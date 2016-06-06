@@ -1,0 +1,154 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Claim",
+  "resourceType": "Claim",
+  "Resource.id": {
+    "value": "100154"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">This example assumes a national health care scheme where patients, providers and organizations have known business identifiers.</div>"
+    }
+  },
+  "Claim.type": {
+    "value": "oral"
+  },
+  "Claim.identifier": [
+    {
+      "Identifier.system": {
+        "value": "http://happyvalley.com/claim"
+      },
+      "Identifier.value": {
+        "value": "12347"
+      }
+    }
+  ],
+  "Claim.created": {
+    "value": "2014-08-16"
+  },
+  "Claim.targetIdentifier": {
+    "Identifier.system": {
+      "value": "http://www.jurisdiction.com/insurers"
+    },
+    "Identifier.value": {
+      "value": "123456"
+    }
+  },
+  "Claim.organizationIdentifier": {
+    "Identifier.system": {
+      "value": "http://www.jurisdiction.com/careorganizations"
+    },
+    "Identifier.value": {
+      "value": "HOSP12345"
+    }
+  },
+  "Claim.use": {
+    "value": "complete"
+  },
+  "Claim.priority": {
+    "Coding.code": {
+      "value": "normal"
+    }
+  },
+  "Claim.payee": {
+    "Claim.payee.type": {
+      "Coding.code": {
+        "value": "provider"
+      }
+    }
+  },
+  "Claim.diagnosis": [
+    {
+      "Claim.diagnosis.sequence": {
+        "value": 1
+      },
+      "Claim.diagnosis.diagnosis": {
+        "Coding.code": {
+          "value": "123456"
+        }
+      }
+    }
+  ],
+  "Claim.patientIdentifier": {
+    "Identifier.system": {
+      "value": "http://www.jurisdiction.com/nationalId"
+    },
+    "Identifier.value": {
+      "value": "123AB345"
+    }
+  },
+  "Claim.coverage": [
+    {
+      "Claim.coverage.sequence": {
+        "value": 1
+      },
+      "Claim.coverage.focal": {
+        "value": true
+      },
+      "Claim.coverage.coverageIdentifier": {
+        "Identifier.system": {
+          "value": "http://www.jurisdiction.com/nationalplan"
+        },
+        "Identifier.value": {
+          "value": "123AB345"
+        }
+      }
+    }
+  ],
+  "Claim.item": [
+    {
+      "Claim.item.sequence": {
+        "value": 1
+      },
+      "Claim.item.type": {
+        "Coding.code": {
+          "value": "service"
+        }
+      },
+      "Claim.item.careTeam": [
+        {
+          "Claim.item.careTeam.providerIdentifier": {
+            "Identifier.system": {
+              "value": "http://www.jurisdiction.com/providerId"
+            },
+            "Identifier.value": {
+              "value": "MD98765"
+            }
+          }
+        }
+      ],
+      "Claim.item.service": {
+        "Coding.code": {
+          "value": "1200"
+        }
+      },
+      "Claim.item.servicedDate": {
+        "value": "2014-08-16"
+      },
+      "Claim.item.unitPrice": {
+        "Quantity.value": {
+          "value": 135.57
+        },
+        "Quantity.system": {
+          "value": "urn:iso:std:iso:4217"
+        },
+        "Quantity.code": {
+          "value": "USD"
+        }
+      },
+      "Claim.item.net": {
+        "Quantity.value": {
+          "value": 135.57
+        },
+        "Quantity.system": {
+          "value": "urn:iso:std:iso:4217"
+        },
+        "Quantity.code": {
+          "value": "USD"
+        }
+      }
+    }
+  ]
+}

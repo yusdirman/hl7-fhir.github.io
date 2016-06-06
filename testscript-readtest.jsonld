@@ -1,0 +1,269 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/TestScript",
+  "resourceType": "TestScript",
+  "Resource.id": {
+    "value": "ReadTestScript"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: ReadTestScript</p><p><b>name</b>: ReadTestScript</p><p><b>description</b>: TestScript for Sprinkler tests (R001, R002, R003, R004) for testing basic READ requests.</p><h3>Fixtures</h3><table><tr><td>-</td><td><b>Resource</b></td></tr><tr><td>*</td><td><a>Patient resource</a></td></tr></table><blockquote><p><b>setup</b></p><blockquote><p><b>action</b></p><h3>Operations</h3><table><tr><td>-</td><td><b>Type</b></td><td><b>SourceId</b></td></tr><tr><td>*</td><td>create</td><td>F1</td></tr></table></blockquote></blockquote><blockquote><p><b>test</b></p><p><b>name</b>: Get Test Data Person</p><p><b>description</b>: Result headers on normal read.</p><blockquote><p><b>metadata</b></p><h3>Links</h3><table><tr><td>-</td><td><b>Url</b></td><td><b>Description</b></td></tr><tr><td>*</td><td><a>http://hl7.org/implement/standards/FHIR-Develop/patient.html</a></td><td>FHIR Patient</td></tr></table><blockquote><p><b>operation</b></p><p><b>type</b>: create</p><p><b>resource</b>: Patient</p><p><b>description</b>: Patient Create Operation</p><p><b>link</b>: <a>http://hl7.org/implement/standards/FHIR-Develop/http.html#create</a></p><p><b>required</b>: true</p></blockquote><blockquote><p><b>operation</b></p><p><b>type</b>: read</p><p><b>resource</b>: Patient</p><p><b>description</b>: Patient Read Operation</p><p><b>link</b>: <a>http://hl7.org/implement/standards/FHIR-Develop/http.html#read</a></p><p><b>required</b>: true</p></blockquote><blockquote><p><b>operation</b></p><p><b>type</b>: delete</p><p><b>resource</b>: Patient</p><p><b>description</b>: Patient Delete Operation</p><p><b>link</b>: <a>http://hl7.org/implement/standards/FHIR-Develop/http.html#delete</a></p><p><b>required</b>: true</p></blockquote><blockquote><p><b>operation</b></p><p><b>type</b>: update</p><p><b>resource</b>: Patient</p><p><b>description</b>: Patient Update Operation</p><p><b>link</b>: <a>http://hl7.org/implement/standards/FHIR-Develop/http.html#update</a></p><p><b>required</b>: true</p></blockquote></blockquote><blockquote><p><b>action</b></p><h3>Operations</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote></blockquote><blockquote><p><b>test</b></p><p><b>name</b>: Try Read Unknown Resource Type</p><p><b>description</b>: Read unknown resource type</p><blockquote><p><b>metadata</b></p><h3>Operations</h3><table><tr><td>-</td><td><b>Type</b></td><td><b>Resource</b></td><td><b>Description</b></td><td><b>Link</b></td><td><b>Required</b></td><td><b>Validated</b></td></tr><tr><td>*</td><td>read</td><td>Patient</td><td>Patient Read Operation</td><td><a>http://hl7.org/implement/standards/FHIR-Develop/http.html#read</a></td><td>true</td><td>true</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Operations</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote></blockquote><blockquote><p><b>test</b></p><p><b>name</b>: Try Read Non Existing Resource</p><p><b>description</b>: Read non-existing resource id</p><blockquote><p><b>metadata</b></p><h3>Operations</h3><table><tr><td>-</td><td><b>Type</b></td><td><b>Resource</b></td><td><b>Description</b></td><td><b>Link</b></td><td><b>Required</b></td><td><b>Validated</b></td></tr><tr><td>*</td><td>read</td><td>Patient</td><td>Patient Read Operation</td><td><a>http://hl7.org/implement/standards/FHIR-Develop/http.html#read</a></td><td>true</td><td>true</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Operations</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote></blockquote><blockquote><p><b>test</b></p><p><b>name</b>: Try Read Bad Formatted Resource Id</p><p><b>description</b>: Read bad formatted resource id</p><blockquote><p><b>metadata</b></p><h3>Operations</h3><table><tr><td>-</td><td><b>Type</b></td><td><b>Resource</b></td><td><b>Description</b></td><td><b>Link</b></td><td><b>Required</b></td><td><b>Validated</b></td></tr><tr><td>*</td><td>read</td><td>Patient</td><td>Patient Read Operation</td><td><a>http://hl7.org/implement/standards/FHIR-Develop/http.html#read</a></td><td>true</td><td>true</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Operations</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote></blockquote><blockquote><p><b>teardown</b></p><blockquote><p><b>action</b></p><h3>Operations</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote></blockquote></div>"
+    }
+  },
+  "TestScript.url": {
+    "value": "http://hl7.org/fhir/TestScript/multiserver"
+  },
+  "TestScript.name": {
+    "value": "ReadTestScript"
+  },
+  "TestScript.status": {
+    "value": "draft"
+  },
+  "TestScript.description": {
+    "value": "TestScript for Sprinkler tests (R001, R002, R003, R004) for testing basic READ requests."
+  },
+  "TestScript.metadata": {
+    "TestScript.metadata.capability": [
+      {
+        "TestScript.metadata.capability.required": {
+          "value": true
+        },
+        "TestScript.metadata.capability.validated": {
+          "value": true
+        },
+        "TestScript.metadata.capability.description": {
+          "value": "Patient Create, Read, Update, and Delete Operations"
+        },
+        "TestScript.metadata.capability.link": [
+          {
+            "value": "http://hl7.org/implement/standards/FHIR-Develop/http.html#create"
+          },
+          {
+            "value": "http://hl7.org/implement/standards/FHIR-Develop/http.html#read"
+          },
+          {
+            "value": "http://hl7.org/implement/standards/FHIR-Develop/http.html#update"
+          },
+          {
+            "value": "http://hl7.org/implement/standards/FHIR-Develop/http.html#delete"
+          }
+        ],
+        "TestScript.metadata.capability.conformance": {
+          "Reference.reference": {
+            "value": "Conformance/example"
+          },
+          "reference": "http://hl7.org/fhir//Conformance/example"
+        }
+      }
+    ]
+  },
+  "TestScript.fixture": [
+    {
+      "Element.id": {
+        "value": "F1"
+      },
+      "TestScript.fixture.resource": {
+        "Reference.reference": {
+          "value": "Patient/example"
+        },
+        "Reference.display": {
+          "value": "Patient resource"
+        },
+        "reference": "http://hl7.org/fhir//Patient/example"
+      }
+    }
+  ],
+  "TestScript.setup": {
+    "TestScript.setup.action": [
+      {
+        "TestScript.setup.action.operation": {
+          "TestScript.setup.action.operation.type": {
+            "Coding.code": {
+              "value": "create"
+            }
+          },
+          "TestScript.setup.action.operation.sourceId": {
+            "value": "F1"
+          }
+        }
+      }
+    ]
+  },
+  "TestScript.test": [
+    {
+      "Element.id": {
+        "value": "R001"
+      },
+      "TestScript.test.name": {
+        "value": "Get Test Data Person"
+      },
+      "TestScript.test.description": {
+        "value": "Result headers on normal read."
+      },
+      "TestScript.test.action": [
+        {
+          "TestScript.test.action.operation": {
+            "TestScript.setup.action.operation.type": {
+              "Coding.code": {
+                "value": "read"
+              }
+            },
+            "TestScript.setup.action.operation.accept": {
+              "value": "xml"
+            },
+            "TestScript.setup.action.operation.targetId": {
+              "value": "F1"
+            }
+          }
+        },
+        {
+          "TestScript.test.action.assert": {
+            "TestScript.setup.action.assert.response": {
+              "value": "okay"
+            }
+          }
+        },
+        {
+          "TestScript.test.action.assert": {
+            "TestScript.setup.action.assert.contentType": {
+              "value": "xml"
+            }
+          }
+        },
+        {
+          "TestScript.test.action.assert": {
+            "TestScript.setup.action.assert.headerField": {
+              "value": "Last-Modified"
+            },
+            "TestScript.setup.action.assert.operator": {
+              "value": "notEmpty"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Element.id": {
+        "value": "R002"
+      },
+      "TestScript.test.name": {
+        "value": "Try Read Unknown Resource Type"
+      },
+      "TestScript.test.description": {
+        "value": "Read unknown resource type"
+      },
+      "TestScript.test.action": [
+        {
+          "TestScript.test.action.operation": {
+            "TestScript.setup.action.operation.type": {
+              "Coding.code": {
+                "value": "read"
+              }
+            },
+            "TestScript.setup.action.operation.resource": {
+              "value": "Parameters"
+            },
+            "TestScript.setup.action.operation.params": {
+              "value": "/1"
+            }
+          }
+        },
+        {
+          "TestScript.test.action.assert": {
+            "TestScript.setup.action.assert.response": {
+              "value": "notFound"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Element.id": {
+        "value": "R003"
+      },
+      "TestScript.test.name": {
+        "value": "Try Read Non Existing Resource"
+      },
+      "TestScript.test.description": {
+        "value": "Read non-existing resource id"
+      },
+      "TestScript.test.action": [
+        {
+          "TestScript.test.action.operation": {
+            "TestScript.setup.action.operation.type": {
+              "Coding.code": {
+                "value": "read"
+              }
+            },
+            "TestScript.setup.action.operation.resource": {
+              "value": "Patient"
+            },
+            "TestScript.setup.action.operation.params": {
+              "value": "/3141592unlikely"
+            }
+          }
+        },
+        {
+          "TestScript.test.action.assert": {
+            "TestScript.setup.action.assert.response": {
+              "value": "notFound"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Element.id": {
+        "value": "R004"
+      },
+      "TestScript.test.name": {
+        "value": "Try Read Bad Formatted Resource Id"
+      },
+      "TestScript.test.description": {
+        "value": "Read bad formatted resource id"
+      },
+      "TestScript.test.action": [
+        {
+          "TestScript.test.action.operation": {
+            "TestScript.setup.action.operation.type": {
+              "Coding.code": {
+                "value": "read"
+              }
+            },
+            "TestScript.setup.action.operation.resource": {
+              "value": "Patient"
+            },
+            "TestScript.setup.action.operation.params": {
+              "value": "/ID-may-not-contain-CAPITALS"
+            }
+          }
+        },
+        {
+          "TestScript.test.action.assert": {
+            "TestScript.setup.action.assert.response": {
+              "value": "bad"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "TestScript.teardown": {
+    "TestScript.teardown.action": [
+      {
+        "TestScript.teardown.action.operation": {
+          "TestScript.setup.action.operation.type": {
+            "Coding.code": {
+              "value": "delete"
+            }
+          },
+          "TestScript.setup.action.operation.targetId": {
+            "value": "F1"
+          }
+        }
+      }
+    ]
+  }
+}

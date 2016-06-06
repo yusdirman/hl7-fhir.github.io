@@ -1,0 +1,608 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Questionnaire",
+  "resourceType": "Questionnaire",
+  "Resource.id": {
+    "value": "questionnaire-sdc-profile-example-cap"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: questionnaire-sdc-profile-example-cap</p><p><b>url</b>: <a>http://hl7.org/fhir/Questionnaire/questionnaire-sdc-profile-example-cap</a></p><p><b>status</b>: published</p><p><b>title</b>: (Ask Richard)</p><blockquote><p><b>item</b></p><p><b>linkId</b>: 1</p><p><b>text</b>: MARGINS</p><p><b>type</b>: group</p><p><b>required</b>: true</p><h3>Items</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: 2</p><p><b>text</b>: ACCESSORY FINDINGS</p><p><b>type</b>: group</p><p><b>required</b>: true</p><h3>Items</h3><table><tr><td>-</td></tr><tr><td>*</td></tr><tr><td>*</td></tr></table></blockquote></div>"
+    }
+  },
+  "Questionnaire.url": {
+    "value": "http://hl7.org/fhir/Questionnaire/questionnaire-sdc-profile-example-cap"
+  },
+  "Questionnaire.status": {
+    "value": "published"
+  },
+  "Questionnaire.title": {
+    "value": "(Ask Richard)"
+  },
+  "Questionnaire.item": [
+    {
+      "Questionnaire.item.linkId": {
+        "value": "1"
+      },
+      "Questionnaire.item.text": {
+        "value": "MARGINS"
+      },
+      "Questionnaire.item.type": {
+        "value": "group"
+      },
+      "Questionnaire.item.required": {
+        "value": true
+      },
+      "Questionnaire.item.item": [
+        {
+          "Questionnaire.item.linkId": {
+            "value": "1.1"
+          },
+          "Questionnaire.item.text": {
+            "value": "Status of surgical margin involvement by tumor (observable entity)"
+          },
+          "Questionnaire.item.type": {
+            "value": "choice"
+          },
+          "Questionnaire.item.required": {
+            "value": true
+          },
+          "Questionnaire.item.option": [
+            {
+              "Questionnaire.item.option.valueCoding": {
+                "Coding.code": {
+                  "value": "M1"
+                },
+                "Coding.display": {
+                  "value": "Margins univolved by tumor"
+                }
+              }
+            },
+            {
+              "Questionnaire.item.option.valueCoding": {
+                "Coding.code": {
+                  "value": "M2"
+                },
+                "Coding.display": {
+                  "value": "Margin(s) involved by tumor"
+                }
+              }
+            },
+            {
+              "Questionnaire.item.option.valueCoding": {
+                "Coding.code": {
+                  "value": "M3"
+                },
+                "Coding.display": {
+                  "value": "Cannot be determined"
+                }
+              }
+            },
+            {
+              "Questionnaire.item.option.valueCoding": {
+                "Coding.code": {
+                  "value": "M4"
+                },
+                "Coding.display": {
+                  "value": "Not applicable"
+                }
+              }
+            }
+          ],
+          "Questionnaire.item.item": [
+            {
+              "Questionnaire.item.linkId": {
+                "value": "1.1.1"
+              },
+              "Questionnaire.item.type": {
+                "value": "group"
+              },
+              "Questionnaire.item.enableWhen": [
+                {
+                  "Questionnaire.item.enableWhen.question": {
+                    "value": "1.1"
+                  },
+                  "Questionnaire.item.enableWhen.answerCoding": {
+                    "Coding.code": {
+                      "value": "M1"
+                    }
+                  }
+                }
+              ],
+              "Questionnaire.item.required": {
+                "value": true
+              },
+              "Questionnaire.item.item": [
+                {
+                  "Questionnaire.item.linkId": {
+                    "value": "1.1.1.1"
+                  },
+                  "Questionnaire.item.text": {
+                    "value": "Distance from Closest Margin"
+                  },
+                  "Questionnaire.item.type": {
+                    "value": "choice"
+                  },
+                  "Questionnaire.item.option": [
+                    {
+                      "Questionnaire.item.option.valueCoding": {
+                        "Coding.code": {
+                          "value": "D1"
+                        },
+                        "Coding.display": {
+                          "value": "Specify (mm)"
+                        }
+                      }
+                    },
+                    {
+                      "Questionnaire.item.option.valueCoding": {
+                        "Coding.code": {
+                          "value": "D2"
+                        },
+                        "Coding.display": {
+                          "value": "Cannot be assessed (explain)"
+                        }
+                      }
+                    }
+                  ],
+                  "Questionnaire.item.item": [
+                    {
+                      "Element.extension": [
+                        {
+                          "Extension.url": {
+                            "value": "http://hl7.org/fhir/StructureDefinition/minValue"
+                          },
+                          "Extension.valueDecimal": {
+                            "value": 0.01
+                          }
+                        },
+                        {
+                          "Extension.url": {
+                            "value": "http://hl7.org/fhir/StructureDefinition/maxValue"
+                          },
+                          "Extension.valueDecimal": {
+                            "value": 1000
+                          }
+                        },
+                        {
+                          "Extension.url": {
+                            "value": "http://hl7.org/fhir/StructureDefinition/maxDecimalPlaces"
+                          },
+                          "Extension.valueInteger": {
+                            "value": 2
+                          }
+                        }
+                      ],
+                      "Questionnaire.item.linkId": {
+                        "value": "1.1.1.1.1.1"
+                      },
+                      "Questionnaire.item.text": {
+                        "value": "Specify (mm)"
+                      },
+                      "Questionnaire.item.type": {
+                        "value": "decimal"
+                      },
+                      "Questionnaire.item.required": {
+                        "value": true
+                      }
+                    },
+                    {
+                      "Questionnaire.item.linkId": {
+                        "value": "1.1.1.1.2.1"
+                      },
+                      "Questionnaire.item.text": {
+                        "value": "Cannot be assessed (explain)"
+                      },
+                      "Questionnaire.item.type": {
+                        "value": "string"
+                      },
+                      "Questionnaire.item.required": {
+                        "value": true
+                      }
+                    }
+                  ]
+                },
+                {
+                  "Questionnaire.item.linkId": {
+                    "value": "1.1.1.2"
+                  },
+                  "Questionnaire.item.text": {
+                    "value": "Specify Margin, if possible"
+                  },
+                  "Questionnaire.item.type": {
+                    "value": "choice"
+                  },
+                  "Questionnaire.item.option": [
+                    {
+                      "Questionnaire.item.option.valueCoding": {
+                        "Coding.code": {
+                          "value": "W1"
+                        },
+                        "Coding.display": {
+                          "value": "Specify margin"
+                        }
+                      }
+                    },
+                    {
+                      "Questionnaire.item.option.valueCoding": {
+                        "Coding.code": {
+                          "value": "W2"
+                        },
+                        "Coding.display": {
+                          "value": "Cannot be determined (explain)"
+                        }
+                      }
+                    }
+                  ],
+                  "Questionnaire.item.item": [
+                    {
+                      "Questionnaire.item.linkId": {
+                        "value": "1.1.1.2.1.1"
+                      },
+                      "Questionnaire.item.text": {
+                        "value": "Specify margin"
+                      },
+                      "Questionnaire.item.type": {
+                        "value": "string"
+                      },
+                      "Questionnaire.item.required": {
+                        "value": true
+                      }
+                    },
+                    {
+                      "Questionnaire.item.linkId": {
+                        "value": "1.1.1.2.2.1"
+                      },
+                      "Questionnaire.item.text": {
+                        "value": "Cannot be determined (explain)"
+                      },
+                      "Questionnaire.item.type": {
+                        "value": "string"
+                      },
+                      "Questionnaire.item.required": {
+                        "value": true
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "Questionnaire.item.linkId": {
+                "value": "1.1.2.1"
+              },
+              "Questionnaire.item.text": {
+                "value": "Specify Margin(s), if possible"
+              },
+              "Questionnaire.item.type": {
+                "value": "choice"
+              },
+              "Questionnaire.item.required": {
+                "value": true
+              },
+              "Questionnaire.item.option": [
+                {
+                  "Questionnaire.item.option.valueCoding": {
+                    "Coding.code": {
+                      "value": "I1"
+                    },
+                    "Coding.display": {
+                      "value": "Specify margin(s)"
+                    }
+                  }
+                },
+                {
+                  "Questionnaire.item.option.valueCoding": {
+                    "Coding.code": {
+                      "value": "I2"
+                    },
+                    "Coding.display": {
+                      "value": "Cannot be determined (explain)"
+                    }
+                  }
+                }
+              ],
+              "Questionnaire.item.item": [
+                {
+                  "Questionnaire.item.linkId": {
+                    "value": "1.1.2.1.1.1"
+                  },
+                  "Questionnaire.item.text": {
+                    "value": "Specify margin(s)"
+                  },
+                  "Questionnaire.item.type": {
+                    "value": "string"
+                  },
+                  "Questionnaire.item.required": {
+                    "value": true
+                  }
+                },
+                {
+                  "Questionnaire.item.linkId": {
+                    "value": "1.1.2.1.2.1"
+                  },
+                  "Questionnaire.item.text": {
+                    "value": "Cannot be determined (explain)"
+                  },
+                  "Questionnaire.item.type": {
+                    "value": "string"
+                  },
+                  "Questionnaire.item.required": {
+                    "value": true
+                  }
+                }
+              ]
+            },
+            {
+              "Questionnaire.item.linkId": {
+                "value": "1.1.3.1"
+              },
+              "Questionnaire.item.text": {
+                "value": "Cannot be determined"
+              },
+              "Questionnaire.item.type": {
+                "value": "string"
+              },
+              "Questionnaire.item.required": {
+                "value": true
+              }
+            },
+            {
+              "Questionnaire.item.linkId": {
+                "value": "1.1.4.1"
+              },
+              "Questionnaire.item.text": {
+                "value": "Not Applicable"
+              },
+              "Questionnaire.item.type": {
+                "value": "string"
+              },
+              "Questionnaire.item.required": {
+                "value": true
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Questionnaire.item.linkId": {
+        "value": "2"
+      },
+      "Questionnaire.item.text": {
+        "value": "ACCESSORY FINDINGS"
+      },
+      "Questionnaire.item.type": {
+        "value": "group"
+      },
+      "Questionnaire.item.required": {
+        "value": true
+      },
+      "Questionnaire.item.item": [
+        {
+          "Questionnaire.item.linkId": {
+            "value": "2.1"
+          },
+          "Questionnaire.item.text": {
+            "value": "Treatment Effect (applicable to carcinomas treated with neoadjuvant therapy)"
+          },
+          "Questionnaire.item.type": {
+            "value": "choice"
+          },
+          "Questionnaire.item.option": [
+            {
+              "Questionnaire.item.option.valueCoding": {
+                "Coding.code": {
+                  "value": "E1"
+                },
+                "Coding.display": {
+                  "value": "Not identified"
+                }
+              }
+            },
+            {
+              "Questionnaire.item.option.valueCoding": {
+                "Coding.code": {
+                  "value": "E2"
+                },
+                "Coding.display": {
+                  "value": "Present (specify)"
+                }
+              }
+            },
+            {
+              "Questionnaire.item.option.valueCoding": {
+                "Coding.code": {
+                  "value": "E3"
+                },
+                "Coding.display": {
+                  "value": "Indeterminate"
+                }
+              }
+            }
+          ],
+          "Questionnaire.item.item": [
+            {
+              "Questionnaire.item.linkId": {
+                "value": "2.1.1.1"
+              },
+              "Questionnaire.item.text": {
+                "value": "Not identified"
+              },
+              "Questionnaire.item.type": {
+                "value": "string"
+              },
+              "Questionnaire.item.required": {
+                "value": true
+              }
+            },
+            {
+              "Questionnaire.item.linkId": {
+                "value": "2.1.2.1"
+              },
+              "Questionnaire.item.text": {
+                "value": "Present (specify)"
+              },
+              "Questionnaire.item.type": {
+                "value": "string"
+              },
+              "Questionnaire.item.required": {
+                "value": true
+              }
+            },
+            {
+              "Questionnaire.item.linkId": {
+                "value": "2.1.3.1"
+              },
+              "Questionnaire.item.text": {
+                "value": "Indeterminate"
+              },
+              "Questionnaire.item.type": {
+                "value": "string"
+              },
+              "Questionnaire.item.required": {
+                "value": true
+              }
+            }
+          ]
+        },
+        {
+          "Questionnaire.item.linkId": {
+            "value": "2.2"
+          },
+          "Questionnaire.item.text": {
+            "value": "Tumor Description"
+          },
+          "Questionnaire.item.type": {
+            "value": "choice"
+          },
+          "Questionnaire.item.repeats": {
+            "value": true
+          },
+          "Questionnaire.item.option": [
+            {
+              "Questionnaire.item.option.valueCoding": {
+                "Coding.code": {
+                  "value": "U1"
+                },
+                "Coding.display": {
+                  "value": "Hemorrhagic"
+                }
+              }
+            },
+            {
+              "Questionnaire.item.option.valueCoding": {
+                "Coding.code": {
+                  "value": "U2"
+                },
+                "Coding.display": {
+                  "value": "Necrotic"
+                }
+              }
+            },
+            {
+              "Questionnaire.item.option.valueCoding": {
+                "Coding.code": {
+                  "value": "U3"
+                },
+                "Coding.display": {
+                  "value": "Invasion"
+                }
+              }
+            },
+            {
+              "Questionnaire.item.option.valueCoding": {
+                "Coding.code": {
+                  "value": "U4"
+                },
+                "Coding.display": {
+                  "value": "Other (specify)"
+                }
+              }
+            }
+          ],
+          "Questionnaire.item.item": [
+            {
+              "Questionnaire.item.linkId": {
+                "value": "2.2.1.1"
+              },
+              "Questionnaire.item.text": {
+                "value": "??"
+              },
+              "Questionnaire.item.type": {
+                "value": "choice"
+              },
+              "Questionnaire.item.repeats": {
+                "value": true
+              },
+              "Questionnaire.item.option": [
+                {
+                  "Questionnaire.item.option.valueCoding": {
+                    "Coding.code": {
+                      "value": "V1"
+                    },
+                    "Coding.display": {
+                      "value": "Capsule"
+                    }
+                  }
+                },
+                {
+                  "Questionnaire.item.option.valueCoding": {
+                    "Coding.code": {
+                      "value": "V2"
+                    },
+                    "Coding.display": {
+                      "value": "Vessels"
+                    }
+                  }
+                },
+                {
+                  "Questionnaire.item.option.valueCoding": {
+                    "Coding.code": {
+                      "value": "V3"
+                    },
+                    "Coding.display": {
+                      "value": "Extra-adrenal (specify)"
+                    }
+                  }
+                }
+              ],
+              "Questionnaire.item.item": [
+                {
+                  "Questionnaire.item.linkId": {
+                    "value": "2.2.1.1.1.1"
+                  },
+                  "Questionnaire.item.text": {
+                    "value": "Extra-adrenal (specify)"
+                  },
+                  "Questionnaire.item.type": {
+                    "value": "string"
+                  },
+                  "Questionnaire.item.required": {
+                    "value": true
+                  }
+                }
+              ]
+            },
+            {
+              "Questionnaire.item.linkId": {
+                "value": "2.2.2.1"
+              },
+              "Questionnaire.item.text": {
+                "value": "Other (specify)"
+              },
+              "Questionnaire.item.type": {
+                "value": "string"
+              },
+              "Questionnaire.item.required": {
+                "value": true
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

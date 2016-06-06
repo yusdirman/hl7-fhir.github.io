@@ -1,0 +1,97 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Library",
+  "resourceType": "Library",
+  "Resource.id": {
+    "value": "library-exclusive-breastfeeding-cds-logic"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Exclusive Breastfeeding CDS Logic</div>"
+    }
+  },
+  "Library.moduleMetadata": {
+    "ModuleMetadata.identifier": [
+      {
+        "Identifier.use": {
+          "value": "official"
+        },
+        "Identifier.value": {
+          "value": "Exclusive_Breastfeeding_CDS_Logic"
+        }
+      }
+    ],
+    "ModuleMetadata.version": {
+      "value": "1.0.0"
+    },
+    "ModuleMetadata.title": {
+      "value": "Exclusive Breastfeeding CDS Logic"
+    },
+    "ModuleMetadata.type": {
+      "value": "library"
+    },
+    "ModuleMetadata.status": {
+      "value": "active"
+    },
+    "ModuleMetadata.experimental": {
+      "value": true
+    },
+    "ModuleMetadata.description": {
+      "value": "Decision support logic for improving outcomes for exclusive breastmilk feeding of newborns"
+    },
+    "ModuleMetadata.publicationDate": {
+      "value": "2016-03-08"
+    },
+    "ModuleMetadata.topic": [
+      {
+        "CodeableConcept.text": {
+          "value": "Exclusive Breastfeeding"
+        }
+      }
+    ]
+  },
+  "Library.model": [
+    {
+      "Library.model.identifier": {
+        "value": "QUICK"
+      }
+    }
+  ],
+  "Library.valueSet": [
+    {
+      "Library.valueSet.name": {
+        "value": "Female Administrative Sex"
+      },
+      "Library.valueSet.identifier": {
+        "value": "2.16.840.1.113883.3.560.100.2"
+      }
+    }
+  ],
+  "Library.dataRequirement": [
+    {
+      "DataRequirement.type": {
+        "value": "Condition"
+      },
+      "DataRequirement.codeFilter": [
+        {
+          "DataRequirement.codeFilter.path": {
+            "value": "code"
+          },
+          "DataRequirement.codeFilter.valueSetString": {
+            "value": "Single Live Birth"
+          }
+        }
+      ]
+    }
+  ],
+  "Library.document": {
+    "Attachment.contentType": {
+      "value": "application/cql+text"
+    },
+    "Attachment.url": {
+      "value": "http://cqlrepository.org/CMS9v4_CDS.cql"
+    }
+  }
+}

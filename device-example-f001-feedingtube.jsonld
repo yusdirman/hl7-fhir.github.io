@@ -1,0 +1,69 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Device",
+  "resourceType": "Device",
+  "Resource.id": {
+    "value": "f001"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f001</p><p><b>identifier</b>: 12345</p><p><b>udiCarrier</b>: (01)00000123000017(10)ABC123(17)120415</p><p><b>status</b>: available</p><p><b>type</b>: Feeding tube, device <span>(Details : {SNOMED CT code '25062003' = 'Feeding tube, device (physical object)', given as 'Feeding tube, device'})</span></p><p><b>manufactureDate</b>: Aug 8, 2015</p><p><b>expirationDate</b>: Aug 8, 2020</p><p><b>owner</b>: <a>Organization/2.16.840.1.113883.19.5</a></p><p><b>location</b>: Central Supply</p></div>"
+    }
+  },
+  "Device.identifier": [
+    {
+      "Identifier.system": {
+        "value": "http:/goodhealthhospital/identifier/devices"
+      },
+      "Identifier.value": {
+        "value": "12345"
+      }
+    }
+  ],
+  "Device.udiCarrier": {
+    "Identifier.system": {
+      "value": "urn:oid:2.16.840.1.113883.3.3719"
+    },
+    "Identifier.value": {
+      "value": "(01)00000123000017(10)ABC123(17)120415"
+    }
+  },
+  "Device.status": {
+    "value": "available"
+  },
+  "Device.type": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "value": "25062003"
+        },
+        "Coding.display": {
+          "value": "Feeding tube, device"
+        }
+      }
+    ],
+    "concept": "http://snomed.info/sct#25062003"
+  },
+  "Device.manufactureDate": {
+    "value": "2015-08-08"
+  },
+  "Device.expirationDate": {
+    "value": "2020-08-08"
+  },
+  "Device.owner": {
+    "Reference.reference": {
+      "value": "Organization/2.16.840.1.113883.19.5"
+    },
+    "reference": "http://hl7.org/fhir//Organization/2.16.840.1.113883.19.5"
+  },
+  "Device.location": {
+    "Reference.display": {
+      "value": "Central Supply"
+    }
+  }
+}

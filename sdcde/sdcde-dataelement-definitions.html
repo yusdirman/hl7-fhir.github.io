@@ -1,0 +1,1334 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>StructureDefinition: SDCDE-DataElement - FHIR v1.4.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link rel="stylesheet" href="../fhir.css"/>
+  <link rel="Prev" href="http://hl7.org/fhir/sdcde-dataelement"/>
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href=".././dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href=".././assets/css/bootstrap-fhir.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href=".././assets/css/project.css"/>
+  <link rel="stylesheet" href=".././assets/css/pygments-manni.css"/>
+	<link rel="stylesheet" href="../jquery-ui.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src=".././assets/js/html5shiv.js"></script>
+  <script src=".././assets/js/respond.min.js"></script>
+  <![endif] -->
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href=".././assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href=".././assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href=".././assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href=".././assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href=".././assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment">  <!-- segment-header -->	
+		<div class="container">  <!-- container -->
+			<a no-external="true" id="logo" href="http://hl7.org/fhir"><img src=".././assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a no-external="true" id="hl7-logo" href="http://www.hl7.org">
+					<img src=".././assets/images/hl7-logo.png" width="42" alt="visit the hl7 website" height="50"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a no-external="true" id="hl7-logo" href="http://hl7.org/fhir/search.cfm"><img src="./../assets/images/search.png" alt="Search FHIR"/></a></div> 
+		</div>
+		<div class="container">  <!-- container -->
+	</div></div>  <!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+ 	      		
+ 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="../index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../documentation.html">Documentation</a></li>
+              <li><a href="../implementation.html">Implementation</a></li>
+              <li><a href="../resourcelist.html">Resources</a></li>
+              <li><a href="../clinical.html">Clinical</a></li>
+              <li><a href="../administration.html">Administrative</a></li>
+              <li><a href="../infrastructure.html">Infrastructure</a></li>
+              <li><a href="../financial.html">Financial</a></li>
+
+						</ul>
+					</div>  <!-- /.nav-collapse -->
+				</div>  <!-- /.container -->
+			</nav>  <!-- /.navbar -->
+      		
+				
+  <!-- /HEADER CONTENT -->				
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+		<div class="container">  <!-- container -->	
+			<ul class="breadcrumb">
+          <!-- sdcde-dataelement / profile:DataElement/dataelement-sdc-de/sdcde-dataelement / Structured Data Capture Data Element Exchange -->
+        <li title="Structured Data Capture - Data Element Exchange"><a href="sdcde.html"><b>SDC-DE</b></a></li>
+        <li><a href="dataelement-sdc-de.html"><b>Data Element</b></a></li>
+        <li><b>Data Element Details</b></li>
+
+			</ul>	
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment">  <!-- segment-content -->
+	<div class="container">  <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<ul class="nav nav-tabs"><li><a href="sdcde-dataelement.html">Content</a></li><li><a href="sdcde-dataelement-examples.html">Examples</a></li><li class="active"><a href="#">Detailed Descriptions</a></li><li><a href="sdcde-dataelement-mappings.html">Mappings</a></li><li><a href="sdcde-dataelement.profile.xml.html">XML</a></li><li><a href="sdcde-dataelement.profile.json.html">JSON</a></li></ul>
+
+<h4><span class="sectioncount">C.1.1.4<a name="C.1.1.4"> </a></span> StructureDefinition: SDCDE-DataElement - Detailed Descriptions <a href="sdcde-dataelement-definitions.html#C.1.1.4" title="link to here" class="self-link"><img src="../target.png"/></a></h4>
+
+<p>Definitions for the sdcde-dataelement Profile.</p>
+
+<table class="dict">
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.SDCDE-DataElement"> </a><b>DataElement(SDCDE-DataElement)</b></td></tr>
+  <tr><td>Definition</td><td><p>Sets expectations for SDC conformant systems wishing to share data elements between registries.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../dataelement.html#DataElement">DataElement</a></td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>Master Observation, Data Element, CDE</td></tr>
+  <tr><td>Comments</td><td><p>Often called a clinical template.</p>
+</td></tr>
+  <tr><td>Invariants</td><td><b>Defined on this element</b><br/>
+<b title="Formal Invariant Identifier">inv-2</b>: One and only one DataElement.code must have is-data-element-concept set to &quot;true&quot; (xpath: count(f:code/f:extension[@uri='http://hl7.org/fhir/StructureDefinition/11179-de-is-data-element-concept'])=1)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.id"> </a><b>DataElement.id</b></td></tr>
+  <tr><td>Definition</td><td><p>The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#id">id</a></td></tr>
+  <tr><td>Comments</td><td><p>The only time that a resource does not have an id is when it is being submitted to the server using a create operation. Bundles always have an id, though it is usually a generated UUID.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.meta"> </a><b>DataElement.meta</b></td></tr>
+  <tr><td>Definition</td><td><p>The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../resource.html#Meta">Meta</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.implicitRules"> </a><b>DataElement.implicitRules</b></td></tr>
+  <tr><td>Definition</td><td><p>A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#uri">uri</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However, the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.language"> </a><b>DataElement.language</b></td></tr>
+  <tr><td>Definition</td><td><p>The base language in which the resource is written.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td>A human language.<br/>The codes SHALL be taken from  <a href="http://tools.ietf.org/html/bcp47">http://tools.ietf.org/html/bcp47 <img src="../external.png" style="text-align: baseline"/></a></td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#code">code</a></td></tr>
+  <tr><td>Comments</td><td><p>Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource  Not all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute).</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.text"> </a><b>DataElement.text</b></td></tr>
+  <tr><td>Definition</td><td><p>A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it &quot;clinically safe&quot; for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1 This element is affected by the following invariants: dom-1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../narrative.html#Narrative">Narrative</a></td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>narrative, html, xhtml, display</td></tr>
+  <tr><td>Comments</td><td><p>Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.contained"> </a><b>DataElement.contained</b></td></tr>
+  <tr><td>Definition</td><td><p>These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../resource.html#Resource">Resource</a></td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>inline resources, anonymous resources, contained resources</td></tr>
+  <tr><td>Comments</td><td><p>This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.extension"> </a><b>DataElement.extension</b></td></tr>
+  <tr><td>Definition</td><td><p>An Extension</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a></td></tr>
+  <tr><td><a href="../profiling.html#slicing">Slicing</a></td><td>This element introduces a set of slices. The slicing rules are: <ul> <li>unordered</li><li>Open</li><li>discriminators: url</li></ul></td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.effectivePeriod"> </a><b>DataElement.extension (<a href="../extension-11179-de-effective-period.html">http://hl7.org/fhir/StructureDefinition/11179-de-effective-period</a>)</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies the date on which the element became (or is expected to become) active and the date on which the element became (or is expected to become) retired.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a>  (Extension Type: <a href="../datatypes.html#Period">Period</a>)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.documentReference"> </a><b>DataElement.extension (<a href="../extension-11179-de-document-reference.html">http://hl7.org/fhir/StructureDefinition/11179-de-document-reference</a>)</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies a document that conveys some sort of information related to the data element.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a>  (Extension Type: <a href="../references.html#Reference">Reference</a>(<a href="../documentreference.html" title="http://hl7.org/fhir/StructureDefinition/DocumentReference">DocumentReference</a>))</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.administrativeStatus"> </a><b>DataElement.extension (<a href="../extension-11179-de-administrative-status.html">http://hl7.org/fhir/StructureDefinition/11179-de-administrative-status</a>)</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies internal processing status for the data element; e.g. &quot;Under review&quot;.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a>  (Extension Type: <a href="../datatypes.html#CodeableConcept">CodeableConcept</a>)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.changeDescription"> </a><b>DataElement.extension (<a href="../extension-11179-de-change-description.html">http://hl7.org/fhir/StructureDefinition/11179-de-change-description</a>)</b></td></tr>
+  <tr><td>Definition</td><td><p>Summarizes changes to the data element since the previous version.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a>  (Extension Type: <a href="../datatypes.html#string">string</a>)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.submitterOrganization"> </a><b>DataElement.extension (<a href="../extension-11179-de-submitter-org.html">http://hl7.org/fhir/StructureDefinition/11179-de-submitter-org</a>)</b></td></tr>
+  <tr><td>Definition</td><td><p>Organization responsible for submitting the data element to its registry.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a>  (Extension Type: <a href="../references.html#Reference">Reference</a>(<a href="../organization.html" title="http://hl7.org/fhir/StructureDefinition/Organization">Organization</a>))</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.registryOrganization"> </a><b>DataElement.extension (<a href="../extension-11179-de-registry-org.html">http://hl7.org/fhir/StructureDefinition/11179-de-registry-org</a>)</b></td></tr>
+  <tr><td>Definition</td><td><p>The organization that is the custodian for this data element.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a>  (Extension Type: <a href="../references.html#Reference">Reference</a>(<a href="../organization.html" title="http://hl7.org/fhir/StructureDefinition/Organization">Organization</a>))</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.modifierExtension"> </a><b>DataElement.modifierExtension</b></td></tr>
+  <tr><td>Definition</td><td><p>May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>extensions, user content</td></tr>
+  <tr><td>Comments</td><td><p>There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.url"> </a><b>DataElement.url</b></td></tr>
+  <tr><td>Definition</td><td><p>An absolute URL that is used to identify this data element when it is referenced in a specification, model, design or an instance. This SHALL be a URL, SHOULD be globally unique, and SHOULD be an address at which this data element is (or will be) published.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#uri">uri</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.identifier"> </a><b>DataElement.identifier</b></td></tr>
+  <tr><td>Definition</td><td><p>Formal identifier that is used to identify this data element when it is represented in other formats, or referenced in a specification, model, design or an instance.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#Identifier">Identifier</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>Typically, this is used for values that can go in a v3 II data type.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.version"> </a><b>DataElement.version</b></td></tr>
+  <tr><td>Definition</td><td><p>The identifier that is used to identify this version of the data element when it is referenced in a StructureDefinition, Questionnaire or instance. This is an arbitrary value managed by the definition author manually.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Requirements</td><td><p>There may be multiple resource versions of the data element that have this same identifier. The resource version id will change for technical reasons, whereas the stated version number needs to be under the author's control.</p>
+</td></tr>
+  <tr><td>Comments</td><td><p>N/A.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.status"> </a><b>DataElement.status</b></td></tr>
+  <tr><td>Definition</td><td><p>The status of the data element.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td>The lifecycle status of a Value Set or Concept Map.<br/>The codes SHALL be taken from <a href="../valueset-conformance-resource-status.html">ConformanceResourceStatus</a></td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#code">code</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Requirements</td><td><p>Allows filtering of data elements that are appropriate for use.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.experimental"> </a><b>DataElement.experimental</b></td></tr>
+  <tr><td>Definition</td><td><p>A flag to indicate that this search data element definition is authored for testing purposes (or education/evaluation/marketing), and is not intended to be used for genuine usage.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#boolean">boolean</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>Allows filtering of search data element definitions that are appropriate for use vs. not.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.publisher"> </a><b>DataElement.publisher</b></td></tr>
+  <tr><td>Definition</td><td><p>The name of the individual or organization that published the data element.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Requirements</td><td><p>Helps establish the &quot;authority/credibility&quot; of the data element.  May also allow for contact.</p>
+</td></tr>
+  <tr><td>Comments</td><td><p>Usually an organization, but may be an individual. This item SHOULD be populated unless the information is available from context.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.date"> </a><b>DataElement.date</b></td></tr>
+  <tr><td>Definition</td><td><p>The date this version of the data element was published. The date must change when the business version changes, if it does, and it must change if the status code changes. In addition, it should change when the substantive content of the data element  changes.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#dateTime">dateTime</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>This refers to the &quot;business&quot; version, the DataElement.version which changes based on business processes.  It does not refer to the date of the RESTful version which is part of the resource metadata. Additional specific dates may be added as extensions.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.name"> </a><b>DataElement.name</b></td></tr>
+  <tr><td>Definition</td><td><p>The term used by humans to refer to the data element.  Should ideally be unique within the context in which the data element is expected to be used.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>This may be similar to the question used to prompt someone for a data element value, but the purpose is communicating about the data element, not asking the question.  (Refer to the 'question' element for the latter.).</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.contact"> </a><b>DataElement.contact</b></td></tr>
+  <tr><td>Definition</td><td><p>Contacts to assist a user in finding and communicating with the publisher.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#BackboneElement">BackboneElement</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>May be a web site, an email address, a telephone number (tel:), etc.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.contact.id"> </a><b>DataElement.contact.id</b></td></tr>
+  <tr><td>Definition</td><td><p>unique id for the element within a resource (for internal references).</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#id">id</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.contact.contactAddress"> </a><b>DataElement.contact.extension (<a href="../extension-11179-de-contact-address.html">http://hl7.org/fhir/StructureDefinition/11179-de-contact-address</a>)</b></td></tr>
+  <tr><td>Definition</td><td><p>Postal address for a contact for the data element.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a>  (Extension Type: <a href="../datatypes.html#Address">Address</a>)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.contact.modifierExtension"> </a><b>DataElement.contact.modifierExtension</b></td></tr>
+  <tr><td>Definition</td><td><p>May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>extensions, user content, modifiers</td></tr>
+  <tr><td>Comments</td><td><p>There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.contact.name"> </a><b>DataElement.contact.name</b></td></tr>
+  <tr><td>Definition</td><td><p>The name of an individual to contact regarding the data element.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>If there is no named individual, the telecom is for the organization as a whole.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.contact.telecom"> </a><b>DataElement.contact.telecom</b></td></tr>
+  <tr><td>Definition</td><td><p>Contact details for individual (if a name was provided) or the publisher.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#ContactPoint">ContactPoint</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.useContext"> </a><b>DataElement.useContext</b></td></tr>
+  <tr><td>Definition</td><td><p>The content was developed with a focus and intent of supporting the contexts that are listed. These terms may be used to assist with indexing and searching of data element definitions.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td>Indicates the countries, regions, disciplines and other aspects of use within which this artifact is targeted for use.<br/>The codes SHALL be taken from <a href="../valueset-use-context.html">Context of Use ValueSet</a>; other codes may be used where these codes are not suitable</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.useContext.id"> </a><b>DataElement.useContext.id</b></td></tr>
+  <tr><td>Definition</td><td><p>unique id for the element within a resource (for internal references).</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#id">id</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.useContext.classificationOrContext"> </a><b>DataElement.useContext.extension (<a href="../extension-11179-de-classification-or-context.html">http://hl7.org/fhir/StructureDefinition/11179-de-classification-or-context</a>)</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies whether the useContext is a true context or a classification.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a>  (Extension Type: <a href="../datatypes.html#code">code</a>)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.useContext.coding"> </a><b>DataElement.useContext.coding</b></td></tr>
+  <tr><td>Definition</td><td><p>A reference to a code defined by a terminology system.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#Coding">Coding</a></td></tr>
+  <tr><td>Requirements</td><td><p>Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings.</p>
+</td></tr>
+  <tr><td>Comments</td><td><p>Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labelled as UserSelected = true.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.useContext.text"> </a><b>DataElement.useContext.text</b></td></tr>
+  <tr><td>Definition</td><td><p>A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td>Requirements</td><td><p>The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.</p>
+</td></tr>
+  <tr><td>Comments</td><td><p>Very often the text is the same as a displayName of one of the codings.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.copyright"> </a><b>DataElement.copyright</b></td></tr>
+  <tr><td>Definition</td><td><p>A copyright statement relating to the definition of the data element. Copyright statements are generally legal restrictions on the use and publishing of the details of the definition of the data element.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>License, Restrictions</td></tr>
+  <tr><td>Comments</td><td><p>The copyright statement does not apply to values for the data element, only to its definition.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.stringency"> </a><b>DataElement.stringency</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies how precise the data element is in its definition.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td>Indicates the degree of precision of the data element definition.<br/>The codes SHALL be taken from <a href="../valueset-dataelement-stringency.html">DataElementStringency</a></td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#code">code</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Requirements</td><td><p>Allows determining the degree of comparability of data element instances. Less granular data elements result in data that is less comparable (or at least requires more work to compare).</p>
+</td></tr>
+  <tr><td>Fixed Value</td><td>comparable</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.mapping"> </a><b>DataElement.mapping</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies a specification (other than a terminology) that the elements which make up the DataElement have some correspondence with.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#BackboneElement">BackboneElement</a></td></tr>
+  <tr><td><a href="../profiling.html#slicing">Slicing</a></td><td>This element introduces a set of slices. The slicing rules are: <ul> <li>unordered</li><li>Open</li><li>discriminators: uri</li></ul></td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.ObjectClassPropertyMapping"> </a><b>DataElement.mapping(ObjectClassPropertyMapping)</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies a specification (other than a terminology) that the elements which make up the DataElement have some correspondence with.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#BackboneElement">BackboneElement</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.mapping.id"> </a><b>DataElement.mapping.id</b></td></tr>
+  <tr><td>Definition</td><td><p>unique id for the element within a resource (for internal references).</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#id">id</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.mapping.extension"> </a><b>DataElement.mapping.extension</b></td></tr>
+  <tr><td>Definition</td><td><p>May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a></td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>extensions, user content</td></tr>
+  <tr><td>Comments</td><td><p>There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.mapping.modifierExtension"> </a><b>DataElement.mapping.modifierExtension</b></td></tr>
+  <tr><td>Definition</td><td><p>May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>extensions, user content, modifiers</td></tr>
+  <tr><td>Comments</td><td><p>There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.mapping.identity"> </a><b>DataElement.mapping.identity</b></td></tr>
+  <tr><td>Definition</td><td><p>An internal id that is used to identify this mapping set when specific mappings are made on a per-element basis.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#id">id</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>The specification is described once, with general comments, and then specific mappings are made that reference this declaration.</p>
+</td></tr>
+  <tr><td>Fixed Value</td><td>objclass-prop</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.mapping.uri"> </a><b>DataElement.mapping.uri</b></td></tr>
+  <tr><td>Definition</td><td><p>An absolute URI that identifies the specification that this mapping is expressed to.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#uri">uri</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>A formal identity for the specification being mapped to helps with identifying maps consistently.</p>
+</td></tr>
+  <tr><td>Fixed Value</td><td>http://healthit.gov/sdc/objectclassproperty</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.mapping.name"> </a><b>DataElement.mapping.name</b></td></tr>
+  <tr><td>Definition</td><td><p>A name for the specification that is being mapped to.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.mapping.comment"> </a><b>DataElement.mapping.comment</b></td></tr>
+  <tr><td>Definition</td><td><p>Comments about this mapping, including version notes, issues, scope limitations, and other important notes for usage.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.OtherMapping"> </a><b>DataElement.mapping(OtherMapping)</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies a specification (other than a terminology) that the elements which make up the DataElement have some correspondence with.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#BackboneElement">BackboneElement</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Invariants</td><td><b>Defined on this element</b><br/>
+<b title="Formal Invariant Identifier">inv-1</b>: Property extension can only be specified if ObjectClass extension is present (xpath: exists(f:extension[@url='http://hl7.org/fhir/StructureDefinition/11179-objectClass']) or not(exists(f:extension[@url='http://hl7.org/fhir/StructureDefinition/11179-property'])))</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.mapping.id"> </a><b>DataElement.mapping.id</b></td></tr>
+  <tr><td>Definition</td><td><p>unique id for the element within a resource (for internal references).</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#id">id</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.mapping.extension"> </a><b>DataElement.mapping.extension</b></td></tr>
+  <tr><td>Definition</td><td><p>May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a></td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>extensions, user content</td></tr>
+  <tr><td>Comments</td><td><p>There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.mapping.modifierExtension"> </a><b>DataElement.mapping.modifierExtension</b></td></tr>
+  <tr><td>Definition</td><td><p>May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>extensions, user content, modifiers</td></tr>
+  <tr><td>Comments</td><td><p>There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.mapping.identity"> </a><b>DataElement.mapping.identity</b></td></tr>
+  <tr><td>Definition</td><td><p>An internal id that is used to identify this mapping set when specific mappings are made on a per-element basis.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#id">id</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>The specification is described once, with general comments, and then specific mappings are made that reference this declaration.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.mapping.uri"> </a><b>DataElement.mapping.uri</b></td></tr>
+  <tr><td>Definition</td><td><p>An absolute URI that identifies the specification that this mapping is expressed to.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#uri">uri</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>A formal identity for the specification being mapped to helps with identifying maps consistently.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.mapping.name"> </a><b>DataElement.mapping.name</b></td></tr>
+  <tr><td>Definition</td><td><p>A name for the specification that is being mapped to.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.mapping.comment"> </a><b>DataElement.mapping.comment</b></td></tr>
+  <tr><td>Definition</td><td><p>Comments about this mapping, including version notes, issues, scope limitations, and other important notes for usage.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element"> </a><b>DataElement.element</b></td></tr>
+  <tr><td>Definition</td><td><p>Defines the structure, type, allowed values and other constraining characteristics of the data element.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../elementdefinition.html#ElementDefinition">ElementDefinition</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Requirements</td><td><p>1.</p>
+</td></tr>
+  <tr><td>Comments</td><td><p>For simple data types there will only be one repetition.  For complex data types, multiple repetitions will be present defining a nested structure using the &quot;path&quot; element.</p>
+</td></tr>
+  <tr><td>Invariants</td><td><b>Defined on this element</b><br/>
+<b title="Formal Invariant Identifier">dae-1</b>: No base allowed (xpath: not(exists(f:base)))<br/><b title="Formal Invariant Identifier">dae-2</b>: No slicing allowed (xpath: not(exists(f:slicing)))</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.id"> </a><b>DataElement.element.id</b></td></tr>
+  <tr><td>Definition</td><td><p>unique id for the element within a resource (for internal references).</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#id">id</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.extension"> </a><b>DataElement.element.extension</b></td></tr>
+  <tr><td>Definition</td><td><p>An Extension</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a></td></tr>
+  <tr><td><a href="../profiling.html#slicing">Slicing</a></td><td>This element introduces a set of slices. The slicing rules are: <ul> <li>unordered</li><li>Open</li><li>discriminators: url</li></ul></td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.question"> </a><b>DataElement.element.extension (<a href="../extension-elementdefinition-question.html">http://hl7.org/fhir/StructureDefinition/elementdefinition-question</a>)</b></td></tr>
+  <tr><td>Definition</td><td><p>The default/suggested phrasing to use when prompting a human to capture the data element in question form (e.g. In a survey).</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a>  (Extension Type: <a href="../datatypes.html#string">string</a>)</td></tr>
+  <tr><td>Comments</td><td><p>Question and label serve similar purposes in they both can be used to prompt for capturing a data element.  Whether the question form or label form should be used will depend on the type of instrument being used to capture the information.  The ordering is in order of preference.  I.e. Most preferred question form is listed first.  Note that this is for alternate phrasings of the question.  Language translations are handled using the ISO 21090 string translation extensions.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.allowedUnits"> </a><b>DataElement.element.extension (<a href="../extension-elementdefinition-allowedunits.html">http://hl7.org/fhir/StructureDefinition/elementdefinition-allowedUnits</a>)</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies the units of measure in which the element should be captured or expressed.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a>  (Extension Type: Choice of: <a href="../datatypes.html#CodeableConcept">CodeableConcept</a>, <a href="../references.html#Reference">Reference</a>(<a href="../valueset.html" title="http://hl7.org/fhir/StructureDefinition/ValueSet">ValueSet</a>))</td></tr>
+  <tr><td>Comments</td><td><p>Use a value set if more than one unit of measure is possible.  Value sets will typically be short enough to display in a drop-down selection list.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.minLength"> </a><b>DataElement.element.extension (<a href="../extension-minlength.html">http://hl7.org/fhir/StructureDefinition/minLength</a>)</b></td></tr>
+  <tr><td>Definition</td><td><p>The minimum number of characters that must be present in the simple data type to be considered a &quot;valid&quot; instance.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a>  (Extension Type: <a href="../datatypes.html#integer">integer</a>)</td></tr>
+  <tr><td>Comments</td><td><p>For base64binary, reflects the number of characters representing the encoded data, not the number of bytes of the binary data.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.regex"> </a><b>DataElement.element.extension (<a href="../extension-regex.html">http://hl7.org/fhir/StructureDefinition/regex</a>)</b></td></tr>
+  <tr><td>Definition</td><td><p>A regular expression that defines the syntax for the data element to be considered valid.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a>  (Extension Type: <a href="../datatypes.html#string">string</a>)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.entryFormat"> </a><b>DataElement.element.extension (<a href="../extension-entryformat.html">http://hl7.org/fhir/StructureDefinition/entryFormat</a>)</b></td></tr>
+  <tr><td>Definition</td><td><p>A syntax intended for display to the user to guide their input (i.e. a human readable version of a regular expression).  For example &quot;nnn-nnn-nnn&quot;.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a>  (Extension Type: <a href="../datatypes.html#string">string</a>)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.maxDecimalPlaces"> </a><b>DataElement.element.extension (<a href="../extension-maxdecimalplaces.html">http://hl7.org/fhir/StructureDefinition/maxDecimalPlaces</a>)</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies the maximum number of decimal places that may be specified for the data element.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a>  (Extension Type: <a href="../datatypes.html#integer">integer</a>)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.path"> </a><b>DataElement.element.path</b></td></tr>
+  <tr><td>Definition</td><td><p>The path identifies the element and is expressed as a &quot;.&quot;-separated list of ancestor elements, beginning with the name of the resource or extension.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.representation"> </a><b>DataElement.element.representation</b></td></tr>
+  <tr><td>Definition</td><td><p>Codes that define how this element is represented in instances, when the deviation varies from the normal case.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td>How a property is represented on the wire.<br/>The codes SHALL be taken from <a href="../valueset-property-representation.html">PropertyRepresentation</a></td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#code">code</a></td></tr>
+  <tr><td>Comments</td><td><p>This is rarely used except for special cases where the representation deviates from the normal, which is done only very reluctantly, and can only be done in the base standard (and profiles must reproduce what the base standard does).</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.name"> </a><b>DataElement.element.name</b></td></tr>
+  <tr><td>Definition</td><td><p>The name of this element definition. This is a unique name referring to a specific set of constraints applied to this element, used to provide a name to different slices of the same element.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Requirements</td><td><p>May also be used for code generation purposes.</p>
+</td></tr>
+  <tr><td>Comments</td><td><p>The name SHALL be unique within the structure within the context of the constrained resource element.  (Though to avoid confusion, uniqueness across all elements is recommended.).</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.label"> </a><b>DataElement.element.label</b></td></tr>
+  <tr><td>Definition</td><td><p>The text to display beside the element indicating its meaning or to use to prompt for the element in a user display or form.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>Question and label serve similar purposes in they both can be used to prompt for capturing a data element.  Whether the question form or label form should be used will depend on the type of instrument being used to capture the information.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.code"> </a><b>DataElement.element.code</b></td></tr>
+  <tr><td>Definition</td><td><p>A code that provides the meaning for the element according to a particular terminology.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td>Codes representing the data element concept for a data element<br/>The codes SHALL be taken from <a href="../sdcde/valueset-sdcde-dataelement-sdccode.html">DataElement SDC Concept</a>; other codes may be used where these codes are not suitable</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#Coding">Coding</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Requirements</td><td><p>Links the meaning of an element to an external terminology.</p>
+</td></tr>
+  <tr><td>Comments</td><td><p>The data element definition and other constraints SHALL be a proper constraint on the meaning (as defined in the code system, including relationships) of any code listed here.  Where multiple codes exist in a terminology that could correspond to the data element, the most granular code(s) should be selected, so long as they are not more restrictive than the data element itself.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.code.id"> </a><b>DataElement.element.code.id</b></td></tr>
+  <tr><td>Definition</td><td><p>unique id for the element within a resource (for internal references).</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#id">id</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.code.isDataElementConcept"> </a><b>DataElement.element.code.extension (<a href="../extension-11179-de-is-data-element-concept.html">http://hl7.org/fhir/StructureDefinition/11179-de-is-data-element-concept</a>)</b></td></tr>
+  <tr><td>Definition</td><td><p>If true, indicates that the specified coding corresponds to the data element concept for the data element.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a>  (Extension Type: <a href="../datatypes.html#boolean">boolean</a>)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.code.system"> </a><b>DataElement.element.code.system</b></td></tr>
+  <tr><td>Definition</td><td><p>The identification of the code system that defines the meaning of the symbol in the code.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#uri">uri</a></td></tr>
+  <tr><td>Requirements</td><td><p>Need to be unambiguous about the source of the definition of the symbol.</p>
+</td></tr>
+  <tr><td>Comments</td><td><p>The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should de-reference to some definition that establish the system clearly and unambiguously.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.code.version"> </a><b>DataElement.element.code.version</b></td></tr>
+  <tr><td>Definition</td><td><p>The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td>Comments</td><td><p>Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.code.code"> </a><b>DataElement.element.code.code</b></td></tr>
+  <tr><td>Definition</td><td><p>A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination).</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#code">code</a></td></tr>
+  <tr><td>Requirements</td><td><p>Need to refer to a particular code in the system.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.code.display"> </a><b>DataElement.element.code.display</b></td></tr>
+  <tr><td>Definition</td><td><p>A representation of the meaning of the code in the system, following the rules of the system.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td>Requirements</td><td><p>Need to be able to carry a human-readable meaning of the code for readers that do not know  the system.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.code.userSelected"> </a><b>DataElement.element.code.userSelected</b></td></tr>
+  <tr><td>Definition</td><td><p>Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays).</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#boolean">boolean</a></td></tr>
+  <tr><td>Requirements</td><td><p>This has been identified as a clinical safety criterium - that this exact system/code pair was chosen explicitly, rather than inferred by the system based on some rules or language processing.</p>
+</td></tr>
+  <tr><td>Comments</td><td><p>Amongst a set of alternatives, a directly chosen code is the most appropriate starting point for new translations. There is some ambiguity about what exactly 'directly chosen' implies, and trading partner agreement may be needed to clarify the use of this element and its consequences more completely.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.slicing"> </a><b>DataElement.element.slicing</b></td></tr>
+  <tr><td>Definition</td><td><p>Indicates that the element is sliced into a set of alternative definitions (i.e. in a structure definition, there are multiple different constraints on a single element in the base resource). Slicing can be used in any resource that has cardinality ..* on the base resource, or any resource with a choice of types. The set of slices is any elements that come after this in the element sequence that have the same path, until a shorter path occurs (the shorter path terminates the set).</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../element.html#Element">Element</a></td></tr>
+  <tr><td>Comments</td><td><p>The first element in the sequence, the one that carries the slicing, is the unconstrained element, for reference purposes . This may include the unconstrained children.</p>
+</td></tr>
+  <tr><td>Invariants</td><td><b>Defined on this element</b><br/>
+<b title="Formal Invariant Identifier">eld-1</b>: If there are no discriminators, there must be a definition (xpath: (f:discriminator) or (f:description))</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.slicing.id"> </a><b>DataElement.element.slicing.id</b></td></tr>
+  <tr><td>Definition</td><td><p>unique id for the element within a resource (for internal references).</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#id">id</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.slicing.extension"> </a><b>DataElement.element.slicing.extension</b></td></tr>
+  <tr><td>Definition</td><td><p>May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a></td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>extensions, user content</td></tr>
+  <tr><td>Comments</td><td><p>There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.slicing.discriminator"> </a><b>DataElement.element.slicing.discriminator</b></td></tr>
+  <tr><td>Definition</td><td><p>Designates which child elements are used to discriminate between the slices when processing an instance. If one or more discriminators are provided, the value of the child elements in the instance data SHALL completely distinguish which slice the element in the resource matches based on the allowed values for those elements in each of the slices.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td>Comments</td><td><p>If there is no discriminator, the content is hard to process, so this should be avoided. If the base element has a cardinality of ..1, and there is a choice of types, the discriminator most be &quot;@type&quot;.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.slicing.description"> </a><b>DataElement.element.slicing.description</b></td></tr>
+  <tr><td>Definition</td><td><p>A human-readable text description of how the slicing works. If there is no discriminator, this is required to be present to provide whatever information is possible about how the slices can be differentiated.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1 This element is affected by the following invariants: eld-1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td>Comments</td><td><p>If it's really not possible to differentiate them, the design should be re-evaluated to make the content usable.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.slicing.ordered"> </a><b>DataElement.element.slicing.ordered</b></td></tr>
+  <tr><td>Definition</td><td><p>If the matching elements have to occur in the same order as defined in the profile.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#boolean">boolean</a></td></tr>
+  <tr><td>Comments</td><td><p>Order should only be required when it is a pressing concern for presentation. Profile authors should consider making the order a feature of the rules about the narrative, not the rules about the data - requiring ordered data makes the profile much less re-usable.</p>
+</td></tr>
+  <tr><td>Default Value</td><td>false</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.slicing.rules"> </a><b>DataElement.element.slicing.rules</b></td></tr>
+  <tr><td>Definition</td><td><p>Whether additional slices are allowed or not. When the slices are ordered, profile authors can also say that additional slices are only allowed at the end.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td>How slices are interpreted when evaluating an instance.<br/>The codes SHALL be taken from <a href="../valueset-resource-slicing-rules.html">SlicingRules</a></td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#code">code</a></td></tr>
+  <tr><td>Comments</td><td><p>Allowing additional elements makes for a much for flexible template - it's open for use in wider contexts, but also means that the content of the resource is not closed, and applications have to decide how to handle content not described by the profile.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.short"> </a><b>DataElement.element.short</b></td></tr>
+  <tr><td>Definition</td><td><p>A concise description of what this element means (e.g. for use in autogenerated summaries).</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td>Comments</td><td><p>May change the term to provide language more appropriate to the context of the profile or to reflect slicing.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.definition"> </a><b>DataElement.element.definition</b></td></tr>
+  <tr><td>Definition</td><td><p>Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#markdown">markdown</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Requirements</td><td><p>To allow a user to state the usage of an element in a particular context.</p>
+</td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>Description</td></tr>
+  <tr><td>Comments</td><td><p>It is easy for a different definition to change the meaning of an element and this can have nasty downstream consequences. Please be careful when providing definitions.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.comments"> </a><b>DataElement.element.comments</b></td></tr>
+  <tr><td>Definition</td><td><p>Explanatory notes and implementation guidance about the data element, including notes about how to use the data properly, exceptions to proper use, etc.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#markdown">markdown</a></td></tr>
+  <tr><td>Comments</td><td><p>If it is possible to capture usage rules using constraints, that mechanism should be used in preference to this element.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.requirements"> </a><b>DataElement.element.requirements</b></td></tr>
+  <tr><td>Definition</td><td><p>This element is for traceability of why the element was created and why the constraints exist as they do. This may be used to point to source materials or specifications that drove the structure of this element.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#markdown">markdown</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>This element does not describe the usage of the element (that's done in comments), rather it's for traceability of <em>why</em> the element is either needed or why the constraints exist as they do.  This may be used to point to source materials or specifications that drove the structure of this data element.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.alias"> </a><b>DataElement.element.alias</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies additional names by which this element might also be known.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Requirements</td><td><p>Allows for better easier recognition of the element by multiple communities, including international communities.</p>
+</td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>synonym, other name</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.min"> </a><b>DataElement.element.min</b></td></tr>
+  <tr><td>Definition</td><td><p>The minimum number of times this element SHALL appear in the instance.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1 This element is affected by the following invariants: eld-2</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#integer">integer</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.max"> </a><b>DataElement.element.max</b></td></tr>
+  <tr><td>Definition</td><td><p>The maximum number of times this element is permitted to appear in the instance.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1 This element is affected by the following invariants: eld-3, eld-2</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Invariants</td><td><b>Defined on this element</b><br/>
+<b title="Formal Invariant Identifier">eld-3</b>: Max SHALL be a number or &quot;*&quot; (xpath: @value='*' or (normalize-space(@value)!='' and normalize-space(translate(@value, '0123456789',''))=''))</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.base"> </a><b>DataElement.element.base</b></td></tr>
+  <tr><td>Definition</td><td><p>Information about the base definition of the element, provided to make it unnecessary for tools to trace the deviation of the element through the derived and related profiles. This information is only provided where the element definition represents a constraint on another element definition, and must be present if there is a base element definition.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../element.html#Element">Element</a></td></tr>
+  <tr><td>Comments</td><td><p>The base information does not carry any information that could not be determined from the path and related profiles, but making this determination requires both that the related profiles are available, and that the algorithm to determine them be available. So they are deformalised into this location for tooling convenience, and to ensure that the base information is available without dependencies.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.base.id"> </a><b>DataElement.element.base.id</b></td></tr>
+  <tr><td>Definition</td><td><p>unique id for the element within a resource (for internal references).</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#id">id</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.base.extension"> </a><b>DataElement.element.base.extension</b></td></tr>
+  <tr><td>Definition</td><td><p>May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a></td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>extensions, user content</td></tr>
+  <tr><td>Comments</td><td><p>There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.base.path"> </a><b>DataElement.element.base.path</b></td></tr>
+  <tr><td>Definition</td><td><p>The Path that identifies the base element - this matches the ElementDefinition.path for that element. Across FHIR, there is only one base definition of any element - that is, an element definition on a <a href="../structuredefinition.html">StructureDefinition</a> without a StructureDefinition.base.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.base.min"> </a><b>DataElement.element.base.min</b></td></tr>
+  <tr><td>Definition</td><td><p>Minimum cardinality of the base element identified by the path.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#integer">integer</a></td></tr>
+  <tr><td>Comments</td><td><p>This is provided for consistency with max, and may affect code generation of mandatory elements of the base resource are generated differently (some reference implementations have done this).</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.base.max"> </a><b>DataElement.element.base.max</b></td></tr>
+  <tr><td>Definition</td><td><p>Maximum cardinality of the base element identified by the path.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td>Comments</td><td><p>This is provided to code generation, since the wire representation in JSON differs depending on whether the base element has max &gt; 1. Also, some forms of code generation may differ.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.contentReference"> </a><b>DataElement.element.contentReference</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies the identity of an element defined elsewhere in the profile whose content rules should be applied to the current element.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1 This element is affected by the following invariants: eld-5</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#uri">uri</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.type"> </a><b>DataElement.element.type</b></td></tr>
+  <tr><td>Definition</td><td><p>The data type or resource that the value of this element is permitted to be.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1 This element is affected by the following invariants: eld-13</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../element.html#Element">Element</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>The Type of the element can be left blank, in which case the type is inherited from the resource. The type can only be listed in this field if it is an allowed option in the base resource.</p>
+</td></tr>
+  <tr><td>Invariants</td><td><b>Defined on this element</b><br/>
+<b title="Formal Invariant Identifier">eld-4</b>: Aggregation may only be specified if one of the allowed types for the element is a resource (xpath: not(exists(f:aggregation)) or exists(f:code[@value = 'Reference']))</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.type.id"> </a><b>DataElement.element.type.id</b></td></tr>
+  <tr><td>Definition</td><td><p>unique id for the element within a resource (for internal references).</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#id">id</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.type.extension"> </a><b>DataElement.element.type.extension</b></td></tr>
+  <tr><td>Definition</td><td><p>May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a></td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>extensions, user content</td></tr>
+  <tr><td>Comments</td><td><p>There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.type.code"> </a><b>DataElement.element.type.code</b></td></tr>
+  <tr><td>Definition</td><td><p>Name of Data type or Resource that is a(or the) type used for this element.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td>Either a resource or a data type, including logical model types<br/>The codes SHALL be taken from <a href="../valueset-defined-types.html">FHIRDefinedType</a>; other codes may be used where these codes are not suitable</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#code">code</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>If the element is a reference to another resource, this element contains &quot;Reference&quot;, and the profile element refers to the profile of the allowed target of the resource, which may be a reference to the general definition of a resource (e.g. http://hl7.org/fhir/StructureDefinition/Patient). There would be one pair of type/code for each allowed target resource type.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.type.profile"> </a><b>DataElement.element.type.profile</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies a profile structure or implementation Guide that SHALL hold for resources or datatypes referenced as the type of this element. Can be a local reference - to another structure in this profile, or a reference to a structure in another profile. When more than one profile is specified, the content must conform to all of them. When an implementation guide is specified, the resource SHALL conform to at least one profile defined in the implementation guide.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#uri">uri</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.type.aggregation"> </a><b>DataElement.element.type.aggregation</b></td></tr>
+  <tr><td>Definition</td><td><p>If the type is a reference to another resource, how the resource is or can be aggregated - is it a contained resource, or a reference, and if the context is a bundle, is it included in the bundle.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..* This element is affected by the following invariants: eld-4</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td>How resource references can be aggregated.<br/>The codes SHALL be taken from <a href="../valueset-resource-aggregation-mode.html">AggregationMode</a></td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#code">code</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.type.versioning"> </a><b>DataElement.element.type.versioning</b></td></tr>
+  <tr><td>Definition</td><td><p>Whether this reference needs to be version specific or version independent, or whetehr either can be used.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td>Whether a reference needs to be version specific or version independent, or whetehr either can be used<br/>The codes SHALL be taken from <a href="../valueset-reference-version-rules.html">ReferenceVersionRules</a></td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#code">code</a></td></tr>
+  <tr><td>Comments</td><td><p>The base specification never makes a rule as to which form is allowed, but implementation guides may do this.</p>
+</td></tr>
+  <tr><td>Default Value</td><td>either</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.defaultValue[x]"> </a><b>DataElement.element.defaultValue[x]</b></td></tr>
+  <tr><td>Definition</td><td><p>The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1 This element is affected by the following invariants: eld-15</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td>Choice of: <a href="../datatypes.html#boolean">boolean</a>, <a href="../datatypes.html#integer">integer</a>, <a href="../datatypes.html#decimal">decimal</a>, <a href="../datatypes.html#base64Binary">base64Binary</a>, <a href="../datatypes.html#instant">instant</a>, <a href="../datatypes.html#string">string</a>, <a href="../datatypes.html#uri">uri</a>, <a href="../datatypes.html#date">date</a>, <a href="../datatypes.html#dateTime">dateTime</a>, <a href="../datatypes.html#time">time</a>, <a href="../datatypes.html#code">code</a>, <a href="../datatypes.html#oid">oid</a>, <a href="../datatypes.html#id">id</a>, <a href="../datatypes.html#unsignedInt">unsignedInt</a>, <a href="../datatypes.html#positiveInt">positiveInt</a>, <a href="../datatypes.html#markdown">markdown</a>, <a href="../datatypes.html#Annotation">Annotation</a>, <a href="../datatypes.html#Attachment">Attachment</a>, <a href="../datatypes.html#Identifier">Identifier</a>, <a href="../datatypes.html#CodeableConcept">CodeableConcept</a>, <a href="../datatypes.html#Coding">Coding</a>, <a href="../datatypes.html#Quantity">Quantity</a>, <a href="../datatypes.html#Count">Count</a>, <a href="../datatypes.html#Age">Age</a>, <a href="../datatypes.html#Duration">Duration</a>, <a href="../datatypes.html#Distance">Distance</a>, <a href="../datatypes.html#Money">Money</a>, <a href="../datatypes.html#Range">Range</a>, <a href="../datatypes.html#Period">Period</a>, <a href="../datatypes.html#Ratio">Ratio</a>, <a href="../datatypes.html#SampledData">SampledData</a>, <a href="../datatypes.html#Signature">Signature</a>, <a href="../datatypes.html#HumanName">HumanName</a>, <a href="../datatypes.html#Address">Address</a>, <a href="../datatypes.html#ContactPoint">ContactPoint</a>, <a href="../datatypes.html#Timing">Timing</a>, <a href="../references.html#Reference">Reference</a>, <a href="../resource.html#Meta">Meta</a></td></tr>
+  <tr><td>[x] Note</td><td>See <a href="../formats.html#choice">Choice of Data Types</a> for further information about how to use [x]</td></tr>
+  <tr><td>Comments</td><td><p>Default values can only be specified on a resource, data type, or extension definition, and never in a profile that applies to one of these. Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed. For these reasons, default values are (and should be) used extremely sparingly.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.meaningWhenMissing"> </a><b>DataElement.element.meaningWhenMissing</b></td></tr>
+  <tr><td>Definition</td><td><p>The Implicit meaning that is to be understood when this element is missing (e.g. 'when this element is missing, the period is ongoing'.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1 This element is affected by the following invariants: eld-15</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#markdown">markdown</a></td></tr>
+  <tr><td>Comments</td><td><p>Implicit meanings for missing values can only be specified on a resource, data type, or extension definition, and never in a profile that applies to one of these. An implicit meaning for a missing value can never be changed, and specifying one has the consequence that constraining its use in profiles eliminates use cases as possibilities, not merely moving them out of scope.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.fixed[x]"> </a><b>DataElement.element.fixed[x]</b></td></tr>
+  <tr><td>Definition</td><td><p>Specifies a value that SHALL be exactly the value  for this element in the instance. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1 This element is affected by the following invariants: eld-5, eld-6, eld-8</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td>Choice of: <a href="../datatypes.html#boolean">boolean</a>, <a href="../datatypes.html#integer">integer</a>, <a href="../datatypes.html#decimal">decimal</a>, <a href="../datatypes.html#base64Binary">base64Binary</a>, <a href="../datatypes.html#instant">instant</a>, <a href="../datatypes.html#string">string</a>, <a href="../datatypes.html#uri">uri</a>, <a href="../datatypes.html#date">date</a>, <a href="../datatypes.html#dateTime">dateTime</a>, <a href="../datatypes.html#time">time</a>, <a href="../datatypes.html#code">code</a>, <a href="../datatypes.html#oid">oid</a>, <a href="../datatypes.html#id">id</a>, <a href="../datatypes.html#unsignedInt">unsignedInt</a>, <a href="../datatypes.html#positiveInt">positiveInt</a>, <a href="../datatypes.html#markdown">markdown</a>, <a href="../datatypes.html#Annotation">Annotation</a>, <a href="../datatypes.html#Attachment">Attachment</a>, <a href="../datatypes.html#Identifier">Identifier</a>, <a href="../datatypes.html#CodeableConcept">CodeableConcept</a>, <a href="../datatypes.html#Coding">Coding</a>, <a href="../datatypes.html#Quantity">Quantity</a>, <a href="../datatypes.html#Count">Count</a>, <a href="../datatypes.html#Age">Age</a>, <a href="../datatypes.html#Duration">Duration</a>, <a href="../datatypes.html#Distance">Distance</a>, <a href="../datatypes.html#Money">Money</a>, <a href="../datatypes.html#Range">Range</a>, <a href="../datatypes.html#Period">Period</a>, <a href="../datatypes.html#Ratio">Ratio</a>, <a href="../datatypes.html#SampledData">SampledData</a>, <a href="../datatypes.html#Signature">Signature</a>, <a href="../datatypes.html#HumanName">HumanName</a>, <a href="../datatypes.html#Address">Address</a>, <a href="../datatypes.html#ContactPoint">ContactPoint</a>, <a href="../datatypes.html#Timing">Timing</a>, <a href="../references.html#Reference">Reference</a>, <a href="../resource.html#Meta">Meta</a></td></tr>
+  <tr><td>[x] Note</td><td>See <a href="../formats.html#choice">Choice of Data Types</a> for further information about how to use [x]</td></tr>
+  <tr><td>Comments</td><td><p>This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.pattern[x]"> </a><b>DataElement.element.pattern[x]</b></td></tr>
+  <tr><td>Definition</td><td><p>Specifies a value that the value in the instance SHALL follow - that is, any value in the pattern must be found in the instance. Other additional values may be found too. This is effectively constraint by example.  The values of elements present in the pattern must match exactly (case-sensitive, accent-sensitive, etc.).</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1 This element is affected by the following invariants: eld-5, eld-7, eld-8</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td>Choice of: <a href="../datatypes.html#boolean">boolean</a>, <a href="../datatypes.html#integer">integer</a>, <a href="../datatypes.html#decimal">decimal</a>, <a href="../datatypes.html#base64Binary">base64Binary</a>, <a href="../datatypes.html#instant">instant</a>, <a href="../datatypes.html#string">string</a>, <a href="../datatypes.html#uri">uri</a>, <a href="../datatypes.html#date">date</a>, <a href="../datatypes.html#dateTime">dateTime</a>, <a href="../datatypes.html#time">time</a>, <a href="../datatypes.html#code">code</a>, <a href="../datatypes.html#oid">oid</a>, <a href="../datatypes.html#id">id</a>, <a href="../datatypes.html#unsignedInt">unsignedInt</a>, <a href="../datatypes.html#positiveInt">positiveInt</a>, <a href="../datatypes.html#markdown">markdown</a>, <a href="../datatypes.html#Annotation">Annotation</a>, <a href="../datatypes.html#Attachment">Attachment</a>, <a href="../datatypes.html#Identifier">Identifier</a>, <a href="../datatypes.html#CodeableConcept">CodeableConcept</a>, <a href="../datatypes.html#Coding">Coding</a>, <a href="../datatypes.html#Quantity">Quantity</a>, <a href="../datatypes.html#Count">Count</a>, <a href="../datatypes.html#Age">Age</a>, <a href="../datatypes.html#Duration">Duration</a>, <a href="../datatypes.html#Distance">Distance</a>, <a href="../datatypes.html#Money">Money</a>, <a href="../datatypes.html#Range">Range</a>, <a href="../datatypes.html#Period">Period</a>, <a href="../datatypes.html#Ratio">Ratio</a>, <a href="../datatypes.html#SampledData">SampledData</a>, <a href="../datatypes.html#Signature">Signature</a>, <a href="../datatypes.html#HumanName">HumanName</a>, <a href="../datatypes.html#Address">Address</a>, <a href="../datatypes.html#ContactPoint">ContactPoint</a>, <a href="../datatypes.html#Timing">Timing</a>, <a href="../references.html#Reference">Reference</a>, <a href="../resource.html#Meta">Meta</a></td></tr>
+  <tr><td>[x] Note</td><td>See <a href="../formats.html#choice">Choice of Data Types</a> for further information about how to use [x]</td></tr>
+  <tr><td>Comments</td><td><p>Mostly used for fixing values of CodeableConcept. At present, pattern[x] is not recommended as a basis for slicing while issues related to this are investigated during the DSTU period.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.example[x]"> </a><b>DataElement.element.example[x]</b></td></tr>
+  <tr><td>Definition</td><td><p>A sample value for this element demonstrating the type of information that would typically be captured.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td>Choice of: <a href="../datatypes.html#boolean">boolean</a>, <a href="../datatypes.html#integer">integer</a>, <a href="../datatypes.html#decimal">decimal</a>, <a href="../datatypes.html#base64Binary">base64Binary</a>, <a href="../datatypes.html#instant">instant</a>, <a href="../datatypes.html#string">string</a>, <a href="../datatypes.html#uri">uri</a>, <a href="../datatypes.html#date">date</a>, <a href="../datatypes.html#dateTime">dateTime</a>, <a href="../datatypes.html#time">time</a>, <a href="../datatypes.html#code">code</a>, <a href="../datatypes.html#oid">oid</a>, <a href="../datatypes.html#id">id</a>, <a href="../datatypes.html#unsignedInt">unsignedInt</a>, <a href="../datatypes.html#positiveInt">positiveInt</a>, <a href="../datatypes.html#markdown">markdown</a>, <a href="../datatypes.html#Annotation">Annotation</a>, <a href="../datatypes.html#Attachment">Attachment</a>, <a href="../datatypes.html#Identifier">Identifier</a>, <a href="../datatypes.html#CodeableConcept">CodeableConcept</a>, <a href="../datatypes.html#Coding">Coding</a>, <a href="../datatypes.html#Quantity">Quantity</a>, <a href="../datatypes.html#Count">Count</a>, <a href="../datatypes.html#Age">Age</a>, <a href="../datatypes.html#Duration">Duration</a>, <a href="../datatypes.html#Distance">Distance</a>, <a href="../datatypes.html#Money">Money</a>, <a href="../datatypes.html#Range">Range</a>, <a href="../datatypes.html#Period">Period</a>, <a href="../datatypes.html#Ratio">Ratio</a>, <a href="../datatypes.html#SampledData">SampledData</a>, <a href="../datatypes.html#Signature">Signature</a>, <a href="../datatypes.html#HumanName">HumanName</a>, <a href="../datatypes.html#Address">Address</a>, <a href="../datatypes.html#ContactPoint">ContactPoint</a>, <a href="../datatypes.html#Timing">Timing</a>, <a href="../references.html#Reference">Reference</a>, <a href="../resource.html#Meta">Meta</a></td></tr>
+  <tr><td>[x] Note</td><td>See <a href="../formats.html#choice">Choice of Data Types</a> for further information about how to use [x]</td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>This will most commonly be present for data where it's not implicitly obvious from either the data type or value set what the values might be.  (I.e. Example values for dates or quantities would generally be unnecessary.)  If the example value is fully populated, the publication tool can generate an instance automatically.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.minValue[x]"> </a><b>DataElement.element.minValue[x]</b></td></tr>
+  <tr><td>Definition</td><td><p>The minimum allowed value for the element. The value is inclusive. This is allowed for the types date, dateTime, instant, time, decimal, integer, and Quantity.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td>Choice of: <a href="../datatypes.html#boolean">boolean</a>, <a href="../datatypes.html#integer">integer</a>, <a href="../datatypes.html#decimal">decimal</a>, <a href="../datatypes.html#base64Binary">base64Binary</a>, <a href="../datatypes.html#instant">instant</a>, <a href="../datatypes.html#string">string</a>, <a href="../datatypes.html#uri">uri</a>, <a href="../datatypes.html#date">date</a>, <a href="../datatypes.html#dateTime">dateTime</a>, <a href="../datatypes.html#time">time</a>, <a href="../datatypes.html#code">code</a>, <a href="../datatypes.html#oid">oid</a>, <a href="../datatypes.html#id">id</a>, <a href="../datatypes.html#unsignedInt">unsignedInt</a>, <a href="../datatypes.html#positiveInt">positiveInt</a>, <a href="../datatypes.html#markdown">markdown</a>, <a href="../datatypes.html#Annotation">Annotation</a>, <a href="../datatypes.html#Attachment">Attachment</a>, <a href="../datatypes.html#Identifier">Identifier</a>, <a href="../datatypes.html#CodeableConcept">CodeableConcept</a>, <a href="../datatypes.html#Coding">Coding</a>, <a href="../datatypes.html#Quantity">Quantity</a>, <a href="../datatypes.html#Count">Count</a>, <a href="../datatypes.html#Age">Age</a>, <a href="../datatypes.html#Duration">Duration</a>, <a href="../datatypes.html#Distance">Distance</a>, <a href="../datatypes.html#Money">Money</a>, <a href="../datatypes.html#Range">Range</a>, <a href="../datatypes.html#Period">Period</a>, <a href="../datatypes.html#Ratio">Ratio</a>, <a href="../datatypes.html#SampledData">SampledData</a>, <a href="../datatypes.html#Signature">Signature</a>, <a href="../datatypes.html#HumanName">HumanName</a>, <a href="../datatypes.html#Address">Address</a>, <a href="../datatypes.html#ContactPoint">ContactPoint</a>, <a href="../datatypes.html#Timing">Timing</a>, <a href="../references.html#Reference">Reference</a>, <a href="../resource.html#Meta">Meta</a></td></tr>
+  <tr><td>[x] Note</td><td>See <a href="../formats.html#choice">Choice of Data Types</a> for further information about how to use [x]</td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a a <a href="../datatypes.html#duration">Duration</a> which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.l"> </a><b>DataElement.element.maxValue[x](l)</b></td></tr>
+  <tr><td>Definition</td><td><p>The maximum allowed value for the element. The value is inclusive. This is allowed for the types date, dateTime, instant, time, decimal, integer, and Quantity.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td>Choice of: <a href="../datatypes.html#boolean">boolean</a>, <a href="../datatypes.html#integer">integer</a>, <a href="../datatypes.html#decimal">decimal</a>, <a href="../datatypes.html#base64Binary">base64Binary</a>, <a href="../datatypes.html#instant">instant</a>, <a href="../datatypes.html#string">string</a>, <a href="../datatypes.html#uri">uri</a>, <a href="../datatypes.html#date">date</a>, <a href="../datatypes.html#dateTime">dateTime</a>, <a href="../datatypes.html#time">time</a>, <a href="../datatypes.html#code">code</a>, <a href="../datatypes.html#oid">oid</a>, <a href="../datatypes.html#id">id</a>, <a href="../datatypes.html#unsignedInt">unsignedInt</a>, <a href="../datatypes.html#positiveInt">positiveInt</a>, <a href="../datatypes.html#markdown">markdown</a>, <a href="../datatypes.html#Annotation">Annotation</a>, <a href="../datatypes.html#Attachment">Attachment</a>, <a href="../datatypes.html#Identifier">Identifier</a>, <a href="../datatypes.html#CodeableConcept">CodeableConcept</a>, <a href="../datatypes.html#Coding">Coding</a>, <a href="../datatypes.html#Quantity">Quantity</a>, <a href="../datatypes.html#Count">Count</a>, <a href="../datatypes.html#Age">Age</a>, <a href="../datatypes.html#Duration">Duration</a>, <a href="../datatypes.html#Distance">Distance</a>, <a href="../datatypes.html#Money">Money</a>, <a href="../datatypes.html#Range">Range</a>, <a href="../datatypes.html#Period">Period</a>, <a href="../datatypes.html#Ratio">Ratio</a>, <a href="../datatypes.html#SampledData">SampledData</a>, <a href="../datatypes.html#Signature">Signature</a>, <a href="../datatypes.html#HumanName">HumanName</a>, <a href="../datatypes.html#Address">Address</a>, <a href="../datatypes.html#ContactPoint">ContactPoint</a>, <a href="../datatypes.html#Timing">Timing</a>, <a href="../references.html#Reference">Reference</a>, <a href="../resource.html#Meta">Meta</a></td></tr>
+  <tr><td>[x] Note</td><td>See <a href="../formats.html#choice">Choice of Data Types</a> for further information about how to use [x]</td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a a <a href="../datatypes.html#duration">Duration</a> which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.maxLength"> </a><b>DataElement.element.maxLength</b></td></tr>
+  <tr><td>Definition</td><td><p>Indicates the maximum length in characters that is permitted to be present in conformant instances and which is expected to be supported by conformant consumers that support the element.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#integer">integer</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>Receivers are not required to reject instances that exceed the maximum length.  The full length could be stored.  In some cases, data might be truncated, though truncation should be undertaken with care and an understanding of the consequences of doing so. If not specified, there is no conformance expectation for length support.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.condition"> </a><b>DataElement.element.condition</b></td></tr>
+  <tr><td>Definition</td><td><p>A reference to an invariant that may make additional statements about the cardinality or value in the instance.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#id">id</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.constraint"> </a><b>DataElement.element.constraint</b></td></tr>
+  <tr><td>Definition</td><td><p>Formal constraints such as co-occurrence and other constraints that can be computationally evaluated within the context of the instance.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../element.html#Element">Element</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>Constraints should be declared on the &quot;context&quot; element - the lowest element in the hierarchy that is common to all nodes referenced by the constraint.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.constraint.id"> </a><b>DataElement.element.constraint.id</b></td></tr>
+  <tr><td>Definition</td><td><p>unique id for the element within a resource (for internal references).</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#id">id</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.constraint.extension"> </a><b>DataElement.element.constraint.extension</b></td></tr>
+  <tr><td>Definition</td><td><p>May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a></td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>extensions, user content</td></tr>
+  <tr><td>Comments</td><td><p>There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.constraint.key"> </a><b>DataElement.element.constraint.key</b></td></tr>
+  <tr><td>Definition</td><td><p>Allows identification of which elements have their cardinalities impacted by the constraint.  Will not be referenced for constraints that do not affect cardinality.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1 This element is affected by the following invariants: eld-14</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#id">id</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.constraint.requirements"> </a><b>DataElement.element.constraint.requirements</b></td></tr>
+  <tr><td>Definition</td><td><p>Description of why this constraint is necessary or appropriate.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>To be used if the reason for the constraint may not be intuitive to all implementers.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.constraint.severity"> </a><b>DataElement.element.constraint.severity</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies the impact constraint violation has on the conformance of the instance.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td>SHALL applications comply with this constraint?<br/>The codes SHALL be taken from <a href="../valueset-constraint-severity.html">ConstraintSeverity</a></td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#code">code</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>This allows constraints to be asserted as &quot;shall&quot; (error) and &quot;should&quot; (warning).</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.constraint.human"> </a><b>DataElement.element.constraint.human</b></td></tr>
+  <tr><td>Definition</td><td><p>Text that can be used to describe the constraint in messages identifying that the constraint has been violated.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>Should be expressed in business terms as much as possible.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.constraint.expression"> </a><b>DataElement.element.constraint.expression</b></td></tr>
+  <tr><td>Definition</td><td><p>A <a href="../fluentpath.html">FluentPath</a> expression of constraint that can be executed to see if this constraint is met.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td>Requirements</td><td><p>Used by validation tooling tests of the validity of the resource.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.constraint.xpath"> </a><b>DataElement.element.constraint.xpath</b></td></tr>
+  <tr><td>Definition</td><td><p>An XPath expression of constraint that can be executed to see if this constraint is met.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Requirements</td><td><p>Used in Schematron tests of the validity of the resource.</p>
+</td></tr>
+  <tr><td>Comments</td><td><p>Elements SHALL use &quot;f&quot; as the namespace prefix for the FHIR namespace, and &quot;x&quot; for the xhtml namespace, and SHALL NOT use any other prefixes.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.mustSupport"> </a><b>DataElement.element.mustSupport</b></td></tr>
+  <tr><td>Definition</td><td><p>If true, implementations that produce or consume resources SHALL provide &quot;support&quot; for the element in some meaningful way.  If false, the element may be ignored and not supported.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..0</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#boolean">boolean</a></td></tr>
+  <tr><td>Requirements</td><td><p>Allows a profile to set expectations for system capabilities beyond merely respecting cardinality constraints.</p>
+</td></tr>
+  <tr><td>Comments</td><td><p>&quot;Something useful&quot; is context dependent and impossible to describe in the base FHIR specification. For this reason, tue mustSupport flag is never set to true by the FHIR specification itself - it is only set to true in profiles.</p>
+<p>This is done in <a href="../profiling.html#mustsupport">Resource Profiles</a>, where the profile labels an element as mustSupport=true. When a profile does this, it SHALL also make clear exactly what kind of &quot;support&quot; is required, as this can mean many things.</p>
+<p>Note that an element that has the property IsModifier is not necessarily a &quot;key&quot; element (e.g. one of the important elements to make use of the resource), nor is it automatically mustSupport - however both of these things are more likely to be true for IsModifier elements than for other elements.</p>
+</td></tr>
+  <tr><td>Default Value</td><td>false</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.isModifier"> </a><b>DataElement.element.isModifier</b></td></tr>
+  <tr><td>Definition</td><td><p>If true, the value of this element affects the interpretation of the element or resource that contains it, and the value of the element cannot be ignored. Typically, this is used for status, negation and qualification codes. The effect of this is that the element cannot be ignored by systems: they SHALL either recognize the element and process it, and/or a pre-determination has been made that it is not relevant to their particular system.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#boolean">boolean</a></td></tr>
+  <tr><td>Requirements</td><td><p>Allows elements to be introduced into a specification that can't safely be ignored by applications that don't recognize them.</p>
+</td></tr>
+  <tr><td>Comments</td><td><p>Only the definition of an element can set IsModifier true - either the specification itself or where an extension is originally defined. Once set, it cannot be changed in derived profiles. An element/extension that has isModifier=true SHOULD also have a minimum cardinality of 1, so that there is no lack of clarity about what to do if it is missing. If it can be missing, the definition SHALL make the meaning of a missing element clear.</p>
+</td></tr>
+  <tr><td>Default Value</td><td>false</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.isSummary"> </a><b>DataElement.element.isSummary</b></td></tr>
+  <tr><td>Definition</td><td><p>Whether the element should be included if a client requests a search with the parameter _summary=true.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#boolean">boolean</a></td></tr>
+  <tr><td>Requirements</td><td><p>Allow clients to search through large resources quickly.</p>
+</td></tr>
+  <tr><td>Comments</td><td><p>Some resources include a set of simple metadata, and some very large data. This element is used to reduce the quantity of data returned in searches. Note that servers may pre-cache summarized resources for optimal performance, so servers may not support per-profile use of the isSummary flag.</p>
+</td></tr>
+  <tr><td>Default Value</td><td>false</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.binding"> </a><b>DataElement.element.binding</b></td></tr>
+  <tr><td>Definition</td><td><p>Binds to a value set if this element is coded (code, Coding, CodeableConcept).</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1 This element is affected by the following invariants: eld-11</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../element.html#Element">Element</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Invariants</td><td><b>Defined on this element</b><br/>
+<b title="Formal Invariant Identifier">eld-10</b>: provide either a reference or a description (or both) (xpath: (exists(f:valueSetUri) or exists(f:valueSetReference)) or exists(f:description))</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.binding.id"> </a><b>DataElement.element.binding.id</b></td></tr>
+  <tr><td>Definition</td><td><p>unique id for the element within a resource (for internal references).</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#id">id</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.binding.extension"> </a><b>DataElement.element.binding.extension</b></td></tr>
+  <tr><td>Definition</td><td><p>May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a></td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>extensions, user content</td></tr>
+  <tr><td>Comments</td><td><p>There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.binding.strength"> </a><b>DataElement.element.binding.strength</b></td></tr>
+  <tr><td>Definition</td><td><p>Indicates the degree of conformance expectations associated with this binding - that is, the degree to which the provided value set must be adhered to in the instances.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td>Indication of the degree of conformance expectations associated with a binding.<br/>The codes SHALL be taken from <a href="../valueset-binding-strength.html">BindingStrength</a></td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#code">code</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>conformance, extensibility</td></tr>
+  <tr><td>Comments</td><td><p>For further discussion, see <a href="../terminologies.html">Using Terminologies</a>.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.binding.description"> </a><b>DataElement.element.binding.description</b></td></tr>
+  <tr><td>Definition</td><td><p>Describes the intended use of this particular set of codes.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1 This element is affected by the following invariants: eld-10</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.binding.valueSetReference"> </a><b>DataElement.element.binding.valueSetReference</b></td></tr>
+  <tr><td>Definition</td><td><p>Points to the value set or external definition (e.g. implicit value set) that identifies the set of codes to be used.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1 This element is affected by the following invariants: eld-10, eld-12</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../references.html#Reference">Reference</a>(<a href="../sdcde/sdcde-valueset.html" title="http://hl7.org/fhir/StructureDefinition/sdcde-valueset">Structured Data Capture Data Element Exchange Value Set</a>)</td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>For value sets with a referenceResource, the display can contain the value set description.  The reference may be version-specific or not.</p>
+</td></tr>
+  <tr><td>Invariants</td><td><b>Defined on this element</b><br/>
+<b title="Formal Invariant Identifier">eld-12</b>: URI SHALL start with http:// or https:// urn: (xpath: starts-with(string(@value), 'http:') or starts-with(string(@value), 'https:') or starts-with(string(@value), 'urn:'))<br/><b title="Formal Invariant Identifier">inv-3</b>: Must have data element permitted value concept map extension if and only if data element permitted value valueset extension is present (xpath: count(f:extension[@url='http://hl7.org/fhir/StructureDefinition/11179-permitted-value-valueset'])=count(f:extension[@url='http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap']))</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.binding.valueSetReference.id"> </a><b>DataElement.element.binding.valueSetReference.id</b></td></tr>
+  <tr><td>Definition</td><td><p>unique id for the element within a resource (for internal references).</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#id">id</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.binding.valueSetReference.extension"> </a><b>DataElement.element.binding.valueSetReference.extension</b></td></tr>
+  <tr><td>Definition</td><td><p>An Extension</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a></td></tr>
+  <tr><td><a href="../profiling.html#slicing">Slicing</a></td><td>This element introduces a set of slices. The slicing rules are: <ul> <li>unordered</li><li>Open</li><li>discriminators: url</li></ul></td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.binding.valueSetReference.permittedValueValueset"> </a><b>DataElement.element.binding.valueSetReference.extension (<a href="../extension-11179-permitted-value-valueset.html">http://hl7.org/fhir/StructureDefinition/11179-permitted-value-valueset</a>)</b></td></tr>
+  <tr><td>Definition</td><td><p>Allows expressing the value set that must be stored internally by the system (as distinct from the base value set which defines values for exchange).</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a>  (Extension Type: <a href="../references.html#Reference">Reference</a>(<a href="../valueset.html" title="http://hl7.org/fhir/StructureDefinition/ValueSet">ValueSet</a>))</td></tr>
+  <tr><td>Comments</td><td><p>The permitted value set must have a 1..1 set of codes for each code in the value meaning value set.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.binding.valueSetReference.permittedValueConcepmap"> </a><b>DataElement.element.binding.valueSetReference.extension (<a href="../extension-11179-permitted-value-conceptmap.html">http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap</a>)</b></td></tr>
+  <tr><td>Definition</td><td><p>Expresses the linkage between the internal codes used for storage and the codes used for exchange.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a>  (Extension Type: <a href="../references.html#Reference">Reference</a>(<a href="../conceptmap.html" title="http://hl7.org/fhir/StructureDefinition/ConceptMap">ConceptMap</a>))</td></tr>
+  <tr><td>Comments</td><td><p>The permitted value set must have a 1..1 set of codes for each code in the value meaning value set.  The source for the concept map is the value set the extension appears on.  The target is the permitted-value-valueset.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.binding.valueSetReference.reference"> </a><b>DataElement.element.binding.valueSetReference.reference</b></td></tr>
+  <tr><td>Definition</td><td><p>A reference to a location at which the other resource is found. The reference may be a relative reference, in which case it is relative to the service base URL, or an absolute URL that resolves to the location where the resource is found. The reference may be version specific or not. If the reference is not to a FHIR RESTful server, then it should be assumed to be version specific. Internal fragment references (start with '#') refer to contained resources.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1 This element is affected by the following invariants: ref-1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td>Comments</td><td><p>Using absolute URLs provides a stable scalable approach suitable for a cloud/web context, while using relative/logical references provides a flexible approach suitable for use when trading across closed eco-system boundaries.   Absolute URLs do not need to point to a FHIR RESTful server, though this is the preferred approach. If the URL conforms to the structure &quot;/[type]/[id]&quot; then it should be assumed that the reference is to a FHIR RESTful server.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.binding.valueSetReference.display"> </a><b>DataElement.element.binding.valueSetReference.display</b></td></tr>
+  <tr><td>Definition</td><td><p>Plain text narrative that identifies the resource in addition to the resource reference.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td>Comments</td><td><p>This is generally not the same as the Resource.text of the referenced resource.  The purpose is to identify what's being referenced, not to fully describe it.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.mapping"> </a><b>DataElement.element.mapping</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies a concept from an external specification that roughly corresponds to this element.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../element.html#Element">Element</a></td></tr>
+  <tr><td>Requirements</td><td><p>Provides guidance to implementers familiar with or converting content from other specifications.</p>
+</td></tr>
+  <tr><td>Comments</td><td><p>Mappings are not necessarily specific enough for safe translation.</p>
+</td></tr>
+  <tr><td><a href="../profiling.html#slicing">Slicing</a></td><td>This element introduces a set of slices. The slicing rules are: <ul> <li>unordered</li><li>Open</li><li>discriminators: identity</li></ul></td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.ClassPropertyMapping"> </a><b>DataElement.element.mapping(ClassPropertyMapping)</b></td></tr>
+  <tr><td>Definition</td><td><p>A mapping that defines the data element in terms of the SDC project's ObjectClass and Property value sets.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../element.html#Element">Element</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Requirements</td><td><p>Provides guidance to implementers familiar with or converting content from other specifications.</p>
+</td></tr>
+  <tr><td>Comments</td><td><p>Mappings are not necessarily specific enough for safe translation.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.mapping.id"> </a><b>DataElement.element.mapping.id</b></td></tr>
+  <tr><td>Definition</td><td><p>unique id for the element within a resource (for internal references).</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#id">id</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.mapping.extension"> </a><b>DataElement.element.mapping.extension</b></td></tr>
+  <tr><td>Definition</td><td><p>An Extension</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a></td></tr>
+  <tr><td><a href="../profiling.html#slicing">Slicing</a></td><td>This element introduces a set of slices. The slicing rules are: <ul> <li>unordered</li><li>Open</li><li>discriminators: url</li></ul></td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.mapping.objectClass"> </a><b>DataElement.element.mapping.extension (<a href="../extension-11179-objectclass.html">http://hl7.org/fhir/StructureDefinition/11179-objectClass</a>)</b></td></tr>
+  <tr><td>Definition</td><td><p>A concept that represents a set of ideas, abstractions, or things in the real world that can be identified with explicit boundaries and meaning and whose properties and behavior follow the same rules. It may be either a single or a group of associated concepts, abstractions, or things.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a>  (Extension Type: <a href="../datatypes.html#Coding">Coding</a>)</td></tr>
+  <tr><td>Comments</td><td><p>ObjectClass and Property are treated as a data model that can be mapped to like any other.  This extension merely captures the ObjectClass element as a discrete code.  The information conveyed here should also be conveyed in human-readable form in the mapping.map element.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.mapping.extension.id"> </a><b>DataElement.element.mapping.extension.id</b></td></tr>
+  <tr><td>Definition</td><td><p>unique id for the element within a resource (for internal references).</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#id">id</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.mapping.extension.extension"> </a><b>DataElement.element.mapping.extension.extension(extension)</b></td></tr>
+  <tr><td>Definition</td><td><p>An Extension</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..0</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.mapping.extension.url"> </a><b>DataElement.element.mapping.extension.url</b></td></tr>
+  <tr><td>Definition</td><td><p>Source of the definition for the extension code - a logical name or a URL.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#uri">uri</a></td></tr>
+  <tr><td>Comments</td><td><p>The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition should be version specific.  This will ideally be the URI for the Resource Profile defining the extension, with the code for the extension after a #.</p>
+</td></tr>
+  <tr><td>Fixed Value</td><td>http://hl7.org/fhir/StructureDefinition/11179-objectClass</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.mapping.extension.valueCoding"> </a><b>DataElement.element.mapping.extension.valueCoding</b></td></tr>
+  <tr><td>Definition</td><td><p>Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td>Codes representing the ISO 11179 Object Class for a data element<br/>The codes SHALL be taken from <a href="../sdcde/valueset-sdcde-dataelement-sdccode.html">DataElement SDC Concept</a>; other codes may be used where these codes are not suitable</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#Coding">Coding</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.mapping.property"> </a><b>DataElement.element.mapping.extension (<a href="../extension-11179-objectclassproperty.html">http://hl7.org/fhir/StructureDefinition/11179-objectClassProperty</a>)</b></td></tr>
+  <tr><td>Definition</td><td><p>A quality common to all members of an object class. A property may be any feature that humans naturally use to distinguish one individual object from another. It is the human perception of a single quality of an object class in the real world.  It is conceptual and thus has no particular associated means of representation by which the property can be communicated.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a>  (Extension Type: <a href="../datatypes.html#Coding">Coding</a>)</td></tr>
+  <tr><td>Comments</td><td><p>ObjectClass and Property are treated as a data model that can be mapped to like any other.  This extension merely captures the Property element as a discrete code.  The information conveyed here should also be conveyed in human-readable form in the mapping.map element.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.mapping.extension.id"> </a><b>DataElement.element.mapping.extension.id</b></td></tr>
+  <tr><td>Definition</td><td><p>unique id for the element within a resource (for internal references).</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#id">id</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.mapping.extension.extension"> </a><b>DataElement.element.mapping.extension.extension(extension)</b></td></tr>
+  <tr><td>Definition</td><td><p>An Extension</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..0</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.mapping.extension.url"> </a><b>DataElement.element.mapping.extension.url</b></td></tr>
+  <tr><td>Definition</td><td><p>Source of the definition for the extension code - a logical name or a URL.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#uri">uri</a></td></tr>
+  <tr><td>Comments</td><td><p>The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition should be version specific.  This will ideally be the URI for the Resource Profile defining the extension, with the code for the extension after a #.</p>
+</td></tr>
+  <tr><td>Fixed Value</td><td>http://hl7.org/fhir/StructureDefinition/11179-objectClassProperty</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.mapping.extension.valueCoding"> </a><b>DataElement.element.mapping.extension.valueCoding</b></td></tr>
+  <tr><td>Definition</td><td><p>Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td>Codes representing the ISO 11179 Object Class Property for a data element<br/>The codes SHALL be taken from <a href="../sdcde/valueset-sdcde-dataelement-sdccode.html">DataElement SDC Concept</a>; other codes may be used where these codes are not suitable</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#Coding">Coding</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.mapping.identity"> </a><b>DataElement.element.mapping.identity</b></td></tr>
+  <tr><td>Definition</td><td><p>An internal reference to the definition of a mapping.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#id">id</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Fixed Value</td><td>objclass-prop</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.mapping.language"> </a><b>DataElement.element.mapping.language</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies the computable language in which mapping.map is expressed.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td>The mime type of an attachment. Any valid mime type is allowed.<br/>The codes SHALL be taken from  <a href="http://www.rfc-editor.org/bcp/bcp13.txt">http://www.rfc-editor.org/bcp/bcp13.txt <img src="../external.png" style="text-align: baseline"/></a></td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#code">code</a></td></tr>
+  <tr><td>Comments</td><td><p>If omitted, then there can be no expectation of computational interpretation of the mapping.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.mapping.map"> </a><b>DataElement.element.mapping.map</b></td></tr>
+  <tr><td>Definition</td><td><p>This should be expressed as &quot;[uri for object class code system]#[code for object class code system] | [uri for property code system]#[code for property code system]&quot;.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>We express the mapping even though the class and property extensions already convey the data to ensure that systems that don't recognize the extensions still understand the mappings.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.OtherElementMapping"> </a><b>DataElement.element.mapping(OtherElementMapping)</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies a concept from an external specification that roughly corresponds to this element.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../element.html#Element">Element</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Requirements</td><td><p>Provides guidance to implementers familiar with or converting content from other specifications.</p>
+</td></tr>
+  <tr><td>Comments</td><td><p>Mappings are not necessarily specific enough for safe translation.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.mapping.id"> </a><b>DataElement.element.mapping.id</b></td></tr>
+  <tr><td>Definition</td><td><p>unique id for the element within a resource (for internal references).</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#id">id</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.mapping.MappingEquivalence"> </a><b>DataElement.element.mapping.extension (<a href="../extension-elementdefinition-equivalence.html">http://hl7.org/fhir/StructureDefinition/elementdefinition-equivalence</a>)</b></td></tr>
+  <tr><td>Definition</td><td><p>The level of equivalence between the element containing the mapping and the element mapped to.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a>  (Extension Type: <a href="../datatypes.html#code">code</a>)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.mapping.identity"> </a><b>DataElement.element.mapping.identity</b></td></tr>
+  <tr><td>Definition</td><td><p>An internal reference to the definition of a mapping.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#id">id</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.mapping.language"> </a><b>DataElement.element.mapping.language</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies the computable language in which mapping.map is expressed.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td>The mime type of an attachment. Any valid mime type is allowed.<br/>The codes SHALL be taken from  <a href="http://www.rfc-editor.org/bcp/bcp13.txt">http://www.rfc-editor.org/bcp/bcp13.txt <img src="../external.png" style="text-align: baseline"/></a></td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#code">code</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>The most common languages will be application/sparql-results+xml, application/sql and application/xquery.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdcde-dataelement.DataElement.element.mapping.map"> </a><b>DataElement.element.mapping.map</b></td></tr>
+  <tr><td>Definition</td><td><p>Expresses what part of the target specification corresponds to this element.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>For most mappings, the syntax is undefined.  Syntax will be provided for mappings to the RIM.  Multiple mappings may be possible and may include constraints on other resource elements that identify when a particular mapping applies.</p>
+</td></tr>
+</table>
+
+
+</div>
+
+
+				</div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+        
+    </div>  <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">  <!-- segment-footer -->
+		<div class="container">  <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.4.0-8453) generated on Mon, Jun 6, 2016 20:24+0000. <a href="../qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img src="../external.png" style="text-align: baseline"/></a> | 
+               <a style="color: #81BEF7" href="../history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="../toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fsdcde-dataelement&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fsdcde-dataelement">Compare to DSTU2 <img src="../external.png" style="text-align: baseline"/></a> |                
+               <a rel="license" style="color: #81BEF7" href="../license.html"><img src="../cc0.png" alt="CC0" style="border-style: none;"/></a> | 
+               <a style="color: #81BEF7" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank">Propose a change <img src="../external.png" style="text-align: baseline"/></a>   
+        </span>
+        </p>
+			</div>  <!-- /inner-wrapper -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+    
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src=".././assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src=".././dist/js/bootstrap.min.js"> </script>
+<script src=".././assets/js/respond.min.js"> </script>
+
+<script src=".././assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

@@ -1,0 +1,378 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Bundle",
+  "resourceType": "Bundle",
+  "Resource.id": {
+    "value": "bundle-transaction"
+  },
+  "Resource.meta": {
+    "Meta.lastUpdated": {
+      "value": "2014-08-18T01:43:30Z"
+    }
+  },
+  "Bundle.type": {
+    "value": "transaction"
+  },
+  "Bundle.entry": [
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0a"
+      },
+      "Patient": [
+        {
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Some narrative</div>"
+            }
+          },
+          "Patient.active": {
+            "value": true
+          },
+          "Patient.name": [
+            {
+              "HumanName.use": {
+                "value": "official"
+              },
+              "HumanName.family": [
+                {
+                  "value": "Chalmers"
+                }
+              ],
+              "HumanName.given": [
+                {
+                  "value": "Peter"
+                },
+                {
+                  "value": "James"
+                }
+              ]
+            }
+          ],
+          "Patient.gender": {
+            "value": "male"
+          },
+          "Patient.birthDate": {
+            "value": "1974-12-25"
+          }
+        }
+      ],
+      "Bundle.entry.request": {
+        "Bundle.entry.request.method": {
+          "value": "POST"
+        },
+        "Bundle.entry.request.url": {
+          "value": "Patient"
+        }
+      }
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "urn:uuid:88f151c0-a954-468a-88bd-5ae15c08e059"
+      },
+      "Patient": [
+        {
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Some narrative</div>"
+            }
+          },
+          "Patient.active": {
+            "value": true
+          },
+          "Patient.name": [
+            {
+              "HumanName.use": {
+                "value": "official"
+              },
+              "HumanName.family": [
+                {
+                  "value": "Chalmers"
+                }
+              ],
+              "HumanName.given": [
+                {
+                  "value": "Peter"
+                },
+                {
+                  "value": "James"
+                }
+              ]
+            }
+          ],
+          "Patient.gender": {
+            "value": "male"
+          },
+          "Patient.birthDate": {
+            "value": "1974-12-25"
+          }
+        }
+      ],
+      "Bundle.entry.request": {
+        "Bundle.entry.request.method": {
+          "value": "POST"
+        },
+        "Bundle.entry.request.url": {
+          "value": "Patient"
+        },
+        "Bundle.entry.request.ifNoneExist": {
+          "value": "identifier=234234"
+        }
+      }
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "http://example.org/fhir/Patient/123"
+      },
+      "Patient": [
+        {
+          "Resource.id": {
+            "value": "123"
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Some narrative</div>"
+            }
+          },
+          "Patient.active": {
+            "value": true
+          },
+          "Patient.name": [
+            {
+              "HumanName.use": {
+                "value": "official"
+              },
+              "HumanName.family": [
+                {
+                  "value": "Chalmers"
+                }
+              ],
+              "HumanName.given": [
+                {
+                  "value": "Peter"
+                },
+                {
+                  "value": "James"
+                }
+              ]
+            }
+          ],
+          "Patient.gender": {
+            "value": "male"
+          },
+          "Patient.birthDate": {
+            "value": "1974-12-25"
+          }
+        }
+      ],
+      "Bundle.entry.request": {
+        "Bundle.entry.request.method": {
+          "value": "PUT"
+        },
+        "Bundle.entry.request.url": {
+          "value": "Patient/123"
+        }
+      }
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "urn:uuid:74891afc-ed52-42a2-bcd7-f13d9b60f096"
+      },
+      "Patient": [
+        {
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Some narrative</div>"
+            }
+          },
+          "Patient.active": {
+            "value": true
+          },
+          "Patient.name": [
+            {
+              "HumanName.use": {
+                "value": "official"
+              },
+              "HumanName.family": [
+                {
+                  "value": "Chalmers"
+                }
+              ],
+              "HumanName.given": [
+                {
+                  "value": "Peter"
+                },
+                {
+                  "value": "James"
+                }
+              ]
+            }
+          ],
+          "Patient.gender": {
+            "value": "male"
+          },
+          "Patient.birthDate": {
+            "value": "1974-12-25"
+          }
+        }
+      ],
+      "Bundle.entry.request": {
+        "Bundle.entry.request.method": {
+          "value": "PUT"
+        },
+        "Bundle.entry.request.url": {
+          "value": "Patient?identifier=234234"
+        }
+      }
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "http://example.org/fhir/Patient/123a"
+      },
+      "Patient": [
+        {
+          "Resource.id": {
+            "value": "123a"
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Some narrative</div>"
+            }
+          },
+          "Patient.active": {
+            "value": true
+          },
+          "Patient.name": [
+            {
+              "HumanName.use": {
+                "value": "official"
+              },
+              "HumanName.family": [
+                {
+                  "value": "Chalmers"
+                }
+              ],
+              "HumanName.given": [
+                {
+                  "value": "Peter"
+                },
+                {
+                  "value": "James"
+                }
+              ]
+            }
+          ],
+          "Patient.gender": {
+            "value": "male"
+          },
+          "Patient.birthDate": {
+            "value": "1974-12-25"
+          }
+        }
+      ],
+      "Bundle.entry.request": {
+        "Bundle.entry.request.method": {
+          "value": "PUT"
+        },
+        "Bundle.entry.request.url": {
+          "value": "Patient/123a"
+        },
+        "Bundle.entry.request.ifMatch": {
+          "value": "W/\"2\""
+        }
+      }
+    },
+    {
+      "Bundle.entry.request": {
+        "Bundle.entry.request.method": {
+          "value": "DELETE"
+        },
+        "Bundle.entry.request.url": {
+          "value": "Patient/234"
+        }
+      }
+    },
+    {
+      "Bundle.entry.request": {
+        "Bundle.entry.request.method": {
+          "value": "DELETE"
+        },
+        "Bundle.entry.request.url": {
+          "value": "Patient?identifier=123456"
+        }
+      }
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "urn:uuid:79378cb8-8f58-48e8-a5e8-60ac2755b674"
+      },
+      "Parameters": [
+        {
+          "Parameters.parameter": [
+            {
+              "Parameters.parameter.name": {
+                "value": "coding"
+              },
+              "Parameters.parameter.valueCoding": {
+                "Coding.system": {
+                  "value": "http://loinc.org"
+                },
+                "Coding.code": {
+                  "value": "1963-8"
+                },
+                "concept": "http://loinc.org/owl#1963-8"
+              }
+            }
+          ]
+        }
+      ],
+      "Bundle.entry.request": {
+        "Bundle.entry.request.method": {
+          "value": "POST"
+        },
+        "Bundle.entry.request.url": {
+          "value": "ValueSet/$lookup"
+        }
+      }
+    },
+    {
+      "Bundle.entry.request": {
+        "Bundle.entry.request.method": {
+          "value": "GET"
+        },
+        "Bundle.entry.request.url": {
+          "value": "Patient?name=peter"
+        }
+      }
+    },
+    {
+      "Bundle.entry.request": {
+        "Bundle.entry.request.method": {
+          "value": "GET"
+        },
+        "Bundle.entry.request.url": {
+          "value": "Patient/12334"
+        },
+        "Bundle.entry.request.ifNoneMatch": {
+          "value": "W/\"4\""
+        },
+        "Bundle.entry.request.ifModifiedSince": {
+          "value": "2015-08-31T08:14:33+10:00"
+        }
+      }
+    }
+  ]
+}

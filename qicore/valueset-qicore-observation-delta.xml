@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="qicore-observation-delta"/>
+  <meta>
+    <lastUpdated value="2016-06-06T20:14:04.181+00:00"/>
+    <profile value="http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"/>
+  </meta>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <h2>QICore Observation Delta Value Set Definition</h2>
+      <p>Code indicating how the current observation compares to previous observations - e.g., no change, rising trend, decreasing trend, etc...</p>
+      <p>This value set includes codes from the following code systems:</p>
+      <ul>
+        <li>Include these codes as defined in 
+          <a href="../v2/0078/index.html">http://hl7.org/fhir/v2/0078</a>
+          <table>
+            <tr>
+              <td>
+                <b>Code</b>
+              </td>
+              <td>
+                <b>Display</b>
+              </td>
+            </tr>
+            <tr>
+              <td>B</td>
+              <td>Better-use when direction not relevant</td>
+              <td/>
+            </tr>
+            <tr>
+              <td>D</td>
+              <td>Significant change down</td>
+              <td/>
+            </tr>
+            <tr>
+              <td>U</td>
+              <td>Significant change up</td>
+              <td/>
+            </tr>
+            <tr>
+              <td>W</td>
+              <td>Worse-use when direction not relevant</td>
+              <td/>
+            </tr>
+          </table>
+        </li>
+      </ul>
+    </div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/valueset-oid">
+    <valueUri value="urn:oid:2.16.840.1.113883.4.642.2.639"/>
+  </extension>
+  <url value="http://hl7.org/fhir/ValueSet/qicore-observation-delta"/>
+  <version value="0.1.0"/>
+  <name value="QICore Observation Delta Value Set Definition"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <publisher value="HL7 Clinical Quality Information (CQI) Work Group"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="http://www.hl7.org/Special/committees/cqi"/>
+    </telecom>
+  </contact>
+  <date value="2015-02-09"/>
+  <description value="Code indicating how the current observation compares to previous observations - e.g., no change, rising trend, decreasing trend, etc..."/>
+  <extensible value="true"/>
+  <compose>
+    <include>
+      <system value="http://hl7.org/fhir/v2/0078"/>
+      <concept>
+        <code value="B"/>
+        <display value="Better-use when direction not relevant"/>
+      </concept>
+      <concept>
+        <code value="D"/>
+        <display value="Significant change down"/>
+      </concept>
+      <concept>
+        <code value="U"/>
+        <display value="Significant change up"/>
+      </concept>
+      <concept>
+        <code value="W"/>
+        <display value="Worse-use when direction not relevant"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

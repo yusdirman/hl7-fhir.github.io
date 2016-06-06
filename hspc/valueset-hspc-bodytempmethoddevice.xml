@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="hspc-bodytempmethoddevice"/>
+  <meta>
+    <lastUpdated value="2016-06-06T20:14:04.181+00:00"/>
+    <profile value="http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"/>
+  </meta>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <h2>HSPC Body Temperature Measurement Method/Device</h2>
+      <p>SELECT SNOMED CT code system values.</p>
+      <p>
+        <b>Copyright Statement:</b> TBD
+      </p>
+      <p>This value set includes codes from the following code systems:</p>
+      <ul>
+        <li>Include these codes as defined in http://snomed.info/sct
+          <table>
+            <tr>
+              <td>
+                <b>Code</b>
+              </td>
+              <td>
+                <b>Display</b>
+              </td>
+            </tr>
+            <tr>
+              <td>467862000</td>
+              <td>capillary patient thermometer, mercury</td>
+              <td/>
+            </tr>
+            <tr>
+              <td>462983001</td>
+              <td>liquid-crystal patient thermometer</td>
+              <td/>
+            </tr>
+            <tr>
+              <td>118376009</td>
+              <td>thermocouple</td>
+              <td/>
+            </tr>
+          </table>
+        </li>
+        <li>Include all codes defined in 
+          <a href="../codesystem-bodytempmethoddevice.html">http://hl7.org/fhir/hspc-bodytempmethoddevice</a>
+        </li>
+      </ul>
+    </div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/valueset-oid">
+    <valueUri value="urn:oid:2.16.840.1.113883.4.642.2.727"/>
+  </extension>
+  <url value="http://hl7.org/fhir/ValueSet/hspc-bodytempmethoddevice"/>
+  <version value="0.01"/>
+  <name value="HSPC Body Temperature Measurement Method/Device"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <publisher value="Health Services Platform Consortium (HSPC)"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="http://hl7.org/fhir"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="fhir@lists.hl7.org"/>
+    </telecom>
+  </contact>
+  <date value="2015-06-11"/>
+  <description value="SELECT SNOMED CT code system values."/>
+  <immutable value="true"/>
+  <copyright value="TBD"/>
+  <extensible value="true"/>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <concept>
+        <code value="467862000"/>
+        <display value="capillary patient thermometer, mercury"/>
+      </concept>
+      <concept>
+        <code value="462983001"/>
+        <display value="liquid-crystal patient thermometer"/>
+      </concept>
+      <concept>
+        <code value="118376009"/>
+        <display value="thermocouple"/>
+      </concept>
+    </include>
+    <include>
+      <system value="http://hl7.org/fhir/hspc-bodytempmethoddevice"/>
+    </include>
+  </compose>
+</ValueSet>

@@ -1,0 +1,127 @@
+{
+  "resourceType": "Library",
+  "id": "library-wcc-aba",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Cohort Definition for Adult BMI Assessment Measure</div>"
+  },
+  "moduleMetadata": {
+    "identifier": [
+      {
+        "use": "official",
+        "value": "WCCABA"
+      }
+    ],
+    "version": "1.0.0",
+    "title": "Cohort Definition for Adult BMI Assessment Measure",
+    "type": "library",
+    "status": "active",
+    "experimental": true,
+    "publicationDate": "2016-04-19",
+    "topic": [
+      {
+        "text": "something"
+      }
+    ]
+  },
+  "model": [
+    {
+      "identifier": "FHIR"
+    }
+  ],
+  "valueSet": [
+    {
+      "name": "BMI Percentile",
+      "identifier": "BMI Percentile"
+    },
+    {
+      "name": "BMI Value",
+      "identifier": "BMI Value"
+    },
+    {
+      "name": "Body Height",
+      "identifier": "Body Height"
+    },
+    {
+      "name": "Body Weight",
+      "identifier": "Body Weight"
+    }
+  ],
+  "dataRequirement": [
+    {
+      "type": "Patient"
+    },
+    {
+      "type": "Observation",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSetString": "BMI Percentile"
+        }
+      ],
+      "dateFilter": [
+        {
+          "path": "effectiveDateTime.value",
+          "valuePeriod": {
+            "start": "2014-01-01"
+          }
+        }
+      ]
+    },
+    {
+      "type": "Observation",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSetString": "BMI Value"
+        }
+      ],
+      "dateFilter": [
+        {
+          "path": "effectiveDateTime.value",
+          "valuePeriod": {
+            "start": "2014-01-01"
+          }
+        }
+      ]
+    },
+    {
+      "type": "Observation",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSetString": "Body Height"
+        }
+      ],
+      "dateFilter": [
+        {
+          "path": "effectiveDateTime.value",
+          "valuePeriod": {
+            "start": "2014-01-01"
+          }
+        }
+      ]
+    },
+    {
+      "type": "Observation",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSetString": "Body Weight"
+        }
+      ],
+      "dateFilter": [
+        {
+          "path": "effectiveDateTime.value",
+          "valuePeriod": {
+            "start": "2014-01-01"
+          }
+        }
+      ]
+    }
+  ],
+  "document": {
+    "contentType": "application/xml+elm",
+    "url": "http://example.org/libraries/library-wcc-aba.elm.xml"
+  }
+}

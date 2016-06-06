@@ -1,0 +1,147 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Questionnaire",
+  "resourceType": "Questionnaire",
+  "Resource.id": {
+    "value": "f201"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <pre>Lifelines Questionnaire 1 part 1\n  1. Do you have allergies?\n  2. General Questions:\n    2.a) What is your gender?\n    2.b) What is your date of birth?\n    2.c) What is your country of birth?\n    2.d) What is your marital status?\n    3. Intoxications:\n      3.a) Do you smoke?\n      3.b) Do you drink alcohol?</pre>\n    </div>"
+    }
+  },
+  "Questionnaire.url": {
+    "value": "http://hl7.org/fhir/Questionnaire/f201"
+  },
+  "Questionnaire.status": {
+    "value": "published"
+  },
+  "Questionnaire.date": {
+    "value": "2010"
+  },
+  "Questionnaire.concept": [
+    {
+      "Coding.system": {
+        "value": "http://example.org/system/code/lifelines/nl"
+      },
+      "Coding.code": {
+        "value": "VL 1-1, 18-65_1.2.2"
+      },
+      "Coding.display": {
+        "value": "Lifelines Questionnaire 1 part 1"
+      }
+    }
+  ],
+  "Questionnaire.subjectType": [
+    {
+      "value": "Patient"
+    }
+  ],
+  "Questionnaire.item": [
+    {
+      "Questionnaire.item.linkId": {
+        "value": "1"
+      },
+      "Questionnaire.item.text": {
+        "value": "Do you have allergies?"
+      },
+      "Questionnaire.item.type": {
+        "value": "boolean"
+      }
+    },
+    {
+      "Questionnaire.item.linkId": {
+        "value": "2"
+      },
+      "Questionnaire.item.text": {
+        "value": "General questions"
+      },
+      "Questionnaire.item.type": {
+        "value": "group"
+      },
+      "Questionnaire.item.item": [
+        {
+          "Questionnaire.item.linkId": {
+            "value": "2.1"
+          },
+          "Questionnaire.item.text": {
+            "value": "What is your gender?"
+          },
+          "Questionnaire.item.type": {
+            "value": "string"
+          }
+        },
+        {
+          "Questionnaire.item.linkId": {
+            "value": "2.2"
+          },
+          "Questionnaire.item.text": {
+            "value": "What is your date of birth?"
+          },
+          "Questionnaire.item.type": {
+            "value": "date"
+          }
+        },
+        {
+          "Questionnaire.item.linkId": {
+            "value": "2.3"
+          },
+          "Questionnaire.item.text": {
+            "value": "What is your country of birth?"
+          },
+          "Questionnaire.item.type": {
+            "value": "string"
+          }
+        },
+        {
+          "Questionnaire.item.linkId": {
+            "value": "2.4"
+          },
+          "Questionnaire.item.text": {
+            "value": "What is your marital status?"
+          },
+          "Questionnaire.item.type": {
+            "value": "string"
+          }
+        }
+      ]
+    },
+    {
+      "Questionnaire.item.linkId": {
+        "value": "3"
+      },
+      "Questionnaire.item.text": {
+        "value": "Intoxications"
+      },
+      "Questionnaire.item.type": {
+        "value": "group"
+      },
+      "Questionnaire.item.item": [
+        {
+          "Questionnaire.item.linkId": {
+            "value": "3.1"
+          },
+          "Questionnaire.item.text": {
+            "value": "Do you smoke?"
+          },
+          "Questionnaire.item.type": {
+            "value": "boolean"
+          }
+        },
+        {
+          "Questionnaire.item.linkId": {
+            "value": "3.2"
+          },
+          "Questionnaire.item.text": {
+            "value": "Do you drink alchohol?"
+          },
+          "Questionnaire.item.type": {
+            "value": "boolean"
+          }
+        }
+      ]
+    }
+  ]
+}

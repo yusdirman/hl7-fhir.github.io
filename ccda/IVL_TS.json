@@ -1,0 +1,211 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "IVL_TS",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+      "valueUri": "urn:hl7-org:v3"
+    }
+  ],
+  "url": "http://hl7.org/fhir/StructureDefinition/IVL_TS",
+  "name": "V3 Data type IVL_TS (Interval)",
+  "display": "V3 Data type IVL_TS (Interval)",
+  "status": "active",
+  "experimental": false,
+  "publisher": "HL7",
+  "description": "A set of consecutive values of an ordered base data type.",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/SXCM_TS",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "path": "IVL_TS",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "IVL_TS.nullFlavor",
+        "representation": [
+          "xmlAttr"
+        ],
+        "label": "Exceptional Value Detail",
+        "definition": "If a value is an exceptional value (NULL-value), this specifies in what way and why proper information is missing.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/v3-NullFlavor"
+          }
+        }
+      },
+      {
+        "extension": [
+          {
+            "url": "http://www.healthintersections.com.au/fhir/StructureDefinition/elementdefinition-dateformat",
+            "valueString": "v3"
+          }
+        ],
+        "path": "IVL_TS.value",
+        "representation": [
+          "xmlAttr"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "path": "IVL_TS.inclusive",
+        "representation": [
+          "xmlAttr"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      },
+      {
+        "path": "IVL_TS.operator",
+        "representation": [
+          "xmlAttr"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "path": "IVL_TS.low",
+        "label": "Low Boundary",
+        "definition": "This is the low limit of the interval.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "TS"
+          }
+        ]
+      },
+      {
+        "path": "IVL_TS.high",
+        "label": "High Boundary",
+        "definition": "This is the high limit of the interval.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "TS"
+          }
+        ]
+      },
+      {
+        "path": "IVL_TS.width",
+        "label": "Width",
+        "definition": "The difference between high and low boundary. The purpose of distinguishing a width property is to handle all cases of incomplete information symmetrically. In any interval representation only two of the three properties high, low, and width need to be stated and the third can be derived.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "PQ"
+          }
+        ]
+      },
+      {
+        "path": "IVL_TS.center",
+        "label": "Central Value",
+        "definition": "The arithmetic mean of the interval (low plus high divided by 2). The purpose of distinguishing the center as a semantic property is for conversions of intervals from and to point values.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "TS"
+          }
+        ]
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "path": "IVL_TS",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "IVL_TS.low",
+        "label": "Low Boundary",
+        "definition": "This is the low limit of the interval.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "TS"
+          }
+        ]
+      },
+      {
+        "path": "IVL_TS.high",
+        "label": "High Boundary",
+        "definition": "This is the high limit of the interval.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "TS"
+          }
+        ]
+      },
+      {
+        "path": "IVL_TS.width",
+        "label": "Width",
+        "definition": "The difference between high and low boundary. The purpose of distinguishing a width property is to handle all cases of incomplete information symmetrically. In any interval representation only two of the three properties high, low, and width need to be stated and the third can be derived.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "PQ"
+          }
+        ]
+      },
+      {
+        "path": "IVL_TS.center",
+        "label": "Central Value",
+        "definition": "The arithmetic mean of the interval (low plus high divided by 2). The purpose of distinguishing the center as a semantic property is for conversions of intervals from and to point values.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "TS"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,774 @@
+﻿PREFIX fhir: <http://hl7.org/fhir/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+BASE <http://hl7.org/fhir/shape/>
+
+start=<ElementDefinition>
+
+<ElementDefinition> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:ElementDefinition.path @<string>;
+	fhir:ElementDefinition.representation @<code>*;
+	fhir:ElementDefinition.name @<string>?;
+	fhir:ElementDefinition.label @<string>?;
+	fhir:ElementDefinition.code @<Coding>*;
+	fhir:ElementDefinition.slicing @<ElementDefinition.slicing>?;
+	fhir:ElementDefinition.short @<string>?;
+	fhir:ElementDefinition.definition @<markdown>?;
+	fhir:ElementDefinition.comments @<markdown>?;
+	fhir:ElementDefinition.requirements @<markdown>?;
+	fhir:ElementDefinition.alias @<string>*;
+	fhir:ElementDefinition.min @<integer>?;
+	fhir:ElementDefinition.max @<string>?;
+	fhir:ElementDefinition.base @<ElementDefinition.base>?;
+	fhir:ElementDefinition.contentReference @<uri>?;
+	fhir:ElementDefinition.type @<ElementDefinition.type>*;
+	(	fhir:ElementDefinition.defaultValueBoolean @<boolean> |
+		fhir:ElementDefinition.defaultValueInteger @<integer> |
+		fhir:ElementDefinition.defaultValueDecimal @<decimal> |
+		fhir:ElementDefinition.defaultValueBase64Binary @<base64Binary> |
+		fhir:ElementDefinition.defaultValueInstant @<instant> |
+		fhir:ElementDefinition.defaultValueString @<string> |
+		fhir:ElementDefinition.defaultValueUri @<uri> |
+		fhir:ElementDefinition.defaultValueDate @<date> |
+		fhir:ElementDefinition.defaultValueDateTime @<dateTime> |
+		fhir:ElementDefinition.defaultValueTime @<time> |
+		fhir:ElementDefinition.defaultValueCode @<code> |
+		fhir:ElementDefinition.defaultValueOid @<oid> |
+		fhir:ElementDefinition.defaultValueId @<id> |
+		fhir:ElementDefinition.defaultValueUnsignedInt @<unsignedInt> |
+		fhir:ElementDefinition.defaultValuePositiveInt @<positiveInt> |
+		fhir:ElementDefinition.defaultValueMarkdown @<markdown> |
+		fhir:ElementDefinition.defaultValueAnnotation @<Annotation> |
+		fhir:ElementDefinition.defaultValueAttachment @<Attachment> |
+		fhir:ElementDefinition.defaultValueIdentifier @<Identifier> |
+		fhir:ElementDefinition.defaultValueCodeableConcept @<CodeableConcept> |
+		fhir:ElementDefinition.defaultValueCoding @<Coding> |
+		fhir:ElementDefinition.defaultValueQuantity @<Quantity> |
+		fhir:ElementDefinition.defaultValueCount @<Count> |
+		fhir:ElementDefinition.defaultValueAge @<Age> |
+		fhir:ElementDefinition.defaultValueDuration @<Duration> |
+		fhir:ElementDefinition.defaultValueDistance @<Distance> |
+		fhir:ElementDefinition.defaultValueMoney @<Money> |
+		fhir:ElementDefinition.defaultValueRange @<Range> |
+		fhir:ElementDefinition.defaultValuePeriod @<Period> |
+		fhir:ElementDefinition.defaultValueRatio @<Ratio> |
+		fhir:ElementDefinition.defaultValueSampledData @<SampledData> |
+		fhir:ElementDefinition.defaultValueSignature @<Signature> |
+		fhir:ElementDefinition.defaultValueHumanName @<HumanName> |
+		fhir:ElementDefinition.defaultValueAddress @<Address> |
+		fhir:ElementDefinition.defaultValueContactPoint @<ContactPoint> |
+		fhir:ElementDefinition.defaultValueTiming @<Timing> |
+		fhir:ElementDefinition.defaultValueReference @<Reference> |
+		fhir:ElementDefinition.defaultValueMeta @<Meta>
+	)?;
+	fhir:ElementDefinition.meaningWhenMissing @<markdown>?;
+	(	fhir:ElementDefinition.fixedBoolean @<boolean> |
+		fhir:ElementDefinition.fixedInteger @<integer> |
+		fhir:ElementDefinition.fixedDecimal @<decimal> |
+		fhir:ElementDefinition.fixedBase64Binary @<base64Binary> |
+		fhir:ElementDefinition.fixedInstant @<instant> |
+		fhir:ElementDefinition.fixedString @<string> |
+		fhir:ElementDefinition.fixedUri @<uri> |
+		fhir:ElementDefinition.fixedDate @<date> |
+		fhir:ElementDefinition.fixedDateTime @<dateTime> |
+		fhir:ElementDefinition.fixedTime @<time> |
+		fhir:ElementDefinition.fixedCode @<code> |
+		fhir:ElementDefinition.fixedOid @<oid> |
+		fhir:ElementDefinition.fixedId @<id> |
+		fhir:ElementDefinition.fixedUnsignedInt @<unsignedInt> |
+		fhir:ElementDefinition.fixedPositiveInt @<positiveInt> |
+		fhir:ElementDefinition.fixedMarkdown @<markdown> |
+		fhir:ElementDefinition.fixedAnnotation @<Annotation> |
+		fhir:ElementDefinition.fixedAttachment @<Attachment> |
+		fhir:ElementDefinition.fixedIdentifier @<Identifier> |
+		fhir:ElementDefinition.fixedCodeableConcept @<CodeableConcept> |
+		fhir:ElementDefinition.fixedCoding @<Coding> |
+		fhir:ElementDefinition.fixedQuantity @<Quantity> |
+		fhir:ElementDefinition.fixedCount @<Count> |
+		fhir:ElementDefinition.fixedAge @<Age> |
+		fhir:ElementDefinition.fixedDuration @<Duration> |
+		fhir:ElementDefinition.fixedDistance @<Distance> |
+		fhir:ElementDefinition.fixedMoney @<Money> |
+		fhir:ElementDefinition.fixedRange @<Range> |
+		fhir:ElementDefinition.fixedPeriod @<Period> |
+		fhir:ElementDefinition.fixedRatio @<Ratio> |
+		fhir:ElementDefinition.fixedSampledData @<SampledData> |
+		fhir:ElementDefinition.fixedSignature @<Signature> |
+		fhir:ElementDefinition.fixedHumanName @<HumanName> |
+		fhir:ElementDefinition.fixedAddress @<Address> |
+		fhir:ElementDefinition.fixedContactPoint @<ContactPoint> |
+		fhir:ElementDefinition.fixedTiming @<Timing> |
+		fhir:ElementDefinition.fixedReference @<Reference> |
+		fhir:ElementDefinition.fixedMeta @<Meta>
+	)?;
+	(	fhir:ElementDefinition.patternBoolean @<boolean> |
+		fhir:ElementDefinition.patternInteger @<integer> |
+		fhir:ElementDefinition.patternDecimal @<decimal> |
+		fhir:ElementDefinition.patternBase64Binary @<base64Binary> |
+		fhir:ElementDefinition.patternInstant @<instant> |
+		fhir:ElementDefinition.patternString @<string> |
+		fhir:ElementDefinition.patternUri @<uri> |
+		fhir:ElementDefinition.patternDate @<date> |
+		fhir:ElementDefinition.patternDateTime @<dateTime> |
+		fhir:ElementDefinition.patternTime @<time> |
+		fhir:ElementDefinition.patternCode @<code> |
+		fhir:ElementDefinition.patternOid @<oid> |
+		fhir:ElementDefinition.patternId @<id> |
+		fhir:ElementDefinition.patternUnsignedInt @<unsignedInt> |
+		fhir:ElementDefinition.patternPositiveInt @<positiveInt> |
+		fhir:ElementDefinition.patternMarkdown @<markdown> |
+		fhir:ElementDefinition.patternAnnotation @<Annotation> |
+		fhir:ElementDefinition.patternAttachment @<Attachment> |
+		fhir:ElementDefinition.patternIdentifier @<Identifier> |
+		fhir:ElementDefinition.patternCodeableConcept @<CodeableConcept> |
+		fhir:ElementDefinition.patternCoding @<Coding> |
+		fhir:ElementDefinition.patternQuantity @<Quantity> |
+		fhir:ElementDefinition.patternCount @<Count> |
+		fhir:ElementDefinition.patternAge @<Age> |
+		fhir:ElementDefinition.patternDuration @<Duration> |
+		fhir:ElementDefinition.patternDistance @<Distance> |
+		fhir:ElementDefinition.patternMoney @<Money> |
+		fhir:ElementDefinition.patternRange @<Range> |
+		fhir:ElementDefinition.patternPeriod @<Period> |
+		fhir:ElementDefinition.patternRatio @<Ratio> |
+		fhir:ElementDefinition.patternSampledData @<SampledData> |
+		fhir:ElementDefinition.patternSignature @<Signature> |
+		fhir:ElementDefinition.patternHumanName @<HumanName> |
+		fhir:ElementDefinition.patternAddress @<Address> |
+		fhir:ElementDefinition.patternContactPoint @<ContactPoint> |
+		fhir:ElementDefinition.patternTiming @<Timing> |
+		fhir:ElementDefinition.patternReference @<Reference> |
+		fhir:ElementDefinition.patternMeta @<Meta>
+	)?;
+	(	fhir:ElementDefinition.exampleBoolean @<boolean> |
+		fhir:ElementDefinition.exampleInteger @<integer> |
+		fhir:ElementDefinition.exampleDecimal @<decimal> |
+		fhir:ElementDefinition.exampleBase64Binary @<base64Binary> |
+		fhir:ElementDefinition.exampleInstant @<instant> |
+		fhir:ElementDefinition.exampleString @<string> |
+		fhir:ElementDefinition.exampleUri @<uri> |
+		fhir:ElementDefinition.exampleDate @<date> |
+		fhir:ElementDefinition.exampleDateTime @<dateTime> |
+		fhir:ElementDefinition.exampleTime @<time> |
+		fhir:ElementDefinition.exampleCode @<code> |
+		fhir:ElementDefinition.exampleOid @<oid> |
+		fhir:ElementDefinition.exampleId @<id> |
+		fhir:ElementDefinition.exampleUnsignedInt @<unsignedInt> |
+		fhir:ElementDefinition.examplePositiveInt @<positiveInt> |
+		fhir:ElementDefinition.exampleMarkdown @<markdown> |
+		fhir:ElementDefinition.exampleAnnotation @<Annotation> |
+		fhir:ElementDefinition.exampleAttachment @<Attachment> |
+		fhir:ElementDefinition.exampleIdentifier @<Identifier> |
+		fhir:ElementDefinition.exampleCodeableConcept @<CodeableConcept> |
+		fhir:ElementDefinition.exampleCoding @<Coding> |
+		fhir:ElementDefinition.exampleQuantity @<Quantity> |
+		fhir:ElementDefinition.exampleCount @<Count> |
+		fhir:ElementDefinition.exampleAge @<Age> |
+		fhir:ElementDefinition.exampleDuration @<Duration> |
+		fhir:ElementDefinition.exampleDistance @<Distance> |
+		fhir:ElementDefinition.exampleMoney @<Money> |
+		fhir:ElementDefinition.exampleRange @<Range> |
+		fhir:ElementDefinition.examplePeriod @<Period> |
+		fhir:ElementDefinition.exampleRatio @<Ratio> |
+		fhir:ElementDefinition.exampleSampledData @<SampledData> |
+		fhir:ElementDefinition.exampleSignature @<Signature> |
+		fhir:ElementDefinition.exampleHumanName @<HumanName> |
+		fhir:ElementDefinition.exampleAddress @<Address> |
+		fhir:ElementDefinition.exampleContactPoint @<ContactPoint> |
+		fhir:ElementDefinition.exampleTiming @<Timing> |
+		fhir:ElementDefinition.exampleReference @<Reference> |
+		fhir:ElementDefinition.exampleMeta @<Meta>
+	)?;
+	(	fhir:ElementDefinition.minValueBoolean @<boolean> |
+		fhir:ElementDefinition.minValueInteger @<integer> |
+		fhir:ElementDefinition.minValueDecimal @<decimal> |
+		fhir:ElementDefinition.minValueBase64Binary @<base64Binary> |
+		fhir:ElementDefinition.minValueInstant @<instant> |
+		fhir:ElementDefinition.minValueString @<string> |
+		fhir:ElementDefinition.minValueUri @<uri> |
+		fhir:ElementDefinition.minValueDate @<date> |
+		fhir:ElementDefinition.minValueDateTime @<dateTime> |
+		fhir:ElementDefinition.minValueTime @<time> |
+		fhir:ElementDefinition.minValueCode @<code> |
+		fhir:ElementDefinition.minValueOid @<oid> |
+		fhir:ElementDefinition.minValueId @<id> |
+		fhir:ElementDefinition.minValueUnsignedInt @<unsignedInt> |
+		fhir:ElementDefinition.minValuePositiveInt @<positiveInt> |
+		fhir:ElementDefinition.minValueMarkdown @<markdown> |
+		fhir:ElementDefinition.minValueAnnotation @<Annotation> |
+		fhir:ElementDefinition.minValueAttachment @<Attachment> |
+		fhir:ElementDefinition.minValueIdentifier @<Identifier> |
+		fhir:ElementDefinition.minValueCodeableConcept @<CodeableConcept> |
+		fhir:ElementDefinition.minValueCoding @<Coding> |
+		fhir:ElementDefinition.minValueQuantity @<Quantity> |
+		fhir:ElementDefinition.minValueCount @<Count> |
+		fhir:ElementDefinition.minValueAge @<Age> |
+		fhir:ElementDefinition.minValueDuration @<Duration> |
+		fhir:ElementDefinition.minValueDistance @<Distance> |
+		fhir:ElementDefinition.minValueMoney @<Money> |
+		fhir:ElementDefinition.minValueRange @<Range> |
+		fhir:ElementDefinition.minValuePeriod @<Period> |
+		fhir:ElementDefinition.minValueRatio @<Ratio> |
+		fhir:ElementDefinition.minValueSampledData @<SampledData> |
+		fhir:ElementDefinition.minValueSignature @<Signature> |
+		fhir:ElementDefinition.minValueHumanName @<HumanName> |
+		fhir:ElementDefinition.minValueAddress @<Address> |
+		fhir:ElementDefinition.minValueContactPoint @<ContactPoint> |
+		fhir:ElementDefinition.minValueTiming @<Timing> |
+		fhir:ElementDefinition.minValueReference @<Reference> |
+		fhir:ElementDefinition.minValueMeta @<Meta>
+	)?;
+	(	fhir:ElementDefinition.maxValueBoolean @<boolean> |
+		fhir:ElementDefinition.maxValueInteger @<integer> |
+		fhir:ElementDefinition.maxValueDecimal @<decimal> |
+		fhir:ElementDefinition.maxValueBase64Binary @<base64Binary> |
+		fhir:ElementDefinition.maxValueInstant @<instant> |
+		fhir:ElementDefinition.maxValueString @<string> |
+		fhir:ElementDefinition.maxValueUri @<uri> |
+		fhir:ElementDefinition.maxValueDate @<date> |
+		fhir:ElementDefinition.maxValueDateTime @<dateTime> |
+		fhir:ElementDefinition.maxValueTime @<time> |
+		fhir:ElementDefinition.maxValueCode @<code> |
+		fhir:ElementDefinition.maxValueOid @<oid> |
+		fhir:ElementDefinition.maxValueId @<id> |
+		fhir:ElementDefinition.maxValueUnsignedInt @<unsignedInt> |
+		fhir:ElementDefinition.maxValuePositiveInt @<positiveInt> |
+		fhir:ElementDefinition.maxValueMarkdown @<markdown> |
+		fhir:ElementDefinition.maxValueAnnotation @<Annotation> |
+		fhir:ElementDefinition.maxValueAttachment @<Attachment> |
+		fhir:ElementDefinition.maxValueIdentifier @<Identifier> |
+		fhir:ElementDefinition.maxValueCodeableConcept @<CodeableConcept> |
+		fhir:ElementDefinition.maxValueCoding @<Coding> |
+		fhir:ElementDefinition.maxValueQuantity @<Quantity> |
+		fhir:ElementDefinition.maxValueCount @<Count> |
+		fhir:ElementDefinition.maxValueAge @<Age> |
+		fhir:ElementDefinition.maxValueDuration @<Duration> |
+		fhir:ElementDefinition.maxValueDistance @<Distance> |
+		fhir:ElementDefinition.maxValueMoney @<Money> |
+		fhir:ElementDefinition.maxValueRange @<Range> |
+		fhir:ElementDefinition.maxValuePeriod @<Period> |
+		fhir:ElementDefinition.maxValueRatio @<Ratio> |
+		fhir:ElementDefinition.maxValueSampledData @<SampledData> |
+		fhir:ElementDefinition.maxValueSignature @<Signature> |
+		fhir:ElementDefinition.maxValueHumanName @<HumanName> |
+		fhir:ElementDefinition.maxValueAddress @<Address> |
+		fhir:ElementDefinition.maxValueContactPoint @<ContactPoint> |
+		fhir:ElementDefinition.maxValueTiming @<Timing> |
+		fhir:ElementDefinition.maxValueReference @<Reference> |
+		fhir:ElementDefinition.maxValueMeta @<Meta>
+	)?;
+	fhir:ElementDefinition.maxLength @<integer>?;
+	fhir:ElementDefinition.condition @<id>*;
+	fhir:ElementDefinition.constraint @<ElementDefinition.constraint>*;
+	fhir:ElementDefinition.mustSupport @<boolean>?;
+	fhir:ElementDefinition.isModifier @<boolean>?;
+	fhir:ElementDefinition.isSummary @<boolean>?;
+	fhir:ElementDefinition.binding @<ElementDefinition.binding>?;
+	fhir:ElementDefinition.mapping @<ElementDefinition.mapping>*;
+	fhir:index xsd:integer?
+}
+
+<ElementDefinition.slicing> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:ElementDefinition.slicing.discriminator @<string>*;
+	fhir:ElementDefinition.slicing.description @<string>?;
+	fhir:ElementDefinition.slicing.ordered @<boolean>?;
+	fhir:ElementDefinition.slicing.rules @<code>;
+	fhir:index xsd:integer?
+}
+
+<ElementDefinition.base> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:ElementDefinition.base.path @<string>;
+	fhir:ElementDefinition.base.min @<integer>;
+	fhir:ElementDefinition.base.max @<string>;
+	fhir:index xsd:integer?
+}
+
+<ElementDefinition.constraint> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:ElementDefinition.constraint.key @<id>;
+	fhir:ElementDefinition.constraint.requirements @<string>?;
+	fhir:ElementDefinition.constraint.severity @<code>;
+	fhir:ElementDefinition.constraint.human @<string>;
+	fhir:ElementDefinition.constraint.expression @<string>?;
+	fhir:ElementDefinition.constraint.xpath @<string>;
+	fhir:index xsd:integer?
+}
+
+<ElementDefinition.type> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:ElementDefinition.type.code @<code>;
+	fhir:ElementDefinition.type.profile @<uri>*;
+	fhir:ElementDefinition.type.aggregation @<code>*;
+	fhir:ElementDefinition.type.versioning @<code>?;
+	fhir:index xsd:integer?
+}
+
+<ElementDefinition.binding> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:ElementDefinition.binding.strength @<code>;
+	fhir:ElementDefinition.binding.description @<string>?;
+	(	fhir:ElementDefinition.binding.valueSetUri @<uri> |
+		fhir:ElementDefinition.binding.valueSetReference @<ValueSetReference>
+	)?;
+	fhir:index xsd:integer?
+}
+
+<ElementDefinition.mapping> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:ElementDefinition.mapping.identity @<id>;
+	fhir:ElementDefinition.mapping.language @<code>?;
+	fhir:ElementDefinition.mapping.map @<string>;
+	fhir:index xsd:integer?
+}
+
+#---------------------- Data Types -------------------
+
+<date> CLOSED {fhir:id @<id>?;
+	fhir:extension @<Extension>*;
+	fhir:value xsd:gYear OR xsd:gYearMonth OR xsd:date?;
+	fhir:index xsd:integer?
+}
+
+<dateTime> CLOSED {fhir:id @<id>?;
+	fhir:extension @<Extension>*;
+	fhir:value xsd:gYear OR xsd:gYearMonth OR xsd:date OR xsd:dateTime?;
+	fhir:index xsd:integer?
+}
+
+<Meta> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:Meta.versionId @<id>?;
+	fhir:Meta.lastUpdated @<instant>?;
+	fhir:Meta.profile @<uri>*;
+	fhir:Meta.security @<Coding>*;
+	fhir:Meta.tag @<Coding>*;
+	fhir:index xsd:integer?
+}
+
+<code> CLOSED {fhir:extension @<Extension>*;
+	fhir:value xsd:string?;
+	fhir:index xsd:integer?
+}
+
+<string> CLOSED {fhir:id @<id>?;
+	fhir:extension @<Extension>*;
+	fhir:value xsd:string?;
+	fhir:index xsd:integer?
+}
+
+<Address> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:Address.use @<code>?;
+	fhir:Address.type @<code>?;
+	fhir:Address.text @<string>?;
+	fhir:Address.line @<string>*;
+	fhir:Address.city @<string>?;
+	fhir:Address.district @<string>?;
+	fhir:Address.state @<string>?;
+	fhir:Address.postalCode @<string>?;
+	fhir:Address.country @<string>?;
+	fhir:Address.period @<Period>?;
+	fhir:index xsd:integer?
+}
+
+<Attachment> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:Attachment.contentType @<code>?;
+	fhir:Attachment.language @<code>?;
+	fhir:Attachment.data @<base64Binary>?;
+	fhir:Attachment.url @<uri>?;
+	fhir:Attachment.size @<unsignedInt>?;
+	fhir:Attachment.hash @<base64Binary>?;
+	fhir:Attachment.title @<string>?;
+	fhir:Attachment.creation @<dateTime>?;
+	fhir:index xsd:integer?
+}
+
+<integer> CLOSED {fhir:id @<id>?;
+	fhir:extension @<Extension>*;
+	fhir:value xsd:int?;
+	fhir:index xsd:integer?
+}
+
+<oid> CLOSED {fhir:extension @<Extension>*;
+	fhir:value xsd:string?;
+	fhir:index xsd:integer?
+}
+
+<Count> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:Quantity.value @<decimal>?;
+	fhir:Quantity.comparator @<code>?;
+	fhir:Quantity.unit @<string>?;
+	fhir:Quantity.system @<uri>?;
+	fhir:Quantity.code @<code>?;
+	fhir:index xsd:integer?
+}
+
+<instant> CLOSED {fhir:id @<id>?;
+	fhir:extension @<Extension>*;
+	fhir:value xsd:dateTime?;
+	fhir:index xsd:integer?
+}
+
+<Money> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:Quantity.value @<decimal>?;
+	fhir:Quantity.comparator @<code>?;
+	fhir:Quantity.unit @<string>?;
+	fhir:Quantity.system @<uri>?;
+	fhir:Quantity.code @<code>?;
+	fhir:index xsd:integer?
+}
+
+<HumanName> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:HumanName.use @<code>?;
+	fhir:HumanName.text @<string>?;
+	fhir:HumanName.family @<string>*;
+	fhir:HumanName.given @<string>*;
+	fhir:HumanName.prefix @<string>*;
+	fhir:HumanName.suffix @<string>*;
+	fhir:HumanName.period @<Period>?;
+	fhir:index xsd:integer?
+}
+
+<ContactPoint> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:ContactPoint.system @<code>?;
+	fhir:ContactPoint.value @<string>?;
+	fhir:ContactPoint.use @<code>?;
+	fhir:ContactPoint.rank @<positiveInt>?;
+	fhir:ContactPoint.period @<Period>?;
+	fhir:index xsd:integer?
+}
+
+<Identifier> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:Identifier.use @<code>?;
+	fhir:Identifier.type @<CodeableConcept>?;
+	fhir:Identifier.system @<uri>?;
+	fhir:Identifier.value @<string>?;
+	fhir:Identifier.period @<Period>?;
+	fhir:Identifier.assigner @<OrganizationReference>?;
+	fhir:index xsd:integer?
+}
+
+<Coding> CLOSED {fhir:concept IRI?;
+	fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:Coding.system @<uri>?;
+	fhir:Coding.version @<string>?;
+	fhir:Coding.code @<code>?;
+	fhir:Coding.display @<string>?;
+	fhir:Coding.userSelected @<boolean>?;
+	fhir:index xsd:integer?
+}
+
+<markdown> CLOSED {fhir:extension @<Extension>*;
+	fhir:value xsd:string?;
+	fhir:index xsd:integer?
+}
+
+<SampledData> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:SampledData.origin @<SimpleQuantity>;
+	fhir:SampledData.period @<decimal>;
+	fhir:SampledData.factor @<decimal>?;
+	fhir:SampledData.lowerLimit @<decimal>?;
+	fhir:SampledData.upperLimit @<decimal>?;
+	fhir:SampledData.dimensions @<positiveInt>;
+	fhir:SampledData.data @<string>;
+	fhir:index xsd:integer?
+}
+
+<Ratio> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:Ratio.numerator @<Quantity>?;
+	fhir:Ratio.denominator @<Quantity>?;
+	fhir:index xsd:integer?
+}
+
+<id> CLOSED {fhir:extension @<Extension>*;
+	fhir:value xsd:string?;
+	fhir:index xsd:integer?
+}
+
+<positiveInt> CLOSED {fhir:extension @<Extension>*;
+	fhir:value xsd:positiveInteger?;
+	fhir:index xsd:integer?
+}
+
+<Age> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:Quantity.value @<decimal>?;
+	fhir:Quantity.comparator @<code>?;
+	fhir:Quantity.unit @<string>?;
+	fhir:Quantity.system @<uri>?;
+	fhir:Quantity.code @<code>?;
+	fhir:index xsd:integer?
+}
+
+<Distance> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:Quantity.value @<decimal>?;
+	fhir:Quantity.comparator @<code>?;
+	fhir:Quantity.unit @<string>?;
+	fhir:Quantity.system @<uri>?;
+	fhir:Quantity.code @<code>?;
+	fhir:index xsd:integer?
+}
+
+<Reference> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:Reference.reference @<string>?;
+	fhir:Reference.display @<string>?;
+	fhir:index xsd:integer?
+}
+
+<Quantity> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:Quantity.value @<decimal>?;
+	fhir:Quantity.comparator @<code>?;
+	fhir:Quantity.unit @<string>?;
+	fhir:Quantity.system @<uri>?;
+	fhir:Quantity.code @<code>?;
+	fhir:index xsd:integer?
+}
+
+<Period> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:Period.start @<dateTime>?;
+	fhir:Period.end @<dateTime>?;
+	fhir:index xsd:integer?
+}
+
+<Duration> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:Quantity.value @<decimal>?;
+	fhir:Quantity.comparator @<code>?;
+	fhir:Quantity.unit @<string>?;
+	fhir:Quantity.system @<uri>?;
+	fhir:Quantity.code @<code>?;
+	fhir:index xsd:integer?
+}
+
+<Range> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:Range.low @<SimpleQuantity>?;
+	fhir:Range.high @<SimpleQuantity>?;
+	fhir:index xsd:integer?
+}
+
+<uri> CLOSED {fhir:id @<id>?;
+	fhir:extension @<Extension>*;
+	fhir:value xsd:string?;
+	fhir:index xsd:integer?
+}
+
+<Annotation> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	(	fhir:Annotation.authorReference @<PractitionerReference> |
+		fhir:Annotation.authorReference @<PatientReference> |
+		fhir:Annotation.authorReference @<RelatedPersonReference> |
+		fhir:Annotation.authorString @<string>
+	)?;
+	fhir:Annotation.time @<dateTime>?;
+	fhir:Annotation.text @<string>;
+	fhir:index xsd:integer?
+}
+
+<Extension> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:Extension.url @<uri>;
+	(	fhir:Extension.valueBoolean @<boolean> |
+		fhir:Extension.valueInteger @<integer> |
+		fhir:Extension.valueDecimal @<decimal> |
+		fhir:Extension.valueBase64Binary @<base64Binary> |
+		fhir:Extension.valueInstant @<instant> |
+		fhir:Extension.valueString @<string> |
+		fhir:Extension.valueUri @<uri> |
+		fhir:Extension.valueDate @<date> |
+		fhir:Extension.valueDateTime @<dateTime> |
+		fhir:Extension.valueTime @<time> |
+		fhir:Extension.valueCode @<code> |
+		fhir:Extension.valueOid @<oid> |
+		fhir:Extension.valueId @<id> |
+		fhir:Extension.valueUnsignedInt @<unsignedInt> |
+		fhir:Extension.valuePositiveInt @<positiveInt> |
+		fhir:Extension.valueMarkdown @<markdown> |
+		fhir:Extension.valueAnnotation @<Annotation> |
+		fhir:Extension.valueAttachment @<Attachment> |
+		fhir:Extension.valueIdentifier @<Identifier> |
+		fhir:Extension.valueCodeableConcept @<CodeableConcept> |
+		fhir:Extension.valueCoding @<Coding> |
+		fhir:Extension.valueQuantity @<Quantity> |
+		fhir:Extension.valueCount @<Count> |
+		fhir:Extension.valueAge @<Age> |
+		fhir:Extension.valueDuration @<Duration> |
+		fhir:Extension.valueDistance @<Distance> |
+		fhir:Extension.valueMoney @<Money> |
+		fhir:Extension.valueRange @<Range> |
+		fhir:Extension.valuePeriod @<Period> |
+		fhir:Extension.valueRatio @<Ratio> |
+		fhir:Extension.valueSampledData @<SampledData> |
+		fhir:Extension.valueSignature @<Signature> |
+		fhir:Extension.valueHumanName @<HumanName> |
+		fhir:Extension.valueAddress @<Address> |
+		fhir:Extension.valueContactPoint @<ContactPoint> |
+		fhir:Extension.valueTiming @<Timing> |
+		fhir:Extension.valueReference @<Reference> |
+		fhir:Extension.valueMeta @<Meta>
+	)?;
+	fhir:index xsd:integer?
+}
+
+<boolean> CLOSED {fhir:id @<id>?;
+	fhir:extension @<Extension>*;
+	fhir:value xsd:boolean?;
+	fhir:index xsd:integer?
+}
+
+<base64Binary> CLOSED {fhir:id @<id>?;
+	fhir:extension @<Extension>*;
+	fhir:value xsd:base64Binary?;
+	fhir:index xsd:integer?
+}
+
+<Signature> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:Signature.type @<Coding>+;
+	fhir:Signature.when @<instant>;
+	(	fhir:Signature.whoUri @<uri> |
+		fhir:Signature.whoReference @<PractitionerReference> |
+		fhir:Signature.whoReference @<RelatedPersonReference> |
+		fhir:Signature.whoReference @<PatientReference> |
+		fhir:Signature.whoReference @<DeviceReference> |
+		fhir:Signature.whoReference @<OrganizationReference>
+	);
+	fhir:Signature.contentType @<code>?;
+	fhir:Signature.blob @<base64Binary>?;
+	fhir:index xsd:integer?
+}
+
+<unsignedInt> CLOSED {fhir:extension @<Extension>*;
+	fhir:value xsd:nonNegativeInteger?;
+	fhir:index xsd:integer?
+}
+
+<time> CLOSED {fhir:id @<id>?;
+	fhir:extension @<Extension>*;
+	fhir:value xsd:time?;
+	fhir:index xsd:integer?
+}
+
+<Timing> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:Timing.event @<dateTime>*;
+	fhir:Timing.repeat @<Timing.repeat>?;
+	fhir:Timing.code @<CodeableConcept>?;
+	fhir:index xsd:integer?
+}
+
+<decimal> CLOSED {fhir:id @<id>?;
+	fhir:extension @<Extension>*;
+	fhir:value xsd:decimal?;
+	fhir:index xsd:integer?
+}
+
+<CodeableConcept> CLOSED {fhir:concept IRI*;
+	fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:CodeableConcept.coding @<Coding>*;
+	fhir:CodeableConcept.text @<string>?;
+	fhir:index xsd:integer?
+}
+
+<SimpleQuantity> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:Quantity.value @<decimal>?;
+	fhir:Quantity.comparator @<code>?;
+	fhir:Quantity.unit @<string>?;
+	fhir:Quantity.system @<uri>?;
+	fhir:Quantity.code @<code>?;
+	fhir:index xsd:integer?
+}
+
+<Timing.repeat> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	(	fhir:Timing.repeat.boundsDuration @<Duration> |
+		fhir:Timing.repeat.boundsRange @<Range> |
+		fhir:Timing.repeat.boundsPeriod @<Period>
+	)?;
+	fhir:Timing.repeat.count @<integer>?;
+	fhir:Timing.repeat.countMax @<integer>?;
+	fhir:Timing.repeat.duration @<decimal>?;
+	fhir:Timing.repeat.durationMax @<decimal>?;
+	fhir:Timing.repeat.durationUnit @<code>?;
+	fhir:Timing.repeat.frequency @<integer>?;
+	fhir:Timing.repeat.frequencyMax @<integer>?;
+	fhir:Timing.repeat.period @<decimal>?;
+	fhir:Timing.repeat.periodMax @<decimal>?;
+	fhir:Timing.repeat.periodUnit @<code>?;
+	fhir:Timing.repeat.when @<code>?;
+	fhir:Timing.repeat.offset @<unsignedInt>?;
+	fhir:index xsd:integer?
+}
+
+#---------------------- Reference Types -------------------
+
+<PractitionerReference> CLOSED {
+	fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:link IRI?;
+	fhir:Reference.reference @<string>?;
+	fhir:Reference.display @<string>?;
+	fhir:index xsd:integer?
+}
+
+<OrganizationReference> CLOSED {
+	fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:link IRI?;
+	fhir:Reference.reference @<string>?;
+	fhir:Reference.display @<string>?;
+	fhir:index xsd:integer?
+}
+
+<DeviceReference> CLOSED {
+	fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:link IRI?;
+	fhir:Reference.reference @<string>?;
+	fhir:Reference.display @<string>?;
+	fhir:index xsd:integer?
+}
+
+<PatientReference> CLOSED {
+	fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:link IRI?;
+	fhir:Reference.reference @<string>?;
+	fhir:Reference.display @<string>?;
+	fhir:index xsd:integer?
+}
+
+<ValueSetReference> CLOSED {
+	fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:link IRI?;
+	fhir:Reference.reference @<string>?;
+	fhir:Reference.display @<string>?;
+	fhir:index xsd:integer?
+}
+
+<RelatedPersonReference> CLOSED {
+	fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:link IRI?;
+	fhir:Reference.reference @<string>?;
+	fhir:Reference.display @<string>?;
+	fhir:index xsd:integer?
+}

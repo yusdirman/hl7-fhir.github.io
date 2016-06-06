@@ -1,0 +1,444 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/TestScript",
+  "resourceType": "TestScript",
+  "Resource.id": {
+    "value": "example-rule"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: example</p><p><b>name</b>: Test Script 1</p><p><b>description</b>: Example Test Script with rule and ruleset</p><h3>Fixtures</h3><table><tr><td>-</td><td><b>Resource</b></td></tr><tr><td>*</td><td><a>Patient resource</a></td></tr></table><blockquote><p><b>test</b></p><p><b>name</b>: Read Patient</p><p><b>description</b>: Read a patient and validate response.</p><blockquote><p><b>metadata</b></p><h3>Links</h3><table><tr><td>-</td><td><b>Url</b></td><td><b>Description</b></td></tr><tr><td>*</td><td><a>http://hl7.org/implement/standards/FHIR-Develop/patient.html</a></td><td>FHIR Patient</td></tr></table><h3>Operations</h3><table><tr><td>-</td><td><b>Type</b></td><td><b>Resource</b></td><td><b>Description</b></td><td><b>Link</b></td><td><b>Required</b></td></tr><tr><td>*</td><td>create</td><td>Patient</td><td>Patient Create Operation</td><td><a>http://hl7.org/implement/standards/FHIR-Develop/http.html#create</a></td><td>true</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Operations</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote></blockquote></div>"
+    }
+  },
+  "TestScript.url": {
+    "value": "http://hl7.org/fhir/TestScript/example-rule"
+  },
+  "TestScript.version": {
+    "value": "1.0"
+  },
+  "TestScript.name": {
+    "value": "Test Script 1"
+  },
+  "TestScript.status": {
+    "value": "draft"
+  },
+  "TestScript.identifier": {
+    "Identifier.system": {
+      "value": "urn:ietf:rfc:3986"
+    },
+    "Identifier.value": {
+      "value": "urn:oid:1.3.6.1.4.1.21367.2005.3.7.9876"
+    }
+  },
+  "TestScript.experimental": {
+    "value": true
+  },
+  "TestScript.publisher": {
+    "value": "HL7"
+  },
+  "TestScript.contact": [
+    {
+      "TestScript.contact.name": {
+        "value": "Support"
+      },
+      "TestScript.contact.telecom": [
+        {
+          "ContactPoint.system": {
+            "value": "email"
+          },
+          "ContactPoint.value": {
+            "value": "support@gmail.com"
+          },
+          "ContactPoint.use": {
+            "value": "temp"
+          }
+        }
+      ]
+    }
+  ],
+  "TestScript.date": {
+    "value": "2015-08-31"
+  },
+  "TestScript.description": {
+    "value": "Example Test Script"
+  },
+  "TestScript.useContext": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "value": "urn:iso:std:iso:3166"
+          },
+          "Coding.code": {
+            "value": "US"
+          },
+          "Coding.display": {
+            "value": "United States of America (the)"
+          }
+        }
+      ]
+    }
+  ],
+  "TestScript.requirements": {
+    "value": "Patient Create, Read, and Update Operations"
+  },
+  "TestScript.copyright": {
+    "value": "© HL7.org 2011+"
+  },
+  "TestScript.metadata": {
+    "TestScript.metadata.capability": [
+      {
+        "TestScript.metadata.capability.required": {
+          "value": true
+        },
+        "TestScript.metadata.capability.description": {
+          "value": "Patient Create, Read, and Update Operations"
+        },
+        "TestScript.metadata.capability.destination": {
+          "value": 1
+        },
+        "TestScript.metadata.capability.link": [
+          {
+            "value": "http://hl7.org/implement/standards/FHIR-Develop/http.html#create"
+          },
+          {
+            "value": "http://hl7.org/implement/standards/FHIR-Develop/http.html#read"
+          },
+          {
+            "value": "http://hl7.org/implement/standards/FHIR-Develop/http.html#update"
+          }
+        ],
+        "TestScript.metadata.capability.conformance": {
+          "Reference.reference": {
+            "value": "Conformance/example"
+          },
+          "reference": "http://hl7.org/fhir//Conformance/example"
+        }
+      }
+    ]
+  },
+  "TestScript.fixture": [
+    {
+      "Element.id": {
+        "value": "F1"
+      },
+      "TestScript.fixture.autocreate": {
+        "value": false
+      },
+      "TestScript.fixture.autodelete": {
+        "value": false
+      },
+      "TestScript.fixture.resource": {
+        "Reference.reference": {
+          "value": "Patient/example"
+        },
+        "Reference.display": {
+          "value": "Patient resource"
+        },
+        "reference": "http://hl7.org/fhir//Patient/example"
+      }
+    }
+  ],
+  "TestScript.profile": [
+    {
+      "Element.id": {
+        "value": "patient-profile"
+      },
+      "Reference.reference": {
+        "value": "http://hl7.org/fhir/StructureDefinition/Patient"
+      }
+    }
+  ],
+  "TestScript.rule": [
+    {
+      "Element.id": {
+        "value": "ruleResponseOkay"
+      },
+      "TestScript.rule.resource": {
+        "Reference.reference": {
+          "value": "TestScript/example"
+        },
+        "reference": "http://hl7.org/fhir//TestScript/example"
+      },
+      "TestScript.rule.param": [
+        {
+          "TestScript.rule.param.name": {
+            "value": "expectedStatusCode"
+          },
+          "TestScript.rule.param.value": {
+            "value": "200"
+          }
+        }
+      ]
+    }
+  ],
+  "TestScript.ruleset": [
+    {
+      "Element.id": {
+        "value": "ruleset-responseResourcePatient"
+      },
+      "TestScript.ruleset.resource": {
+        "Reference.reference": {
+          "value": "TestScript/example"
+        },
+        "reference": "http://hl7.org/fhir//TestScript/example"
+      },
+      "TestScript.ruleset.rule": [
+        {
+          "TestScript.ruleset.rule.ruleId": {
+            "value": "RuleResponseContentType"
+          },
+          "TestScript.ruleset.rule.param": [
+            {
+              "TestScript.ruleset.rule.param.name": {
+                "value": "expectedContentType"
+              },
+              "TestScript.ruleset.rule.param.value": {
+                "value": "JSON"
+              }
+            }
+          ]
+        },
+        {
+          "TestScript.ruleset.rule.ruleId": {
+            "value": "RuleResponseStatusCode"
+          },
+          "TestScript.ruleset.rule.param": [
+            {
+              "TestScript.ruleset.rule.param.name": {
+                "value": "expectedStatusCode"
+              },
+              "TestScript.ruleset.rule.param.value": {
+                "value": "200"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "TestScript.setup": {
+    "TestScript.setup.action": [
+      {
+        "TestScript.setup.action.operation": {
+          "TestScript.setup.action.operation.type": {
+            "Coding.code": {
+              "value": "create"
+            }
+          },
+          "TestScript.setup.action.operation.label": {
+            "value": "SetupPatient"
+          },
+          "TestScript.setup.action.operation.description": {
+            "value": "Create patient resource on test server"
+          },
+          "TestScript.setup.action.operation.accept": {
+            "value": "json"
+          },
+          "TestScript.setup.action.operation.responseId": {
+            "value": "create-response"
+          },
+          "TestScript.setup.action.operation.sourceId": {
+            "value": "F1"
+          }
+        }
+      },
+      {
+        "TestScript.setup.action.assert": {
+          "TestScript.setup.action.assert.label": {
+            "value": "RuleReadOK"
+          },
+          "TestScript.setup.action.assert.direction": {
+            "value": "request"
+          },
+          "TestScript.setup.action.assert.rule": {
+            "TestScript.setup.action.assert.rule.ruleId": {
+              "value": "ruleResponseOkay"
+            },
+            "TestScript.setup.action.assert.rule.param": [
+              {
+                "TestScript.setup.action.assert.rule.param.name": {
+                  "value": "expectedStatusCode"
+                },
+                "TestScript.setup.action.assert.rule.param.value": {
+                  "value": "201"
+                }
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "TestScript.test": [
+    {
+      "Element.id": {
+        "value": "READ01"
+      },
+      "TestScript.test.name": {
+        "value": "Read Patient"
+      },
+      "TestScript.test.description": {
+        "value": "Read a patient and validate response."
+      },
+      "TestScript.test.action": [
+        {
+          "TestScript.test.action.operation": {
+            "TestScript.setup.action.operation.type": {
+              "Coding.code": {
+                "value": "read"
+              }
+            },
+            "TestScript.setup.action.operation.encodeRequestUrl": {
+              "value": false
+            },
+            "TestScript.setup.action.operation.responseId": {
+              "value": "F1-read"
+            },
+            "TestScript.setup.action.operation.targetId": {
+              "value": "F1"
+            }
+          }
+        },
+        {
+          "TestScript.test.action.assert": {
+            "TestScript.setup.action.assert.label": {
+              "value": "RuleReadOK"
+            },
+            "TestScript.setup.action.assert.rule": {
+              "TestScript.setup.action.assert.rule.ruleId": {
+                "value": "ruleResponseOkay"
+              }
+            }
+          }
+        },
+        {
+          "TestScript.test.action.assert": {
+            "TestScript.setup.action.assert.label": {
+              "value": "RuleContentTypeResponse"
+            },
+            "TestScript.setup.action.assert.ruleset": {
+              "TestScript.setup.action.assert.ruleset.rulesetId": {
+                "value": "ruleset-responseResourcePatient"
+              },
+              "TestScript.setup.action.assert.ruleset.rule": [
+                {
+                  "TestScript.setup.action.assert.ruleset.rule.ruleId": {
+                    "value": "RuleResponseContentType"
+                  },
+                  "TestScript.setup.action.assert.ruleset.rule.param": [
+                    {
+                      "TestScript.setup.action.assert.ruleset.rule.param.name": {
+                        "value": "expectedContentType"
+                      },
+                      "TestScript.setup.action.assert.ruleset.rule.param.value": {
+                        "value": "XML"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "TestScript.test.action.assert": {
+            "TestScript.setup.action.assert.headerField": {
+              "value": "Last-Modified"
+            },
+            "TestScript.setup.action.assert.operator": {
+              "value": "notEmpty"
+            },
+            "TestScript.setup.action.assert.warningOnly": {
+              "value": true
+            }
+          }
+        },
+        {
+          "TestScript.test.action.assert": {
+            "TestScript.setup.action.assert.resource": {
+              "value": "Patient"
+            }
+          }
+        },
+        {
+          "TestScript.test.action.assert": {
+            "TestScript.setup.action.assert.validateProfileId": {
+              "value": "patient-profile"
+            }
+          }
+        },
+        {
+          "TestScript.test.action.assert": {
+            "TestScript.setup.action.assert.operator": {
+              "value": "equals"
+            },
+            "TestScript.setup.action.assert.path": {
+              "value": "fhir:Patient/fhir:name/fhir:family/@value"
+            },
+            "TestScript.setup.action.assert.value": {
+              "value": "Chalmers"
+            }
+          }
+        },
+        {
+          "TestScript.test.action.assert": {
+            "TestScript.setup.action.assert.operator": {
+              "value": "equals"
+            },
+            "TestScript.setup.action.assert.path": {
+              "value": "fhir:Patient/fhir:name/fhir:family/@value"
+            },
+            "TestScript.setup.action.assert.sourceId": {
+              "value": "F1"
+            },
+            "TestScript.setup.action.assert.value": {
+              "value": "Chalmers"
+            }
+          }
+        },
+        {
+          "TestScript.test.action.assert": {
+            "TestScript.setup.action.assert.compareToSourceId": {
+              "value": "F1-read"
+            },
+            "TestScript.setup.action.assert.compareToSourcePath": {
+              "value": "fhir:Patient/fhir:name/fhir:family/@value"
+            },
+            "TestScript.setup.action.assert.operator": {
+              "value": "equals"
+            },
+            "TestScript.setup.action.assert.path": {
+              "value": "fhir:Patient/fhir:name/fhir:family/@value"
+            }
+          }
+        },
+        {
+          "TestScript.test.action.assert": {
+            "TestScript.setup.action.assert.compareToSourceId": {
+              "value": "F1-read"
+            },
+            "TestScript.setup.action.assert.compareToSourcePath": {
+              "value": "fhir:Patient/fhir:name/fhir:family/@value"
+            },
+            "TestScript.setup.action.assert.path": {
+              "value": "fhir:Patient/fhir:name/fhir:family/@value"
+            },
+            "TestScript.setup.action.assert.sourceId": {
+              "value": "F1"
+            }
+          }
+        },
+        {
+          "TestScript.test.action.assert": {
+            "TestScript.setup.action.assert.minimumId": {
+              "value": "F1-min"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

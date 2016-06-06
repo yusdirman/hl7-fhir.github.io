@@ -1,0 +1,417 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://hl7.org/fhir/json-schema/Protocol",
+  "$ref": "#/definitions/Protocol",
+  "description": "see http://hl7.org/fhir/json.html#schema for information about the FHIR Json Schemas",
+  "definitions": {
+    "Protocol": {
+      "allOf": [
+        {
+          "$ref": "DomainResource.schema.json/definitions/DomainResource"
+        },
+        {
+          "description": "A definition of behaviors to be taken in particular circumstances, often including conditions, options and other decision points.",
+          "properties": {
+            "resourceType": {
+              "description": "This is a Protocol resource",
+              "type": "string",
+              "enum": [
+                "Protocol"
+              ]
+            },
+            "identifier": {
+              "description": "A unique identifier for the protocol instance.",
+              "type": "array",
+              "items": {
+                "$ref": "Identifier.schema.json/definitions/Identifier"
+              }
+            },
+            "title": {
+              "description": "Name of protocol.",
+              "type": "string"
+            },
+            "title_": {
+              "description": "Extensions for title",
+              "$ref": "Element.schema.json/definitions/Element"
+            },
+            "status": {
+              "description": "The status of the protocol.",
+              "type": "string",
+              "pattern": "[^\\s]+([\\s]?[^\\s]+)*"
+            },
+            "status_": {
+              "description": "Extensions for status",
+              "$ref": "Element.schema.json/definitions/Element"
+            },
+            "type": {
+              "description": "A code that classifies the general type of context to which these behavior definitions apply.  This is used for searching, sorting and display purposes.",
+              "type": "string",
+              "pattern": "[^\\s]+([\\s]?[^\\s]+)*"
+            },
+            "type_": {
+              "description": "Extensions for type",
+              "$ref": "Element.schema.json/definitions/Element"
+            },
+            "subject": {
+              "description": "What does protocol deal with?",
+              "$ref": "Reference.schema.json/definitions/Reference"
+            },
+            "group": {
+              "description": "To whom does Protocol apply?",
+              "$ref": "Reference.schema.json/definitions/Reference"
+            },
+            "purpose": {
+              "description": "When is protocol to be used?",
+              "type": "string"
+            },
+            "purpose_": {
+              "description": "Extensions for purpose",
+              "$ref": "Element.schema.json/definitions/Element"
+            },
+            "author": {
+              "description": "Who wrote protocol?",
+              "$ref": "Reference.schema.json/definitions/Reference"
+            },
+            "step": {
+              "description": "What\u0027s done as part of protocol.",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Protocol.Step"
+              }
+            }
+          },
+          "required": [
+            "resourceType"
+          ]
+        }
+      ]
+    },
+    "Protocol.Step": {
+      "allOf": [
+        {
+          "$ref": "BackboneElement.schema.json/definitions/BackboneElement"
+        },
+        {
+          "description": "A definition of behaviors to be taken in particular circumstances, often including conditions, options and other decision points.",
+          "properties": {
+            "name": {
+              "description": "Label for step.",
+              "type": "string"
+            },
+            "name_": {
+              "description": "Extensions for name",
+              "$ref": "Element.schema.json/definitions/Element"
+            },
+            "description": {
+              "description": "Human description of activity.",
+              "type": "string"
+            },
+            "description_": {
+              "description": "Extensions for description",
+              "$ref": "Element.schema.json/definitions/Element"
+            },
+            "duration": {
+              "description": "How long does step last?",
+              "$ref": "Duration.schema.json/definitions/Duration"
+            },
+            "precondition": {
+              "description": "Rules prior to execution.",
+              "$ref": "#/definitions/Protocol.Precondition"
+            },
+            "exit": {
+              "description": "Indicates the conditions that must be met for activities that are part of this time point to terminate.",
+              "$ref": "#/definitions/Protocol.Precondition"
+            },
+            "firstActivity": {
+              "description": "First activity within timepoint.",
+              "type": "string"
+            },
+            "firstActivity_": {
+              "description": "Extensions for firstActivity",
+              "$ref": "Element.schema.json/definitions/Element"
+            },
+            "activity": {
+              "description": "Activities that occur within timepoint.",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Protocol.Activity"
+              }
+            },
+            "next": {
+              "description": "What happens next?",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Protocol.Next"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "Protocol.Precondition": {
+      "allOf": [
+        {
+          "$ref": "BackboneElement.schema.json/definitions/BackboneElement"
+        },
+        {
+          "description": "A definition of behaviors to be taken in particular circumstances, often including conditions, options and other decision points.",
+          "properties": {
+            "description": {
+              "description": "Human-readable description of the condition.",
+              "type": "string"
+            },
+            "description_": {
+              "description": "Extensions for description",
+              "$ref": "Element.schema.json/definitions/Element"
+            },
+            "condition": {
+              "description": "Defines the name/value pair that must hold for the condition to be met.",
+              "$ref": "#/definitions/Protocol.Condition"
+            },
+            "intersection": {
+              "description": "Lists a set of conditions that must all be met.",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Protocol.Precondition"
+              }
+            },
+            "union": {
+              "description": "Lists alternative conditions, at least one of must be met.",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Protocol.Precondition"
+              }
+            },
+            "exclude": {
+              "description": "Lists conditions of which none must be met.",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Protocol.Precondition"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "Protocol.Condition": {
+      "allOf": [
+        {
+          "$ref": "BackboneElement.schema.json/definitions/BackboneElement"
+        },
+        {
+          "description": "A definition of behaviors to be taken in particular circumstances, often including conditions, options and other decision points.",
+          "properties": {
+            "type": {
+              "description": "The type of observation, test or other assertion being evaluated by the condition.",
+              "$ref": "CodeableConcept.schema.json/definitions/CodeableConcept"
+            },
+            "valueCodeableConcept": {
+              "description": "Indicates what value the observation/test/assertion must have in order for the condition to be considered to be satisfied.",
+              "$ref": "CodeableConcept.schema.json/definitions/CodeableConcept"
+            },
+            "valueBoolean": {
+              "description": "Indicates what value the observation/test/assertion must have in order for the condition to be considered to be satisfied.",
+              "type": "true | false"
+            },
+            "valueBoolean_": {
+              "description": "Extensions for valueBoolean",
+              "$ref": "Element.schema.json/definitions/Element"
+            },
+            "valueSimpleQuantity": {
+              "description": "Indicates what value the observation/test/assertion must have in order for the condition to be considered to be satisfied.",
+              "$ref": "SimpleQuantity.schema.json/definitions/SimpleQuantity"
+            },
+            "valueRange": {
+              "description": "Indicates what value the observation/test/assertion must have in order for the condition to be considered to be satisfied.",
+              "$ref": "Range.schema.json/definitions/Range"
+            }
+          },
+          "required": [
+            "type"
+          ]
+        }
+      ]
+    },
+    "Protocol.Activity": {
+      "allOf": [
+        {
+          "$ref": "BackboneElement.schema.json/definitions/BackboneElement"
+        },
+        {
+          "description": "A definition of behaviors to be taken in particular circumstances, often including conditions, options and other decision points.",
+          "properties": {
+            "alternative": {
+              "description": "What can be done instead?",
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "alternative_": {
+              "description": "Extensions for alternative",
+              "items": {
+                "$ref": "Element.schema.json/definitions/Element"
+              }
+            },
+            "component": {
+              "description": "Activities that are part of this activity.",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Protocol.Component"
+              }
+            },
+            "following": {
+              "description": "What happens next.",
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "following_": {
+              "description": "Extensions for following",
+              "items": {
+                "$ref": "Element.schema.json/definitions/Element"
+              }
+            },
+            "wait": {
+              "description": "Indicates the length of time to wait between the conditions being satisfied for the activity to start and the actual start of the activity.",
+              "$ref": "Duration.schema.json/definitions/Duration"
+            },
+            "detail": {
+              "description": "Information about the nature of the activity, including type, timing and other qualifiers.",
+              "$ref": "#/definitions/Protocol.Detail"
+            }
+          },
+          "required": [
+            "detail"
+          ]
+        }
+      ]
+    },
+    "Protocol.Component": {
+      "allOf": [
+        {
+          "$ref": "BackboneElement.schema.json/definitions/BackboneElement"
+        },
+        {
+          "description": "A definition of behaviors to be taken in particular circumstances, often including conditions, options and other decision points.",
+          "properties": {
+            "sequence": {
+              "description": "Order of occurrence.",
+              "type": "number",
+              "pattern": "-?([0]|([1-9][0-9]*))"
+            },
+            "sequence_": {
+              "description": "Extensions for sequence",
+              "$ref": "Element.schema.json/definitions/Element"
+            },
+            "activity": {
+              "description": "Component activity.",
+              "type": "string"
+            },
+            "activity_": {
+              "description": "Extensions for activity",
+              "$ref": "Element.schema.json/definitions/Element"
+            }
+          }
+        }
+      ]
+    },
+    "Protocol.Detail": {
+      "allOf": [
+        {
+          "$ref": "BackboneElement.schema.json/definitions/BackboneElement"
+        },
+        {
+          "description": "A definition of behaviors to be taken in particular circumstances, often including conditions, options and other decision points.",
+          "properties": {
+            "category": {
+              "description": "High-level categorization of the type of activity.",
+              "type": "string",
+              "pattern": "[^\\s]+([\\s]?[^\\s]+)*"
+            },
+            "category_": {
+              "description": "Extensions for category",
+              "$ref": "Element.schema.json/definitions/Element"
+            },
+            "code": {
+              "description": "Detailed description of the type of activity; e.g. What lab test, what procedure, what kind of encounter.",
+              "$ref": "CodeableConcept.schema.json/definitions/CodeableConcept"
+            },
+            "timingCodeableConcept": {
+              "description": "The period, timing or frequency upon which the described activity is to occur.",
+              "$ref": "CodeableConcept.schema.json/definitions/CodeableConcept"
+            },
+            "timingTiming": {
+              "description": "The period, timing or frequency upon which the described activity is to occur.",
+              "$ref": "Timing.schema.json/definitions/Timing"
+            },
+            "location": {
+              "description": "Identifies the facility where the activity will occur; e.g. home, hospital, specific clinic, etc.",
+              "$ref": "Reference.schema.json/definitions/Reference"
+            },
+            "performer": {
+              "description": "Identifies who\u0027s expected to be involved in the activity.",
+              "type": "array",
+              "items": {
+                "$ref": "Reference.schema.json/definitions/Reference"
+              }
+            },
+            "productReference": {
+              "description": "Identifies the food, drug or other product being consumed or supplied in the activity.",
+              "$ref": "Reference.schema.json/definitions/Reference"
+            },
+            "productCodeableConcept": {
+              "description": "Identifies the food, drug or other product being consumed or supplied in the activity.",
+              "$ref": "CodeableConcept.schema.json/definitions/CodeableConcept"
+            },
+            "quantity": {
+              "description": "Identifies the quantity expected to be consumed at once (per dose, per meal, etc.).",
+              "$ref": "SimpleQuantity.schema.json/definitions/SimpleQuantity"
+            },
+            "description": {
+              "description": "This provides a textual description of constraints on the activity occurrence, including relation to other activities.  It may also include objectives, pre-conditions and end-conditions.  Finally, it may convey specifics about the activity such as body site, method, route, etc.",
+              "type": "string"
+            },
+            "description_": {
+              "description": "Extensions for description",
+              "$ref": "Element.schema.json/definitions/Element"
+            }
+          }
+        }
+      ]
+    },
+    "Protocol.Next": {
+      "allOf": [
+        {
+          "$ref": "BackboneElement.schema.json/definitions/BackboneElement"
+        },
+        {
+          "description": "A definition of behaviors to be taken in particular circumstances, often including conditions, options and other decision points.",
+          "properties": {
+            "description": {
+              "description": "Description of what happens next.",
+              "type": "string"
+            },
+            "description_": {
+              "description": "Extensions for description",
+              "$ref": "Element.schema.json/definitions/Element"
+            },
+            "reference": {
+              "description": "Id of following step.",
+              "type": "string"
+            },
+            "reference_": {
+              "description": "Extensions for reference",
+              "$ref": "Element.schema.json/definitions/Element"
+            },
+            "condition": {
+              "description": "Condition in which next step is executed.",
+              "$ref": "#/definitions/Protocol.Precondition"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

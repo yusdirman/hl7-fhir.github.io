@@ -1,0 +1,92 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Encounter",
+  "resourceType": "Encounter",
+  "Resource.id": {
+    "value": "home"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Encounter with patient @example who is at home</div>"
+    }
+  },
+  "Location": [
+    {
+      "Resource.id": {
+        "value": "home"
+      },
+      "Location.description": {
+        "value": "Client's home"
+      },
+      "Location.mode": {
+        "value": "kind"
+      }
+    }
+  ],
+  "Encounter.status": {
+    "value": "finished"
+  },
+  "Encounter.class": {
+    "value": "virtual"
+  },
+  "Encounter.patient": {
+    "Reference.reference": {
+      "value": "Patient/example"
+    },
+    "reference": "http://hl7.org/fhir//Patient/example"
+  },
+  "Encounter.participant": [
+    {
+      "Encounter.participant.period": {
+        "Period.start": {
+          "value": "2015-01-17T16:00:00+10:00"
+        },
+        "Period.end": {
+          "value": "2015-01-17T16:30:00+10:00"
+        }
+      },
+      "Encounter.participant.individual": {
+        "Reference.reference": {
+          "value": "Practitioner/example"
+        },
+        "Reference.display": {
+          "value": "Dr Adam Careful"
+        },
+        "reference": "http://hl7.org/fhir//Practitioner/example"
+      }
+    }
+  ],
+  "Encounter.period": {
+    "Period.start": {
+      "value": "2015-01-17T16:00:00+10:00"
+    },
+    "Period.end": {
+      "value": "2015-01-17T16:30:00+10:00"
+    }
+  },
+  "Encounter.location": [
+    {
+      "Encounter.location.location": {
+        "Reference.reference": {
+          "value": "#home"
+        },
+        "Reference.display": {
+          "value": "Client's home"
+        }
+      },
+      "Encounter.location.status": {
+        "value": "completed"
+      },
+      "Encounter.location.period": {
+        "Period.start": {
+          "value": "2015-01-17T16:00:00+10:00"
+        },
+        "Period.end": {
+          "value": "2015-01-17T16:30:00+10:00"
+        }
+      }
+    }
+  ]
+}

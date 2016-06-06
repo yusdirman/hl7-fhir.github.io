@@ -1,0 +1,149 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Observation",
+  "resourceType": "Observation",
+  "Resource.id": {
+    "value": "gcs-qa"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: gcs-qa</p><p><b>status</b>: final</p><p><b>code</b>: Glasgow Coma Scale , (GCS) <span>(Details : {LOINC code '9269-2' = 'Glasgow coma score total', given as 'Glasgow coma score total'})</span></p><p><b>subject</b>: <a>Peter James Chalmers</a></p><p><b>effective</b>: Dec 11, 2014 4:44:16 AM</p><p><b>value</b>: 13 {score}<span> (Details: http://unitsofmeasure.org code {score} = '{score}')</span></p><blockquote><p><b>referenceRange</b></p><p><b>high</b>: 8 {score}<span> (Details: http://unitsofmeasure.org code {score} = '{score}')</span></p><p><b>meaning</b>: Severe TBI <span>(Details )</span></p></blockquote><blockquote><p><b>referenceRange</b></p><p><b>low</b>: 9 {score}<span> (Details: http://unitsofmeasure.org code {score} = '{score}')</span></p><p><b>high</b>: 12 {score}<span> (Details: http://unitsofmeasure.org code {score} = '{score}')</span></p><p><b>meaning</b>: Moderate TBI <span>(Details )</span></p></blockquote><blockquote><p><b>referenceRange</b></p><p><b>low</b>: 13 {score}<span> (Details: http://unitsofmeasure.org code {score} = '{score}')</span></p><p><b>meaning</b>: Mild TBI <span>(Details )</span></p></blockquote><h3>Relateds</h3><table><tr><td>-</td><td><b>Type</b></td><td><b>Target</b></td></tr><tr><td>*</td><td>derived-from</td><td><a>GCS form results</a></td></tr></table></div>"
+    }
+  },
+  "Observation.status": {
+    "value": "final"
+  },
+  "Observation.code": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://loinc.org"
+        },
+        "Coding.code": {
+          "value": "9269-2"
+        },
+        "Coding.display": {
+          "value": "Glasgow coma score total"
+        }
+      }
+    ],
+    "CodeableConcept.text": {
+      "value": "Glasgow Coma Scale , (GCS)"
+    },
+    "concept": "http://loinc.org/owl#9269-2"
+  },
+  "Observation.subject": {
+    "Reference.reference": {
+      "value": "Patient/example"
+    },
+    "Reference.display": {
+      "value": "Peter James Chalmers"
+    },
+    "reference": "http://hl7.org/fhir//Patient/example"
+  },
+  "Observation.effectiveDateTime": {
+    "value": "2014-12-11T04:44:16Z"
+  },
+  "Observation.valueQuantity": {
+    "Quantity.value": {
+      "value": 13
+    },
+    "Quantity.system": {
+      "value": "http://unitsofmeasure.org"
+    },
+    "Quantity.code": {
+      "value": "{score}"
+    }
+  },
+  "Observation.referenceRange": [
+    {
+      "Observation.referenceRange.high": {
+        "Quantity.value": {
+          "value": 8
+        },
+        "Quantity.system": {
+          "value": "http://unitsofmeasure.org"
+        },
+        "Quantity.code": {
+          "value": "{score}"
+        }
+      },
+      "Observation.referenceRange.meaning": [
+        {
+          "CodeableConcept.text": {
+            "value": "Severe TBI"
+          }
+        }
+      ]
+    },
+    {
+      "Observation.referenceRange.low": {
+        "Quantity.value": {
+          "value": 9
+        },
+        "Quantity.system": {
+          "value": "http://unitsofmeasure.org"
+        },
+        "Quantity.code": {
+          "value": "{score}"
+        }
+      },
+      "Observation.referenceRange.high": {
+        "Quantity.value": {
+          "value": 12
+        },
+        "Quantity.system": {
+          "value": "http://unitsofmeasure.org"
+        },
+        "Quantity.code": {
+          "value": "{score}"
+        }
+      },
+      "Observation.referenceRange.meaning": [
+        {
+          "CodeableConcept.text": {
+            "value": "Moderate TBI"
+          }
+        }
+      ]
+    },
+    {
+      "Observation.referenceRange.low": {
+        "Quantity.value": {
+          "value": 13
+        },
+        "Quantity.system": {
+          "value": "http://unitsofmeasure.org"
+        },
+        "Quantity.code": {
+          "value": "{score}"
+        }
+      },
+      "Observation.referenceRange.meaning": [
+        {
+          "CodeableConcept.text": {
+            "value": "Mild TBI"
+          }
+        }
+      ]
+    }
+  ],
+  "Observation.related": [
+    {
+      "Observation.related.type": {
+        "value": "derived-from"
+      },
+      "Observation.related.target": {
+        "Reference.reference": {
+          "value": "QuestionnaireResponse/gcs"
+        },
+        "Reference.display": {
+          "value": "GCS form results"
+        },
+        "reference": "http://hl7.org/fhir//QuestionnaireResponse/gcs"
+      }
+    }
+  ]
+}

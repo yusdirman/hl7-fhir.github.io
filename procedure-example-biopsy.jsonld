@@ -1,0 +1,98 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Procedure",
+  "resourceType": "Procedure",
+  "Resource.id": {
+    "value": "biopsy"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Biopsy of suspected melanoma L) arm</div>"
+    }
+  },
+  "Procedure.subject": {
+    "Reference.reference": {
+      "value": "Patient/example"
+    },
+    "reference": "http://hl7.org/fhir//Patient/example"
+  },
+  "Procedure.status": {
+    "value": "completed"
+  },
+  "Procedure.code": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "value": "90105005"
+        },
+        "Coding.display": {
+          "value": "Biopsy of soft tissue of forearm (Procedure)"
+        }
+      }
+    ],
+    "CodeableConcept.text": {
+      "value": "Biopsy of suspected melanoma L) arm"
+    },
+    "concept": "http://snomed.info/sct#90105005"
+  },
+  "Procedure.bodySite": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "value": "http://snomed.info/sct"
+          },
+          "Coding.code": {
+            "value": "368225008"
+          },
+          "Coding.display": {
+            "value": "Entire Left Forearm"
+          }
+        }
+      ],
+      "CodeableConcept.text": {
+        "value": "Left forearm"
+      }
+    }
+  ],
+  "Procedure.reasonCodeableConcept": {
+    "CodeableConcept.text": {
+      "value": "Dark lesion l) forearm. getting darker last 3 months."
+    }
+  },
+  "Procedure.performer": [
+    {
+      "Procedure.performer.actor": {
+        "Reference.reference": {
+          "value": "Practitioner/example"
+        },
+        "Reference.display": {
+          "value": "Dr Bert Biopser"
+        },
+        "reference": "http://hl7.org/fhir//Practitioner/example"
+      }
+    }
+  ],
+  "Procedure.performedDateTime": {
+    "value": "2014-02-03"
+  },
+  "Procedure.followUp": [
+    {
+      "CodeableConcept.text": {
+        "value": "Review in clinic"
+      }
+    }
+  ],
+  "Procedure.notes": [
+    {
+      "Annotation.text": {
+        "value": "Standard Biopsy"
+      }
+    }
+  ]
+}

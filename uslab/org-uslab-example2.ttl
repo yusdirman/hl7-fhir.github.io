@@ -1,0 +1,72 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Organizationorg-uslab-example2> a fhir:Organization;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "org-uslab-example2"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: org-uslab-example2</p><p><b>identifier</b>: 8235849085 (OFFICIAL)</p><p><b>name</b>: Children's Hospital</p><p><b>telecom</b>: ph: +1 617 555 1234, fax: +1 555 227 6622</p><p><b>address</b>: Massachusetts Avenue Building 1 Boston MA 25025 USA (WORK)</p><h3>Contacts</h3><table><tr><td>-</td><td><b>Name</b></td></tr><tr><td>*</td><td>Desk T Fran </td></tr></table></div>"
+  ];
+  fhir:Organization.identifier [
+     fhir:index 0;
+     fhir:Identifier.use [ fhir:value "official" ];
+     fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/sid/us-npi" ];
+     fhir:Identifier.value [ fhir:value "8235849085" ]
+  ];
+  fhir:Organization.name [ fhir:value "Children's Hospital"];
+  fhir:Organization.telecom [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value "phone" ];
+     fhir:ContactPoint.value [ fhir:value "+1 617 555 1234" ]
+  ], [
+     fhir:index 1;
+     fhir:ContactPoint.system [ fhir:value "fax" ];
+     fhir:ContactPoint.value [ fhir:value "+1 555 227 6622" ]
+  ];
+  fhir:Organization.address [
+     fhir:index 0;
+     fhir:Address.use [ fhir:value "work" ];
+     fhir:Address.line [
+       fhir:value "Massachusetts Avenue";
+       fhir:index 0
+     ], [
+       fhir:value "Building 1";
+       fhir:index 1
+     ];
+     fhir:Address.city [ fhir:value "Boston" ];
+     fhir:Address.state [ fhir:value "MA" ];
+     fhir:Address.postalCode [ fhir:value "25025" ];
+     fhir:Address.country [ fhir:value "USA" ]
+  ];
+  fhir:Organization.contact [
+     fhir:index 0;
+     fhir:Organization.contact.name [
+       fhir:HumanName.family [
+         fhir:value "Fran";
+         fhir:index 0
+       ];
+       fhir:HumanName.given [
+         fhir:value "Desk";
+         fhir:index 0
+       ], [
+         fhir:value "T";
+         fhir:index 1
+       ];
+       fhir:HumanName.prefix [
+         fhir:value "Dr";
+         fhir:index 0
+       ];
+       fhir:HumanName.suffix [
+         fhir:value "Jr";
+         fhir:index 0
+       ]
+     ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

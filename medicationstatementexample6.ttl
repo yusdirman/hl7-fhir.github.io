@@ -1,0 +1,65 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/MedicationStatementexample006> a fhir:MedicationStatement;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "example006"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>Amoxicillin 250mg/5mL - Taking 5mL every three hours</p>\n    </div>"
+  ];
+  fhir:MedicationStatement.status [ fhir:value "active"];
+  fhir:MedicationStatement.medicationReference [
+     fhir:link <http://hl7.org/fhir/Medication/MedicationExample4>;
+     fhir:Reference.reference [ fhir:value "Medication/MedicationExample4" ]
+  ];
+  fhir:MedicationStatement.patient [
+     fhir:link <http://hl7.org/fhir/Patient/example>;
+     fhir:Reference.reference [ fhir:value "Patient/example" ]
+  ];
+  fhir:MedicationStatement.effectiveDateTime [ fhir:value "2014-02-01"^^xsd:date];
+  fhir:MedicationStatement.informationSource [
+     fhir:link <http://hl7.org/fhir/Patient/pat1>;
+     fhir:Reference.reference [ fhir:value "Patient/pat1" ]
+  ];
+  fhir:MedicationStatement.dateAsserted [ fhir:value "2014-02-22"^^xsd:date];
+  fhir:MedicationStatement.wasNotTaken [ fhir:value "false"^^xsd:boolean];
+  fhir:MedicationStatement.note [
+     fhir:index 0;
+     fhir:Annotation.text [ fhir:value "Father indicates they miss the occasional dose" ]
+  ];
+  fhir:MedicationStatement.dosage [
+     fhir:index 0;
+     fhir:MedicationStatement.dosage.text [ fhir:value "5ml three times daily" ];
+     fhir:MedicationStatement.dosage.asNeededBoolean [ fhir:value "false"^^xsd:boolean ];
+     fhir:MedicationStatement.dosage.route [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept sct:260548002;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "260548002" ];
+         fhir:Coding.display [ fhir:value "Oral" ]
+       ]
+     ];
+     fhir:MedicationStatement.dosage.doseQuantity [
+       fhir:Quantity.value [ fhir:value "5"^^xsd:decimal ]
+     ];
+     fhir:MedicationStatement.dosage.maxDosePerPeriod [
+       fhir:Ratio.numerator [
+         fhir:Quantity.value [ fhir:value "3"^^xsd:decimal ]
+       ];
+       fhir:Ratio.denominator [
+         fhir:Quantity.value [ fhir:value "1"^^xsd:decimal ];
+         fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+         fhir:Quantity.code [ fhir:value "d" ]
+       ]
+     ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

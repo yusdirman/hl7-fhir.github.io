@@ -1,0 +1,44 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Media",
+  "resourceType": "Media",
+  "Resource.id": {
+    "value": "sound"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Sound recording of speech example for Patient Henry Levin (MRN 12345):<br/><img src=\"#11\" alt=\"diagram\"/></div>"
+    }
+  },
+  "Media.type": {
+    "value": "video"
+  },
+  "Media.subject": {
+    "Reference.reference": {
+      "value": "Patient/xcda"
+    },
+    "reference": "http://hl7.org/fhir//Patient/xcda"
+  },
+  "Media.operator": {
+    "Reference.reference": {
+      "value": "Practitioner/xcda-author"
+    },
+    "reference": "http://hl7.org/fhir//Practitioner/xcda-author"
+  },
+  "Media.duration": {
+    "value": 65
+  },
+  "Media.content": {
+    "Element.id": {
+      "value": "a1"
+    },
+    "Attachment.contentType": {
+      "value": "audio/mpeg"
+    },
+    "Attachment.data": {
+      "value": "dG9vIGJpZyB0b28gaW5jbHVkZSB0aGUgd2hvbGU="
+    }
+  }
+}

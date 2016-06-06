@@ -1,0 +1,60 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/DiagnosticOrder",
+  "resourceType": "DiagnosticOrder",
+  "Resource.id": {
+    "value": "ft4"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: ft4</p><p><b>status</b>: requested</p><p><b>subject</b>: <a>Patient/pat2</a></p><p><b>orderer</b>: <a>Practitioner/example</a></p><h3>Events</h3><table><tr><td>-</td><td><b>Status</b></td><td><b>DateTime</b></td></tr><tr><td>*</td><td>requested</td><td>Aug 27, 2015 9:33:27 AM</td></tr></table><h3>Items</h3><table><tr><td>-</td><td><b>Code</b></td></tr><tr><td>*</td><td>Free T4 <span>(Details : {LOINC code '3024-7' = 'Thyroxine (T4) free [Mass/volume] in Serum or Plasma)</span></td></tr></table></div>"
+    }
+  },
+  "DiagnosticOrder.status": {
+    "value": "requested"
+  },
+  "DiagnosticOrder.subject": {
+    "Reference.reference": {
+      "value": "Patient/pat2"
+    },
+    "reference": "http://hl7.org/fhir//Patient/pat2"
+  },
+  "DiagnosticOrder.orderer": {
+    "Reference.reference": {
+      "value": "Practitioner/example"
+    },
+    "reference": "http://hl7.org/fhir//Practitioner/example"
+  },
+  "DiagnosticOrder.event": [
+    {
+      "DiagnosticOrder.event.status": {
+        "value": "requested"
+      },
+      "DiagnosticOrder.event.dateTime": {
+        "value": "2015-08-27T09:33:27+07:00"
+      }
+    }
+  ],
+  "DiagnosticOrder.item": [
+    {
+      "DiagnosticOrder.item.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://loinc.org"
+            },
+            "Coding.code": {
+              "value": "3024-7"
+            }
+          }
+        ],
+        "CodeableConcept.text": {
+          "value": "Free T4"
+        },
+        "concept": "http://loinc.org/owl#3024-7"
+      }
+    }
+  ]
+}

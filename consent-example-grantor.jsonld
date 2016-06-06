@@ -1,0 +1,89 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Consent",
+  "resourceType": "Consent",
+  "Resource.id": {
+    "value": "consent-example-grantor"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">The following scenario is based on a question asked on John Moehrke's blog in the \n\t<a href=\"http://healthcaresecprivacy.blogspot.com/2016/04/consent-given-to-authorized.html\">Consent given to authorized representative</a>\n    <p>\nThis is a case where a Patient is giving a limited (read-only) access to an individual.\n\t</p><p>\n    Patient &quot;P. van de Heuvel&quot; wishes to provide XXX with read-only access to the data at Good Health Psychiatric Hospital \n   available for patient requested access use.\n   </p>\n   </div>"
+    }
+  },
+  "Consent.status": {
+    "value": "active"
+  },
+  "Consent.type": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/consenttypecodes"
+        },
+        "Coding.code": {
+          "value": "Opt-In"
+        },
+        "Coding.display": {
+          "value": "Authorization with exceptions."
+        }
+      }
+    ]
+  },
+  "Consent.issued": {
+    "value": "2016-05-11"
+  },
+  "Consent.patient": {
+    "Reference.reference": {
+      "value": "Patient/f001"
+    },
+    "Reference.display": {
+      "value": "P. van de Heuvel"
+    },
+    "reference": "http://hl7.org/fhir//Patient/f001"
+  },
+  "Consent.recipient": [
+    {
+      "Reference.reference": {
+        "value": "Practitioner/f204"
+      },
+      "Reference.display": {
+        "value": "Fictive Nurse"
+      }
+    }
+  ],
+  "Consent.action": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "value": "http://hl7.org/fhir/v3/ActReason"
+          },
+          "Coding.code": {
+            "value": "PATRQT"
+          },
+          "Coding.display": {
+            "value": "patient requested"
+          }
+        }
+      ]
+    },
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "value": "http://hl7.org/fhir/restful-interaction"
+          },
+          "Coding.code": {
+            "value": "read"
+          }
+        }
+      ]
+    }
+  ],
+  "Consent.contentAttachment": {
+    "Attachment.title": {
+      "value": "The terms of the consent in lawyer speak."
+    }
+  }
+}

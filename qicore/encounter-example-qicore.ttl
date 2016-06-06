@@ -1,0 +1,61 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Encounterencounter-example-qicore> a fhir:Encounter;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "encounter-example-qicore"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Encounter with patient @qicore</div>"
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/encounter-relatedCondition" ];
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "condition" ];
+       fhir:Extension.valueReference [
+         fhir:link <http://hl7.org/fhir/Condition/qicore>;
+         fhir:Reference.reference [ fhir:value "Condition/qicore" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:Extension.url [ fhir:value "role" ];
+       fhir:Extension.valueCodeableConcept [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:concept sct:8319008;
+           fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+           fhir:Coding.code [ fhir:value "8319008" ];
+           fhir:Coding.display [ fhir:value "Principal diagnosis" ]
+         ]
+       ]
+     ]
+  ];
+  fhir:Encounter.status [ fhir:value "finished"];
+  fhir:Encounter.class [ fhir:value "inpatient"];
+  fhir:Encounter.patient [
+     fhir:Reference.reference [ fhir:value "patient-example" ]
+  ];
+  fhir:Encounter.period [
+     fhir:Period.start [ fhir:value "2015-02-09T00:00:00Z"^^xsd:dateTime ];
+     fhir:Period.end [ fhir:value "2015-02-20T00:00:00Z"^^xsd:dateTime ]
+  ];
+  fhir:Encounter.hospitalization [
+     fhir:Encounter.hospitalization.dischargeDisposition [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/discharge-disposition" ];
+         fhir:Coding.code [ fhir:value "home" ];
+         fhir:Coding.display [ fhir:value "Home" ]
+       ]
+     ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

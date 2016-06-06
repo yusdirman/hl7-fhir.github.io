@@ -1,0 +1,44 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/DiagnosticOrderft4> a fhir:DiagnosticOrder;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "ft4"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: ft4</p><p><b>status</b>: requested</p><p><b>subject</b>: <a>Patient/pat2</a></p><p><b>orderer</b>: <a>Practitioner/example</a></p><h3>Events</h3><table><tr><td>-</td><td><b>Status</b></td><td><b>DateTime</b></td></tr><tr><td>*</td><td>requested</td><td>Aug 27, 2015 9:33:27 AM</td></tr></table><h3>Items</h3><table><tr><td>-</td><td><b>Code</b></td></tr><tr><td>*</td><td>Free T4 <span>(Details : {LOINC code '3024-7' = 'Thyroxine (T4) free [Mass/volume] in Serum or Plasma)</span></td></tr></table></div>"
+  ];
+  fhir:DiagnosticOrder.status [ fhir:value "requested"];
+  fhir:DiagnosticOrder.subject [
+     fhir:link <http://hl7.org/fhir/Patient/pat2>;
+     fhir:Reference.reference [ fhir:value "Patient/pat2" ]
+  ];
+  fhir:DiagnosticOrder.orderer [
+     fhir:link <http://hl7.org/fhir/Practitioner/example>;
+     fhir:Reference.reference [ fhir:value "Practitioner/example" ]
+  ];
+  fhir:DiagnosticOrder.event [
+     fhir:index 0;
+     fhir:DiagnosticOrder.event.status [ fhir:value "requested" ];
+     fhir:DiagnosticOrder.event.dateTime [ fhir:value "2015-08-27T09:33:27+07:00"^^xsd:dateTime ]
+  ];
+  fhir:DiagnosticOrder.item [
+     fhir:index 0;
+     fhir:DiagnosticOrder.item.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept loinc:3024-7;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "3024-7" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "Free T4" ]
+     ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,210 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/QuestionnaireResponse",
+  "resourceType": "QuestionnaireResponse",
+  "Resource.id": {
+    "value": "3141"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <pre>\n            Comorbidity? YES\n              Cardial Comorbidity? YES\n                Angina? YES\n                MI? NO\n              Vascular Comorbidity?\n                (no answers)\n              ...\n            Histopathology\n              Abdominal\n                pT category: 1a\n              ...\n          </pre>\n    </div>"
+    }
+  },
+  "Patient": [
+    {
+      "Resource.id": {
+        "value": "patsub"
+      },
+      "Patient.identifier": [
+        {
+          "Identifier.system": {
+            "value": "http://cancer.questionnaire.org/systems/id/patientnr"
+          },
+          "Identifier.value": {
+            "value": "A34442332"
+          }
+        },
+        {
+          "Identifier.type": {
+            "CodeableConcept.text": {
+              "value": "Dutch BSN"
+            }
+          },
+          "Identifier.system": {
+            "value": "urn:oid:2.16.840.1.113883.2.4.6.3"
+          },
+          "Identifier.value": {
+            "value": "188912345"
+          }
+        }
+      ],
+      "Patient.gender": {
+        "value": "male"
+      },
+      "Patient.birthDate": {
+        "value": "1972-11-30"
+      }
+    },
+    {
+      "Resource.id": {
+        "value": "questauth"
+      },
+      "Practitioner.identifier": [
+        {
+          "Identifier.type": {
+            "CodeableConcept.text": {
+              "value": "AUMC, Den Helder"
+            }
+          },
+          "Identifier.system": {
+            "value": "http://cancer.questionnaire.org/systems/id/org"
+          },
+          "Identifier.value": {
+            "value": "AUMC"
+          }
+        }
+      ]
+    },
+    {
+      "Resource.id": {
+        "value": "obs.pt-category"
+      },
+      "Observation.status": {
+        "value": "final"
+      },
+      "Observation.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "value": "53786006"
+            },
+            "Coding.display": {
+              "value": "pT1 category"
+            }
+          }
+        ],
+        "concept": "http://snomed.info/sct#53786006"
+      },
+      "Observation.subject": {
+        "Reference.reference": {
+          "value": "#patsub"
+        }
+      },
+      "Observation.performer": [
+        {
+          "Reference.reference": {
+            "value": "#questauth"
+          }
+        }
+      ],
+      "Observation.valueCodeableConcept": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "value": "443357004"
+            },
+            "Coding.display": {
+              "value": "pT1a category"
+            }
+          }
+        ],
+        "concept": "http://snomed.info/sct#443357004"
+      }
+    }
+  ],
+  "QuestionnaireResponse.status": {
+    "value": "completed"
+  },
+  "QuestionnaireResponse.subject": {
+    "Reference.reference": {
+      "value": "#patsub"
+    }
+  },
+  "QuestionnaireResponse.author": {
+    "Reference.reference": {
+      "value": "#questauth"
+    }
+  },
+  "QuestionnaireResponse.authored": {
+    "value": "2013-02-19T14:15:00-05:00"
+  },
+  "QuestionnaireResponse.item": [
+    {
+      "QuestionnaireResponse.item.item": [
+        {
+          "QuestionnaireResponse.item.answer": [
+            {
+              "QuestionnaireResponse.item.answer.valueCoding": {
+                "Coding.system": {
+                  "value": "http://cancer.questionnaire.org/system/code/yesno"
+                },
+                "Coding.code": {
+                  "value": "1"
+                },
+                "Coding.display": {
+                  "value": "Yes"
+                }
+              },
+              "QuestionnaireResponse.item.answer.item": [
+                {
+                  "QuestionnaireResponse.item.item": [
+                    {
+                      "QuestionnaireResponse.item.answer": [
+                        {
+                          "QuestionnaireResponse.item.answer.valueCoding": {
+                            "Coding.system": {
+                              "value": "http://cancer.questionnaire.org/system/code/yesno"
+                            },
+                            "Coding.code": {
+                              "value": "1"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "QuestionnaireResponse.item.answer": [
+                        {
+                          "QuestionnaireResponse.item.answer.valueCoding": {
+                            "Coding.system": {
+                              "value": "http://cancer.questionnaire.org/system/code/yesno"
+                            },
+                            "Coding.code": {
+                              "value": "1"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "QuestionnaireResponse.item.answer": [
+                        {
+                          "QuestionnaireResponse.item.answer.valueCoding": {
+                            "Coding.system": {
+                              "value": "http://cancer.questionnaire.org/system/code/yesno"
+                            },
+                            "Coding.code": {
+                              "value": "0"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

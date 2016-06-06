@@ -1,0 +1,108 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/DiagnosticOrderexample> a fhir:DiagnosticOrder;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "example"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: example</p><p><b>contained</b>: </p><p><b>identifier</b>: Placer = 2345234234234</p><p><b>status</b>: received</p><p><b>subject</b>: <a>Patient/example</a></p><p><b>encounter</b>: <a>Encounter/example</a></p><p><b>orderer</b>: <a>Practitioner/example</a></p><p><b>reason</b>: Fam hx-ischem heart dis <span>(Details : {ICD-9 code 'V173' = '??', given as 'Fam hx-ischem heart dis'})</span></p><p><b>supportingInformation</b>: id: fasting; status: final; Fasting status - Reported <span>(Details : {LOINC code '49541-6' = 'Fasting status - Reported', given as 'Fasting status - Reported'})</span>; Patient/example; Yes <span>(Details : {http://hl7.org/fhir/v2/0136 code 'Y' = 'Yes', given as 'Yes'})</span></p><h3>Events</h3><table><tr><td>-</td><td><b>Status</b></td><td><b>DateTime</b></td><td><b>Actor</b></td></tr><tr><td>*</td><td>requested</td><td>May 2, 2013 4:16:00 PM</td><td><a>Practitioner/example</a></td></tr></table><h3>Items</h3><table><tr><td>-</td><td><b>Code</b></td></tr><tr><td>*</td><td>Lipid Panel <span>(Details : {http://acme.org/tests code 'LIPID' = '??)</span></td></tr></table><p><b>note</b>: patient is afraid of needles</p></div>"
+  ];
+  fhir:DomainResource.contained [
+     a fhir:Observation;
+     fhir:index 0;
+     fhir:Resource.id [ fhir:value "fasting" ];
+     fhir:Observation.status [ fhir:value "final" ];
+     fhir:Observation.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept loinc:49541-6;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "49541-6" ];
+         fhir:Coding.display [ fhir:value "Fasting status - Reported" ]
+       ]
+     ];
+     fhir:Observation.subject [
+       fhir:link <http://hl7.org/fhir/Patient/example>;
+       fhir:Reference.reference [ fhir:value "Patient/example" ]
+     ];
+     fhir:Observation.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v2/0136" ];
+         fhir:Coding.code [ fhir:value "Y" ];
+         fhir:Coding.display [ fhir:value "Yes" ]
+       ]
+     ]
+  ];
+  fhir:DiagnosticOrder.identifier [
+     fhir:index 0;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/identifier-type" ];
+         fhir:Coding.code [ fhir:value "PLAC" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "Placer" ]
+     ];
+     fhir:Identifier.system [ fhir:value "urn:oid:1.3.4.5.6.7" ];
+     fhir:Identifier.value [ fhir:value "2345234234234" ]
+  ];
+  fhir:DiagnosticOrder.status [ fhir:value "received"];
+  fhir:DiagnosticOrder.subject [
+     fhir:link <http://hl7.org/fhir/Patient/example>;
+     fhir:Reference.reference [ fhir:value "Patient/example" ]
+  ];
+  fhir:DiagnosticOrder.encounter [
+     fhir:link <http://hl7.org/fhir/Encounter/example>;
+     fhir:Reference.reference [ fhir:value "Encounter/example" ]
+  ];
+  fhir:DiagnosticOrder.orderer [
+     fhir:link <http://hl7.org/fhir/Practitioner/example>;
+     fhir:Reference.reference [ fhir:value "Practitioner/example" ]
+  ];
+  fhir:DiagnosticOrder.reason [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/sid/icd-9" ];
+       fhir:Coding.code [ fhir:value "V173" ];
+       fhir:Coding.display [ fhir:value "Fam hx-ischem heart dis" ]
+     ]
+  ];
+  fhir:DiagnosticOrder.supportingInformation [
+     fhir:index 0;
+     fhir:Reference.reference [ fhir:value "#fasting" ]
+  ];
+  fhir:DiagnosticOrder.event [
+     fhir:index 0;
+     fhir:DiagnosticOrder.event.status [ fhir:value "requested" ];
+     fhir:DiagnosticOrder.event.dateTime [ fhir:value "2013-05-02T16:16:00-07:00"^^xsd:dateTime ];
+     fhir:DiagnosticOrder.event.actor [
+       fhir:link <http://hl7.org/fhir/Practitioner/example>;
+       fhir:Reference.reference [ fhir:value "Practitioner/example" ]
+     ]
+  ];
+  fhir:DiagnosticOrder.item [
+     fhir:index 0;
+     fhir:DiagnosticOrder.item.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://acme.org/tests" ];
+         fhir:Coding.code [ fhir:value "LIPID" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "Lipid Panel" ]
+     ]
+  ];
+  fhir:DiagnosticOrder.note [
+     fhir:index 0;
+     fhir:Annotation.text [ fhir:value "patient is afraid of needles" ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

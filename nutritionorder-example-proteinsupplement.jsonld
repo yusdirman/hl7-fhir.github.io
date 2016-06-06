@@ -1,0 +1,126 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/NutritionOrder",
+  "resourceType": "NutritionOrder",
+  "Resource.id": {
+    "value": "proteinsupplement"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: proteinsupplement</p><p><b>identifier</b>: 123</p><p><b>status</b>: active</p><p><b>patient</b>: <a>Peter Chalmers</a></p><p><b>encounter</b>: <a>Inpatient</a></p><p><b>dateTime</b>: Sep 17, 2014</p><p><b>orderer</b>: <a>Dr Adam Careful</a></p><h3>Supplements</h3><table><tr><td>-</td><td><b>Type</b></td><td><b>ProductName</b></td><td><b>Schedule</b></td><td><b>Quantity</b></td><td><b>Instruction</b></td></tr><tr><td>*</td><td>High Protein Powder <span>(Details : {SNOMED CT code '442991000124104' = 'Adult high protein formula (product)', given as 'Adult high protein formula'}; {http://goodhealthhospital.org/supplement-type-codes code '1000' = '??', given as 'High Protein Powder'})</span></td><td>Beneprotein</td><td>Starting Feb 10, 2015, Do at meals</td><td>1 scoop<span> (Details: http://unitsofmeasure.org code {scoop} = '{scoop}')</span></td><td>Beneprotein 1 scoop TID with meal.starting on  2015-02-10</td></tr></table></div>"
+    }
+  },
+  "NutritionOrder.identifier": [
+    {
+      "Identifier.system": {
+        "value": "http://goodhealthhospital.org/nutrition-orders"
+      },
+      "Identifier.value": {
+        "value": "123"
+      }
+    }
+  ],
+  "NutritionOrder.status": {
+    "value": "active"
+  },
+  "NutritionOrder.patient": {
+    "Reference.reference": {
+      "value": "Patient/example"
+    },
+    "Reference.display": {
+      "value": "Peter Chalmers"
+    },
+    "reference": "http://hl7.org/fhir//Patient/example"
+  },
+  "NutritionOrder.encounter": {
+    "Reference.reference": {
+      "value": "Encounter/example"
+    },
+    "Reference.display": {
+      "value": "Inpatient"
+    },
+    "reference": "http://hl7.org/fhir//Encounter/example"
+  },
+  "NutritionOrder.dateTime": {
+    "value": "2014-09-17"
+  },
+  "NutritionOrder.orderer": {
+    "Reference.reference": {
+      "value": "Practitioner/example"
+    },
+    "Reference.display": {
+      "value": "Dr Adam Careful"
+    },
+    "reference": "http://hl7.org/fhir//Practitioner/example"
+  },
+  "NutritionOrder.supplement": [
+    {
+      "NutritionOrder.supplement.type": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "value": "442991000124104"
+            },
+            "Coding.display": {
+              "value": "Adult high protein formula"
+            }
+          },
+          {
+            "Coding.system": {
+              "value": "http://goodhealthhospital.org/supplement-type-codes"
+            },
+            "Coding.code": {
+              "value": "1000"
+            },
+            "Coding.display": {
+              "value": "High Protein Powder"
+            }
+          }
+        ],
+        "CodeableConcept.text": {
+          "value": "High Protein Powder"
+        },
+        "concept": "http://snomed.info/sct#442991000124104"
+      },
+      "NutritionOrder.supplement.productName": {
+        "value": "Beneprotein"
+      },
+      "NutritionOrder.supplement.schedule": [
+        {
+          "Timing.repeat": {
+            "Timing.repeat.boundsPeriod": {
+              "Period.start": {
+                "value": "2015-02-10"
+              }
+            },
+            "Timing.repeat.when": {
+              "value": "C"
+            }
+          }
+        }
+      ],
+      "NutritionOrder.supplement.quantity": {
+        "Quantity.value": {
+          "value": 1
+        },
+        "Quantity.unit": {
+          "value": "scoop"
+        },
+        "Quantity.system": {
+          "value": "http://unitsofmeasure.org"
+        },
+        "Quantity.code": {
+          "value": "{scoop}"
+        }
+      },
+      "NutritionOrder.supplement.instruction": {
+        "value": "Beneprotein 1 scoop TID with meal.starting on  2015-02-10"
+      }
+    }
+  ]
+}

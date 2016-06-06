@@ -1,0 +1,117 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/MedicationOrder",
+  "resourceType": "MedicationOrder",
+  "Resource.id": {
+    "value": "f203"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f203</p><p><b>status</b>: active</p><p><b>medication</b>: <a>Paracetamol</a></p><p><b>patient</b>: <a>Roel</a></p><p><b>encounter</b>: <a>Roel's encounter on April fourth 2013</a></p><p><b>dateWritten</b>: Apr 4, 2013</p><p><b>prescriber</b>: <a>Practitioner/f201</a></p><p><b>reasonReference</b>: <a>fever</a></p><h3>DosageInstructions</h3><table><tr><td>-</td><td><b>Text</b></td><td><b>Method</b></td><td><b>MaxDosePerPeriod</b></td></tr><tr><td>*</td><td>Paracetamol 3xdaags 1000mg</td><td>Paracetamol 500mg tablet <span>(Details : {SNOMED CT code '322236009' = 'Acetaminophen 500mg tablet', given as 'Paracetamol 500mg tablet'})</span></td><td>3000 milligram<span> (Details: SNOMED CT code 258684004 = 'milligram (qualifier value)')</span>/24 hours<span> (Details: SNOMED CT code 258702006 = 'hour (qualifier value)')</span></td></tr></table></div>"
+    }
+  },
+  "MedicationOrder.status": {
+    "value": "active"
+  },
+  "MedicationOrder.medicationReference": {
+    "Reference.reference": {
+      "value": "Medication/f203"
+    },
+    "Reference.display": {
+      "value": "Paracetamol"
+    },
+    "reference": "http://hl7.org/fhir//Medication/f203"
+  },
+  "MedicationOrder.patient": {
+    "Reference.reference": {
+      "value": "Patient/f201"
+    },
+    "Reference.display": {
+      "value": "Roel"
+    },
+    "reference": "http://hl7.org/fhir//Patient/f201"
+  },
+  "MedicationOrder.encounter": {
+    "Reference.reference": {
+      "value": "Encounter/f201"
+    },
+    "Reference.display": {
+      "value": "Roel's encounter on April fourth 2013"
+    },
+    "reference": "http://hl7.org/fhir//Encounter/f201"
+  },
+  "MedicationOrder.dateWritten": {
+    "value": "2013-04-04"
+  },
+  "MedicationOrder.prescriber": {
+    "Reference.reference": {
+      "value": "Practitioner/f201"
+    },
+    "reference": "http://hl7.org/fhir//Practitioner/f201"
+  },
+  "MedicationOrder.reasonReference": [
+    {
+      "Reference.reference": {
+        "value": "Condition/f201"
+      },
+      "Reference.display": {
+        "value": "fever"
+      }
+    }
+  ],
+  "MedicationOrder.dosageInstruction": [
+    {
+      "MedicationOrder.dosageInstruction.text": {
+        "value": "Paracetamol 3xdaags 1000mg"
+      },
+      "MedicationOrder.dosageInstruction.method": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "value": "322236009"
+            },
+            "Coding.display": {
+              "value": "Paracetamol 500mg tablet"
+            }
+          }
+        ],
+        "concept": "http://snomed.info/sct#322236009"
+      },
+      "MedicationOrder.dosageInstruction.maxDosePerPeriod": {
+        "Ratio.numerator": {
+          "Quantity.value": {
+            "value": 3000
+          },
+          "Quantity.unit": {
+            "value": "milligram"
+          },
+          "Quantity.system": {
+            "value": "http://snomed.info/sct"
+          },
+          "Quantity.code": {
+            "value": "258684004"
+          }
+        },
+        "Ratio.denominator": {
+          "Quantity.value": {
+            "value": 24
+          },
+          "Quantity.unit": {
+            "value": "hours"
+          },
+          "Quantity.system": {
+            "value": "http://snomed.info/sct"
+          },
+          "Quantity.code": {
+            "value": "258702006"
+          }
+        }
+      }
+    }
+  ]
+}

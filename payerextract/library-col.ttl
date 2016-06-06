@@ -1,0 +1,128 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Librarylibrary-col> a fhir:Library;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "library-col"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Cohort Definition for Colorectal Cancer Screening Measure</div>"
+  ];
+  fhir:Library.moduleMetadata [
+     fhir:ModuleMetadata.identifier [
+       fhir:index 0;
+       fhir:Identifier.use [ fhir:value "official" ];
+       fhir:Identifier.value [ fhir:value "COL" ]
+     ];
+     fhir:ModuleMetadata.version [ fhir:value "1.0.0" ];
+     fhir:ModuleMetadata.title [ fhir:value "Cohort Definition for Colorectal Cancer Screening Measure" ];
+     fhir:ModuleMetadata.type [ fhir:value "library" ];
+     fhir:ModuleMetadata.status [ fhir:value "active" ];
+     fhir:ModuleMetadata.experimental [ fhir:value "true"^^xsd:boolean ];
+     fhir:ModuleMetadata.publicationDate [ fhir:value "2016-04-19"^^xsd:date ];
+     fhir:ModuleMetadata.topic [
+       fhir:index 0;
+       fhir:CodeableConcept.text [ fhir:value "something" ]
+     ]
+  ];
+  fhir:Library.model [
+     fhir:index 0;
+     fhir:Library.model.identifier [ fhir:value "FHIR" ]
+  ];
+  fhir:Library.valueSet [
+     fhir:index 0;
+     fhir:Library.valueSet.name [ fhir:value "Colonoscopy" ];
+     fhir:Library.valueSet.identifier [ fhir:value "2.16.840.1.113883.3.464.1004.1064" ]
+  ], [
+     fhir:index 1;
+     fhir:Library.valueSet.name [ fhir:value "Colorectal Cancer" ];
+     fhir:Library.valueSet.identifier [ fhir:value "2.16.840.1.113883.3.464.1004.1064" ]
+  ], [
+     fhir:index 2;
+     fhir:Library.valueSet.name [ fhir:value "Flexible Sigmoidoscopy" ];
+     fhir:Library.valueSet.identifier [ fhir:value "2.16.840.1.113883.3.464.1004.1102" ]
+  ], [
+     fhir:index 3;
+     fhir:Library.valueSet.name [ fhir:value "Total Colectomy" ];
+     fhir:Library.valueSet.identifier [ fhir:value "2.16.840.1.113883.3.464.1003.198.12.1019" ]
+  ], [
+     fhir:index 4;
+     fhir:Library.valueSet.name [ fhir:value "Fecal Occult Blood Test (FOBT)" ];
+     fhir:Library.valueSet.identifier [ fhir:value "2.16.840.1.113883.3.464.1003.198.12.1011" ]
+  ];
+  fhir:Library.dataRequirement [
+     fhir:index 0;
+     fhir:DataRequirement.type [ fhir:value "Patient" ]
+  ], [
+     fhir:index 1;
+     fhir:DataRequirement.type [ fhir:value "Procedure" ];
+     fhir:DataRequirement.codeFilter [
+       fhir:index 0;
+       fhir:DataRequirement.codeFilter.path [ fhir:value "code" ];
+       fhir:DataRequirement.codeFilter.valueSetString [ fhir:value "Colonoscopy" ]
+     ];
+     fhir:DataRequirement.dateFilter [
+       fhir:index 0;
+       fhir:DataRequirement.dateFilter.path [ fhir:value "performedDateTime.value" ];
+       fhir:DataRequirement.dateFilter.valuePeriod [
+         fhir:Period.start [ fhir:value "2006-01-01"^^xsd:date ]
+       ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:DataRequirement.type [ fhir:value "Condition" ];
+     fhir:DataRequirement.codeFilter [
+       fhir:index 0;
+       fhir:DataRequirement.codeFilter.path [ fhir:value "code" ];
+       fhir:DataRequirement.codeFilter.valueSetString [ fhir:value "Colorectal Cancer" ]
+     ]
+  ], [
+     fhir:index 3;
+     fhir:DataRequirement.type [ fhir:value "Procedure" ];
+     fhir:DataRequirement.codeFilter [
+       fhir:index 0;
+       fhir:DataRequirement.codeFilter.path [ fhir:value "code" ];
+       fhir:DataRequirement.codeFilter.valueSetString [ fhir:value "Flexible Sigmoidoscopy" ]
+     ];
+     fhir:DataRequirement.dateFilter [
+       fhir:index 0;
+       fhir:DataRequirement.dateFilter.path [ fhir:value "performedDateTime.value" ];
+       fhir:DataRequirement.dateFilter.valuePeriod [
+         fhir:Period.start [ fhir:value "2011-01-01"^^xsd:date ]
+       ]
+     ]
+  ], [
+     fhir:index 4;
+     fhir:DataRequirement.type [ fhir:value "Procedure" ];
+     fhir:DataRequirement.codeFilter [
+       fhir:index 0;
+       fhir:DataRequirement.codeFilter.path [ fhir:value "code" ];
+       fhir:DataRequirement.codeFilter.valueSetString [ fhir:value "Total Colectomy" ]
+     ]
+  ], [
+     fhir:index 5;
+     fhir:DataRequirement.type [ fhir:value "Procedure" ];
+     fhir:DataRequirement.codeFilter [
+       fhir:index 0;
+       fhir:DataRequirement.codeFilter.path [ fhir:value "code" ];
+       fhir:DataRequirement.codeFilter.valueSetString [ fhir:value "FOBT" ]
+     ];
+     fhir:DataRequirement.dateFilter [
+       fhir:index 0;
+       fhir:DataRequirement.dateFilter.path [ fhir:value "performedDateTime.value" ];
+       fhir:DataRequirement.dateFilter.valuePeriod [
+         fhir:Period.start [ fhir:value "2015-01-01"^^xsd:date ]
+       ]
+     ]
+  ];
+  fhir:Library.document [
+     fhir:Attachment.contentType [ fhir:value "application/xml+elm" ];
+     fhir:Attachment.url [ fhir:value "http://example.org/libraries/library-col.elm.xml" ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

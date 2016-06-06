@@ -1,0 +1,41 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/ModuleDefinitionexample> a fhir:ModuleDefinition;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "example"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">[Put rendering here]</div>"
+  ];
+  fhir:ModuleDefinition.identifier [
+     fhir:index 0;
+     fhir:Identifier.use [ fhir:value "official" ];
+     fhir:Identifier.value [ fhir:value "ChalmydiaScreening_Common" ]
+  ];
+  fhir:ModuleDefinition.version [ fhir:value "2.0.0"];
+  fhir:ModuleDefinition.model [
+     fhir:index 0;
+     fhir:ModuleDefinition.model.identifier [ fhir:value "QUICK" ]
+  ];
+  fhir:ModuleDefinition.valueSet [
+     fhir:index 0;
+     fhir:ModuleDefinition.valueSet.name [ fhir:value "Female Administrative Sex" ];
+     fhir:ModuleDefinition.valueSet.identifier [ fhir:value "2.16.840.1.113883.3.560.100.2" ]
+  ];
+  fhir:ModuleDefinition.data [
+     fhir:index 0;
+     fhir:ModuleDefinition.data.type [ fhir:value "Condition" ];
+     fhir:ModuleDefinition.data.codeFilter [
+       fhir:index 0;
+       fhir:ModuleDefinition.data.codeFilter.path [ fhir:value "code" ];
+       fhir:ModuleDefinition.data.codeFilter.valueSetString [ fhir:value "Other Female Reproductive Conditions" ]
+     ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

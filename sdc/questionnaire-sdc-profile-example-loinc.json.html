@@ -1,0 +1,1558 @@
+﻿<!DOCTYPE HTML>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Questionnaire-sdc-profile-example-loinc.json - FHIR v1.4.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+  <link rel="Prev" href="http://hl7.org/fhir/questionnaire-sdc-profile-example-loinc.json.html"/>
+
+  <!-- Bootstrap core CSS -->
+  <link href="./dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="./assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="./assets/css/project.css" rel="stylesheet"/>
+  <link href="./assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment"><!-- segment-header -->	
+		<div class="container"><!-- container -->
+			<a id="logo" href="http://hl7.org/fhir" no-external="true"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a id="hl7-logo" href="http://www.hl7.org" no-external="true">
+					<img src="./assets/images/hl7-logo.png" width="42" height="50" alt="visit the hl7 website"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="./assets/images/search.png"/></a></div> 
+		</div>
+		<div class="container"><!-- container -->
+	</div></div><!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment"><!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container"><!-- container -->
+ <!-- HEADER CONTENT -->
+ 	      		
+ 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="documentation.html">Documentation</a></li>
+              <li><a href="implementation.html">Implementation</a></li>
+              <li><a href="resourcelist.html">Resources</a></li>
+              <li><a href="clinical.html">Clinical</a></li>
+              <li><a href="administration.html">Administrative</a></li>
+              <li><a href="infrastructure.html">Infrastructure</a></li>
+              <li><a href="financial.html">Financial</a></li>
+
+						</ul>
+					</div><!-- /.nav-collapse -->
+				</div><!-- /.container -->
+			</nav><!-- /.navbar -->
+      		
+				
+<!-- /HEADER CONTENT -->				
+		</div><!-- /container -->
+	</div><!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment"><!-- segment-breadcrumb -->
+		<div class="container"><!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="clinical.html">Clinical</a></li>        <li><a href="questionnaire.html">Questionnaire</a></li>        <li><b>Example Instance</b></li>        <!-- questionnaire-sdc-profile-example-loinc.json.html / resource-instance:Questionnaire / Example-->
+
+			</ul>	
+		</div><!-- /container -->
+	</div><!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment"><!-- segment-content -->
+	<div class="container"><!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+<!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<h1>Questionnaire-sdc-profile-example-loinc.json</h1>
+
+<p>
+<a href="questionnaire-sdc-profile-example-loinc.json">Raw JSON</a> (<a href="questionnaire-sdc-profile-example-loinc.canonical.json">canonical form</a>)
+</p>
+
+<div class="example">
+<p>LOINC perspective on the AHRQ form found in the SDC - Combination set of questionnaires</p>
+<pre class="json">
+{
+  &quot;resourceType&quot;: &quot;Questionnaire&quot;,
+  &quot;id&quot;: &quot;questionnaire-sdc-profile-example-loinc&quot;,
+  &quot;text&quot;: {
+    &quot;status&quot;: &quot;generated&quot;,
+    &quot;div&quot;: &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;Todo&lt;/div&gt;&quot;
+  },
+  &quot;contained&quot;: [
+    {
+      &quot;resourceType&quot;: &quot;ValueSet&quot;,
+      &quot;id&quot;: &quot;ll2654-3&quot;,
+      &quot;name&quot;: &quot;AHRQ_Medication_Q1&quot;,
+      &quot;status&quot;: &quot;active&quot;,
+      &quot;description&quot;: &quot;The answer list for question 1 on the AHRQ \&quot;Medication or Other Substance\&quot; form&quot;,
+      &quot;copyright&quot;: &quot;This content from LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use&quot;,
+      &quot;compose&quot;: {
+        &quot;include&quot;: [
+          {
+            &quot;system&quot;: &quot;http://loinc.org&quot;,
+            &quot;concept&quot;: [
+              {
+                &quot;extension&quot;: [
+                  {
+                    &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder&quot;,
+                    &quot;valueInteger&quot;: 1
+                  },
+                  {
+                    &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/valueset-label&quot;,
+                    &quot;valueString&quot;: &quot;a.&quot;
+                  }
+                ],
+                &quot;code&quot;: &quot;LA20271-5&quot;,
+                &quot;display&quot;: &quot;Medications&quot;
+              },
+              {
+                &quot;extension&quot;: [
+                  {
+                    &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder&quot;,
+                    &quot;valueInteger&quot;: 2
+                  },
+                  {
+                    &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/valueset-label&quot;,
+                    &quot;valueString&quot;: &quot;b.&quot;
+                  }
+                ],
+                &quot;code&quot;: &quot;LA20335-8&quot;,
+                &quot;display&quot;: &quot;Biological products&quot;
+              },
+              {
+                &quot;extension&quot;: [
+                  {
+                    &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder&quot;,
+                    &quot;valueInteger&quot;: 3
+                  },
+                  {
+                    &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/valueset-label&quot;,
+                    &quot;valueString&quot;: &quot;c.&quot;
+                  }
+                ],
+                &quot;code&quot;: &quot;LA20336-6&quot;,
+                &quot;display&quot;: &quot;Nutritional products&quot;
+              },
+              {
+                &quot;extension&quot;: [
+                  {
+                    &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder&quot;,
+                    &quot;valueInteger&quot;: 4
+                  },
+                  {
+                    &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/valueset-label&quot;,
+                    &quot;valueString&quot;: &quot;d.&quot;
+                  }
+                ],
+                &quot;code&quot;: &quot;LA20337-4&quot;,
+                &quot;display&quot;: &quot;Expressed human breast milk&quot;
+              },
+              {
+                &quot;extension&quot;: [
+                  {
+                    &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder&quot;,
+                    &quot;valueInteger&quot;: 5
+                  },
+                  {
+                    &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/valueset-label&quot;,
+                    &quot;valueString&quot;: &quot;e.&quot;
+                  }
+                ],
+                &quot;code&quot;: &quot;LA20338-2&quot;,
+                &quot;display&quot;: &quot;Medical gases (e.g., oxygen, nitrogen, nitrous oxide)&quot;
+              },
+              {
+                &quot;extension&quot;: [
+                  {
+                    &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder&quot;,
+                    &quot;valueInteger&quot;: 6
+                  },
+                  {
+                    &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/valueset-label&quot;,
+                    &quot;valueString&quot;: &quot;f.&quot;
+                  }
+                ],
+                &quot;code&quot;: &quot;LA20339-0&quot;,
+                &quot;display&quot;: &quot;Contrast media&quot;
+              },
+              {
+                &quot;extension&quot;: [
+                  {
+                    &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder&quot;,
+                    &quot;valueInteger&quot;: 7
+                  },
+                  {
+                    &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/valueset-label&quot;,
+                    &quot;valueString&quot;: &quot;g.&quot;
+                  }
+                ],
+                &quot;code&quot;: &quot;LA20340-8&quot;,
+                &quot;display&quot;: &quot;Radiopharmaceuticals&quot;
+              },
+              {
+                &quot;extension&quot;: [
+                  {
+                    &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder&quot;,
+                    &quot;valueInteger&quot;: 8
+                  },
+                  {
+                    &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/valueset-label&quot;,
+                    &quot;valueString&quot;: &quot;h.&quot;
+                  }
+                ],
+                &quot;code&quot;: &quot;LA20341-6&quot;,
+                &quot;display&quot;: &quot;Patient food (not suspected in drug-food interactions)&quot;
+              },
+              {
+                &quot;extension&quot;: [
+                  {
+                    &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder&quot;,
+                    &quot;valueInteger&quot;: 9
+                  },
+                  {
+                    &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/valueset-label&quot;,
+                    &quot;valueString&quot;: &quot;i.&quot;
+                  }
+                ],
+                &quot;code&quot;: &quot;LA20342-4&quot;,
+                &quot;display&quot;: &quot;Drug-drug, drug-food, or adverse drug reaction as a result of a prescription and/or administration of a drug and/or food prior to admission&quot;
+              },
+              {
+                &quot;extension&quot;: [
+                  {
+                    &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder&quot;,
+                    &quot;valueInteger&quot;: 10
+                  },
+                  {
+                    &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/valueset-label&quot;,
+                    &quot;valueString&quot;: &quot;j.&quot;
+                  }
+                ],
+                &quot;code&quot;: &quot;LA20343-2&quot;,
+                &quot;display&quot;: &quot;Other&quot;
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      &quot;resourceType&quot;: &quot;ValueSet&quot;,
+      &quot;id&quot;: &quot;ll2655-0&quot;,
+      &quot;name&quot;: &quot;AHRQ_Medication_Q2&quot;,
+      &quot;status&quot;: &quot;active&quot;,
+      &quot;description&quot;: &quot;The answer list for question 2 on the AHRQ \&quot;Medication or Other Substance\&quot; form&quot;,
+      &quot;copyright&quot;: &quot;This content from LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use&quot;,
+      &quot;compose&quot;: {
+        &quot;include&quot;: [
+          {
+            &quot;system&quot;: &quot;http://loinc.org/vs/LL2655-0&quot;,
+            &quot;concept&quot;: [
+              {
+                &quot;extension&quot;: [
+                  {
+                    &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder&quot;,
+                    &quot;valueInteger&quot;: 1
+                  },
+                  {
+                    &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/valueset-label&quot;,
+                    &quot;valueString&quot;: &quot;a.&quot;
+                  }
+                ],
+                &quot;code&quot;: &quot;LA20278-0&quot;,
+                &quot;display&quot;: &quot;Prescription or over-the-counter (including herbal supplements)&quot;
+              },
+              {
+                &quot;extension&quot;: [
+                  {
+                    &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder&quot;,
+                    &quot;valueInteger&quot;: 2
+                  },
+                  {
+                    &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/valueset-label&quot;,
+                    &quot;valueString&quot;: &quot;b.&quot;
+                  }
+                ],
+                &quot;code&quot;: &quot;LA20298-8&quot;,
+                &quot;display&quot;: &quot;Compounded preparations&quot;
+              },
+              {
+                &quot;extension&quot;: [
+                  {
+                    &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder&quot;,
+                    &quot;valueInteger&quot;: 3
+                  },
+                  {
+                    &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/valueset-label&quot;,
+                    &quot;valueString&quot;: &quot;c.&quot;
+                  }
+                ],
+                &quot;code&quot;: &quot;LA20299-6&quot;,
+                &quot;display&quot;: &quot;Investigational drugs&quot;
+              },
+              {
+                &quot;extension&quot;: [
+                  {
+                    &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder&quot;,
+                    &quot;valueInteger&quot;: 4
+                  },
+                  {
+                    &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/valueset-label&quot;,
+                    &quot;valueString&quot;: &quot;d.&quot;
+                  }
+                ],
+                &quot;code&quot;: &quot;LA4489-6&quot;,
+                &quot;display&quot;: &quot;Unknown&quot;
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      &quot;resourceType&quot;: &quot;ValueSet&quot;,
+      &quot;id&quot;: &quot;ll2657-6&quot;,
+      &quot;name&quot;: &quot;AHRQ_Medication_Q4&quot;,
+      &quot;status&quot;: &quot;active&quot;,
+      &quot;description&quot;: &quot;The answer list for question 4 on the AHRQ \&quot;Medication or Other Substance\&quot; form&quot;,
+      &quot;copyright&quot;: &quot;This content from LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use&quot;,
+      &quot;compose&quot;: {
+        &quot;include&quot;: [
+          {
+            &quot;system&quot;: &quot;http://loinc.org/vs/LL2657-6&quot;,
+            &quot;concept&quot;: [
+              {
+                &quot;code&quot;: &quot;LA20283-0&quot;,
+                &quot;display&quot;: &quot;Vaccines&quot;
+              },
+              {
+                &quot;code&quot;: &quot;LA20287-1&quot;,
+                &quot;display&quot;: &quot;Other biological products (e.g., thrombolytic)&quot;
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      &quot;resourceType&quot;: &quot;ValueSet&quot;,
+      &quot;id&quot;: &quot;ll2659-2&quot;,
+      &quot;name&quot;: &quot;AHRQ_Medication_Q6&quot;,
+      &quot;status&quot;: &quot;active&quot;,
+      &quot;description&quot;: &quot;The answer list for question 6 on the AHRQ \&quot;Medication or Other Substance\&quot; form&quot;,
+      &quot;copyright&quot;: &quot;This content from LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use&quot;,
+      &quot;compose&quot;: {
+        &quot;include&quot;: [
+          {
+            &quot;system&quot;: &quot;http://loinc.org&quot;,
+            &quot;concept&quot;: [
+              {
+                &quot;extension&quot;: [
+                  {
+                    &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder&quot;,
+                    &quot;valueInteger&quot;: 1
+                  },
+                  {
+                    &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/valueset-label&quot;,
+                    &quot;valueString&quot;: &quot;a.&quot;
+                  }
+                ],
+                &quot;code&quot;: &quot;LA20273-1&quot;,
+                &quot;display&quot;: &quot;Dietary supplements (other than vitamins or minerals)&quot;
+              },
+              {
+                &quot;extension&quot;: [
+                  {
+                    &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder&quot;,
+                    &quot;valueInteger&quot;: 2
+                  },
+                  {
+                    &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/valueset-label&quot;,
+                    &quot;valueString&quot;: &quot;b.&quot;
+                  }
+                ],
+                &quot;code&quot;: &quot;LA16117-6&quot;,
+                &quot;display&quot;: &quot;Vitamins or minerals&quot;
+              },
+              {
+                &quot;extension&quot;: [
+                  {
+                    &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder&quot;,
+                    &quot;valueInteger&quot;: 3
+                  },
+                  {
+                    &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/valueset-label&quot;,
+                    &quot;valueString&quot;: &quot;c.&quot;
+                  }
+                ],
+                &quot;code&quot;: &quot;LA20320-0&quot;,
+                &quot;display&quot;: &quot;Enteral nutritional products, including infant formula&quot;
+              },
+              {
+                &quot;extension&quot;: [
+                  {
+                    &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder&quot;,
+                    &quot;valueInteger&quot;: 4
+                  },
+                  {
+                    &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/valueset-label&quot;,
+                    &quot;valueString&quot;: &quot;d.&quot;
+                  }
+                ],
+                &quot;code&quot;: &quot;LA20321-8&quot;,
+                &quot;display&quot;: &quot;Parenteral nutritional products&quot;
+              },
+              {
+                &quot;extension&quot;: [
+                  {
+                    &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder&quot;,
+                    &quot;valueInteger&quot;: 5
+                  },
+                  {
+                    &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/valueset-label&quot;,
+                    &quot;valueString&quot;: &quot;e.&quot;
+                  }
+                ],
+                &quot;code&quot;: &quot;LA20318-4&quot;,
+                &quot;display&quot;: &quot;Other&quot;
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      &quot;resourceType&quot;: &quot;ValueSet&quot;,
+      &quot;id&quot;: &quot;ll2660-0&quot;,
+      &quot;name&quot;: &quot;AHRQ_Medication_Q7&quot;,
+      &quot;status&quot;: &quot;active&quot;,
+      &quot;description&quot;: &quot;The answer list for question 7 on the AHRQ 'Medication or Other Substance' form&quot;,
+      &quot;copyright&quot;: &quot;This content from LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use&quot;,
+      &quot;compose&quot;: {
+        &quot;include&quot;: [
+          {
+            &quot;system&quot;: &quot;http://loinc.org&quot;,
+            &quot;concept&quot;: [
+              {
+                &quot;code&quot;: &quot;LA20275-6&quot;,
+                &quot;display&quot;: &quot;Incorrect action (process failure or error) (e.g., such as administering overdose or incorrect medication)&quot;,
+                &quot;_display&quot;: {
+                  &quot;extension&quot;: [
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/markup&quot;,
+                      &quot;valueString&quot;: &quot;Incorrect action (process failure or error) &lt;i&gt;(e.g., such as administering overdose or incorrect medication)&lt;/i&gt;&quot;
+                    }
+                  ]
+                }
+              },
+              {
+                &quot;code&quot;: &quot;LA20314-3&quot;,
+                &quot;display&quot;: &quot;Unsafe condition&quot;,
+                &quot;_display&quot;: {
+                  &quot;extension&quot;: [
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/style&quot;,
+                      &quot;valueString&quot;: &quot;color:green&quot;
+                    }
+                  ]
+                }
+              },
+              {
+                &quot;code&quot;: &quot;LA20315-0&quot;,
+                &quot;display&quot;: &quot;Adverse reaction in patient to the administered substance without any apparent incorrect                  action&quot;
+              },
+              {
+                &quot;code&quot;: &quot;LA4489-6&quot;,
+                &quot;display&quot;: &quot;Unknown&quot;
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      &quot;resourceType&quot;: &quot;ValueSet&quot;,
+      &quot;id&quot;: &quot;ll2661-8&quot;,
+      &quot;name&quot;: &quot;AHRQ_Medication_Q8&quot;,
+      &quot;status&quot;: &quot;active&quot;,
+      &quot;description&quot;: &quot;The answer list for question 8 on the AHRQ 'Medication or Other Substance' form&quot;,
+      &quot;copyright&quot;: &quot;This content from LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use&quot;,
+      &quot;compose&quot;: {
+        &quot;include&quot;: [
+          {
+            &quot;system&quot;: &quot;http://loinc.org&quot;,
+            &quot;concept&quot;: [
+              {
+                &quot;code&quot;: &quot;LA20276-4&quot;,
+                &quot;display&quot;: &quot;Incorrect patient&quot;
+              },
+              {
+                &quot;code&quot;: &quot;LA20302-8&quot;,
+                &quot;display&quot;: &quot;Incorrect medication/substance&quot;
+              },
+              {
+                &quot;code&quot;: &quot;LA20303-6&quot;,
+                &quot;display&quot;: &quot;Incorrect dose(s)&quot;
+              },
+              {
+                &quot;code&quot;: &quot;LA20304-4&quot;,
+                &quot;display&quot;: &quot;Incorrect route of administration&quot;
+              },
+              {
+                &quot;code&quot;: &quot;LA20305-1&quot;,
+                &quot;display&quot;: &quot;Incorrect timing&quot;
+              },
+              {
+                &quot;code&quot;: &quot;LA20306-9&quot;,
+                &quot;display&quot;: &quot;Incorrect rate&quot;
+              },
+              {
+                &quot;code&quot;: &quot;LA20307-7&quot;,
+                &quot;display&quot;: &quot;Incorrect duration of administration or course of therapy&quot;
+              },
+              {
+                &quot;code&quot;: &quot;LA20308-5&quot;,
+                &quot;display&quot;: &quot;Incorrect dosage form (e.g., sustained release instead of immediate release)&quot;
+              },
+              {
+                &quot;code&quot;: &quot;LA20309-3&quot;,
+                &quot;display&quot;: &quot;Incorrect strength or concentration&quot;
+              },
+              {
+                &quot;code&quot;: &quot;LA20310-1&quot;,
+                &quot;display&quot;: &quot;Incorrect preparation, including inappropriate cutting of tablets, error in compounding,                  mixing, etc.&quot;
+              },
+              {
+                &quot;code&quot;: &quot;LA20311-9&quot;,
+                &quot;display&quot;: &quot;Expired or deteriorated medication/substance&quot;
+              },
+              {
+                &quot;code&quot;: &quot;LA20312-7&quot;,
+                &quot;display&quot;: &quot;Medication/substance that is known to be an allergen to the patient&quot;
+              },
+              {
+                &quot;code&quot;: &quot;LA20345-7&quot;,
+                &quot;display&quot;: &quot;Medication/substance that is known to be contraindicated for the patient&quot;
+              },
+              {
+                &quot;code&quot;: &quot;LA20313-5&quot;,
+                &quot;display&quot;: &quot;Incorrect patient/family action (e.g., self-administration error)&quot;
+              },
+              {
+                &quot;code&quot;: &quot;LA20318-4&quot;,
+                &quot;display&quot;: &quot;Other&quot;
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      &quot;resourceType&quot;: &quot;ValueSet&quot;,
+      &quot;id&quot;: &quot;ll2662-6&quot;,
+      &quot;name&quot;: &quot;AHRQ_Medication_Q9&quot;,
+      &quot;status&quot;: &quot;active&quot;,
+      &quot;description&quot;: &quot;The answer list for question 9 on the AHRQ 'Medication or Other Substance' form&quot;,
+      &quot;copyright&quot;: &quot;This content from LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use&quot;,
+      &quot;compose&quot;: {
+        &quot;include&quot;: [
+          {
+            &quot;system&quot;: &quot;http://loinc.org/vs/LL2662-6&quot;,
+            &quot;concept&quot;: [
+              {
+                &quot;code&quot;: &quot;LA20277-2&quot;,
+                &quot;display&quot;: &quot;Overdose&quot;
+              },
+              {
+                &quot;code&quot;: &quot;LA20300-2&quot;,
+                &quot;display&quot;: &quot;Underdose&quot;
+              },
+              {
+                &quot;code&quot;: &quot;LA20301-0&quot;,
+                &quot;display&quot;: &quot;Missed or omitted dose&quot;
+              },
+              {
+                &quot;code&quot;: &quot;LA7271-5&quot;,
+                &quot;display&quot;: &quot;Extra dose&quot;
+              },
+              {
+                &quot;code&quot;: &quot;LA4489-6&quot;,
+                &quot;display&quot;: &quot;Unknown&quot;
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      &quot;resourceType&quot;: &quot;ValueSet&quot;,
+      &quot;id&quot;: &quot;ll2663-4&quot;,
+      &quot;name&quot;: &quot;AHRQ_Medication_Q10&quot;,
+      &quot;status&quot;: &quot;active&quot;,
+      &quot;description&quot;: &quot;The answer list for question 10 on the AHRQ 'Medication or Other Substance' form&quot;,
+      &quot;copyright&quot;: &quot;This content from LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use&quot;,
+      &quot;compose&quot;: {
+        &quot;include&quot;: [
+          {
+            &quot;system&quot;: &quot;http://loinc.org/vs/LL2663-4&quot;,
+            &quot;concept&quot;: [
+              {
+                &quot;code&quot;: &quot;LA20280-6&quot;,
+                &quot;display&quot;: &quot;Too early&quot;
+              },
+              {
+                &quot;code&quot;: &quot;LA20290-5&quot;,
+                &quot;display&quot;: &quot;Too late&quot;
+              },
+              {
+                &quot;code&quot;: &quot;LA4489-6&quot;,
+                &quot;display&quot;: &quot;Unknown&quot;
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      &quot;resourceType&quot;: &quot;ValueSet&quot;,
+      &quot;id&quot;: &quot;ll2664-2&quot;,
+      &quot;name&quot;: &quot;AHRQ_Medication_Q11&quot;,
+      &quot;status&quot;: &quot;active&quot;,
+      &quot;description&quot;: &quot;The answer list for question 11 on the AHRQ 'Medication or Other Substance' form&quot;,
+      &quot;copyright&quot;: &quot;This content from LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use&quot;,
+      &quot;compose&quot;: {
+        &quot;include&quot;: [
+          {
+            &quot;system&quot;: &quot;http://loinc.org/vs/LL2664-2&quot;,
+            &quot;concept&quot;: [
+              {
+                &quot;code&quot;: &quot;LA20282-2&quot;,
+                &quot;display&quot;: &quot;Too quickly&quot;
+              },
+              {
+                &quot;code&quot;: &quot;LA20288-&quot;,
+                &quot;display&quot;: &quot;Too slowly&quot;
+              },
+              {
+                &quot;code&quot;: &quot;LA4489-6&quot;,
+                &quot;display&quot;: &quot;Unknown&quot;
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      &quot;resourceType&quot;: &quot;ValueSet&quot;,
+      &quot;id&quot;: &quot;ll2665-9&quot;,
+      &quot;name&quot;: &quot;AHRQ_Medication_Q12&quot;,
+      &quot;status&quot;: &quot;active&quot;,
+      &quot;description&quot;: &quot;The answer list for question 12 on the AHRQ 'Medication or Other Substance' form&quot;,
+      &quot;copyright&quot;: &quot;This content from LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use&quot;,
+      &quot;compose&quot;: {
+        &quot;include&quot;: [
+          {
+            &quot;system&quot;: &quot;http://loinc.org/vs/LL2665-9&quot;,
+            &quot;concept&quot;: [
+              {
+                &quot;code&quot;: &quot;LA20281-4&quot;,
+                &quot;display&quot;: &quot;Too high&quot;
+              },
+              {
+                &quot;code&quot;: &quot;LA20289-7&quot;,
+                &quot;display&quot;: &quot;Too low&quot;
+              },
+              {
+                &quot;code&quot;: &quot;LA4489-6&quot;,
+                &quot;display&quot;: &quot;Unknown&quot;
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      &quot;resourceType&quot;: &quot;ValueSet&quot;,
+      &quot;id&quot;: &quot;ll2817-6&quot;,
+      &quot;name&quot;: &quot;AHRQ_Y/N/UNK&quot;,
+      &quot;status&quot;: &quot;active&quot;,
+      &quot;description&quot;: &quot;AHRQ Common Format Answer list for Yes (A15), No (A18), Unknown (UNK)&quot;,
+      &quot;copyright&quot;: &quot;This content from LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use&quot;,
+      &quot;compose&quot;: {
+        &quot;include&quot;: [
+          {
+            &quot;system&quot;: &quot;http://loinc.org/vs/LL2817-6&quot;,
+            &quot;concept&quot;: [
+              {
+                &quot;code&quot;: &quot;LA33-6&quot;,
+                &quot;display&quot;: &quot;Yes&quot;
+              },
+              {
+                &quot;code&quot;: &quot;LA32-8&quot;,
+                &quot;display&quot;: &quot;No&quot;
+              },
+              {
+                &quot;code&quot;: &quot;LA4489-6&quot;,
+                &quot;display&quot;: &quot;Unkown&quot;
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      &quot;resourceType&quot;: &quot;ValueSet&quot;,
+      &quot;id&quot;: &quot;ll2668-3&quot;,
+      &quot;name&quot;: &quot;AHRQ_Medication_Q15&quot;,
+      &quot;status&quot;: &quot;active&quot;,
+      &quot;description&quot;: &quot;The answer list for question 15 on the AHRQ 'Medication or Other Substance' form&quot;,
+      &quot;copyright&quot;: &quot;This content from LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use&quot;,
+      &quot;compose&quot;: {
+        &quot;include&quot;: [
+          {
+            &quot;system&quot;: &quot;http://loinc.org/vs/LL2668-3&quot;,
+            &quot;concept&quot;: [
+              {
+                &quot;code&quot;: &quot;LA20274-9&quot;,
+                &quot;display&quot;: &quot;Drug-drug&quot;
+              },
+              {
+                &quot;code&quot;: &quot;LA20316-8&quot;,
+                &quot;display&quot;: &quot;Drug-food&quot;
+              },
+              {
+                &quot;code&quot;: &quot;LA20317-6&quot;,
+                &quot;display&quot;: &quot;Drug-disease&quot;
+              },
+              {
+                &quot;code&quot;: &quot;LA20318-4&quot;,
+                &quot;display&quot;: &quot;Other&quot;
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      &quot;resourceType&quot;: &quot;ValueSet&quot;,
+      &quot;id&quot;: &quot;ll2669-1&quot;,
+      &quot;name&quot;: &quot;AHRQ_Medication_Q16&quot;,
+      &quot;status&quot;: &quot;active&quot;,
+      &quot;description&quot;: &quot;The answer list for question 16 on the AHRQ 'Medication or Other Substance' form&quot;,
+      &quot;copyright&quot;: &quot;This content from LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use&quot;,
+      &quot;compose&quot;: {
+        &quot;include&quot;: [
+          {
+            &quot;system&quot;: &quot;http://loinc.org/vs/LL2669-1&quot;,
+            &quot;concept&quot;: [
+              {
+                &quot;code&quot;: &quot;LA20279-8&quot;,
+                &quot;display&quot;: &quot;Purchasing&quot;
+              },
+              {
+                &quot;code&quot;: &quot;LA20291-3&quot;,
+                &quot;display&quot;: &quot;Storing&quot;
+              },
+              {
+                &quot;code&quot;: &quot;LA20292-1&quot;,
+                &quot;display&quot;: &quot;Prescribing/ordering&quot;
+              },
+              {
+                &quot;code&quot;: &quot;LA20293-9&quot;,
+                &quot;display&quot;: &quot;Transcribing&quot;
+              },
+              {
+                &quot;code&quot;: &quot;LA20294-7&quot;,
+                &quot;display&quot;: &quot;Preparing&quot;
+              },
+              {
+                &quot;code&quot;: &quot;LA20295-4&quot;,
+                &quot;display&quot;: &quot;Dispensing&quot;
+              },
+              {
+                &quot;code&quot;: &quot;LA20296-2&quot;,
+                &quot;display&quot;: &quot;Administering&quot;
+              },
+              {
+                &quot;code&quot;: &quot;LA20297-0&quot;,
+                &quot;display&quot;: &quot;Monitoring&quot;
+              },
+              {
+                &quot;code&quot;: &quot;LA4489-6&quot;,
+                &quot;display&quot;: &quot;Unknown&quot;
+              },
+              {
+                &quot;code&quot;: &quot;LA20318-4&quot;,
+                &quot;display&quot;: &quot;Other&quot;
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      &quot;resourceType&quot;: &quot;ValueSet&quot;,
+      &quot;id&quot;: &quot;ll2828-3&quot;,
+      &quot;name&quot;: &quot;AHRQ_Y/N&quot;,
+      &quot;status&quot;: &quot;active&quot;,
+      &quot;description&quot;: &quot;AHRQ Common Format Answer list for Yes (A15) and No (A18)&quot;,
+      &quot;copyright&quot;: &quot;This content from LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use&quot;,
+      &quot;compose&quot;: {
+        &quot;include&quot;: [
+          {
+            &quot;system&quot;: &quot;http://loinc.org/vs/LL2828-3&quot;,
+            &quot;concept&quot;: [
+              {
+                &quot;code&quot;: &quot;LA33-6&quot;,
+                &quot;display&quot;: &quot;Yes&quot;
+              },
+              {
+                &quot;code&quot;: &quot;LA32-8&quot;,
+                &quot;display&quot;: &quot;No&quot;
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      &quot;resourceType&quot;: &quot;ValueSet&quot;,
+      &quot;id&quot;: &quot;ll2682-4&quot;,
+      &quot;name&quot;: &quot;AHRQ_Medication_Q28_Q29&quot;,
+      &quot;status&quot;: &quot;active&quot;,
+      &quot;description&quot;: &quot;The answer list for questions 28 and 29 on the AHRQ 'Medication or Other Substance' form&quot;,
+      &quot;copyright&quot;: &quot;This content from LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use&quot;,
+      &quot;compose&quot;: {
+        &quot;include&quot;: [
+          {
+            &quot;system&quot;: &quot;http://loinc.org&quot;,
+            &quot;concept&quot;: [
+              {
+                &quot;code&quot;: &quot;LA20272-3&quot;,
+                &quot;display&quot;: &quot;Cutaneous, topical application, including ointment, spray, patch&quot;
+              },
+              {
+                &quot;code&quot;: &quot;LA9451-1&quot;,
+                &quot;display&quot;: &quot;Subcutaneous&quot;
+              },
+              {
+                &quot;code&quot;: &quot;LA9444-6&quot;,
+                &quot;display&quot;: &quot;Ophthalmic&quot;
+              },
+              {
+                &quot;code&quot;: &quot;LA20324-2&quot;,
+                &quot;display&quot;: &quot;Oral, including sublingual or buccal&quot;
+              },
+              {
+                &quot;code&quot;: &quot;LA9445-&quot;,
+                &quot;display&quot;: &quot;Otic&quot;
+              },
+              {
+                &quot;code&quot;: &quot;LA9263-0&quot;,
+                &quot;display&quot;: &quot;Nasal&quot;
+              },
+              {
+                &quot;code&quot;: &quot;LA9427-1&quot;,
+                &quot;display&quot;: &quot;Inhalation&quot;
+              },
+              {
+                &quot;code&quot;: &quot;LA9437-0&quot;,
+                &quot;display&quot;: &quot;Intravenous&quot;
+              },
+              {
+                &quot;code&quot;: &quot;LA9429-7&quot;,
+                &quot;display&quot;: &quot;Intramuscular&quot;
+              },
+              {
+                &quot;code&quot;: &quot;LA9435-4&quot;,
+                &quot;display&quot;: &quot;Intrathecal&quot;
+              },
+              {
+                &quot;code&quot;: &quot;LA9418-0&quot;,
+                &quot;display&quot;: &quot;Epidural&quot;
+              },
+              {
+                &quot;code&quot;: &quot;LA20332-5&quot;,
+                &quot;display&quot;: &quot;Gastric&quot;
+              },
+              {
+                &quot;code&quot;: &quot;LA9369-5&quot;,
+                &quot;display&quot;: &quot;Rectal&quot;
+              },
+              {
+                &quot;code&quot;: &quot;LA9459-4&quot;,
+                &quot;display&quot;: &quot;Vaginal&quot;
+              },
+              {
+                &quot;code&quot;: &quot;LA4489-6&quot;,
+                &quot;display&quot;: &quot;Unknown&quot;
+              },
+              {
+                &quot;code&quot;: &quot;LA20318-4&quot;,
+                &quot;display&quot;: &quot;Other&quot;
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  &quot;identifier&quot;: [
+    {
+      &quot;system&quot;: &quot;http://loinc.org/vs&quot;,
+      &quot;value&quot;: &quot;74080-3&quot;
+    }
+  ],
+  &quot;status&quot;: &quot;published&quot;,
+  &quot;date&quot;: &quot;2012-04-01&quot;,
+  &quot;publisher&quot;: &quot;Agency for Healthcare Research and Quality (AHRQ)&quot;,
+  &quot;title&quot;: &quot;Medication or Other Substance&quot;,
+  &quot;_title&quot;: {
+    &quot;extension&quot;: [
+      {
+        &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/style&quot;,
+        &quot;valueString&quot;: &quot;color:#0000FF&quot;
+      }
+    ]
+  },
+  &quot;subjectType&quot;: [
+    &quot;Patient&quot;
+  ],
+  &quot;item&quot;: [
+    {
+      &quot;extension&quot;: [
+        {
+          &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+          &quot;valueCodeableConcept&quot;: {
+            &quot;coding&quot;: [
+              {
+                &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                &quot;code&quot;: &quot;header&quot;
+              }
+            ]
+          }
+        }
+      ],
+      &quot;linkId&quot;: &quot;Medication/header&quot;,
+      &quot;type&quot;: &quot;group&quot;,
+      &quot;item&quot;: [
+        {
+          &quot;extension&quot;: [
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-hidden&quot;,
+              &quot;valueBoolean&quot;: true
+            }
+          ],
+          &quot;text&quot;: &quot;Form ID:&quot;,
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;required&quot;: true
+        },
+        {
+          &quot;extension&quot;: [
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/minLength&quot;,
+              &quot;valueInteger&quot;: 3
+            }
+          ],
+          &quot;linkId&quot;: &quot;74080-3/74081-1&quot;,
+          &quot;text&quot;: &quot;Event ID:&quot;,
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;required&quot;: true
+        },
+        {
+          &quot;linkId&quot;: &quot;74080-3/30947-6&quot;,
+          &quot;text&quot;: &quot;Initial Report Date (HERF Q1)&quot;,
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;required&quot;: true
+        }
+      ]
+    },
+    {
+      &quot;linkId&quot;: &quot;Medication/SEC00&quot;,
+      &quot;text&quot;: &quot;Medication or Other Substance&quot;,
+      &quot;type&quot;: &quot;group&quot;,
+      &quot;item&quot;: [
+        {
+          &quot;text&quot;: &quot;Use this form to report any patient safety event or unsafe condition involving a substance such as a medications, biological products, nutritional products, expressed human breast milk, medical gases, or contrast media. Do not complete this form if the event involves appropriateness of therapeutic choice or decision making (e.g., physician decision to prescribe medication despite known drug-drug interaction). If the event involves a device, please also complete the Device or Medical/Surgical Supply including Health Information Technology (HIT) form. Narrative detail can be captured on the Healthcare Event Reporting Form (HERF).&quot;,
+          &quot;_text&quot;: {
+            &quot;extension&quot;: [
+              {
+                &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/markup&quot;,
+                &quot;valueString&quot;: &quot;Use this form to report any patient safety event or unsafe condition involving a substance such as a medications, biological products, nutritional products, expressed human breast milk, medical gases, or contrast media. Do not complete this form if the event involves appropriateness of therapeutic choice or decision making (e.g., physician decision to prescribe medication despite known drug-drug interaction). If the event involves a device, please also complete the &lt;i&gt;Device or Medical/Surgical Supply including Health Information Technology (HIT)&lt;/i&gt; form. Narrative detail can be captured on the &lt;i&gt;Healthcare Event Reporting Form (HERF)&lt;/i&gt;.&quot;
+              }
+            ]
+          },
+          &quot;type&quot;: &quot;display&quot;
+        },
+        {
+          &quot;linkId&quot;: &quot;Medication/SEC01/74080-3&quot;,
+          &quot;type&quot;: &quot;group&quot;,
+          &quot;required&quot;: true,
+          &quot;item&quot;: [
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/minLength&quot;,
+                  &quot;valueInteger&quot;: 1
+                },
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-deReference&quot;,
+                  &quot;valueReference&quot;: {
+                    &quot;reference&quot;: &quot;http://loinc.org/74076-1&quot;
+                  }
+                }
+              ],
+              &quot;linkId&quot;: &quot;74080-3/74076-1&quot;,
+              &quot;text&quot;: &quot;What type of medication/substance was involved?&quot;,
+              &quot;type&quot;: &quot;open-choice&quot;,
+              &quot;required&quot;: true,
+              &quot;options&quot;: {
+                &quot;reference&quot;: &quot;#ll2654-3&quot;
+              },
+              &quot;item&quot;: [
+                {
+                  &quot;extension&quot;: [
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/minLength&quot;,
+                      &quot;valueInteger&quot;: 7
+                    },
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-deReference&quot;,
+                      &quot;valueReference&quot;: {
+                        &quot;reference&quot;: &quot;http://loinc.org/vs/74075-3&quot;
+                      }
+                    }
+                  ],
+                  &quot;linkId&quot;: &quot;74080-3/74075-3&quot;,
+                  &quot;text&quot;: &quot;What type of medication?&quot;,
+                  &quot;type&quot;: &quot;choice&quot;,
+                  &quot;required&quot;: true,
+                  &quot;options&quot;: {
+                    &quot;reference&quot;: &quot;#ll2655-0&quot;
+                  },
+                  &quot;item&quot;: [
+                    {
+                      &quot;extension&quot;: [
+                        {
+                          &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/minLength&quot;,
+                          &quot;valueInteger&quot;: 0
+                        },
+                        {
+                          &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-deReference&quot;,
+                          &quot;valueReference&quot;: {
+                            &quot;reference&quot;: &quot;http://loinc.org/74077-9&quot;
+                          }
+                        }
+                      ],
+                      &quot;linkId&quot;: &quot;74080-3/74077-9-q&quot;,
+                      &quot;text&quot;: &quot;Please list all ingredients:&quot;,
+                      &quot;type&quot;: &quot;string&quot;,
+                      &quot;repeats&quot;: true
+                    }
+                  ]
+                },
+                {
+                  &quot;extension&quot;: [
+                    {
+                      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/minLength&quot;,
+                      &quot;valueInteger&quot;: 8
+                    }
+                  ],
+                  &quot;linkId&quot;: &quot;74080-3/74074-6&quot;,
+                  &quot;text&quot;: &quot;What type of biological product?&quot;,
+                  &quot;type&quot;: &quot;open-choice&quot;,
+                  &quot;options&quot;: {
+                    &quot;reference&quot;: &quot;#ll2657-6&quot;
+                  },
+                  &quot;item&quot;: [
+                    {
+                      &quot;linkId&quot;: &quot;74080-3/30959-1&quot;,
+                      &quot;text&quot;: &quot;What was the lot number of the vaccine?&quot;,
+                      &quot;type&quot;: &quot;string&quot;,
+                      &quot;required&quot;: true
+                    }
+                  ]
+                },
+                {
+                  &quot;linkId&quot;: &quot;74080-3/74073-8&quot;,
+                  &quot;text&quot;: &quot;What type of nutritional product?&quot;,
+                  &quot;type&quot;: &quot;open-choice&quot;,
+                  &quot;required&quot;: true,
+                  &quot;options&quot;: {
+                    &quot;reference&quot;: &quot;#ll2659-2&quot;
+                  },
+                  &quot;item&quot;: [
+                    {
+                      &quot;linkId&quot;: &quot;74080-3/74073-8/Other/Specify&quot;,
+                      &quot;text&quot;: &quot;PLEASE SPECIFY&quot;,
+                      &quot;type&quot;: &quot;string&quot;,
+                      &quot;required&quot;: true
+                    }
+                  ]
+                },
+                {
+                  &quot;linkId&quot;: &quot;74080-3/74076-1/Other/Specify&quot;,
+                  &quot;text&quot;: &quot;PLEASE SPECIFY&quot;,
+                  &quot;type&quot;: &quot;string&quot;,
+                  &quot;required&quot;: true
+                }
+              ]
+            },
+            {
+              &quot;linkId&quot;: &quot;74080-3/74072-0&quot;,
+              &quot;text&quot;: &quot;Which of the following best characterizes the event?&quot;,
+              &quot;type&quot;: &quot;open-choice&quot;,
+              &quot;required&quot;: true,
+              &quot;options&quot;: {
+                &quot;reference&quot;: &quot;#ll2660-0&quot;
+              }
+            },
+            {
+              &quot;linkId&quot;: &quot;74080-3/74071-2&quot;,
+              &quot;text&quot;: &quot;What was the incorrect action?&quot;,
+              &quot;type&quot;: &quot;choice&quot;,
+              &quot;options&quot;: {
+                &quot;reference&quot;: &quot;#ll2661-8&quot;
+              },
+              &quot;item&quot;: [
+                {
+                  &quot;linkId&quot;: &quot;74080-3/74070-4&quot;,
+                  &quot;text&quot;: &quot;Which best describes the incorrect dose(s)?&quot;,
+                  &quot;type&quot;: &quot;open-choice&quot;,
+                  &quot;required&quot;: true,
+                  &quot;options&quot;: {
+                    &quot;reference&quot;: &quot;#ll2662-6&quot;
+                  }
+                },
+                {
+                  &quot;linkId&quot;: &quot;Medication/74069-6&quot;,
+                  &quot;text&quot;: &quot;Which best describes the incorrect timing?&quot;,
+                  &quot;type&quot;: &quot;open-choice&quot;,
+                  &quot;required&quot;: true,
+                  &quot;options&quot;: {
+                    &quot;reference&quot;: &quot;#ll2663-4&quot;
+                  }
+                },
+                {
+                  &quot;linkId&quot;: &quot;74080-3/74068-8&quot;,
+                  &quot;text&quot;: &quot;Which best describes the incorrect rate?&quot;,
+                  &quot;type&quot;: &quot;open-choice&quot;,
+                  &quot;required&quot;: true,
+                  &quot;options&quot;: {
+                    &quot;reference&quot;: &quot;#ll2664-2&quot;
+                  }
+                },
+                {
+                  &quot;linkId&quot;: &quot;Medication/74067-0&quot;,
+                  &quot;text&quot;: &quot;Which best describes the incorrect strength or concentration?&quot;,
+                  &quot;type&quot;: &quot;open-choice&quot;,
+                  &quot;required&quot;: true,
+                  &quot;options&quot;: {
+                    &quot;reference&quot;: &quot;#ll2665-9&quot;
+                  }
+                },
+                {
+                  &quot;linkId&quot;: &quot;Medication/74066-2&quot;,
+                  &quot;text&quot;: &quot;What was the expiration date?&quot;,
+                  &quot;type&quot;: &quot;string&quot;,
+                  &quot;required&quot;: true
+                },
+                {
+                  &quot;linkId&quot;: &quot;Medication/74065-4&quot;,
+                  &quot;text&quot;: &quot;Was there a documented history of allergies or sensitivities to the medication/substance                      administered?&quot;,
+                  &quot;type&quot;: &quot;open-choice&quot;,
+                  &quot;required&quot;: true,
+                  &quot;options&quot;: {
+                    &quot;reference&quot;: &quot;#ll2817-6&quot;
+                  }
+                },
+                {
+                  &quot;linkId&quot;: &quot;Medication/74064-7&quot;,
+                  &quot;text&quot;: &quot;What was the contraindication (potential or actual interaction)?&quot;,
+                  &quot;type&quot;: &quot;open-choice&quot;,
+                  &quot;required&quot;: true,
+                  &quot;options&quot;: {
+                    &quot;reference&quot;: &quot;#ll2668-3&quot;
+                  },
+                  &quot;item&quot;: [
+                    {
+                      &quot;linkId&quot;: &quot;Medication/74064-7/Other/Specify&quot;,
+                      &quot;text&quot;: &quot;PLEASE SPECIFY&quot;,
+                      &quot;type&quot;: &quot;string&quot;,
+                      &quot;required&quot;: true
+                    }
+                  ]
+                },
+                {
+                  &quot;linkId&quot;: &quot;74080-3/74071-2/Other/Specify&quot;,
+                  &quot;text&quot;: &quot;PLEASE SPECIFY&quot;,
+                  &quot;type&quot;: &quot;string&quot;,
+                  &quot;required&quot;: true
+                }
+              ]
+            },
+            {
+              &quot;linkId&quot;: &quot;74080-3/74063-9&quot;,
+              &quot;text&quot;: &quot;At what stage in the process did the event originate, regardless of the stage at which                  it was discovered?&quot;,
+              &quot;type&quot;: &quot;open-choice&quot;,
+              &quot;required&quot;: true,
+              &quot;options&quot;: {
+                &quot;reference&quot;: &quot;#ll2669-1&quot;
+              },
+              &quot;item&quot;: [
+                {
+                  &quot;linkId&quot;: &quot;74080-3/74063-9/Other/Specify&quot;,
+                  &quot;text&quot;: &quot;PLEASE SPECIFY&quot;,
+                  &quot;type&quot;: &quot;string&quot;,
+                  &quot;required&quot;: true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          &quot;extension&quot;: [
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs&quot;,
+              &quot;valueInteger&quot;: 5
+            }
+          ],
+          &quot;linkId&quot;: &quot;74080-3/74078-7&quot;,
+          &quot;type&quot;: &quot;group&quot;,
+          &quot;repeats&quot;: true,
+          &quot;item&quot;: [
+            {
+              &quot;text&quot;: &quot;Please provide the following medication details for any medications or other substances                directly involved in the event.&quot;,
+              &quot;type&quot;: &quot;display&quot;
+            },
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/minLength&quot;,
+                  &quot;valueInteger&quot;: 0
+                }
+              ],
+              &quot;linkId&quot;: &quot;74080-3/74078-7/74062-1&quot;,
+              &quot;text&quot;: &quot;Generic name or investigational drug name&quot;,
+              &quot;type&quot;: &quot;string&quot;
+            },
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/minLength&quot;,
+                  &quot;valueInteger&quot;: 0
+                }
+              ],
+              &quot;linkId&quot;: &quot;74080-3/74078-7/74061-3&quot;,
+              &quot;text&quot;: &quot;Ingredient RXCUI (if known)&quot;,
+              &quot;type&quot;: &quot;string&quot;
+            },
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/minLength&quot;,
+                  &quot;valueInteger&quot;: 0
+                }
+              ],
+              &quot;linkId&quot;: &quot;74080-3/74078-7/74060-5&quot;,
+              &quot;text&quot;: &quot;Brand name (if known)&quot;,
+              &quot;type&quot;: &quot;string&quot;
+            },
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/minLength&quot;,
+                  &quot;valueInteger&quot;: 0
+                }
+              ],
+              &quot;linkId&quot;: &quot;74080-3/74078-7/74059-7&quot;,
+              &quot;text&quot;: &quot;Brand name RXCUI (if known)&quot;,
+              &quot;type&quot;: &quot;string&quot;
+            },
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/minLength&quot;,
+                  &quot;valueInteger&quot;: 0
+                }
+              ],
+              &quot;linkId&quot;: &quot;74080-3/74078-7/74058-9&quot;,
+              &quot;text&quot;: &quot;Manufacturer (if known)&quot;,
+              &quot;type&quot;: &quot;string&quot;
+            },
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/minLength&quot;,
+                  &quot;valueInteger&quot;: 0
+                }
+              ],
+              &quot;linkId&quot;: &quot;74080-3/74078-7/74057-1&quot;,
+              &quot;text&quot;: &quot;Strength or concentration of product&quot;,
+              &quot;type&quot;: &quot;string&quot;
+            },
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/minLength&quot;,
+                  &quot;valueInteger&quot;: 0
+                }
+              ],
+              &quot;linkId&quot;: &quot;74080-3/74078-7/74056-3&quot;,
+              &quot;text&quot;: &quot;Clinical drug component RXCUI (if known)&quot;,
+              &quot;type&quot;: &quot;string&quot;
+            },
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/minLength&quot;,
+                  &quot;valueInteger&quot;: 0
+                }
+              ],
+              &quot;linkId&quot;: &quot;74080-3/74078-7/74055-5&quot;,
+              &quot;text&quot;: &quot;Dosage form of Product&quot;,
+              &quot;type&quot;: &quot;string&quot;
+            },
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/minLength&quot;,
+                  &quot;valueInteger&quot;: 0
+                }
+              ],
+              &quot;linkId&quot;: &quot;74080-3/74078-7/74054-8&quot;,
+              &quot;text&quot;: &quot;Dose form RXCUI (if known)&quot;,
+              &quot;type&quot;: &quot;string&quot;
+            },
+            {
+              &quot;linkId&quot;: &quot;74080-3/74078-7/74053-0&quot;,
+              &quot;text&quot;: &quot;Was this medication/substance prescribed for this patient?&quot;,
+              &quot;type&quot;: &quot;choice&quot;,
+              &quot;required&quot;: true,
+              &quot;options&quot;: {
+                &quot;reference&quot;: &quot;#ll2828-3&quot;
+              }
+            },
+            {
+              &quot;linkId&quot;: &quot;Medication/74052-2&quot;,
+              &quot;text&quot;: &quot;Was this medication/substance given to this patient?&quot;,
+              &quot;type&quot;: &quot;choice&quot;,
+              &quot;required&quot;: true,
+              &quot;options&quot;: {
+                &quot;reference&quot;: &quot;#ll2828-3&quot;
+              }
+            }
+          ]
+        },
+        {
+          &quot;linkId&quot;: &quot;Medication/SEC03&quot;,
+          &quot;type&quot;: &quot;group&quot;,
+          &quot;item&quot;: [
+            {
+              &quot;linkId&quot;: &quot;74080-3/74051-4&quot;,
+              &quot;text&quot;: &quot;What was the intended route of administration?&quot;,
+              &quot;type&quot;: &quot;open-choice&quot;,
+              &quot;required&quot;: true,
+              &quot;options&quot;: {
+                &quot;reference&quot;: &quot;#ll2682-4&quot;
+              },
+              &quot;item&quot;: [
+                {
+                  &quot;linkId&quot;: &quot;74080-3/74051-4/Other/Specify&quot;,
+                  &quot;text&quot;: &quot;PLEASE SPECIFY&quot;,
+                  &quot;type&quot;: &quot;string&quot;,
+                  &quot;required&quot;: true
+                }
+              ]
+            },
+            {
+              &quot;linkId&quot;: &quot;74080-3/74050-6&quot;,
+              &quot;text&quot;: &quot;What was the actual route of administration (attempted or completed)?&quot;,
+              &quot;type&quot;: &quot;open-choice&quot;,
+              &quot;required&quot;: true,
+              &quot;options&quot;: {
+                &quot;reference&quot;: &quot;#ll2682-4&quot;
+              },
+              &quot;item&quot;: [
+                {
+                  &quot;linkId&quot;: &quot;74080-3/74050-6/Other/Specify&quot;,
+                  &quot;text&quot;: &quot;PLEASE SPECIFY&quot;,
+                  &quot;type&quot;: &quot;string&quot;,
+                  &quot;required&quot;: true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          &quot;linkId&quot;: &quot;Medication/SEC04&quot;,
+          &quot;text&quot;: &quot;Thank you for completing these questions.&quot;,
+          &quot;type&quot;: &quot;group&quot;,
+          &quot;item&quot;: [
+            {
+              &quot;text&quot;: &quot;OMB No. 0935-0143 Exp. Date 10/31/2014 Public reporting burden for the collection of information is estimated to average 10 minutes per response. An agency may not conduct or sponsor, and a person is not required to respond to, a collection of information unless it displays a currently valid OMB control number. Send comments regarding this burden estimate or any other aspect of this collection of information, including suggestions for reducing this burden, to: AHRQ Reports Clearance Officer, Attention: PRA, Paperwork Reduction Project (0935-0143), AHRQ, 540 Gaither Road, Room #5036, Rockville, MD 20850.&quot;,
+              &quot;type&quot;: &quot;display&quot;
+            }
+          ]
+        }
+      ]
+    },
+    {
+      &quot;extension&quot;: [
+        {
+          &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-hidden&quot;,
+          &quot;valueBoolean&quot;: true
+        }
+      ],
+      &quot;linkId&quot;: &quot;Reporting&quot;,
+      &quot;text&quot;: &quot;Reporting information&quot;,
+      &quot;type&quot;: &quot;group&quot;,
+      &quot;item&quot;: [
+        {
+          &quot;linkId&quot;: &quot;Reporting/who&quot;,
+          &quot;text&quot;: &quot;Reported by:&quot;,
+          &quot;type&quot;: &quot;string&quot;
+        },
+        {
+          &quot;linkId&quot;: &quot;Reporting/when&quot;,
+          &quot;text&quot;: &quot;Reported date:&quot;,
+          &quot;type&quot;: &quot;date&quot;
+        }
+      ]
+    },
+    {
+      &quot;extension&quot;: [
+        {
+          &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl&quot;,
+          &quot;valueCodeableConcept&quot;: {
+            &quot;coding&quot;: [
+              {
+                &quot;system&quot;: &quot;http://hl7.org/fhir/questionnaire-item-control&quot;,
+                &quot;code&quot;: &quot;footer&quot;
+              }
+            ]
+          }
+        }
+      ],
+      &quot;linkId&quot;: &quot;Medication/footer&quot;,
+      &quot;type&quot;: &quot;group&quot;,
+      &quot;item&quot;: [
+        {
+          &quot;text&quot;: &quot;AHRQ Common Formats - Hospital Version 1.2 - 2012 Medication or Other Substance&quot;,
+          &quot;type&quot;: &quot;display&quot;
+        }
+      ]
+    }
+  ]
+}
+</pre>
+</div>
+
+
+<p>
+Usage note: every effort has been made to ensure that the
+examples are correct and useful, but they are not a normative part 
+of the specification. 
+</p>
+
+</div>
+
+
+				</div><!-- /inner-wrapper -->
+            </div><!-- /row -->
+        </div><!-- /container -->
+        
+    </div><!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment"><!-- segment-footer -->
+		<div class="container"><!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        © HL7.org 2011+. FHIR STU3 Candidate (v1.4.0-8453) generated on Mon, Jun 6, 2016 20:22+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search</a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fquestionnaire-sdc-profile-example-loinc.json.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fquestionnaire-sdc-profile-example-loinc.json.html">Compare to DSTU2</a> |                
+               <a style="color: #81BEF7" rel="license" href="license.html"><img src="cc0.png" style="border-style: none;" alt="CC0"/></a> | 
+               <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>   
+        </span>
+        </p>
+			</div><!-- /inner-wrapper -->
+		</div><!-- /container -->
+	</div><!-- /segment-footer -->
+<!-- disqus thread -->
+<!--disqus-->
+<!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden"><!-- segment-post-footer -->
+		<div class="container"><!-- container -->
+		</div><!-- /container -->
+	</div><!-- /segment-post-footer -->
+    
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>   <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

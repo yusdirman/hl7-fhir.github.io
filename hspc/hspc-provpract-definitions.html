@@ -1,0 +1,901 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>StructureDefinition: hspc-provpract - FHIR v1.4.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link rel="stylesheet" href="../fhir.css"/>
+  <link rel="Prev" href="http://hl7.org/fhir/hspc-provpract"/>
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href=".././dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href=".././assets/css/bootstrap-fhir.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href=".././assets/css/project.css"/>
+  <link rel="stylesheet" href=".././assets/css/pygments-manni.css"/>
+	<link rel="stylesheet" href="../jquery-ui.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src=".././assets/js/html5shiv.js"></script>
+  <script src=".././assets/js/respond.min.js"></script>
+  <![endif] -->
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href=".././assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href=".././assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href=".././assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href=".././assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href=".././assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment">  <!-- segment-header -->	
+		<div class="container">  <!-- container -->
+			<a no-external="true" id="logo" href="http://hl7.org/fhir"><img src=".././assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a no-external="true" id="hl7-logo" href="http://www.hl7.org">
+					<img src=".././assets/images/hl7-logo.png" width="42" alt="visit the hl7 website" height="50"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a no-external="true" id="hl7-logo" href="http://hl7.org/fhir/search.cfm"><img src="./../assets/images/search.png" alt="Search FHIR"/></a></div> 
+		</div>
+		<div class="container">  <!-- container -->
+	</div></div>  <!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+ 	      		
+ 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="../index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../documentation.html">Documentation</a></li>
+              <li><a href="../implementation.html">Implementation</a></li>
+              <li><a href="../resourcelist.html">Resources</a></li>
+              <li><a href="../clinical.html">Clinical</a></li>
+              <li><a href="../administration.html">Administrative</a></li>
+              <li><a href="../infrastructure.html">Infrastructure</a></li>
+              <li><a href="../financial.html">Financial</a></li>
+
+						</ul>
+					</div>  <!-- /.nav-collapse -->
+				</div>  <!-- /.container -->
+			</nav>  <!-- /.navbar -->
+      		
+				
+  <!-- /HEADER CONTENT -->				
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+		<div class="container">  <!-- container -->	
+			<ul class="breadcrumb">
+          <!-- hspc-provpract / profile:Practitioner/practitioner-hspc-profile/hspc-provpract / HSPC ProviderPractitioner -->
+        <li title="HSPC Implementation Guide"><a href="hspc.html"><b>HSPC</b></a></li>
+        <li><a href="registry.html"><b>Registry</b></a></li>
+        <li><b>Profile</b></li>
+
+			</ul>	
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment">  <!-- segment-content -->
+	<div class="container">  <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<ul class="nav nav-tabs"><li><a href="hspc-provpract.html">Content</a></li><li class="active"><a href="#">Detailed Descriptions</a></li><li><a href="hspc-provpract-mappings.html">Mappings</a></li><li><a href="hspc-provpract.profile.xml.html">XML</a></li><li><a href="hspc-provpract.profile.json.html">JSON</a></li></ul>
+
+<h4><span class="sectioncount">H.??.4<a name="H.??.4"> </a></span> StructureDefinition: hspc-provpract - Detailed Descriptions <a href="hspc-provpract-definitions.html#H.??.4" title="link to here" class="self-link"><img src="../target.png"/></a></h4>
+
+<p>Definitions for the hspc-provpract Profile.</p>
+
+<table class="dict">
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.hspc-provpract"> </a><b>Practitioner(hspc-provpract)</b></td></tr>
+  <tr><td>Definition</td><td><p>A person who is directly or indirectly involved in the provisioning of healthcare.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../practitioner.html#Practitioner">Practitioner</a></td></tr>
+  <tr><td>Comments</td><td><p>Note that a cab driver no longer fits the bill. You probably would be interested in the organization rather than the individual?</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.id"> </a><b>Practitioner.id</b></td></tr>
+  <tr><td>Definition</td><td><p>The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#id">id</a></td></tr>
+  <tr><td>Comments</td><td><p>The only time that a resource does not have an id is when it is being submitted to the server using a create operation. Bundles always have an id, though it is usually a generated UUID.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.meta"> </a><b>Practitioner.meta</b></td></tr>
+  <tr><td>Definition</td><td><p>The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../resource.html#Meta">Meta</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.implicitRules"> </a><b>Practitioner.implicitRules</b></td></tr>
+  <tr><td>Definition</td><td><p>A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#uri">uri</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However, the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.language"> </a><b>Practitioner.language</b></td></tr>
+  <tr><td>Definition</td><td><p>The base language in which the resource is written.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td>A human language.<br/>The codes SHALL be taken from  <a href="http://tools.ietf.org/html/bcp47">http://tools.ietf.org/html/bcp47 <img src="../external.png" style="text-align: baseline"/></a></td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#code">code</a></td></tr>
+  <tr><td>Comments</td><td><p>Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource  Not all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute).</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.text"> </a><b>Practitioner.text</b></td></tr>
+  <tr><td>Definition</td><td><p>A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it &quot;clinically safe&quot; for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1 This element is affected by the following invariants: dom-1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../narrative.html#Narrative">Narrative</a></td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>narrative, html, xhtml, display</td></tr>
+  <tr><td>Comments</td><td><p>Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.contained"> </a><b>Practitioner.contained</b></td></tr>
+  <tr><td>Definition</td><td><p>These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../resource.html#Resource">Resource</a></td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>inline resources, anonymous resources, contained resources</td></tr>
+  <tr><td>Comments</td><td><p>This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.Practitioner.classification"> </a><b>Practitioner.extension (<a href="../extension-practitioner-classification.html">http://hl7.org/fhir/StructureDefinition/practitioner-classification</a>)</b></td></tr>
+  <tr><td>Definition</td><td><p>The more specific service or occupation within the health care provider type of the practitioner at a specific organization unit, for example, counselor.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a>  (Extension Type: <a href="../datatypes.html#CodeableConcept">CodeableConcept</a>)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.modifierExtension"> </a><b>Practitioner.modifierExtension</b></td></tr>
+  <tr><td>Definition</td><td><p>May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>extensions, user content</td></tr>
+  <tr><td>Comments</td><td><p>There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.identifier"> </a><b>Practitioner.identifier</b></td></tr>
+  <tr><td>Definition</td><td><p>An identifier that applies to this person in this role.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#Identifier">Identifier</a></td></tr>
+  <tr><td>Requirements</td><td><p>Often, specific identities are assigned for the agent.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.active"> </a><b>Practitioner.active</b></td></tr>
+  <tr><td>Definition</td><td><p>Whether this practitioner's record is in active use.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#boolean">boolean</a></td></tr>
+  <tr><td>Requirements</td><td><p>Need to be able to mark a practitioner record as not to be used because it was created in error.</p>
+</td></tr>
+  <tr><td>Comments</td><td><p>Default is true.</p>
+<p>If the practitioner is not in use by one organization, then it should mark the period on the PractitonerRole with an end date (even if they are active) as they may be active in another role.</p>
+</td></tr>
+  <tr><td>Default Value</td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.name"> </a><b>Practitioner.name</b></td></tr>
+  <tr><td>Definition</td><td><p>The name(s) associated with the practitioner.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#HumanName">HumanName</a></td></tr>
+  <tr><td>Requirements</td><td><p>The name(s) that a Practitioner is known by. Where there are multiple, the name that the practitioner is usually known as should be used in the display.</p>
+</td></tr>
+  <tr><td>Comments</td><td><p>The selection of the use property should ensure that there is a single usual name specified, and others use the nickname (alias), old, or other values as appropriate.</p>
+<p>In general select the value to be used in the ResourceReference.display based on this:</p>
+<ol>
+<li>There is more than 1 name</li>
+<li>Use = usual</li>
+<li>Period is current to the date of the usage</li>
+<li>Use = official</li>
+<li>Other order as decided by internal business rules.</li>
+</ol>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.telecom"> </a><b>Practitioner.telecom</b></td></tr>
+  <tr><td>Definition</td><td><p>A contact detail for the practitioner, e.g. a telephone number or an email address.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#ContactPoint">ContactPoint</a></td></tr>
+  <tr><td>Requirements</td><td><p>Need to know how to reach a practitioner independent to any roles the practitioner may have.</p>
+</td></tr>
+  <tr><td>Comments</td><td><p>Person may have multiple ways to be contacted with different uses or applicable periods.  May need to have options for contacting the person urgently, and also to help with identification</p>
+<p>These typically will have home numbers, or mobile numbers that are not role specific.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.telecom.id"> </a><b>Practitioner.telecom.id</b></td></tr>
+  <tr><td>Definition</td><td><p>unique id for the element within a resource (for internal references).</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#id">id</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.telecom.PreferenceIndicator"> </a><b>Practitioner.telecom.extension (<a href="../extension-iso21090-preferred.html">http://hl7.org/fhir/StructureDefinition/iso21090-preferred</a>)</b></td></tr>
+  <tr><td>Definition</td><td><p>Flag denoting whether parent item is preferred - e.g., a preferred address or telephone number.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a>  (Extension Type: <a href="../datatypes.html#boolean">boolean</a>)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.telecom.system"> </a><b>Practitioner.telecom.system</b></td></tr>
+  <tr><td>Definition</td><td><p>Telecommunications form for contact point - what communications system is required to make use of the contact.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1 This element is affected by the following invariants: cpt-2</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td>Telecommunications form for contact point<br/>The codes SHALL be taken from <a href="../valueset-contact-point-system.html">ContactPointSystem</a></td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#code">code</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.telecom.value"> </a><b>Practitioner.telecom.value</b></td></tr>
+  <tr><td>Definition</td><td><p>The actual contact point details, in a form that is meaningful to the designated communication system (i.e. phone number or email address).</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td>Requirements</td><td><p>Need to support legacy numbers that are not in a tightly controlled format.</p>
+</td></tr>
+  <tr><td>Comments</td><td><p>Additional text data such as phone extension numbers, or notes about use of the contact are sometimes included in the value.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.telecom.use"> </a><b>Practitioner.telecom.use</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies the purpose for the contact point.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td>Use of contact point<br/>The codes SHALL be taken from <a href="../valueset-contact-point-use.html">ContactPointUse</a></td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#code">code</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
+  <tr><td>Requirements</td><td><p>Need to track the way a person uses this contact, so a user can choose which is appropriate for their purpose.</p>
+</td></tr>
+  <tr><td>Comments</td><td><p>This is labeled as &quot;Is Modifier&quot; because applications should not mistake a temporary or old contact etc.for a current/permanent one. Applications can assume that a contact is current unless it explicitly says that it is temporary or old.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.telecom.rank"> </a><b>Practitioner.telecom.rank</b></td></tr>
+  <tr><td>Definition</td><td><p>Specifies a preferred order in which to use a set of contacts. Contacts are ranked with lower values coming before higher values.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#positiveInt">positiveInt</a></td></tr>
+  <tr><td>Comments</td><td><p>Note that rank does not necessarily follow the order in which the contacts are represented in the instance.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.telecom.period"> </a><b>Practitioner.telecom.period</b></td></tr>
+  <tr><td>Definition</td><td><p>Time period when the contact point was/is in use.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#Period">Period</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.address"> </a><b>Practitioner.address</b></td></tr>
+  <tr><td>Definition</td><td><p>Address(es) of the practitioner that are not role specific (typically home address).
+Work addresses are not typically entered in this property as they are usually role dependent.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#Address">Address</a></td></tr>
+  <tr><td>Requirements</td><td><p>The home/mailing address of the practitioner is often required for employee administration purposes, and also for some rostering services where the start point (practitioners home) can be used in calculations.</p>
+</td></tr>
+  <tr><td>Comments</td><td><p>The PractitionerRole does not have an address value on it, as it is expected that the location property be used for this purpose (which has an address).</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.address.id"> </a><b>Practitioner.address.id</b></td></tr>
+  <tr><td>Definition</td><td><p>unique id for the element within a resource (for internal references).</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#id">id</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.address.PrimaryIndicator"> </a><b>Practitioner.address.extension (<a href="../hspc/extension-hspc-extensionsprimaryindicator.html">http://hl7.org/fhir/StructureDefinition/hspc-extensionsprimaryIndicator</a>)</b></td></tr>
+  <tr><td>Definition</td><td><p>This indicatest that this is the principal address.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a>  (Extension Type: <a href="../datatypes.html#CodeableConcept">CodeableConcept</a>)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.address.use"> </a><b>Practitioner.address.use</b></td></tr>
+  <tr><td>Definition</td><td><p>The purpose of this address.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td>The use of an address<br/>The codes SHALL be taken from <a href="../valueset-address-use.html">AddressUse</a></td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#code">code</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
+  <tr><td>Requirements</td><td><p>Allows an appropriate address to be chosen from a list of many.</p>
+</td></tr>
+  <tr><td>Comments</td><td><p>This is labeled as &quot;Is Modifier&quot; because applications should not mistake a temporary or old address etc.for a current/permanent one. Applications can assume that an address is current unless it explicitly says that it is temporary or old.</p>
+</td></tr>
+  <tr><td>Example</td><td>home</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.address.type"> </a><b>Practitioner.address.type</b></td></tr>
+  <tr><td>Definition</td><td><p>Distinguishes between physical addresses (those you can visit) and mailing addresses (e.g. PO Boxes and care-of addresses). Most addresses are both.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td>The type of an address (physical / postal)<br/>The codes SHALL be taken from <a href="../valueset-address-type.html">AddressType</a></td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#code">code</a></td></tr>
+  <tr><td>Example</td><td>both</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.address.text"> </a><b>Practitioner.address.text</b></td></tr>
+  <tr><td>Definition</td><td><p>A full text representation of the address.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td>Requirements</td><td><p>A renderable, unencoded form.</p>
+</td></tr>
+  <tr><td>Comments</td><td><p>Can provide both a text representation and parts.</p>
+</td></tr>
+  <tr><td>Example</td><td>137 Nowhere Street, Erewhon 9132</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.address.line"> </a><b>Practitioner.address.line</b></td></tr>
+  <tr><td>Definition</td><td><p>This component contains the house number, apartment number, street name, street direction,  P.O. Box number, delivery hints, and similar address information.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td>Requirements</td><td><p>home | work | temp | old - purpose of this address.</p>
+</td></tr>
+  <tr><td>Example</td><td>137 Nowhere Street</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.address.city"> </a><b>Practitioner.address.city</b></td></tr>
+  <tr><td>Definition</td><td><p>The name of the city, town, village or other community or delivery center.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>Municpality</td></tr>
+  <tr><td>Example</td><td>Erewhon</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.address.district"> </a><b>Practitioner.address.district</b></td></tr>
+  <tr><td>Definition</td><td><p>The name of the administrative area (county).</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>County</td></tr>
+  <tr><td>Comments</td><td><p>District is sometimes known as county, but in some regions 'county' is used in place of city (municipality), so county name should be conveyed in city instead.</p>
+</td></tr>
+  <tr><td>Example</td><td>Madison</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.address.state"> </a><b>Practitioner.address.state</b></td></tr>
+  <tr><td>Definition</td><td><p>Sub-unit of a country with limited sovereignty in a federally organized country. A code may be used if codes are in common use (i.e. US 2 letter state codes).</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>Province, Territory</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.address.postalCode"> </a><b>Practitioner.address.postalCode</b></td></tr>
+  <tr><td>Definition</td><td><p>A postal code designating a region defined by the postal service.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>Zip</td></tr>
+  <tr><td>Example</td><td>9132</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.address.country"> </a><b>Practitioner.address.country</b></td></tr>
+  <tr><td>Definition</td><td><p>Country - a nation as commonly understood or generally accepted.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td>Comments</td><td><p>ISO 3166 3 letter codes can be used in place of a full country name.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.address.period"> </a><b>Practitioner.address.period</b></td></tr>
+  <tr><td>Definition</td><td><p>Time period when address was/is in use.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#Period">Period</a></td></tr>
+  <tr><td>Requirements</td><td><p>Allows addresses to be placed in historical context.</p>
+</td></tr>
+  <tr><td>Example</td><td>&amp;lt;valuePeriod&amp;nbsp;xmlns=&amp;quot;http://hl7.org/fhir&amp;quot;&amp;gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;lt;start&amp;nbsp;value=&amp;quot;2010-03-23&amp;quot;/&amp;gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;lt;end&amp;nbsp;value=&amp;quot;2010-07-01&amp;quot;/&amp;gt;&lt;br/&gt;&amp;lt;/valuePeriod&amp;gt;&lt;br/&gt;</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.gender"> </a><b>Practitioner.gender</b></td></tr>
+  <tr><td>Definition</td><td><p>Administrative Gender - the gender that the person is considered to have for administration and record keeping purposes.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td>The gender of a person used for administrative purposes.<br/>The codes SHALL be taken from <a href="../valueset-administrative-gender.html">AdministrativeGender</a></td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#code">code</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Requirements</td><td><p>Needed to address the person correctly.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.birthDate"> </a><b>Practitioner.birthDate</b></td></tr>
+  <tr><td>Definition</td><td><p>The date of birth for the practitioner.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#date">date</a></td></tr>
+  <tr><td>Requirements</td><td><p>Needed for identification.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.photo"> </a><b>Practitioner.photo</b></td></tr>
+  <tr><td>Definition</td><td><p>Image of the person.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#Attachment">Attachment</a></td></tr>
+  <tr><td>Requirements</td><td><p>Many EHR systems have the capability to capture an image of patients and personnel. Fits with newer social media usage too.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.practitionerRole"> </a><b>Practitioner.practitionerRole</b></td></tr>
+  <tr><td>Definition</td><td><p>The list of roles/organizations that the practitioner is associated with.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#BackboneElement">BackboneElement</a></td></tr>
+  <tr><td>Comments</td><td><p>The address to be used for this PractitionerRole is in the referenced location (removing duplication across all the services provided at the location).</p>
+</td></tr>
+  <tr><td><a href="../profiling.html#slicing">Slicing</a></td><td>This element introduces a set of slices. The slicing rules are: <ul> <li>unordered</li><li>Open</li><li>discriminators: Practitioner.practitionerRole.organization, Practitioner.practitionerRole.role</li></ul></td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.PractitionerRole"> </a><b>Practitioner.practitionerRole(PractitionerRole)</b></td></tr>
+  <tr><td>Definition</td><td><p>The list of roles/organizations that the practitioner is associated with.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#BackboneElement">BackboneElement</a></td></tr>
+  <tr><td>Comments</td><td><p>The address to be used for this PractitionerRole is in the referenced location (removing duplication across all the services provided at the location).</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.practitionerRole.id"> </a><b>Practitioner.practitionerRole.id</b></td></tr>
+  <tr><td>Definition</td><td><p>unique id for the element within a resource (for internal references).</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#id">id</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.practitionerRole.extension"> </a><b>Practitioner.practitionerRole.extension</b></td></tr>
+  <tr><td>Definition</td><td><p>May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a></td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>extensions, user content</td></tr>
+  <tr><td>Comments</td><td><p>There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.practitionerRole.modifierExtension"> </a><b>Practitioner.practitionerRole.modifierExtension</b></td></tr>
+  <tr><td>Definition</td><td><p>May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>extensions, user content, modifiers</td></tr>
+  <tr><td>Comments</td><td><p>There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.practitionerRole.organization"> </a><b>Practitioner.practitionerRole.organization</b></td></tr>
+  <tr><td>Definition</td><td><p>The organization where the Practitioner performs the roles associated.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../references.html#Reference">Reference</a>(<a href="../qicore/qicore-organization.html" title="http://hl7.org/fhir/StructureDefinition/qicore-organization">QICore-Organization</a>)</td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.practitionerRole.role"> </a><b>Practitioner.practitionerRole.role</b></td></tr>
+  <tr><td>Definition</td><td><p>Roles which this practitioner is authorized to perform for the organization.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td>A set of codes that describe the general practice category for a provider.<br/>The codes SHOULD be taken from <a href="../hspc/valueset-hspc-practitioner-providerPractitionerType.html">HSPC ProviderPractitioner Type</a></td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Requirements</td><td><p>Need to know what authority the practitioner has - what can they do?</p>
+</td></tr>
+  <tr><td>Comments</td><td><p>A person may have more than one role. At least one role is required.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.practitionerRole.specialty"> </a><b>Practitioner.practitionerRole.specialty</b></td></tr>
+  <tr><td>Definition</td><td><p>Specific specialty of the practitioner.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td>A set of codes that describe the specific specialty in which a provider practices.<br/>The codes SHOULD be taken from <a href="../hspc/valueset-hspc-practitioner-providerPractitionerSpecialty.html">HSPC ProviderPractitioner Specialty</a></td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.practitionerRole.specialty.id"> </a><b>Practitioner.practitionerRole.specialty.id</b></td></tr>
+  <tr><td>Definition</td><td><p>unique id for the element within a resource (for internal references).</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#id">id</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.practitionerRole.specialty.Practitioner.practitionerRole.specialty.primaryInd"> </a><b>Practitioner.practitionerRole.specialty.extension (<a href="../extension-practitioner-primaryind.html">http://hl7.org/fhir/StructureDefinition/practitioner-primaryInd</a>)</b></td></tr>
+  <tr><td>Definition</td><td><p>Flag indicating if the specialty is the primary specialty of the provider. Normally, a practitioner will have one primary specialty, but in some cases more than one can be primary.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a>  (Extension Type: <a href="../datatypes.html#boolean">boolean</a>)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.practitionerRole.specialty.coding"> </a><b>Practitioner.practitionerRole.specialty.coding</b></td></tr>
+  <tr><td>Definition</td><td><p>A reference to a code defined by a terminology system.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#Coding">Coding</a></td></tr>
+  <tr><td>Requirements</td><td><p>Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings.</p>
+</td></tr>
+  <tr><td>Comments</td><td><p>Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labelled as UserSelected = true.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.practitionerRole.specialty.text"> </a><b>Practitioner.practitionerRole.specialty.text</b></td></tr>
+  <tr><td>Definition</td><td><p>A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td>Requirements</td><td><p>The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.</p>
+</td></tr>
+  <tr><td>Comments</td><td><p>Very often the text is the same as a displayName of one of the codings.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.practitionerRole.identifier"> </a><b>Practitioner.practitionerRole.identifier</b></td></tr>
+  <tr><td>Definition</td><td><p>Business Identifiers that are specific to a role/location.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#Identifier">Identifier</a></td></tr>
+  <tr><td>Requirements</td><td><p>Some business identifiers are specific to a location and should be able to be associated.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.practitionerRole.telecom"> </a><b>Practitioner.practitionerRole.telecom</b></td></tr>
+  <tr><td>Definition</td><td><p>Contact details that are specific to the role/location/service.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#ContactPoint">ContactPoint</a></td></tr>
+  <tr><td>Requirements</td><td><p>Often practitioners have a dedicated line for each location (or service) that they work at, and need to be able to define separate contact details for each of these.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.practitionerRole.period"> </a><b>Practitioner.practitionerRole.period</b></td></tr>
+  <tr><td>Definition</td><td><p>The period during which the person is authorized to act as a practitioner in these role(s) for the organization.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#Period">Period</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Requirements</td><td><p>Even after the agencies is revoked, the fact that it existed must still be recorded.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.practitionerRole.location"> </a><b>Practitioner.practitionerRole.location</b></td></tr>
+  <tr><td>Definition</td><td><p>The location(s) at which this practitioner provides care.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../references.html#Reference">Reference</a>(<a href="../qicore/qicore-location.html" title="http://hl7.org/fhir/StructureDefinition/qicore-location">QICore-Location</a>)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.practitionerRole.healthcareService"> </a><b>Practitioner.practitionerRole.healthcareService</b></td></tr>
+  <tr><td>Definition</td><td><p>The list of healthcare services that this worker provides for this role's Organization/Location(s).</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../references.html#Reference">Reference</a>(<a href="../healthcareservice.html" title="http://hl7.org/fhir/StructureDefinition/HealthcareService">HealthcareService</a>)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.AdministrativeAffiliation"> </a><b>Practitioner.practitionerRole(AdministrativeAffiliation)</b></td></tr>
+  <tr><td>Definition</td><td><p>The list of roles/organizations that the practitioner is associated with.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#BackboneElement">BackboneElement</a></td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>AdministrativeAffiliation</td></tr>
+  <tr><td>Comments</td><td><p>The address to be used for this PractitionerRole is in the referenced location (removing duplication across all the services provided at the location).</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.practitionerRole.id"> </a><b>Practitioner.practitionerRole.id</b></td></tr>
+  <tr><td>Definition</td><td><p>unique id for the element within a resource (for internal references).</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#id">id</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.practitionerRole.extension"> </a><b>Practitioner.practitionerRole.extension</b></td></tr>
+  <tr><td>Definition</td><td><p>May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a></td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>extensions, user content</td></tr>
+  <tr><td>Comments</td><td><p>There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.practitionerRole.modifierExtension"> </a><b>Practitioner.practitionerRole.modifierExtension</b></td></tr>
+  <tr><td>Definition</td><td><p>May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>extensions, user content, modifiers</td></tr>
+  <tr><td>Comments</td><td><p>There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.practitionerRole.organization"> </a><b>Practitioner.practitionerRole.organization</b></td></tr>
+  <tr><td>Definition</td><td><p>The organization where the Practitioner performs the roles associated.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../references.html#Reference">Reference</a>(<a href="../qicore/qicore-organization.html" title="http://hl7.org/fhir/StructureDefinition/qicore-organization">QICore-Organization</a>)</td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.practitionerRole.role"> </a><b>Practitioner.practitionerRole.role</b></td></tr>
+  <tr><td>Definition</td><td><p>Roles which this practitioner is authorized to perform for the organization.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td>The role a person plays representing an organization<br/>For example codes, see <a href="../valueset-practitioner-role.html">PractitionerRole</a></td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Requirements</td><td><p>Need to know what authority the practitioner has - what can they do?</p>
+</td></tr>
+  <tr><td>Comments</td><td><p>A person may have more than one role. At least one role is required.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.practitionerRole.specialty"> </a><b>Practitioner.practitionerRole.specialty</b></td></tr>
+  <tr><td>Definition</td><td><p>Specific specialty of the practitioner.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td>Specific specialty associated with the agency<br/>For example codes, see <a href="../valueset-practitioner-specialty.html">PractitionerSpecialty</a></td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.practitionerRole.specialty.id"> </a><b>Practitioner.practitionerRole.specialty.id</b></td></tr>
+  <tr><td>Definition</td><td><p>unique id for the element within a resource (for internal references).</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#id">id</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.practitionerRole.specialty.Practitioner.practitionerRole.specialty.primaryInd"> </a><b>Practitioner.practitionerRole.specialty.extension (<a href="../extension-practitioner-primaryind.html">http://hl7.org/fhir/StructureDefinition/practitioner-primaryInd</a>)</b></td></tr>
+  <tr><td>Definition</td><td><p>Flag indicating if the specialty is the primary specialty of the provider. Normally, a practitioner will have one primary specialty, but in some cases more than one can be primary.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a>  (Extension Type: <a href="../datatypes.html#boolean">boolean</a>)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.practitionerRole.specialty.coding"> </a><b>Practitioner.practitionerRole.specialty.coding</b></td></tr>
+  <tr><td>Definition</td><td><p>A reference to a code defined by a terminology system.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#Coding">Coding</a></td></tr>
+  <tr><td>Requirements</td><td><p>Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings.</p>
+</td></tr>
+  <tr><td>Comments</td><td><p>Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labelled as UserSelected = true.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.practitionerRole.specialty.text"> </a><b>Practitioner.practitionerRole.specialty.text</b></td></tr>
+  <tr><td>Definition</td><td><p>A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td>Requirements</td><td><p>The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.</p>
+</td></tr>
+  <tr><td>Comments</td><td><p>Very often the text is the same as a displayName of one of the codings.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.practitionerRole.identifier"> </a><b>Practitioner.practitionerRole.identifier</b></td></tr>
+  <tr><td>Definition</td><td><p>Business Identifiers that are specific to a role/location.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#Identifier">Identifier</a></td></tr>
+  <tr><td>Requirements</td><td><p>Some business identifiers are specific to a location and should be able to be associated.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.practitionerRole.telecom"> </a><b>Practitioner.practitionerRole.telecom</b></td></tr>
+  <tr><td>Definition</td><td><p>Contact details that are specific to the role/location/service.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#ContactPoint">ContactPoint</a></td></tr>
+  <tr><td>Requirements</td><td><p>Often practitioners have a dedicated line for each location (or service) that they work at, and need to be able to define separate contact details for each of these.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.practitionerRole.period"> </a><b>Practitioner.practitionerRole.period</b></td></tr>
+  <tr><td>Definition</td><td><p>The period during which the person is authorized to act as a practitioner in these role(s) for the organization.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#Period">Period</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Requirements</td><td><p>Even after the agencies is revoked, the fact that it existed must still be recorded.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.practitionerRole.location"> </a><b>Practitioner.practitionerRole.location</b></td></tr>
+  <tr><td>Definition</td><td><p>The location(s) at which this practitioner provides care.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../references.html#Reference">Reference</a>(<a href="../qicore/qicore-location.html" title="http://hl7.org/fhir/StructureDefinition/qicore-location">QICore-Location</a>)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.practitionerRole.healthcareService"> </a><b>Practitioner.practitionerRole.healthcareService</b></td></tr>
+  <tr><td>Definition</td><td><p>The list of healthcare services that this worker provides for this role's Organization/Location(s).</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../references.html#Reference">Reference</a>(<a href="../healthcareservice.html" title="http://hl7.org/fhir/StructureDefinition/HealthcareService">HealthcareService</a>)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.PracticeAffiliation"> </a><b>Practitioner.practitionerRole(PracticeAffiliation)</b></td></tr>
+  <tr><td>Definition</td><td><p>The list of roles/organizations that the practitioner is associated with.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#BackboneElement">BackboneElement</a></td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>PracticeAffiliation</td></tr>
+  <tr><td>Comments</td><td><p>The address to be used for this PractitionerRole is in the referenced location (removing duplication across all the services provided at the location).</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.practitionerRole.id"> </a><b>Practitioner.practitionerRole.id</b></td></tr>
+  <tr><td>Definition</td><td><p>unique id for the element within a resource (for internal references).</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#id">id</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.practitionerRole.extension"> </a><b>Practitioner.practitionerRole.extension</b></td></tr>
+  <tr><td>Definition</td><td><p>An Extension</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a></td></tr>
+  <tr><td><a href="../profiling.html#slicing">Slicing</a></td><td>This element introduces a set of slices. The slicing rules are: <ul> <li>unordered</li><li>Open</li><li>discriminators: url</li></ul></td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.practitionerRole.PracticeAffiliationType"> </a><b>Practitioner.practitionerRole.extension (<a href="../hspc/extension-hspc-extensionspracticeaffiliationtype.html">http://hl7.org/fhir/StructureDefinition/hspc-extensionspracticeAffiliationType</a>)</b></td></tr>
+  <tr><td>Definition</td><td><p>The kind of practice affilation a provider has with the organization.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a>  (Extension Type: <a href="../datatypes.html#CodeableConcept">CodeableConcept</a>)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.practitionerRole.PractitionerPrivilege"> </a><b>Practitioner.practitionerRole.extension (<a href="../hspc/extension-hspc-extensionspractitionerprivilege.html">http://hl7.org/fhir/StructureDefinition/hspc-extensionspractitionerPrivilege</a>)</b></td></tr>
+  <tr><td>Definition</td><td><p>The level at which a provider is allowed to practice at a specific institution.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a>  (Extension Type: <a href="../datatypes.html#CodeableConcept">CodeableConcept</a>)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.practitionerRole.modifierExtension"> </a><b>Practitioner.practitionerRole.modifierExtension</b></td></tr>
+  <tr><td>Definition</td><td><p>May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>extensions, user content, modifiers</td></tr>
+  <tr><td>Comments</td><td><p>There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.practitionerRole.organization"> </a><b>Practitioner.practitionerRole.organization</b></td></tr>
+  <tr><td>Definition</td><td><p>The organization where the Practitioner performs the roles associated.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../references.html#Reference">Reference</a>(<a href="../qicore/qicore-organization.html" title="http://hl7.org/fhir/StructureDefinition/qicore-organization">QICore-Organization</a>)</td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.practitionerRole.role"> </a><b>Practitioner.practitionerRole.role</b></td></tr>
+  <tr><td>Definition</td><td><p>Roles which this practitioner is authorized to perform for the organization.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td>The role a person plays representing an organization<br/>For example codes, see <a href="../valueset-practitioner-role.html">PractitionerRole</a></td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Requirements</td><td><p>Need to know what authority the practitioner has - what can they do?</p>
+</td></tr>
+  <tr><td>Comments</td><td><p>A person may have more than one role. At least one role is required.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.practitionerRole.specialty"> </a><b>Practitioner.practitionerRole.specialty</b></td></tr>
+  <tr><td>Definition</td><td><p>Specific specialty of the practitioner.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td>Specific specialty associated with the agency<br/>For example codes, see <a href="../valueset-practitioner-specialty.html">PractitionerSpecialty</a></td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.practitionerRole.specialty.id"> </a><b>Practitioner.practitionerRole.specialty.id</b></td></tr>
+  <tr><td>Definition</td><td><p>unique id for the element within a resource (for internal references).</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#id">id</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.practitionerRole.specialty.Practitioner.practitionerRole.specialty.primaryInd"> </a><b>Practitioner.practitionerRole.specialty.extension (<a href="../extension-practitioner-primaryind.html">http://hl7.org/fhir/StructureDefinition/practitioner-primaryInd</a>)</b></td></tr>
+  <tr><td>Definition</td><td><p>Flag indicating if the specialty is the primary specialty of the provider. Normally, a practitioner will have one primary specialty, but in some cases more than one can be primary.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a>  (Extension Type: <a href="../datatypes.html#boolean">boolean</a>)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.practitionerRole.specialty.coding"> </a><b>Practitioner.practitionerRole.specialty.coding</b></td></tr>
+  <tr><td>Definition</td><td><p>A reference to a code defined by a terminology system.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#Coding">Coding</a></td></tr>
+  <tr><td>Requirements</td><td><p>Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings.</p>
+</td></tr>
+  <tr><td>Comments</td><td><p>Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labelled as UserSelected = true.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.practitionerRole.specialty.text"> </a><b>Practitioner.practitionerRole.specialty.text</b></td></tr>
+  <tr><td>Definition</td><td><p>A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td>Requirements</td><td><p>The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.</p>
+</td></tr>
+  <tr><td>Comments</td><td><p>Very often the text is the same as a displayName of one of the codings.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.practitionerRole.identifier"> </a><b>Practitioner.practitionerRole.identifier</b></td></tr>
+  <tr><td>Definition</td><td><p>Business Identifiers that are specific to a role/location.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#Identifier">Identifier</a></td></tr>
+  <tr><td>Requirements</td><td><p>Some business identifiers are specific to a location and should be able to be associated.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.practitionerRole.telecom"> </a><b>Practitioner.practitionerRole.telecom</b></td></tr>
+  <tr><td>Definition</td><td><p>Contact details that are specific to the role/location/service.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#ContactPoint">ContactPoint</a></td></tr>
+  <tr><td>Requirements</td><td><p>Often practitioners have a dedicated line for each location (or service) that they work at, and need to be able to define separate contact details for each of these.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.practitionerRole.period"> </a><b>Practitioner.practitionerRole.period</b></td></tr>
+  <tr><td>Definition</td><td><p>The period during which the person is authorized to act as a practitioner in these role(s) for the organization.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#Period">Period</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Requirements</td><td><p>Even after the agencies is revoked, the fact that it existed must still be recorded.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.practitionerRole.location"> </a><b>Practitioner.practitionerRole.location</b></td></tr>
+  <tr><td>Definition</td><td><p>The location(s) at which this practitioner provides care.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../references.html#Reference">Reference</a>(<a href="../qicore/qicore-location.html" title="http://hl7.org/fhir/StructureDefinition/qicore-location">QICore-Location</a>)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.practitionerRole.healthcareService"> </a><b>Practitioner.practitionerRole.healthcareService</b></td></tr>
+  <tr><td>Definition</td><td><p>The list of healthcare services that this worker provides for this role's Organization/Location(s).</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../references.html#Reference">Reference</a>(<a href="../healthcareservice.html" title="http://hl7.org/fhir/StructureDefinition/HealthcareService">HealthcareService</a>)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.qualification"> </a><b>Practitioner.qualification</b></td></tr>
+  <tr><td>Definition</td><td><p>Qualifications obtained by training and certification.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#BackboneElement">BackboneElement</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.qualification.id"> </a><b>Practitioner.qualification.id</b></td></tr>
+  <tr><td>Definition</td><td><p>unique id for the element within a resource (for internal references).</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#id">id</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.qualification.CredentialEligibiltyIndicator"> </a><b>Practitioner.qualification.extension (<a href="../hspc/extension-hspc-extensionscredentialeligibilityind.html">http://hl7.org/fhir/StructureDefinition/hspc-extensionscredentialEligibilityInd</a>)</b></td></tr>
+  <tr><td>Definition</td><td><p>An indication that the individual is in procedings or eligible to obtain credentials.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a>  (Extension Type: <a href="../datatypes.html#CodeableConcept">CodeableConcept</a>)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.qualification.modifierExtension"> </a><b>Practitioner.qualification.modifierExtension</b></td></tr>
+  <tr><td>Definition</td><td><p>May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>extensions, user content, modifiers</td></tr>
+  <tr><td>Comments</td><td><p>There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.qualification.identifier"> </a><b>Practitioner.qualification.identifier</b></td></tr>
+  <tr><td>Definition</td><td><p>An identifier that applies to this person's qualification in this role.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#Identifier">Identifier</a></td></tr>
+  <tr><td>Requirements</td><td><p>Often, specific identities are assigned for the qualification.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.qualification.code"> </a><b>Practitioner.qualification.code</b></td></tr>
+  <tr><td>Definition</td><td><p>Coded representation of the qualification.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td>Specific qualification the practitioner has to provide a service<br/>For example codes, see <a href="../valueset-anzsco-occupations.html">ANZSCO -- Australian and New Zealand Standard Classification of Occupations, 2013, Version 1.2</a></td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.qualification.period"> </a><b>Practitioner.qualification.period</b></td></tr>
+  <tr><td>Definition</td><td><p>Period during which the qualification is valid.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#Period">Period</a></td></tr>
+  <tr><td>Requirements</td><td><p>Qualifications are often for a limited period of time, and can be revoked.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.qualification.issuer"> </a><b>Practitioner.qualification.issuer</b></td></tr>
+  <tr><td>Definition</td><td><p>Organization that regulates and issues the qualification.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../references.html#Reference">Reference</a>(<a href="../qicore/qicore-organization.html" title="http://hl7.org/fhir/StructureDefinition/qicore-organization">QICore-Organization</a>)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.communication"> </a><b>Practitioner.communication</b></td></tr>
+  <tr><td>Definition</td><td><p>A language the practitioner is able to use in patient communication.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td>A human language.<br/>The codes SHALL be taken from  <a href="http://tools.ietf.org/html/bcp47">http://tools.ietf.org/html/bcp47 <img src="../external.png" style="text-align: baseline"/></a></td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td>Requirements</td><td><p>Knowing which language a practitioner speaks can help in facilitating communication with patients.</p>
+</td></tr>
+  <tr><td>Comments</td><td><p>The structure aa-BB with this exact casing is one the most widely used notations for locale. However not all systems actually code this but instead have it as free text. Hence CodeableConcept instead of code as the data type.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.communication.id"> </a><b>Practitioner.communication.id</b></td></tr>
+  <tr><td>Definition</td><td><p>unique id for the element within a resource (for internal references).</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#id">id</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.communication.CommunicationMode"> </a><b>Practitioner.communication.extension (<a href="../hspc/extension-hspc-extensionscommunicationmode.html">http://hl7.org/fhir/StructureDefinition/hspc-extensionscommunicationMode</a>)</b></td></tr>
+  <tr><td>Definition</td><td><p>The method one uses to communicate.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a>  (Extension Type: <a href="../datatypes.html#CodeableConcept">CodeableConcept</a>)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.communication.coding"> </a><b>Practitioner.communication.coding</b></td></tr>
+  <tr><td>Definition</td><td><p>A reference to a code defined by a terminology system.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#Coding">Coding</a></td></tr>
+  <tr><td>Requirements</td><td><p>Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings.</p>
+</td></tr>
+  <tr><td>Comments</td><td><p>Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labelled as UserSelected = true.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="hspc-provpract.Practitioner.communication.text"> </a><b>Practitioner.communication.text</b></td></tr>
+  <tr><td>Definition</td><td><p>A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td>Requirements</td><td><p>The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.</p>
+</td></tr>
+  <tr><td>Comments</td><td><p>Very often the text is the same as a displayName of one of the codings.</p>
+</td></tr>
+</table>
+
+
+</div>
+
+
+				</div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+        
+    </div>  <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">  <!-- segment-footer -->
+		<div class="container">  <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.4.0-8453) generated on Mon, Jun 6, 2016 20:24+0000. <a href="../qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img src="../external.png" style="text-align: baseline"/></a> | 
+               <a style="color: #81BEF7" href="../history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="../toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fhspc-provpract&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fhspc-provpract">Compare to DSTU2 <img src="../external.png" style="text-align: baseline"/></a> |                
+               <a rel="license" style="color: #81BEF7" href="../license.html"><img src="../cc0.png" alt="CC0" style="border-style: none;"/></a> | 
+               <a style="color: #81BEF7" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank">Propose a change <img src="../external.png" style="text-align: baseline"/></a>   
+        </span>
+        </p>
+			</div>  <!-- /inner-wrapper -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+    
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src=".././assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src=".././dist/js/bootstrap.min.js"> </script>
+<script src=".././assets/js/respond.min.js"> </script>
+
+<script src=".././assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

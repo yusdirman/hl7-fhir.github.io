@@ -1,0 +1,42 @@
+{
+  "resourceType": "Specimen",
+  "id": "spec-uslab-example2",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: spec-uslab-example2</p><p><b>identifier</b>: SID456 (OFFICIAL)</p><p><b>accessionIdentifier</b>: 21041205000001 (OFFICIAL)</p><p><b>type</b>: Urine, First Void <span>(Details : {SNOMED CT code '698276005' = 'First stream urine sample (specimen)', given as 'First stream urine sample'}; {http://ehr.goodhealthclinic.org code 'UFV' = '??', given as 'Urine, First Void'})</span></p><p><b>subject</b>: <a>Todd Lerr</a></p><h3>Collections</h3><table><tr><td>-</td><td><b>Collected[x]</b></td></tr><tr><td>*</td><td>Dec 5, 2014</td></tr></table></div>"
+  },
+  "identifier": [
+    {
+      "use": "official",
+      "system": "http://ehr.goodhealthclinic.org/identifiers/specimen",
+      "value": "SID456"
+    }
+  ],
+  "accessionIdentifier": {
+    "use": "official",
+    "system": "http://lis.acmelabs.org/identifiers/accession",
+    "value": "21041205000001"
+  },
+  "type": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "698276005",
+        "display": "First stream urine sample"
+      },
+      {
+        "system": "http://ehr.goodhealthclinic.org",
+        "code": "UFV",
+        "display": "Urine, First Void"
+      }
+    ],
+    "text": "Urine, First Void"
+  },
+  "subject": {
+    "reference": "Patient/patient-uslab-example1",
+    "display": "Todd Lerr"
+  },
+  "collection": {
+    "collectedDateTime": "2014-12-05"
+  }
+}

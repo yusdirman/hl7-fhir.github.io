@@ -1,0 +1,99 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Consent",
+  "resourceType": "Consent",
+  "Resource.id": {
+    "value": "consent-example-notOrg"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">The following scenario is based on existing jurisdictional policy and are realized in existing systems in Canada. \n\tThe default policy is one of implied consent for the provision of care, so these scenarios all deal with withdrawal or withholding consent for that purpose. \n\tIn other jurisdictions, where an express consent model is used (Opt-In), these would examples would contain the phrase &quot;consent to&quot; rather \n\tthan &quot;withhold&quot; or &quot;withdraw&quot; consent for.\n    <p>\n\tspecific to use-case 3) Withhold or withdraw consent for disclosure to a specific provider organization  \n\t</p><p>\n    Patient &quot;P. van de Heuvel&quot; ex-spouse is a Physician that is employed by Good Health Clinic.  P. decides\n   that he would like to withdraw/withhold consent to disclose any instance of his health information \n   to Good Health Clinic.\n   </p>\n   </div>"
+    }
+  },
+  "Consent.status": {
+    "value": "active"
+  },
+  "Consent.type": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/consenttypecodes"
+        },
+        "Coding.code": {
+          "value": "Opt-In"
+        },
+        "Coding.display": {
+          "value": "Authorization with exceptions."
+        }
+      }
+    ]
+  },
+  "Consent.issued": {
+    "value": "2015-11-18"
+  },
+  "Consent.patient": {
+    "Reference.reference": {
+      "value": "Patient/f001"
+    },
+    "Reference.display": {
+      "value": "P. van de Heuvel"
+    },
+    "reference": "http://hl7.org/fhir//Patient/f001"
+  },
+  "Consent.authority": [
+    {
+      "Reference.reference": {
+        "value": "Organization/Infoway"
+      },
+      "Reference.display": {
+        "value": "Canada Infoway"
+      }
+    }
+  ],
+  "Consent.domain": [
+    {
+      "Reference.reference": {
+        "value": "Location/Infoway"
+      },
+      "Reference.display": {
+        "value": "Canada Infoway"
+      }
+    }
+  ],
+  "Consent.except": [
+    {
+      "Consent.except.type": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://hl7.org/fhir/consentexcepttypecodes"
+            },
+            "Coding.code": {
+              "value": "withhold-from"
+            },
+            "Coding.display": {
+              "value": "Withhold all data from specified actor entity."
+            }
+          }
+        ]
+      },
+      "Consent.except.actor": [
+        {
+          "Reference.reference": {
+            "value": "Organization/2.16.840.1.113883.19.5"
+          },
+          "Reference.display": {
+            "value": "Good Health Clinic"
+          }
+        }
+      ]
+    }
+  ],
+  "Consent.contentAttachment": {
+    "Attachment.title": {
+      "value": "The terms of the consent in lawyer speak."
+    }
+  }
+}

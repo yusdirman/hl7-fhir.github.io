@@ -1,0 +1,35 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/OperationOutcome",
+  "resourceType": "OperationOutcome",
+  "Resource.id": {
+    "value": "validationfail"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>Error parsing resource XML (Unknown Content &quot;label&quot; @ /Patient/identifier/label)</p>\n    </div>"
+    }
+  },
+  "OperationOutcome.issue": [
+    {
+      "OperationOutcome.issue.severity": {
+        "value": "error"
+      },
+      "OperationOutcome.issue.code": {
+        "value": "structure"
+      },
+      "OperationOutcome.issue.details": {
+        "CodeableConcept.text": {
+          "value": "Error parsing resource XML (Unknown Content \"label\""
+        }
+      },
+      "OperationOutcome.issue.location": [
+        {
+          "value": "/f:Patient/f:identifier"
+        }
+      ]
+    }
+  ]
+}

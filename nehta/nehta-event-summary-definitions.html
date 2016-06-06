@@ -1,0 +1,1033 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>nehta-event-summary - FHIR v1.4.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link rel="stylesheet" href="../fhir.css"/>
+  <link rel="Prev" href="http://hl7.org/fhir/nehta-event-summary-definitions.html"/>
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href=".././dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href=".././assets/css/bootstrap-fhir.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href=".././assets/css/project.css"/>
+  <link rel="stylesheet" href=".././assets/css/pygments-manni.css"/>
+	<link rel="stylesheet" href="../jquery-ui.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src=".././assets/js/html5shiv.js"></script>
+  <script src=".././assets/js/respond.min.js"></script>
+  <![endif] -->
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href=".././assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href=".././assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href=".././assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href=".././assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href=".././assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment">  <!-- segment-header -->	
+		<div class="container">  <!-- container -->
+			<a no-external="true" id="logo" href="http://hl7.org/fhir"><img src=".././assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a no-external="true" id="hl7-logo" href="http://www.hl7.org">
+					<img src=".././assets/images/hl7-logo.png" width="42" alt="visit the hl7 website" height="50"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a no-external="true" id="hl7-logo" href="http://hl7.org/fhir/search.cfm"><img src="./../assets/images/search.png" alt="Search FHIR"/></a></div> 
+		</div>
+		<div class="container">  <!-- container -->
+	</div></div>  <!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+ 	      		
+ 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="../index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../documentation.html">Documentation</a></li>
+              <li><a href="../implementation.html">Implementation</a></li>
+              <li><a href="../resourcelist.html">Resources</a></li>
+              <li><a href="../clinical.html">Clinical</a></li>
+              <li><a href="../administration.html">Administrative</a></li>
+              <li><a href="../infrastructure.html">Infrastructure</a></li>
+              <li><a href="../financial.html">Financial</a></li>
+
+						</ul>
+					</div>  <!-- /.nav-collapse -->
+				</div>  <!-- /.container -->
+			</nav>  <!-- /.navbar -->
+      		
+				
+  <!-- /HEADER CONTENT -->				
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+		<div class="container">  <!-- container -->	
+			<ul class="breadcrumb">
+          <!-- nehta-event-summary / res-Detailed Descriptions / nehta-event-summary -->
+        <li title="NEHTA Logical Model"><a href="nehta.html"><b>NEHTA</b></a></li>
+        <li title="Work in Progress yet"><b>unsorted</b></li>
+
+			</ul>	
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment">  <!-- segment-content -->
+	<div class="container">  <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<ul class="nav nav-tabs"><li><a href="nehta-event-summary.html">Content</a></li><li><a href="nehta-event-summary-examples.html">Examples</a></li><li class="active"><a href="#">Detailed Descriptions</a></li><li><a href="nehta-event-summary-mappings.html">Mappings</a></li></ul>
+
+<h2><span class="sectioncount">??.??.6<a name="??.??.6"> </a></span> Resource nehta-event-summary - Detailed Descriptions <a href="nehta-event-summary-definitions.html#??.??.6" title="link to here" class="self-link"><img src="target.png"/></a></h2>
+
+<p>Detailed Descriptions for the elements in the nehta-event-summary resource.</p>
+
+<table class="dict">
+  <tr><td colspan="2" class="structure"><a name="EventSummary"> </a><b>EventSummary</b></td></tr>
+  <tr><td>Definition</td><td><p>A record, reported by a clinician, of one significant health care event involving the subject of care.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.subjectofCare"> </a><b>EventSummary.subjectofCare</b></td></tr>
+  <tr><td>Definition</td><td><p>Person who receives healthcare services.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../references.html#Reference">Reference</a>(<a href="../patient.html">Patient</a>)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.documentAuthor"> </a><b>EventSummary.documentAuthor</b></td></tr>
+  <tr><td>Definition</td><td><p>Composer of the document.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../references.html#Reference">Reference</a>(<a href="../patient.html">Patient</a> | <a href="../practitioner.html">Practitioner</a> | <a href="../relatedperson.html">RelatedPerson</a> | <a href="../device.html">Device</a>)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.encounter"> </a><b>EventSummary.encounter</b></td></tr>
+  <tr><td>Definition</td><td><p>Encounter between a subject of care and a health system.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.encounter.dateTimeHealthEventStarted"> </a><b>EventSummary.encounter.dateTimeHealthEventStarted</b></td></tr>
+  <tr><td>Definition</td><td><p>The date or date and time that the health event to which the Event Summary document relates was started.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#dateTime">dateTime</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.encounter.dateTimeHealthEventEnded"> </a><b>EventSummary.encounter.dateTimeHealthEventEnded</b></td></tr>
+  <tr><td>Definition</td><td><p>The date or date and time that the health event to which the Event Summary document relates was completed.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#dateTime">dateTime</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.documentType"> </a><b>EventSummary.documentType</b></td></tr>
+  <tr><td>Definition</td><td><p>Type of document.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#Identifier">Identifier</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.dateTimeAttested"> </a><b>EventSummary.dateTimeAttested</b></td></tr>
+  <tr><td>Definition</td><td><p>The date and time that the document author or document authoriser or approver confirms that a document is complete and genuine.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#dateTime">dateTime</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.eventOverview"> </a><b>EventSummary.eventOverview</b></td></tr>
+  <tr><td>Definition</td><td><p>Summary information concerning the event.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.eventOverview.clinicalSynopsis"> </a><b>EventSummary.eventOverview.clinicalSynopsis</b></td></tr>
+  <tr><td>Definition</td><td><p>Summary information or comments about the clinical management of the patient, and the prognosis of diagnoses or problems identified during the healthcare encounter. It may also include health-related information pertinent to the patient, and a clinical interpretation of relevant investigations and observations performed on the patient (including pathology and diagnostic imaging).</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.eventOverview.clinicalSynopsis.description"> </a><b>EventSummary.eventOverview.clinicalSynopsis.description</b></td></tr>
+  <tr><td>Definition</td><td><p>Short description, overview or summary of a clinical event and its reasons.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.adverseReactions"> </a><b>EventSummary.adverseReactions</b></td></tr>
+  <tr><td>Definition</td><td><p>Information about adverse reactions of the patient (including allergies and intolerances), and any relevant reaction details. This includes statements about adverse reactions that need to be positively recorded as absent or excluded.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.adverseReactions.adverseReaction"> </a><b>EventSummary.adverseReactions.adverseReaction</b></td></tr>
+  <tr><td>Definition</td><td><p>A harmful or undesirable effect associated with exposure to any substance or agent.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..*</td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.adverseReactions.adverseReaction.substanceAgent"> </a><b>EventSummary.adverseReactions.adverseReaction.substanceAgent</b></td></tr>
+  <tr><td>Definition</td><td><p>Identification of a substance, agent, or a class of substance, that is considered to be responsible for the adverse reaction.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td>SubstanceAgentValues: <a href="../nehta/valueset-nehta-nehta-SubstanceAgentValues.html">The set of values for the agent or substance causing the adverse reaction experienced by the subject of care.</a> (<a href="../terminologies.html#preferred">Preferred</a>)</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.adverseReactions.adverseReaction.event"> </a><b>EventSummary.adverseReactions.adverseReaction.event</b></td></tr>
+  <tr><td>Definition</td><td><p>Details about each adverse reaction event.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.adverseReactions.adverseReaction.event.manifestation"> </a><b>EventSummary.adverseReactions.adverseReaction.event.manifestation</b></td></tr>
+  <tr><td>Definition</td><td><p>Presentation or exhibition of signs and symptoms of the adverse reaction expressed as a single word, phrase or brief description.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..*</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td>ClinicalManifestationValues: <a href="../nehta/valueset-nehta-nehta-ClinicalManifestationValues.html">The set of values for recording clinical manifestation of an adverse reaction.</a> (<a href="../terminologies.html#preferred">Preferred</a>)</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.adverseReactions.adverseReaction.event.reactionType"> </a><b>EventSummary.adverseReactions.adverseReaction.event.reactionType</b></td></tr>
+  <tr><td>Definition</td><td><p>The type of reaction, as determined by the clinician.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td><a href="../terminologies.html#unbound">AdverseReactionTypeValues</a>: The set of values for the type of adverse reaction.</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.medicationOrders"> </a><b>EventSummary.medicationOrders</b></td></tr>
+  <tr><td>Definition</td><td><p>Medicines that the subject of care is using.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.medicationOrders.medicationInstruction"> </a><b>EventSummary.medicationOrders.medicationInstruction</b></td></tr>
+  <tr><td>Definition</td><td><p>Information pertaining to one or more therapeutic goods that is represented to achieve, or is likely to achieve, its principal intended action by pharmacological, chemical, immunological or metabolic means in or on the body of a human.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..*</td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.medicationOrders.medicationInstruction.therapeuticGoodIdentification"> </a><b>EventSummary.medicationOrders.medicationInstruction.therapeuticGoodIdentification</b></td></tr>
+  <tr><td>Definition</td><td><p>The medicine, vaccine or other therapeutic good being ordered for, administered to or used by the subject of care.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td>MedicinesTerminology: <a href="../nehta/valueset-nehta-nehta-MedicinesTerminology.html">A set of values used to refer to medicines and other therapeutic goods.</a> (<a href="../terminologies.html#preferred">Preferred</a>)</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.medicationOrders.medicationInstruction.directions"> </a><b>EventSummary.medicationOrders.medicationInstruction.directions</b></td></tr>
+  <tr><td>Definition</td><td><p>A complete narrative description of how much, when and how to use the medicine, vaccine or other therapeutic good.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.medicationOrders.medicationInstruction.clinicalIndication"> </a><b>EventSummary.medicationOrders.medicationInstruction.clinicalIndication</b></td></tr>
+  <tr><td>Definition</td><td><p>Reason for ordering the medicine, vaccine or other therapeutic good.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.medicationOrders.medicationInstruction.comment"> </a><b>EventSummary.medicationOrders.medicationInstruction.comment</b></td></tr>
+  <tr><td>Definition</td><td><p>Any additional information that may be needed to ensure the continuity of supply, rationale for current dose and timing, or safe and appropriate use.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.medicationOrders.medicationInstruction.changeType"> </a><b>EventSummary.medicationOrders.medicationInstruction.changeType</b></td></tr>
+  <tr><td>Definition</td><td><p>The way in which this instruction differs from the previous instruction.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td><a href="../terminologies.html#unbound">ChangeTypeValues</a>: The set of values for Change Type .</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.medicationOrders.medicationInstruction.changeStatus"> </a><b>EventSummary.medicationOrders.medicationInstruction.changeStatus</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies whether the change has already been made or is a recommendation that has not been made.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td><a href="../terminologies.html#unbound">ChangeStatusValues</a>: The set of values for Change Status .</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.medicationOrders.medicationInstruction.changeDescription"> </a><b>EventSummary.medicationOrders.medicationInstruction.changeDescription</b></td></tr>
+  <tr><td>Definition</td><td><p>Description of the change in the subject of care's medication item information.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.medicationOrders.medicationInstruction.changeorRecommendationReason"> </a><b>EventSummary.medicationOrders.medicationInstruction.changeorRecommendationReason</b></td></tr>
+  <tr><td>Definition</td><td><p>The justification for the stated change in medication.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.medicalHistory"> </a><b>EventSummary.medicalHistory</b></td></tr>
+  <tr><td>Definition</td><td><p>Information about the subject of care's problems, diagnoses and medical or surgical procedures.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.medicalHistory.problemDiagnosis"> </a><b>EventSummary.medicalHistory.problemDiagnosis</b></td></tr>
+  <tr><td>Definition</td><td><p>A health condition that, as determined by a clinician, may have impact on the physical, mental or social well-being of a person. A diagnosis is determined by scientific evaluation of pathological and pathophysiological findings identified from the patient's clinical history, family history, physical examination and diagnostic investigations.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.medicalHistory.problemDiagnosis.identification"> </a><b>EventSummary.medicalHistory.problemDiagnosis.identification</b></td></tr>
+  <tr><td>Definition</td><td><p>Identification of the problem or diagnosis.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td><a href="../terminologies.html#unbound">ProblemDiagnosisReferenceSet</a>: The Problem/Diagnosis reference set provides terminology to support the recording of a subject of care problem or diagnosis for medical records within Australia.</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.medicalHistory.problemDiagnosis.dateofOnset"> </a><b>EventSummary.medicalHistory.problemDiagnosis.dateofOnset</b></td></tr>
+  <tr><td>Definition</td><td><p>Estimated or actual date the problem or diagnosis began, as indicated or identified by the clinician.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#dateTime">dateTime</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.medicalHistory.problemDiagnosis.comment"> </a><b>EventSummary.medicalHistory.problemDiagnosis.comment</b></td></tr>
+  <tr><td>Definition</td><td><p>Additional narrative about the problem or diagnosis not captured in other fields.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.medicalHistory.procedure"> </a><b>EventSummary.medicalHistory.procedure</b></td></tr>
+  <tr><td>Definition</td><td><p>A clinical activity carried out for therapeutic, evaluative, investigative, screening or diagnostic purposes.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.medicalHistory.procedure.name"> </a><b>EventSummary.medicalHistory.procedure.name</b></td></tr>
+  <tr><td>Definition</td><td><p>The name of the procedure (to be) performed.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td><a href="../terminologies.html#unbound">ProcedureFoundationReferenceSet</a>: The Procedure foundation reference set provides the broadest possible terminology to support the recording of clinical interventions in Australian eHealth implementations.</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.medicalHistory.procedure.comment"> </a><b>EventSummary.medicalHistory.procedure.comment</b></td></tr>
+  <tr><td>Definition</td><td><p>Additional narrative about the procedure not captured in other fields.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.medicalHistory.procedure.dateTime"> </a><b>EventSummary.medicalHistory.procedure.dateTime</b></td></tr>
+  <tr><td>Definition</td><td><p>Date, and optionally time, of the Procedure action.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#Period">Period</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.medicalHistory.uncategorisedMedicalHistoryItem"> </a><b>EventSummary.medicalHistory.uncategorisedMedicalHistoryItem</b></td></tr>
+  <tr><td>Definition</td><td><p>A medical history entry that has not been categorised as either Procedure or Problem/Diagnosis .</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.medicalHistory.uncategorisedMedicalHistoryItem.description"> </a><b>EventSummary.medicalHistory.uncategorisedMedicalHistoryItem.description</b></td></tr>
+  <tr><td>Definition</td><td><p>A description of the problem, diagnosis or procedure as a medical history item.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.medicalHistory.uncategorisedMedicalHistoryItem.timeInterval"> </a><b>EventSummary.medicalHistory.uncategorisedMedicalHistoryItem.timeInterval</b></td></tr>
+  <tr><td>Definition</td><td><p>The date range during which the problem or diagnosis applied or the procedure occurred.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#Period">Period</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.medicalHistory.uncategorisedMedicalHistoryItem.comment"> </a><b>EventSummary.medicalHistory.uncategorisedMedicalHistoryItem.comment</b></td></tr>
+  <tr><td>Definition</td><td><p>Additional narrative about the problem, diagnosis or procedure.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.immunisations"> </a><b>EventSummary.immunisations</b></td></tr>
+  <tr><td>Definition</td><td><p>Information about vaccines given to the subject of care.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.immunisations.medicationAction"> </a><b>EventSummary.immunisations.medicationAction</b></td></tr>
+  <tr><td>Definition</td><td><p>The act of administering a dose of a vaccine to a person for the purpose of preventing or minimising the effects of a disease by producing immunity or to counter the effects of an infectious organism.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..*</td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.immunisations.medicationAction.therapeuticGoodIdentification"> </a><b>EventSummary.immunisations.medicationAction.therapeuticGoodIdentification</b></td></tr>
+  <tr><td>Definition</td><td><p>The medicine, vaccine or other therapeutic good being ordered for, administered to or used by the subject of care.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td>MedicinesTerminology: <a href="../nehta/valueset-nehta-nehta-MedicinesTerminology.html">A set of values used to refer to medicines and other therapeutic goods.</a> (<a href="../terminologies.html#preferred">Preferred</a>)</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.immunisations.medicationAction.dateTime"> </a><b>EventSummary.immunisations.medicationAction.dateTime</b></td></tr>
+  <tr><td>Definition</td><td><p>Date, and optionally time, that the medication action is completed.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#dateTime">dateTime</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations"> </a><b>EventSummary.diagnosticInvestigations</b></td></tr>
+  <tr><td>Definition</td><td><p>Describes the diagnostic tests or procedures performed on or requested for the subject of care during the healthcare event, that are considered to be relevant to the subject of care’s ongoing care.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult</b></td></tr>
+  <tr><td>Definition</td><td><p>The result of a laboratory test which may be used to record a single valued test but will often be specialised or templated to represent multiple value or 'panel' tests.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.name"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.name</b></td></tr>
+  <tr><td>Definition</td><td><p>Identification of the pathology test performed, sometimes including specimen type.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td><a href="../terminologies.html#unbound">PathologyTestResultNameValues</a>: Set of values for the names of pathology tests requested or performed.</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.diagnosticService"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.diagnosticService</b></td></tr>
+  <tr><td>Definition</td><td><p>The diagnostic service that performs the examination.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td><a href="../terminologies.html#unbound">DiagnosticServiceValues</a>: Set of values for the type of diagnostic service.</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.specimen"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.specimen</b></td></tr>
+  <tr><td>Definition</td><td><p>Details about specimens to which this test result refers.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..*</td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.tissueType"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.tissueType</b></td></tr>
+  <tr><td>Definition</td><td><p>The type of specimen to be collected.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td><a href="../terminologies.html#unbound">SpecimenTypeValues</a>: The set of values for the categorisation of the sample taken from an individual and submitted for pathology investigation.</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.collectionProcedure"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.collectionProcedure</b></td></tr>
+  <tr><td>Definition</td><td><p>The method of collection to be used.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td><a href="../terminologies.html#unbound">CollectionProcedureValues</a>: The set of values for the method of collection to be used, e.g. venepuncture, biopsy, resection.</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.anatomicalLocation"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.anatomicalLocation</b></td></tr>
+  <tr><td>Definition</td><td><p>The anatomical site from where the specimen was taken.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.anatomicalLocation.specificLocation"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.anatomicalLocation.specificLocation</b></td></tr>
+  <tr><td>Definition</td><td><p>Specific and identified anatomical location.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.anatomicalLocation.specificLocation.anatomicalLocationName"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.anatomicalLocation.specificLocation.anatomicalLocationName</b></td></tr>
+  <tr><td>Definition</td><td><p>The name of the anatomical location.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td><a href="../terminologies.html#unbound">BodyStructureFoundationReferenceSet</a>: The set of values for named anatomical locations.</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.anatomicalLocation.specificLocation.side"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.anatomicalLocation.specificLocation.side</b></td></tr>
+  <tr><td>Definition</td><td><p>The laterality of the anatomical location.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td><a href="../terminologies.html#unbound">LateralityReferenceSet</a>: The set of values for identifying the laterality of an anatomical location.</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.anatomicalLocation.description"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.anatomicalLocation.description</b></td></tr>
+  <tr><td>Definition</td><td><p>Description of the anatomical location.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.anatomicalLocation.image"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.anatomicalLocation.image</b></td></tr>
+  <tr><td>Definition</td><td><p>An image or images used to identify a location.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#base64Binary">base64Binary</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.physicalPropertiesofanObject"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.physicalPropertiesofanObject</b></td></tr>
+  <tr><td>Definition</td><td><p>Record of physical details, such as weight and dimensions, of a body part, device, lesion or specimen.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.physicalPropertiesofanObject.weight"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.physicalPropertiesofanObject.weight</b></td></tr>
+  <tr><td>Definition</td><td><p>Property of a body – commonly, but inadequately, defined as the quantity of matter in it – to which its inertia is ascribed, and expressed as the weight of the body divided by the acceleration due to gravity.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#Quantity">Quantity</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.physicalPropertiesofanObject.dimensions"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.physicalPropertiesofanObject.dimensions</b></td></tr>
+  <tr><td>Definition</td><td><p>The dimensions of the object.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.physicalPropertiesofanObject.dimensions.volume"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.physicalPropertiesofanObject.dimensions.volume</b></td></tr>
+  <tr><td>Definition</td><td><p>Size, measure or amount of anything in three dimensions; space occupied by a body or substance measured in cubic units.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#Quantity">Quantity</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.physicalPropertiesofanObject.objectDescription"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.physicalPropertiesofanObject.objectDescription</b></td></tr>
+  <tr><td>Definition</td><td><p>A description of other physical characteristics of the object.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.physicalPropertiesofanObject.image"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.physicalPropertiesofanObject.image</b></td></tr>
+  <tr><td>Definition</td><td><p>A picture of the object.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#base64Binary">base64Binary</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.collectionandHandling"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.collectionandHandling</b></td></tr>
+  <tr><td>Definition</td><td><p>Collection and handling requirements.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.collectionandHandling.samplingPreconditions"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.collectionandHandling.samplingPreconditions</b></td></tr>
+  <tr><td>Definition</td><td><p>Any conditions to be met before the sample should be taken.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td><a href="../terminologies.html#unbound">SamplingPreconditionsValues</a>: The set of values for any conditions to be met before the sample should be taken e.g. fasting, 'full bladder', 'sterile field' or any special instructions on the handling or immediate processing of the sample e.g. centrifuge on receipt.</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.handlingandProcessing"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.handlingandProcessing</b></td></tr>
+  <tr><td>Definition</td><td><p>Workflow of specimen processing or handling.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.handlingandProcessing.collectionDateTime"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.handlingandProcessing.collectionDateTime</b></td></tr>
+  <tr><td>Definition</td><td><p>The date and time that the collection has been ordered to take place or has taken place.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#dateTime">dateTime</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.handlingandProcessing.collectionSetting"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.handlingandProcessing.collectionSetting</b></td></tr>
+  <tr><td>Definition</td><td><p>Identification of the setting at which the specimen was collected from a subject of care.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.handlingandProcessing.dateTimeReceived"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.handlingandProcessing.dateTimeReceived</b></td></tr>
+  <tr><td>Definition</td><td><p>The date and time that the sample was received at the laboratory.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#dateTime">dateTime</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.identifiers"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.identifiers</b></td></tr>
+  <tr><td>Definition</td><td><p>Sample identifications.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.identifiers.specimenIdentifier"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.identifiers.specimenIdentifier</b></td></tr>
+  <tr><td>Definition</td><td><p>Unique identifier of the specimen, normally assigned by the laboratory.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#Identifier">Identifier</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.identifiers.parentSpecimenIdentifier"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.identifiers.parentSpecimenIdentifier</b></td></tr>
+  <tr><td>Definition</td><td><p>Unique identifier of the parent specimen where the specimen is split into sub-samples.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#Identifier">Identifier</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.identifiers.containerIdentifier"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.identifiers.containerIdentifier</b></td></tr>
+  <tr><td>Definition</td><td><p>Unique identifier given to the container in which the specimen is transported or processed.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#Identifier">Identifier</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.overallPathologyTestResultStatus"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.overallPathologyTestResultStatus</b></td></tr>
+  <tr><td>Definition</td><td><p>The status of the pathology test result as a whole.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td>PathologyTestResultStatusValues: <a href="../nehta/valueset-nehta-pathology-test-result-status-va.html">Set of values for the pathology test result status.</a> (<a href="../terminologies.html#required">Required</a>)</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.clinicalInformationProvided"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.clinicalInformationProvided</b></td></tr>
+  <tr><td>Definition</td><td><p>Description or summary of relevant, prior clinical information that may help in determining the test(s) to be performed, or interpreting the result when compiling or reading the report.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.group"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.group</b></td></tr>
+  <tr><td>Definition</td><td><p>A group of results that form all or part of a recognisable pathology test.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.group.name"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.group.name</b></td></tr>
+  <tr><td>Definition</td><td><p>The name of a group of pathology test results.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td><a href="../terminologies.html#unbound">PathologyTestResultNameValues</a>: Set of values for the names of pathology tests requested or performed.</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.group.individualPathologyTestResult"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.group.individualPathologyTestResult</b></td></tr>
+  <tr><td>Definition</td><td><p>Specific detailed result of a pathology test, including both the value of the result item, and additional information that may be useful for clinical interpretation.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..*</td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.group.individualPathologyTestResult.name"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.group.individualPathologyTestResult.name</b></td></tr>
+  <tr><td>Definition</td><td><p>The name of an individual pathology test result.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td><a href="../terminologies.html#unbound">IndividualPathologyTestResultNameValues</a>: Set of values for the names of individual pathology tests performed.</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.group.individualPathologyTestResult.value"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.group.individualPathologyTestResult.value</b></td></tr>
+  <tr><td>Definition</td><td><p>Value of the result, with reference range information.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.group.individualPathologyTestResult.value.value"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.group.individualPathologyTestResult.value.value</b></td></tr>
+  <tr><td>Definition</td><td><p>The actual value of the result.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td><a href="../terminologies.html#unbound">ResultValueValues</a>: Set of values for Pathology Test Result Value .</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.group.individualPathologyTestResult.value.referenceRangeDetails"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.group.individualPathologyTestResult.value.referenceRangeDetails</b></td></tr>
+  <tr><td>Definition</td><td><p>One or more reference ranges applicable to the Individual Pathology Test Result Value .</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.group.individualPathologyTestResult.value.referenceRangeDetails.normalStatus"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.group.individualPathologyTestResult.value.referenceRangeDetails.normalStatus</b></td></tr>
+  <tr><td>Definition</td><td><p>An indication of the degree of diagnostically significant abnormality of the value, based on available clinical information (including but not limited to the reference range).</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td><a href="../terminologies.html#unbound">NormalStatusValues</a>: </td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.group.individualPathologyTestResult.value.referenceRangeDetails.referenceRange"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.group.individualPathologyTestResult.value.referenceRangeDetails.referenceRange</b></td></tr>
+  <tr><td>Definition</td><td><p>A named range to be associated with any quantity datum.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.group.individualPathologyTestResult.value.referenceRangeDetails.referenceRange.meaning"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.group.individualPathologyTestResult.value.referenceRangeDetails.referenceRange.meaning</b></td></tr>
+  <tr><td>Definition</td><td><p>Term whose value indicates the meaning of this range.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td><a href="../terminologies.html#unbound">ReferenceRangeMeaningValues</a>: </td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.group.individualPathologyTestResult.value.referenceRangeDetails.referenceRange.referenceRange"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.group.individualPathologyTestResult.value.referenceRangeDetails.referenceRange.referenceRange</b></td></tr>
+  <tr><td>Definition</td><td><p>The data range for the associated Reference Range Meaning data element .</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#Range">Range</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.group.individualPathologyTestResult.comment"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.group.individualPathologyTestResult.comment</b></td></tr>
+  <tr><td>Definition</td><td><p>Comments that may include statements about significant, unexpected or unreliable values, or information about the source of the value where this may be relevant to the interpretation of the result.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.group.individualPathologyTestResult.referenceRangeGuidance"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.group.individualPathologyTestResult.referenceRangeGuidance</b></td></tr>
+  <tr><td>Definition</td><td><p>Additional advice on the applicability of the reference range.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.group.individualPathologyTestResult.status"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.group.individualPathologyTestResult.status</b></td></tr>
+  <tr><td>Definition</td><td><p>The status of the result value.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td>PathologyTestResultStatusValues: <a href="../nehta/valueset-nehta-pathology-test-result-status-va.html">Set of values for the pathology test result status.</a> (<a href="../terminologies.html#required">Required</a>)</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen</b></td></tr>
+  <tr><td>Definition</td><td><p>Details about the individual specimen to which these result group test results refer, where testing of multiple specimens is required.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.tissueType"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.tissueType</b></td></tr>
+  <tr><td>Definition</td><td><p>The type of specimen to be collected.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td><a href="../terminologies.html#unbound">SpecimenTypeValues</a>: The set of values for the categorisation of the sample taken from an individual and submitted for pathology investigation.</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.collectionProcedure"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.collectionProcedure</b></td></tr>
+  <tr><td>Definition</td><td><p>The method of collection to be used.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td><a href="../terminologies.html#unbound">CollectionProcedureValues</a>: The set of values for the method of collection to be used, e.g. venepuncture, biopsy, resection.</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.anatomicalLocation"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.anatomicalLocation</b></td></tr>
+  <tr><td>Definition</td><td><p>The anatomical site from where the specimen was taken.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.anatomicalLocation.specificLocation"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.anatomicalLocation.specificLocation</b></td></tr>
+  <tr><td>Definition</td><td><p>Specific and identified anatomical location.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.anatomicalLocation.specificLocation.anatomicalLocationName"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.anatomicalLocation.specificLocation.anatomicalLocationName</b></td></tr>
+  <tr><td>Definition</td><td><p>The name of the anatomical location.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td><a href="../terminologies.html#unbound">BodyStructureFoundationReferenceSet</a>: The set of values for named anatomical locations.</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.anatomicalLocation.specificLocation.side"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.anatomicalLocation.specificLocation.side</b></td></tr>
+  <tr><td>Definition</td><td><p>The laterality of the anatomical location.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td><a href="../terminologies.html#unbound">LateralityReferenceSet</a>: The set of values for identifying the laterality of an anatomical location.</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.anatomicalLocation.description"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.anatomicalLocation.description</b></td></tr>
+  <tr><td>Definition</td><td><p>Description of the anatomical location.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.anatomicalLocation.image"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.anatomicalLocation.image</b></td></tr>
+  <tr><td>Definition</td><td><p>An image or images used to identify a location.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#base64Binary">base64Binary</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.physicalPropertiesofanObject"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.physicalPropertiesofanObject</b></td></tr>
+  <tr><td>Definition</td><td><p>Record of physical details, such as weight and dimensions, of a body part, device, lesion or specimen.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.physicalPropertiesofanObject.weight"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.physicalPropertiesofanObject.weight</b></td></tr>
+  <tr><td>Definition</td><td><p>Property of a body – commonly, but inadequately, defined as the quantity of matter in it – to which its inertia is ascribed, and expressed as the weight of the body divided by the acceleration due to gravity.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#Quantity">Quantity</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.physicalPropertiesofanObject.dimensions"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.physicalPropertiesofanObject.dimensions</b></td></tr>
+  <tr><td>Definition</td><td><p>The dimensions of the object.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.physicalPropertiesofanObject.dimensions.volume"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.physicalPropertiesofanObject.dimensions.volume</b></td></tr>
+  <tr><td>Definition</td><td><p>Size, measure or amount of anything in three dimensions; space occupied by a body or substance measured in cubic units.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#Quantity">Quantity</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.physicalPropertiesofanObject.objectDescription"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.physicalPropertiesofanObject.objectDescription</b></td></tr>
+  <tr><td>Definition</td><td><p>A description of other physical characteristics of the object.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.physicalPropertiesofanObject.image"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.physicalPropertiesofanObject.image</b></td></tr>
+  <tr><td>Definition</td><td><p>A picture of the object.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#base64Binary">base64Binary</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.collectionandHandling"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.collectionandHandling</b></td></tr>
+  <tr><td>Definition</td><td><p>Collection and handling requirements.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.collectionandHandling.samplingPreconditions"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.collectionandHandling.samplingPreconditions</b></td></tr>
+  <tr><td>Definition</td><td><p>Any conditions to be met before the sample should be taken.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td><a href="../terminologies.html#unbound">SamplingPreconditionsValues</a>: The set of values for any conditions to be met before the sample should be taken e.g. fasting, 'full bladder', 'sterile field' or any special instructions on the handling or immediate processing of the sample e.g. centrifuge on receipt.</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.handlingandProcessing"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.handlingandProcessing</b></td></tr>
+  <tr><td>Definition</td><td><p>Workflow of specimen processing or handling.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.handlingandProcessing.collectionDateTime"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.handlingandProcessing.collectionDateTime</b></td></tr>
+  <tr><td>Definition</td><td><p>The date and time that the collection has been ordered to take place or has taken place.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#dateTime">dateTime</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.handlingandProcessing.collectionSetting"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.handlingandProcessing.collectionSetting</b></td></tr>
+  <tr><td>Definition</td><td><p>Identification of the setting at which the specimen was collected from a subject of care.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.handlingandProcessing.dateTimeReceived"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.handlingandProcessing.dateTimeReceived</b></td></tr>
+  <tr><td>Definition</td><td><p>The date and time that the sample was received at the laboratory.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#dateTime">dateTime</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.identifiers"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.identifiers</b></td></tr>
+  <tr><td>Definition</td><td><p>Sample identifications.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.identifiers.specimenIdentifier"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.identifiers.specimenIdentifier</b></td></tr>
+  <tr><td>Definition</td><td><p>Unique identifier of the specimen, normally assigned by the laboratory.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#Identifier">Identifier</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.identifiers.parentSpecimenIdentifier"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.identifiers.parentSpecimenIdentifier</b></td></tr>
+  <tr><td>Definition</td><td><p>Unique identifier of the parent specimen where the specimen is split into sub-samples.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#Identifier">Identifier</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.identifiers.containerIdentifier"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.identifiers.containerIdentifier</b></td></tr>
+  <tr><td>Definition</td><td><p>Unique identifier given to the container in which the specimen is transported or processed.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#Identifier">Identifier</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.pathologicalDiagnosis"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.pathologicalDiagnosis</b></td></tr>
+  <tr><td>Definition</td><td><p>Single word, phrase or brief description representing the diagnostic statement as asserted by the reporting pathologist.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td><a href="../terminologies.html#unbound">PathologicalDiagnosisValues</a>: </td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.pathologyTestConclusion"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.pathologyTestConclusion</b></td></tr>
+  <tr><td>Definition</td><td><p>Concise and clinically contextualised narrative interpretation of the pathology test results.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.representation"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.representation</b></td></tr>
+  <tr><td>Definition</td><td><p>Rich text representation of the entire result as issued by the diagnostic service.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#base64Binary">base64Binary</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.testComment"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.testComment</b></td></tr>
+  <tr><td>Definition</td><td><p>Additional narrative about the test that is not captured in other fields.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.testRequestDetails"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.testRequestDetails</b></td></tr>
+  <tr><td>Definition</td><td><p>Details concerning a single requested pathology test.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.testRequestDetails.testRequestedName"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.testRequestDetails.testRequestedName</b></td></tr>
+  <tr><td>Definition</td><td><p>Identification of the pathology test which was requested.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td><a href="../terminologies.html#unbound">PathologyTestResultNameValues</a>: Set of values for the names of pathology tests requested or performed.</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.testRequestDetails.laboratoryTestResultIdentifier"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.testRequestDetails.laboratoryTestResultIdentifier</b></td></tr>
+  <tr><td>Definition</td><td><p>The identifier given to the laboratory test result of a pathology investigation.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#Identifier">Identifier</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.pathologyTestResult.observationDateTime"> </a><b>EventSummary.diagnosticInvestigations.pathologyTestResult.observationDateTime</b></td></tr>
+  <tr><td>Definition</td><td><p>Date, and optionally time, when an observation is clinically significant to the condition of the subject of the observation.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#dateTime">dateTime</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.imagingExaminationResult"> </a><b>EventSummary.diagnosticInvestigations.imagingExaminationResult</b></td></tr>
+  <tr><td>Definition</td><td><p>The result of an imaging examination which may be used to record a single valued test but will often be specialised or templated to represent multiple value or 'panel' tests.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.imagingExaminationResult.name"> </a><b>EventSummary.diagnosticInvestigations.imagingExaminationResult.name</b></td></tr>
+  <tr><td>Definition</td><td><p>Identification of the imaging examination or procedure performed, typically including modality and anatomical location (including laterality).</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td><a href="../terminologies.html#unbound">ImagingExaminationResultNameValues</a>: A terminology for Examination Result name, potientially pre-coordinated terms specifying both modality and anatomical location. Possible candidate terminologies: LOINC, SNOMED CT or RadLex.</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.imagingExaminationResult.imagingModality"> </a><b>EventSummary.diagnosticInvestigations.imagingExaminationResult.imagingModality</b></td></tr>
+  <tr><td>Definition</td><td><p>The imaging method used to perform the examination.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td><a href="../terminologies.html#unbound">ImagingModalityValues</a>: Values of imaging method, e.g. Ultrasound, CT, X-ray.</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.imagingExaminationResult.anatomicalLocation"> </a><b>EventSummary.diagnosticInvestigations.imagingExaminationResult.anatomicalLocation</b></td></tr>
+  <tr><td>Definition</td><td><p>Details about the anatomical locations to which this examination result refers.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.imagingExaminationResult.anatomicalLocation.specificLocation"> </a><b>EventSummary.diagnosticInvestigations.imagingExaminationResult.anatomicalLocation.specificLocation</b></td></tr>
+  <tr><td>Definition</td><td><p>Specific and identified anatomical location.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.imagingExaminationResult.anatomicalLocation.specificLocation.anatomicalLocationName"> </a><b>EventSummary.diagnosticInvestigations.imagingExaminationResult.anatomicalLocation.specificLocation.anatomicalLocationName</b></td></tr>
+  <tr><td>Definition</td><td><p>The name of the anatomical location.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td><a href="../terminologies.html#unbound">BodyStructureFoundationReferenceSet</a>: The set of values for named anatomical locations.</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.imagingExaminationResult.anatomicalLocation.specificLocation.side"> </a><b>EventSummary.diagnosticInvestigations.imagingExaminationResult.anatomicalLocation.specificLocation.side</b></td></tr>
+  <tr><td>Definition</td><td><p>The laterality of the anatomical location.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td><a href="../terminologies.html#unbound">LateralityReferenceSet</a>: The set of values for identifying the laterality of an anatomical location.</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.imagingExaminationResult.anatomicalLocation.description"> </a><b>EventSummary.diagnosticInvestigations.imagingExaminationResult.anatomicalLocation.description</b></td></tr>
+  <tr><td>Definition</td><td><p>Description of the anatomical location.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.imagingExaminationResult.anatomicalLocation.image"> </a><b>EventSummary.diagnosticInvestigations.imagingExaminationResult.anatomicalLocation.image</b></td></tr>
+  <tr><td>Definition</td><td><p>An image or images used to identify a location.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#base64Binary">base64Binary</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.imagingExaminationResult.status"> </a><b>EventSummary.diagnosticInvestigations.imagingExaminationResult.status</b></td></tr>
+  <tr><td>Definition</td><td><p>The status of the examination result as a whole.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td>ImagingExaminationResultStatusValues: <a href="../nehta/valueset-nehta-imaging-examination-result-stat.html">Set of values for the imaging examination result status.</a> (<a href="../terminologies.html#required">Required</a>)</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.imagingExaminationResult.clinicalInformationProvided"> </a><b>EventSummary.diagnosticInvestigations.imagingExaminationResult.clinicalInformationProvided</b></td></tr>
+  <tr><td>Definition</td><td><p>Description of clinical information available at the time of interpretation of results, or a link to the original clinical information provided in the examination request.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.imagingExaminationResult.findings"> </a><b>EventSummary.diagnosticInvestigations.imagingExaminationResult.findings</b></td></tr>
+  <tr><td>Definition</td><td><p>Clinical assessment and opinion based on one or more observations and examinations.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.imagingExaminationResult.group"> </a><b>EventSummary.diagnosticInvestigations.imagingExaminationResult.group</b></td></tr>
+  <tr><td>Definition</td><td><p>A group of structured results.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.imagingExaminationResult.group.name"> </a><b>EventSummary.diagnosticInvestigations.imagingExaminationResult.group.name</b></td></tr>
+  <tr><td>Definition</td><td><p>The name of a group of structured results.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td><a href="../terminologies.html#unbound">ImagingExamResultGroupNameValues</a>: Results may be grouped by anatomical location or by some other name or code to describe what binds all the results together. If a name or code is used, it is provided by run-time re-naming of the 'Result group' element or may be fixed in a specialised archetype or template. Should be coded with LOINC or SNOMED CT.</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.imagingExaminationResult.group.individualImagingExaminationResult"> </a><b>EventSummary.diagnosticInvestigations.imagingExaminationResult.group.individualImagingExaminationResult</b></td></tr>
+  <tr><td>Definition</td><td><p>Specific detailed result of an imaging examination, including both the value of the result item and additional information that may be useful for clinical interpretation.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..*</td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.imagingExaminationResult.group.individualImagingExaminationResult.name"> </a><b>EventSummary.diagnosticInvestigations.imagingExaminationResult.group.individualImagingExaminationResult.name</b></td></tr>
+  <tr><td>Definition</td><td><p>The name of a specific detailed result.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td><a href="../terminologies.html#unbound">ImagingExaminationResultNameValues</a>: A terminology for Examination Result name, potientially pre-coordinated terms specifying both modality and anatomical location. Possible candidate terminologies: LOINC, SNOMED CT or RadLex.</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.imagingExaminationResult.group.individualImagingExaminationResult.value"> </a><b>EventSummary.diagnosticInvestigations.imagingExaminationResult.group.individualImagingExaminationResult.value</b></td></tr>
+  <tr><td>Definition</td><td><p>Value of the result, with reference range information.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.imagingExaminationResult.group.individualImagingExaminationResult.value.value"> </a><b>EventSummary.diagnosticInvestigations.imagingExaminationResult.group.individualImagingExaminationResult.value.value</b></td></tr>
+  <tr><td>Definition</td><td><p>The actual value of the result.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td><a href="../terminologies.html#unbound">ResultValueValues</a>: Set of values for Pathology Test Result Value .</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.imagingExaminationResult.group.individualImagingExaminationResult.value.referenceRangeDetails"> </a><b>EventSummary.diagnosticInvestigations.imagingExaminationResult.group.individualImagingExaminationResult.value.referenceRangeDetails</b></td></tr>
+  <tr><td>Definition</td><td><p>One or more reference ranges applicable to the Imaging Examination Result Value .</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.imagingExaminationResult.group.individualImagingExaminationResult.value.referenceRangeDetails.normalStatus"> </a><b>EventSummary.diagnosticInvestigations.imagingExaminationResult.group.individualImagingExaminationResult.value.referenceRangeDetails.normalStatus</b></td></tr>
+  <tr><td>Definition</td><td><p>An indication of the degree of diagnostically significant abnormality of the value, based on available clinical information (including but not limited to the reference range).</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td><a href="../terminologies.html#unbound">NormalStatusValues</a>: </td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.imagingExaminationResult.group.individualImagingExaminationResult.value.referenceRangeDetails.referenceRange"> </a><b>EventSummary.diagnosticInvestigations.imagingExaminationResult.group.individualImagingExaminationResult.value.referenceRangeDetails.referenceRange</b></td></tr>
+  <tr><td>Definition</td><td><p>A named range to be associated with any quantity datum.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.imagingExaminationResult.group.individualImagingExaminationResult.value.referenceRangeDetails.referenceRange.meaning"> </a><b>EventSummary.diagnosticInvestigations.imagingExaminationResult.group.individualImagingExaminationResult.value.referenceRangeDetails.referenceRange.meaning</b></td></tr>
+  <tr><td>Definition</td><td><p>Term whose value indicates the meaning of this range.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td><a href="../terminologies.html#unbound">ReferenceRangeMeaningValues</a>: </td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.imagingExaminationResult.group.individualImagingExaminationResult.value.referenceRangeDetails.referenceRange.referenceRange"> </a><b>EventSummary.diagnosticInvestigations.imagingExaminationResult.group.individualImagingExaminationResult.value.referenceRangeDetails.referenceRange.referenceRange</b></td></tr>
+  <tr><td>Definition</td><td><p>The data range for the associated Reference Range Meaning data element .</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#Range">Range</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.imagingExaminationResult.group.individualImagingExaminationResult.resultComment"> </a><b>EventSummary.diagnosticInvestigations.imagingExaminationResult.group.individualImagingExaminationResult.resultComment</b></td></tr>
+  <tr><td>Definition</td><td><p>May include statements about significant, unexpected or unreliable values, or information about the source of the value where this may be relevant to the interpretation of the result.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.imagingExaminationResult.group.anatomicalLocation"> </a><b>EventSummary.diagnosticInvestigations.imagingExaminationResult.group.anatomicalLocation</b></td></tr>
+  <tr><td>Definition</td><td><p>Details about the individual anatomical location to which these result group examination results refer, where finer-grained representation of Anatomical Location is required.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.imagingExaminationResult.group.anatomicalLocation.specificLocation"> </a><b>EventSummary.diagnosticInvestigations.imagingExaminationResult.group.anatomicalLocation.specificLocation</b></td></tr>
+  <tr><td>Definition</td><td><p>Specific and identified anatomical location.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.imagingExaminationResult.group.anatomicalLocation.specificLocation.anatomicalLocationName"> </a><b>EventSummary.diagnosticInvestigations.imagingExaminationResult.group.anatomicalLocation.specificLocation.anatomicalLocationName</b></td></tr>
+  <tr><td>Definition</td><td><p>The name of the anatomical location.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td><a href="../terminologies.html#unbound">BodyStructureFoundationReferenceSet</a>: The set of values for named anatomical locations.</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.imagingExaminationResult.group.anatomicalLocation.specificLocation.side"> </a><b>EventSummary.diagnosticInvestigations.imagingExaminationResult.group.anatomicalLocation.specificLocation.side</b></td></tr>
+  <tr><td>Definition</td><td><p>The laterality of the anatomical location.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td><a href="../terminologies.html#unbound">LateralityReferenceSet</a>: The set of values for identifying the laterality of an anatomical location.</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.imagingExaminationResult.group.anatomicalLocation.description"> </a><b>EventSummary.diagnosticInvestigations.imagingExaminationResult.group.anatomicalLocation.description</b></td></tr>
+  <tr><td>Definition</td><td><p>Description of the anatomical location.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.imagingExaminationResult.group.anatomicalLocation.image"> </a><b>EventSummary.diagnosticInvestigations.imagingExaminationResult.group.anatomicalLocation.image</b></td></tr>
+  <tr><td>Definition</td><td><p>An image or images used to identify a location.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#base64Binary">base64Binary</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.imagingExaminationResult.representation"> </a><b>EventSummary.diagnosticInvestigations.imagingExaminationResult.representation</b></td></tr>
+  <tr><td>Definition</td><td><p>Rich text representation of the entire result as issued by the diagnostic service.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#base64Binary">base64Binary</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.imagingExaminationResult.examinationRequestDetails"> </a><b>EventSummary.diagnosticInvestigations.imagingExaminationResult.examinationRequestDetails</b></td></tr>
+  <tr><td>Definition</td><td><p>Details concerning a single requested examination.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.imagingExaminationResult.examinationRequestDetails.examinationRequestedName"> </a><b>EventSummary.diagnosticInvestigations.imagingExaminationResult.examinationRequestDetails.examinationRequestedName</b></td></tr>
+  <tr><td>Definition</td><td><p>Identification of the imaging examination which was requested.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.imagingExaminationResult.examinationRequestDetails.dICOMStudyIdentifier"> </a><b>EventSummary.diagnosticInvestigations.imagingExaminationResult.examinationRequestDetails.dICOMStudyIdentifier</b></td></tr>
+  <tr><td>Definition</td><td><p>Unique identifier of this study allocated by the imaging service.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#Identifier">Identifier</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.imagingExaminationResult.examinationRequestDetails.reportIdentifier"> </a><b>EventSummary.diagnosticInvestigations.imagingExaminationResult.examinationRequestDetails.reportIdentifier</b></td></tr>
+  <tr><td>Definition</td><td><p>The local identifier given to the imaging examination report.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#Identifier">Identifier</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.imagingExaminationResult.examinationRequestDetails.imageDetails"> </a><b>EventSummary.diagnosticInvestigations.imagingExaminationResult.examinationRequestDetails.imageDetails</b></td></tr>
+  <tr><td>Definition</td><td><p>Images referenced or provided to assist clinical understanding of the examination.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.imagingExaminationResult.examinationRequestDetails.imageDetails.imageIdentifier"> </a><b>EventSummary.diagnosticInvestigations.imagingExaminationResult.examinationRequestDetails.imageDetails.imageIdentifier</b></td></tr>
+  <tr><td>Definition</td><td><p>Unique identifier of this image allocated by the imaging service.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#Identifier">Identifier</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.imagingExaminationResult.examinationRequestDetails.imageDetails.dICOMSeriesIdentifier"> </a><b>EventSummary.diagnosticInvestigations.imagingExaminationResult.examinationRequestDetails.imageDetails.dICOMSeriesIdentifier</b></td></tr>
+  <tr><td>Definition</td><td><p>Unique identifier of this series allocated by the imaging service.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#Identifier">Identifier</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.imagingExaminationResult.examinationRequestDetails.imageDetails.imageViewName"> </a><b>EventSummary.diagnosticInvestigations.imagingExaminationResult.examinationRequestDetails.imageDetails.imageViewName</b></td></tr>
+  <tr><td>Definition</td><td><p>The name of the imaging view.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td><a href="../terminologies.html#unbound">ImageViewNameValues</a>: The set of values for the description of the view taken.</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.imagingExaminationResult.examinationRequestDetails.imageDetails.subjectPosition"> </a><b>EventSummary.diagnosticInvestigations.imagingExaminationResult.examinationRequestDetails.imageDetails.subjectPosition</b></td></tr>
+  <tr><td>Definition</td><td><p>Description of the subject of care's position when the imaging examination was performed.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.imagingExaminationResult.examinationRequestDetails.imageDetails.imageDateTime"> </a><b>EventSummary.diagnosticInvestigations.imagingExaminationResult.examinationRequestDetails.imageDetails.imageDateTime</b></td></tr>
+  <tr><td>Definition</td><td><p>Date, and optionally time, the imaging examination was performed.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#dateTime">dateTime</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.imagingExaminationResult.examinationRequestDetails.imageDetails.image"> </a><b>EventSummary.diagnosticInvestigations.imagingExaminationResult.examinationRequestDetails.imageDetails.image</b></td></tr>
+  <tr><td>Definition</td><td><p>An attached or referenced image of a current view.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#base64Binary">base64Binary</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.imagingExaminationResult.observationDateTime"> </a><b>EventSummary.diagnosticInvestigations.imagingExaminationResult.observationDateTime</b></td></tr>
+  <tr><td>Definition</td><td><p>Date, and optionally time, when an observation is clinically significant to the condition of the subject of the observation.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#dateTime">dateTime</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.requestedService"> </a><b>EventSummary.diagnosticInvestigations.requestedService</b></td></tr>
+  <tr><td>Definition</td><td><p>A request for a diagnostic investigation of the subject of care.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.requestedService.description"> </a><b>EventSummary.diagnosticInvestigations.requestedService.description</b></td></tr>
+  <tr><td>Definition</td><td><p>Describes the service arranged for, or provided to, the subject of care.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td><a href="../terminologies.html#unbound">RequestedServiceDescriptionValues</a>: The set of values for the service arranged for, or provided to, the patient.</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.requestedService.dateTimeServiceScheduled"> </a><b>EventSummary.diagnosticInvestigations.requestedService.dateTimeServiceScheduled</b></td></tr>
+  <tr><td>Definition</td><td><p>The date and, optionally, time at which the arranged service is scheduled to be provided to the subject of care.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#dateTime">dateTime</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.requestedService.commencementWindow"> </a><b>EventSummary.diagnosticInvestigations.requestedService.commencementWindow</b></td></tr>
+  <tr><td>Definition</td><td><p>The datetime or date range at or during which the arranged service is scheduled to be provided to the subject of care.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#Period">Period</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.requestedService.bookingStatus"> </a><b>EventSummary.diagnosticInvestigations.requestedService.bookingStatus</b></td></tr>
+  <tr><td>Definition</td><td><p>An indication of the booking status of the arranged service.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td>ServiceBookingStatusValues: <a href="../nehta/valueset-nehta-service-booking-status-values.html">The set of values that indicate the booking status of the arranged service.</a> (<a href="../terminologies.html#required">Required</a>)</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.requestedService.subjectofCareInstructionDescription"> </a><b>EventSummary.diagnosticInvestigations.requestedService.subjectofCareInstructionDescription</b></td></tr>
+  <tr><td>Definition</td><td><p>Describes the instructions, advice or information that has been given to the subject of care from a healthcare provider in relation to the requested service.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.requestedService.provider"> </a><b>EventSummary.diagnosticInvestigations.requestedService.provider</b></td></tr>
+  <tr><td>Definition</td><td><p>The provider (individual or organisation) that has been arranged to provide the service.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../references.html#Reference">Reference</a>(<a href="../patient.html">Patient</a> | <a href="../practitioner.html">Practitioner</a> | <a href="../device.html">Device</a> | <a href="../organization.html">Organization</a> | <a href="../relatedperson.html">RelatedPerson</a>)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="EventSummary.diagnosticInvestigations.requestedService.dateTime"> </a><b>EventSummary.diagnosticInvestigations.requestedService.dateTime</b></td></tr>
+  <tr><td>Definition</td><td><p>The point in time at which the Requested Service action is completed.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#dateTime">dateTime</a></td></tr>
+</table>
+
+
+
+</div>
+
+
+				</div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+        
+    </div>  <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">  <!-- segment-footer -->
+		<div class="container">  <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.4.0-8453) generated on Mon, Jun 6, 2016 20:16+0000. <a href="../qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img src="external.png" style="text-align: baseline"/></a> | 
+               <a style="color: #81BEF7" href="../history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="../toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fnehta-event-summary-definitions.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fnehta-event-summary-definitions.html">Compare to DSTU2 <img src="external.png" style="text-align: baseline"/></a> |                
+               <a rel="license" style="color: #81BEF7" href="../license.html"><img src="../cc0.png" alt="CC0" style="border-style: none;"/></a> | 
+               <a style="color: #81BEF7" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank">Propose a change <img src="external.png" style="text-align: baseline"/></a>   
+        </span>
+        </p>
+			</div>  <!-- /inner-wrapper -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+    
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src=".././assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src=".././dist/js/bootstrap.min.js"> </script>
+<script src=".././assets/js/respond.min.js"> </script>
+
+<script src=".././assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

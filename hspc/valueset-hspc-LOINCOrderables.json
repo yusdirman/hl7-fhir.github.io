@@ -1,0 +1,63 @@
+{
+  "resourceType": "ValueSet",
+  "id": "hspc-LOINCOrderables",
+  "meta": {
+    "lastUpdated": "2016-06-06T20:14:04.181+00:00",
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>HSPC LOINC Orderable Codes</h2><p>LOINC codes that are marked as 'orderable' or 'both'.</p><p><b>Copyright Statement:</b> This content LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use</p><p>This value set includes codes from the following code systems:</p><ul><li>Include codes from http://loinc.org where ORDER_OBS  =  Both</li><li>Include codes from http://loinc.org where ORDER_OBS  =  Order</li></ul></div>"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/valueset-oid",
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.747"
+    }
+  ],
+  "url": "http://hl7.org/fhir/ValueSet/hspc-LOINCOrderables",
+  "version": "1.4.0",
+  "name": "HSPC LOINC Orderable Codes",
+  "status": "draft",
+  "experimental": true,
+  "publisher": "HSPC",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "other",
+          "value": "http://healthcaresoa.org"
+        }
+      ]
+    }
+  ],
+  "date": "2015-10-15",
+  "description": "LOINC codes that are marked as 'orderable' or 'both'.",
+  "copyright": "This content LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use",
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "filter": [
+          {
+            "property": "ORDER_OBS",
+            "op": "=",
+            "value": "Both"
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "filter": [
+          {
+            "property": "ORDER_OBS",
+            "op": "=",
+            "value": "Order"
+          }
+        ]
+      }
+    ]
+  }
+}

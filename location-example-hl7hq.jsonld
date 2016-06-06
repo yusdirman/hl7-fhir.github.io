@@ -1,0 +1,110 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Location",
+  "resourceType": "Location",
+  "Resource.id": {
+    "value": "hl7"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      Health Level Seven International<br/>\n\t\t\t\t3300 Washtenaw Avenue, Suite 227<br/>\n\t\t\t\tAnn Arbor, MI 48104<br/>\n\t\t\t\tUSA<br/>\n\t\t\t\t(+1) 734-677-7777 (phone)<br/>\n\t\t\t\t(+1) 734-677-6622 (fax)<br/>\n\t\t\t\tE-mail:  <a href=\"mailto:hq@HL7.org\">hq@HL7.org</a>\n    </div>"
+    }
+  },
+  "Location.status": {
+    "value": "active"
+  },
+  "Location.name": {
+    "value": "Health Level Seven International"
+  },
+  "Location.description": {
+    "value": "HL7 Headquarters"
+  },
+  "Location.mode": {
+    "value": "instance"
+  },
+  "Location.type": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/v3/RoleCode"
+        },
+        "Coding.code": {
+          "value": "SLEEP"
+        },
+        "Coding.display": {
+          "value": "Sleep disorders unit"
+        }
+      }
+    ]
+  },
+  "Location.telecom": [
+    {
+      "ContactPoint.system": {
+        "value": "phone"
+      },
+      "ContactPoint.value": {
+        "value": "(+1) 734-677-7777"
+      }
+    },
+    {
+      "ContactPoint.system": {
+        "value": "fax"
+      },
+      "ContactPoint.value": {
+        "value": "(+1) 734-677-6622"
+      }
+    },
+    {
+      "ContactPoint.system": {
+        "value": "email"
+      },
+      "ContactPoint.value": {
+        "value": "hq@HL7.org"
+      }
+    }
+  ],
+  "Location.address": {
+    "Address.line": [
+      {
+        "value": "3300 Washtenaw Avenue, Suite 227"
+      }
+    ],
+    "Address.city": {
+      "value": "Ann Arbor"
+    },
+    "Address.state": {
+      "value": "MI"
+    },
+    "Address.postalCode": {
+      "value": "48104"
+    },
+    "Address.country": {
+      "value": "USA"
+    }
+  },
+  "Location.physicalType": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/location-physical-type"
+        },
+        "Coding.code": {
+          "value": "bu"
+        },
+        "Coding.display": {
+          "value": "Building"
+        }
+      }
+    ]
+  },
+  "Location.position": {
+    "Location.position.longitude": {
+      "value": 42.256500
+    },
+    "Location.position.latitude": {
+      "value": -83.694710
+    }
+  }
+}

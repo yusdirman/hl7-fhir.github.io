@@ -1,0 +1,190 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "II",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+      "valueUri": "urn:hl7-org:v3"
+    }
+  ],
+  "url": "http://hl7.org/fhir/StructureDefinition/II",
+  "name": "V3 Data type II (InstanceIdentifier)",
+  "display": "V3 Data type II (InstanceIdentifier)",
+  "status": "active",
+  "experimental": false,
+  "publisher": "HL7",
+  "description": "An identifier that uniquely identifies a thing or object. Examples are object identifier for HL7 RIM objects, medical record number, order id, service catalog item id, Vehicle Identification Number (VIN), etc. Instance identifiers are defined based on ISO object identifiers.",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/ANY",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "path": "II",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "II.nullFlavor",
+        "representation": [
+          "xmlAttr"
+        ],
+        "label": "Exceptional Value Detail",
+        "definition": "If a value is an exceptional value (NULL-value), this specifies in what way and why proper information is missing.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/v3-NullFlavor"
+          }
+        }
+      },
+      {
+        "path": "II.root",
+        "representation": [
+          "xmlAttr"
+        ],
+        "label": "Root",
+        "definition": "A unique identifier that guarantees the global uniqueness of the instance identifier. The root alone may be the entire instance identifier.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "II.extension",
+        "representation": [
+          "xmlAttr"
+        ],
+        "label": "Extension",
+        "definition": "A character string as a unique identifier within the scope of the identifier root.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "II.assigningAuthorityName",
+        "representation": [
+          "xmlAttr"
+        ],
+        "label": "Assigning Authority Name",
+        "definition": "A human readable name or mnemonic for the assigning authority. The Assigning Authority Name has no computational value. The purpose of a Assigning Authority Name is to assist an unaided human interpreter of an II value to interpret the authority. Note: no automated processing must depend on the assigning authority name to be present in any form.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "II.displayable",
+        "representation": [
+          "xmlAttr"
+        ],
+        "label": "Displayable",
+        "definition": "Specifies if the identifier is intended for human display and data entry (displayable = true) as opposed to pure machine interoperation (displayable = false).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "path": "II",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "II.root",
+        "representation": [
+          "xmlAttr"
+        ],
+        "label": "Root",
+        "definition": "A unique identifier that guarantees the global uniqueness of the instance identifier. The root alone may be the entire instance identifier.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "II.extension",
+        "representation": [
+          "xmlAttr"
+        ],
+        "label": "Extension",
+        "definition": "A character string as a unique identifier within the scope of the identifier root.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "II.assigningAuthorityName",
+        "representation": [
+          "xmlAttr"
+        ],
+        "label": "Assigning Authority Name",
+        "definition": "A human readable name or mnemonic for the assigning authority. The Assigning Authority Name has no computational value. The purpose of a Assigning Authority Name is to assist an unaided human interpreter of an II value to interpret the authority. Note: no automated processing must depend on the assigning authority name to be present in any form.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "II.displayable",
+        "representation": [
+          "xmlAttr"
+        ],
+        "label": "Displayable",
+        "definition": "Specifies if the identifier is intended for human display and data entry (displayable = true) as opposed to pure machine interoperation (displayable = false).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      }
+    ]
+  }
+}

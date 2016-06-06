@@ -1,0 +1,154 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Observation",
+  "resourceType": "Observation",
+  "Resource.id": {
+    "value": "obs-uslab-example1"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: obs-uslab-example1</p><p><b>identifier</b>: lab test result ID = 1234 (OFFICIAL)</p><p><b>status</b>: final</p><p><b>code</b>: Capillary Blood Lead Screen <span>(Details : {LOINC code '10368-9' = 'Lead [Mass/volume] in Capillary blood', given as 'Lead [Mass/​volume] in Capillary blood'}; {urn:oid:2.16.840.1.113883.3.72.5.24 code 'CAPLD' = '??', given as 'Blood Lead, Capillary'})</span></p><p><b>subject</b>: <a>Todd Lerr</a></p><p><b>effective</b>: Dec 3, 2014</p><p><b>issued</b>: Dec 4, 2014 3:42:15 PM</p><p><b>performer</b>: <a>Dr Leonard T Bloodraw Jr</a></p><p><b>value</b>: 65 microgram per deciliter<span> (Details: http://unitsofmeasure.org code ug/dL = 'ug/dL')</span></p><p><b>interpretation</b>: High <span>(Details : {http://hl7.org/fhir/v2/0078 code 'H' = 'High)</span></p><p><b>specimen</b>: <a>Blood sample</a></p><h3>ReferenceRanges</h3><table><tr><td>-</td><td><b>High</b></td></tr><tr><td>*</td><td>5.0 microgram per deciliter<span> (Details: http://unitsofmeasure.org code ug/dL = 'ug/dL')</span></td></tr></table></div>"
+    }
+  },
+  "DomainResource.extension": [
+    {
+      "Extension.url": {
+        "value": "http://hl7.org/fhir/StructureDefinition/uslab-observationkind"
+      },
+      "Extension.valueCode": {
+        "value": "result"
+      }
+    }
+  ],
+  "Observation.identifier": [
+    {
+      "Identifier.use": {
+        "value": "official"
+      },
+      "Identifier.type": {
+        "CodeableConcept.text": {
+          "value": "lab test result ID"
+        }
+      },
+      "Identifier.system": {
+        "value": "http://lis.acmelabs.org/identifiers/labtestresult"
+      },
+      "Identifier.value": {
+        "value": "1234"
+      }
+    }
+  ],
+  "Observation.status": {
+    "value": "final"
+  },
+  "Observation.code": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://loinc.org"
+        },
+        "Coding.code": {
+          "value": "10368-9"
+        },
+        "Coding.display": {
+          "value": "Lead [Mass/​volume] in Capillary blood"
+        }
+      },
+      {
+        "Coding.system": {
+          "value": "urn:oid:2.16.840.1.113883.3.72.5.24"
+        },
+        "Coding.code": {
+          "value": "CAPLD"
+        },
+        "Coding.display": {
+          "value": "Blood Lead, Capillary"
+        }
+      }
+    ],
+    "CodeableConcept.text": {
+      "value": "Capillary Blood Lead Screen"
+    },
+    "concept": "http://loinc.org/owl#10368-9"
+  },
+  "Observation.subject": {
+    "Reference.reference": {
+      "value": "Patient/patient-uslab-example1"
+    },
+    "Reference.display": {
+      "value": "Todd Lerr"
+    },
+    "reference": "http://hl7.org/fhir//Patient/patient-uslab-example1"
+  },
+  "Observation.effectiveDateTime": {
+    "value": "2014-12-03"
+  },
+  "Observation.issued": {
+    "value": "2014-12-04T15:42:15-08:00"
+  },
+  "Observation.performer": [
+    {
+      "Reference.reference": {
+        "value": "Practitioner/pract-uslab-example1"
+      },
+      "Reference.display": {
+        "value": "Dr Leonard T Bloodraw Jr"
+      }
+    }
+  ],
+  "Observation.valueQuantity": {
+    "Quantity.value": {
+      "value": 65
+    },
+    "Quantity.unit": {
+      "value": "microgram per deciliter"
+    },
+    "Quantity.system": {
+      "value": "http://unitsofmeasure.org"
+    },
+    "Quantity.code": {
+      "value": "ug/dL"
+    }
+  },
+  "Observation.interpretation": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/v2/0078"
+        },
+        "Coding.code": {
+          "value": "H"
+        }
+      }
+    ]
+  },
+  "Observation.specimen": {
+    "Reference.reference": {
+      "value": "Specimen/spec-uslab-example1"
+    },
+    "Reference.display": {
+      "value": "Blood sample"
+    },
+    "reference": "http://hl7.org/fhir//Specimen/spec-uslab-example1"
+  },
+  "Observation.referenceRange": [
+    {
+      "Observation.referenceRange.high": {
+        "Quantity.value": {
+          "value": 5.0
+        },
+        "Quantity.unit": {
+          "value": "microgram per deciliter"
+        },
+        "Quantity.system": {
+          "value": "http://unitsofmeasure.org"
+        },
+        "Quantity.code": {
+          "value": "ug/dL"
+        }
+      }
+    }
+  ]
+}

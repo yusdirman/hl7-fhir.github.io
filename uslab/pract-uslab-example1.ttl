@@ -1,0 +1,46 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Practitionerpract-uslab-example1> a fhir:Practitioner;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "pract-uslab-example1"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: pract-uslab-example1</p><p><b>identifier</b>: 4444444445 (OFFICIAL)</p><p><b>name</b>: Leanard T Bloodraw </p><p><b>telecom</b>: ph: (555)7771234 ext.11</p></div>"
+  ];
+  fhir:Practitioner.identifier [
+     fhir:index 0;
+     fhir:Identifier.use [ fhir:value "official" ];
+     fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/sid/us-npi" ];
+     fhir:Identifier.value [ fhir:value "4444444445" ]
+  ];
+  fhir:Practitioner.name [
+     fhir:index 0;
+     fhir:HumanName.family [
+       fhir:value "Bloodraw";
+       fhir:index 0
+     ];
+     fhir:HumanName.given [
+       fhir:value "Leanard";
+       fhir:index 0
+     ], [
+       fhir:value "T";
+       fhir:index 1
+     ];
+     fhir:HumanName.suffix [
+       fhir:value "Jr";
+       fhir:index 0
+     ]
+  ];
+  fhir:Practitioner.telecom [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value "phone" ];
+     fhir:ContactPoint.value [ fhir:value "(555)7771234 ext.11" ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

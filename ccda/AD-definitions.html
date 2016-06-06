@@ -1,0 +1,282 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>AD - FHIR v1.4.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link rel="stylesheet" href="../fhir.css"/>
+  <link rel="Prev" href="http://hl7.org/fhir/AD.html"/>
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href=".././dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href=".././assets/css/bootstrap-fhir.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href=".././assets/css/project.css"/>
+  <link rel="stylesheet" href=".././assets/css/pygments-manni.css"/>
+	<link rel="stylesheet" href="../jquery-ui.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src=".././assets/js/html5shiv.js"></script>
+  <script src=".././assets/js/respond.min.js"></script>
+  <![endif] -->
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href=".././assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href=".././assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href=".././assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href=".././assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href=".././assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment">  <!-- segment-header -->	
+		<div class="container">  <!-- container -->
+			<a no-external="true" id="logo" href="http://hl7.org/fhir"><img src=".././assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a no-external="true" id="hl7-logo" href="http://www.hl7.org">
+					<img src=".././assets/images/hl7-logo.png" width="42" alt="visit the hl7 website" height="50"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a no-external="true" id="hl7-logo" href="http://hl7.org/fhir/search.cfm"><img src="./assets/images/search.png" alt="Search FHIR"/></a></div> 
+		</div>
+		<div class="container">  <!-- container -->
+	</div></div>  <!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+ 	      		
+ 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="../index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../documentation.html">Documentation</a></li>
+              <li><a href="../implementation.html">Implementation</a></li>
+              <li><a href="../resourcelist.html">Resources</a></li>
+              <li><a href="../clinical.html">Clinical</a></li>
+              <li><a href="../administration.html">Administrative</a></li>
+              <li><a href="../infrastructure.html">Infrastructure</a></li>
+              <li><a href="../financial.html">Financial</a></li>
+
+						</ul>
+					</div>  <!-- /.nav-collapse -->
+				</div>  <!-- /.container -->
+			</nav>  <!-- /.navbar -->
+      		
+				
+  <!-- /HEADER CONTENT -->				
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+		<div class="container">  <!-- container -->	
+			<ul class="breadcrumb">
+          <!-- AD / logical-model / AD -->
+        <li title="C-CDA on FHIR"><a href="ccda.html"><b>CCDA</b></a></li>
+        <li title="Work in Progress yet"><b>unsorted</b></li>
+
+			</ul>	
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment">  <!-- segment-content -->
+	<div class="container">  <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<ul class="nav nav-tabs"><li><a href="AD.html">Content</a></li><li class="active"><a href="#">Detailed Descriptions</a></li><li><a href="AD-mappings.html">Mappings</a></li><li><a href="AD.xml.html">XML</a></li><li><a href="AD.json.html">JSON</a></li></ul>
+
+<h2><span class="sectioncount">??.??.3<a name="??.??.3"> </a></span> Resource AD - Detailed Descriptions <a href="AD-definitions.html#??.??.3" title="link to here" class="self-link"><img src="target.png"/></a></h2>
+
+<p>Detailed Descriptions for the elements in the AD resource.</p>
+
+<table class="dict">
+  <tr><td colspan="2" class="structure"><a name="AD.AD"> </a><b>AD</b></td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../element.html#Element">Element</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="AD.AD.nullFlavor"> </a><b>AD.nullFlavor</b></td></tr>
+  <tr><td>Definition</td><td><p>If a value is an exceptional value (NULL-value), this specifies in what way and why proper information is missing.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td>null<br/>The codes SHALL be taken from <a href="../v3/NullFlavor/vs.html">v3 Code System NullFlavor</a></td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#code">code</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="AD.AD.delimiter"> </a><b>AD.delimiter</b></td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../st.html#ST">ST</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="AD.AD.country"> </a><b>AD.country</b></td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../st.html#ST">ST</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="AD.AD.state"> </a><b>AD.state</b></td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../st.html#ST">ST</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="AD.AD.county"> </a><b>AD.county</b></td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../st.html#ST">ST</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="AD.AD.city"> </a><b>AD.city</b></td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../st.html#ST">ST</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="AD.AD.postalCode"> </a><b>AD.postalCode</b></td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../st.html#ST">ST</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="AD.AD.streetAddressLine"> </a><b>AD.streetAddressLine</b></td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../st.html#ST">ST</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="AD.AD.houseNumber"> </a><b>AD.houseNumber</b></td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../st.html#ST">ST</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="AD.AD.houseNumberNumeric"> </a><b>AD.houseNumberNumeric</b></td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../st.html#ST">ST</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="AD.AD.direction"> </a><b>AD.direction</b></td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../st.html#ST">ST</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="AD.AD.streetName"> </a><b>AD.streetName</b></td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../st.html#ST">ST</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="AD.AD.streetNameBase"> </a><b>AD.streetNameBase</b></td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../st.html#ST">ST</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="AD.AD.streetNameType"> </a><b>AD.streetNameType</b></td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../st.html#ST">ST</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="AD.AD.additionalLocator"> </a><b>AD.additionalLocator</b></td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../st.html#ST">ST</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="AD.AD.unitID"> </a><b>AD.unitID</b></td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../st.html#ST">ST</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="AD.AD.unitType"> </a><b>AD.unitType</b></td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../st.html#ST">ST</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="AD.AD.careOf"> </a><b>AD.careOf</b></td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../st.html#ST">ST</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="AD.AD.censusTract"> </a><b>AD.censusTract</b></td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../st.html#ST">ST</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="AD.AD.deliveryAddressLine"> </a><b>AD.deliveryAddressLine</b></td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../st.html#ST">ST</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="AD.AD.deliveryInstallationType"> </a><b>AD.deliveryInstallationType</b></td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../st.html#ST">ST</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="AD.AD.deliveryInstallationArea"> </a><b>AD.deliveryInstallationArea</b></td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../st.html#ST">ST</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="AD.AD.deliveryInstallationQualifier"> </a><b>AD.deliveryInstallationQualifier</b></td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../st.html#ST">ST</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="AD.AD.deliveryMode"> </a><b>AD.deliveryMode</b></td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../st.html#ST">ST</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="AD.AD.deliveryModeIdentifier"> </a><b>AD.deliveryModeIdentifier</b></td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../st.html#ST">ST</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="AD.AD.buildingNumberSuffix"> </a><b>AD.buildingNumberSuffix</b></td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../st.html#ST">ST</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="AD.AD.postBox"> </a><b>AD.postBox</b></td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../st.html#ST">ST</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="AD.AD.precinct"> </a><b>AD.precinct</b></td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../st.html#ST">ST</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="AD.AD.other"> </a><b>AD.other</b></td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="AD.AD.use"> </a><b>AD.use</b></td></tr>
+  <tr><td>Definition</td><td><p>A set of codes advising a system or user which address in a set of like addresses to select for a given purpose.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#code">code</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="AD.AD.useablePeriod"> </a><b>AD.useablePeriod</b></td></tr>
+  <tr><td>Definition</td><td><p>A General Timing Specification (GTS) specifying the periods of time during which the address can be used. This is used to specify different addresses for different times of the week or year.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td>Choice of: <a href="../ivl_ts.html#IVL_TS">IVL_TS</a>, <a href="../eivl_ts.html#EIVL_TS">EIVL_TS</a>, <a href="../pivl_ts.html#PIVL_TS">PIVL_TS</a>, <a href="../sxpr_ts.html#SXPR_TS">SXPR_TS</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="AD.AD.isNotOrdered"> </a><b>AD.isNotOrdered</b></td></tr>
+  <tr><td>Definition</td><td><p>A boolean value specifying whether the order of the address parts is known or not. While the address parts are always a Sequence, the order in which they are presented may or may not be known. Where this matters, the isNotOrdered property can be used to convey this information.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#boolean">boolean</a></td></tr>
+</table>
+
+
+</div>
+
+
+				</div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+        
+    </div>  <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">  <!-- segment-footer -->
+		<div class="container">  <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.4.0-8453) generated on Mon, Jun 6, 2016 20:14+0000. <a href="../qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img src="external.png" style="text-align: baseline"/></a> | 
+               <a style="color: #81BEF7" href="../history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="../toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2FAD.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2FAD.html">Compare to DSTU2 <img src="external.png" style="text-align: baseline"/></a> |                
+               <a rel="license" style="color: #81BEF7" href="../license.html"><img src="../cc0.png" alt="CC0" style="border-style: none;"/></a> | 
+               <a style="color: #81BEF7" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank">Propose a change <img src="external.png" style="text-align: baseline"/></a>   
+        </span>
+        </p>
+			</div>  <!-- /inner-wrapper -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+    
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src=".././assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src=".././dist/js/bootstrap.min.js"> </script>
+<script src=".././assets/js/respond.min.js"> </script>
+
+<script src=".././assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

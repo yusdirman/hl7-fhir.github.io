@@ -1,0 +1,55 @@
+{
+  "resourceType": "Measure",
+  "id": "measure-cdc",
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      Cohort definition for Comprehensive Diabetes Care.\n    </div>"
+  },
+  "moduleMetadata": {
+    "identifier": [
+      {
+        "use": "official",
+        "system": "http://hl7.org/fhir/cqi/ecqm/Measure/Identifier/payer-extract",
+        "value": "CDC"
+      }
+    ],
+    "version": "1.0.0",
+    "title": "Comprehensive Diabetes Care Cohort Definition",
+    "type": "module",
+    "status": "active",
+    "experimental": true,
+    "description": "Comprehensive Diabetes Care Cohort Definition",
+    "topic": [
+      {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/c80-doc-typecodes",
+            "code": "57024-2"
+          }
+        ]
+      }
+    ]
+  },
+  "library": [
+    {
+      "reference": "Library/library-cdc"
+    }
+  ],
+  "scoring": "cohort",
+  "group": [
+    {
+      "identifier": {
+        "value": "CDC-cohort"
+      },
+      "population": [
+        {
+          "type": "initial-population",
+          "identifier": {
+            "value": "initial-population-identifier"
+          },
+          "criteria": "CDC.\"In Demographic\""
+        }
+      ]
+    }
+  ]
+}

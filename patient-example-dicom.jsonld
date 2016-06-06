@@ -1,0 +1,102 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Patient",
+  "resourceType": "Patient",
+  "Resource.id": {
+    "value": "dicom"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"> Patient MINT_TEST, ID = MINT1234. Age = 56y, Size =\n      1.83m, Weight = 72.58kg </div>"
+    }
+  },
+  "DomainResource.extension": [
+    {
+      "Extension.url": {
+        "value": "http://nema.org/fhir/extensions#0010:1010"
+      },
+      "Extension.valueQuantity": {
+        "Quantity.value": {
+          "value": 56
+        },
+        "Quantity.unit": {
+          "value": "Y"
+        }
+      }
+    },
+    {
+      "Extension.url": {
+        "value": "http://nema.org/fhir/extensions#0010:1020"
+      },
+      "Extension.valueQuantity": {
+        "Quantity.value": {
+          "value": 1.83
+        },
+        "Quantity.unit": {
+          "value": "m"
+        }
+      }
+    },
+    {
+      "Extension.url": {
+        "value": "http://nema.org/fhir/extensions#0010:1030"
+      },
+      "Extension.valueQuantity": {
+        "Quantity.value": {
+          "value": 72.58
+        },
+        "Quantity.unit": {
+          "value": "kg"
+        }
+      }
+    }
+  ],
+  "Patient.identifier": [
+    {
+      "Identifier.system": {
+        "value": "http://nema.org/examples/patients"
+      },
+      "Identifier.value": {
+        "value": "MINT1234"
+      }
+    }
+  ],
+  "Patient.active": {
+    "value": true
+  },
+  "Patient.name": [
+    {
+      "HumanName.family": [
+        {
+          "value": "MINT_TEST"
+        }
+      ]
+    }
+  ],
+  "Patient.gender": {
+    "value": "male",
+    "string.extension": [
+      {
+        "Extension.url": {
+          "value": "http://nema.org/examples/extensions#gender"
+        },
+        "Extension.valueCoding": {
+          "Coding.system": {
+            "value": "http://nema.org/examples/gender"
+          },
+          "Coding.code": {
+            "value": "M"
+          }
+        }
+      }
+    ]
+  },
+  "Patient.managingOrganization": {
+    "Reference.reference": {
+      "value": "Organization/1"
+    },
+    "reference": "http://hl7.org/fhir//Organization/1"
+  }
+}

@@ -1,0 +1,2353 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "EventSummary",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">to do</div>"
+  },
+  "url": "http://hl7.org/fhir/StructureDefinition/EventSummary",
+  "name": "EventSummary",
+  "display": "nehta-event-summary",
+  "status": "draft",
+  "publisher": "Health Level Seven International fhir",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "other",
+          "value": "http://hl7.org/fhir"
+        }
+      ]
+    }
+  ],
+  "date": "2016-06-06T20:14:04+00:00",
+  "description": "Logical Model: A record, reported by a clinician, of one significant health care event involving the subject of care.",
+  "fhirVersion": "1.4.0",
+  "kind": "logical",
+  "abstract": false,
+  "snapshot": {
+    "element": [
+      {
+        "path": "EventSummary",
+        "short": "Event Summary",
+        "definition": "A record, reported by a clinician, of one significant health care event involving the subject of care.",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "path": "EventSummary.subjectofCare",
+        "short": "Subject of Care",
+        "definition": "Person who receives healthcare services.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.documentAuthor",
+        "short": "Document Author",
+        "definition": "Composer of the document.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
+          },
+          {
+            "code": "Reference",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/Practitioner"
+            ]
+          },
+          {
+            "code": "Reference",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
+            ]
+          },
+          {
+            "code": "Reference",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/Device"
+            ]
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.encounter",
+        "short": "Encounter",
+        "definition": "Encounter between a subject of care and a health system.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.encounter.dateTimeHealthEventStarted",
+        "short": "DateTime Health Event Started",
+        "definition": "The date or date and time that the health event to which the Event Summary document relates was started.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.encounter.dateTimeHealthEventEnded",
+        "short": "DateTime Health Event Ended",
+        "definition": "The date or date and time that the health event to which the Event Summary document relates was completed.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.documentType",
+        "short": "Document Type",
+        "definition": "Type of document.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.dateTimeAttested",
+        "short": "DateTime Attested",
+        "definition": "The date and time that the document author or document authoriser or approver confirms that a document is complete and genuine.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.eventOverview",
+        "short": "Event Overview",
+        "definition": "Summary information concerning the event.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.eventOverview.clinicalSynopsis",
+        "short": "Clinical Synopsis",
+        "definition": "Summary information or comments about the clinical management of the patient, and the prognosis of diagnoses or problems identified during the healthcare encounter. It may also include health-related information pertinent to the patient, and a clinical interpretation of relevant investigations and observations performed on the patient (including pathology and diagnostic imaging).",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.eventOverview.clinicalSynopsis.description",
+        "short": "Clinical Synopsis Description",
+        "definition": "Short description, overview or summary of a clinical event and its reasons.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.adverseReactions",
+        "short": "Adverse Reactions",
+        "definition": "Information about adverse reactions of the patient (including allergies and intolerances), and any relevant reaction details. This includes statements about adverse reactions that need to be positively recorded as absent or excluded.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.adverseReactions.adverseReaction",
+        "short": "Adverse Reaction",
+        "definition": "A harmful or undesirable effect associated with exposure to any substance or agent.",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.adverseReactions.adverseReaction.substanceAgent",
+        "short": "Substance/Agent",
+        "definition": "Identification of a substance, agent, or a class of substance, that is considered to be responsible for the adverse reaction.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "preferred",
+          "description": "The set of values for the agent or substance causing the adverse reaction experienced by the subject of care.",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/nehta-nehta-SubstanceAgentValues"
+          }
+        }
+      },
+      {
+        "path": "EventSummary.adverseReactions.adverseReaction.event",
+        "short": "Reaction Event",
+        "definition": "Details about each adverse reaction event.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.adverseReactions.adverseReaction.event.manifestation",
+        "short": "Manifestation",
+        "definition": "Presentation or exhibition of signs and symptoms of the adverse reaction expressed as a single word, phrase or brief description.",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "preferred",
+          "description": "The set of values for recording clinical manifestation of an adverse reaction.",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/nehta-nehta-ClinicalManifestationValues"
+          }
+        }
+      },
+      {
+        "path": "EventSummary.adverseReactions.adverseReaction.event.reactionType",
+        "short": "Reaction Type",
+        "definition": "The type of reaction, as determined by the clinician.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "example",
+          "description": "The set of values for the type of adverse reaction."
+        }
+      },
+      {
+        "path": "EventSummary.medicationOrders",
+        "short": "Medication Orders",
+        "definition": "Medicines that the subject of care is using.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.medicationOrders.medicationInstruction",
+        "short": "Medication Instruction",
+        "definition": "Information pertaining to one or more therapeutic goods that is represented to achieve, or is likely to achieve, its principal intended action by pharmacological, chemical, immunological or metabolic means in or on the body of a human.",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.medicationOrders.medicationInstruction.therapeuticGoodIdentification",
+        "short": "Therapeutic Good Identification",
+        "definition": "The medicine, vaccine or other therapeutic good being ordered for, administered to or used by the subject of care.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "preferred",
+          "description": "A set of values used to refer to medicines and other therapeutic goods.",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/nehta-nehta-MedicinesTerminology"
+          }
+        }
+      },
+      {
+        "path": "EventSummary.medicationOrders.medicationInstruction.directions",
+        "short": "Directions",
+        "definition": "A complete narrative description of how much, when and how to use the medicine, vaccine or other therapeutic good.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.medicationOrders.medicationInstruction.clinicalIndication",
+        "short": "Clinical Indication",
+        "definition": "Reason for ordering the medicine, vaccine or other therapeutic good.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.medicationOrders.medicationInstruction.comment",
+        "short": "Medication Instruction Comment",
+        "definition": "Any additional information that may be needed to ensure the continuity of supply, rationale for current dose and timing, or safe and appropriate use.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.medicationOrders.medicationInstruction.changeType",
+        "short": "Change Type",
+        "definition": "The way in which this instruction differs from the previous instruction.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "example",
+          "description": "The set of values for Change Type ."
+        }
+      },
+      {
+        "path": "EventSummary.medicationOrders.medicationInstruction.changeStatus",
+        "short": "Change Status",
+        "definition": "Identifies whether the change has already been made or is a recommendation that has not been made.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "example",
+          "description": "The set of values for Change Status ."
+        }
+      },
+      {
+        "path": "EventSummary.medicationOrders.medicationInstruction.changeDescription",
+        "short": "Change Description",
+        "definition": "Description of the change in the subject of care's medication item information.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.medicationOrders.medicationInstruction.changeorRecommendationReason",
+        "short": "Change or Recommendation Reason",
+        "definition": "The justification for the stated change in medication.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.medicalHistory",
+        "short": "Medical History",
+        "definition": "Information about the subject of care's problems, diagnoses and medical or surgical procedures.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.medicalHistory.problemDiagnosis",
+        "short": "Problem/Diagnosis",
+        "definition": "A health condition that, as determined by a clinician, may have impact on the physical, mental or social well-being of a person. A diagnosis is determined by scientific evaluation of pathological and pathophysiological findings identified from the patient's clinical history, family history, physical examination and diagnostic investigations.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.medicalHistory.problemDiagnosis.identification",
+        "short": "Problem/Diagnosis Identification",
+        "definition": "Identification of the problem or diagnosis.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "example",
+          "description": "The Problem/Diagnosis reference set provides terminology to support the recording of a subject of care problem or diagnosis for medical records within Australia."
+        }
+      },
+      {
+        "path": "EventSummary.medicalHistory.problemDiagnosis.dateofOnset",
+        "short": "Date of Onset",
+        "definition": "Estimated or actual date the problem or diagnosis began, as indicated or identified by the clinician.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.medicalHistory.problemDiagnosis.comment",
+        "short": "Problem/Diagnosis Comment",
+        "definition": "Additional narrative about the problem or diagnosis not captured in other fields.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.medicalHistory.procedure",
+        "short": "Procedure",
+        "definition": "A clinical activity carried out for therapeutic, evaluative, investigative, screening or diagnostic purposes.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.medicalHistory.procedure.name",
+        "short": "Procedure Name",
+        "definition": "The name of the procedure (to be) performed.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "example",
+          "description": "The Procedure foundation reference set provides the broadest possible terminology to support the recording of clinical interventions in Australian eHealth implementations."
+        }
+      },
+      {
+        "path": "EventSummary.medicalHistory.procedure.comment",
+        "short": "Procedure Comment",
+        "definition": "Additional narrative about the procedure not captured in other fields.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.medicalHistory.procedure.dateTime",
+        "short": "Procedure DateTime",
+        "definition": "Date, and optionally time, of the Procedure action.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Period"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.medicalHistory.uncategorisedMedicalHistoryItem",
+        "short": "Uncategorised Medical History Item",
+        "definition": "A medical history entry that has not been categorised as either Procedure or Problem/Diagnosis .",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.medicalHistory.uncategorisedMedicalHistoryItem.description",
+        "short": "Medical History Item Description",
+        "definition": "A description of the problem, diagnosis or procedure as a medical history item.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.medicalHistory.uncategorisedMedicalHistoryItem.timeInterval",
+        "short": "Medical History Item TimeInterval",
+        "definition": "The date range during which the problem or diagnosis applied or the procedure occurred.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Period"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.medicalHistory.uncategorisedMedicalHistoryItem.comment",
+        "short": "Medical History Item Comment",
+        "definition": "Additional narrative about the problem, diagnosis or procedure.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.immunisations",
+        "short": "Immunisations",
+        "definition": "Information about vaccines given to the subject of care.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.immunisations.medicationAction",
+        "short": "Medication Action",
+        "definition": "The act of administering a dose of a vaccine to a person for the purpose of preventing or minimising the effects of a disease by producing immunity or to counter the effects of an infectious organism.",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.immunisations.medicationAction.therapeuticGoodIdentification",
+        "short": "Therapeutic Good Identification",
+        "definition": "The medicine, vaccine or other therapeutic good being ordered for, administered to or used by the subject of care.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "preferred",
+          "description": "A set of values used to refer to medicines and other therapeutic goods.",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/nehta-nehta-MedicinesTerminology"
+          }
+        }
+      },
+      {
+        "path": "EventSummary.immunisations.medicationAction.dateTime",
+        "short": "Medication Action DateTime",
+        "definition": "Date, and optionally time, that the medication action is completed.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations",
+        "short": "Diagnostic Investigations",
+        "definition": "Describes the diagnostic tests or procedures performed on or requested for the subject of care during the healthcare event, that are considered to be relevant to the subject of care’s ongoing care.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult",
+        "short": "Pathology Test Result",
+        "definition": "The result of a laboratory test which may be used to record a single valued test but will often be specialised or templated to represent multiple value or 'panel' tests.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.name",
+        "short": "Pathology Test Result Name",
+        "definition": "Identification of the pathology test performed, sometimes including specimen type.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "example",
+          "description": "Set of values for the names of pathology tests requested or performed."
+        }
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.diagnosticService",
+        "short": "Diagnostic Service",
+        "definition": "The diagnostic service that performs the examination.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "example",
+          "description": "Set of values for the type of diagnostic service."
+        }
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.specimen",
+        "short": "Specimen",
+        "definition": "Details about specimens to which this test result refers.",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.tissueType",
+        "short": "Specimen Tissue Type",
+        "definition": "The type of specimen to be collected.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "example",
+          "description": "The set of values for the categorisation of the sample taken from an individual and submitted for pathology investigation."
+        }
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.collectionProcedure",
+        "short": "Collection Procedure",
+        "definition": "The method of collection to be used.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "example",
+          "description": "The set of values for the method of collection to be used, e.g. venepuncture, biopsy, resection."
+        }
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.anatomicalLocation",
+        "short": "Anatomical Location",
+        "definition": "The anatomical site from where the specimen was taken.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.anatomicalLocation.specificLocation",
+        "short": "Specific Location",
+        "definition": "Specific and identified anatomical location.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.anatomicalLocation.specificLocation.anatomicalLocationName",
+        "short": "Anatomical Location Name",
+        "definition": "The name of the anatomical location.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "example",
+          "description": "The set of values for named anatomical locations."
+        }
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.anatomicalLocation.specificLocation.side",
+        "short": "Side",
+        "definition": "The laterality of the anatomical location.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "example",
+          "description": "The set of values for identifying the laterality of an anatomical location."
+        }
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.anatomicalLocation.description",
+        "short": "Anatomical Location Description",
+        "definition": "Description of the anatomical location.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.anatomicalLocation.image",
+        "short": "Anatomical Location Image",
+        "definition": "An image or images used to identify a location.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "base64Binary"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.physicalPropertiesofanObject",
+        "short": "Physical Properties of an Object",
+        "definition": "Record of physical details, such as weight and dimensions, of a body part, device, lesion or specimen.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.physicalPropertiesofanObject.weight",
+        "short": "Weight",
+        "definition": "Property of a body – commonly, but inadequately, defined as the quantity of matter in it – to which its inertia is ascribed, and expressed as the weight of the body divided by the acceleration due to gravity.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.physicalPropertiesofanObject.dimensions",
+        "short": "Dimensions",
+        "definition": "The dimensions of the object.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.physicalPropertiesofanObject.dimensions.volume",
+        "short": "Volume",
+        "definition": "Size, measure or amount of anything in three dimensions; space occupied by a body or substance measured in cubic units.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.physicalPropertiesofanObject.objectDescription",
+        "short": "Object Description",
+        "definition": "A description of other physical characteristics of the object.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.physicalPropertiesofanObject.image",
+        "short": "Image",
+        "definition": "A picture of the object.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "base64Binary"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.collectionandHandling",
+        "short": "Collection and Handling",
+        "definition": "Collection and handling requirements.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.collectionandHandling.samplingPreconditions",
+        "short": "Sampling Preconditions",
+        "definition": "Any conditions to be met before the sample should be taken.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "example",
+          "description": "The set of values for any conditions to be met before the sample should be taken e.g. fasting, 'full bladder', 'sterile field' or any special instructions on the handling or immediate processing of the sample e.g. centrifuge on receipt."
+        }
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.handlingandProcessing",
+        "short": "Handling and Processing",
+        "definition": "Workflow of specimen processing or handling.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.handlingandProcessing.collectionDateTime",
+        "short": "Collection DateTime",
+        "definition": "The date and time that the collection has been ordered to take place or has taken place.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.handlingandProcessing.collectionSetting",
+        "short": "Collection Setting",
+        "definition": "Identification of the setting at which the specimen was collected from a subject of care.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.handlingandProcessing.dateTimeReceived",
+        "short": "DateTime Received",
+        "definition": "The date and time that the sample was received at the laboratory.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.identifiers",
+        "short": "Identifiers",
+        "definition": "Sample identifications.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.identifiers.specimenIdentifier",
+        "short": "Specimen Identifier",
+        "definition": "Unique identifier of the specimen, normally assigned by the laboratory.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.identifiers.parentSpecimenIdentifier",
+        "short": "Parent Specimen Identifier",
+        "definition": "Unique identifier of the parent specimen where the specimen is split into sub-samples.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.specimen.identifiers.containerIdentifier",
+        "short": "Container Identifier",
+        "definition": "Unique identifier given to the container in which the specimen is transported or processed.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.overallPathologyTestResultStatus",
+        "short": "Overall Pathology Test Result Status",
+        "definition": "The status of the pathology test result as a whole.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "Set of values for the pathology test result status.",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/nehta-pathology-test-result-status-va"
+          }
+        }
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.clinicalInformationProvided",
+        "short": "Clinical Information Provided",
+        "definition": "Description or summary of relevant, prior clinical information that may help in determining the test(s) to be performed, or interpreting the result when compiling or reading the report.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.group",
+        "short": "Pathology Test Result Group",
+        "definition": "A group of results that form all or part of a recognisable pathology test.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.group.name",
+        "short": "Pathology Test Result Group Name",
+        "definition": "The name of a group of pathology test results.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "example",
+          "description": "Set of values for the names of pathology tests requested or performed."
+        }
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.group.individualPathologyTestResult",
+        "short": "Individual Pathology Test Result",
+        "definition": "Specific detailed result of a pathology test, including both the value of the result item, and additional information that may be useful for clinical interpretation.",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.group.individualPathologyTestResult.name",
+        "short": "Individual Pathology Test Result Name",
+        "definition": "The name of an individual pathology test result.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "example",
+          "description": "Set of values for the names of individual pathology tests performed."
+        }
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.group.individualPathologyTestResult.value",
+        "short": "Individual Pathology Test Result Value",
+        "definition": "Value of the result, with reference range information.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.group.individualPathologyTestResult.value.value",
+        "short": "Individual Pathology Test Result Value",
+        "definition": "The actual value of the result.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "example",
+          "description": "Set of values for Pathology Test Result Value ."
+        }
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.group.individualPathologyTestResult.value.referenceRangeDetails",
+        "short": "Reference Range Details",
+        "definition": "One or more reference ranges applicable to the Individual Pathology Test Result Value .",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.group.individualPathologyTestResult.value.referenceRangeDetails.normalStatus",
+        "short": "Normal Status",
+        "definition": "An indication of the degree of diagnostically significant abnormality of the value, based on available clinical information (including but not limited to the reference range).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "example"
+        }
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.group.individualPathologyTestResult.value.referenceRangeDetails.referenceRange",
+        "short": "Reference Range",
+        "definition": "A named range to be associated with any quantity datum.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.group.individualPathologyTestResult.value.referenceRangeDetails.referenceRange.meaning",
+        "short": "Reference Range Meaning",
+        "definition": "Term whose value indicates the meaning of this range.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "example"
+        }
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.group.individualPathologyTestResult.value.referenceRangeDetails.referenceRange.referenceRange",
+        "short": "Reference Range",
+        "definition": "The data range for the associated Reference Range Meaning data element .",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Range"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.group.individualPathologyTestResult.comment",
+        "short": "Individual Pathology Test Result Comment",
+        "definition": "Comments that may include statements about significant, unexpected or unreliable values, or information about the source of the value where this may be relevant to the interpretation of the result.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.group.individualPathologyTestResult.referenceRangeGuidance",
+        "short": "Individual Pathology Test Result Reference Range Guidance",
+        "definition": "Additional advice on the applicability of the reference range.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.group.individualPathologyTestResult.status",
+        "short": "Individual Pathology Test Result Status",
+        "definition": "The status of the result value.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "Set of values for the pathology test result status.",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/nehta-pathology-test-result-status-va"
+          }
+        }
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen",
+        "short": "Specimen",
+        "definition": "Details about the individual specimen to which these result group test results refer, where testing of multiple specimens is required.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.tissueType",
+        "short": "Specimen Tissue Type",
+        "definition": "The type of specimen to be collected.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "example",
+          "description": "The set of values for the categorisation of the sample taken from an individual and submitted for pathology investigation."
+        }
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.collectionProcedure",
+        "short": "Collection Procedure",
+        "definition": "The method of collection to be used.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "example",
+          "description": "The set of values for the method of collection to be used, e.g. venepuncture, biopsy, resection."
+        }
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.anatomicalLocation",
+        "short": "Anatomical Location",
+        "definition": "The anatomical site from where the specimen was taken.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.anatomicalLocation.specificLocation",
+        "short": "Specific Location",
+        "definition": "Specific and identified anatomical location.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.anatomicalLocation.specificLocation.anatomicalLocationName",
+        "short": "Anatomical Location Name",
+        "definition": "The name of the anatomical location.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "example",
+          "description": "The set of values for named anatomical locations."
+        }
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.anatomicalLocation.specificLocation.side",
+        "short": "Side",
+        "definition": "The laterality of the anatomical location.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "example",
+          "description": "The set of values for identifying the laterality of an anatomical location."
+        }
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.anatomicalLocation.description",
+        "short": "Anatomical Location Description",
+        "definition": "Description of the anatomical location.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.anatomicalLocation.image",
+        "short": "Anatomical Location Image",
+        "definition": "An image or images used to identify a location.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "base64Binary"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.physicalPropertiesofanObject",
+        "short": "Physical Properties of an Object",
+        "definition": "Record of physical details, such as weight and dimensions, of a body part, device, lesion or specimen.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.physicalPropertiesofanObject.weight",
+        "short": "Weight",
+        "definition": "Property of a body – commonly, but inadequately, defined as the quantity of matter in it – to which its inertia is ascribed, and expressed as the weight of the body divided by the acceleration due to gravity.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.physicalPropertiesofanObject.dimensions",
+        "short": "Dimensions",
+        "definition": "The dimensions of the object.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.physicalPropertiesofanObject.dimensions.volume",
+        "short": "Volume",
+        "definition": "Size, measure or amount of anything in three dimensions; space occupied by a body or substance measured in cubic units.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.physicalPropertiesofanObject.objectDescription",
+        "short": "Object Description",
+        "definition": "A description of other physical characteristics of the object.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.physicalPropertiesofanObject.image",
+        "short": "Image",
+        "definition": "A picture of the object.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "base64Binary"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.collectionandHandling",
+        "short": "Collection and Handling",
+        "definition": "Collection and handling requirements.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.collectionandHandling.samplingPreconditions",
+        "short": "Sampling Preconditions",
+        "definition": "Any conditions to be met before the sample should be taken.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "example",
+          "description": "The set of values for any conditions to be met before the sample should be taken e.g. fasting, 'full bladder', 'sterile field' or any special instructions on the handling or immediate processing of the sample e.g. centrifuge on receipt."
+        }
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.handlingandProcessing",
+        "short": "Handling and Processing",
+        "definition": "Workflow of specimen processing or handling.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.handlingandProcessing.collectionDateTime",
+        "short": "Collection DateTime",
+        "definition": "The date and time that the collection has been ordered to take place or has taken place.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.handlingandProcessing.collectionSetting",
+        "short": "Collection Setting",
+        "definition": "Identification of the setting at which the specimen was collected from a subject of care.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.handlingandProcessing.dateTimeReceived",
+        "short": "DateTime Received",
+        "definition": "The date and time that the sample was received at the laboratory.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.identifiers",
+        "short": "Identifiers",
+        "definition": "Sample identifications.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.identifiers.specimenIdentifier",
+        "short": "Specimen Identifier",
+        "definition": "Unique identifier of the specimen, normally assigned by the laboratory.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.identifiers.parentSpecimenIdentifier",
+        "short": "Parent Specimen Identifier",
+        "definition": "Unique identifier of the parent specimen where the specimen is split into sub-samples.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.group.specimen.identifiers.containerIdentifier",
+        "short": "Container Identifier",
+        "definition": "Unique identifier given to the container in which the specimen is transported or processed.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.pathologicalDiagnosis",
+        "short": "Pathological Diagnosis",
+        "definition": "Single word, phrase or brief description representing the diagnostic statement as asserted by the reporting pathologist.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "example"
+        }
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.pathologyTestConclusion",
+        "short": "Pathology Test Conclusion",
+        "definition": "Concise and clinically contextualised narrative interpretation of the pathology test results.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.representation",
+        "short": "Test Result Representation",
+        "definition": "Rich text representation of the entire result as issued by the diagnostic service.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "base64Binary"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.testComment",
+        "short": "Test Comment",
+        "definition": "Additional narrative about the test that is not captured in other fields.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.testRequestDetails",
+        "short": "Test Request Details",
+        "definition": "Details concerning a single requested pathology test.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.testRequestDetails.testRequestedName",
+        "short": "Test Requested Name",
+        "definition": "Identification of the pathology test which was requested.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "example",
+          "description": "Set of values for the names of pathology tests requested or performed."
+        }
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.testRequestDetails.laboratoryTestResultIdentifier",
+        "short": "Laboratory Test Result Identifier",
+        "definition": "The identifier given to the laboratory test result of a pathology investigation.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.pathologyTestResult.observationDateTime",
+        "short": "Observation DateTime",
+        "definition": "Date, and optionally time, when an observation is clinically significant to the condition of the subject of the observation.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.imagingExaminationResult",
+        "short": "Imaging Examination Result",
+        "definition": "The result of an imaging examination which may be used to record a single valued test but will often be specialised or templated to represent multiple value or 'panel' tests.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.imagingExaminationResult.name",
+        "short": "Imaging Examination Result Name",
+        "definition": "Identification of the imaging examination or procedure performed, typically including modality and anatomical location (including laterality).",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "example",
+          "description": "A terminology for Examination Result name, potientially pre-coordinated terms specifying both modality and anatomical location. Possible candidate terminologies: LOINC, SNOMED CT or RadLex."
+        }
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.imagingExaminationResult.imagingModality",
+        "short": "Imaging Modality",
+        "definition": "The imaging method used to perform the examination.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "example",
+          "description": "Values of imaging method, e.g. Ultrasound, CT, X-ray."
+        }
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.imagingExaminationResult.anatomicalLocation",
+        "short": "Anatomical Location",
+        "definition": "Details about the anatomical locations to which this examination result refers.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.imagingExaminationResult.anatomicalLocation.specificLocation",
+        "short": "Specific Location",
+        "definition": "Specific and identified anatomical location.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.imagingExaminationResult.anatomicalLocation.specificLocation.anatomicalLocationName",
+        "short": "Anatomical Location Name",
+        "definition": "The name of the anatomical location.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "example",
+          "description": "The set of values for named anatomical locations."
+        }
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.imagingExaminationResult.anatomicalLocation.specificLocation.side",
+        "short": "Side",
+        "definition": "The laterality of the anatomical location.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "example",
+          "description": "The set of values for identifying the laterality of an anatomical location."
+        }
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.imagingExaminationResult.anatomicalLocation.description",
+        "short": "Anatomical Location Description",
+        "definition": "Description of the anatomical location.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.imagingExaminationResult.anatomicalLocation.image",
+        "short": "Anatomical Location Image",
+        "definition": "An image or images used to identify a location.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "base64Binary"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.imagingExaminationResult.status",
+        "short": "Imaging Examination Result Status",
+        "definition": "The status of the examination result as a whole.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "Set of values for the imaging examination result status.",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/nehta-imaging-examination-result-stat"
+          }
+        }
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.imagingExaminationResult.clinicalInformationProvided",
+        "short": "Clinical Information Provided",
+        "definition": "Description of clinical information available at the time of interpretation of results, or a link to the original clinical information provided in the examination request.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.imagingExaminationResult.findings",
+        "short": "Findings",
+        "definition": "Clinical assessment and opinion based on one or more observations and examinations.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.imagingExaminationResult.group",
+        "short": "Imaging Examination Result Group",
+        "definition": "A group of structured results.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.imagingExaminationResult.group.name",
+        "short": "Imaging Examination Result Group Name",
+        "definition": "The name of a group of structured results.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "example",
+          "description": "Results may be grouped by anatomical location or by some other name or code to describe what binds all the results together. If a name or code is used, it is provided by run-time re-naming of the 'Result group' element or may be fixed in a specialised archetype or template. Should be coded with LOINC or SNOMED CT."
+        }
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.imagingExaminationResult.group.individualImagingExaminationResult",
+        "short": "Individual Imaging Examination Result",
+        "definition": "Specific detailed result of an imaging examination, including both the value of the result item and additional information that may be useful for clinical interpretation.",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.imagingExaminationResult.group.individualImagingExaminationResult.name",
+        "short": "Individual Imaging Examination Result Name",
+        "definition": "The name of a specific detailed result.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "example",
+          "description": "A terminology for Examination Result name, potientially pre-coordinated terms specifying both modality and anatomical location. Possible candidate terminologies: LOINC, SNOMED CT or RadLex."
+        }
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.imagingExaminationResult.group.individualImagingExaminationResult.value",
+        "short": "Imaging Examination Result Value",
+        "definition": "Value of the result, with reference range information.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.imagingExaminationResult.group.individualImagingExaminationResult.value.value",
+        "short": "Imaging Examination Result Value",
+        "definition": "The actual value of the result.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "example",
+          "description": "Set of values for Pathology Test Result Value ."
+        }
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.imagingExaminationResult.group.individualImagingExaminationResult.value.referenceRangeDetails",
+        "short": "Reference Range Details",
+        "definition": "One or more reference ranges applicable to the Imaging Examination Result Value .",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.imagingExaminationResult.group.individualImagingExaminationResult.value.referenceRangeDetails.normalStatus",
+        "short": "Normal Status",
+        "definition": "An indication of the degree of diagnostically significant abnormality of the value, based on available clinical information (including but not limited to the reference range).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "example"
+        }
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.imagingExaminationResult.group.individualImagingExaminationResult.value.referenceRangeDetails.referenceRange",
+        "short": "Reference Range",
+        "definition": "A named range to be associated with any quantity datum.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.imagingExaminationResult.group.individualImagingExaminationResult.value.referenceRangeDetails.referenceRange.meaning",
+        "short": "Reference Range Meaning",
+        "definition": "Term whose value indicates the meaning of this range.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "example"
+        }
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.imagingExaminationResult.group.individualImagingExaminationResult.value.referenceRangeDetails.referenceRange.referenceRange",
+        "short": "Reference Range",
+        "definition": "The data range for the associated Reference Range Meaning data element .",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Range"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.imagingExaminationResult.group.individualImagingExaminationResult.resultComment",
+        "short": "Result Comment",
+        "definition": "May include statements about significant, unexpected or unreliable values, or information about the source of the value where this may be relevant to the interpretation of the result.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.imagingExaminationResult.group.anatomicalLocation",
+        "short": "Anatomical Location",
+        "definition": "Details about the individual anatomical location to which these result group examination results refer, where finer-grained representation of Anatomical Location is required.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.imagingExaminationResult.group.anatomicalLocation.specificLocation",
+        "short": "Specific Location",
+        "definition": "Specific and identified anatomical location.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.imagingExaminationResult.group.anatomicalLocation.specificLocation.anatomicalLocationName",
+        "short": "Anatomical Location Name",
+        "definition": "The name of the anatomical location.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "example",
+          "description": "The set of values for named anatomical locations."
+        }
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.imagingExaminationResult.group.anatomicalLocation.specificLocation.side",
+        "short": "Side",
+        "definition": "The laterality of the anatomical location.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "example",
+          "description": "The set of values for identifying the laterality of an anatomical location."
+        }
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.imagingExaminationResult.group.anatomicalLocation.description",
+        "short": "Anatomical Location Description",
+        "definition": "Description of the anatomical location.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.imagingExaminationResult.group.anatomicalLocation.image",
+        "short": "Anatomical Location Image",
+        "definition": "An image or images used to identify a location.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "base64Binary"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.imagingExaminationResult.representation",
+        "short": "Examination Result Representation",
+        "definition": "Rich text representation of the entire result as issued by the diagnostic service.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "base64Binary"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.imagingExaminationResult.examinationRequestDetails",
+        "short": "Examination Request Details",
+        "definition": "Details concerning a single requested examination.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.imagingExaminationResult.examinationRequestDetails.examinationRequestedName",
+        "short": "Examination Requested Name",
+        "definition": "Identification of the imaging examination which was requested.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.imagingExaminationResult.examinationRequestDetails.dICOMStudyIdentifier",
+        "short": "DICOM Study Identifier",
+        "definition": "Unique identifier of this study allocated by the imaging service.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.imagingExaminationResult.examinationRequestDetails.reportIdentifier",
+        "short": "Report Identifier",
+        "definition": "The local identifier given to the imaging examination report.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.imagingExaminationResult.examinationRequestDetails.imageDetails",
+        "short": "Image Details",
+        "definition": "Images referenced or provided to assist clinical understanding of the examination.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.imagingExaminationResult.examinationRequestDetails.imageDetails.imageIdentifier",
+        "short": "Image Identifier",
+        "definition": "Unique identifier of this image allocated by the imaging service.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.imagingExaminationResult.examinationRequestDetails.imageDetails.dICOMSeriesIdentifier",
+        "short": "DICOM Series Identifier",
+        "definition": "Unique identifier of this series allocated by the imaging service.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.imagingExaminationResult.examinationRequestDetails.imageDetails.imageViewName",
+        "short": "Image View Name",
+        "definition": "The name of the imaging view.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "example",
+          "description": "The set of values for the description of the view taken."
+        }
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.imagingExaminationResult.examinationRequestDetails.imageDetails.subjectPosition",
+        "short": "Subject Position",
+        "definition": "Description of the subject of care's position when the imaging examination was performed.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.imagingExaminationResult.examinationRequestDetails.imageDetails.imageDateTime",
+        "short": "Image DateTime",
+        "definition": "Date, and optionally time, the imaging examination was performed.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.imagingExaminationResult.examinationRequestDetails.imageDetails.image",
+        "short": "Image",
+        "definition": "An attached or referenced image of a current view.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "base64Binary"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.imagingExaminationResult.observationDateTime",
+        "short": "Observation DateTime",
+        "definition": "Date, and optionally time, when an observation is clinically significant to the condition of the subject of the observation.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.requestedService",
+        "short": "Requested Service",
+        "definition": "A request for a diagnostic investigation of the subject of care.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.requestedService.description",
+        "short": "Requested Service Description",
+        "definition": "Describes the service arranged for, or provided to, the subject of care.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "example",
+          "description": "The set of values for the service arranged for, or provided to, the patient."
+        }
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.requestedService.dateTimeServiceScheduled",
+        "short": "DateTime Service Scheduled",
+        "definition": "The date and, optionally, time at which the arranged service is scheduled to be provided to the subject of care.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.requestedService.commencementWindow",
+        "short": "Service Commencement Window",
+        "definition": "The datetime or date range at or during which the arranged service is scheduled to be provided to the subject of care.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Period"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.requestedService.bookingStatus",
+        "short": "Service Booking Status",
+        "definition": "An indication of the booking status of the arranged service.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "The set of values that indicate the booking status of the arranged service.",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/nehta-service-booking-status-values"
+          }
+        }
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.requestedService.subjectofCareInstructionDescription",
+        "short": "Subject of Care Instruction Description",
+        "definition": "Describes the instructions, advice or information that has been given to the subject of care from a healthcare provider in relation to the requested service.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.requestedService.provider",
+        "short": "Service Provider",
+        "definition": "The provider (individual or organisation) that has been arranged to provide the service.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
+          },
+          {
+            "code": "Reference",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/Practitioner"
+            ]
+          },
+          {
+            "code": "Reference",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/Device"
+            ]
+          },
+          {
+            "code": "Reference",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/Organization"
+            ]
+          },
+          {
+            "code": "Reference",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
+            ]
+          }
+        ]
+      },
+      {
+        "path": "EventSummary.diagnosticInvestigations.requestedService.dateTime",
+        "short": "Requested Service DateTime",
+        "definition": "The point in time at which the Requested Service action is completed.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      }
+    ]
+  }
+}

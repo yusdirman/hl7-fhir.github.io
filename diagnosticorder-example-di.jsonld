@@ -1,0 +1,86 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/DiagnosticOrder",
+  "resourceType": "DiagnosticOrder",
+  "Resource.id": {
+    "value": "di"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t\t\t<p>Chest CT - ordered May 8, 2013 by Dr. Adam Careful</p>\n\t\t</div>"
+    }
+  },
+  "DiagnosticOrder.status": {
+    "value": "requested"
+  },
+  "DiagnosticOrder.subject": {
+    "Reference.reference": {
+      "value": "Patient/dicom"
+    },
+    "reference": "http://hl7.org/fhir//Patient/dicom"
+  },
+  "DiagnosticOrder.orderer": {
+    "Reference.reference": {
+      "value": "Practitioner/example"
+    },
+    "Reference.display": {
+      "value": "Dr. Adam Careful"
+    },
+    "reference": "http://hl7.org/fhir//Practitioner/example"
+  },
+  "DiagnosticOrder.reason": [
+    {
+      "CodeableConcept.text": {
+        "value": "Check for metastatic disease"
+      }
+    }
+  ],
+  "DiagnosticOrder.event": [
+    {
+      "DiagnosticOrder.event.status": {
+        "value": "requested"
+      },
+      "DiagnosticOrder.event.dateTime": {
+        "value": "2013-05-08T09:33:27+07:00"
+      }
+    }
+  ],
+  "DiagnosticOrder.item": [
+    {
+      "DiagnosticOrder.item.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://loinc.org"
+            },
+            "Coding.code": {
+              "value": "24627-2"
+            }
+          }
+        ],
+        "CodeableConcept.text": {
+          "value": "Chest CT"
+        },
+        "concept": "http://loinc.org/owl#24627-2"
+      },
+      "DiagnosticOrder.item.bodySite": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "value": "51185008"
+            },
+            "Coding.display": {
+              "value": "Thoracic structure"
+            }
+          }
+        ],
+        "concept": "http://snomed.info/sct#51185008"
+      }
+    }
+  ]
+}

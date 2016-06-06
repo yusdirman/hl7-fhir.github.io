@@ -1,0 +1,138 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Condition",
+  "resourceType": "Condition",
+  "Resource.id": {
+    "value": "f203"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f203</p><p><b>patient</b>: <a>Roel</a></p><p><b>encounter</b>: <a>Roel's encounter on March eleventh</a></p><p><b>asserter</b>: <a>Practitioner/f201</a></p><p><b>dateRecorded</b>: Mar 11, 2013</p><p><b>code</b>: Bacterial sepsis <span>(Details : {SNOMED CT code '10001005' = 'Bacterial sepsis (disorder)', given as 'Bacterial sepsis'})</span></p><p><b>category</b>: Problem <span>(Details : {SNOMED CT code '55607006' = 'Problem (finding)', given as 'Problem'}; {http://hl7.org/fhir/condition-category code 'finding' = 'Finding)</span></p><p><b>clinicalStatus</b>: active</p><p><b>verificationStatus</b>: confirmed</p><p><b>severity</b>: Moderate to severe <span>(Details : {SNOMED CT code '371924009' = 'Moderate to severe (qualifier value)', given as 'Moderate to severe'})</span></p><p><b>onset</b>: Mar 8, 2013</p><h3>Evidences</h3><table><tr><td>-</td><td><b>Detail</b></td></tr><tr><td>*</td><td><a>Diagnostic report for Roel's sepsis</a></td></tr></table><p><b>bodySite</b>: Pulmonary vascular structure <span>(Details : {SNOMED CT code '281158006' = 'Pulmonary vascular structure (body structure)', given as 'Pulmonary vascular structure'})</span></p></div>"
+    }
+  },
+  "Condition.patient": {
+    "Reference.reference": {
+      "value": "Patient/f201"
+    },
+    "Reference.display": {
+      "value": "Roel"
+    },
+    "reference": "http://hl7.org/fhir//Patient/f201"
+  },
+  "Condition.encounter": {
+    "Reference.reference": {
+      "value": "Encounter/f203"
+    },
+    "Reference.display": {
+      "value": "Roel's encounter on March eleventh"
+    },
+    "reference": "http://hl7.org/fhir//Encounter/f203"
+  },
+  "Condition.asserter": {
+    "Reference.reference": {
+      "value": "Practitioner/f201"
+    },
+    "reference": "http://hl7.org/fhir//Practitioner/f201"
+  },
+  "Condition.dateRecorded": {
+    "value": "2013-03-11"
+  },
+  "Condition.code": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "value": "10001005"
+        },
+        "Coding.display": {
+          "value": "Bacterial sepsis"
+        }
+      }
+    ],
+    "concept": "http://snomed.info/sct#10001005"
+  },
+  "Condition.category": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "value": "55607006"
+        },
+        "Coding.display": {
+          "value": "Problem"
+        }
+      },
+      {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/condition-category"
+        },
+        "Coding.code": {
+          "value": "finding"
+        }
+      }
+    ],
+    "concept": "http://snomed.info/sct#55607006"
+  },
+  "Condition.clinicalStatus": {
+    "value": "active"
+  },
+  "Condition.verificationStatus": {
+    "value": "confirmed"
+  },
+  "Condition.severity": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "value": "371924009"
+        },
+        "Coding.display": {
+          "value": "Moderate to severe"
+        }
+      }
+    ],
+    "concept": "http://snomed.info/sct#371924009"
+  },
+  "Condition.onsetDateTime": {
+    "value": "2013-03-08"
+  },
+  "Condition.evidence": [
+    {
+      "Condition.evidence.detail": [
+        {
+          "Reference.reference": {
+            "value": "DiagnosticReport/f202"
+          },
+          "Reference.display": {
+            "value": "Diagnostic report for Roel's sepsis"
+          }
+        }
+      ]
+    }
+  ],
+  "Condition.bodySite": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "value": "http://snomed.info/sct"
+          },
+          "Coding.code": {
+            "value": "281158006"
+          },
+          "Coding.display": {
+            "value": "Pulmonary vascular structure"
+          }
+        }
+      ]
+    }
+  ]
+}

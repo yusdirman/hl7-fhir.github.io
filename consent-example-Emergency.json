@@ -1,0 +1,62 @@
+{
+  "resourceType": "Consent",
+  "id": "consent-example-Emergency",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t<p>\n\tWithhold Authorization for Treatment except for Emegency Treatment\n\t</p><p>\n    Patient &quot;P. van de Heuvel&quot; wishes to have no data at the Good Health Psychiatric Hospital \n   available except for Emegency treatment use.\n   </p>\n   </div>"
+  },
+  "status": "active",
+  "type": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/consenttypecodes",
+        "code": "Opt-Out",
+        "display": "Authorization refused with explicit exceptions."
+      }
+    ]
+  },
+  "issued": "2016-05-11",
+  "patient": {
+    "reference": "Patient/f001",
+    "display": "P. van de Heuvel"
+  },
+  "authority": [
+    {
+      "reference": "Organization/Infoway",
+      "display": "Canada Infoway"
+    }
+  ],
+  "domain": [
+    {
+      "reference": "Location/Infoway",
+      "display": "Canada Infoway"
+    }
+  ],
+  "except": [
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/consentexcepttypecodes",
+            "code": "authorized-action",
+            "display": "Authorize a specified action."
+          }
+        ]
+      },
+      "action": [
+        {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/v3/ActReason",
+              "code": "ETREAT",
+              "display": "Emergency Treatment"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "contentAttachment": {
+    "title": "The terms of the consent in lawyer speak."
+  }
+}

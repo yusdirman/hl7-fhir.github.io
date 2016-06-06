@@ -1,0 +1,191 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/ImplementationGuide",
+  "resourceType": "ImplementationGuide",
+  "Resource.id": {
+    "value": "example"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: example</p><p><b>url</b>: <a>http://hl7.org/fhir/daf</a></p><p><b>version</b>: 0</p><p><b>name</b>: Data Access Framework (DAF)</p><p><b>status</b>: draft</p><p><b>experimental</b>: false</p><p><b>publisher</b>: ONC / HL7 Joint project</p><blockquote><p><b>contact</b></p><p><b>name</b>: ONC</p><p><b>telecom</b>: http://www.healthit.gov</p></blockquote><blockquote><p><b>contact</b></p><p><b>name</b>: HL7</p><p><b>telecom</b>: http://hl7.org/fhir</p></blockquote><p><b>date</b>: Jan 1, 2015</p><p><b>description</b>: The Data Access Framework (DAF) Initiative leverages the HL7 FHIR standards to standardize access to Meaningful Use Stage 2 structured information both within the organization and from external organizations</p><p><b>useContext</b>: ?? <span>(Details : {urn:iso:std:iso:3166 code 'US' = '??)</span></p><p><b>copyright</b>: Published by ONC under the standard FHIR license (CC0)</p><p><b>fhirVersion</b>: 1.0.0</p><h3>Dependencies</h3><table><tr><td>-</td><td><b>Type</b></td><td><b>Uri</b></td></tr><tr><td>*</td><td>reference</td><td><a>http://hl7.org/fhir/ImplementationGuide/uscore</a></td></tr></table><blockquote><p><b>package</b></p><p><b>name</b>: test</p><p><b>description</b>: Base package (not broken up into multiple packages)</p><h3>Resources</h3><table><tr><td>-</td><td><b>Example</b></td><td><b>Name</b></td><td><b>Description</b></td><td><b>Acronym</b></td><td><b>Source[x]</b></td><td><b>ExampleFor</b></td></tr><tr><td>*</td><td>true</td><td>Test Example</td><td>A test example to show how a package works</td><td>daf-tst</td><td><a>test.html</a></td><td><a>StructureDefinition/daf-patient</a></td></tr></table></blockquote><h3>Globals</h3><table><tr><td>-</td><td><b>Type</b></td><td><b>Profile</b></td></tr><tr><td>*</td><td>Patient</td><td><a>StructureDefinition/daf-patient</a></td></tr></table><p><b>binary</b>: <a>http://h7.org/fhir/fhir.css</a></p><blockquote><p><b>page</b></p><p><b>source</b>: <a>patient-example.html</a></p><p><b>name</b>: Example Patient Page</p><p><b>kind</b>: page</p><h3>Pages</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote></div>"
+    }
+  },
+  "ImplementationGuide.url": {
+    "value": "http://hl7.org/fhir/daf"
+  },
+  "ImplementationGuide.version": {
+    "value": "0"
+  },
+  "ImplementationGuide.name": {
+    "value": "Data Access Framework (DAF)"
+  },
+  "ImplementationGuide.status": {
+    "value": "draft"
+  },
+  "ImplementationGuide.experimental": {
+    "value": false
+  },
+  "ImplementationGuide.publisher": {
+    "value": "ONC / HL7 Joint project"
+  },
+  "ImplementationGuide.contact": [
+    {
+      "ImplementationGuide.contact.name": {
+        "value": "ONC"
+      },
+      "ImplementationGuide.contact.telecom": [
+        {
+          "ContactPoint.system": {
+            "value": "other"
+          },
+          "ContactPoint.value": {
+            "value": "http://www.healthit.gov"
+          }
+        }
+      ]
+    },
+    {
+      "ImplementationGuide.contact.name": {
+        "value": "HL7"
+      },
+      "ImplementationGuide.contact.telecom": [
+        {
+          "ContactPoint.system": {
+            "value": "other"
+          },
+          "ContactPoint.value": {
+            "value": "http://hl7.org/fhir"
+          }
+        }
+      ]
+    }
+  ],
+  "ImplementationGuide.date": {
+    "value": "2015-01-01"
+  },
+  "ImplementationGuide.description": {
+    "value": "The Data Access Framework (DAF) Initiative leverages the HL7 FHIR standards to standardize access to Meaningful Use Stage 2 structured information both within the organization and from external organizations"
+  },
+  "ImplementationGuide.useContext": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "value": "urn:iso:std:iso:3166"
+          },
+          "Coding.code": {
+            "value": "US"
+          }
+        }
+      ]
+    }
+  ],
+  "ImplementationGuide.copyright": {
+    "value": "Published by ONC under the standard FHIR license (CC0)"
+  },
+  "ImplementationGuide.fhirVersion": {
+    "value": "1.0.0"
+  },
+  "ImplementationGuide.dependency": [
+    {
+      "ImplementationGuide.dependency.type": {
+        "value": "reference"
+      },
+      "ImplementationGuide.dependency.uri": {
+        "value": "http://hl7.org/fhir/ImplementationGuide/uscore"
+      }
+    }
+  ],
+  "ImplementationGuide.package": [
+    {
+      "ImplementationGuide.package.name": {
+        "value": "test"
+      },
+      "ImplementationGuide.package.description": {
+        "value": "Base package (not broken up into multiple packages)"
+      },
+      "ImplementationGuide.package.resource": [
+        {
+          "ImplementationGuide.package.resource.example": {
+            "value": true
+          },
+          "ImplementationGuide.package.resource.name": {
+            "value": "Test Example"
+          },
+          "ImplementationGuide.package.resource.description": {
+            "value": "A test example to show how a package works"
+          },
+          "ImplementationGuide.package.resource.acronym": {
+            "value": "daf-tst"
+          },
+          "ImplementationGuide.package.resource.sourceUri": {
+            "value": "test.html"
+          },
+          "ImplementationGuide.package.resource.exampleFor": {
+            "Reference.reference": {
+              "value": "StructureDefinition/daf-patient"
+            },
+            "reference": "http://hl7.org/fhir//StructureDefinition/daf-patient"
+          }
+        }
+      ]
+    }
+  ],
+  "ImplementationGuide.global": [
+    {
+      "ImplementationGuide.global.type": {
+        "value": "Patient"
+      },
+      "ImplementationGuide.global.profile": {
+        "Reference.reference": {
+          "value": "StructureDefinition/daf-patient"
+        },
+        "reference": "http://hl7.org/fhir//StructureDefinition/daf-patient"
+      }
+    }
+  ],
+  "ImplementationGuide.binary": [
+    {
+      "value": "http://h7.org/fhir/fhir.css"
+    }
+  ],
+  "ImplementationGuide.page": {
+    "ImplementationGuide.page.source": {
+      "value": "patient-example.html"
+    },
+    "ImplementationGuide.page.name": {
+      "value": "Example Patient Page"
+    },
+    "ImplementationGuide.page.kind": {
+      "value": "page"
+    },
+    "ImplementationGuide.page.page": [
+      {
+        "ImplementationGuide.page.source": {
+          "value": "list.html"
+        },
+        "ImplementationGuide.page.name": {
+          "value": "Value Set Page"
+        },
+        "ImplementationGuide.page.kind": {
+          "value": "list"
+        },
+        "ImplementationGuide.page.type": [
+          {
+            "value": "ValueSet"
+          }
+        ],
+        "ImplementationGuide.page.package": [
+          {
+            "value": "test"
+          }
+        ],
+        "ImplementationGuide.page.format": {
+          "value": "text/html"
+        }
+      }
+    ]
+  }
+}

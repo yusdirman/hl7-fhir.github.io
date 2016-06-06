@@ -1,0 +1,136 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Condition",
+  "resourceType": "Condition",
+  "Resource.id": {
+    "value": "f003"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f003</p><p><b>patient</b>: <a>P. van de Heuvel</a></p><p><b>encounter</b>: <a>Encounter/f003</a></p><p><b>asserter</b>: <a>P. van de Heuvel</a></p><p><b>dateRecorded</b>: Feb 20, 2012</p><p><b>code</b>: Retropharyngeal abscess <span>(Details : {SNOMED CT code '18099001' = 'Retropharyngeal abscess', given as 'Retropharyngeal abscess'})</span></p><p><b>category</b>: diagnosis <span>(Details : {SNOMED CT code '439401001' = 'Diagnosis (observable entity)', given as 'diagnosis'})</span></p><p><b>clinicalStatus</b>: active</p><p><b>verificationStatus</b>: confirmed</p><p><b>severity</b>: Mild to moderate <span>(Details : {SNOMED CT code '371923003' = 'Mild to moderate (qualifier value)', given as 'Mild to moderate'})</span></p><p><b>onset</b>: Feb 27, 2012</p><h3>Evidences</h3><table><tr><td>-</td><td><b>Code</b></td></tr><tr><td>*</td><td>CT of neck <span>(Details : {SNOMED CT code '169068008' = 'Computed tomography of neck (procedure)', given as 'CT of neck'})</span></td></tr></table><p><b>bodySite</b>: Entire retropharyngeal area <span>(Details : {SNOMED CT code '280193007' = 'Entire retropharyngeal area (body structure)', given as 'Entire retropharyngeal area'})</span></p></div>"
+    }
+  },
+  "Condition.patient": {
+    "Reference.reference": {
+      "value": "Patient/f001"
+    },
+    "Reference.display": {
+      "value": "P. van de Heuvel"
+    },
+    "reference": "http://hl7.org/fhir//Patient/f001"
+  },
+  "Condition.encounter": {
+    "Reference.reference": {
+      "value": "Encounter/f003"
+    },
+    "reference": "http://hl7.org/fhir//Encounter/f003"
+  },
+  "Condition.asserter": {
+    "Reference.reference": {
+      "value": "Patient/f001"
+    },
+    "Reference.display": {
+      "value": "P. van de Heuvel"
+    },
+    "reference": "http://hl7.org/fhir//Patient/f001"
+  },
+  "Condition.dateRecorded": {
+    "value": "2012-02-20"
+  },
+  "Condition.code": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "value": "18099001"
+        },
+        "Coding.display": {
+          "value": "Retropharyngeal abscess"
+        }
+      }
+    ],
+    "concept": "http://snomed.info/sct#18099001"
+  },
+  "Condition.category": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "value": "439401001"
+        },
+        "Coding.display": {
+          "value": "diagnosis"
+        }
+      }
+    ],
+    "concept": "http://snomed.info/sct#439401001"
+  },
+  "Condition.clinicalStatus": {
+    "value": "active"
+  },
+  "Condition.verificationStatus": {
+    "value": "confirmed"
+  },
+  "Condition.severity": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "value": "371923003"
+        },
+        "Coding.display": {
+          "value": "Mild to moderate"
+        }
+      }
+    ],
+    "concept": "http://snomed.info/sct#371923003"
+  },
+  "Condition.onsetDateTime": {
+    "value": "2012-02-27"
+  },
+  "Condition.evidence": [
+    {
+      "Condition.evidence.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "value": "169068008"
+            },
+            "Coding.display": {
+              "value": "CT of neck"
+            }
+          }
+        ],
+        "concept": "http://snomed.info/sct#169068008"
+      }
+    }
+  ],
+  "Condition.bodySite": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "value": "http://snomed.info/sct"
+          },
+          "Coding.code": {
+            "value": "280193007"
+          },
+          "Coding.display": {
+            "value": "Entire retropharyngeal area"
+          }
+        }
+      ]
+    }
+  ]
+}

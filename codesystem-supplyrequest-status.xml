@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="supplyrequest-status"/>
+  <meta>
+    <lastUpdated value="2016-06-06T20:14:04.181+00:00"/>
+  </meta>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <h2>SupplyRequestStatus</h2>
+      <p>Status of the supply request</p>
+      <p>This code system http://hl7.org/fhir/supplyrequest-status defines the following codes:</p>
+      <table class="codes">
+        <tr>
+          <td>
+            <b>Code</b>
+          </td>
+          <td>
+            <b>Display</b>
+          </td>
+          <td>
+            <b>Definition</b>
+          </td>
+        </tr>
+        <tr>
+          <td>requested
+            <a name="requested"> </a>
+          </td>
+          <td>Requested</td>
+          <td>Supply has been requested, but not dispensed.</td>
+        </tr>
+        <tr>
+          <td>completed
+            <a name="completed"> </a>
+          </td>
+          <td>Received</td>
+          <td>Supply has been received by the requestor.</td>
+        </tr>
+        <tr>
+          <td>failed
+            <a name="failed"> </a>
+          </td>
+          <td>Failed</td>
+          <td>The supply will not be completed because the supplier was unable or unwilling to supply the item.</td>
+        </tr>
+        <tr>
+          <td>cancelled
+            <a name="cancelled"> </a>
+          </td>
+          <td>Cancelled</td>
+          <td>The orderer of the supply cancelled the request.</td>
+        </tr>
+      </table>
+    </div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/valueset-oid">
+    <valueUri value="urn:oid:2.16.840.1.113883.4.642.1.354"/>
+  </extension>
+  <url value="http://hl7.org/fhir/supplyrequest-status"/>
+  <version value="1.4.0"/>
+  <name value="SupplyRequestStatus"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <publisher value="HL7 (FHIR Project)"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="http://hl7.org/fhir"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="fhir@lists.hl7.org"/>
+    </telecom>
+  </contact>
+  <date value="2016-06-06T20:14:04+00:00"/>
+  <description value="Status of the supply request"/>
+  <caseSensitive value="true"/>
+  <valueSet value="http://hl7.org/fhir/ValueSet/supplyrequest-status"/>
+  <content value="complete"/>
+  <concept>
+    <code value="requested"/>
+    <display value="Requested"/>
+    <definition value="Supply has been requested, but not dispensed."/>
+  </concept>
+  <concept>
+    <code value="completed"/>
+    <display value="Received"/>
+    <definition value="Supply has been received by the requestor."/>
+  </concept>
+  <concept>
+    <code value="failed"/>
+    <display value="Failed"/>
+    <definition value="The supply will not be completed because the supplier was unable or unwilling to supply the item."/>
+  </concept>
+  <concept>
+    <code value="cancelled"/>
+    <display value="Cancelled"/>
+    <definition value="The orderer of the supply cancelled the request."/>
+  </concept>
+</CodeSystem>

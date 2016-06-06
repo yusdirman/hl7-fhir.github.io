@@ -1,0 +1,112 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/MedicationAdministration",
+  "resourceType": "MedicationAdministration",
+  "Resource.id": {
+    "value": "medadminexample03"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: medadminexample03</p><p><b>status</b>: on-hold</p><p><b>medication</b>: <a>Medication/medicationexample17</a></p><p><b>patient</b>: <a>Patient/example</a></p><p><b>effectiveTime</b>: Jan 15, 2015 2:30:00 PM --&gt; Jan 15, 2015 2:30:00 PM</p><p><b>performer</b>: <a>Practitioner/example</a></p><p><b>prescription</b>: <a>MedicationOrder/medrx008</a></p><h3>Dosages</h3><table><tr><td>-</td><td><b>Route</b></td><td><b>Dose</b></td><td><b>Rate[x]</b></td></tr><tr><td>*</td><td>Intravenous route <span>(Details : {SNOMED CT code '47625008' = 'Intravenous route (qualifier value)', given as 'Intravenous route'})</span></td><td>80 mg<span> (Details: http://unitsofmeasure.org code mg = 'mg')</span></td><td>80 mg<span> (Details: http://unitsofmeasure.org code mg = 'mg')</span>/60 minutes<span> (Details: SNOMED CT code 258702006 = 'hour (qualifier value)')</span></td></tr></table></div>"
+    }
+  },
+  "MedicationAdministration.status": {
+    "value": "on-hold"
+  },
+  "MedicationAdministration.medicationReference": {
+    "Reference.reference": {
+      "value": "Medication/medicationexample17"
+    },
+    "reference": "http://hl7.org/fhir//Medication/medicationexample17"
+  },
+  "MedicationAdministration.patient": {
+    "Reference.reference": {
+      "value": "Patient/example"
+    },
+    "reference": "http://hl7.org/fhir//Patient/example"
+  },
+  "MedicationAdministration.effectiveTimePeriod": {
+    "Period.start": {
+      "value": "2015-01-15T14:30:00+01:00"
+    },
+    "Period.end": {
+      "value": "2015-01-15T14:30:00+01:00"
+    }
+  },
+  "MedicationAdministration.performer": {
+    "Reference.reference": {
+      "value": "Practitioner/example"
+    },
+    "reference": "http://hl7.org/fhir//Practitioner/example"
+  },
+  "MedicationAdministration.prescription": {
+    "Reference.reference": {
+      "value": "MedicationOrder/medrx008"
+    },
+    "reference": "http://hl7.org/fhir//MedicationOrder/medrx008"
+  },
+  "MedicationAdministration.dosage": {
+    "MedicationAdministration.dosage.route": {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "value": "http://snomed.info/sct"
+          },
+          "Coding.code": {
+            "value": "47625008"
+          },
+          "Coding.display": {
+            "value": "Intravenous route"
+          }
+        }
+      ],
+      "concept": "http://snomed.info/sct#47625008"
+    },
+    "MedicationAdministration.dosage.dose": {
+      "Quantity.value": {
+        "value": 80
+      },
+      "Quantity.unit": {
+        "value": "mg"
+      },
+      "Quantity.system": {
+        "value": "http://unitsofmeasure.org"
+      },
+      "Quantity.code": {
+        "value": "mg"
+      }
+    },
+    "MedicationAdministration.dosage.rateRatio": {
+      "Ratio.numerator": {
+        "Quantity.value": {
+          "value": 80
+        },
+        "Quantity.unit": {
+          "value": "mg"
+        },
+        "Quantity.system": {
+          "value": "http://unitsofmeasure.org"
+        },
+        "Quantity.code": {
+          "value": "mg"
+        }
+      },
+      "Ratio.denominator": {
+        "Quantity.value": {
+          "value": 60
+        },
+        "Quantity.unit": {
+          "value": "minutes"
+        },
+        "Quantity.system": {
+          "value": "http://snomed.info/sct"
+        },
+        "Quantity.code": {
+          "value": "258702006"
+        }
+      }
+    }
+  }
+}

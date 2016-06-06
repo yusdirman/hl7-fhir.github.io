@@ -1,0 +1,289 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Infrastructure - FHIR v1.4.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link rel="stylesheet" href="fhir.css"/>
+  <link rel="Prev" href="http://hl7.org/fhir/infrastructure.html"/>
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="./dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="./assets/css/bootstrap-fhir.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href="./assets/css/project.css"/>
+  <link rel="stylesheet" href="./assets/css/pygments-manni.css"/>
+	<link rel="stylesheet" href="jquery-ui.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif] -->
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment">  <!-- segment-header -->	
+		<div class="container">  <!-- container -->
+			<a no-external="true" id="logo" href="http://hl7.org/fhir"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a no-external="true" id="hl7-logo" href="http://www.hl7.org">
+					<img src="./assets/images/hl7-logo.png" width="42" alt="visit the hl7 website" height="50"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a no-external="true" id="hl7-logo" href="http://hl7.org/fhir/search.cfm"><img src="./assets/images/search.png" alt="Search FHIR"/></a></div> 
+		</div>
+		<div class="container">  <!-- container -->
+	</div></div>  <!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+ 	      		
+ 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="documentation.html">Documentation</a></li>
+              <li><a href="implementation.html">Implementation</a></li>
+              <li><a href="resourcelist.html">Resources</a></li>
+              <li><a href="clinical.html">Clinical</a></li>
+              <li><a href="administration.html">Administrative</a></li>
+              <li><a href="infrastructure.html">Infrastructure</a></li>
+              <li><a href="financial.html">Financial</a></li>
+
+						</ul>
+					</div>  <!-- /.nav-collapse -->
+				</div>  <!-- /.container -->
+			</nav>  <!-- /.navbar -->
+      		
+				
+  <!-- /HEADER CONTENT -->				
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+		<div class="container">  <!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="index.html">Home</a></li>
+        <li><b>Infrastructure</b></li>          <!-- infrastructure.html / page / -->
+
+			</ul>	
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment">  <!-- segment-content -->
+	<div class="container">  <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+
+
+<div class="col-9">
+<h2><span class="sectioncount">6.0<a name="6.0"> </a></span> Infrastructure Resources <a href="infrastructure.html#6.0" title="link to here" class="self-link"><img src="target.png"/></a></h2>
+<table class="cols"><tr><td id="wg"><a href="http://www.hl7.org/Special/committees/fiwg/index.cfm" _target="blank">FHIR Infrastructure <img src="external.png" style="text-align: baseline"/></a> Work Group</td><td id="fmm"><a href="resource.html#maturity">Maturity Level</a>: N/A</td><td id="ballot"><a href="help.html#status">Ballot Status</a>: <a href="history.html#pubs">DSTU 2</a></td></tr></table>
+ 
+<table class="bare">
+
+<tr><td colspan="3"><hr/></td></tr>
+<tr><th colspan="3">Information Tracking<a name="informationtracking"> </a></th></tr>
+<tr><td colspan="3">Collecting information, and tracking change to the information</td></tr>
+
+<tr><td><b>Name</b></td><td><b>Aliases</b></td><td><b>Description</b></td></tr>
+<tr bgcolor="#EFEFEF"><td><a href="questionnaire.html">Questionnaire</a></td><td>Form, CRF</td><td>A structured set of questions intended to guide the collection of answers. The questions are ordered and grouped into coherent subsets, corresponding to the structure of the grouping of the underlying questions.</td></tr>
+
+<tr bgcolor="#FFFFFF"><td><a href="questionnaireresponse.html">QuestionnaireResponse</a></td><td>Form</td><td>A structured set of questions and their answers. The questions are ordered and grouped into coherent subsets, corresponding to the structure of the grouping of the underlying questions.</td></tr>
+
+<tr bgcolor="#EFEFEF"><td><a href="provenance.html">Provenance</a></td><td>History, Event</td><td>Provenance of a resource is a record that describes entities and processes involved in producing and delivering or otherwise influencing that resource. Provenance provides a critical foundation for assessing authenticity, enabling trust, and allowing reproducibility. Provenance assertions are a form of contextual metadata and can themselves become important records with their own provenance. Provenance statement indicates clinical significance in terms of confidence in authenticity, reliability, and trustworthiness, integrity, and stage in lifecycle (e.g. Document Completion - has the artifact been legally authenticated), all of which may impact security, privacy, and trust policies.</td></tr>
+
+<tr bgcolor="#FFFFFF"><td><a href="auditevent.html">AuditEvent</a></td><td/><td>A record of an event made for purposes of maintaining a security log. Typical uses include detection of intrusion attempts and monitoring for inappropriate usage.</td></tr>
+
+<tr bgcolor="#EFEFEF"><td><a href="consent.html">Consent</a></td><td/><td>A record of a healthcare consumer’s privacy policy, which is in accordance with governing jurisdictional and organization privacy policies that grant or withhold consent:.</td></tr>
+
+
+<tr><td colspan="3"><hr/></td></tr>
+<tr><th colspan="3">Documents &amp; Lists<a name="documents&amp;lists"> </a></th></tr>
+<tr><td colspan="3">Management of documents and other organizing structures</td></tr>
+
+<tr><td><b>Name</b></td><td><b>Aliases</b></td><td><b>Description</b></td></tr>
+<tr bgcolor="#EFEFEF"><td><a href="composition.html">Composition</a></td><td/><td>A set of healthcare-related information that is assembled together into a single logical document that provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard to who is making the statement. While a Composition defines the structure, it does not actually contain the content: rather the full content of a document is contained in a Bundle, of which the Composition is the first resource contained.</td></tr>
+
+<tr bgcolor="#FFFFFF"><td><a href="documentmanifest.html">DocumentManifest</a></td><td/><td>A manifest that defines a set of documents.</td></tr>
+
+<tr bgcolor="#EFEFEF"><td><a href="documentreference.html">DocumentReference</a></td><td/><td>A reference to a document .</td></tr>
+
+<tr bgcolor="#FFFFFF"><td><a href="list.html">List</a></td><td>Collection, WorkingList</td><td>A set of information summarized from a list of other resources.</td></tr>
+
+
+<tr><td colspan="3"><hr/></td></tr>
+<tr><th colspan="3">Structure <a name="structure"> </a></th></tr>
+<tr><td colspan="3">Resources that provide basic structural support for other usages</td></tr>
+
+<tr><td><b>Name</b></td><td><b>Aliases</b></td><td><b>Description</b></td></tr>
+<tr bgcolor="#EFEFEF"><td><a href="media.html">Media</a></td><td/><td>A photo, video, or audio recording acquired or used in healthcare. The actual content may be inline or provided by direct reference.</td></tr>
+
+<tr bgcolor="#FFFFFF"><td><a href="bundle.html">Bundle</a></td><td/><td>A container for a collection of resources.</td></tr>
+
+<tr bgcolor="#EFEFEF"><td><a href="basic.html">Basic</a></td><td>Z-resource, Extension-resource</td><td>Basic is used for handling concepts not yet defined in FHIR, narrative-only resources that don't map to an existing resource, and custom resources not appropriate for inclusion in the FHIR specification.</td></tr>
+
+<tr bgcolor="#FFFFFF"><td><a href="binary.html">Binary</a></td><td/><td>A binary resource can contain any content, whether text, image, pdf, zip archive, etc.</td></tr>
+
+<tr bgcolor="#EFEFEF"><td><a href="linkage.html">Linkage</a></td><td/><td>Identifies two or more records (resource instances) that are referring to the same real-world &quot;occurrence&quot;.</td></tr>
+
+
+<tr><td colspan="3"><hr/></td></tr>
+<tr><th colspan="3">Exchange<a name="exchange"> </a></th></tr>
+<tr><td colspan="3">Used to support the process of exchanging data</td></tr>
+
+<tr><td><b>Name</b></td><td><b>Aliases</b></td><td><b>Description</b></td></tr>
+<tr bgcolor="#EFEFEF"><td><a href="messageheader.html">MessageHeader</a></td><td/><td>The header for a message exchange that is either requesting or responding to an action.  The reference(s) that are the subject of the action as well as other information related to the action are typically transmitted in a bundle in which the MessageHeader resource instance is the first resource in the bundle.</td></tr>
+
+<tr bgcolor="#FFFFFF"><td><a href="operationoutcome.html">OperationOutcome</a></td><td/><td>A collection of error, warning or information messages that result from a system action.</td></tr>
+
+<tr bgcolor="#EFEFEF"><td><a href="parameters.html">Parameters</a></td><td/><td>This special resource type is used to represent an operation request and response (operations.html). It has no other use, and there is no RESTful endpoint associated with it.</td></tr>
+
+<tr bgcolor="#FFFFFF"><td><a href="subscription.html">Subscription</a></td><td>WebHook, Hook</td><td>The subscription resource is used to define a push based subscription from a server to another system. Once a subscription is registered with the server, the server checks every resource that is created or updated, and if the resource matches the given criteria, it sends a message on the defined &quot;channel&quot; so that another system is able to take an appropriate action.</td></tr>
+
+
+<tr><td colspan="3"><hr/></td></tr>
+<tr><th colspan="3">Terminology<a name="terminology"> </a></th></tr>
+<tr><td colspan="3">The terminology sub-system</td></tr>
+
+<tr><td><b>Name</b></td><td><b>Aliases</b></td><td><b>Description</b></td></tr>
+<tr bgcolor="#EFEFEF"><td><a href="codesystem.html">CodeSystem</a></td><td/><td>A code system resource specifies a set of codes drawn from one or more code systems.</td></tr>
+
+<tr bgcolor="#FFFFFF"><td><a href="valueset.html">ValueSet</a></td><td/><td>A value set specifies a set of codes drawn from one or more code systems.</td></tr>
+
+<tr bgcolor="#EFEFEF"><td><a href="conceptmap.html">ConceptMap</a></td><td/><td>A statement of relationships from one set of concepts to one or more other concepts - either code systems or data elements, or classes in class models.</td></tr>
+
+<tr bgcolor="#FFFFFF"><td><a href="expansionprofile.html">ExpansionProfile</a></td><td>ValueSetExpansionProfile</td><td>Resource to define constraints on the Expansion of a FHIR ValueSet.</td></tr>
+
+<tr bgcolor="#EFEFEF"><td><a href="namingsystem.html">NamingSystem</a></td><td/><td>A curated namespace that issues unique symbols within that namespace for the identification of concepts, people, devices, etc.  Represents a &quot;System&quot; used within the Identifier and Coding data types.</td></tr>
+
+
+<tr><td colspan="3"><hr/></td></tr>
+<tr><th colspan="3">Content<a name="content"> </a></th></tr>
+<tr><td colspan="3">Specifying allowable content</td></tr>
+
+<tr><td><b>Name</b></td><td><b>Aliases</b></td><td><b>Description</b></td></tr>
+<tr bgcolor="#EFEFEF"><td><a href="structuredefinition.html">StructureDefinition</a></td><td>Template</td><td>A definition of a FHIR structure. This resource is used to describe the underlying resources, data types defined in FHIR, and also for describing extensions, and constraints on resources and data types.</td></tr>
+
+<tr bgcolor="#FFFFFF"><td>StrutureMap</td><td>(Not defined yet)</td><td/><td/></tr>
+
+<tr bgcolor="#EFEFEF"><td><a href="dataelement.html">DataElement</a></td><td>Master Observation, Data Element</td><td>The formal description of a single piece of information that can be gathered and reported.</td></tr>
+
+
+<tr><td colspan="3"><hr/></td></tr>
+<tr><th colspan="3">Operations Control<a name="operationscontrol"> </a></th></tr>
+<tr><td colspan="3">Specifying the behavior of operational systems</td></tr>
+
+<tr><td><b>Name</b></td><td><b>Aliases</b></td><td><b>Description</b></td></tr>
+<tr bgcolor="#EFEFEF"><td><a href="conformance.html">Conformance</a></td><td/><td>A conformance statement is a set of capabilities of a FHIR Server that may be used as a statement of actual server functionality or a statement of required or desired server implementation.</td></tr>
+
+<tr bgcolor="#FFFFFF"><td><a href="operationdefinition.html">OperationDefinition</a></td><td/><td>A formal computable definition of an operation (on the RESTful interface) or a named query (using the search interaction).</td></tr>
+
+<tr bgcolor="#EFEFEF"><td><a href="searchparameter.html">SearchParameter</a></td><td/><td>A search parameter that defines a named search item that can be used to search/filter on a resource.</td></tr>
+
+<tr bgcolor="#FFFFFF"><td><a href="compartmentdefinition.html">CompartmentDefinition</a></td><td/><td>A compartment definition that defines how resources are accessed on a server.</td></tr>
+
+
+<tr><td colspan="3"><hr/></td></tr>
+<tr><th colspan="3">Miscellaneous<a name="miscellaneous"> </a></th></tr>
+<tr><td colspan="3">Managing specification and testing</td></tr>
+
+<tr><td><b>Name</b></td><td><b>Aliases</b></td><td><b>Description</b></td></tr>
+<tr bgcolor="#EFEFEF"><td><a href="implementationguide.html">ImplementationGuide</a></td><td/><td>A set of rules or how FHIR is used to solve a particular problem. This resource is used to gather all the parts of an implementation guide into a logical whole, and to publish a computable definition of all the parts.</td></tr>
+
+<tr bgcolor="#FFFFFF"><td><a href="testscript.html">TestScript</a></td><td/><td>TestScript is a resource that specifies a suite of tests against a FHIR server implementation to determine compliance against the FHIR specification.</td></tr>
+
+
+</table>
+
+<p>
+Additional Resources will be added in the future. A list of hypothesized resources can be found on the 
+<a href="http://wiki.hl7.org/index.php?title=FHIR_Resource_Types">HL7 wiki <img src="external.png" style="text-align: baseline"/></a>.  Feel free to add any you think are missing or engage with one 
+of the <a href="http://www.hl7.org/Special/committees/index.cfm">HL7 Work Groups <img src="external.png" style="text-align: baseline"/></a> to submit a 
+<a href="http://wiki.hl7.org/index.php?title=Category:FHIR_Resource_Proposal">proposal <img src="external.png" style="text-align: baseline"/></a> to define a resource of particular interest.
+</p>
+
+</div>
+
+
+				</div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+        
+    </div>  <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">  <!-- segment-footer -->
+		<div class="container">  <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.4.0-8453) generated on Mon, Jun 6, 2016 20:22+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img src="external.png" style="text-align: baseline"/></a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Finfrastructure.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Finfrastructure.html">Compare to DSTU2 <img src="external.png" style="text-align: baseline"/></a> |                
+               <a rel="license" style="color: #81BEF7" href="license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a> | 
+               <a style="color: #81BEF7" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank">Propose a change <img src="external.png" style="text-align: baseline"/></a>   
+        </span>
+        </p>
+			</div>  <!-- /inner-wrapper -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+    
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+
+</body>
+</html>

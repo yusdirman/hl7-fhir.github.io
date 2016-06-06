@@ -1,0 +1,132 @@
+{
+  "resourceType": "Library",
+  "id": "library-col",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Cohort Definition for Colorectal Cancer Screening Measure</div>"
+  },
+  "moduleMetadata": {
+    "identifier": [
+      {
+        "use": "official",
+        "value": "COL"
+      }
+    ],
+    "version": "1.0.0",
+    "title": "Cohort Definition for Colorectal Cancer Screening Measure",
+    "type": "library",
+    "status": "active",
+    "experimental": true,
+    "publicationDate": "2016-04-19",
+    "topic": [
+      {
+        "text": "something"
+      }
+    ]
+  },
+  "model": [
+    {
+      "identifier": "FHIR"
+    }
+  ],
+  "valueSet": [
+    {
+      "name": "Colonoscopy",
+      "identifier": "2.16.840.1.113883.3.464.1004.1064"
+    },
+    {
+      "name": "Colorectal Cancer",
+      "identifier": "2.16.840.1.113883.3.464.1004.1064"
+    },
+    {
+      "name": "Flexible Sigmoidoscopy",
+      "identifier": "2.16.840.1.113883.3.464.1004.1102"
+    },
+    {
+      "name": "Total Colectomy",
+      "identifier": "2.16.840.1.113883.3.464.1003.198.12.1019"
+    },
+    {
+      "name": "Fecal Occult Blood Test (FOBT)",
+      "identifier": "2.16.840.1.113883.3.464.1003.198.12.1011"
+    }
+  ],
+  "dataRequirement": [
+    {
+      "type": "Patient"
+    },
+    {
+      "type": "Procedure",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSetString": "Colonoscopy"
+        }
+      ],
+      "dateFilter": [
+        {
+          "path": "performedDateTime.value",
+          "valuePeriod": {
+            "start": "2006-01-01"
+          }
+        }
+      ]
+    },
+    {
+      "type": "Condition",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSetString": "Colorectal Cancer"
+        }
+      ]
+    },
+    {
+      "type": "Procedure",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSetString": "Flexible Sigmoidoscopy"
+        }
+      ],
+      "dateFilter": [
+        {
+          "path": "performedDateTime.value",
+          "valuePeriod": {
+            "start": "2011-01-01"
+          }
+        }
+      ]
+    },
+    {
+      "type": "Procedure",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSetString": "Total Colectomy"
+        }
+      ]
+    },
+    {
+      "type": "Procedure",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSetString": "FOBT"
+        }
+      ],
+      "dateFilter": [
+        {
+          "path": "performedDateTime.value",
+          "valuePeriod": {
+            "start": "2015-01-01"
+          }
+        }
+      ]
+    }
+  ],
+  "document": {
+    "contentType": "application/xml+elm",
+    "url": "http://example.org/libraries/library-col.elm.xml"
+  }
+}

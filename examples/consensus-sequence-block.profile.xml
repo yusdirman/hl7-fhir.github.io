@@ -1,0 +1,1658 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="consensus-sequence-block"/>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">to do</div>
+  </text>
+  <url value="http://hl7.org/fhir/StructureDefinition/consensus-sequence-block"/>
+  <name value="Profile for Consensus Sequence Block"/>
+  <status value="draft"/>
+  <publisher value="Health Level Seven International (Clinical Genomics)"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="http://www.hl7.org/Special/committees/clingenomics"/>
+    </telecom>
+  </contact>
+  <date value="2015-09-11"/>
+  <description value="Describes consensus sequence block used in HLA typing report"/>
+  <fhirVersion value="1.4.0"/>
+  <kind value="resource"/>
+  <abstract value="false"/>
+  <baseType value="Sequence"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Sequence"/>
+  <derivation value="constraint"/>
+  <snapshot>
+    <element>
+      <path value="Sequence"/>
+      <name value="Consensus-sequence-block"/>
+      <short value="A Sequence"/>
+      <definition value="Variant and Sequence data."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Sequence"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Sequence"/>
+      </type>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="w5"/>
+        <map value="clinical.diagnostics"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Sequence.id"/>
+      <short value="Logical id of this artifact"/>
+      <definition value="The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes."/>
+      <comments value="The only time that a resource does not have an id is when it is being submitted to the server using a create operation. Bundles always have an id, though it is usually a generated UUID."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Resource.id"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="true"/>
+    </element>
+    <element>
+      <path value="Sequence.meta"/>
+      <short value="Metadata about the resource"/>
+      <definition value="The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Resource.meta"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Meta"/>
+      </type>
+      <isSummary value="true"/>
+    </element>
+    <element>
+      <path value="Sequence.implicitRules"/>
+      <short value="A set of rules under which this content was created"/>
+      <definition value="A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content."/>
+      <comments value="Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However, the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Resource.implicitRules"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="uri"/>
+      </type>
+      <isModifier value="true"/>
+      <isSummary value="true"/>
+    </element>
+    <element>
+      <path value="Sequence.language"/>
+      <short value="Language of the resource content"/>
+      <definition value="The base language in which the resource is written."/>
+      <comments value="Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource  Not all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Resource.language"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="code"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <description value="A human language."/>
+        <valueSetUri value="http://tools.ietf.org/html/bcp47"/>
+      </binding>
+    </element>
+    <element>
+      <path value="Sequence.text"/>
+      <short value="Text summary of the resource, for human interpretation"/>
+      <definition value="A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it &quot;clinically safe&quot; for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety."/>
+      <comments value="Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative."/>
+      <alias value="narrative"/>
+      <alias value="html"/>
+      <alias value="xhtml"/>
+      <alias value="display"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="DomainResource.text"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Narrative"/>
+      </type>
+      <condition value="dom-1"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Act.text?"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Sequence.contained"/>
+      <short value="Contained, inline Resources"/>
+      <definition value="These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope."/>
+      <comments value="This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again."/>
+      <alias value="inline resources"/>
+      <alias value="anonymous resources"/>
+      <alias value="contained resources"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="DomainResource.contained"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Resource"/>
+      </type>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Sequence.extension"/>
+      <slicing>
+        <discriminator value="url"/>
+        <ordered value="false"/>
+        <rules value="open"/>
+      </slicing>
+      <short value="Extension"/>
+      <definition value="An Extension"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="DomainResource.extension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+      </type>
+    </element>
+    <element>
+      <path value="Sequence.extension"/>
+      <name value="PhaseSet"/>
+      <short value="Phase Set"/>
+      <definition value="A phase set identifier to associate different consensussequence-blocks."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="DomainResource.extension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/sequence-consensus-sequence-blockPhaseSet"/>
+      </type>
+    </element>
+    <element>
+      <path value="Sequence.extension"/>
+      <name value="ExpectedCopyNumber"/>
+      <short value="Expected Copy Number"/>
+      <definition value="To indicated how many copies of the sequence block was expected."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="DomainResource.extension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/sequence-consensus-sequence-blockExpectedCopyNumber"/>
+      </type>
+    </element>
+    <element>
+      <path value="Sequence.extension"/>
+      <name value="Continuity"/>
+      <short value="Continuity"/>
+      <definition value="A continuity flag to indicate whether a gap exists between blocks."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="DomainResource.extension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/sequence-consensus-sequence-blockContinuity"/>
+      </type>
+    </element>
+    <element>
+      <path value="Sequence.extension"/>
+      <name value="Strand"/>
+      <short value="Strand"/>
+      <definition value="Strand."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="DomainResource.extension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/sequence-consensus-sequence-blockStrand"/>
+      </type>
+    </element>
+    <element>
+      <path value="Sequence.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <definition value="May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <alias value="extensions"/>
+      <alias value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="DomainResource.modifierExtension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isModifier value="true"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Sequence.identifier"/>
+      <short value="Unique ID for this particular sequence"/>
+      <definition value="A unique identifier for this particular sequence instance."/>
+      <requirements value="Allows sequences to be distinguished and referenced."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Sequence.identifier"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Identifier"/>
+      </type>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="w5"/>
+        <map value="id"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Sequence.type"/>
+      <short value="AA | DNA | RNA"/>
+      <definition value="Amino acid / cDNA transcript / RNA variant."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="Sequence.type"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="code"/>
+      </type>
+      <isSummary value="true"/>
+      <binding>
+        <strength value="example"/>
+        <description value="Type if a sequence -- DNA, RNA, or amino acid sequence"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/sequence-type"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element>
+      <path value="Sequence.coordinateSystem"/>
+      <short value="Numbering used for sequence (0-based or 1-based)"/>
+      <definition value="Whether the sequence is numbered starting at 0 (0-based numbering or coordinates) or starting at 1 (1-based numbering). Values are &quot;0&quot; for 0-based numbering and &quot;1&quot; for one-based."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="Sequence.coordinateSystem"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="integer"/>
+      </type>
+      <isSummary value="true"/>
+    </element>
+    <element>
+      <path value="Sequence.patient"/>
+      <short value="Who and/or what this is about"/>
+      <definition value="The patient whose sequencing results are described by this resource."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Sequence.patient"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/Patient"/>
+      </type>
+      <isSummary value="true"/>
+    </element>
+    <element>
+      <path value="Sequence.specimen"/>
+      <short value="Specimen used for sequencing"/>
+      <definition value="Specimen used for sequencing."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Sequence.specimen"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/Specimen"/>
+      </type>
+      <isSummary value="true"/>
+    </element>
+    <element>
+      <path value="Sequence.device"/>
+      <short value="The method for sequencing"/>
+      <definition value="The method for sequencing, for example, chip information."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Sequence.device"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/Device"/>
+      </type>
+      <isSummary value="true"/>
+    </element>
+    <element>
+      <path value="Sequence.quantity"/>
+      <short value="Quantity of the sequence"/>
+      <definition value="Quantity of the sequence."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Sequence.quantity"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Quantity"/>
+      </type>
+      <isSummary value="true"/>
+    </element>
+    <element>
+      <path value="Sequence.referenceSeq"/>
+      <short value="Reference sequence"/>
+      <definition value="Reference Sequence. It can be described in two ways. One is provide the unique identifier of reference sequence submitted to NCBI. The start and end position of window on reference sequence should be defined.  The other way is using  genome build, chromosome number,and also the start, end position of window (this method is specifically for DNA reference sequence) ."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Sequence.referenceSeq"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="BackboneElement"/>
+      </type>
+      <isSummary value="true"/>
+    </element>
+    <element>
+      <path value="Sequence.referenceSeq.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <definition value="unique id for the element within a resource (for internal references)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Element.id"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="id"/>
+      </type>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Sequence.referenceSeq.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <alias value="extensions"/>
+      <alias value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Element.extension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Sequence.referenceSeq.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <alias value="extensions"/>
+      <alias value="user content"/>
+      <alias value="modifiers"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="BackboneElement.modifierExtension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isModifier value="true"/>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Sequence.referenceSeq.chromosome"/>
+      <short value="The chromosome containing the genetic finding"/>
+      <definition value="The chromosome containing the genetic finding. The value set will be 1-22, X, Y when the species is human without chromosome abnormality. Otherwise,  NCBI-Gene code system should be used."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Sequence.referenceSeq.chromosome"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <isSummary value="true"/>
+      <binding>
+        <strength value="example"/>
+        <description value="Chromosome number for human"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/chromosome-human"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element>
+      <path value="Sequence.referenceSeq.genomeBuild"/>
+      <short value="The Genome Build used for reference, following GRCh build versions e.g. &#39;GRCh 37&#39;"/>
+      <definition value="The Genome Build used for reference, following GRCh build versions e.g. &#39;GRCh 37&#39;.  Version number must be included if a versioned release of a primary build was used."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Sequence.referenceSeq.genomeBuild"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <isSummary value="true"/>
+    </element>
+    <element>
+      <path value="Sequence.referenceSeq.referenceSeqId"/>
+      <short value="Reference identifier"/>
+      <definition value="Reference identifier of reference sequence submitted to NCBI. It must match the type in the Sequence.type field. For example, the prefix, “NG_” identifies reference sequence for genes, “NM_” for messenger RNA transcripts, and “NP_” for amino acid sequences."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="Sequence.referenceSeq.referenceSeqId"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <isSummary value="true"/>
+      <binding>
+        <strength value="example"/>
+        <description value="Reference identifier"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/sequence-referenceSeq"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element>
+      <path value="Sequence.referenceSeq.referenceSeqPointer"/>
+      <short value="A Pointer to another Sequence entity as refence sequence"/>
+      <definition value="A Pointer to another Sequence entity as refence sequence."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Sequence.referenceSeq.referenceSeqPointer"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/Sequence"/>
+      </type>
+      <isSummary value="true"/>
+    </element>
+    <element>
+      <path value="Sequence.referenceSeq.referenceSeqString"/>
+      <short value="A Reference Sequence string"/>
+      <definition value="A Reference Sequence string."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Sequence.referenceSeq.referenceSeqString"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <isSummary value="true"/>
+    </element>
+    <element>
+      <path value="Sequence.referenceSeq.strand"/>
+      <short value="Strand of DNA"/>
+      <definition value="Strand of DNA. Available values are &quot;1&quot; for the plus strand and &quot;-1&quot; for the minus strand."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="Sequence.referenceSeq.strand"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="integer"/>
+      </type>
+      <isSummary value="true"/>
+    </element>
+    <element>
+      <path value="Sequence.referenceSeq.windowStart"/>
+      <short value="Start position (inclusive) of the window on the  reference sequence"/>
+      <definition value="Start position (inclusive) of the window on the reference sequence."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="Sequence.referenceSeq.windowStart"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="integer"/>
+      </type>
+      <isSummary value="true"/>
+    </element>
+    <element>
+      <path value="Sequence.referenceSeq.windowEnd"/>
+      <short value="End position (exclusive) of the window on the reference sequence"/>
+      <definition value="End position (exclusive) of the window on the reference sequence."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="Sequence.referenceSeq.windowEnd"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="integer"/>
+      </type>
+      <isSummary value="true"/>
+    </element>
+    <element>
+      <path value="Sequence.variant"/>
+      <short value="Variant info in this sequence"/>
+      <definition value="Variant info in this sequence."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Sequence.variant"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="BackboneElement"/>
+      </type>
+      <isSummary value="true"/>
+    </element>
+    <element>
+      <path value="Sequence.variant.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <definition value="unique id for the element within a resource (for internal references)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Element.id"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="id"/>
+      </type>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Sequence.variant.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <alias value="extensions"/>
+      <alias value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Element.extension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Sequence.variant.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <alias value="extensions"/>
+      <alias value="user content"/>
+      <alias value="modifiers"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="BackboneElement.modifierExtension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isModifier value="true"/>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Sequence.variant.start"/>
+      <short value="Start position (inclusive) of the variant on the  reference sequence"/>
+      <definition value="Start position (inclusive) of the variant on the  reference sequence."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Sequence.variant.start"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="integer"/>
+      </type>
+      <isSummary value="true"/>
+    </element>
+    <element>
+      <path value="Sequence.variant.end"/>
+      <short value="End position (exclusive) of the variant on the reference sequence"/>
+      <definition value="End position (exclusive) of the variant on the reference sequence."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Sequence.variant.end"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="integer"/>
+      </type>
+      <isSummary value="true"/>
+    </element>
+    <element>
+      <path value="Sequence.variant.observedAllele"/>
+      <short value="Nucleotide(s)/amino acids from start position to stop position of observed variant"/>
+      <definition value="Nucleotide(s)/amino acids from start position of sequence to stop position of sequence on the positive (+) strand of the observed sequence. When the sequence  type is DNA, it should be the sequence on the positive (+) strand."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Sequence.variant.observedAllele"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <isSummary value="true"/>
+    </element>
+    <element>
+      <path value="Sequence.variant.referenceAllele"/>
+      <short value="Nucleotide(s)/amino acids from start position to stop position of reference variant"/>
+      <definition value="Nucleotide(s)/amino acids from start position of sequence to stop position of sequence on the positive (+) strand of the reference sequence. When the sequence  type is DNA, it should be the sequence on the positive (+) strand."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Sequence.variant.referenceAllele"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <isSummary value="true"/>
+    </element>
+    <element>
+      <path value="Sequence.variant.cigar"/>
+      <short value="Extended CIGAR string for aligning the sequence with reference bases"/>
+      <definition value="Extended CIGAR string for aligning the sequence with reference bases. See detailed documentation [here](http://support.illumina.com/help/SequencingAnalysisWorkflow/Content/Vault/Informatics/Sequencing_Analysis/CASAVA/swSEQ_mCA_ExtendedCIGARFormat.htm)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Sequence.variant.cigar"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <isSummary value="true"/>
+    </element>
+    <element>
+      <path value="Sequence.observedSeq"/>
+      <short value="Observed sequence"/>
+      <definition value="Observed sequence."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Sequence.observedSeq"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <isSummary value="true"/>
+    </element>
+    <element>
+      <path value="Sequence.quality"/>
+      <short value="Sequence Quality"/>
+      <definition value="Quality for sequence quality vary by platform reflecting differences in sequencing chemistry and digital processing."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Sequence.quality"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="BackboneElement"/>
+      </type>
+      <isSummary value="true"/>
+    </element>
+    <element>
+      <path value="Sequence.quality.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <definition value="unique id for the element within a resource (for internal references)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Element.id"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="id"/>
+      </type>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Sequence.quality.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <alias value="extensions"/>
+      <alias value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Element.extension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Sequence.quality.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <alias value="extensions"/>
+      <alias value="user content"/>
+      <alias value="modifiers"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="BackboneElement.modifierExtension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isModifier value="true"/>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Sequence.quality.start"/>
+      <short value="Start position (inclusive) of the sequence"/>
+      <definition value="Start position (inclusive) of the sequence."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Sequence.quality.start"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="integer"/>
+      </type>
+      <isSummary value="true"/>
+    </element>
+    <element>
+      <path value="Sequence.quality.end"/>
+      <short value="End position (exclusive) of the sequence"/>
+      <definition value="End position (exclusive) of the sequence."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Sequence.quality.end"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="integer"/>
+      </type>
+      <isSummary value="true"/>
+    </element>
+    <element>
+      <path value="Sequence.quality.score"/>
+      <short value="Quality score"/>
+      <definition value="Quality score."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Sequence.quality.score"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Quantity"/>
+      </type>
+      <isSummary value="true"/>
+    </element>
+    <element>
+      <path value="Sequence.quality.method"/>
+      <short value="Method for quality"/>
+      <definition value="Method for quality."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Sequence.quality.method"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <isSummary value="true"/>
+    </element>
+    <element>
+      <path value="Sequence.quality.truePositives"/>
+      <short value="True positives"/>
+      <definition value="The number of variants found in the benchmark set that match exactly the test set."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Sequence.quality.truePositives"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="decimal"/>
+      </type>
+      <isSummary value="true"/>
+    </element>
+    <element>
+      <path value="Sequence.quality.falsePositives"/>
+      <short value="False positives"/>
+      <definition value="The number of variants found in the test set that did not match exactly the benchmark set."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Sequence.quality.falsePositives"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="decimal"/>
+      </type>
+      <isSummary value="true"/>
+    </element>
+    <element>
+      <path value="Sequence.quality.falseNegatives"/>
+      <short value="False negatives"/>
+      <definition value="The number of variants found in the benchmark set that did not match exactly the test set."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Sequence.quality.falseNegatives"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="decimal"/>
+      </type>
+      <isSummary value="true"/>
+    </element>
+    <element>
+      <path value="Sequence.quality.precision"/>
+      <short value="Precision (PPV)"/>
+      <definition value="(true positives) / (true positives + false positives)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Sequence.quality.precision"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="decimal"/>
+      </type>
+      <isSummary value="true"/>
+    </element>
+    <element>
+      <path value="Sequence.quality.recall"/>
+      <short value="Recall (sensitivity)"/>
+      <definition value="(true positives) / (true positives + false negatives)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Sequence.quality.recall"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="decimal"/>
+      </type>
+      <isSummary value="true"/>
+    </element>
+    <element>
+      <path value="Sequence.quality.fMeasure"/>
+      <short value="F-measure"/>
+      <definition value="2 * precision * recall / (precision + recall)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Sequence.quality.fMeasure"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="decimal"/>
+      </type>
+      <isSummary value="true"/>
+    </element>
+    <element>
+      <path value="Sequence.readCoverage"/>
+      <short value="Average number of reads representing a given nucleotide in the reconstructed sequence"/>
+      <definition value="Coverage (read depth or depth) is the average number of reads representing a given nucleotide in the reconstructed sequence."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Sequence.readCoverage"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="integer"/>
+      </type>
+      <isSummary value="true"/>
+    </element>
+    <element>
+      <path value="Sequence.repository"/>
+      <short value="External repository"/>
+      <definition value="Configurations of the external repository."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Sequence.repository"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="BackboneElement"/>
+      </type>
+      <isSummary value="true"/>
+    </element>
+    <element>
+      <path value="Sequence.repository.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <definition value="unique id for the element within a resource (for internal references)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Element.id"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="id"/>
+      </type>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Sequence.repository.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <alias value="extensions"/>
+      <alias value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Element.extension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Sequence.repository.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <alias value="extensions"/>
+      <alias value="user content"/>
+      <alias value="modifiers"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="BackboneElement.modifierExtension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isModifier value="true"/>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Sequence.repository.url"/>
+      <short value="URI of the repository"/>
+      <definition value="URI of an external repository which contains further details about the genetics data."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Sequence.repository.url"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="uri"/>
+      </type>
+      <isSummary value="true"/>
+    </element>
+    <element>
+      <path value="Sequence.repository.name"/>
+      <short value="Name of the repository"/>
+      <definition value="URI of an external repository which contains further details about the genetics data."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Sequence.repository.name"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <isSummary value="true"/>
+    </element>
+    <element>
+      <path value="Sequence.repository.variantId"/>
+      <short value="Id of the variant"/>
+      <definition value="Id of the variant in this external repository."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Sequence.repository.variantId"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <isSummary value="true"/>
+    </element>
+    <element>
+      <path value="Sequence.repository.readId"/>
+      <short value="Id of the read"/>
+      <definition value="Id of the read in this external repository."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Sequence.repository.readId"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <isSummary value="true"/>
+    </element>
+    <element>
+      <path value="Sequence.pointer"/>
+      <short value="Pointer to next atomic sequence"/>
+      <definition value="Pointer to next atomic sequence which at most contains one variant."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Sequence.pointer"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/Sequence"/>
+      </type>
+      <isSummary value="true"/>
+    </element>
+    <element>
+      <path value="Sequence.structureVariant"/>
+      <definition value="Structural variant."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Sequence.structureVariant"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="BackboneElement"/>
+      </type>
+      <isSummary value="true"/>
+    </element>
+    <element>
+      <path value="Sequence.structureVariant.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <definition value="unique id for the element within a resource (for internal references)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Element.id"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="id"/>
+      </type>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Sequence.structureVariant.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <alias value="extensions"/>
+      <alias value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Element.extension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Sequence.structureVariant.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <alias value="extensions"/>
+      <alias value="user content"/>
+      <alias value="modifiers"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="BackboneElement.modifierExtension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isModifier value="true"/>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Sequence.structureVariant.precisionOfBoundaries"/>
+      <short value="Precision of boundaries"/>
+      <definition value="Precision of boundaries."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Sequence.structureVariant.precisionOfBoundaries"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <isSummary value="true"/>
+    </element>
+    <element>
+      <path value="Sequence.structureVariant.reportedaCGHRatio"/>
+      <short value="Structural Variant reported aCGH ratio"/>
+      <definition value="Structural Variant reported aCGH ratio."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Sequence.structureVariant.reportedaCGHRatio"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="decimal"/>
+      </type>
+      <isSummary value="true"/>
+    </element>
+    <element>
+      <path value="Sequence.structureVariant.length"/>
+      <short value="Structural Variant Length"/>
+      <definition value="Structural Variant Length."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Sequence.structureVariant.length"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="integer"/>
+      </type>
+      <isSummary value="true"/>
+    </element>
+    <element>
+      <path value="Sequence.structureVariant.outer"/>
+      <definition value="Structural variant outer."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Sequence.structureVariant.outer"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="BackboneElement"/>
+      </type>
+      <isSummary value="true"/>
+    </element>
+    <element>
+      <path value="Sequence.structureVariant.outer.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <definition value="unique id for the element within a resource (for internal references)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Element.id"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="id"/>
+      </type>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Sequence.structureVariant.outer.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <alias value="extensions"/>
+      <alias value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Element.extension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Sequence.structureVariant.outer.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <alias value="extensions"/>
+      <alias value="user content"/>
+      <alias value="modifiers"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="BackboneElement.modifierExtension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isModifier value="true"/>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Sequence.structureVariant.outer.start"/>
+      <short value="Structural Variant Outer Start-End"/>
+      <definition value="Structural Variant Outer Start-End."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Sequence.structureVariant.outer.start"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="integer"/>
+      </type>
+      <isSummary value="true"/>
+    </element>
+    <element>
+      <path value="Sequence.structureVariant.outer.end"/>
+      <short value="Structural Variant Outer Start-End"/>
+      <definition value="Structural Variant Outer Start-End."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Sequence.structureVariant.outer.end"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="integer"/>
+      </type>
+      <isSummary value="true"/>
+    </element>
+    <element>
+      <path value="Sequence.structureVariant.inner"/>
+      <definition value="Structural variant inner."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Sequence.structureVariant.inner"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="BackboneElement"/>
+      </type>
+      <isSummary value="true"/>
+    </element>
+    <element>
+      <path value="Sequence.structureVariant.inner.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <definition value="unique id for the element within a resource (for internal references)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Element.id"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="id"/>
+      </type>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Sequence.structureVariant.inner.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <alias value="extensions"/>
+      <alias value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Element.extension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Sequence.structureVariant.inner.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <alias value="extensions"/>
+      <alias value="user content"/>
+      <alias value="modifiers"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="BackboneElement.modifierExtension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isModifier value="true"/>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Sequence.structureVariant.inner.start"/>
+      <short value="Structural Variant Inner Start-End"/>
+      <definition value="Structural Variant Inner Start-End."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Sequence.structureVariant.inner.start"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="integer"/>
+      </type>
+      <isSummary value="true"/>
+    </element>
+    <element>
+      <path value="Sequence.structureVariant.inner.end"/>
+      <short value="Structural Variant Inner Start-End"/>
+      <definition value="Structural Variant Inner Start-End."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Sequence.structureVariant.inner.end"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="integer"/>
+      </type>
+      <isSummary value="true"/>
+    </element>
+  </snapshot>
+  <differential>
+    <element>
+      <path value="Sequence"/>
+      <name value="Consensus-sequence-block"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Sequence"/>
+      </type>
+    </element>
+    <element>
+      <path value="Sequence.variation"/>
+      <min value="0"/>
+      <max value="1"/>
+    </element>
+    <element>
+      <path value="Sequence.extension"/>
+      <name value="PhaseSet"/>
+      <short value="Phase Set"/>
+      <definition value="A phase set identifier to associate different consensussequence-blocks."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/sequence-consensus-sequence-blockPhaseSet"/>
+      </type>
+    </element>
+    <element>
+      <path value="Sequence.extension"/>
+      <name value="ExpectedCopyNumber"/>
+      <short value="Expected Copy Number"/>
+      <definition value="To indicated how many copies of the sequence block was expected."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/sequence-consensus-sequence-blockExpectedCopyNumber"/>
+      </type>
+    </element>
+    <element>
+      <path value="Sequence.extension"/>
+      <name value="Continuity"/>
+      <short value="Continuity"/>
+      <definition value="A continuity flag to indicate whether a gap exists between blocks."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/sequence-consensus-sequence-blockContinuity"/>
+      </type>
+    </element>
+    <element>
+      <path value="Sequence.extension"/>
+      <name value="Strand"/>
+      <short value="Strand"/>
+      <definition value="Strand."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/sequence-consensus-sequence-blockStrand"/>
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

@@ -1,0 +1,59 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Measuremeasure-cdc> a fhir:Measure;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "measure-cdc"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "additional" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      Cohort definition for Comprehensive Diabetes Care.\n    </div>"
+  ];
+  fhir:Measure.moduleMetadata [
+     fhir:ModuleMetadata.identifier [
+       fhir:index 0;
+       fhir:Identifier.use [ fhir:value "official" ];
+       fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/cqi/ecqm/Measure/Identifier/payer-extract" ];
+       fhir:Identifier.value [ fhir:value "CDC" ]
+     ];
+     fhir:ModuleMetadata.version [ fhir:value "1.0.0" ];
+     fhir:ModuleMetadata.title [ fhir:value "Comprehensive Diabetes Care Cohort Definition" ];
+     fhir:ModuleMetadata.type [ fhir:value "module" ];
+     fhir:ModuleMetadata.status [ fhir:value "active" ];
+     fhir:ModuleMetadata.experimental [ fhir:value "true"^^xsd:boolean ];
+     fhir:ModuleMetadata.description [ fhir:value "Comprehensive Diabetes Care Cohort Definition" ];
+     fhir:ModuleMetadata.topic [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/c80-doc-typecodes" ];
+         fhir:Coding.code [ fhir:value "57024-2" ]
+       ]
+     ]
+  ];
+  fhir:Measure.library [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/Library/library-cdc>;
+     fhir:Reference.reference [ fhir:value "Library/library-cdc" ]
+  ];
+  fhir:Measure.scoring [ fhir:value "cohort"];
+  fhir:Measure.group [
+     fhir:index 0;
+     fhir:Measure.group.identifier [
+       fhir:Identifier.value [ fhir:value "CDC-cohort" ]
+     ];
+     fhir:Measure.group.population [
+       fhir:index 0;
+       fhir:Measure.group.population.type [ fhir:value "initial-population" ];
+       fhir:Measure.group.population.identifier [
+         fhir:Identifier.value [ fhir:value "initial-population-identifier" ]
+       ];
+       fhir:Measure.group.population.criteria [ fhir:value "CDC.\"In Demographic\"" ]
+     ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

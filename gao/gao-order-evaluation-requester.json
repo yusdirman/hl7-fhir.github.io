@@ -1,0 +1,76 @@
+{
+  "resourceType": "Conformance",
+  "id": "gao-order-evaluation-requester",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <h2>GAO Order Evaluation Requester</h2>\n      <p>The Order Evaluation Requester actor invokes the $evaluate operation to determine      whether an order is appropriate according to clinical guidelines.</p>\n      <table>\n        <tr>\n          <td>Mode</td>\n          <td>CLIENT</td>\n        </tr>\n        <tr>\n          <td>Description</td>\n          <td/>\n        </tr>\n        <tr>\n          <td>Transaction</td>\n          <td/>\n        </tr>\n        <tr>\n          <td>System History</td>\n          <td/>\n        </tr>\n        <tr>\n          <td>System Search</td>\n          <td/>\n        </tr>\n      </table>\n      <table>\n        <tr>\n          <th>\n            <b>Resource Type</b>\n          </th>\n          <th>\n            <b>Profile</b>\n          </th>\n          <th>\n            <b>Read</b>\n          </th>\n          <th>\n            <b>V-Read</b>\n          </th>\n          <th>\n            <b>Search</b>\n          </th>\n          <th>\n            <b>Update</b>\n          </th>\n          <th>\n            <b>Updates</b>\n          </th>\n          <th>\n            <b>Create</b>\n          </th>\n          <th>\n            <b>Delete</b>\n          </th>\n          <th>\n            <b>History</b>\n          </th>\n        </tr>\n        <tr>\n          <td>Order</td>\n          <td>\n            <a href=\"http://hl7.org/fhir/StructureDefinition/gao-order\">http://hl7.org/fhir/StructureDefinition/gao-order</a>\n          </td>\n          <td>y</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n      </table>\n    </div>"
+  },
+  "url": "http://hl7.org/fhir/Conformance/gao-order-evaluation-requester",
+  "name": "GAO Order Evaluation Requester",
+  "status": "draft",
+  "experimental": false,
+  "date": "2015-11-19",
+  "publisher": "HL7",
+  "description": "The Order Evaluation Requester actor invokes the $evaluate operation to determine      whether an order is appropriate according to clinical guidelines.",
+  "requirements": "An Order Evaluation Requestor actor must implement the requirements expressed in this conformance resource.",
+  "kind": "requirements",
+  "fhirVersion": "1.4.0",
+  "acceptUnknown": "extensions",
+  "format": [
+    "xml",
+    "json"
+  ],
+  "profile": [
+    {
+      "reference": "http://hl7.org/fhir/StructureDefinition/gao-order"
+    },
+    {
+      "reference": "http://hl7.org/fhir/StructureDefinition/gao-questionnaireresponse"
+    },
+    {
+      "reference": "http://hl7.org/fhir/StructureDefinition/gao-diagnosticorder"
+    },
+    {
+      "reference": "http://hl7.org/fhir/StructureDefinition/gao-medicationorder"
+    },
+    {
+      "reference": "http://hl7.org/fhir/StructureDefinition/gao-referralrequest"
+    },
+    {
+      "reference": "http://hl7.org/fhir/StructureDefinition/gao-procedurerequest"
+    },
+    {
+      "reference": "http://hl7.org/fhir/StructureDefinition/gao-patient"
+    },
+    {
+      "reference": "http://hl7.org/fhir/StructureDefinition/gao-practitioner"
+    }
+  ],
+  "rest": [
+    {
+      "mode": "client",
+      "resource": [
+        {
+          "type": "Order",
+          "profile": {
+            "reference": "http://hl7.org/fhir/StructureDefinition/gao-order"
+          },
+          "interaction": [
+            {
+              "code": "read",
+              "documentation": "A Order Evaluation Requestor invoke the $evaluate operation on Order.             At present, there is no way to express this in the Interaction component in a compliance resource."
+            }
+          ]
+        }
+      ],
+      "operation": [
+        {
+          "name": "GAO Evaluate Order",
+          "definition": {
+            "reference": "http://hl7.org/fhir/OperationDefinition/gao-order-evaluate"
+          }
+        }
+      ]
+    }
+  ]
+}

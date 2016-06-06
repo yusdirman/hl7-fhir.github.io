@@ -1,0 +1,141 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Observation",
+  "resourceType": "Observation",
+  "Resource.id": {
+    "value": "obs-uslab-example4"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: obs-uslab-example4</p><p><b>identifier</b>: lab test result ID = 4567 (OFFICIAL)</p><p><b>status</b>: final</p><p><b>code</b>: Dengue IgM Titer <span>(Details : {LOINC code '6812-2' = 'Dengue virus IgM Ab [Titer] in Serum', given as 'Dengue virus IgM Ab [Titer] in Serum'}; {urn:oid:2.16.840.1.113883.3.72.5.24 code 'DGIGM' = '??', given as 'Dengue IgM QN'})</span></p><p><b>subject</b>: <a>Todd Lerr</a></p><p><b>effective</b>: Dec 5, 2014</p><p><b>issued</b>: Dec 6, 2014 3:42:15 PM</p><p><b>performer</b>: <a>Dr Leonard T Bloodraw Jr</a></p><p><b>value</b>: 1/256</p><p><b>interpretation</b>: High <span>(Details : {http://hl7.org/fhir/v2/0078 code 'H' = 'High)</span></p><p><b>specimen</b>: <a>Bloo sample</a></p><h3>ReferenceRanges</h3><table><tr><td>-</td><td><b>Text</b></td></tr><tr><td>*</td><td>&lt;1:64</td></tr></table></div>"
+    }
+  },
+  "DomainResource.extension": [
+    {
+      "Extension.url": {
+        "value": "http://hl7.org/fhir/StructureDefinition/uslab-observationkind"
+      },
+      "Extension.valueCode": {
+        "value": "result"
+      }
+    }
+  ],
+  "Observation.identifier": [
+    {
+      "Identifier.use": {
+        "value": "official"
+      },
+      "Identifier.type": {
+        "CodeableConcept.text": {
+          "value": "lab test result ID"
+        }
+      },
+      "Identifier.system": {
+        "value": "http://lis.acmelabs.org/identifiers/labtestresult"
+      },
+      "Identifier.value": {
+        "value": "4567"
+      }
+    }
+  ],
+  "Observation.status": {
+    "value": "final"
+  },
+  "Observation.code": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://loinc.org"
+        },
+        "Coding.code": {
+          "value": "6812-2"
+        },
+        "Coding.display": {
+          "value": "Dengue virus IgM Ab [Titer] in Serum"
+        }
+      },
+      {
+        "Coding.system": {
+          "value": "urn:oid:2.16.840.1.113883.3.72.5.24"
+        },
+        "Coding.code": {
+          "value": "DGIGM"
+        },
+        "Coding.display": {
+          "value": "Dengue IgM QN"
+        }
+      }
+    ],
+    "CodeableConcept.text": {
+      "value": "Dengue IgM Titer"
+    },
+    "concept": "http://loinc.org/owl#6812-2"
+  },
+  "Observation.subject": {
+    "Reference.reference": {
+      "value": "Patient/patient-uslab-example1"
+    },
+    "Reference.display": {
+      "value": "Todd Lerr"
+    },
+    "reference": "http://hl7.org/fhir//Patient/patient-uslab-example1"
+  },
+  "Observation.effectiveDateTime": {
+    "value": "2014-12-05"
+  },
+  "Observation.issued": {
+    "value": "2014-12-06T15:42:15-08:00"
+  },
+  "Observation.performer": [
+    {
+      "Reference.reference": {
+        "value": "Practitioner/pract-uslab-example1"
+      },
+      "Reference.display": {
+        "value": "Dr Leonard T Bloodraw Jr"
+      }
+    }
+  ],
+  "Observation.valueRatio": {
+    "Ratio.numerator": {
+      "Quantity.value": {
+        "value": 1
+      }
+    },
+    "Ratio.denominator": {
+      "Quantity.value": {
+        "value": 256
+      }
+    }
+  },
+  "Observation.interpretation": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/v2/0078"
+        },
+        "Coding.code": {
+          "value": "H"
+        }
+      }
+    ]
+  },
+  "Observation.specimen": {
+    "Reference.reference": {
+      "value": "Specimen/spec-uslab-example1"
+    },
+    "Reference.display": {
+      "value": "Bloo sample"
+    },
+    "reference": "http://hl7.org/fhir//Specimen/spec-uslab-example1"
+  },
+  "Observation.referenceRange": [
+    {
+      "Observation.referenceRange.text": {
+        "value": "<1:64"
+      }
+    }
+  ]
+}

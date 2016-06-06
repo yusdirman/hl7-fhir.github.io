@@ -1,0 +1,52 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/EnrollmentResponse",
+  "resourceType": "EnrollmentResponse",
+  "Resource.id": {
+    "value": "ER2500"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">A human-readable rendering of the EnrollmentResponse</div>"
+    }
+  },
+  "EnrollmentResponse.identifier": [
+    {
+      "Identifier.system": {
+        "value": "http://www.BenefitsInc.com/fhir/enrollmentresponse"
+      },
+      "Identifier.value": {
+        "value": "781234"
+      }
+    }
+  ],
+  "EnrollmentResponse.request": {
+    "Reference.reference": {
+      "value": "http://www.BenefitsInc.com/fhir/eligibility/225476332402"
+    },
+    "reference": "http://www.BenefitsInc.com/fhir/eligibility/225476332402"
+  },
+  "EnrollmentResponse.outcome": {
+    "value": "complete"
+  },
+  "EnrollmentResponse.disposition": {
+    "value": "Dependant added to policy."
+  },
+  "EnrollmentResponse.created": {
+    "value": "2014-08-16"
+  },
+  "EnrollmentResponse.organization": {
+    "Reference.reference": {
+      "value": "Organization/2"
+    },
+    "reference": "http://hl7.org/fhir//Organization/2"
+  },
+  "EnrollmentResponse.requestOrganization": {
+    "Reference.reference": {
+      "value": "Organization/1"
+    },
+    "reference": "http://hl7.org/fhir//Organization/1"
+  }
+}

@@ -1,0 +1,227 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "CS",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+      "valueUri": "urn:hl7-org:v3"
+    }
+  ],
+  "url": "http://hl7.org/fhir/StructureDefinition/CS",
+  "name": "V3 Data type CS (CodedSimpleValue)",
+  "display": "V3 Data type CS (CodedSimpleValue)",
+  "status": "active",
+  "experimental": false,
+  "publisher": "HL7",
+  "description": "XCoded data in its simplest form, where only the code is not predetermined. The code system and code system version are fixed by the context in which the CS value occurs. CS is used for coded attributes that have a single HL7-defined value set.",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/CV",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "path": "CS",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "CS.nullFlavor",
+        "representation": [
+          "xmlAttr"
+        ],
+        "label": "Exceptional Value Detail",
+        "definition": "If a value is an exceptional value (NULL-value), this specifies in what way and why proper information is missing.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/v3-NullFlavor"
+          }
+        }
+      },
+      {
+        "path": "CS.code",
+        "representation": [
+          "xmlAttr"
+        ],
+        "label": "Code",
+        "definition": "The plain code symbol defined by the code system. For example, \"784.0\" is the code symbol of the ICD-9 code \"784.0\" for headache.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "CS.codeSystem",
+        "representation": [
+          "xmlAttr"
+        ],
+        "label": "Code System",
+        "definition": "Specifies the code system that defines the code.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "CS.codeSystemName",
+        "representation": [
+          "xmlAttr"
+        ],
+        "label": "Code System Name",
+        "definition": "The common name of the coding system.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "CS.codeSystemVersion",
+        "representation": [
+          "xmlAttr"
+        ],
+        "label": "Code System Version",
+        "definition": "If applicable, a version descriptor defined specifically for the given code system.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "CS.displayName",
+        "representation": [
+          "xmlAttr"
+        ],
+        "label": "Display Name",
+        "definition": "A name or title for the code, under which the sending system shows the code value to its users.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "CS.originalText",
+        "label": "Original Text",
+        "definition": "The text or phrase used as the basis for the coding.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "ED"
+          }
+        ]
+      },
+      {
+        "path": "CS.translation",
+        "label": "Translation",
+        "definition": "A set of other concept descriptors that translate this concept descriptor into other code systems.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CD"
+          }
+        ]
+      },
+      {
+        "path": "CS.qualifier",
+        "label": "Qualifier",
+        "definition": "Specifies additional codes that increase the specificity of the the primary code.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CR"
+          }
+        ]
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+            "valueUri": "urn:hl7-org:sdtc"
+          }
+        ],
+        "path": "CS.valueSetVersion",
+        "representation": [
+          "xmlAttr"
+        ],
+        "definition": "The valueSetVersion extension adds an attribute for elements with a CD dataType which indicates the version of the particular value set constraining the coded concept.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "CS.value",
+        "representation": [
+          "xmlAttr"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "path": "CS",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "CS.value",
+        "representation": [
+          "xmlAttr"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      }
+    ]
+  }
+}

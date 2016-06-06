@@ -1,0 +1,53 @@
+{
+  "resourceType": "ValueSet",
+  "id": "hspc-TiterLabCodes",
+  "meta": {
+    "lastUpdated": "2016-06-06T20:14:04.181+00:00",
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>HSPC Titer Labs</h2><p>Ordinal LOINC codes used in HSPC</p><p><b>Copyright Statement:</b> This content LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use</p><p>This value set includes codes from the following code systems:</p><ul><li>Include codes from http://loinc.org where PROPERTY  =  Titr</li></ul></div>"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/valueset-oid",
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.700"
+    }
+  ],
+  "url": "http://hl7.org/fhir/ValueSet/hspc-TiterLabCodes",
+  "version": "1.4.0",
+  "name": "HSPC Titer Labs",
+  "status": "draft",
+  "experimental": true,
+  "publisher": "HSPC",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "other",
+          "value": "http://healthcaresoa.org"
+        }
+      ]
+    }
+  ],
+  "date": "2015-02-20T13:44:49+11:00",
+  "description": "Ordinal LOINC codes used in HSPC",
+  "copyright": "This content LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use",
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "filter": [
+          {
+            "property": "PROPERTY",
+            "op": "=",
+            "value": "Titr"
+          }
+        ]
+      }
+    ]
+  }
+}

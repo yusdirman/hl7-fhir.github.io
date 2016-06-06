@@ -1,0 +1,191 @@
+{
+  "resourceType": "Parameters",
+  "id": "example-gao-response-parameters-CT-Head-Outside-Of-Guidelines",
+  "parameter": [
+    {
+      "name": "order",
+      "resource": {
+        "resourceType": "Order",
+        "id": "order",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/gao-order"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <p>A 50-year-old male is ordered a CT of the Head for his headache by an identified practitioner.</p>\n          </div>"
+        },
+        "contained": [
+          {
+            "resourceType": "Patient",
+            "id": "patient",
+            "meta": {
+              "profile": [
+                "http://hl7.org/fhir/StructureDefinition/gao-patient"
+              ]
+            },
+            "gender": "male",
+            "birthDate": "1965-11-20"
+          },
+          {
+            "resourceType": "Practitioner",
+            "id": "practitioner",
+            "meta": {
+              "profile": [
+                "http://hl7.org/fhir/StructureDefinition/gao-practitioner"
+              ]
+            },
+            "identifier": [
+              {
+                "system": "http://hl7.org/fhir/sid/us-npi",
+                "value": "9999999999"
+              }
+            ]
+          },
+          {
+            "resourceType": "DiagnosticOrder",
+            "id": "diagnosticorder",
+            "meta": {
+              "profile": [
+                "http://hl7.org/fhir/StructureDefinition/gao-diagnosticorder"
+              ]
+            },
+            "subject": {
+              "reference": "order#patient"
+            },
+            "orderer": {
+              "reference": "order#practitioner"
+            },
+            "item": [
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://loinc.org",
+                      "code": "30799-1",
+                      "display": "Head CT WO contrast"
+                    }
+                  ],
+                  "text": "CT Head without contrast"
+                }
+              }
+            ]
+          }
+        ],
+        "identifier": [
+          {
+            "system": "http://example.com/OrderIdentifier",
+            "value": "123"
+          }
+        ],
+        "date": "2015-11-20",
+        "subject": {
+          "reference": "#patient"
+        },
+        "source": {
+          "reference": "#practitioner"
+        },
+        "reasonCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://example.com",
+              "code": "x"
+            }
+          ],
+          "text": "Headache"
+        },
+        "detail": [
+          {
+            "reference": "#diagnosticorder"
+          }
+        ]
+      }
+    },
+    {
+      "name": "result",
+      "resource": {
+        "resourceType": "Basic",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/gao-result"
+          ]
+        },
+        "text": {
+          "status": "extensions",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <p>CT Head outside of guidelines for headache.</p>\n          </div>"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/gao-extension-score",
+            "valueDecimal": 3
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/gao-extension-item",
+            "extension": [
+              {
+                "url": "code",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://loinc.org",
+                      "code": "30799-1",
+                      "display": "Head CT WO contrast"
+                    }
+                  ],
+                  "text": "CT Head without contrast"
+                }
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/gao-extension-device",
+            "valueReference": {
+              "reference": "dss"
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/gao-extension-practitioner",
+            "valueReference": {
+              "reference": "order#practitioner"
+            }
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/evaluation-result-code",
+              "code": "outside",
+              "display": "Outside Guidelines"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "order"
+        }
+      }
+    },
+    {
+      "name": "dss",
+      "resource": {
+        "resourceType": "Device",
+        "id": "dss",
+        "identifier": [
+          {
+            "system": "http://example.com/RegisteredDecisionSupportId",
+            "value": "456"
+          }
+        ],
+        "type": {
+          "coding": [
+            {
+              "system": "http://ncimeta.nci.nih.gov",
+              "code": "C1961478",
+              "display": "Information Systems, Decision Support, Clinical"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

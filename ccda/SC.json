@@ -1,0 +1,195 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "SC",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+      "valueUri": "urn:hl7-org:v3"
+    }
+  ],
+  "url": "http://hl7.org/fhir/StructureDefinition/SC",
+  "name": "V3 Data type SC (CharacterStringWithCode)",
+  "display": "V3 Data type SC (CharacterStringWithCode)",
+  "status": "active",
+  "experimental": false,
+  "publisher": "HL7",
+  "description": "A character string that optionally may have a code attached. The text must always be present if a code is present. The code is often a local code.",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/ST",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "path": "SC",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "SC.nullFlavor",
+        "representation": [
+          "xmlAttr"
+        ],
+        "label": "Exceptional Value Detail",
+        "definition": "If a value is an exceptional value (NULL-value), this specifies in what way and why proper information is missing.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/v3-NullFlavor"
+          }
+        }
+      },
+      {
+        "path": "SC.value",
+        "representation": [
+          "xmlText"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "SC.code",
+        "representation": [
+          "xmlAttr"
+        ],
+        "label": "Code",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "SC.codeSystem",
+        "representation": [
+          "xmlAttr"
+        ],
+        "label": "Code System",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "SC.codeSystemVersion",
+        "representation": [
+          "xmlAttr"
+        ],
+        "label": "Code System Version",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "SC.displayName",
+        "representation": [
+          "xmlAttr"
+        ],
+        "label": "Display Name",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "path": "SC",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "SC.code",
+        "representation": [
+          "xmlAttr"
+        ],
+        "label": "Code",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "SC.codeSystem",
+        "representation": [
+          "xmlAttr"
+        ],
+        "label": "Code System",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "SC.codeSystemVersion",
+        "representation": [
+          "xmlAttr"
+        ],
+        "label": "Code System Version",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "SC.displayName",
+        "representation": [
+          "xmlAttr"
+        ],
+        "label": "Display Name",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      }
+    ]
+  }
+}

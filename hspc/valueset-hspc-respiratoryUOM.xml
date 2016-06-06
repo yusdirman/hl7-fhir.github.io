@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="hspc-respiratoryUOM"/>
+  <meta>
+    <lastUpdated value="2016-06-06T20:14:04.181+00:00"/>
+    <profile value="http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"/>
+  </meta>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <h2>HSPC Respiratory Rate Units of Measure Value Set</h2>
+      <p>The list of codes that describe the units of measure used for respiratory rate.</p>
+      <p>
+        <b>Copyright Statement:</b> This value set includes content from UCUM. Implementer use of UCUM is not covered by this agreement
+      </p>
+      <p>This value set includes codes from the following code systems:</p>
+      <ul>
+        <li>Include these codes as defined in http://unitsofmeasure.org
+          <table>
+            <tr>
+              <td>
+                <b>Code</b>
+              </td>
+              <td>
+                <b>Display</b>
+              </td>
+            </tr>
+            <tr>
+              <td>Hz</td>
+              <td>Hertz</td>
+              <td/>
+            </tr>
+            <tr>
+              <td>{Breaths}/min</td>
+              <td>Breaths / minute</td>
+              <td/>
+            </tr>
+          </table>
+        </li>
+      </ul>
+    </div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/valueset-oid">
+    <valueUri value="urn:oid:2.16.840.1.113883.4.642.2.720"/>
+  </extension>
+  <url value="http://hl7.org/fhir/ValueSet/hspc-respiratoryUOM"/>
+  <version value="1.4.0"/>
+  <name value="HSPC Respiratory Rate Units of Measure Value Set"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <publisher value="HSPC"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="http://healthcaresoa.org"/>
+    </telecom>
+  </contact>
+  <date value="2016-06-06T20:14:04+00:00"/>
+  <description value="The list of codes that describe the units of measure used for respiratory rate."/>
+  <copyright value="This value set includes content from UCUM. Implementer use of UCUM is not covered by this agreement"/>
+  <compose>
+    <include>
+      <system value="http://unitsofmeasure.org"/>
+      <concept>
+        <code value="Hz"/>
+        <display value="Hertz"/>
+      </concept>
+      <concept>
+        <code value="{Breaths}/min"/>
+        <display value="Breaths / minute"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

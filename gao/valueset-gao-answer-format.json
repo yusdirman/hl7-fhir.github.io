@@ -1,0 +1,39 @@
+{
+  "resourceType": "ValueSet",
+  "id": "gao-answer-format",
+  "meta": {
+    "lastUpdated": "2016-06-06T20:14:04.181+00:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>GAO Answer Format</h2><p>Codes indicating the types of questions allowed in a questionnaire for evaluation of orders against guidelines.</p><p>This value set includes codes from the following code systems:</p><ul><li>Import all the codes that are contained in <a href=\"../valueset-item-type.html\">http://hl7.org/fhir/ValueSet/item-type</a></li><li>Exclude these codes as defined in <a href=\"../codesystem-item-type.html\">http://hl7.org/fhir/item-type</a><table><tr><td><b>Code</b></td><td><b>Display</b></td></tr><tr><td>reference</td><td>Reference</td><td>Question with a reference to another resource (practitioner, organization, etc.) as an answer</td></tr><tr><td>attachment</td><td>Attachment</td><td>Question with binary content such as a image, PDF, etc. as an answer</td></tr></table></li></ul></div>"
+  },
+  "url": "http://hl7.org/fhir/ValueSet/gao-answer-format",
+  "version": "1.0.0",
+  "name": "GAO Answer Format",
+  "status": "draft",
+  "experimental": false,
+  "publisher": "HL7",
+  "description": "Codes indicating the types of questions allowed in a questionnaire for evaluation of orders against guidelines.",
+  "immutable": false,
+  "requirements": "Limits the questions to the kinds of questions commonly supported by clinical decision support systems.",
+  "extensible": false,
+  "compose": {
+    "import": [
+      "http://hl7.org/fhir/ValueSet/item-type"
+    ],
+    "exclude": [
+      {
+        "system": "http://hl7.org/fhir/item-type",
+        "concept": [
+          {
+            "code": "reference"
+          },
+          {
+            "code": "attachment"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Substance",
+  "resourceType": "Substance",
+  "Resource.id": {
+    "value": "example"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: example</p><p><b>identifier</b>: 1463</p><p><b>category</b>: Allergen <span>(Details : {http://hl7.org.fhir/substance-category code 'allergen' = '??', given as 'Allergen'})</span></p><p><b>code</b>: apitoxin (Honey Bee Venom) <span>(Details )</span></p></div>"
+    }
+  },
+  "Substance.identifier": [
+    {
+      "Identifier.system": {
+        "value": "http://acme.org/indentifiers/substances"
+      },
+      "Identifier.value": {
+        "value": "1463"
+      }
+    }
+  ],
+  "Substance.category": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "value": "http://hl7.org.fhir/substance-category"
+          },
+          "Coding.code": {
+            "value": "allergen"
+          },
+          "Coding.display": {
+            "value": "Allergen"
+          }
+        }
+      ]
+    }
+  ],
+  "Substance.code": {
+    "CodeableConcept.text": {
+      "value": "apitoxin (Honey Bee Venom)"
+    }
+  }
+}

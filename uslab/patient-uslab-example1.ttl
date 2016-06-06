@@ -1,0 +1,79 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Patientpatient-uslab-example1> a fhir:Patient;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "patient-uslab-example1"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: patient-uslab-example1</p><p><b>identifier</b>: 18547545 (USUAL)</p><p><b>name</b>: Todd G. Lerr (OFFICIAL)</p><p><b>gender</b>: male</p><p><b>birthDate</b>: Jun 7, 2012</p><p><b>deceased</b>: false</p><p><b>address</b>: 123 North 102nd Street Apt 4d Harrisburg PA 17102 USA (HOME)</p></div>"
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/us-core-race" ];
+     fhir:Extension.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.code [ fhir:value "2106-3" ]
+       ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/us-core-ethnicity" ];
+     fhir:Extension.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.code [ fhir:value "2135-2" ]
+       ]
+     ]
+  ];
+  fhir:Patient.identifier [
+     fhir:index 0;
+     fhir:Identifier.use [ fhir:value "usual" ];
+     fhir:Identifier.system [ fhir:value "urn:oid:2.16.840.1.113883.3.72.5.30.2" ];
+     fhir:Identifier.value [ fhir:value "18547545" ]
+  ];
+  fhir:Patient.name [
+     fhir:index 0;
+     fhir:HumanName.use [ fhir:value "official" ];
+     fhir:HumanName.family [
+       fhir:value "Lerr";
+       fhir:index 0
+     ];
+     fhir:HumanName.given [
+       fhir:value "Todd";
+       fhir:index 0
+     ], [
+       fhir:value "G.";
+       fhir:index 1
+     ];
+     fhir:HumanName.suffix [
+       fhir:value "Jr";
+       fhir:index 0
+     ]
+  ];
+  fhir:Patient.gender [ fhir:value "male"];
+  fhir:Patient.birthDate [ fhir:value "2012-06-07"^^xsd:date];
+  fhir:Patient.deceasedBoolean [ fhir:value "false"^^xsd:boolean];
+  fhir:Patient.address [
+     fhir:index 0;
+     fhir:Address.use [ fhir:value "home" ];
+     fhir:Address.line [
+       fhir:value "123 North 102nd Street";
+       fhir:index 0
+     ], [
+       fhir:value "Apt 4d";
+       fhir:index 1
+     ];
+     fhir:Address.city [ fhir:value "Harrisburg" ];
+     fhir:Address.state [ fhir:value "PA" ];
+     fhir:Address.postalCode [ fhir:value "17102" ];
+     fhir:Address.country [ fhir:value "USA" ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

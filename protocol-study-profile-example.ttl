@@ -1,0 +1,466 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Protocolstudy> a fhir:Protocol;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "study"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n			<p>\n				<b>id: </b>study, </p>\n			<p>\n				<b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#arm arm-dose1, </p>\n			<p>\n				<b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#arm arm-dose2, </p>\n			<p>\n				<b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#epoch epoch-screening, </p>\n			<p>\n				<b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#epoch epoch-single-blind-run-in, </p>\n			<p>\n				<b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#epoch epoch-treatment-phase, </p>\n			<p>\n				<b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#epoch epoch-follow-up, </p>\n			<p>\n				<b>status: </b>active, </p>\n			<p>\n				<b>type: </b>study, </p>\n			<p>\n				<b>purpose: </b>Defines the execution of study AD-4833PNFP-341, </p>\n			<p>\n				<b>step: </b>, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.arm, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.epoch, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence, <b>name: </b>SCRN, <b>description: </b>Screen, <b>precondition: </b>, <b>description: </b>Informed Consent, <b>exit: </b>, <b>description: </b>Screening assessments complete, </p>\n			<p>\n				<b>step: </b>, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.arm, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.epoch, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.armAssignment, <b>name: </b>SBRI, <b>description: </b>Single Blind Run-In, <b>duration: </b>, <b>value: </b>1, <b>system: </b>http://unitsofmeasure.org, <b>code: </b>wk, <b>precondition: </b>, <b>description: </b>Initial Single Blind Placebo dose, <b>exit: </b>, <b>description: </b>1 week after start of Element, </p>\n			<p>\n				<b>step: </b>, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.arm, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.epoch, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence, <b>name: </b>DOSE 1, <b>description: </b>Administer 0.5mg [Drug A] QD, <b>duration: </b>, <b>value: </b>30, <b>system: </b>http://unitsofmeasure.org, <b>code: </b>wk, <b>precondition: </b>, <b>description: </b>First dose of treatment where total drug dose of [Drug A] per day is 0.5 mg., <b>exit: </b>, <b>description: </b>30 weeks after start of Element, </p>\n			<p>\n				<b>step: </b>, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.arm, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.epoch, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence, <b>name: </b>FLWUP, <b>description: </b>Follow-Up, <b>precondition: </b>, <b>description: </b>Last dose of treatment, <b>exit: </b>, <b>description: </b>2 weeks after start of Element, </p>\n			<p>\n				<b>step: </b>, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.arm, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.epoch, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence, <b>name: </b>SCRN, <b>description: </b>Screen, <b>precondition: </b>, <b>description: </b>Informed Consent, <b>exit: </b>, <b>description: </b>Screening assessments complete, </p>\n			<p>\n				<b>step: </b>, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.arm, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.epoch, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.armAssignment, <b>name: </b>SBRI, <b>description: </b>Single Blind Run-In, <b>duration: </b>, <b>value: </b>1, <b>system: </b>http://unitsofmeasure.org, <b>code: </b>wk, <b>precondition: </b>, <b>description: </b>First dose of Single Blind Placebo, <b>exit: </b>, <b>description: </b>1 week after start of Element, </p>\n			<p>\n				<b>step: </b>, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.arm, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.epoch, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence, <b>name: </b>1.0 mg Dose, <b>description: </b>Administer 1.0 mg [Drug A] QD, <b>duration: </b>, <b>value: </b>30, <b>system: </b>http://unitsofmeasure.org, <b>code: </b>wk, <b>precondition: </b>, <b>description: </b>Intial dose of treatment where total drug dose of [Drug A] per day is 1.0 mg., <b>exit: </b>, <b>description: </b>30 weeks after start of Element, </p>\n			<p>\n				<b>step: </b>, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.arm, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.epoch, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence, <b>name: </b>FLWUP, <b>description: </b>Follow-Up, <b>precondition: </b>, <b>description: </b>Last dose of treatment, <b>exit: </b>, <b>description: </b>2 weeks after start of Element, </p>\n			<p>\n				<b>step: </b>, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence, <b>name: </b>VISIT 1, <b>precondition: </b>, <b>description: </b>Screening, <b>activity: </b>, <b>detail: </b>, <b>category: </b>encounter, </p>\n			<p>\n				<b>step: </b>, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence, <b>name: </b>VISIT 2, <b>precondition: </b>, <b>description: </b>single-blind placebo start, <b>activity: </b>, <b>detail: </b>, <b>category: </b>encounter, </p>\n			<p>\n				<b>step: </b>, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence, <b>name: </b>VISIT 3, <b>precondition: </b>, <b>description: </b>Treatment start, <b>activity: </b>, <b>detail: </b>, <b>category: </b>encounter, </p>\n			<p>\n				<b>step: </b>, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence, <b>name: </b>VISIT 4, <b>precondition: </b>, <b>description: </b>5 weeks after treatment start, <b>activity: </b>, <b>detail: </b>, <b>category: </b>encounter, </p>\n			<p>\n				<b>step: </b>, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence, <b>name: </b>VISIT 5, <b>precondition: </b>, <b>description: </b>10 weeks after treatment start, <b>activity: </b>, <b>detail: </b>, <b>category: </b>encounter, </p>\n			<p>\n				<b>step: </b>, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence, <b>name: </b>VISIT 6, <b>precondition: </b>, <b>description: </b>15 weeks after treatment start, <b>activity: </b>, <b>detail: </b>, <b>category: </b>encounter, </p>\n			<p>\n				<b>step: </b>, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence, <b>name: </b>VISIT 7, <b>precondition: </b>, <b>description: </b>20 weeks after treatment start, <b>activity: </b>, <b>detail: </b>, <b>category: </b>encounter, </p>\n			<p>\n				<b>step: </b>, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence, <b>name: </b>VISIT 8, <b>precondition: </b>, <b>description: </b>25 weeks after treatment start, <b>activity: </b>, <b>detail: </b>, <b>category: </b>encounter, </p>\n			<p>\n				<b>step: </b>, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence, <b>name: </b>VISIT 9, <b>precondition: </b>, <b>description: </b>30 weeks after treatment start, <b>activity: </b>, <b>detail: </b>, <b>category: </b>encounter, </p>\n			<p>\n				<b>step: </b>, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence, <b>name: </b>VISIT 10, <b>precondition: </b>, <b>description: </b>start of follow-up, <b>activity: </b>, <b>detail: </b>, <b>category: </b>encounter, </p>\n		</div>"
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Element.id [ fhir:value "arm-dose1" ];
+     fhir:Extension.url [ fhir:value "http://example.org/example-do-not-use/Profilestudyprotocol#arm" ];
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://example.org/example-do-not-use/Profilestudyprotocol#arm.name" ];
+       fhir:Extension.valueString [ fhir:value "0.5 mg Dose" ]
+     ], [
+       fhir:index 1;
+       fhir:Extension.url [ fhir:value "http://example.org/example-do-not-use/Profilestudyprotocol#arm.description" ];
+       fhir:Extension.valueString [ fhir:value "Administering 0.5mg of [Drug A]" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Element.id [ fhir:value "arm-dose2" ];
+     fhir:Extension.url [ fhir:value "http://example.org/example-do-not-use/Profilestudyprotocol#arm" ];
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://example.org/example-do-not-use/Profilestudyprotocol#arm.name" ];
+       fhir:Extension.valueString [ fhir:value "dose2" ]
+     ], [
+       fhir:index 1;
+       fhir:Extension.url [ fhir:value "http://example.org/example-do-not-use/Profilestudyprotocol#arm.description" ];
+       fhir:Extension.valueString [ fhir:value "Administering 1.0mg of [Drug A]" ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:Element.id [ fhir:value "epoch-screening" ];
+     fhir:Extension.url [ fhir:value "http://example.org/example-do-not-use/Profilestudyprotocol#epoch" ];
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://example.org/example-do-not-use/Profilestudyprotocol#epoch.name" ];
+       fhir:Extension.valueString [ fhir:value "Screening" ]
+     ]
+  ], [
+     fhir:index 3;
+     fhir:Element.id [ fhir:value "epoch-single-blind-run-in" ];
+     fhir:Extension.url [ fhir:value "http://example.org/example-do-not-use/Profilestudyprotocol#epoch" ];
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://example.org/example-do-not-use/Profilestudyprotocol#epoch.name" ];
+       fhir:Extension.valueString [ fhir:value "Single blind run-in" ]
+     ]
+  ], [
+     fhir:index 4;
+     fhir:Element.id [ fhir:value "epoch-treatment-phase" ];
+     fhir:Extension.url [ fhir:value "http://example.org/example-do-not-use/Profilestudyprotocol#epoch" ];
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://example.org/example-do-not-use/Profilestudyprotocol#epoch.name" ];
+       fhir:Extension.valueString [ fhir:value "Treatment" ]
+     ]
+  ], [
+     fhir:index 5;
+     fhir:Element.id [ fhir:value "epoch-follow-up" ];
+     fhir:Extension.url [ fhir:value "http://example.org/example-do-not-use/Profilestudyprotocol#epoch" ];
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://example.org/example-do-not-use/Profilestudyprotocol#epoch.name" ];
+       fhir:Extension.valueString [ fhir:value "Follow up" ]
+     ]
+  ];
+  fhir:Protocol.status [ fhir:value "active"];
+  fhir:Protocol.type [ fhir:value "study"];
+  fhir:Protocol.purpose [ fhir:value "Defines the execution of study AD-4833PNFP-341"];
+  fhir:Protocol.step [
+     fhir:index 0;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://example.org/example-do-not-use/Profilestudyprotocol#step.arm" ];
+       fhir:Extension.valueUri [ fhir:value "#arm-dose1" ]
+     ], [
+       fhir:index 1;
+       fhir:Extension.url [ fhir:value "http://example.org/example-do-not-use/Profilestudyprotocol#step.epoch" ];
+       fhir:Extension.valueUri [ fhir:value "#epoch-screening" ]
+     ], [
+       fhir:index 2;
+       fhir:Extension.url [ fhir:value "http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence" ];
+       fhir:Extension.valueInteger [ fhir:value "1"^^xsd:int ]
+     ];
+     fhir:Protocol.step.name [ fhir:value "SCRN" ];
+     fhir:Protocol.step.description [ fhir:value "Screen" ];
+     fhir:Protocol.step.precondition [
+       fhir:Protocol.step.precondition.description [ fhir:value "Informed Consent" ]
+     ];
+     fhir:Protocol.step.exit [
+       fhir:Protocol.step.precondition.description [ fhir:value "Screening assessments complete" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://example.org/example-do-not-use/Profilestudyprotocol#step.arm" ];
+       fhir:Extension.valueUri [ fhir:value "#arm-dose1" ]
+     ], [
+       fhir:index 1;
+       fhir:Extension.url [ fhir:value "http://example.org/example-do-not-use/Profilestudyprotocol#step.epoch" ];
+       fhir:Extension.valueUri [ fhir:value "#epoch-single-blind-run-in" ]
+     ], [
+       fhir:index 2;
+       fhir:Extension.url [ fhir:value "http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence" ];
+       fhir:Extension.valueInteger [ fhir:value "2"^^xsd:int ]
+     ], [
+       fhir:index 3;
+       fhir:Extension.url [ fhir:value "http://example.org/example-do-not-use/Profilestudyprotocol#step.armAssignment" ];
+       fhir:Extension.valueString [ fhir:value "Randomized to Dose 1" ]
+     ];
+     fhir:Protocol.step.name [ fhir:value "SBRI" ];
+     fhir:Protocol.step.description [ fhir:value "Single Blind Run-In" ];
+     fhir:Protocol.step.duration [
+       fhir:Quantity.value [ fhir:value "1"^^xsd:decimal ];
+       fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+       fhir:Quantity.code [ fhir:value "wk" ]
+     ];
+     fhir:Protocol.step.precondition [
+       fhir:Protocol.step.precondition.description [ fhir:value "Initial Single Blind Placebo dose" ]
+     ];
+     fhir:Protocol.step.exit [
+       fhir:Protocol.step.precondition.description [ fhir:value "1 week after start of Element" ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://example.org/example-do-not-use/Profilestudyprotocol#step.arm" ];
+       fhir:Extension.valueUri [ fhir:value "#arm-dose1" ]
+     ], [
+       fhir:index 1;
+       fhir:Extension.url [ fhir:value "http://example.org/example-do-not-use/Profilestudyprotocol#step.epoch" ];
+       fhir:Extension.valueUri [ fhir:value "#epoch-treatment-phase" ]
+     ], [
+       fhir:index 2;
+       fhir:Extension.url [ fhir:value "http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence" ];
+       fhir:Extension.valueInteger [ fhir:value "3"^^xsd:int ]
+     ];
+     fhir:Protocol.step.name [ fhir:value "DOSE 1" ];
+     fhir:Protocol.step.description [ fhir:value "Administer 0.5mg [Drug A] QD" ];
+     fhir:Protocol.step.duration [
+       fhir:Quantity.value [ fhir:value "30"^^xsd:decimal ];
+       fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+       fhir:Quantity.code [ fhir:value "wk" ]
+     ];
+     fhir:Protocol.step.precondition [
+       fhir:Protocol.step.precondition.description [ fhir:value "First dose of treatment where total drug dose of [Drug A] per day is 0.5 mg." ]
+     ];
+     fhir:Protocol.step.exit [
+       fhir:Protocol.step.precondition.description [ fhir:value "30 weeks after start of Element" ]
+     ]
+  ], [
+     fhir:index 3;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://example.org/example-do-not-use/Profilestudyprotocol#step.arm" ];
+       fhir:Extension.valueUri [ fhir:value "#arm-dose1" ]
+     ], [
+       fhir:index 1;
+       fhir:Extension.url [ fhir:value "http://example.org/example-do-not-use/Profilestudyprotocol#step.epoch" ];
+       fhir:Extension.valueUri [ fhir:value "#epoch-follow-up" ]
+     ], [
+       fhir:index 2;
+       fhir:Extension.url [ fhir:value "http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence" ];
+       fhir:Extension.valueInteger [ fhir:value "4"^^xsd:int ]
+     ];
+     fhir:Protocol.step.name [ fhir:value "FLWUP" ];
+     fhir:Protocol.step.description [ fhir:value "Follow-Up" ];
+     fhir:Protocol.step.precondition [
+       fhir:Protocol.step.precondition.description [ fhir:value "Last dose of treatment" ]
+     ];
+     fhir:Protocol.step.exit [
+       fhir:Protocol.step.precondition.description [ fhir:value "2 weeks after start of Element" ]
+     ]
+  ], [
+     fhir:index 4;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://example.org/example-do-not-use/Profilestudyprotocol#step.arm" ];
+       fhir:Extension.valueUri [ fhir:value "#arm-dose2" ]
+     ], [
+       fhir:index 1;
+       fhir:Extension.url [ fhir:value "http://example.org/example-do-not-use/Profilestudyprotocol#step.epoch" ];
+       fhir:Extension.valueUri [ fhir:value "#epoch-screening" ]
+     ], [
+       fhir:index 2;
+       fhir:Extension.url [ fhir:value "http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence" ];
+       fhir:Extension.valueInteger [ fhir:value "1"^^xsd:int ]
+     ];
+     fhir:Protocol.step.name [ fhir:value "SCRN" ];
+     fhir:Protocol.step.description [ fhir:value "Screen" ];
+     fhir:Protocol.step.precondition [
+       fhir:Protocol.step.precondition.description [ fhir:value "Informed Consent" ]
+     ];
+     fhir:Protocol.step.exit [
+       fhir:Protocol.step.precondition.description [ fhir:value "Screening assessments complete" ]
+     ]
+  ], [
+     fhir:index 5;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://example.org/example-do-not-use/Profilestudyprotocol#step.arm" ];
+       fhir:Extension.valueUri [ fhir:value "#arm-dose2" ]
+     ], [
+       fhir:index 1;
+       fhir:Extension.url [ fhir:value "http://example.org/example-do-not-use/Profilestudyprotocol#step.epoch" ];
+       fhir:Extension.valueUri [ fhir:value "#epoch-single-blind-run-in" ]
+     ], [
+       fhir:index 2;
+       fhir:Extension.url [ fhir:value "http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence" ];
+       fhir:Extension.valueInteger [ fhir:value "2"^^xsd:int ]
+     ], [
+       fhir:index 3;
+       fhir:Extension.url [ fhir:value "http://example.org/example-do-not-use/Profilestudyprotocol#step.armAssignment" ];
+       fhir:Extension.valueString [ fhir:value "Randomized to 1.0 mg" ]
+     ];
+     fhir:Protocol.step.name [ fhir:value "SBRI" ];
+     fhir:Protocol.step.description [ fhir:value "Single Blind Run-In" ];
+     fhir:Protocol.step.duration [
+       fhir:Quantity.value [ fhir:value "1"^^xsd:decimal ];
+       fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+       fhir:Quantity.code [ fhir:value "wk" ]
+     ];
+     fhir:Protocol.step.precondition [
+       fhir:Protocol.step.precondition.description [ fhir:value "First dose of Single Blind Placebo" ]
+     ];
+     fhir:Protocol.step.exit [
+       fhir:Protocol.step.precondition.description [ fhir:value "1 week after start of Element" ]
+     ]
+  ], [
+     fhir:index 6;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://example.org/example-do-not-use/Profilestudyprotocol#step.arm" ];
+       fhir:Extension.valueUri [ fhir:value "#arm-dose2" ]
+     ], [
+       fhir:index 1;
+       fhir:Extension.url [ fhir:value "http://example.org/example-do-not-use/Profilestudyprotocol#step.epoch" ];
+       fhir:Extension.valueUri [ fhir:value "#epoch-treatment-phase" ]
+     ], [
+       fhir:index 2;
+       fhir:Extension.url [ fhir:value "http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence" ];
+       fhir:Extension.valueInteger [ fhir:value "3"^^xsd:int ]
+     ];
+     fhir:Protocol.step.name [ fhir:value "1.0 mg Dose" ];
+     fhir:Protocol.step.description [ fhir:value "Administer 1.0 mg [Drug A] QD" ];
+     fhir:Protocol.step.duration [
+       fhir:Quantity.value [ fhir:value "30"^^xsd:decimal ];
+       fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+       fhir:Quantity.code [ fhir:value "wk" ]
+     ];
+     fhir:Protocol.step.precondition [
+       fhir:Protocol.step.precondition.description [ fhir:value "Intial dose of treatment where total drug dose of [Drug A] per day is 1.0 mg." ]
+     ];
+     fhir:Protocol.step.exit [
+       fhir:Protocol.step.precondition.description [ fhir:value "30 weeks after start of Element" ]
+     ]
+  ], [
+     fhir:index 7;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://example.org/example-do-not-use/Profilestudyprotocol#step.arm" ];
+       fhir:Extension.valueUri [ fhir:value "#arm-pio45mgs" ]
+     ], [
+       fhir:index 1;
+       fhir:Extension.url [ fhir:value "http://example.org/example-do-not-use/Profilestudyprotocol#step.epoch" ];
+       fhir:Extension.valueUri [ fhir:value "#epoch-follow-up" ]
+     ], [
+       fhir:index 2;
+       fhir:Extension.url [ fhir:value "http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence" ];
+       fhir:Extension.valueInteger [ fhir:value "4"^^xsd:int ]
+     ];
+     fhir:Protocol.step.name [ fhir:value "FLWUP" ];
+     fhir:Protocol.step.description [ fhir:value "Follow-Up" ];
+     fhir:Protocol.step.precondition [
+       fhir:Protocol.step.precondition.description [ fhir:value "Last dose of treatment" ]
+     ];
+     fhir:Protocol.step.exit [
+       fhir:Protocol.step.precondition.description [ fhir:value "2 weeks after start of Element" ]
+     ]
+  ], [
+     fhir:index 8;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence" ];
+       fhir:Extension.valueInteger [ fhir:value "1"^^xsd:int ]
+     ];
+     fhir:Protocol.step.name [ fhir:value "VISIT 1" ];
+     fhir:Protocol.step.precondition [
+       fhir:Protocol.step.precondition.description [ fhir:value "Screening" ]
+     ];
+     fhir:Protocol.step.activity [
+       fhir:index 0;
+       fhir:Protocol.step.activity.detail [
+         fhir:Protocol.step.activity.detail.category [ fhir:value "encounter" ]
+       ]
+     ]
+  ], [
+     fhir:index 9;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence" ];
+       fhir:Extension.valueInteger [ fhir:value "2"^^xsd:int ]
+     ];
+     fhir:Protocol.step.name [ fhir:value "VISIT 2" ];
+     fhir:Protocol.step.precondition [
+       fhir:Protocol.step.precondition.description [ fhir:value "single-blind placebo start" ]
+     ];
+     fhir:Protocol.step.activity [
+       fhir:index 0;
+       fhir:Protocol.step.activity.detail [
+         fhir:Protocol.step.activity.detail.category [ fhir:value "encounter" ]
+       ]
+     ]
+  ], [
+     fhir:index 10;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence" ];
+       fhir:Extension.valueInteger [ fhir:value "3"^^xsd:int ]
+     ];
+     fhir:Protocol.step.name [ fhir:value "VISIT 3" ];
+     fhir:Protocol.step.precondition [
+       fhir:Protocol.step.precondition.description [ fhir:value "Treatment start" ]
+     ];
+     fhir:Protocol.step.activity [
+       fhir:index 0;
+       fhir:Protocol.step.activity.detail [
+         fhir:Protocol.step.activity.detail.category [ fhir:value "encounter" ]
+       ]
+     ]
+  ], [
+     fhir:index 11;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence" ];
+       fhir:Extension.valueInteger [ fhir:value "4"^^xsd:int ]
+     ];
+     fhir:Protocol.step.name [ fhir:value "VISIT 4" ];
+     fhir:Protocol.step.precondition [
+       fhir:Protocol.step.precondition.description [ fhir:value "5 weeks after treatment start" ]
+     ];
+     fhir:Protocol.step.activity [
+       fhir:index 0;
+       fhir:Protocol.step.activity.detail [
+         fhir:Protocol.step.activity.detail.category [ fhir:value "encounter" ]
+       ]
+     ]
+  ], [
+     fhir:index 12;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence" ];
+       fhir:Extension.valueInteger [ fhir:value "5"^^xsd:int ]
+     ];
+     fhir:Protocol.step.name [ fhir:value "VISIT 5" ];
+     fhir:Protocol.step.precondition [
+       fhir:Protocol.step.precondition.description [ fhir:value "10 weeks after treatment start" ]
+     ];
+     fhir:Protocol.step.activity [
+       fhir:index 0;
+       fhir:Protocol.step.activity.detail [
+         fhir:Protocol.step.activity.detail.category [ fhir:value "encounter" ]
+       ]
+     ]
+  ], [
+     fhir:index 13;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence" ];
+       fhir:Extension.valueInteger [ fhir:value "6"^^xsd:int ]
+     ];
+     fhir:Protocol.step.name [ fhir:value "VISIT 6" ];
+     fhir:Protocol.step.precondition [
+       fhir:Protocol.step.precondition.description [ fhir:value "15 weeks after treatment start" ]
+     ];
+     fhir:Protocol.step.activity [
+       fhir:index 0;
+       fhir:Protocol.step.activity.detail [
+         fhir:Protocol.step.activity.detail.category [ fhir:value "encounter" ]
+       ]
+     ]
+  ], [
+     fhir:index 14;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence" ];
+       fhir:Extension.valueInteger [ fhir:value "7"^^xsd:int ]
+     ];
+     fhir:Protocol.step.name [ fhir:value "VISIT 7" ];
+     fhir:Protocol.step.precondition [
+       fhir:Protocol.step.precondition.description [ fhir:value "20 weeks after treatment start" ]
+     ];
+     fhir:Protocol.step.activity [
+       fhir:index 0;
+       fhir:Protocol.step.activity.detail [
+         fhir:Protocol.step.activity.detail.category [ fhir:value "encounter" ]
+       ]
+     ]
+  ], [
+     fhir:index 15;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence" ];
+       fhir:Extension.valueInteger [ fhir:value "8"^^xsd:int ]
+     ];
+     fhir:Protocol.step.name [ fhir:value "VISIT 8" ];
+     fhir:Protocol.step.precondition [
+       fhir:Protocol.step.precondition.description [ fhir:value "25 weeks after treatment start" ]
+     ];
+     fhir:Protocol.step.activity [
+       fhir:index 0;
+       fhir:Protocol.step.activity.detail [
+         fhir:Protocol.step.activity.detail.category [ fhir:value "encounter" ]
+       ]
+     ]
+  ], [
+     fhir:index 16;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence" ];
+       fhir:Extension.valueInteger [ fhir:value "9"^^xsd:int ]
+     ];
+     fhir:Protocol.step.name [ fhir:value "VISIT 9" ];
+     fhir:Protocol.step.precondition [
+       fhir:Protocol.step.precondition.description [ fhir:value "30 weeks after treatment start" ]
+     ];
+     fhir:Protocol.step.activity [
+       fhir:index 0;
+       fhir:Protocol.step.activity.detail [
+         fhir:Protocol.step.activity.detail.category [ fhir:value "encounter" ]
+       ]
+     ]
+  ], [
+     fhir:index 17;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence" ];
+       fhir:Extension.valueInteger [ fhir:value "10"^^xsd:int ]
+     ];
+     fhir:Protocol.step.name [ fhir:value "VISIT 10" ];
+     fhir:Protocol.step.precondition [
+       fhir:Protocol.step.precondition.description [ fhir:value "start of follow-up" ]
+     ];
+     fhir:Protocol.step.activity [
+       fhir:index 0;
+       fhir:Protocol.step.activity.detail [
+         fhir:Protocol.step.activity.detail.category [ fhir:value "encounter" ]
+       ]
+     ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

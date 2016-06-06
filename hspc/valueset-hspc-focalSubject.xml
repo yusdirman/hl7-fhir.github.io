@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="hspc-focalSubject"/>
+  <meta>
+    <lastUpdated value="2016-06-06T20:14:04.181+00:00"/>
+    <profile value="http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"/>
+  </meta>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <h2>HSPC FocalSubject</h2>
+      <p>The set of codes that describe the subject of an obsevation when not the patient of record.</p>
+      <p>This value set includes codes from the following code systems:</p>
+      <ul>
+        <li>Include these codes as defined in 
+          <a href="../v3/ParticipationType/cs.html">http://hl7.org/fhir/v3/ParticipationType</a>
+          <table>
+            <tr>
+              <td>
+                <b>Code</b>
+              </td>
+              <td>
+                <b>Display</b>
+              </td>
+            </tr>
+            <tr>
+              <td>DON</td>
+              <td>Donor</td>
+              <td>In some organ transplantation services and rarely in transfusion services a donor will be a target participant in the service.  However, in most cases transplantation is decomposed in three services: explantation, transport, and implantation.  The identity of the donor (recipient) is often irrelevant for the explantation (implantation) service.</td>
+            </tr>
+          </table>
+        </li>
+        <li>Include these codes as defined in 
+          <a href="../v3/RoleCode/cs.html">http://hl7.org/fhir/v3/RoleCode</a>
+          <table>
+            <tr>
+              <td>
+                <b>Code</b>
+              </td>
+              <td>
+                <b>Display</b>
+              </td>
+            </tr>
+            <tr>
+              <td>FTH</td>
+              <td>Father</td>
+              <td>The player of the role is a male who begets or raises or nurtures the scoping entity (child).</td>
+            </tr>
+            <tr>
+              <td>MTH</td>
+              <td>Mother</td>
+              <td>The player of the role is a female who conceives, gives birth to, or raises and nurtures the scoping entity (child).</td>
+            </tr>
+          </table>
+        </li>
+      </ul>
+    </div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/valueset-oid">
+    <valueUri value="urn:oid:2.16.840.1.113883.4.642.2.400"/>
+  </extension>
+  <url value="http://hl7.org/fhir/ValueSet/hspc-focalSubject"/>
+  <version value="0.01"/>
+  <name value="HSPC FocalSubject"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <publisher value="HSPC"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="http://healthcaresoa.org"/>
+    </telecom>
+  </contact>
+  <date value="2015-05-26"/>
+  <description value="The set of codes that describe the subject of an obsevation when not the patient of record."/>
+  <immutable value="true"/>
+  <extensible value="true"/>
+  <compose>
+    <include>
+      <system value="http://hl7.org/fhir/v3/ParticipationType"/>
+      <concept>
+        <code value="DON"/>
+        <display value="Donor"/>
+      </concept>
+    </include>
+    <include>
+      <system value="http://hl7.org/fhir/v3/RoleCode"/>
+      <concept>
+        <code value="FTH"/>
+        <display value="Father"/>
+      </concept>
+      <concept>
+        <code value="MTH"/>
+        <display value="Mother"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

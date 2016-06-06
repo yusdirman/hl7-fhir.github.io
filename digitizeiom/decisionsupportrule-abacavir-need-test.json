@@ -1,0 +1,92 @@
+{
+  "resourceType": "DecisionSupportRule",
+  "id": "decisionsupportrule-abacavir-need-test",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Abacavir Hypersensitivity Intervention - Need Test</div>"
+  },
+  "moduleMetadata": {
+    "identifier": [
+      {
+        "use": "official",
+        "value": "abacavir-hypersensitivity-need-test"
+      }
+    ],
+    "version": "1.0.0",
+    "title": "Abacavir Hypersensitivity Intervention Need Test",
+    "type": "decision-support-rule",
+    "status": "active",
+    "description": "Abacavir hypersensitivity intervention to alert the user that a genotype test should be administered.",
+    "publicationDate": "2016-04-01",
+    "topic": [
+      {
+        "text": "Abacavir Hypersensitivity - Need Test"
+      }
+    ]
+  },
+  "library": [
+    {
+      "reference": "Library/library-abacavir-hypersensitivity-cds-logic"
+    }
+  ],
+  "trigger": [
+    {
+      "type": "data-added",
+      "eventData": {
+        "type": "MedicationOrder",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueCodeableConcept": [
+              {
+                "coding": [
+                  {
+                    "system": "http://snomed.org/sct",
+                    "code": "387005008"
+                  }
+                ],
+                "text": "Abacavir (substance)"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "condition": "Needs Genotype Test",
+  "action": [
+    {
+      "title": "Patient should be administered a Genotype Test.",
+      "action": [
+        {
+          "title": "Create the Genotype Test.",
+          "textEquivalent": "Administer a Genotype Test.",
+          "participantType": [
+            "practitioner"
+          ],
+          "type": "create",
+          "customization": [
+            {
+              "path": "/",
+              "expression": "Create Diagnostic Order for Genotype Test"
+            }
+          ]
+        },
+        {
+          "title": "Notify the provider to sign the order.",
+          "textEquivalent": "A Genotype Test is recommended, please authorize or reject the order.",
+          "participantType": [
+            "practitioner"
+          ],
+          "type": "create",
+          "customization": [
+            {
+              "path": "/",
+              "expression": "Missing Genotype Test Alert"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

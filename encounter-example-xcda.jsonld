@@ -1,0 +1,67 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Encounter",
+  "resourceType": "Encounter",
+  "Resource.id": {
+    "value": "xcda"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: xcda</p><p><b>identifier</b>: 1234213.52345873 (OFFICIAL)</p><p><b>status</b>: finished</p><p><b>class</b>: outpatient</p><p><b>patient</b>: <a>Patient/xcda</a></p><h3>Participants</h3><table><tr><td>-</td><td><b>Individual</b></td></tr><tr><td>*</td><td><a>Practitioner/xcda1</a></td></tr></table><p><b>reason</b>: Arm <span>(Details : {http://ihe.net/xds/connectathon/eventCodes code 'T-D8200' = '??', given as 'Arm'})</span></p></div>"
+    }
+  },
+  "Encounter.identifier": [
+    {
+      "Identifier.use": {
+        "value": "official"
+      },
+      "Identifier.system": {
+        "value": "http://healthcare.example.org/identifiers/enocunter"
+      },
+      "Identifier.value": {
+        "value": "1234213.52345873"
+      }
+    }
+  ],
+  "Encounter.status": {
+    "value": "finished"
+  },
+  "Encounter.class": {
+    "value": "outpatient"
+  },
+  "Encounter.patient": {
+    "Reference.reference": {
+      "value": "Patient/xcda"
+    },
+    "reference": "http://hl7.org/fhir//Patient/xcda"
+  },
+  "Encounter.participant": [
+    {
+      "Encounter.participant.individual": {
+        "Reference.reference": {
+          "value": "Practitioner/xcda1"
+        },
+        "reference": "http://hl7.org/fhir//Practitioner/xcda1"
+      }
+    }
+  ],
+  "Encounter.reason": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "value": "http://ihe.net/xds/connectathon/eventCodes"
+          },
+          "Coding.code": {
+            "value": "T-D8200"
+          },
+          "Coding.display": {
+            "value": "Arm"
+          }
+        }
+      ]
+    }
+  ]
+}

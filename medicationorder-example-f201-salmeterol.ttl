@@ -1,0 +1,102 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/MedicationOrderf201> a fhir:MedicationOrder;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "f201"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f201</p><p><b>status</b>: active</p><p><b>medication</b>: <a>25ug Salmeterol + 250ug Fluticasone</a></p><p><b>patient</b>: <a>Roel</a></p><p><b>dateWritten</b>: Mar 11, 2013</p><p><b>prescriber</b>: <a>Dokter Bonsig</a></p><p><b>reasonReference</b>: <a>fever</a></p><h3>DosageInstructions</h3><table><tr><td>-</td><td><b>Text</b></td><td><b>Timing</b></td><td><b>Site[x]</b></td><td><b>Route</b></td><td><b>Method</b></td><td><b>Dose[x]</b></td><td><b>MaxDosePerPeriod</b></td></tr><tr><td>*</td><td>aerosol 25/250ug/do 120do 2x - 1 dose - daily</td><td>Starting Mar 11, 2013, Do 2 per 1 days, Until May 11, 2013</td><td>Oral cavity <span>(Details : {SNOMED CT code '74262004' = 'Oral cavity structure (body structure)', given as 'Oral cavity'})</span></td><td>Respiratory tract <span>(Details : {SNOMED CT code '321667001' = 'Respiratory tract structure (body structure)', given as 'Respiratory tract'})</span></td><td>Salmeterol+fluticasone 25/250ug inhaler <span>(Details : {SNOMED CT code '320276009' = 'Salmeterol+fluticasone propionate 25micrograms/250micrograms CFC-free inhaler (product)', given as 'Salmeterol+fluticasone 25/250ug inhaler'})</span></td><td>1 PUFF<span> (Details: http://hl7.org/fhir/v3/orderableDrugForm code PUFF = 'Puff')</span></td><td>2 puffs<span> (Details: SNOMED CT code 415215001 = 'Puffs')</span>/1 daily<span> (Details: SNOMED CT code 259032004 = 'per day (qualifier value)')</span></td></tr></table></div>"
+  ];
+  fhir:MedicationOrder.status [ fhir:value "active"];
+  fhir:MedicationOrder.medicationReference [
+     fhir:link <http://hl7.org/fhir/Medication/f201>;
+     fhir:Reference.reference [ fhir:value "Medication/f201" ];
+     fhir:Reference.display [ fhir:value "25ug Salmeterol + 250ug Fluticasone" ]
+  ];
+  fhir:MedicationOrder.patient [
+     fhir:link <http://hl7.org/fhir/Patient/f201>;
+     fhir:Reference.reference [ fhir:value "Patient/f201" ];
+     fhir:Reference.display [ fhir:value "Roel" ]
+  ];
+  fhir:MedicationOrder.dateWritten [ fhir:value "2013-03-11"^^xsd:date];
+  fhir:MedicationOrder.prescriber [
+     fhir:link <http://hl7.org/fhir/Practitioner/f201>;
+     fhir:Reference.reference [ fhir:value "Practitioner/f201" ];
+     fhir:Reference.display [ fhir:value "Dokter Bonsig" ]
+  ];
+  fhir:MedicationOrder.reasonReference [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/Condition/f201>;
+     fhir:Reference.reference [ fhir:value "Condition/f201" ];
+     fhir:Reference.display [ fhir:value "fever" ]
+  ];
+  fhir:MedicationOrder.dosageInstruction [
+     fhir:index 0;
+     fhir:MedicationOrder.dosageInstruction.text [ fhir:value "aerosol 25/250ug/do 120do 2x - 1 dose - daily" ];
+     fhir:MedicationOrder.dosageInstruction.timing [
+       fhir:Timing.repeat [
+         fhir:Timing.repeat.boundsPeriod [
+           fhir:Period.start [ fhir:value "2013-03-11"^^xsd:date ];
+           fhir:Period.end [ fhir:value "2013-05-11"^^xsd:date ]
+         ];
+         fhir:Timing.repeat.frequency [ fhir:value "2"^^xsd:int ];
+         fhir:Timing.repeat.period [ fhir:value "1"^^xsd:decimal ];
+         fhir:Timing.repeat.periodUnit [ fhir:value "d" ]
+       ]
+     ];
+     fhir:MedicationOrder.dosageInstruction.siteCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept sct:74262004;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "74262004" ];
+         fhir:Coding.display [ fhir:value "Oral cavity" ]
+       ]
+     ];
+     fhir:MedicationOrder.dosageInstruction.route [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept sct:321667001;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "321667001" ];
+         fhir:Coding.display [ fhir:value "Respiratory tract" ]
+       ]
+     ];
+     fhir:MedicationOrder.dosageInstruction.method [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept sct:320276009;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "320276009" ];
+         fhir:Coding.display [ fhir:value "Salmeterol+fluticasone 25/250ug inhaler" ]
+       ]
+     ];
+     fhir:MedicationOrder.dosageInstruction.doseQuantity [
+       fhir:Quantity.value [ fhir:value "1"^^xsd:decimal ];
+       fhir:Quantity.system [ fhir:value "http://hl7.org/fhir/v3/orderableDrugForm" ];
+       fhir:Quantity.code [ fhir:value "PUFF" ]
+     ];
+     fhir:MedicationOrder.dosageInstruction.maxDosePerPeriod [
+       fhir:Ratio.numerator [
+         fhir:Quantity.value [ fhir:value "2"^^xsd:decimal ];
+         fhir:Quantity.unit [ fhir:value "puffs" ];
+         fhir:Quantity.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Quantity.code [ fhir:value "415215001" ]
+       ];
+       fhir:Ratio.denominator [
+         fhir:Quantity.value [ fhir:value "1"^^xsd:decimal ];
+         fhir:Quantity.unit [ fhir:value "daily" ];
+         fhir:Quantity.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Quantity.code [ fhir:value "259032004" ]
+       ]
+     ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

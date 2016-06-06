@@ -1,0 +1,64 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Group",
+  "resourceType": "Group",
+  "Resource.id": {
+    "value": "101"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "additional"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>Herd of 25 horses</p>\n      <p>Gender: mixed</p>\n      <p>Owner: John Smith</p>\n    </div>"
+    }
+  },
+  "Group.type": {
+    "value": "animal"
+  },
+  "Group.actual": {
+    "value": true
+  },
+  "Group.code": {
+    "CodeableConcept.text": {
+      "value": "Horse"
+    }
+  },
+  "Group.name": {
+    "value": "John's herd"
+  },
+  "Group.quantity": {
+    "value": 25
+  },
+  "Group.characteristic": [
+    {
+      "Group.characteristic.code": {
+        "CodeableConcept.text": {
+          "value": "gender"
+        }
+      },
+      "Group.characteristic.valueCodeableConcept": {
+        "CodeableConcept.text": {
+          "value": "mixed"
+        }
+      },
+      "Group.characteristic.exclude": {
+        "value": false
+      }
+    },
+    {
+      "Group.characteristic.code": {
+        "CodeableConcept.text": {
+          "value": "owner"
+        }
+      },
+      "Group.characteristic.valueCodeableConcept": {
+        "CodeableConcept.text": {
+          "value": "John Smith"
+        }
+      },
+      "Group.characteristic.exclude": {
+        "value": false
+      }
+    }
+  ]
+}

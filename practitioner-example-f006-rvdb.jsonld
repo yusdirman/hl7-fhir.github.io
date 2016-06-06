@@ -1,0 +1,174 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Practitioner",
+  "resourceType": "Practitioner",
+  "Resource.id": {
+    "value": "f006"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f006</p><p><b>identifier</b>: 937223645 (OFFICIAL), 134IDY41W988 (USUAL)</p><p><b>name</b>: Rob van den Berk (OFFICIAL)</p><p><b>telecom</b>: ph: 0205569288(WORK), R.A.vandenberk@bmc.nl(WORK), fax: 0205664987(WORK)</p><p><b>address</b>: Galapagosweg 91 Den Burg 9105 PZ NLD (WORK)</p><p><b>gender</b>: male</p><p><b>birthDate</b>: Dec 7, 1975</p><h3>PractitionerRoles</h3><table><tr><td>-</td><td><b>Organization</b></td><td><b>Role</b></td><td><b>Specialty</b></td></tr><tr><td>*</td><td><a>BMC</a></td><td>Care role <span>(Details : {urn:oid:2.16.840.1.113883.2.4.15.111 code '01.000' = '??', given as 'Arts'})</span></td><td>specialization <span>(Details : {urn:oid:2.16.840.1.113883.2.4.15.111 code '17.000' = '??', given as 'Pharmacist'})</span></td></tr></table></div>"
+    }
+  },
+  "Practitioner.identifier": [
+    {
+      "Identifier.use": {
+        "value": "official"
+      },
+      "Identifier.system": {
+        "value": "urn:oid:2.16.528.1.1007.3.1"
+      },
+      "Identifier.value": {
+        "value": "937223645"
+      }
+    },
+    {
+      "Identifier.use": {
+        "value": "usual"
+      },
+      "Identifier.system": {
+        "value": "urn:oid:2.16.840.1.113883.2.4.6.3"
+      },
+      "Identifier.value": {
+        "value": "134IDY41W988"
+      }
+    }
+  ],
+  "Practitioner.name": [
+    {
+      "HumanName.use": {
+        "value": "official"
+      },
+      "HumanName.family": [
+        {
+          "value": "van den Berk"
+        }
+      ],
+      "HumanName.given": [
+        {
+          "value": "Rob"
+        }
+      ],
+      "HumanName.suffix": [
+        {
+          "value": "MD"
+        }
+      ]
+    }
+  ],
+  "Practitioner.telecom": [
+    {
+      "ContactPoint.system": {
+        "value": "phone"
+      },
+      "ContactPoint.value": {
+        "value": "0205569288"
+      },
+      "ContactPoint.use": {
+        "value": "work"
+      }
+    },
+    {
+      "ContactPoint.system": {
+        "value": "email"
+      },
+      "ContactPoint.value": {
+        "value": "R.A.vandenberk@bmc.nl"
+      },
+      "ContactPoint.use": {
+        "value": "work"
+      }
+    },
+    {
+      "ContactPoint.system": {
+        "value": "fax"
+      },
+      "ContactPoint.value": {
+        "value": "0205664987"
+      },
+      "ContactPoint.use": {
+        "value": "work"
+      }
+    }
+  ],
+  "Practitioner.address": [
+    {
+      "Address.use": {
+        "value": "work"
+      },
+      "Address.line": [
+        {
+          "value": "Galapagosweg 91"
+        }
+      ],
+      "Address.city": {
+        "value": "Den Burg"
+      },
+      "Address.postalCode": {
+        "value": "9105 PZ"
+      },
+      "Address.country": {
+        "value": "NLD"
+      }
+    }
+  ],
+  "Practitioner.gender": {
+    "value": "male"
+  },
+  "Practitioner.birthDate": {
+    "value": "1975-12-07"
+  },
+  "Practitioner.practitionerRole": [
+    {
+      "Practitioner.practitionerRole.organization": {
+        "Reference.reference": {
+          "value": "Organization/f001"
+        },
+        "Reference.display": {
+          "value": "BMC"
+        },
+        "reference": "http://hl7.org/fhir//Organization/f001"
+      },
+      "Practitioner.practitionerRole.role": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "urn:oid:2.16.840.1.113883.2.4.15.111"
+            },
+            "Coding.code": {
+              "value": "01.000"
+            },
+            "Coding.display": {
+              "value": "Arts"
+            }
+          }
+        ],
+        "CodeableConcept.text": {
+          "value": "Care role"
+        }
+      },
+      "Practitioner.practitionerRole.specialty": [
+        {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "value": "urn:oid:2.16.840.1.113883.2.4.15.111"
+              },
+              "Coding.code": {
+                "value": "17.000"
+              },
+              "Coding.display": {
+                "value": "Pharmacist"
+              }
+            }
+          ],
+          "CodeableConcept.text": {
+            "value": "specialization"
+          }
+        }
+      ]
+    }
+  ]
+}

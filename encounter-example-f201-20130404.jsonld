@@ -1,0 +1,96 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Encounter",
+  "resourceType": "Encounter",
+  "Resource.id": {
+    "value": "f201"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f201</p><p><b>identifier</b>: Encounter_Roel_20130404 (TEMP)</p><p><b>status</b>: finished</p><p><b>class</b>: outpatient</p><p><b>type</b>: Consultation <span>(Details : {SNOMED CT code '11429006' = 'Consultation (procedure)', given as 'Consultation'})</span></p><p><b>priority</b>: Normal <span>(Details : {SNOMED CT code '17621005' = 'Normal (qualifier value)', given as 'Normal'})</span></p><p><b>patient</b>: <a>Roel</a></p><h3>Participants</h3><table><tr><td>-</td><td><b>Individual</b></td></tr><tr><td>*</td><td><a>Practitioner/f201</a></td></tr></table><p><b>reason</b>: The patient had fever peaks over the last couple of days. He is worried about these peaks. <span>(Details )</span></p><p><b>serviceProvider</b>: <a>Organization/f201</a></p></div>"
+    }
+  },
+  "Encounter.identifier": [
+    {
+      "Identifier.use": {
+        "value": "temp"
+      },
+      "Identifier.value": {
+        "value": "Encounter_Roel_20130404"
+      }
+    }
+  ],
+  "Encounter.status": {
+    "value": "finished"
+  },
+  "Encounter.class": {
+    "value": "outpatient"
+  },
+  "Encounter.type": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "value": "http://snomed.info/sct"
+          },
+          "Coding.code": {
+            "value": "11429006"
+          },
+          "Coding.display": {
+            "value": "Consultation"
+          }
+        }
+      ]
+    }
+  ],
+  "Encounter.priority": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "value": "17621005"
+        },
+        "Coding.display": {
+          "value": "Normal"
+        }
+      }
+    ],
+    "concept": "http://snomed.info/sct#17621005"
+  },
+  "Encounter.patient": {
+    "Reference.reference": {
+      "value": "Patient/f201"
+    },
+    "Reference.display": {
+      "value": "Roel"
+    },
+    "reference": "http://hl7.org/fhir//Patient/f201"
+  },
+  "Encounter.participant": [
+    {
+      "Encounter.participant.individual": {
+        "Reference.reference": {
+          "value": "Practitioner/f201"
+        },
+        "reference": "http://hl7.org/fhir//Practitioner/f201"
+      }
+    }
+  ],
+  "Encounter.reason": [
+    {
+      "CodeableConcept.text": {
+        "value": "The patient had fever peaks over the last couple of days. He is worried about these peaks."
+      }
+    }
+  ],
+  "Encounter.serviceProvider": {
+    "Reference.reference": {
+      "value": "Organization/f201"
+    },
+    "reference": "http://hl7.org/fhir//Organization/f201"
+  }
+}

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="hspc-locationCondition"/>
+  <meta>
+    <lastUpdated value="2016-06-06T20:14:04.181+00:00"/>
+    <profile value="http://hl7.org/fhir/StructureDefinition/codesystem-shareable-definition"/>
+  </meta>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <h2>HSPC Service Delivery Location Condition value set</h2>
+      <p>The list of codes that describe how the data came into being.</p>
+      <p>
+        <b>Copyright Statement:</b> Intermountain Healthcare HDD
+      </p>
+      <p>This code system http://hl7.org/fhir/hspc-locationCondition defines the following codes:</p>
+      <table class="codes">
+        <tr>
+          <td>
+            <b>Code</b>
+          </td>
+          <td>
+            <b>Display</b>
+          </td>
+          <td>
+            <b>Definition</b>
+          </td>
+        </tr>
+        <tr>
+          <td>182845
+            <a name="182845"> </a>
+          </td>
+          <td>Contaminated</td>
+          <td>The assigned service delivery location is currently dirty, awaiting cleaning.</td>
+        </tr>
+        <tr>
+          <td>528112801
+            <a name="528112801"> </a>
+          </td>
+          <td>Clean</td>
+          <td>The assigned service delivery location has been cleaned, awaiting occupancy.</td>
+        </tr>
+        <tr>
+          <td>182843
+            <a name="182843"> </a>
+          </td>
+          <td>Occupied</td>
+          <td>The assigned service delivery location is currently occupied.</td>
+        </tr>
+      </table>
+    </div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/valueset-oid">
+    <valueUri value="urn:oid:2.16.840.1.113883.4.642.1.761"/>
+  </extension>
+  <url value="http://hl7.org/fhir/hspc-locationCondition"/>
+  <version value="1.4.0"/>
+  <name value="HSPC Service Delivery Location Condition value set"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <publisher value="HSPC"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="http://healthcaresoa.org"/>
+    </telecom>
+  </contact>
+  <description value="The list of codes that describe how the data came into being."/>
+  <copyright value="Intermountain Healthcare HDD"/>
+  <caseSensitive value="true"/>
+  <valueSet value="http://hl7.org/fhir/ValueSet/hspc-locationCondition"/>
+  <content value="complete"/>
+  <concept>
+    <code value="182845"/>
+    <display value="Contaminated"/>
+    <definition value="The assigned service delivery location is currently dirty, awaiting cleaning."/>
+  </concept>
+  <concept>
+    <code value="528112801"/>
+    <display value="Clean"/>
+    <definition value="The assigned service delivery location has been cleaned, awaiting occupancy."/>
+  </concept>
+  <concept>
+    <code value="182843"/>
+    <display value="Occupied"/>
+    <definition value="The assigned service delivery location is currently occupied."/>
+  </concept>
+</CodeSystem>

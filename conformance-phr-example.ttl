@@ -1,0 +1,120 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Conformancephr> a fhir:Conformance;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "phr"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n     \n      <p>Prototype Conformance Statement for September 2013 Connectathon</p>\n     \n      <p>The server offers read and search support on the following resource types:</p>\n     \n      <ul>\n      \n        <li>Patient</li>\n      \n        <li>DocumentReference</li>\n      \n        <li>Condition</li>\n      \n        <li>DiagnosticReport</li>\n    \n      </ul>\n    \n    </div>"
+  ];
+  fhir:Conformance.name [ fhir:value "PHR Template"];
+  fhir:Conformance.status [ fhir:value "draft"];
+  fhir:Conformance.date [ fhir:value "2013-06-18"^^xsd:date];
+  fhir:Conformance.publisher [ fhir:value "FHIR Project"];
+  fhir:Conformance.contact [
+     fhir:index 0;
+     fhir:Conformance.contact.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "other" ];
+       fhir:ContactPoint.value [ fhir:value "http://hl7.org/fhir" ]
+     ]
+  ];
+  fhir:Conformance.description [ fhir:value "Prototype Conformance Statement for September 2013 Connectathon"];
+  fhir:Conformance.kind [ fhir:value "capability"];
+  fhir:Conformance.software [
+     fhir:Conformance.software.name [ fhir:value "ACME PHR Server" ]
+  ];
+  fhir:Conformance.fhirVersion [ fhir:value "1.0.0"];
+  fhir:Conformance.acceptUnknown [ fhir:value "no"];
+  fhir:Conformance.format [
+     fhir:value "json";
+     fhir:index 0
+  ], [
+     fhir:value "xml";
+     fhir:index 1
+  ];
+  fhir:Conformance.rest [
+     fhir:index 0;
+     fhir:Conformance.rest.mode [ fhir:value "server" ];
+     fhir:Conformance.rest.documentation [ fhir:value "Protoype server conformance statement for September 2013 Connectathon" ];
+     fhir:Conformance.rest.security [
+       fhir:Conformance.rest.security.service [
+         fhir:index 0;
+         fhir:CodeableConcept.text [ fhir:value "OAuth" ]
+       ];
+       fhir:Conformance.rest.security.description [ fhir:value "We recommend that PHR servers use standard OAuth using a          standard 3rd party provider. We are not testing the ability to provide an          OAuth authentication/authorization service itself, and nor is providing          any security required for the connectathon at all" ]
+     ];
+     fhir:Conformance.rest.resource [
+       fhir:index 0;
+       fhir:Conformance.rest.resource.type [ fhir:value "Patient" ];
+       fhir:Conformance.rest.resource.interaction [
+         fhir:index 0;
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "read" ]
+       ], [
+         fhir:index 1;
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "search-type" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "When a client searches patients with no search criteria, they get a list of all patients they have access too. Servers may elect to offer additional search parameters, but this is not required" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:Conformance.rest.resource.type [ fhir:value "DocumentReference" ];
+       fhir:Conformance.rest.resource.interaction [
+         fhir:index 0;
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "read" ]
+       ], [
+         fhir:index 1;
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "search-type" ]
+       ];
+       fhir:Conformance.rest.resource.searchParam [
+         fhir:index 0;
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value "_id" ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value "token" ];
+         fhir:Conformance.rest.resource.searchParam.documentation [ fhir:value "_id parameter always supported. For the connectathon, servers may elect which search parameters are supported" ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:Conformance.rest.resource.type [ fhir:value "Condition" ];
+       fhir:Conformance.rest.resource.interaction [
+         fhir:index 0;
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "read" ]
+       ], [
+         fhir:index 1;
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "search-type" ]
+       ];
+       fhir:Conformance.rest.resource.searchParam [
+         fhir:index 0;
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value "_id" ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value "token" ];
+         fhir:Conformance.rest.resource.searchParam.documentation [ fhir:value "Standard _id parameter" ]
+       ]
+     ], [
+       fhir:index 3;
+       fhir:Conformance.rest.resource.type [ fhir:value "DiagnosticReport" ];
+       fhir:Conformance.rest.resource.interaction [
+         fhir:index 0;
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "read" ]
+       ], [
+         fhir:index 1;
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "search-type" ]
+       ];
+       fhir:Conformance.rest.resource.searchParam [
+         fhir:index 0;
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value "_id" ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value "token" ];
+         fhir:Conformance.rest.resource.searchParam.documentation [ fhir:value "Standard _id parameter" ]
+       ], [
+         fhir:index 1;
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value "service" ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value "token" ];
+         fhir:Conformance.rest.resource.searchParam.documentation [ fhir:value "which diagnostic discipline/department created the report" ]
+       ]
+     ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

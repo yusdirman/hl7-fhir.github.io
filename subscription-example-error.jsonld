@@ -1,0 +1,64 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Subscription",
+  "resourceType": "Subscription",
+  "Resource.id": {
+    "value": "example-error"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">[Put rendering here]</div>"
+    }
+  },
+  "Subscription.criteria": {
+    "value": "Observation?code=http://loinc.org|1975-2"
+  },
+  "Subscription.contact": [
+    {
+      "ContactPoint.system": {
+        "value": "phone"
+      },
+      "ContactPoint.value": {
+        "value": "ext 4123"
+      }
+    }
+  ],
+  "Subscription.reason": {
+    "value": "Monitor new neonatal function"
+  },
+  "Subscription.status": {
+    "value": "error"
+  },
+  "Subscription.error": {
+    "value": "Socket Error 10060 - can't connect to host"
+  },
+  "Subscription.channel": {
+    "Subscription.channel.type": {
+      "value": "rest-hook"
+    },
+    "Subscription.channel.endpoint": {
+      "value": "https://biliwatch.com/customers/mount-auburn-miu/on-result"
+    },
+    "Subscription.channel.payload": {
+      "value": "application/json"
+    },
+    "Subscription.channel.header": {
+      "value": "Authorization: Bearer secret-token-abc-123"
+    }
+  },
+  "Subscription.end": {
+    "value": "2021-01-01T00:00:00Z"
+  },
+  "Subscription.tag": [
+    {
+      "Coding.system": {
+        "value": "http://example.org/fhir/cs/internal"
+      },
+      "Coding.code": {
+        "value": "bili-done"
+      }
+    }
+  ]
+}

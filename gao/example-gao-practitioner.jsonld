@@ -1,0 +1,32 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Practitioner",
+  "resourceType": "Practitioner",
+  "Resource.id": {
+    "value": "example-gao-practitioner"
+  },
+  "Resource.meta": {
+    "Meta.profile": [
+      {
+        "value": "http://hl7.org/fhir/StructureDefinition/gao-practitioner"
+      }
+    ]
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>Identified Practitioner: 9999999999</p>\n    </div>"
+    }
+  },
+  "Practitioner.identifier": [
+    {
+      "Identifier.system": {
+        "value": "http://hl7.org/fhir/sid/us-npi"
+      },
+      "Identifier.value": {
+        "value": "9999999999"
+      }
+    }
+  ]
+}

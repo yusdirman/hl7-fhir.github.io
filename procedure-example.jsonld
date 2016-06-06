@@ -1,0 +1,78 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Procedure",
+  "resourceType": "Procedure",
+  "Resource.id": {
+    "value": "example"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Routine Appendectomy</div>"
+    }
+  },
+  "Procedure.subject": {
+    "Reference.reference": {
+      "value": "Patient/example"
+    },
+    "reference": "http://hl7.org/fhir//Patient/example"
+  },
+  "Procedure.status": {
+    "value": "completed"
+  },
+  "Procedure.code": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "value": "80146002"
+        },
+        "Coding.display": {
+          "value": "Appendectomy (Procedure)"
+        }
+      }
+    ],
+    "CodeableConcept.text": {
+      "value": "Appendectomy"
+    },
+    "concept": "http://snomed.info/sct#80146002"
+  },
+  "Procedure.reasonCodeableConcept": {
+    "CodeableConcept.text": {
+      "value": "Generalized abdominal pain 24 hours. Localized in RIF with rebound and guarding"
+    }
+  },
+  "Procedure.performer": [
+    {
+      "Procedure.performer.actor": {
+        "Reference.reference": {
+          "value": "Practitioner/example"
+        },
+        "Reference.display": {
+          "value": "Dr Cecil Surgeon"
+        },
+        "reference": "http://hl7.org/fhir//Practitioner/example"
+      }
+    }
+  ],
+  "Procedure.performedDateTime": {
+    "value": "2013-04-05"
+  },
+  "Procedure.followUp": [
+    {
+      "CodeableConcept.text": {
+        "value": "ROS 5 days  - 2013-04-10"
+      }
+    }
+  ],
+  "Procedure.notes": [
+    {
+      "Annotation.text": {
+        "value": "Routine Appendectomy. Appendix was inflamed and in retro-caecal position"
+      }
+    }
+  ]
+}

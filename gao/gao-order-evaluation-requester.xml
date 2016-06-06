@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Conformance xmlns="http://hl7.org/fhir">
+  <id value="gao-order-evaluation-requester"/>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <h2>GAO Order Evaluation Requester</h2>
+      <p>The Order Evaluation Requester actor invokes the $evaluate operation to determine      whether an order is appropriate according to clinical guidelines.</p>
+      <table>
+        <tr>
+          <td>Mode</td>
+          <td>CLIENT</td>
+        </tr>
+        <tr>
+          <td>Description</td>
+          <td/>
+        </tr>
+        <tr>
+          <td>Transaction</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>System History</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>System Search</td>
+          <td></td>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <th>
+            <b>Resource Type</b>
+          </th>
+          <th>
+            <b>Profile</b>
+          </th>
+          <th>
+            <b>Read</b>
+          </th>
+          <th>
+            <b>V-Read</b>
+          </th>
+          <th>
+            <b>Search</b>
+          </th>
+          <th>
+            <b>Update</b>
+          </th>
+          <th>
+            <b>Updates</b>
+          </th>
+          <th>
+            <b>Create</b>
+          </th>
+          <th>
+            <b>Delete</b>
+          </th>
+          <th>
+            <b>History</b>
+          </th>
+        </tr>
+        <tr>
+          <td>Order</td>
+          <td>
+            <a href="http://hl7.org/fhir/StructureDefinition/gao-order">http://hl7.org/fhir/StructureDefinition/gao-order</a>
+          </td>
+          <td>y</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+  </text>
+  <url value="http://hl7.org/fhir/Conformance/gao-order-evaluation-requester"/>
+  <name value="GAO Order Evaluation Requester"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2015-11-19"/>
+  <publisher value="HL7"/>
+  <description value="The Order Evaluation Requester actor invokes the $evaluate operation to determine      whether an order is appropriate according to clinical guidelines."/>
+  <requirements value="An Order Evaluation Requestor actor must implement the requirements expressed in this conformance resource."/>
+  <kind value="requirements"/>
+  <fhirVersion value="1.4.0"/>
+  <acceptUnknown value="extensions"/>
+  <format value="xml"/>
+  <format value="json"/>
+  <profile>
+    <reference value="http://hl7.org/fhir/StructureDefinition/gao-order"/>
+  </profile>
+  <profile>
+    <reference value="http://hl7.org/fhir/StructureDefinition/gao-questionnaireresponse"/>
+  </profile>
+  <profile>
+    <reference value="http://hl7.org/fhir/StructureDefinition/gao-diagnosticorder"/>
+  </profile>
+  <profile>
+    <reference value="http://hl7.org/fhir/StructureDefinition/gao-medicationorder"/>
+  </profile>
+  <profile>
+    <reference value="http://hl7.org/fhir/StructureDefinition/gao-referralrequest"/>
+  </profile>
+  <profile>
+    <reference value="http://hl7.org/fhir/StructureDefinition/gao-procedurerequest"/>
+  </profile>
+  <profile>
+    <reference value="http://hl7.org/fhir/StructureDefinition/gao-patient"/>
+  </profile>
+  <profile>
+    <reference value="http://hl7.org/fhir/StructureDefinition/gao-practitioner"/>
+  </profile>
+  <rest>
+    <mode value="client"/>
+    <resource>
+      <type value="Order"/>
+      <profile>
+        <reference value="http://hl7.org/fhir/StructureDefinition/gao-order"/>
+      </profile>
+      <interaction>
+        <code value="read"/>
+        <documentation value="A Order Evaluation Requestor invoke the $evaluate operation on Order.             At present, there is no way to express this in the Interaction component in a compliance resource."/>
+      </interaction>
+    </resource>
+    <operation>
+      <name value="GAO Evaluate Order"/>
+      <definition>
+        <reference value="http://hl7.org/fhir/OperationDefinition/gao-order-evaluate"/>
+      </definition>
+    </operation>
+  </rest>
+</Conformance>

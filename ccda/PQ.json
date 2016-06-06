@@ -1,0 +1,180 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "PQ",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+      "valueUri": "urn:hl7-org:v3"
+    }
+  ],
+  "url": "http://hl7.org/fhir/StructureDefinition/PQ",
+  "name": "V3 Data type PQ (PhysicalQuantity)",
+  "display": "V3 Data type PQ (PhysicalQuantity)",
+  "status": "active",
+  "experimental": false,
+  "publisher": "HL7",
+  "description": "A dimensioned quantity expressing the result of measuring.",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/QTY",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "path": "PQ",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "PQ.nullFlavor",
+        "representation": [
+          "xmlAttr"
+        ],
+        "label": "Exceptional Value Detail",
+        "definition": "If a value is an exceptional value (NULL-value), this specifies in what way and why proper information is missing.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/v3-NullFlavor"
+          }
+        }
+      },
+      {
+        "path": "PQ.value",
+        "representation": [
+          "xmlAttr"
+        ],
+        "label": "Maginitude Value",
+        "definition": "The magnitude of the quantity measured in terms of the unit.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "decimal"
+          }
+        ]
+      },
+      {
+        "path": "PQ.unit",
+        "representation": [
+          "xmlAttr"
+        ],
+        "label": "Unit of Measure",
+        "definition": "The unit of measure specified in the Unified Code for Units of Measure (UCUM) [].",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "path": "PQ.translation",
+        "label": "Translation",
+        "definition": "An alternative representation of the same physical quantity expressed in a different unit, of a different unit code system and possibly with a different value.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "PQR"
+          }
+        ]
+      },
+      {
+        "path": "PQ.inclusive",
+        "representation": [
+          "xmlAttr"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "path": "PQ",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "PQ.value",
+        "representation": [
+          "xmlAttr"
+        ],
+        "label": "Maginitude Value",
+        "definition": "The magnitude of the quantity measured in terms of the unit.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "decimal"
+          }
+        ]
+      },
+      {
+        "path": "PQ.unit",
+        "representation": [
+          "xmlAttr"
+        ],
+        "label": "Unit of Measure",
+        "definition": "The unit of measure specified in the Unified Code for Units of Measure (UCUM) [].",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "path": "PQ.translation",
+        "label": "Translation",
+        "definition": "An alternative representation of the same physical quantity expressed in a different unit, of a different unit code system and possibly with a different value.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "PQR"
+          }
+        ]
+      },
+      {
+        "path": "PQ.inclusive",
+        "representation": [
+          "xmlAttr"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      }
+    ]
+  }
+}

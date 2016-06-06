@@ -1,0 +1,39 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Conditioncond-uslab-example2> a fhir:Condition;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "cond-uslab-example2"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: cond-uslab-example2</p><p><b>patient</b>: <a>Todd Lerr</a></p><p><b>code</b>: Abnormal lead level in blood <span>(Details : {http://www.cms.gov/Medicare/Coding/ICD10/index.html code 'R78.71' = '??', given as 'Abnormal lead level in blood'})</span></p><p><b>category</b>: Diagnosis <span>(Details : {http://hl7.org/fhir/condition-category code 'diagnosis' = 'Diagnosis', given as 'Diagnosis'})</span></p><p><b>verificationStatus</b>: provisional</p></div>"
+  ];
+  fhir:Condition.patient [
+     fhir:link <http://hl7.org/fhir/Patient/patient-uslab-example2>;
+     fhir:Reference.reference [ fhir:value "Patient/patient-uslab-example2" ];
+     fhir:Reference.display [ fhir:value "Todd Lerr" ]
+  ];
+  fhir:Condition.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://www.cms.gov/Medicare/Coding/ICD10/index.html" ];
+       fhir:Coding.code [ fhir:value "R78.71" ];
+       fhir:Coding.display [ fhir:value "Abnormal lead level in blood" ]
+     ]
+  ];
+  fhir:Condition.category [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/condition-category" ];
+       fhir:Coding.code [ fhir:value "diagnosis" ];
+       fhir:Coding.display [ fhir:value "Diagnosis" ]
+     ]
+  ];
+  fhir:Condition.verificationStatus [ fhir:value "provisional"].
+
+# -------------------------------------------------------------------------------------
+

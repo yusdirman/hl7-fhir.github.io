@@ -1,0 +1,139 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Condition",
+  "resourceType": "Condition",
+  "Resource.id": {
+    "value": "f001"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f001</p><p><b>patient</b>: <a>P. van de Heuvel</a></p><p><b>encounter</b>: <a>Encounter/f001</a></p><p><b>asserter</b>: <a>P. van de Heuvel</a></p><p><b>dateRecorded</b>: Oct 5, 2011</p><p><b>code</b>: Heart valve disorder <span>(Details : {SNOMED CT code '368009' = 'Heart valve disorder (disorder)', given as 'Heart valve disorder'})</span></p><p><b>category</b>: diagnosis <span>(Details : {SNOMED CT code '439401001' = 'Diagnosis (observable entity)', given as 'diagnosis'})</span></p><p><b>clinicalStatus</b>: active</p><p><b>verificationStatus</b>: confirmed</p><p><b>severity</b>: Moderate <span>(Details : {SNOMED CT code '6736007' = 'Moderate (severity modifier) (qualifier value)', given as 'Moderate'})</span></p><p><b>onset</b>: Aug 5, 2011</p><h3>Evidences</h3><table><tr><td>-</td><td><b>Code</b></td></tr><tr><td>*</td><td>Cardiac chest pain <span>(Details : {SNOMED CT code '426396005' = 'Cardiac chest pain (finding)', given as 'Cardiac chest pain'})</span></td></tr></table><p><b>bodySite</b>: heart structure <span>(Details : {SNOMED CT code '40768004' = 'Left thorax structure (body structure)', given as 'Left thorax'})</span></p></div>"
+    }
+  },
+  "Condition.patient": {
+    "Reference.reference": {
+      "value": "Patient/f001"
+    },
+    "Reference.display": {
+      "value": "P. van de Heuvel"
+    },
+    "reference": "http://hl7.org/fhir//Patient/f001"
+  },
+  "Condition.encounter": {
+    "Reference.reference": {
+      "value": "Encounter/f001"
+    },
+    "reference": "http://hl7.org/fhir//Encounter/f001"
+  },
+  "Condition.asserter": {
+    "Reference.reference": {
+      "value": "Patient/f001"
+    },
+    "Reference.display": {
+      "value": "P. van de Heuvel"
+    },
+    "reference": "http://hl7.org/fhir//Patient/f001"
+  },
+  "Condition.dateRecorded": {
+    "value": "2011-10-05"
+  },
+  "Condition.code": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "value": "368009"
+        },
+        "Coding.display": {
+          "value": "Heart valve disorder"
+        }
+      }
+    ],
+    "concept": "http://snomed.info/sct#368009"
+  },
+  "Condition.category": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "value": "439401001"
+        },
+        "Coding.display": {
+          "value": "diagnosis"
+        }
+      }
+    ],
+    "concept": "http://snomed.info/sct#439401001"
+  },
+  "Condition.clinicalStatus": {
+    "value": "active"
+  },
+  "Condition.verificationStatus": {
+    "value": "confirmed"
+  },
+  "Condition.severity": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "value": "6736007"
+        },
+        "Coding.display": {
+          "value": "Moderate"
+        }
+      }
+    ],
+    "concept": "http://snomed.info/sct#6736007"
+  },
+  "Condition.onsetDateTime": {
+    "value": "2011-08-05"
+  },
+  "Condition.evidence": [
+    {
+      "Condition.evidence.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "value": "426396005"
+            },
+            "Coding.display": {
+              "value": "Cardiac chest pain"
+            }
+          }
+        ],
+        "concept": "http://snomed.info/sct#426396005"
+      }
+    }
+  ],
+  "Condition.bodySite": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "value": "http://snomed.info/sct"
+          },
+          "Coding.code": {
+            "value": "40768004"
+          },
+          "Coding.display": {
+            "value": "Left thorax"
+          }
+        }
+      ],
+      "CodeableConcept.text": {
+        "value": "heart structure"
+      }
+    }
+  ]
+}

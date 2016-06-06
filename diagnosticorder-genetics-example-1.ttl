@@ -1,0 +1,52 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/DiagnosticOrderog-example1> a fhir:DiagnosticOrder;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "og-example1"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: og-example1</p><p><b>status</b>: received</p><p><b>subject</b>: <a>Patient/example</a></p><p><b>encounter</b>: <a>Encounter/example</a></p><p><b>orderer</b>: <a>Practitioner/example</a></p><h3>Events</h3><table><tr><td>-</td><td><b>Status</b></td><td><b>DateTime</b></td><td><b>Actor</b></td></tr><tr><td>*</td><td>requested</td><td>May 12, 2014 4:16:00 PM</td><td><a>Practitioner/example</a></td></tr></table><h3>Items</h3><table><tr><td>-</td><td><b>Code</b></td></tr><tr><td>*</td><td>ABCB4 gene mutation analysis <span>(Details : {LOINC code '49874-1' = 'ABCB4 gene mutation analysis in Blood or Tissue by Molecular genetics method Narrative)</span></td></tr></table></div>"
+  ];
+  fhir:DiagnosticOrder.status [ fhir:value "received"];
+  fhir:DiagnosticOrder.subject [
+     fhir:link <http://hl7.org/fhir/Patient/example>;
+     fhir:Reference.reference [ fhir:value "Patient/example" ]
+  ];
+  fhir:DiagnosticOrder.encounter [
+     fhir:link <http://hl7.org/fhir/Encounter/example>;
+     fhir:Reference.reference [ fhir:value "Encounter/example" ]
+  ];
+  fhir:DiagnosticOrder.orderer [
+     fhir:link <http://hl7.org/fhir/Practitioner/example>;
+     fhir:Reference.reference [ fhir:value "Practitioner/example" ]
+  ];
+  fhir:DiagnosticOrder.event [
+     fhir:index 0;
+     fhir:DiagnosticOrder.event.status [ fhir:value "requested" ];
+     fhir:DiagnosticOrder.event.dateTime [ fhir:value "2014-05-12T16:16:00-07:00"^^xsd:dateTime ];
+     fhir:DiagnosticOrder.event.actor [
+       fhir:link <http://hl7.org/fhir/Practitioner/example>;
+       fhir:Reference.reference [ fhir:value "Practitioner/example" ]
+     ]
+  ];
+  fhir:DiagnosticOrder.item [
+     fhir:index 0;
+     fhir:DiagnosticOrder.item.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept loinc:49874-1;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "49874-1" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "ABCB4 gene mutation analysis" ]
+     ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

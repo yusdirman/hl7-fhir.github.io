@@ -1,0 +1,98 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://hl7.org/fhir/json-schema/Order",
+  "$ref": "#/definitions/Order",
+  "description": "see http://hl7.org/fhir/json.html#schema for information about the FHIR Json Schemas",
+  "definitions": {
+    "Order": {
+      "allOf": [
+        {
+          "$ref": "DomainResource.schema.json/definitions/DomainResource"
+        },
+        {
+          "description": "A request to perform an action.",
+          "properties": {
+            "resourceType": {
+              "description": "This is a Order resource",
+              "type": "string",
+              "enum": [
+                "Order"
+              ]
+            },
+            "identifier": {
+              "description": "Identifiers assigned to this order by the orderer or by the receiver.",
+              "type": "array",
+              "items": {
+                "$ref": "Identifier.schema.json/definitions/Identifier"
+              }
+            },
+            "date": {
+              "description": "When the order was made.",
+              "type": "string",
+              "pattern": "-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\\.[0-9]+)?(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)?)?"
+            },
+            "date_": {
+              "description": "Extensions for date",
+              "$ref": "Element.schema.json/definitions/Element"
+            },
+            "subject": {
+              "description": "Patient this order is about.",
+              "$ref": "Reference.schema.json/definitions/Reference"
+            },
+            "source": {
+              "description": "Who initiated the order.",
+              "$ref": "Reference.schema.json/definitions/Reference"
+            },
+            "target": {
+              "description": "Who is intended to fulfill the order.",
+              "$ref": "Reference.schema.json/definitions/Reference"
+            },
+            "reasonCodeableConcept": {
+              "description": "Text - why the order was made.",
+              "$ref": "CodeableConcept.schema.json/definitions/CodeableConcept"
+            },
+            "reasonReference": {
+              "description": "Text - why the order was made.",
+              "$ref": "Reference.schema.json/definitions/Reference"
+            },
+            "when": {
+              "description": "When order should be fulfilled.",
+              "$ref": "#/definitions/Order.When"
+            },
+            "detail": {
+              "description": "What action is being ordered.",
+              "type": "array",
+              "items": {
+                "$ref": "Reference.schema.json/definitions/Reference"
+              }
+            }
+          },
+          "required": [
+            "detail",
+            "resourceType"
+          ]
+        }
+      ]
+    },
+    "Order.When": {
+      "allOf": [
+        {
+          "$ref": "BackboneElement.schema.json/definitions/BackboneElement"
+        },
+        {
+          "description": "A request to perform an action.",
+          "properties": {
+            "code": {
+              "description": "Code specifies when request should be done. The code may simply be a priority code.",
+              "$ref": "CodeableConcept.schema.json/definitions/CodeableConcept"
+            },
+            "schedule": {
+              "description": "A formal schedule.",
+              "$ref": "Timing.schema.json/definitions/Timing"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

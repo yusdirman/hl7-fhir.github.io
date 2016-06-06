@@ -1,0 +1,69 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/AppointmentResponse",
+  "resourceType": "AppointmentResponse",
+  "Resource.id": {
+    "value": "exampleresp"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Accept Brian MRI results discussion</div>"
+    }
+  },
+  "AppointmentResponse.identifier": [
+    {
+      "Identifier.system": {
+        "value": "http://example.org/sampleappointmentresponse-identifier"
+      },
+      "Identifier.value": {
+        "value": "response123"
+      }
+    }
+  ],
+  "AppointmentResponse.appointment": {
+    "Reference.reference": {
+      "value": "Appointment/examplereq"
+    },
+    "Reference.display": {
+      "value": "Brian MRI results discussion"
+    },
+    "reference": "http://hl7.org/fhir//Appointment/examplereq"
+  },
+  "AppointmentResponse.start": {
+    "value": "2013-12-25T13:15:00Z"
+  },
+  "AppointmentResponse.end": {
+    "value": "2013-12-25T13:30:00Z"
+  },
+  "AppointmentResponse.participantType": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "value": "http://hl7.org/fhir/v3/ParticipationType"
+          },
+          "Coding.code": {
+            "value": "ATND"
+          }
+        }
+      ]
+    }
+  ],
+  "AppointmentResponse.actor": {
+    "Reference.reference": {
+      "value": "Practitioner/example"
+    },
+    "Reference.display": {
+      "value": "Dr Adam Careful"
+    },
+    "reference": "http://hl7.org/fhir//Practitioner/example"
+  },
+  "AppointmentResponse.participantStatus": {
+    "value": "tentative"
+  },
+  "AppointmentResponse.comment": {
+    "value": "can't we try for this time, can't do mornings"
+  }
+}

@@ -1,0 +1,197 @@
+﻿<!DOCTYPE HTML>
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Daf-cqi - FHIR v1.4.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+  <link rel="Prev" href="http://hl7.org/fhir/??path"/>
+
+  <!-- Bootstrap core CSS -->
+  <link href="./dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="./assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="./assets/css/project.css" rel="stylesheet"/>
+  <link href="./assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment"><!-- segment-header -->	
+		<div class="container"><!-- container -->
+			<a id="logo" href="http://hl7.org/fhir" no-external="true"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a id="hl7-logo" href="http://www.hl7.org" no-external="true">
+					<img src="./assets/images/hl7-logo.png" width="42" height="50" alt="visit the hl7 website"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="./assets/images/search.png"/></a></div> 
+		</div>
+		<div class="container"><!-- container -->
+	</div></div><!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment"><!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container"><!-- container -->
+ <!-- HEADER CONTENT -->
+ 	      		
+ 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="documentation.html">Documentation</a></li>
+              <li><a href="implementation.html">Implementation</a></li>
+              <li><a href="resourcelist.html">Resources</a></li>
+              <li><a href="clinical.html">Clinical</a></li>
+              <li><a href="administration.html">Administrative</a></li>
+              <li><a href="infrastructure.html">Infrastructure</a></li>
+              <li><a href="financial.html">Financial</a></li>
+
+						</ul>
+					</div><!-- /.nav-collapse -->
+				</div><!-- /.container -->
+			</nav><!-- /.navbar -->
+      		
+				
+<!-- /HEADER CONTENT -->				
+		</div><!-- /container -->
+	</div><!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment"><!-- segment-breadcrumb -->
+		<div class="container"><!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="index.html">Home</a></li>
+        <li>??? daf-cqi.html / ?type</li>
+        <!-- daf-cqi.html / ?type / Comparison-->
+
+			</ul>	
+		</div><!-- /container -->
+	</div><!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment"><!-- segment-content -->
+	<div class="container"><!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+<!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<h2>Comparison Comparison of DAF and QI-Core</h2>
+
+<p> 
+This is a comparison between the 2 implementation guides <a href="daf/daf.html">Data Access Framework</a> and <a href="qicore/qicore.html">Quality Improvement Core</a>, 
+generated to help compare the interoperability of implementations based on the two 
+implementation guides, or, alternatively, for implementers to understand what is required
+to conform to both implementation guides. 
+</p>
+
+<p>
+The comparison consists of a series of comparisons between the constraint 
+definitions defined in the implementation guide. For each comparison, 
+implementers can review:
+</p>
+<ul>
+ <li>A series of messages from the comparison algorithm. Errors indicate that solutions cannot be interoperable across both implementation guides (or that there are structural flaws in the definition of at least one)</li>
+ <li>The intersection of the 2 constraint statements. This is what resource authors (either client or server) would need to conform to produce content valid against both implementation guides</li>
+ <li>The union of the 2 constraint statements. This is what resource authors (either client or server) would need to be able to handle to accept content valid against either implementation guides</li>
+</ul>
+
+<h3>Comparisons</h3>
+
+<table class="grid">
+<tr> <td><b>Left</b></td> <td><b>Right</b></td> <td><b>Comparison</b></td> <td><b>Error #</b></td> <td><b>Warning #</b></td> <td><b>Hint #</b></td></tr><tr> <td><a href="daf/daf-patient.html">U.S. Data Access Framework (DAF) Patient Profile</a></td> <td><a href="qicore/qicore-patient.html">QICore-Patient</a></td> <td><a href="daf-cqi.1.html">Click Here</a></td> <td>17</td> <td>2</td> <td>13</td></tr><tr> <td><a href="daf/daf-organization.html">U.S. DAF Organization Profile</a></td> <td><a href="qicore/qicore-organization.html">QICore-Organization</a></td> <td><a href="daf-cqi.2.html">Click Here</a></td> <td>5</td> <td>0</td> <td>2</td></tr><tr> <td><a href="daf/daf-pract.html">U.S. Data Access Framework (DAF) Practitioner Profile</a></td> <td><a href="qicore/qicore-practitioner.html">QICore-Practitioner</a></td> <td><a href="daf-cqi.3.html">Click Here</a></td> <td>10</td> <td>1</td> <td>12</td></tr><tr> <td><a href="daf/daf-encounter.html">U.S. Data Access Framework (DAF) Encounter profile</a></td> <td><a href="qicore/qicore-encounter.html">QICore-Encounter</a></td> <td><a href="daf-cqi.4.html">Click Here</a></td> <td>6</td> <td>0</td> <td>15</td></tr><tr> <td><a href="daf/daf-relatedperson.html">U.S. DAF Related Person Profile</a></td> <td><a href="qicore/qicore-relatedperson.html">QICore-RelatedPerson</a></td> <td><a href="daf-cqi.5.html">Click Here</a></td> <td>3</td> <td>0</td> <td>0</td></tr><tr> <td><a href="condition.html">Condition</a></td> <td><a href="procedure.html">Procedure</a></td> <td><a href="daf-cqi.6.html">Click Here</a></td> <td>3</td> <td>1</td> <td>2</td></tr><tr> <td><a href="procedure.html">Procedure</a></td> <td><a href="condition.html">Condition</a></td> <td><a href="daf-cqi.7.html">Click Here</a></td> <td>3</td> <td>1</td> <td>2</td></tr><tr> <td><a href="daf/daf-location.html">U.S. Data Access Framework (DAF) Location Profile</a></td> <td><a href="qicore/qicore-location.html">QICore-Location</a></td> <td><a href="daf-cqi.8.html">Click Here</a></td> <td>6</td> <td>0</td> <td>2</td></tr><tr> <td><a href="daf/daf-substance.html">DAF Substance Profile</a></td> <td><a href="qicore/qicore-substance.html">QICore-Substance</a></td> <td><a href="daf-cqi.9.html">Click Here</a></td> <td>2</td> <td>0</td> <td>0</td></tr><tr> <td><a href="daf/daf-medication.html">U.S. Data Access Framework (DAF) Medication Profile</a></td> <td><a href="qicore/qicore-medication.html">QICore-Medication</a></td> <td><a href="daf-cqi.10.html">Click Here</a></td> <td>1</td> <td>0</td> <td>5</td></tr><tr> <td><a href="daf/daf-procedure.html">U.S. Data Access Framework (DAF) Procedure Profile</a></td> <td><a href="qicore/qicore-procedure.html">QICore-Procedure</a></td> <td><a href="daf-cqi.11.html">Click Here</a></td> <td>4</td> <td>0</td> <td>5</td></tr><tr> <td><a href="careplan.html">CarePlan</a></td> <td><a href="diagnosticorder.html">DiagnosticOrder</a></td> <td><a href="daf-cqi.12.html">Click Here</a></td> <td>2</td> <td>0</td> <td>2</td></tr><tr> <td><a href="careplan.html">CarePlan</a></td> <td><a href="procedurerequest.html">ProcedureRequest</a></td> <td><a href="daf-cqi.13.html">Click Here</a></td> <td>3</td> <td>0</td> <td>2</td></tr><tr> <td><a href="careplan.html">CarePlan</a></td> <td><a href="referralrequest.html">ReferralRequest</a></td> <td><a href="daf-cqi.14.html">Click Here</a></td> <td>2</td> <td>0</td> <td>2</td></tr><tr> <td><a href="diagnosticorder.html">DiagnosticOrder</a></td> <td><a href="careplan.html">CarePlan</a></td> <td><a href="daf-cqi.15.html">Click Here</a></td> <td>2</td> <td>0</td> <td>2</td></tr><tr> <td><a href="diagnosticorder.html">DiagnosticOrder</a></td> <td><a href="procedurerequest.html">ProcedureRequest</a></td> <td><a href="daf-cqi.16.html">Click Here</a></td> <td>3</td> <td>0</td> <td>2</td></tr><tr> <td><a href="diagnosticorder.html">DiagnosticOrder</a></td> <td><a href="referralrequest.html">ReferralRequest</a></td> <td><a href="daf-cqi.17.html">Click Here</a></td> <td>2</td> <td>0</td> <td>2</td></tr><tr> <td><a href="procedurerequest.html">ProcedureRequest</a></td> <td><a href="careplan.html">CarePlan</a></td> <td><a href="daf-cqi.18.html">Click Here</a></td> <td>3</td> <td>0</td> <td>2</td></tr><tr> <td><a href="procedurerequest.html">ProcedureRequest</a></td> <td><a href="diagnosticorder.html">DiagnosticOrder</a></td> <td><a href="daf-cqi.19.html">Click Here</a></td> <td>3</td> <td>0</td> <td>2</td></tr><tr> <td><a href="procedurerequest.html">ProcedureRequest</a></td> <td><a href="referralrequest.html">ReferralRequest</a></td> <td><a href="daf-cqi.20.html">Click Here</a></td> <td>3</td> <td>0</td> <td>2</td></tr><tr> <td><a href="referralrequest.html">ReferralRequest</a></td> <td><a href="careplan.html">CarePlan</a></td> <td><a href="daf-cqi.21.html">Click Here</a></td> <td>2</td> <td>0</td> <td>2</td></tr><tr> <td><a href="referralrequest.html">ReferralRequest</a></td> <td><a href="diagnosticorder.html">DiagnosticOrder</a></td> <td><a href="daf-cqi.22.html">Click Here</a></td> <td>2</td> <td>0</td> <td>2</td></tr><tr> <td><a href="referralrequest.html">ReferralRequest</a></td> <td><a href="procedurerequest.html">ProcedureRequest</a></td> <td><a href="daf-cqi.23.html">Click Here</a></td> <td>3</td> <td>0</td> <td>2</td></tr><tr> <td><a href="device.html">Device</a></td> <td><a href="medication.html">Medication</a></td> <td><a href="daf-cqi.24.html">Click Here</a></td> <td>2</td> <td>0</td> <td>2</td></tr><tr> <td><a href="device.html">Device</a></td> <td><a href="substance.html">Substance</a></td> <td><a href="daf-cqi.25.html">Click Here</a></td> <td>2</td> <td>0</td> <td>2</td></tr><tr> <td><a href="medication.html">Medication</a></td> <td><a href="device.html">Device</a></td> <td><a href="daf-cqi.26.html">Click Here</a></td> <td>2</td> <td>0</td> <td>2</td></tr><tr> <td><a href="medication.html">Medication</a></td> <td><a href="substance.html">Substance</a></td> <td><a href="daf-cqi.27.html">Click Here</a></td> <td>2</td> <td>0</td> <td>2</td></tr><tr> <td><a href="substance.html">Substance</a></td> <td><a href="device.html">Device</a></td> <td><a href="daf-cqi.28.html">Click Here</a></td> <td>2</td> <td>0</td> <td>2</td></tr><tr> <td><a href="substance.html">Substance</a></td> <td><a href="medication.html">Medication</a></td> <td><a href="daf-cqi.29.html">Click Here</a></td> <td>2</td> <td>0</td> <td>2</td></tr><tr> <td><a href="daf/daf-familymemberhistory.html">U.S. Data Access Framework (DAF) FamilyMemberHistory Profile</a></td> <td><a href="qicore/qicore-familymemberhistory.html">QICore-FamilyMemberHistory</a></td> <td><a href="daf-cqi.30.html">Click Here</a></td> <td>3</td> <td>0</td> <td>3</td></tr><tr> <td><a href="daf/daf-immunization.html">U.S. Data Access Framework (DAF) Immunization Profile</a></td> <td><a href="qicore/qicore-immunization.html">QICore-Immunization</a></td> <td><a href="daf-cqi.31.html">Click Here</a></td> <td>2</td> <td>2</td> <td>7</td></tr><tr> <td><a href="daf/daf-condition.html">U.S. Data Access Framework (DAF) Condition (a.k.a Problem) Profile</a></td> <td><a href="qicore/qicore-condition.html">QICore-Condition</a></td> <td><a href="daf-cqi.32.html">Click Here</a></td> <td>1</td> <td>0</td> <td>1</td></tr><tr> <td><a href="daf/daf-medicationstatement.html">U.S. Data Access Framework (DAF) MedicationStatement Profile</a></td> <td><a href="qicore/qicore-medicationstatement.html">QICore-MedicationStatement</a></td> <td><a href="daf-cqi.33.html">Click Here</a></td> <td>2</td> <td>0</td> <td>5</td></tr><tr> <td><a href="daf/daf-allergyintolerance.html">U.S. Data Access Framework (DAF) AllergyIntolerance Profile</a></td> <td><a href="qicore/qicore-allergyintolerance.html">QICore-AllergyIntolerance</a></td> <td><a href="daf-cqi.34.html">Click Here</a></td> <td>7</td> <td>1</td> <td>8</td></tr><tr> <td><a href="daf/daf-medicationadministration.html">U.S. Data Access Framework (DAF) Medication Administration Profile</a></td> <td><a href="qicore/qicore-medicationadministration.html">QICore-MedicationAdministration</a></td> <td><a href="daf-cqi.35.html">Click Here</a></td> <td>3</td> <td>0</td> <td>6</td></tr><tr> <td><a href="daf/daf-medicationorder.html">U.S. Data Access Framework (DAF) MedicationOrder Profile</a></td> <td><a href="qicore/qicore-medicationorder.html">QICore-MedicationOrder</a></td> <td><a href="daf-cqi.36.html">Click Here</a></td> <td>5</td> <td>0</td> <td>9</td></tr><tr> <td><a href="daf/daf-medicationdispense.html">U.S. Data Access Framework (DAF) MedicationDispense Profile</a></td> <td><a href="qicore/qicore-medicationdispense.html">QICore-MedicationDispense</a></td> <td><a href="daf-cqi.37.html">Click Here</a></td> <td>9</td> <td>0</td> <td>8</td></tr><tr> <td><a href="daf/daf-smokingstatus.html">U.S. Data Access Framework (DAF) Smoking Status Profile</a></td> <td><a href="qicore/qicore-observation.html">QICore-Observation</a></td> <td><a href="daf-cqi.38.html">Click Here</a></td> <td>7</td> <td>0</td> <td>11</td></tr><tr> <td><a href="device.html">Device</a></td> <td><a href="devicemetric.html">DeviceMetric</a></td> <td><a href="daf-cqi.39.html">Click Here</a></td> <td>3</td> <td>0</td> <td>2</td></tr><tr> <td><a href="observation.html">Observation</a></td> <td><a href="questionnaireresponse.html">QuestionnaireResponse</a></td> <td><a href="daf-cqi.40.html">Click Here</a></td> <td>2</td> <td>2</td> <td>2</td></tr><tr> <td><a href="daf/daf-vitalsigns.html">U.S. Data Access Framework (DAF) Vital Signs Profile</a></td> <td><a href="qicore/qicore-observation.html">QICore-Observation</a></td> <td><a href="daf-cqi.41.html">Click Here</a></td> <td>10</td> <td>4</td> <td>16</td></tr></table>
+
+
+<h3>ValueSets</h3>
+
+<p>todo</p>
+
+</div>
+
+
+				</div><!-- /inner-wrapper -->
+            </div><!-- /row -->
+        </div><!-- /container -->
+        
+    </div><!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment"><!-- segment-footer -->
+		<div class="container"><!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        © HL7.org 2011+. FHIR STU3 Candidate (v1.4.0-8453) generated on Mon, Jun 6, 2016 20:27+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search</a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2F%3F%3Fpath&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2F%3F%3Fpath">Compare to DSTU2</a> |                
+               <a style="color: #81BEF7" rel="license" href="license.html"><img src="cc0.png" style="border-style: none;" alt="CC0"/></a> | 
+               <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>   
+        </span>
+        </p>
+			</div><!-- /inner-wrapper -->
+		</div><!-- /container -->
+	</div><!-- /segment-footer -->
+<!-- disqus thread -->
+<!--disqus-->
+<!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden"><!-- segment-post-footer -->
+		<div class="container"><!-- container -->
+		</div><!-- /container -->
+	</div><!-- /segment-post-footer -->
+    
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>   <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/OrderResponseexample> a fhir:OrderResponse;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "example"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Lab Report completed at 13:10 28-Dec 2012</div>"
+  ];
+  fhir:OrderResponse.request [
+     fhir:link <http://hl7.org/fhir/Order/example>;
+     fhir:Reference.reference [ fhir:value "Order/example" ]
+  ];
+  fhir:OrderResponse.date [ fhir:value "2012-12-28T13:10:56+11:00"^^xsd:dateTime];
+  fhir:OrderResponse.who [
+     fhir:link <http://hl7.org/fhir/Organization/1832473e-2fe0-452d-abe9-3cdb9879522f>;
+     fhir:Reference.reference [ fhir:value "Organization/1832473e-2fe0-452d-abe9-3cdb9879522f" ]
+  ];
+  fhir:OrderResponse.orderStatus [ fhir:value "completed"];
+  fhir:OrderResponse.fulfillment [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/DiagnosticReport/101>;
+     fhir:Reference.reference [ fhir:value "DiagnosticReport/101" ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

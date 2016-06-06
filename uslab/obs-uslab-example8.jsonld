@@ -1,0 +1,172 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Observation",
+  "resourceType": "Observation",
+  "Resource.id": {
+    "value": "obs-uslab-example8"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: obs-uslab-example8</p><p><b>identifier</b>: lab test result ID = 9099 (OFFICIAL)</p><p><b>status</b>: final</p><p><b>code</b>: White blood cells (WBC) in urine <span>(Details : {LOINC code '5821-4' = 'Leukocytes [#/area] in Urine sediment by Microscopy high power field', given as 'Leukocytes [#/​area] in Urine sediment by Microscopy high power field'}; {urn:oid:2.16.840.1.113883.3.72.5.24 code 'WBCFLD' = '??', given as 'White blood cells (WBC) in urine '})</span></p><p><b>subject</b>: <a>Todd Lerr</a></p><p><b>effective</b>: Dec 3, 2014</p><p><b>issued</b>: Dec 4, 2014 3:42:15 PM</p><p><b>performer</b>: <a>Dr Leonard T Bloodraw Jr</a></p><p><b>value</b>: 10-20 WBC/HPF</p><p><b>interpretation</b>: High <span>(Details : {http://hl7.org/fhir/v2/0078 code 'H' = 'High)</span></p><p><b>specimen</b>: <a>Urine Sample</a></p><h3>ReferenceRanges</h3><table><tr><td>-</td><td><b>Low</b></td><td><b>High</b></td></tr><tr><td>*</td><td>0 WBC/HPF<span> (Details: http://unitsofmeasure.org code /[HPF] = '/HPF')</span></td><td>5 WBC/HPF<span> (Details: http://unitsofmeasure.org code /[HPF] = '/HPF')</span></td></tr></table></div>"
+    }
+  },
+  "DomainResource.extension": [
+    {
+      "Extension.url": {
+        "value": "http://hl7.org/fhir/StructureDefinition/uslab-observationkind"
+      },
+      "Extension.valueCode": {
+        "value": "result"
+      }
+    }
+  ],
+  "Observation.identifier": [
+    {
+      "Identifier.use": {
+        "value": "official"
+      },
+      "Identifier.type": {
+        "CodeableConcept.text": {
+          "value": "lab test result ID"
+        }
+      },
+      "Identifier.system": {
+        "value": "http://lis.acmelabs.org/identifiers/labtestresult"
+      },
+      "Identifier.value": {
+        "value": "9099"
+      }
+    }
+  ],
+  "Observation.status": {
+    "value": "final"
+  },
+  "Observation.code": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://loinc.org"
+        },
+        "Coding.code": {
+          "value": "5821-4"
+        },
+        "Coding.display": {
+          "value": "Leukocytes [#/​area] in Urine sediment by Microscopy high power field"
+        }
+      },
+      {
+        "Coding.system": {
+          "value": "urn:oid:2.16.840.1.113883.3.72.5.24"
+        },
+        "Coding.code": {
+          "value": "WBCFLD"
+        },
+        "Coding.display": {
+          "value": "White blood cells (WBC) in urine "
+        }
+      }
+    ],
+    "CodeableConcept.text": {
+      "value": "White blood cells (WBC) in urine"
+    },
+    "concept": "http://loinc.org/owl#5821-4"
+  },
+  "Observation.subject": {
+    "Reference.reference": {
+      "value": "Patient/patient-uslab-example1"
+    },
+    "Reference.display": {
+      "value": "Todd Lerr"
+    },
+    "reference": "http://hl7.org/fhir//Patient/patient-uslab-example1"
+  },
+  "Observation.effectiveDateTime": {
+    "value": "2014-12-03"
+  },
+  "Observation.issued": {
+    "value": "2014-12-04T15:42:15-08:00"
+  },
+  "Observation.performer": [
+    {
+      "Reference.reference": {
+        "value": "Practitioner/pract-uslab-example1"
+      },
+      "Reference.display": {
+        "value": "Dr Leonard T Bloodraw Jr"
+      }
+    }
+  ],
+  "Observation.valueRange": {
+    "Range.low": {
+      "Quantity.value": {
+        "value": 10
+      },
+      "Quantity.unit": {
+        "value": "WBC/HPF"
+      }
+    },
+    "Range.high": {
+      "Quantity.value": {
+        "value": 20
+      },
+      "Quantity.unit": {
+        "value": "WBC/HPF"
+      }
+    }
+  },
+  "Observation.interpretation": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/v2/0078"
+        },
+        "Coding.code": {
+          "value": "H"
+        }
+      }
+    ]
+  },
+  "Observation.specimen": {
+    "Reference.reference": {
+      "value": "Specimen/spec-uslab-example2"
+    },
+    "Reference.display": {
+      "value": "Urine Sample"
+    },
+    "reference": "http://hl7.org/fhir//Specimen/spec-uslab-example2"
+  },
+  "Observation.referenceRange": [
+    {
+      "Observation.referenceRange.low": {
+        "Quantity.value": {
+          "value": 0
+        },
+        "Quantity.unit": {
+          "value": "WBC/HPF"
+        },
+        "Quantity.system": {
+          "value": "http://unitsofmeasure.org"
+        },
+        "Quantity.code": {
+          "value": "/[HPF]"
+        }
+      },
+      "Observation.referenceRange.high": {
+        "Quantity.value": {
+          "value": 5
+        },
+        "Quantity.unit": {
+          "value": "WBC/HPF"
+        },
+        "Quantity.system": {
+          "value": "http://unitsofmeasure.org"
+        },
+        "Quantity.code": {
+          "value": "/[HPF]"
+        }
+      }
+    }
+  ]
+}

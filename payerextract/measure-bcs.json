@@ -1,0 +1,55 @@
+{
+  "resourceType": "Measure",
+  "id": "measure-bcs",
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      Cohort definition for Breast Cancer Screening.\n    </div>"
+  },
+  "moduleMetadata": {
+    "identifier": [
+      {
+        "use": "official",
+        "system": "http://hl7.org/fhir/cqi/ecqm/Measure/Identifier/payer-extract",
+        "value": "BCS"
+      }
+    ],
+    "version": "1.0.0",
+    "title": "Breast Cancer Screening Cohort Definition",
+    "type": "module",
+    "status": "active",
+    "experimental": true,
+    "description": "Breast Cancer Screening Cohort Definition",
+    "topic": [
+      {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/c80-doc-typecodes",
+            "code": "57024-2"
+          }
+        ]
+      }
+    ]
+  },
+  "library": [
+    {
+      "reference": "Library/library-bcs"
+    }
+  ],
+  "scoring": "cohort",
+  "group": [
+    {
+      "identifier": {
+        "value": "BCS-cohort"
+      },
+      "population": [
+        {
+          "type": "initial-population",
+          "identifier": {
+            "value": "initial-population-identifier"
+          },
+          "criteria": "BCS.\"In Demographic\""
+        }
+      ]
+    }
+  ]
+}

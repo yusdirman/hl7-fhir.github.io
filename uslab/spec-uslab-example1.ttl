@@ -1,0 +1,67 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Specimenspec-uslab-example1> a fhir:Specimen;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "spec-uslab-example1"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: spec-uslab-example1</p><p><b>identifier</b>: SID123 (OFFICIAL)</p><p><b>accessionIdentifier</b>: 21041205000001 (OFFICIAL)</p><p><b>type</b>: Blood sample <span>(Details : {SNOMED CT code '122555007' = 'Venous blood specimen (specimen)', given as 'Venous blood specimen'}; {http://ehr.goodhealthclinic.org code 'BLD' = '??', given as 'Blood'})</span></p><p><b>subject</b>: <a>Todd Lerr</a></p><h3>Collections</h3><table><tr><td>-</td><td><b>Collected[x]</b></td><td><b>BodySite</b></td></tr><tr><td>*</td><td>Dec 5, 2014</td><td>Drawn from Arm <span>(Details : {SNOMED CT code '53120007' = 'Upper limb structure (body structure)', given as 'Arm'}; {http://ehr.goodhealthclinic.org code 'ARM' = '??', given as 'Arm'})</span></td></tr></table></div>"
+  ];
+  fhir:Specimen.identifier [
+     fhir:index 0;
+     fhir:Identifier.use [ fhir:value "official" ];
+     fhir:Identifier.system [ fhir:value "http://ehr.goodhealthclinic.org/identifiers/specimen" ];
+     fhir:Identifier.value [ fhir:value "SID123" ]
+  ];
+  fhir:Specimen.accessionIdentifier [
+     fhir:Identifier.use [ fhir:value "official" ];
+     fhir:Identifier.system [ fhir:value "http://lis.acmelabs.org/identifiers/accession" ];
+     fhir:Identifier.value [ fhir:value "21041205000001" ]
+  ];
+  fhir:Specimen.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:concept sct:122555007;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "122555007" ];
+       fhir:Coding.display [ fhir:value "Venous blood specimen" ]
+     ], [
+       fhir:index 1;
+       fhir:Coding.system [ fhir:value "http://ehr.goodhealthclinic.org" ];
+       fhir:Coding.code [ fhir:value "BLD" ];
+       fhir:Coding.display [ fhir:value "Blood" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "Blood sample" ]
+  ];
+  fhir:Specimen.subject [
+     fhir:link <http://hl7.org/fhir/Patient/patient-uslab-example1>;
+     fhir:Reference.reference [ fhir:value "Patient/patient-uslab-example1" ];
+     fhir:Reference.display [ fhir:value "Todd Lerr" ]
+  ];
+  fhir:Specimen.collection [
+     fhir:Specimen.collection.collectedDateTime [ fhir:value "2014-12-05"^^xsd:date ];
+     fhir:Specimen.collection.bodySite [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept sct:53120007;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "53120007" ];
+         fhir:Coding.display [ fhir:value "Arm" ]
+       ], [
+         fhir:index 1;
+         fhir:Coding.system [ fhir:value "http://ehr.goodhealthclinic.org" ];
+         fhir:Coding.code [ fhir:value "ARM" ];
+         fhir:Coding.display [ fhir:value "Arm" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "Drawn from Arm" ]
+     ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

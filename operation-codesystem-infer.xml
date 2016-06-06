@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<OperationDefinition xmlns="http://hl7.org/fhir">
+  <id value="CodeSystem-infer"/>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <h2>Performing inferencing based on a set of codes - e.g. a mix of composition and decomposition</h2>
+      <p>OPERATION: Performing inferencing based on a set of codes - e.g. a mix of composition and decomposition</p>
+      <div>
+        <p>Given a set of property/concept pairs, return a set of concepts for requested properties.</p>
+
+        <p>Typically, this operation is used to perform composition - given one or more properties, see if there is a common single code for all of them - or decomposition - given a code or expression, find out what it implies about the value of a specific property. It is defined a single operation, though, because it may be necessary to provide multiple inputs and outputs for both cases.</p>
+
+        <p>To use this operation, a client provides a set of property / concept pairs. One (or more) of the properties may be be labeled with the special property name $main which indicates that is a full code. In addition, the client provides one or more &quot;request&quot; parameter listing the properties it wishes returned, which may include $main. The server determines what of the request properties it is able to return, and returns a set of property/concept pairs as requested. In addition, the server can return a message with information about the inferencing it was able to perform. If the server cannot process the request at all, it should return an OperationOutcome with one or more errors.</p>
+
+      </div>
+      <p>URL: [base]/CodeSystem/$infer</p>
+      <p>URL: [base]/CodeSystem/[id]/$infer</p>
+      <p>Parameters</p>
+      <table class="grid">
+        <tr>
+          <td>
+            <b>Use</b>
+          </td>
+          <td>
+            <b>Name</b>
+          </td>
+          <td>
+            <b>Cardinality</b>
+          </td>
+          <td>
+            <b>Type</b>
+          </td>
+          <td>
+            <b>Binding</b>
+          </td>
+          <td>
+            <b>Documentation</b>
+          </td>
+        </tr>
+        <tr>
+          <td>IN</td>
+          <td>system</td>
+          <td>0..1</td>
+          <td>uri</td>
+          <td/>
+          <td>
+            <div>
+              <p>The system in which inferencing is to be performed. This must be provided unless the operation is invoked on a code system instance</p>
+
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>IN</td>
+          <td>version</td>
+          <td>0..1</td>
+          <td>string</td>
+          <td/>
+          <td>
+            <div>
+              <p>The version of the system for the inferencing to be performed</p>
+
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>IN</td>
+          <td>concept</td>
+          <td>1..*</td>
+          <td></td>
+          <td/>
+          <td>
+            <div>
+              <p>Concepts provided by the client on which inferencing is to be performed</p>
+
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>IN</td>
+          <td>concept.property</td>
+          <td>1..1</td>
+          <td>code</td>
+          <td/>
+          <td>
+            <div>
+              <p>The property that this concept represents, or $main if it doesn&#39;t represent a particular property</p>
+
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>IN</td>
+          <td>concept.code</td>
+          <td>1..1</td>
+          <td>code</td>
+          <td/>
+          <td>
+            <div>
+              <p>The code or expression for the property</p>
+
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>IN</td>
+          <td>property</td>
+          <td>0..*</td>
+          <td>code</td>
+          <td/>
+          <td>
+            <div>
+              <p>A property that is requested to be returned</p>
+
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>OUT</td>
+          <td>message</td>
+          <td>0..1</td>
+          <td>string</td>
+          <td/>
+          <td>
+            <div>
+              <p>Information from the server about the request. Note that if there is an error processing the request, an operation outcome will be returned instead. The message may be used when the operation is partially successful</p>
+
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>OUT</td>
+          <td>output</td>
+          <td>0..*</td>
+          <td></td>
+          <td/>
+          <td>
+            <div>
+              <p>Concepts returned by the server as a result of the inferencing operation</p>
+
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>OUT</td>
+          <td>output.property</td>
+          <td>1..1</td>
+          <td>code</td>
+          <td/>
+          <td>
+            <div>
+              <p>The property that this concept represents, or $main if it doesn&#39;t represent a particular property</p>
+
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>OUT</td>
+          <td>output.code</td>
+          <td>1..1</td>
+          <td>code</td>
+          <td/>
+          <td>
+            <div>
+              <p>The code or expression for the property</p>
+
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>OUT</td>
+          <td>output.display</td>
+          <td>0..1</td>
+          <td>string</td>
+          <td/>
+          <td>
+            <div>
+              <p>Display for the returned code, to save the client from performing a $lookup immediately (recommended)</p>
+
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </text>
+  <url value="http://hl7.org/fhir/OperationDefinition/CodeSystem-infer"/>
+  <name value="Performing inferencing based on a set of codes - e.g. a mix of composition and decomposition"/>
+  <status value="draft"/>
+  <kind value="operation"/>
+  <date value="2016-06-06T20:14:04+00:00"/>
+  <publisher value="HL7 (FHIR Project)"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="http://hl7.org/fhir"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="fhir@lists.hl7.org"/>
+    </telecom>
+  </contact>
+  <description value="Given a set of property/concept pairs, return a set of concepts for requested properties. 
+
+Typically, this operation is used to perform composition - given one or more properties, see if there is a common single code for all of them - or decomposition - given a code or expression, find out what it implies about the value of a specific property. It is defined a single operation, though, because it may be necessary to provide multiple inputs and outputs for both cases. 
+
+To use this operation, a client provides a set of property / concept pairs. One (or more) of the properties may be be labeled with the special property name $main which indicates that is a full code. In addition, the client provides one or more &quot;request&quot; parameter listing the properties it wishes returned, which may include $main. The server determines what of the request properties it is able to return, and returns a set of property/concept pairs as requested. In addition, the server can return a message with information about the inferencing it was able to perform. If the server cannot process the request at all, it should return an OperationOutcome with one or more errors."/>
+  <code value="infer"/>
+  <system value="false"/>
+  <type value="CodeSystem"/>
+  <instance value="true"/>
+  <parameter>
+    <name value="system"/>
+    <use value="in"/>
+    <min value="0"/>
+    <max value="1"/>
+    <documentation value="The system in which inferencing is to be performed. This must be provided unless the operation is invoked on a code system instance"/>
+    <type value="uri"/>
+  </parameter>
+  <parameter>
+    <name value="version"/>
+    <use value="in"/>
+    <min value="0"/>
+    <max value="1"/>
+    <documentation value="The version of the system for the inferencing to be performed"/>
+    <type value="string"/>
+  </parameter>
+  <parameter>
+    <name value="concept"/>
+    <use value="in"/>
+    <min value="1"/>
+    <max value="*"/>
+    <documentation value="Concepts provided by the client on which inferencing is to be performed"/>
+    <part>
+      <name value="property"/>
+      <use value="in"/>
+      <min value="1"/>
+      <max value="1"/>
+      <documentation value="The property that this concept represents, or $main if it doesn&#39;t represent a particular property"/>
+      <type value="code"/>
+    </part>
+    <part>
+      <name value="code"/>
+      <use value="in"/>
+      <min value="1"/>
+      <max value="1"/>
+      <documentation value="The code or expression for the property"/>
+      <type value="code"/>
+    </part>
+  </parameter>
+  <parameter>
+    <name value="property"/>
+    <use value="in"/>
+    <min value="0"/>
+    <max value="*"/>
+    <documentation value="A property that is requested to be returned"/>
+    <type value="code"/>
+  </parameter>
+  <parameter>
+    <name value="message"/>
+    <use value="out"/>
+    <min value="0"/>
+    <max value="1"/>
+    <documentation value="Information from the server about the request. Note that if there is an error processing the request, an operation outcome will be returned instead. The message may be used when the operation is partially successful"/>
+    <type value="string"/>
+  </parameter>
+  <parameter>
+    <name value="output"/>
+    <use value="out"/>
+    <min value="0"/>
+    <max value="*"/>
+    <documentation value="Concepts returned by the server as a result of the inferencing operation"/>
+    <part>
+      <name value="property"/>
+      <use value="out"/>
+      <min value="1"/>
+      <max value="1"/>
+      <documentation value="The property that this concept represents, or $main if it doesn&#39;t represent a particular property"/>
+      <type value="code"/>
+    </part>
+    <part>
+      <name value="code"/>
+      <use value="out"/>
+      <min value="1"/>
+      <max value="1"/>
+      <documentation value="The code or expression for the property"/>
+      <type value="code"/>
+    </part>
+    <part>
+      <name value="display"/>
+      <use value="out"/>
+      <min value="0"/>
+      <max value="1"/>
+      <documentation value="Display for the returned code, to save the client from performing a $lookup immediately (recommended)"/>
+      <type value="string"/>
+    </part>
+  </parameter>
+</OperationDefinition>

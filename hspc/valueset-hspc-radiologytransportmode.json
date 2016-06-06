@@ -1,0 +1,74 @@
+{
+  "resourceType": "ValueSet",
+  "id": "hspc-radiologytransportmode",
+  "meta": {
+    "lastUpdated": "2016-06-06T20:14:04.181+00:00",
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>HSPC Radiology Transport Mode</h2><p>SELECT SNOMED CT code system values.</p><p><b>Copyright Statement:</b> TBD</p><p>This value set includes codes from the following code systems:</p><ul><li>Include these codes as defined in http://snomed.info/sct<table><tr><td><b>Code</b></td><td><b>Display</b></td></tr><tr><td>701374003</td><td>Bed transporter (physical object)</td><td/></tr><tr><td>89149003</td><td>Stretcher, device (physical object)</td><td/></tr><tr><td>255327002</td><td>Ambulatory (qualifier value)</td><td/></tr><tr><td>85455005</td><td>Cart, device (physical object)</td><td/></tr><tr><td>58938008</td><td>Wheel chair, device (physical object)</td><td/></tr></table></li></ul></div>"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/valueset-oid",
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.772"
+    }
+  ],
+  "url": "http://hl7.org/fhir/ValueSet/hspc-radiologytransportmode",
+  "version": "0.01",
+  "name": "HSPC Radiology Transport Mode",
+  "status": "draft",
+  "experimental": true,
+  "publisher": "Health Services Platform Consortium (HSPC)",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "other",
+          "value": "http://hl7.org/fhir"
+        },
+        {
+          "system": "email",
+          "value": "fhir@lists.hl7.org"
+        }
+      ]
+    }
+  ],
+  "date": "2015-02-09",
+  "description": "SELECT SNOMED CT code system values.",
+  "immutable": true,
+  "copyright": "TBD",
+  "extensible": true,
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "701374003",
+            "display": "Bed transporter (physical object)"
+          },
+          {
+            "code": "89149003",
+            "display": "Stretcher, device (physical object)"
+          },
+          {
+            "code": "255327002",
+            "display": "Ambulatory (qualifier value)"
+          },
+          {
+            "code": "85455005",
+            "display": "Cart, device (physical object)"
+          },
+          {
+            "code": "58938008",
+            "display": "Wheel chair, device (physical object)"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="referencerange-meaning"/>
+  <meta>
+    <lastUpdated value="2016-06-06T20:14:04.181+00:00"/>
+    <profile value="http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"/>
+  </meta>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <h2>Observation Reference Range Meaning Codes</h2>
+      <p>This value set defines a set of codes that can be used to indicate the meaning/use of a reference range.</p>
+      <p>
+        <b>Copyright Statement:</b> This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement.
+      </p>
+      <p>This value set includes codes from the following code systems:</p>
+      <ul>
+        <li>Import all the codes that are contained in 
+          <a href="v3/Race/vs.html">http://hl7.org/fhir/ValueSet/v3-Race</a>
+        </li>
+        <li>Include these codes as defined in http://snomed.info/sct
+          <table>
+            <tr>
+              <td>
+                <b>Code</b>
+              </td>
+              <td>
+                <b>Display</b>
+              </td>
+            </tr>
+            <tr>
+              <td>248153007</td>
+              <td>Male (finding)</td>
+              <td/>
+            </tr>
+            <tr>
+              <td>248152002</td>
+              <td>Female (finding)</td>
+              <td/>
+            </tr>
+            <tr>
+              <td>77386006</td>
+              <td>Patient currently pregnant (finding)</td>
+              <td/>
+            </tr>
+          </table>
+        </li>
+        <li>Include all codes defined in 
+          <a href="codesystem-referencerange-meaning.html">http://hl7.org/fhir/referencerange-meaning</a>
+        </li>
+      </ul>
+    </div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/valueset-oid">
+    <valueUri value="urn:oid:2.16.840.1.113883.4.642.2.217"/>
+  </extension>
+  <url value="http://hl7.org/fhir/ValueSet/referencerange-meaning"/>
+  <version value="1.4.0"/>
+  <name value="Observation Reference Range Meaning Codes"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <publisher value="FHIR Project team"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="http://hl7.org/fhir"/>
+    </telecom>
+  </contact>
+  <date value="2016-06-06T20:14:04+00:00"/>
+  <description value="This value set defines a set of codes that can be used to indicate the meaning/use of a reference range."/>
+  <copyright value="This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement."/>
+  <compose>
+    <import value="http://hl7.org/fhir/ValueSet/v3-Race"/>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <concept>
+        <code value="248153007"/>
+      </concept>
+      <concept>
+        <code value="248152002"/>
+      </concept>
+      <concept>
+        <code value="77386006"/>
+      </concept>
+    </include>
+    <include>
+      <system value="http://hl7.org/fhir/referencerange-meaning"/>
+    </include>
+  </compose>
+</ValueSet>

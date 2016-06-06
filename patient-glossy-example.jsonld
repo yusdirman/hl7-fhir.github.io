@@ -1,0 +1,93 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Patient",
+  "resourceType": "Patient",
+  "Resource.id": {
+    "value": "glossy"
+  },
+  "Resource.meta": {
+    "Meta.lastUpdated": {
+      "value": "2014-11-13T11:41:00+11:00"
+    }
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>Henry Levin the 7th</p>\n      <p>MRN: 123456. Male, 24-Sept 1932</p>\n    </div>"
+    }
+  },
+  "DomainResource.extension": [
+    {
+      "Extension.url": {
+        "value": "http://example.org/StructureDefinition/trials"
+      },
+      "Extension.valueCode": {
+        "value": "renal"
+      }
+    }
+  ],
+  "Patient.identifier": [
+    {
+      "Identifier.use": {
+        "value": "usual"
+      },
+      "Identifier.type": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://hl7.org/fhir/v2/0203"
+            },
+            "Coding.code": {
+              "value": "MR"
+            }
+          }
+        ]
+      },
+      "Identifier.system": {
+        "value": "http://www.goodhealth.org/identifiers/mrn"
+      },
+      "Identifier.value": {
+        "value": "123456"
+      }
+    }
+  ],
+  "Patient.active": {
+    "value": true
+  },
+  "Patient.name": [
+    {
+      "HumanName.family": [
+        {
+          "value": "Levin"
+        }
+      ],
+      "HumanName.given": [
+        {
+          "value": "Henry"
+        }
+      ],
+      "HumanName.suffix": [
+        {
+          "value": "The 7th"
+        }
+      ]
+    }
+  ],
+  "Patient.gender": {
+    "value": "male"
+  },
+  "Patient.birthDate": {
+    "value": "1932-09-24"
+  },
+  "Patient.careProvider": [
+    {
+      "Reference.reference": {
+        "value": "Organization/2"
+      },
+      "Reference.display": {
+        "value": "Good Health Clinic"
+      }
+    }
+  ]
+}

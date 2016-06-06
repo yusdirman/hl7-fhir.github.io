@@ -1,0 +1,55 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://hl7.org/fhir/json-schema/DecisionSupportServiceModule",
+  "$ref": "#/definitions/DecisionSupportServiceModule",
+  "description": "see http://hl7.org/fhir/json.html#schema for information about the FHIR Json Schemas",
+  "definitions": {
+    "DecisionSupportServiceModule": {
+      "allOf": [
+        {
+          "$ref": "DomainResource.schema.json/definitions/DomainResource"
+        },
+        {
+          "description": "The DecisionSupportServiceModule describes a unit of decision support functionality that is made available as a service, such as immunization modules or drug-drug interaction checking.",
+          "properties": {
+            "resourceType": {
+              "description": "This is a DecisionSupportServiceModule resource",
+              "type": "string",
+              "enum": [
+                "DecisionSupportServiceModule"
+              ]
+            },
+            "moduleMetadata": {
+              "description": "The metadata for the decision support service module, including publishing, life-cycle, version, documentation, and supporting evidence.",
+              "$ref": "ModuleMetadata.schema.json/definitions/ModuleMetadata"
+            },
+            "trigger": {
+              "description": "The trigger element defines when the rule should be invoked. This information is used by consumers of the rule to determine how to integrate the rule into a specific workflow.",
+              "type": "array",
+              "items": {
+                "$ref": "TriggerDefinition.schema.json/definitions/TriggerDefinition"
+              }
+            },
+            "parameter": {
+              "description": "The parameters to the module. This collection specifies both the input and output parameters. Input parameters are provided by the caller as part of the $evaluate operation. Output parameters are included in the GuidanceResponse.",
+              "type": "array",
+              "items": {
+                "$ref": "ParameterDefinition.schema.json/definitions/ParameterDefinition"
+              }
+            },
+            "dataRequirement": {
+              "description": "Data requirements are a machine processable description of the data required by the module in order to perform a successful evaluation.",
+              "type": "array",
+              "items": {
+                "$ref": "DataRequirement.schema.json/definitions/DataRequirement"
+              }
+            }
+          },
+          "required": [
+            "resourceType"
+          ]
+        }
+      ]
+    }
+  }
+}

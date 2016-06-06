@@ -1,0 +1,77 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/DiagnosticOrderdiagnosticorder-example-qicore> a fhir:DiagnosticOrder;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "diagnosticorder-example-qicore"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n        Example Diagnostic Order\n        </div>"
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/diagnosticorder-reasonRejected" ];
+     fhir:Extension.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v3/ActReason" ];
+         fhir:Coding.code [ fhir:value "NON-AVAIL" ];
+         fhir:Coding.display [ fhir:value "patient not-available" ]
+       ]
+     ]
+  ];
+  fhir:DiagnosticOrder.identifier [
+     fhir:index 0;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.text [ fhir:value "Placer" ]
+     ];
+     fhir:Identifier.system [ fhir:value "urn:oid:1.3.4.5.6.7" ];
+     fhir:Identifier.value [ fhir:value "2345234234234" ]
+  ];
+  fhir:DiagnosticOrder.status [ fhir:value "rejected"];
+  fhir:DiagnosticOrder.subject [
+     fhir:link <http://hl7.org/fhir/Patient/example>;
+     fhir:Reference.reference [ fhir:value "Patient/example" ]
+  ];
+  fhir:DiagnosticOrder.orderer [
+     fhir:link <http://hl7.org/fhir/Practitioner/example>;
+     fhir:Reference.reference [ fhir:value "Practitioner/example" ]
+  ];
+  fhir:DiagnosticOrder.reason [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v3/ActReason" ];
+       fhir:Coding.code [ fhir:value "PHY" ];
+       fhir:Coding.display [ fhir:value "Physician request" ]
+     ]
+  ];
+  fhir:DiagnosticOrder.event [
+     fhir:index 0;
+     fhir:DiagnosticOrder.event.status [ fhir:value "requested" ];
+     fhir:DiagnosticOrder.event.dateTime [ fhir:value "2013-05-02T16:16:00-07:00"^^xsd:dateTime ]
+  ], [
+     fhir:index 1;
+     fhir:DiagnosticOrder.event.status [ fhir:value "rejected" ];
+     fhir:DiagnosticOrder.event.dateTime [ fhir:value "2013-05-06T11:20:00-07:00"^^xsd:dateTime ]
+  ];
+  fhir:DiagnosticOrder.item [
+     fhir:index 0;
+     fhir:DiagnosticOrder.item.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept loinc:57698-3;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "57698-3" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "Lipid panel with direct LDL - Serum or Plasma" ]
+     ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

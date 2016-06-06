@@ -1,0 +1,123 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Practitioner",
+  "resourceType": "Practitioner",
+  "Resource.id": {
+    "value": "example"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>Dr Adam Careful is a Referring Practitioner for Acme Hospital from 1-Jan 2012 to 31-Mar\n        2012</p>\n    </div>"
+    }
+  },
+  "Practitioner.identifier": [
+    {
+      "Identifier.system": {
+        "value": "http://www.acme.org/practitioners"
+      },
+      "Identifier.value": {
+        "value": "23"
+      }
+    }
+  ],
+  "Practitioner.active": {
+    "value": true
+  },
+  "Practitioner.name": [
+    {
+      "HumanName.family": [
+        {
+          "value": "Careful"
+        }
+      ],
+      "HumanName.given": [
+        {
+          "value": "Adam"
+        }
+      ],
+      "HumanName.prefix": [
+        {
+          "value": "Dr"
+        }
+      ]
+    }
+  ],
+  "Practitioner.practitionerRole": [
+    {
+      "Practitioner.practitionerRole.organization": {
+        "Reference.reference": {
+          "value": "Organization/f001"
+        },
+        "reference": "http://hl7.org/fhir//Organization/f001"
+      },
+      "Practitioner.practitionerRole.role": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://hl7.org/fhir/v2/0286"
+            },
+            "Coding.code": {
+              "value": "RP"
+            }
+          }
+        ]
+      },
+      "Practitioner.practitionerRole.period": {
+        "Period.start": {
+          "value": "2012-01-01"
+        },
+        "Period.end": {
+          "value": "2012-03-31"
+        }
+      },
+      "Practitioner.practitionerRole.location": [
+        {
+          "Reference.reference": {
+            "value": "Location/1"
+          },
+          "Reference.display": {
+            "value": "South Wing, second floor"
+          }
+        }
+      ],
+      "Practitioner.practitionerRole.healthcareService": [
+        {
+          "Reference.reference": {
+            "value": "HealthcareService/example"
+          }
+        }
+      ]
+    }
+  ],
+  "Practitioner.qualification": [
+    {
+      "Practitioner.qualification.identifier": [
+        {
+          "Identifier.system": {
+            "value": "http://example.org/UniversityIdentifier"
+          },
+          "Identifier.value": {
+            "value": "12345"
+          }
+        }
+      ],
+      "Practitioner.qualification.code": {
+        "CodeableConcept.text": {
+          "value": "Bachelor of Science"
+        }
+      },
+      "Practitioner.qualification.period": {
+        "Period.start": {
+          "value": "1995"
+        }
+      },
+      "Practitioner.qualification.issuer": {
+        "Reference.display": {
+          "value": "Example University"
+        }
+      }
+    }
+  ]
+}

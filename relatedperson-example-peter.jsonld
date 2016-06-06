@@ -1,0 +1,103 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/RelatedPerson",
+  "resourceType": "RelatedPerson",
+  "Resource.id": {
+    "value": "peter"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <table>\n        <tbody>\n          <tr>\n            <td>Name</td>\n            <td>Peter Chalmers</td>\n          </tr>\n          <tr>\n            <td>Address</td>\n            <td>534 Erewhon, Pleasantville, Vic, 3999</td>\n          </tr>\n          <tr>\n            <td>Contacts</td>\n            <td>Work: (03) 5555 6473</td>\n          </tr>\n        </tbody>\n      </table>\n    </div>"
+    }
+  },
+  "RelatedPerson.patient": {
+    "Reference.reference": {
+      "value": "Patient/animal"
+    },
+    "reference": "http://hl7.org/fhir//Patient/animal"
+  },
+  "RelatedPerson.relationship": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/patient-contact-relationship"
+        },
+        "Coding.code": {
+          "value": "owner"
+        }
+      }
+    ]
+  },
+  "RelatedPerson.name": {
+    "HumanName.use": {
+      "value": "official"
+    },
+    "HumanName.family": [
+      {
+        "value": "Chalmers"
+      }
+    ],
+    "HumanName.given": [
+      {
+        "value": "Peter"
+      },
+      {
+        "value": "James"
+      }
+    ]
+  },
+  "RelatedPerson.telecom": [
+    {
+      "ContactPoint.system": {
+        "value": "phone"
+      },
+      "ContactPoint.value": {
+        "value": "(03) 5555 6473"
+      },
+      "ContactPoint.use": {
+        "value": "work"
+      }
+    }
+  ],
+  "RelatedPerson.gender": {
+    "value": "male"
+  },
+  "RelatedPerson.address": [
+    {
+      "Address.use": {
+        "value": "home"
+      },
+      "Address.line": [
+        {
+          "value": "534 Erewhon St"
+        }
+      ],
+      "Address.city": {
+        "value": "PleasantVille"
+      },
+      "Address.state": {
+        "value": "Vic"
+      },
+      "Address.postalCode": {
+        "value": "3999"
+      }
+    }
+  ],
+  "RelatedPerson.photo": [
+    {
+      "Attachment.contentType": {
+        "value": "image/jpeg"
+      },
+      "Attachment.url": {
+        "value": "Binary/f012"
+      }
+    }
+  ],
+  "RelatedPerson.period": {
+    "Period.start": {
+      "value": "2012-03-11"
+    }
+  }
+}

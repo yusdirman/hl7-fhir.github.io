@@ -1,0 +1,35 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "QTY",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+      "valueUri": "urn:hl7-org:v3"
+    }
+  ],
+  "url": "http://hl7.org/fhir/StructureDefinition/QTY",
+  "name": "V3 Data type QTY (Quantity)",
+  "display": "V3 Data type QTY (Quantity)",
+  "status": "active",
+  "experimental": false,
+  "publisher": "HL7",
+  "description": "The quantity data type is an abstract generalization for all data types (1) whose value set has an order relation (less-or-equal) and (2) where difference is defined in all of the data type's totally ordered value subsets. The quantity type abstraction is needed in defining certain other types, such as the interval and the probability distribution.",
+  "kind": "logical",
+  "abstract": true,
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/ANY",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "path": "QTY",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      }
+    ]
+  }
+}

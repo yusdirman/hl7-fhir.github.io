@@ -1,0 +1,354 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Bundle",
+  "resourceType": "Bundle",
+  "Resource.id": {
+    "value": "3a0707d3-549e-4467-b8b8-5a2ab3800efe"
+  },
+  "Bundle.type": {
+    "value": "message"
+  },
+  "Bundle.entry": [
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "urn:uuid:d9d296d8-5afd-42e1-a0ce-3344e0e003ed"
+      },
+      "MessageHeader": [
+        {
+          "Resource.id": {
+            "value": "caf609cf-c3a7-4be3-a3aa-356b9bb69d4f"
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n             \n            <p>This message is a request to link Patient records 654321 (Patient Donald DUCK @ Acme Healthcare, Inc) and 123456 (Patient Donald D DUCK @ Acme Healthcare, Inc)</p>\n           \n          </div>"
+            }
+          },
+          "MessageHeader.timestamp": {
+            "value": "2015-07-14T11:15:33+10:00"
+          },
+          "MessageHeader.event": {
+            "Coding.system": {
+              "value": "http://hl7.org/fhir/message-events"
+            },
+            "Coding.code": {
+              "value": "patient-link"
+            }
+          },
+          "MessageHeader.response": {
+            "MessageHeader.response.identifier": {
+              "value": "efdd254b-0e09-4164-883e-35cf3871715f"
+            },
+            "MessageHeader.response.code": {
+              "value": "ok"
+            },
+            "MessageHeader.response.details": {
+              "Reference.reference": {
+                "value": "OperationOutcome/03f9aa7d-b395-47b9-84e0-053678b6e4e3"
+              },
+              "reference": "http://hl7.org/fhir//OperationOutcome/03f9aa7d-b395-47b9-84e0-053678b6e4e3"
+            }
+          },
+          "MessageHeader.source": {
+            "MessageHeader.source.endpoint": {
+              "value": "http://acme.com/ehr/fhir"
+            }
+          },
+          "MessageHeader.destination": [
+            {
+              "MessageHeader.destination.endpoint": {
+                "value": "http://example.org/clients/ehr-lite"
+              }
+            }
+          ],
+          "MessageHeader.receiver": {
+            "Reference.reference": {
+              "value": "http://acme.com/ehr/fhir/Practitioner/2323-33-4"
+            },
+            "reference": "http://acme.com/ehr/fhir/Practitioner/2323-33-4"
+          },
+          "MessageHeader.data": [
+            {
+              "Reference.reference": {
+                "value": "http://acme.com/ehr/fhir/Patient/pat1"
+              }
+            },
+            {
+              "Reference.reference": {
+                "value": "http://acme.com/ehr/fhir/Patient/pat12"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "urn:uuid:03f9aa7d-b395-47b9-84e0-053678b6e4e3"
+      },
+      "OperationOutcome": [
+        {
+          "Resource.id": {
+            "value": "03f9aa7d-b395-47b9-84e0-053678b6e4e3"
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            MPI approval rating: 80%\n          </div>"
+            }
+          },
+          "OperationOutcome.issue": [
+            {
+              "OperationOutcome.issue.severity": {
+                "value": "information"
+              },
+              "OperationOutcome.issue.code": {
+                "value": "informational"
+              },
+              "OperationOutcome.issue.details": {
+                "CodeableConcept.text": {
+                  "value": "MPI approval rating: 80%"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "http://acme.com/ehr/fhir/Patient/pat1"
+      },
+      "Patient": [
+        {
+          "Resource.id": {
+            "value": "pat1"
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            \n            <p>Patient Donald DUCK @ Acme Healthcare, Inc. MR = 654321</p>\n          \n          </div>"
+            }
+          },
+          "Patient.identifier": [
+            {
+              "Identifier.use": {
+                "value": "usual"
+              },
+              "Identifier.type": {
+                "CodeableConcept.coding": [
+                  {
+                    "Coding.system": {
+                      "value": "http://hl7.org/fhir/v2/0203"
+                    },
+                    "Coding.code": {
+                      "value": "MR"
+                    }
+                  }
+                ]
+              },
+              "Identifier.system": {
+                "value": "urn:oid:0.1.2.3.4.5.6.7"
+              },
+              "Identifier.value": {
+                "value": "654321"
+              }
+            }
+          ],
+          "Patient.active": {
+            "value": true
+          },
+          "Patient.name": [
+            {
+              "HumanName.use": {
+                "value": "official"
+              },
+              "HumanName.family": [
+                {
+                  "value": "Donald"
+                }
+              ],
+              "HumanName.given": [
+                {
+                  "value": "Duck"
+                }
+              ]
+            }
+          ],
+          "Patient.gender": {
+            "value": "male"
+          },
+          "Patient.contact": [
+            {
+              "Patient.contact.relationship": [
+                {
+                  "CodeableConcept.coding": [
+                    {
+                      "Coding.system": {
+                        "value": "http://hl7.org/fhir/patient-contact-relationship"
+                      },
+                      "Coding.code": {
+                        "value": "owner"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "Patient.contact.organization": {
+                "Reference.reference": {
+                  "value": "Organization/1"
+                },
+                "Reference.display": {
+                  "value": "Walt Disney Corporation"
+                },
+                "reference": "http://hl7.org/fhir//Organization/1"
+              }
+            }
+          ],
+          "Patient.managingOrganization": {
+            "Reference.reference": {
+              "value": "Organization/1"
+            },
+            "Reference.display": {
+              "value": "ACME Healthcare, Inc"
+            },
+            "reference": "http://hl7.org/fhir//Organization/1"
+          },
+          "Patient.link": [
+            {
+              "Patient.link.other": {
+                "Reference.reference": {
+                  "value": "Patient/pat2"
+                },
+                "reference": "http://hl7.org/fhir//Patient/pat2"
+              },
+              "Patient.link.type": {
+                "value": "seealso"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "http://acme.com/ehr/fhir/Patient/pat12"
+      },
+      "Patient": [
+        {
+          "Resource.id": {
+            "value": "pat2"
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            \n            <p>Patient Donald D DUCK @ Acme Healthcare, Inc. MR = 123456</p>\n          \n          </div>"
+            }
+          },
+          "Patient.identifier": [
+            {
+              "Identifier.use": {
+                "value": "usual"
+              },
+              "Identifier.type": {
+                "CodeableConcept.coding": [
+                  {
+                    "Coding.system": {
+                      "value": "http://hl7.org/fhir/v2/0203"
+                    },
+                    "Coding.code": {
+                      "value": "MR"
+                    }
+                  }
+                ]
+              },
+              "Identifier.system": {
+                "value": "urn:oid:0.1.2.3.4.5.6.7"
+              },
+              "Identifier.value": {
+                "value": "123456"
+              }
+            }
+          ],
+          "Patient.active": {
+            "value": true
+          },
+          "Patient.name": [
+            {
+              "HumanName.use": {
+                "value": "official"
+              },
+              "HumanName.family": [
+                {
+                  "value": "Donald"
+                }
+              ],
+              "HumanName.given": [
+                {
+                  "value": "Duck"
+                },
+                {
+                  "value": "D"
+                }
+              ]
+            }
+          ],
+          "Patient.gender": {
+            "value": "other",
+            "string.extension": [
+              {
+                "Extension.url": {
+                  "value": "http://example.org/Profile/administrative-status"
+                },
+                "Extension.valueCodeableConcept": {
+                  "CodeableConcept.coding": [
+                    {
+                      "Coding.system": {
+                        "value": "http://hl7.org/fhir/v2/0001"
+                      },
+                      "Coding.code": {
+                        "value": "A"
+                      },
+                      "Coding.display": {
+                        "value": "Ambiguous"
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "Patient.managingOrganization": {
+            "Reference.reference": {
+              "value": "Organization/1"
+            },
+            "Reference.display": {
+              "value": "ACME Healthcare, Inc"
+            },
+            "reference": "http://hl7.org/fhir//Organization/1"
+          },
+          "Patient.link": [
+            {
+              "Patient.link.other": {
+                "Reference.reference": {
+                  "value": "Patient/pat1"
+                },
+                "reference": "http://hl7.org/fhir//Patient/pat1"
+              },
+              "Patient.link.type": {
+                "value": "seealso"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

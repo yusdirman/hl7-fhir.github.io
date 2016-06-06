@@ -1,0 +1,604 @@
+﻿<!DOCTYPE HTML>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Conformance-sdc-form-manager.json - FHIR v1.4.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+  <link rel="Prev" href="http://hl7.org/fhir/conformance-sdc-form-manager.json.html"/>
+
+  <!-- Bootstrap core CSS -->
+  <link href="./dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="./assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="./assets/css/project.css" rel="stylesheet"/>
+  <link href="./assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment"><!-- segment-header -->	
+		<div class="container"><!-- container -->
+			<a id="logo" href="http://hl7.org/fhir" no-external="true"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a id="hl7-logo" href="http://www.hl7.org" no-external="true">
+					<img src="./assets/images/hl7-logo.png" width="42" height="50" alt="visit the hl7 website"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="./assets/images/search.png"/></a></div> 
+		</div>
+		<div class="container"><!-- container -->
+	</div></div><!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment"><!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container"><!-- container -->
+ <!-- HEADER CONTENT -->
+ 	      		
+ 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="documentation.html">Documentation</a></li>
+              <li><a href="implementation.html">Implementation</a></li>
+              <li><a href="resourcelist.html">Resources</a></li>
+              <li><a href="clinical.html">Clinical</a></li>
+              <li><a href="administration.html">Administrative</a></li>
+              <li><a href="infrastructure.html">Infrastructure</a></li>
+              <li><a href="financial.html">Financial</a></li>
+
+						</ul>
+					</div><!-- /.nav-collapse -->
+				</div><!-- /.container -->
+			</nav><!-- /.navbar -->
+      		
+				
+<!-- /HEADER CONTENT -->				
+		</div><!-- /container -->
+	</div><!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment"><!-- segment-breadcrumb -->
+		<div class="container"><!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="infrastructure.html">Infrastructure</a></li>        <li><a href="conformance.html">Conformance</a></li>        <li><b>Example Instance</b></li>        <!-- conformance-sdc-form-manager.json.html / resource-instance:Conformance / Example-->
+
+			</ul>	
+		</div><!-- /container -->
+	</div><!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment"><!-- segment-content -->
+	<div class="container"><!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+<!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<h1>Conformance-sdc-form-manager.json</h1>
+
+<p>
+<a href="conformance-sdc-form-manager.json">Raw JSON</a> (<a href="conformance-sdc-form-manager.canonical.json">canonical form</a>)
+</p>
+
+<div class="example">
+<p>SDC Repository for forms</p>
+<pre class="json">
+{
+  &quot;resourceType&quot;: &quot;Conformance&quot;,
+  &quot;id&quot;: &quot;conformance-sdc-form-manager&quot;,
+  &quot;text&quot;: {
+    &quot;status&quot;: &quot;generated&quot;,
+    &quot;div&quot;: &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n\t\t\t\n      &lt;h2&gt;SDC Form Manager&lt;/h2&gt;\n\t\t\t\n      &lt;p&gt;(Requirements Definition)&lt;/p&gt;\n\t\t\t\n      &lt;p&gt;Published: 2014-07-06 (draft)&lt;/p&gt;\n\t\t\t\n      &lt;p&gt;Published by: \n        &lt;b&gt;U.S. Office of the National Coordinator (ONC)&lt;/b&gt;\n\t\t\t\n      &lt;/p&gt;\n\t\t\t\n      &lt;p&gt;This profile defines the expected capabilities of the \n        &lt;i&gt;SDC Form Manager&lt;/i&gt; role when conforming to the S&amp;amp;I Framework's \n        &lt;a href=\&quot;sdc.html\&quot;&gt;Structured Data Capture FHIR implementation guide&lt;/a&gt;.  This role is responsible for maintaining a repository of form definitions and also of performing pre-population of form data.\n      &lt;/p&gt;\n\t\t\t\n      &lt;h2&gt;General&lt;/h2&gt;\n\t\t\t\n      &lt;table&gt;\n\t\t\t\t\n        &lt;tbody&gt;\n\t\t\t\t\t\n          &lt;tr&gt;\n\t\t\t\t\t\t\n            &lt;th&gt;FHIR Version:&lt;/th&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;1.4.0&lt;/td&gt;\n\t\t\t\t\t\n          &lt;/tr&gt;\n\t\t\t\t\t\n          &lt;tr&gt;\n\t\t\t\t\t\t\n            &lt;th&gt;Supported formats:&lt;/th&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;xml, json&lt;/td&gt;\n\t\t\t\t\t\n          &lt;/tr&gt;\n\t\t\t\t\n        &lt;/tbody&gt;\n\t\t\t\n      &lt;/table&gt;\n\t\t\t\n      &lt;h2&gt;REST  behavior&lt;/h2&gt;\n\t\t\t\n      &lt;p&gt;The primary focus of the repository is the definition of \n        &lt;a href=\&quot;../questionnaires.html\&quot;&gt;Questionnaires&lt;/a&gt;.  However, \n        &lt;a href=\&quot;../valueset.html\&quot;&gt;ValueSet&lt;/a&gt;s must also be supported to allow definition of coded data elements.  Some data elements will choose to maintain value sets as 'contained' resources, meaning the value set exists only in the context of the data element and cannot be referenced or maintained without also updating the data element.  However, systems should support value set re-use across data elements.  (Version-specific referencing can be used to avoid value sets from changing independent of the referencing \n        &lt;a href=\&quot;../questionnaire.html\&quot;&gt;Questionnaire&lt;/a&gt;.)\n      &lt;/p&gt;\n\t\t\t\n      &lt;p&gt;\n\t\t\t\t\n        &lt;b&gt;Security:&lt;/b&gt;\n\t\t\t\n      &lt;/p&gt;\n\t\t\t\n      &lt;p&gt;Implementations must meet the general security requirements documented in the \n        &lt;a href=\&quot;sdc-security.html\&quot;&gt;SDC implementation guide&lt;/a&gt;.\n      &lt;/p&gt;\n\t\t\t\n      &lt;h3&gt;Resource summary&lt;/h3&gt;\n\t\t\t\n      &lt;table class=\&quot;grid\&quot;&gt;\n\t\t\t\t\n        &lt;thead&gt;\n\t\t\t\t\t\n          &lt;tr&gt;\n\t\t\t\t\t\t\n            &lt;th&gt;Resource&lt;/th&gt;\n\t\t\t\t\t\t\n            &lt;th&gt;Search&lt;/th&gt;\n\t\t\t\t\t\t\n            &lt;th&gt;Read&lt;/th&gt;\n\t\t\t\t\t\t\n            &lt;th&gt;Read Version&lt;/th&gt;\n\t\t\t\t\t\t\n            &lt;th&gt;Instance History&lt;/th&gt;\n\t\t\t\t\t\t\n            &lt;th&gt;Resource History&lt;/th&gt;\n\t\t\t\t\t\t\n            &lt;th&gt;Create&lt;/th&gt;\n\t\t\t\t\t\t\n            &lt;th&gt;Update&lt;/th&gt;\n\t\t\t\t\t\t\n            &lt;th&gt;Delete&lt;/th&gt;\n\t\t\t\t\t\n          &lt;/tr&gt;\n\t\t\t\t\n        &lt;/thead&gt;\n\t\t\t\t\n        &lt;tbody&gt;\n\t\t\t\t\t\n          &lt;tr&gt;\n\t\t\t\t\t\t\n            &lt;th&gt;Questionnaire (\n              &lt;a href=\&quot;http://hl7.org/fhir/StructureDefinition/sdc-questionnaire\&quot;&gt;Profile&lt;/a&gt;)\n            &lt;/th&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;\n\t\t\t\t\t\t\t\n              &lt;a href=\&quot;#Questionnaire-search-type\&quot; title=\&quot;Allows a user to search for existing forms\&quot;&gt;SHALL&lt;/a&gt;\n\t\t\t\t\t\t\n            &lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;\n\t\t\t\t\t\t\t\n              &lt;a href=\&quot;#Questionnaire-read\&quot; title=\&quot;Allows retrieval of a specific known form\&quot;&gt;SHALL&lt;/a&gt;\n\t\t\t\t\t\t\n            &lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;\n\t\t\t\t\t\t\t\n              &lt;a href=\&quot;#Questionnaire-vread\&quot; title=\&quot;Allows retrieval of a specific version of a form\&quot;&gt;SHALL&lt;/a&gt;\n\t\t\t\t\t\t\n            &lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;\n\t\t\t\t\t\t\t\n              &lt;a href=\&quot;#Questionnaire-history-instance\&quot; title=\&quot;Allows review of changes to a form over time\&quot;&gt;SHALL&lt;/a&gt;\n\t\t\t\t\t\t\n            &lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td/&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;\n\t\t\t\t\t\t\t\n              &lt;a href=\&quot;#Questionnaire-create\&quot; title=\&quot;Allows defining a new form.  Repositories requiring curation of submitted forms may require all new data elements to have a status of 'draft'.\&quot;&gt;SHALL&lt;/a&gt;\n\t\t\t\t\t\t\n            &lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;\n\t\t\t\t\t\t\t\n              &lt;a href=\&quot;#Questionnaire-update\&quot; title=\&quot;Allows an existing form to be updated.  Servers may choose to prohibit certain types of edits, instead requiring the creation of a new questionnaire (and potentially the retiring of the existing questionnaire).  Servers may also limit who can change particular forms.\&quot;&gt;SHALL&lt;/a&gt;\n\t\t\t\t\t\t\n            &lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;\n\t\t\t\t\t\t\t\n              &lt;a href=\&quot;#Questionnaire-delete\&quot; title=\&quot;Allows removal of an existing form.  Servers may choose to not support deletions and instead require that the form's status be changed to 'retired'.  Other systems support deletions but limit them to forms meeting certain requirements.  E.g. only forms with a status of draft or only forms that have been retired for at least two years, etc.\&quot;&gt;MAY&lt;/a&gt;\n\t\t\t\t\t\t\n            &lt;/td&gt;\n\t\t\t\t\t\n          &lt;/tr&gt;\n\t\t\t\t\t\n          &lt;tr&gt;\n\t\t\t\t\t\t\n            &lt;th&gt;ValueSet (\n              &lt;a href=\&quot;http://hl7.org/fhir/StructureDefinition/sdc-valueset\&quot;&gt;Profile&lt;/a&gt;)\n            &lt;/th&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;\n\t\t\t\t\t\t\t\n              &lt;a href=\&quot;#ValueSet-search-type\&quot; title=\&quot;Allows discovery of existing value sets for use in authoring questionnaires\&quot;&gt;SHALL&lt;/a&gt;\n\t\t\t\t\t\t\n            &lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;\n\t\t\t\t\t\t\t\n              &lt;a href=\&quot;#ValueSet-read\&quot; title=\&quot;Allows retrieval of a specific value set referenced within a questionnaire\&quot;&gt;SHALL&lt;/a&gt;\n\t\t\t\t\t\t\n            &lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;\n\t\t\t\t\t\t\t\n              &lt;a href=\&quot;#ValueSet-vread\&quot; title=\&quot;Allows retrieval of a historical version of a value set as referenced within a questionnaire\&quot;&gt;SHALL&lt;/a&gt;\n\t\t\t\t\t\t\n            &lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;\n\t\t\t\t\t\t\t\n              &lt;a href=\&quot;#ValueSet-history-instance\&quot; title=\&quot;Allows review of changes to a value set over time\&quot;&gt;SHALL&lt;/a&gt;\n\t\t\t\t\t\t\n            &lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td/&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;\n\t\t\t\t\t\t\t\n              &lt;a href=\&quot;#ValueSet-create\&quot; title=\&quot;Allows definition of a new value set used by one or more questionnaires\&quot;&gt;SHALL&lt;/a&gt;\n\t\t\t\t\t\t\n            &lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;\n\t\t\t\t\t\t\t\n              &lt;a href=\&quot;#ValueSet-update\&quot; title=\&quot;Allows existing value sets referenced by one or more questionnaires to be maintained\&quot;&gt;SHALL&lt;/a&gt;\n\t\t\t\t\t\t\n            &lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;\n\t\t\t\t\t\t\t\n              &lt;a href=\&quot;#ValueSet-delete\&quot; title=\&quot;Not all servers will support deletion of value sets.  Status change to 'retired' will be more typical, though deletion of draft value sets may keep repositories cleaner.\&quot;&gt;MAY&lt;/a&gt;\n\t\t\t\t\t\t\n            &lt;/td&gt;\n\t\t\t\t\t\n          &lt;/tr&gt;\n\t\t\t\t\n        &lt;/tbody&gt;\n\t\t\t\n      &lt;/table&gt;\n\t\t\t\n      &lt;p&gt;\n\t\t\t\t\n        &lt;b&gt;Operations:&lt;/b&gt;\n\t\t\t\t\n        &lt;a href=\&quot;http://hl7.org/fhir/OperationDefinition/questionnaire-populate\&quot; title=\&quot;Populate Questionnaire\&quot;&gt;populate&lt;/a&gt; MAY\n      &lt;/p&gt;\n\t\t\t\n      &lt;br/&gt;\n\t\t\t\n      &lt;br/&gt;\n\t\t\t\n      &lt;h3&gt;\n\t\t\t\t\n        &lt;a href=\&quot;../questionnaire.html\&quot;&gt;Questionnaire&lt;/a&gt;\n\t\t\t\n      &lt;/h3&gt;\n\t\t\t\n      &lt;h4&gt;Interactions&lt;/h4&gt;\n\t\t\t\n      &lt;table class=\&quot;list\&quot;&gt;\n\t\t\t\t\n        &lt;thead&gt;\n\t\t\t\t\t\n          &lt;tr&gt;\n\t\t\t\t\t\t\n            &lt;th&gt;Name&lt;/th&gt;\n\t\t\t\t\t\t\n            &lt;th&gt;Conformance&lt;/th&gt;\n\t\t\t\t\t\t\n            &lt;th&gt;Description&lt;/th&gt;\n\t\t\t\t\t\n          &lt;/tr&gt;\n\t\t\t\t\n        &lt;/thead&gt;\n\t\t\t\t\n        &lt;tbody&gt;\n\t\t\t\t\t\n          &lt;tr&gt;\n\t\t\t\t\t\t\n            &lt;th&gt;\n\t\t\t\t\t\t\t\n              &lt;a name=\&quot;Questionnaire-search-type\&quot;&gt; &lt;/a&gt;\n\t\t\t\t\t\t\t\n              &lt;span&gt;search-type&lt;/span&gt;\n\t\t\t\t\t\t\n            &lt;/th&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;SHALL&lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;\n\t\t\t\t\t\t\t\n              &lt;p&gt;Allows a user to search for existing forms&lt;/p&gt;\n\t\t\t\t\t\t\n            &lt;/td&gt;\n\t\t\t\t\t\n          &lt;/tr&gt;\n\t\t\t\t\t\n          &lt;tr&gt;\n\t\t\t\t\t\t\n            &lt;th&gt;\n\t\t\t\t\t\t\t\n              &lt;a name=\&quot;Questionnaire-read\&quot;&gt; &lt;/a&gt;\n\t\t\t\t\t\t\t\n              &lt;span&gt;read&lt;/span&gt;\n\t\t\t\t\t\t\n            &lt;/th&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;SHALL&lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;\n\t\t\t\t\t\t\t\n              &lt;p&gt;Allows retrieval of a specific known form&lt;/p&gt;\n\t\t\t\t\t\t\n            &lt;/td&gt;\n\t\t\t\t\t\n          &lt;/tr&gt;\n\t\t\t\t\t\n          &lt;tr&gt;\n\t\t\t\t\t\t\n            &lt;th&gt;\n\t\t\t\t\t\t\t\n              &lt;a name=\&quot;Questionnaire-vread\&quot;&gt; &lt;/a&gt;\n\t\t\t\t\t\t\t\n              &lt;span&gt;vread&lt;/span&gt;\n\t\t\t\t\t\t\n            &lt;/th&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;SHALL&lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;\n\t\t\t\t\t\t\t\n              &lt;p&gt;Allows retrieval of a specific version of a form&lt;/p&gt;\n\t\t\t\t\t\t\n            &lt;/td&gt;\n\t\t\t\t\t\n          &lt;/tr&gt;\n\t\t\t\t\t\n          &lt;tr&gt;\n\t\t\t\t\t\t\n            &lt;th&gt;\n\t\t\t\t\t\t\t\n              &lt;a name=\&quot;Questionnaire-history-instance\&quot;&gt; &lt;/a&gt;\n\t\t\t\t\t\t\t\n              &lt;span&gt;history-instance&lt;/span&gt;\n\t\t\t\t\t\t\n            &lt;/th&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;SHALL&lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;\n\t\t\t\t\t\t\t\n              &lt;p&gt;Allows review of changes to a form over time&lt;/p&gt;\n\t\t\t\t\t\t\n            &lt;/td&gt;\n\t\t\t\t\t\n          &lt;/tr&gt;\n\t\t\t\t\t\n          &lt;tr&gt;\n\t\t\t\t\t\t\n            &lt;th&gt;\n\t\t\t\t\t\t\t\n              &lt;a name=\&quot;Questionnaire-create\&quot;&gt; &lt;/a&gt;\n\t\t\t\t\t\t\t\n              &lt;span&gt;create&lt;/span&gt;\n\t\t\t\t\t\t\n            &lt;/th&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;SHALL&lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;\n\t\t\t\t\t\t\t\n              &lt;p&gt;Allows defining a new form.  Repositories requiring curation of submitted forms may require all new data elements to have a status of 'draft'.&lt;/p&gt;\n\t\t\t\t\t\t\n            &lt;/td&gt;\n\t\t\t\t\t\n          &lt;/tr&gt;\n\t\t\t\t\t\n          &lt;tr&gt;\n\t\t\t\t\t\t\n            &lt;th&gt;\n\t\t\t\t\t\t\t\n              &lt;a name=\&quot;Questionnaire-update\&quot;&gt; &lt;/a&gt;\n\t\t\t\t\t\t\t\n              &lt;span&gt;update&lt;/span&gt;\n\t\t\t\t\t\t\n            &lt;/th&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;SHALL&lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;\n\t\t\t\t\t\t\t\n              &lt;p&gt;Allows an existing form to be updated.  Servers may choose to prohibit certain types of edits, instead requiring the creation of a new questionnaire (and potentially the retiring of the existing questionnaire).  Servers may also limit who can change particular forms.&lt;/p&gt;\n\t\t\t\t\t\t\n            &lt;/td&gt;\n\t\t\t\t\t\n          &lt;/tr&gt;\n\t\t\t\t\t\n          &lt;tr&gt;\n\t\t\t\t\t\t\n            &lt;th&gt;\n\t\t\t\t\t\t\t\n              &lt;a name=\&quot;Questionnaire-validate\&quot;&gt; &lt;/a&gt;\n\t\t\t\t\t\t\t\n              &lt;span&gt;validate&lt;/span&gt;\n\t\t\t\t\t\t\n            &lt;/th&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;SHOULD&lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;\n\t\t\t\t\t\t\t\n              &lt;p&gt;SHOULD. Allows a client to verify whether a particular new form or revision of an existing form would be accepted based on validation and other business rules.  Useful for some workflows&lt;/p&gt;\n\t\t\t\t\t\t\n            &lt;/td&gt;\n\t\t\t\t\t\n          &lt;/tr&gt;\n\t\t\t\t\t\n          &lt;tr&gt;\n\t\t\t\t\t\t\n            &lt;th&gt;\n\t\t\t\t\t\t\t\n              &lt;a name=\&quot;Questionnaire-delete\&quot;&gt; &lt;/a&gt;\n\t\t\t\t\t\t\t\n              &lt;span&gt;delete&lt;/span&gt;\n\t\t\t\t\t\t\n            &lt;/th&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;MAY&lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;\n\t\t\t\t\t\t\t\n              &lt;p&gt;Allows removal of an existing form.  Servers may choose to not support deletions and instead require that the form's status be changed to 'retired'.  Other systems support deletions but limit them to forms meeting certain requirements.  E.g. only forms with a status of draft or only forms that have been retired for at least two years, etc.&lt;/p&gt;\n\t\t\t\t\t\t\n            &lt;/td&gt;\n\t\t\t\t\t\n          &lt;/tr&gt;\n\t\t\t\t\n        &lt;/tbody&gt;\n\t\t\t\n      &lt;/table&gt;\n\t\t\t\n      &lt;h4&gt;Search&lt;/h4&gt;\n\t\t\t\n      &lt;p&gt;Supported Includes: Questionnaire.group.question.options&lt;/p&gt;\n\t\t\t\n      &lt;table class=\&quot;list\&quot;&gt;\n\t\t\t\t\n        &lt;thead&gt;\n\t\t\t\t\t\n          &lt;tr&gt;\n\t\t\t\t\t\t\n            &lt;th&gt;Parameter&lt;/th&gt;\n\t\t\t\t\t\t\n            &lt;th&gt;Conformance&lt;/th&gt;\n\t\t\t\t\t\t\n            &lt;th&gt;Type&lt;/th&gt;\n\t\t\t\t\t\t\n            &lt;th&gt;Definition &amp;amp; Chaining&lt;/th&gt;\n\t\t\t\t\t\n          &lt;/tr&gt;\n\t\t\t\t\n        &lt;/thead&gt;\n\t\t\t\t\n        &lt;tbody&gt;\n\t\t\t\t\t\n          &lt;tr&gt;\n\t\t\t\t\t\t\n            &lt;th&gt;code&lt;/th&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;SHALL&lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;token&lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td/&gt;\n\t\t\t\t\t\n          &lt;/tr&gt;\n\t\t\t\t\t\n          &lt;tr&gt;\n\t\t\t\t\t\t\n            &lt;th&gt;date&lt;/th&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;SHALL&lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;date&lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td/&gt;\n\t\t\t\t\t\n          &lt;/tr&gt;\n\t\t\t\t\t\n          &lt;tr&gt;\n\t\t\t\t\t\t\n            &lt;th&gt;identifier&lt;/th&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;SHALL&lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;token&lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td/&gt;\n\t\t\t\t\t\n          &lt;/tr&gt;\n\t\t\t\t\t\n          &lt;tr&gt;\n\t\t\t\t\t\t\n            &lt;th&gt;publisher&lt;/th&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;SHALL&lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;string&lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td/&gt;\n\t\t\t\t\t\n          &lt;/tr&gt;\n\t\t\t\t\t\n          &lt;tr&gt;\n\t\t\t\t\t\t\n            &lt;th&gt;status&lt;/th&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;SHALL&lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;token&lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td/&gt;\n\t\t\t\t\t\n          &lt;/tr&gt;\n\t\t\t\t\t\n          &lt;tr&gt;\n\t\t\t\t\t\t\n            &lt;th&gt;title&lt;/th&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;SHALL&lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;string&lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td/&gt;\n\t\t\t\t\t\n          &lt;/tr&gt;\n\t\t\t\t\t\n          &lt;tr&gt;\n\t\t\t\t\t\t\n            &lt;th&gt;version&lt;/th&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;SHALL&lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;string&lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td/&gt;\n\t\t\t\t\t\n          &lt;/tr&gt;\n\t\t\t\t\t\n          &lt;tr&gt;\n\t\t\t\t\t\t\n            &lt;th&gt;deReference&lt;/th&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;SHALL&lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;token&lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td/&gt;\n\t\t\t\t\t\n          &lt;/tr&gt;\n\t\t\t\t\n        &lt;/tbody&gt;\n\t\t\t\n      &lt;/table&gt;\n\t\t\t\n      &lt;br/&gt;\n\t\t\t\n      &lt;br/&gt;\n\t\t\t\n      &lt;h3&gt;\n\t\t\t\t\n        &lt;a href=\&quot;../valueset.html\&quot;&gt;ValueSet&lt;/a&gt;\n\t\t\t\n      &lt;/h3&gt;\n\t\t\t\n      &lt;h4&gt;Interactions&lt;/h4&gt;\n\t\t\t\n      &lt;table class=\&quot;list\&quot;&gt;\n\t\t\t\t\n        &lt;thead&gt;\n\t\t\t\t\t\n          &lt;tr&gt;\n\t\t\t\t\t\t\n            &lt;th&gt;Name&lt;/th&gt;\n\t\t\t\t\t\t\n            &lt;th&gt;Conformance&lt;/th&gt;\n\t\t\t\t\t\t\n            &lt;th&gt;Description&lt;/th&gt;\n\t\t\t\t\t\n          &lt;/tr&gt;\n\t\t\t\t\n        &lt;/thead&gt;\n\t\t\t\t\n        &lt;tbody&gt;\n\t\t\t\t\t\n          &lt;tr&gt;\n\t\t\t\t\t\t\n            &lt;th&gt;\n\t\t\t\t\t\t\t\n              &lt;a name=\&quot;ValueSet-search-type\&quot;&gt; &lt;/a&gt;\n\t\t\t\t\t\t\t\n              &lt;span&gt;search-type&lt;/span&gt;\n\t\t\t\t\t\t\n            &lt;/th&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;SHALL&lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;\n\t\t\t\t\t\t\t\n              &lt;p&gt;Allows discovery of existing value sets for use in authoring questionnaires&lt;/p&gt;\n\t\t\t\t\t\t\n            &lt;/td&gt;\n\t\t\t\t\t\n          &lt;/tr&gt;\n\t\t\t\t\t\n          &lt;tr&gt;\n\t\t\t\t\t\t\n            &lt;th&gt;\n\t\t\t\t\t\t\t\n              &lt;a name=\&quot;ValueSet-read\&quot;&gt; &lt;/a&gt;\n\t\t\t\t\t\t\t\n              &lt;span&gt;read&lt;/span&gt;\n\t\t\t\t\t\t\n            &lt;/th&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;SHALL&lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;\n\t\t\t\t\t\t\t\n              &lt;p&gt;Allows retrieval of a specific value set referenced within a questionnaire&lt;/p&gt;\n\t\t\t\t\t\t\n            &lt;/td&gt;\n\t\t\t\t\t\n          &lt;/tr&gt;\n\t\t\t\t\t\n          &lt;tr&gt;\n\t\t\t\t\t\t\n            &lt;th&gt;\n\t\t\t\t\t\t\t\n              &lt;a name=\&quot;ValueSet-vread\&quot;&gt; &lt;/a&gt;\n\t\t\t\t\t\t\t\n              &lt;span&gt;vread&lt;/span&gt;\n\t\t\t\t\t\t\n            &lt;/th&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;SHALL&lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;\n\t\t\t\t\t\t\t\n              &lt;p&gt;Allows retrieval of a historical version of a value set as referenced within a questionnaire&lt;/p&gt;\n\t\t\t\t\t\t\n            &lt;/td&gt;\n\t\t\t\t\t\n          &lt;/tr&gt;\n\t\t\t\t\t\n          &lt;tr&gt;\n\t\t\t\t\t\t\n            &lt;th&gt;\n\t\t\t\t\t\t\t\n              &lt;a name=\&quot;ValueSet-history-instance\&quot;&gt; &lt;/a&gt;\n\t\t\t\t\t\t\t\n              &lt;span&gt;history-instance&lt;/span&gt;\n\t\t\t\t\t\t\n            &lt;/th&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;SHALL&lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;\n\t\t\t\t\t\t\t\n              &lt;p&gt;Allows review of changes to a value set over time&lt;/p&gt;\n\t\t\t\t\t\t\n            &lt;/td&gt;\n\t\t\t\t\t\n          &lt;/tr&gt;\n\t\t\t\t\t\n          &lt;tr&gt;\n\t\t\t\t\t\t\n            &lt;th&gt;\n\t\t\t\t\t\t\t\n              &lt;a name=\&quot;ValueSet-create\&quot;&gt; &lt;/a&gt;\n\t\t\t\t\t\t\t\n              &lt;span&gt;create&lt;/span&gt;\n\t\t\t\t\t\t\n            &lt;/th&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;SHALL&lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;\n\t\t\t\t\t\t\t\n              &lt;p&gt;Allows definition of a new value set used by one or more questionnaires&lt;/p&gt;\n\t\t\t\t\t\t\n            &lt;/td&gt;\n\t\t\t\t\t\n          &lt;/tr&gt;\n\t\t\t\t\t\n          &lt;tr&gt;\n\t\t\t\t\t\t\n            &lt;th&gt;\n\t\t\t\t\t\t\t\n              &lt;a name=\&quot;ValueSet-update\&quot;&gt; &lt;/a&gt;\n\t\t\t\t\t\t\t\n              &lt;span&gt;update&lt;/span&gt;\n\t\t\t\t\t\t\n            &lt;/th&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;SHALL&lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;\n\t\t\t\t\t\t\t\n              &lt;p&gt;Allows existing value sets referenced by one or more questionnaires to be maintained&lt;/p&gt;\n\t\t\t\t\t\t\n            &lt;/td&gt;\n\t\t\t\t\t\n          &lt;/tr&gt;\n\t\t\t\t\t\n          &lt;tr&gt;\n\t\t\t\t\t\t\n            &lt;th&gt;\n\t\t\t\t\t\t\t\n              &lt;a name=\&quot;ValueSet-validate\&quot;&gt; &lt;/a&gt;\n\t\t\t\t\t\t\t\n              &lt;span&gt;validate&lt;/span&gt;\n\t\t\t\t\t\t\n            &lt;/th&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;SHOULD&lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;\n\t\t\t\t\t\t\t\n              &lt;p&gt;Allows verification that a value set is valid prior to submission - useful for some workflows.&lt;/p&gt;\n\t\t\t\t\t\t\n            &lt;/td&gt;\n\t\t\t\t\t\n          &lt;/tr&gt;\n\t\t\t\t\t\n          &lt;tr&gt;\n\t\t\t\t\t\t\n            &lt;th&gt;\n\t\t\t\t\t\t\t\n              &lt;a name=\&quot;ValueSet-delete\&quot;&gt; &lt;/a&gt;\n\t\t\t\t\t\t\t\n              &lt;span&gt;delete&lt;/span&gt;\n\t\t\t\t\t\t\n            &lt;/th&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;MAY&lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;\n\t\t\t\t\t\t\t\n              &lt;p&gt;Not all servers will support deletion of value sets.  Status change to 'retired' will be more typical, though deletion of draft value sets may keep repositories cleaner.&lt;/p&gt;\n\t\t\t\t\t\t\n            &lt;/td&gt;\n\t\t\t\t\t\n          &lt;/tr&gt;\n\t\t\t\t\n        &lt;/tbody&gt;\n\t\t\t\n      &lt;/table&gt;\n\t\t\t\n      &lt;h4&gt;Search&lt;/h4&gt;\n\t\t\t\n      &lt;p&gt;Supported Includes: ValueSet.compose.import&lt;/p&gt;\n\t\t\t\n      &lt;table class=\&quot;list\&quot;&gt;\n\t\t\t\t\n        &lt;thead&gt;\n\t\t\t\t\t\n          &lt;tr&gt;\n\t\t\t\t\t\t\n            &lt;th&gt;Parameter&lt;/th&gt;\n\t\t\t\t\t\t\n            &lt;th&gt;Conformance&lt;/th&gt;\n\t\t\t\t\t\t\n            &lt;th&gt;Type&lt;/th&gt;\n\t\t\t\t\t\t\n            &lt;th&gt;Definition &amp;amp; Chaining&lt;/th&gt;\n\t\t\t\t\t\n          &lt;/tr&gt;\n\t\t\t\t\n        &lt;/thead&gt;\n\t\t\t\t\n        &lt;tbody&gt;\n\t\t\t\t\t\n          &lt;tr&gt;\n\t\t\t\t\t\t\n            &lt;th&gt;code&lt;/th&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;SHALL&lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;token&lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td/&gt;\n\t\t\t\t\t\n          &lt;/tr&gt;\n\t\t\t\t\t\n          &lt;tr&gt;\n\t\t\t\t\t\t\n            &lt;th&gt;date&lt;/th&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;SHALL&lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;date&lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td/&gt;\n\t\t\t\t\t\n          &lt;/tr&gt;\n\t\t\t\t\t\n          &lt;tr&gt;\n\t\t\t\t\t\t\n            &lt;th&gt;description&lt;/th&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;SHALL&lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;string&lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td/&gt;\n\t\t\t\t\t\n          &lt;/tr&gt;\n\t\t\t\t\t\n          &lt;tr&gt;\n\t\t\t\t\t\t\n            &lt;th&gt;identifier&lt;/th&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;SHALL&lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;token&lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td/&gt;\n\t\t\t\t\t\n          &lt;/tr&gt;\n\t\t\t\t\t\n          &lt;tr&gt;\n\t\t\t\t\t\t\n            &lt;th&gt;name&lt;/th&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;SHALL&lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;string&lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td/&gt;\n\t\t\t\t\t\n          &lt;/tr&gt;\n\t\t\t\t\t\n          &lt;tr&gt;\n\t\t\t\t\t\t\n            &lt;th&gt;publisher&lt;/th&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;SHALL&lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;string&lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td/&gt;\n\t\t\t\t\t\n          &lt;/tr&gt;\n\t\t\t\t\t\n          &lt;tr&gt;\n\t\t\t\t\t\t\n            &lt;th&gt;reference&lt;/th&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;SHALL&lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;string&lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td/&gt;\n\t\t\t\t\t\n          &lt;/tr&gt;\n\t\t\t\t\t\n          &lt;tr&gt;\n\t\t\t\t\t\t\n            &lt;th&gt;status&lt;/th&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;SHALL&lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;token&lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td/&gt;\n\t\t\t\t\t\n          &lt;/tr&gt;\n\t\t\t\t\t\n          &lt;tr&gt;\n\t\t\t\t\t\t\n            &lt;th&gt;system&lt;/th&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;SHALL&lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;string&lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td/&gt;\n\t\t\t\t\t\n          &lt;/tr&gt;\n\t\t\t\t\t\n          &lt;tr&gt;\n\t\t\t\t\t\t\n            &lt;th&gt;version&lt;/th&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;SHALL&lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td&gt;string&lt;/td&gt;\n\t\t\t\t\t\t\n            &lt;td/&gt;\n\t\t\t\t\t\n          &lt;/tr&gt;\n\t\t\t\t\n        &lt;/tbody&gt;\n\t\t\t\n      &lt;/table&gt;\n\t\t\n    &lt;/div&gt;&quot;
+  },
+  &quot;name&quot;: &quot;SDC Form Manager&quot;,
+  &quot;status&quot;: &quot;draft&quot;,
+  &quot;date&quot;: &quot;2014-07-06&quot;,
+  &quot;publisher&quot;: &quot;U.S. Office of the National Coordinator (ONC)&quot;,
+  &quot;contact&quot;: [
+    {
+      &quot;telecom&quot;: [
+        {
+          &quot;system&quot;: &quot;other&quot;,
+          &quot;value&quot;: &quot;http://wiki.siframework.org/Structured+Data+Capture+Initiative&quot;
+        }
+      ]
+    }
+  ],
+  &quot;description&quot;: &quot;This profile defines the expected capabilities of the ''SDC Form Manager'' role when conforming to the S&amp;I Framework's [[sdc.html|Structured Data Capture FHIR implementation guide]].  This role is responsible for maintaining a repository of form definitions and also of performing pre-population of form data.&quot;,
+  &quot;kind&quot;: &quot;requirements&quot;,
+  &quot;fhirVersion&quot;: &quot;1.4.0&quot;,
+  &quot;acceptUnknown&quot;: &quot;extensions&quot;,
+  &quot;format&quot;: [
+    &quot;xml&quot;,
+    &quot;json&quot;
+  ],
+  &quot;rest&quot;: [
+    {
+      &quot;mode&quot;: &quot;server&quot;,
+      &quot;documentation&quot;: &quot;The primary focus of the repository is the definition of [[Questionnaires]].  However, [[ValueSet]]s must also be supported to allow definition of coded data elements.  Some data elements will choose to maintain value sets as 'contained' resources, meaning the value set exists only in the context of the data element and cannot be referenced or maintained without also updating the data element.  However, systems should support value set re-use across data elements.  (Version-specific referencing can be used to avoid value sets from changing independent of the referencing [[Questionnaire]].)&quot;,
+      &quot;security&quot;: {
+        &quot;description&quot;: &quot;Implementations must meet the general security requirements documented in the [[sdc-security|SDC implementation guide]].&quot;
+      },
+      &quot;resource&quot;: [
+        {
+          &quot;type&quot;: &quot;Questionnaire&quot;,
+          &quot;profile&quot;: {
+            &quot;reference&quot;: &quot;http://hl7.org/fhir/StructureDefinition/sdc-questionnaire&quot;
+          },
+          &quot;interaction&quot;: [
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot;,
+                  &quot;valueCode&quot;: &quot;SHALL&quot;
+                }
+              ],
+              &quot;code&quot;: &quot;search-type&quot;,
+              &quot;documentation&quot;: &quot;Allows a user to search for existing forms&quot;
+            },
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot;,
+                  &quot;valueCode&quot;: &quot;SHALL&quot;
+                }
+              ],
+              &quot;code&quot;: &quot;read&quot;,
+              &quot;documentation&quot;: &quot;Allows retrieval of a specific known form&quot;
+            },
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot;,
+                  &quot;valueCode&quot;: &quot;SHALL&quot;
+                }
+              ],
+              &quot;code&quot;: &quot;vread&quot;,
+              &quot;documentation&quot;: &quot;Allows retrieval of a specific version of a form&quot;
+            },
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot;,
+                  &quot;valueCode&quot;: &quot;SHALL&quot;
+                }
+              ],
+              &quot;code&quot;: &quot;history-instance&quot;,
+              &quot;documentation&quot;: &quot;Allows review of changes to a form over time&quot;
+            },
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot;,
+                  &quot;valueCode&quot;: &quot;SHALL&quot;
+                }
+              ],
+              &quot;code&quot;: &quot;create&quot;,
+              &quot;documentation&quot;: &quot;Allows defining a new form.  Repositories requiring curation of submitted forms may require all new data elements to have a status of 'draft'.&quot;
+            },
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot;,
+                  &quot;valueCode&quot;: &quot;SHALL&quot;
+                }
+              ],
+              &quot;code&quot;: &quot;update&quot;,
+              &quot;documentation&quot;: &quot;Allows an existing form to be updated.  Servers may choose to prohibit certain types of edits, instead requiring the creation of a new questionnaire (and potentially the retiring of the existing questionnaire).  Servers may also limit who can change particular forms.&quot;
+            },
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot;,
+                  &quot;valueCode&quot;: &quot;MAY&quot;
+                }
+              ],
+              &quot;code&quot;: &quot;delete&quot;,
+              &quot;documentation&quot;: &quot;Allows removal of an existing form.  Servers may choose to not support deletions and instead require that the form's status be changed to 'retired'.  Other systems support deletions but limit them to forms meeting certain requirements.  E.g. only forms with a status of draft or only forms that have been retired for at least two years, etc.&quot;
+            }
+          ],
+          &quot;searchInclude&quot;: [
+            &quot;Questionnaire.group.question.options&quot;
+          ],
+          &quot;searchParam&quot;: [
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot;,
+                  &quot;valueCode&quot;: &quot;SHALL&quot;
+                }
+              ],
+              &quot;name&quot;: &quot;code&quot;,
+              &quot;definition&quot;: &quot;http://hl7.org/fhir/SearchParameter/questionnaire#code&quot;,
+              &quot;type&quot;: &quot;token&quot;
+            },
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot;,
+                  &quot;valueCode&quot;: &quot;SHALL&quot;
+                }
+              ],
+              &quot;name&quot;: &quot;date&quot;,
+              &quot;definition&quot;: &quot;http://hl7.org/fhir/SearchParameter/questionnaire#date&quot;,
+              &quot;type&quot;: &quot;date&quot;
+            },
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot;,
+                  &quot;valueCode&quot;: &quot;SHALL&quot;
+                }
+              ],
+              &quot;name&quot;: &quot;identifier&quot;,
+              &quot;definition&quot;: &quot;http://hl7.org/fhir/SearchParameter/questionnaire#identifier&quot;,
+              &quot;type&quot;: &quot;token&quot;
+            },
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot;,
+                  &quot;valueCode&quot;: &quot;SHALL&quot;
+                }
+              ],
+              &quot;name&quot;: &quot;publisher&quot;,
+              &quot;definition&quot;: &quot;http://hl7.org/fhir/SearchParameter/questionnaire#publisher&quot;,
+              &quot;type&quot;: &quot;string&quot;
+            },
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot;,
+                  &quot;valueCode&quot;: &quot;SHALL&quot;
+                }
+              ],
+              &quot;name&quot;: &quot;status&quot;,
+              &quot;definition&quot;: &quot;http://hl7.org/fhir/SearchParameter/questionnaire#status&quot;,
+              &quot;type&quot;: &quot;token&quot;
+            },
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot;,
+                  &quot;valueCode&quot;: &quot;SHALL&quot;
+                }
+              ],
+              &quot;name&quot;: &quot;title&quot;,
+              &quot;definition&quot;: &quot;http://hl7.org/fhir/SearchParameter/questionnaire#title&quot;,
+              &quot;type&quot;: &quot;string&quot;
+            },
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot;,
+                  &quot;valueCode&quot;: &quot;SHALL&quot;
+                }
+              ],
+              &quot;name&quot;: &quot;version&quot;,
+              &quot;definition&quot;: &quot;http://hl7.org/fhir/SearchParameter/questionnaire#version&quot;,
+              &quot;type&quot;: &quot;string&quot;
+            },
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot;,
+                  &quot;valueCode&quot;: &quot;SHALL&quot;
+                }
+              ],
+              &quot;name&quot;: &quot;deReference&quot;,
+              &quot;definition&quot;: &quot;http://hl7.org/fhir/SearchParameter/questionnaire-deReference&quot;,
+              &quot;type&quot;: &quot;token&quot;
+            }
+          ]
+        },
+        {
+          &quot;type&quot;: &quot;ValueSet&quot;,
+          &quot;profile&quot;: {
+            &quot;reference&quot;: &quot;http://hl7.org/fhir/StructureDefinition/sdc-valueset&quot;
+          },
+          &quot;interaction&quot;: [
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot;,
+                  &quot;valueCode&quot;: &quot;SHALL&quot;
+                }
+              ],
+              &quot;code&quot;: &quot;search-type&quot;,
+              &quot;documentation&quot;: &quot;Allows discovery of existing value sets for use in authoring questionnaires&quot;
+            },
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot;,
+                  &quot;valueCode&quot;: &quot;SHALL&quot;
+                }
+              ],
+              &quot;code&quot;: &quot;read&quot;,
+              &quot;documentation&quot;: &quot;Allows retrieval of a specific value set referenced within a questionnaire&quot;
+            },
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot;,
+                  &quot;valueCode&quot;: &quot;SHALL&quot;
+                }
+              ],
+              &quot;code&quot;: &quot;vread&quot;,
+              &quot;documentation&quot;: &quot;Allows retrieval of a historical version of a value set as referenced within a questionnaire&quot;
+            },
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot;,
+                  &quot;valueCode&quot;: &quot;SHALL&quot;
+                }
+              ],
+              &quot;code&quot;: &quot;history-instance&quot;,
+              &quot;documentation&quot;: &quot;Allows review of changes to a value set over time&quot;
+            },
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot;,
+                  &quot;valueCode&quot;: &quot;SHALL&quot;
+                }
+              ],
+              &quot;code&quot;: &quot;create&quot;,
+              &quot;documentation&quot;: &quot;Allows definition of a new value set used by one or more questionnaires&quot;
+            },
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot;,
+                  &quot;valueCode&quot;: &quot;SHALL&quot;
+                }
+              ],
+              &quot;code&quot;: &quot;update&quot;,
+              &quot;documentation&quot;: &quot;Allows existing value sets referenced by one or more questionnaires to be maintained&quot;
+            },
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot;,
+                  &quot;valueCode&quot;: &quot;MAY&quot;
+                }
+              ],
+              &quot;code&quot;: &quot;delete&quot;,
+              &quot;documentation&quot;: &quot;Not all servers will support deletion of value sets.  Status change to 'retired' will be more typical, though deletion of draft value sets may keep repositories cleaner.&quot;
+            }
+          ],
+          &quot;searchInclude&quot;: [
+            &quot;ValueSet.compose.import&quot;
+          ],
+          &quot;searchParam&quot;: [
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot;,
+                  &quot;valueCode&quot;: &quot;SHALL&quot;
+                }
+              ],
+              &quot;name&quot;: &quot;code&quot;,
+              &quot;definition&quot;: &quot;http://hl7.org/fhir/SearchParameter/valueset#code&quot;,
+              &quot;type&quot;: &quot;token&quot;
+            },
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot;,
+                  &quot;valueCode&quot;: &quot;SHALL&quot;
+                }
+              ],
+              &quot;name&quot;: &quot;date&quot;,
+              &quot;definition&quot;: &quot;http://hl7.org/fhir/SearchParameter/valueset#date&quot;,
+              &quot;type&quot;: &quot;date&quot;
+            },
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot;,
+                  &quot;valueCode&quot;: &quot;SHALL&quot;
+                }
+              ],
+              &quot;name&quot;: &quot;description&quot;,
+              &quot;definition&quot;: &quot;http://hl7.org/fhir/SearchParameter/valueset#description&quot;,
+              &quot;type&quot;: &quot;string&quot;
+            },
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot;,
+                  &quot;valueCode&quot;: &quot;SHALL&quot;
+                }
+              ],
+              &quot;name&quot;: &quot;identifier&quot;,
+              &quot;definition&quot;: &quot;http://hl7.org/fhir/SearchParameter/valueset#identifier&quot;,
+              &quot;type&quot;: &quot;token&quot;
+            },
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot;,
+                  &quot;valueCode&quot;: &quot;SHALL&quot;
+                }
+              ],
+              &quot;name&quot;: &quot;name&quot;,
+              &quot;definition&quot;: &quot;http://hl7.org/fhir/SearchParameter/valueset#name&quot;,
+              &quot;type&quot;: &quot;string&quot;
+            },
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot;,
+                  &quot;valueCode&quot;: &quot;SHALL&quot;
+                }
+              ],
+              &quot;name&quot;: &quot;publisher&quot;,
+              &quot;definition&quot;: &quot;http://hl7.org/fhir/SearchParameter/valueset#publisher&quot;,
+              &quot;type&quot;: &quot;string&quot;
+            },
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot;,
+                  &quot;valueCode&quot;: &quot;SHALL&quot;
+                }
+              ],
+              &quot;name&quot;: &quot;reference&quot;,
+              &quot;definition&quot;: &quot;http://hl7.org/fhir/SearchParameter/valueset#reference&quot;,
+              &quot;type&quot;: &quot;string&quot;
+            },
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot;,
+                  &quot;valueCode&quot;: &quot;SHALL&quot;
+                }
+              ],
+              &quot;name&quot;: &quot;status&quot;,
+              &quot;definition&quot;: &quot;http://hl7.org/fhir/SearchParameter/valueset#status&quot;,
+              &quot;type&quot;: &quot;token&quot;
+            },
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot;,
+                  &quot;valueCode&quot;: &quot;SHALL&quot;
+                }
+              ],
+              &quot;name&quot;: &quot;system&quot;,
+              &quot;definition&quot;: &quot;http://hl7.org/fhir/SearchParameter/valueset#system&quot;,
+              &quot;type&quot;: &quot;string&quot;
+            },
+            {
+              &quot;extension&quot;: [
+                {
+                  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot;,
+                  &quot;valueCode&quot;: &quot;SHALL&quot;
+                }
+              ],
+              &quot;name&quot;: &quot;version&quot;,
+              &quot;definition&quot;: &quot;http://hl7.org/fhir/SearchParameter/valueset#version&quot;,
+              &quot;type&quot;: &quot;string&quot;
+            }
+          ]
+        }
+      ],
+      &quot;operation&quot;: [
+        {
+          &quot;extension&quot;: [
+            {
+              &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot;,
+              &quot;valueCode&quot;: &quot;MAY&quot;
+            }
+          ],
+          &quot;name&quot;: &quot;populate&quot;,
+          &quot;definition&quot;: {
+            &quot;reference&quot;: &quot;http://hl7.org/fhir/OperationDefinition/questionnaire-populate&quot;,
+            &quot;display&quot;: &quot;Populate Questionnaire&quot;
+          }
+        }
+      ]
+    }
+  ]
+}
+</pre>
+</div>
+
+
+<p>
+Usage note: every effort has been made to ensure that the
+examples are correct and useful, but they are not a normative part 
+of the specification. 
+</p>
+
+</div>
+
+
+				</div><!-- /inner-wrapper -->
+            </div><!-- /row -->
+        </div><!-- /container -->
+        
+    </div><!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment"><!-- segment-footer -->
+		<div class="container"><!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        © HL7.org 2011+. FHIR STU3 Candidate (v1.4.0-8453) generated on Mon, Jun 6, 2016 20:20+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search</a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fconformance-sdc-form-manager.json.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fconformance-sdc-form-manager.json.html">Compare to DSTU2</a> |                
+               <a style="color: #81BEF7" rel="license" href="license.html"><img src="cc0.png" style="border-style: none;" alt="CC0"/></a> | 
+               <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>   
+        </span>
+        </p>
+			</div><!-- /inner-wrapper -->
+		</div><!-- /container -->
+	</div><!-- /segment-footer -->
+<!-- disqus thread -->
+<!--disqus-->
+<!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden"><!-- segment-post-footer -->
+		<div class="container"><!-- container -->
+		</div><!-- /container -->
+	</div><!-- /segment-post-footer -->
+    
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>   <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

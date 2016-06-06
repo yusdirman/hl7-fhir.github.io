@@ -1,0 +1,455 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Bundle",
+  "resourceType": "Bundle",
+  "Resource.id": {
+    "value": "xds"
+  },
+  "Resource.meta": {
+    "Meta.lastUpdated": {
+      "value": "2013-07-01T13:11:33Z"
+    }
+  },
+  "Bundle.type": {
+    "value": "transaction"
+  },
+  "Bundle.entry": [
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "urn:uuid:3fdc72f4-a11d-4a9d-9260-a9f745779e1d"
+      },
+      "DocumentReference": [
+        {
+          "Resource.meta": {
+            "Meta.lastUpdated": {
+              "value": "2013-07-01T13:11:33Z"
+            }
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\n            <a href=\"http://localhost:9556/svc/fhir/Binary/1e404af3-077f-4bee-b7a6-a9be97e1ce32\">Document: urn:oid:129.6.58.92.88336</a>undefined, created 24/12/2005\n          </div>"
+            }
+          },
+          "DocumentReference.masterIdentifier": {
+            "Identifier.system": {
+              "value": "urn:ietf:rfc:3986"
+            },
+            "Identifier.value": {
+              "value": "urn:oid:129.6.58.92.88336"
+            }
+          },
+          "DocumentReference.subject": {
+            "Reference.reference": {
+              "value": "Patient/a2"
+            },
+            "reference": "http://hl7.org/fhir//Patient/a2"
+          },
+          "DocumentReference.type": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://ihe.net/connectathon/classCodes"
+                },
+                "Coding.code": {
+                  "value": "History and Physical"
+                },
+                "Coding.display": {
+                  "value": "History and Physical"
+                }
+              }
+            ]
+          },
+          "DocumentReference.class": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://loinc.org"
+                },
+                "Coding.code": {
+                  "value": "47039-3"
+                },
+                "Coding.display": {
+                  "value": "Inpatient Admission history and physical note"
+                }
+              }
+            ],
+            "concept": "http://loinc.org/owl#47039-3"
+          },
+          "DocumentReference.author": [
+            {
+              "Reference.reference": {
+                "value": "Practitioner/a3"
+              }
+            },
+            {
+              "Reference.reference": {
+                "value": "Practitioner/a4"
+              }
+            }
+          ],
+          "DocumentReference.created": {
+            "value": "2005-12-24"
+          },
+          "DocumentReference.indexed": {
+            "value": "2013-07-01T23:11:33+10:00"
+          },
+          "DocumentReference.status": {
+            "value": "current"
+          },
+          "DocumentReference.description": {
+            "value": "Physical"
+          },
+          "DocumentReference.securityLabel": [
+            {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "value": "http://hl7.org/fhir/v3/Confidentiality"
+                  },
+                  "Coding.code": {
+                    "value": "N"
+                  },
+                  "Coding.display": {
+                    "value": "normal"
+                  }
+                }
+              ]
+            }
+          ],
+          "DocumentReference.content": [
+            {
+              "DocumentReference.content.attachment": {
+                "Attachment.contentType": {
+                  "value": "text/plain"
+                },
+                "Attachment.language": {
+                  "value": "en-us"
+                },
+                "Attachment.url": {
+                  "value": "http://localhost:9556/svc/fhir/Binary/1e404af3-077f-4bee-b7a6-a9be97e1ce32"
+                }
+              },
+              "DocumentReference.content.format": [
+                {
+                  "Coding.system": {
+                    "value": "urn:oid:1.3.6.1.4.1.19376.1.2.3"
+                  },
+                  "Coding.code": {
+                    "value": "urn:ihe:pcc:handp:2008"
+                  }
+                }
+              ]
+            }
+          ],
+          "DocumentReference.context": {
+            "DocumentReference.context.period": {
+              "Period.start": {
+                "value": "2004-12-23T08:00:00+10:00"
+              },
+              "Period.end": {
+                "value": "2004-12-23T08:01:00+10:00"
+              }
+            },
+            "DocumentReference.context.practiceSetting": {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "value": "http://ihe.net/connectathon/practiceSettingCodes"
+                  },
+                  "Coding.code": {
+                    "value": "General Medicine"
+                  },
+                  "Coding.display": {
+                    "value": "General Medicine"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "Bundle.entry.request": {
+        "Bundle.entry.request.method": {
+          "value": "POST"
+        },
+        "Bundle.entry.request.url": {
+          "value": "DocumentReference"
+        }
+      }
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "http://localhost:9556/svc/fhir/Patient/a2"
+      },
+      "Patient": [
+        {
+          "Resource.id": {
+            "value": "a2"
+          },
+          "Resource.meta": {
+            "Meta.lastUpdated": {
+              "value": "2013-07-01T13:11:33Z"
+            }
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Person DOE, John, M, dob: 27/05/1956</div>"
+            }
+          },
+          "Patient.identifier": [
+            {
+              "Identifier.use": {
+                "value": "usual"
+              },
+              "Identifier.value": {
+                "value": "MRN"
+              }
+            }
+          ],
+          "Patient.name": [
+            {
+              "HumanName.use": {
+                "value": "usual"
+              },
+              "HumanName.text": {
+                "value": "DOE, John"
+              },
+              "HumanName.family": [
+                {
+                  "value": "Doe"
+                }
+              ],
+              "HumanName.given": [
+                {
+                  "value": "John"
+                }
+              ]
+            }
+          ],
+          "Patient.birthDate": {
+            "value": "1956-05-27"
+          }
+        }
+      ],
+      "Bundle.entry.request": {
+        "Bundle.entry.request.method": {
+          "value": "POST"
+        },
+        "Bundle.entry.request.url": {
+          "value": "Patient"
+        },
+        "Bundle.entry.request.ifNoneExist": {
+          "value": "Patient?identifier=http://acme.org/xds/patients!89765a87b"
+        }
+      }
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "http://localhost:9556/svc/fhir/Practitioner/a3"
+      },
+      "Practitioner": [
+        {
+          "Resource.id": {
+            "value": "a3"
+          },
+          "Resource.meta": {
+            "Meta.lastUpdated": {
+              "value": "2013-07-01T13:11:33Z"
+            }
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Author Gerald Smitty @ Cleveland Clinic</div>"
+            }
+          },
+          "Practitioner.name": [
+            {
+              "HumanName.use": {
+                "value": "usual"
+              },
+              "HumanName.family": [
+                {
+                  "value": "Smitty"
+                }
+              ],
+              "HumanName.given": [
+                {
+                  "value": "Gerald"
+                }
+              ]
+            }
+          ],
+          "Practitioner.practitionerRole": [
+            {
+              "Practitioner.practitionerRole.organization": {
+                "Reference.display": {
+                  "value": "Cleveland Clinic"
+                }
+              },
+              "Practitioner.practitionerRole.role": {
+                "CodeableConcept.coding": [
+                  {
+                    "Coding.code": {
+                      "value": "Attending"
+                    }
+                  }
+                ]
+              },
+              "Practitioner.practitionerRole.specialty": [
+                {
+                  "CodeableConcept.coding": [
+                    {
+                      "Coding.code": {
+                        "value": "Orthopedic"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "Practitioner.practitionerRole.organization": {
+                "Reference.display": {
+                  "value": "Parma Community"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "Bundle.entry.request": {
+        "Bundle.entry.request.method": {
+          "value": "POST"
+        },
+        "Bundle.entry.request.url": {
+          "value": "Practitioner"
+        }
+      }
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "http://localhost:9556/svc/fhir/Practitioner/a4"
+      },
+      "Practitioner": [
+        {
+          "Resource.id": {
+            "value": "a4"
+          },
+          "Resource.meta": {
+            "Meta.lastUpdated": {
+              "value": "2013-07-01T13:11:33Z"
+            }
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Author Person @ Cleveland Clinic</div>"
+            }
+          },
+          "Practitioner.name": [
+            {
+              "HumanName.use": {
+                "value": "usual"
+              },
+              "HumanName.family": [
+                {
+                  "value": "Dopplemeyer"
+                }
+              ],
+              "HumanName.given": [
+                {
+                  "value": "Sherry"
+                }
+              ]
+            }
+          ],
+          "Practitioner.practitionerRole": [
+            {
+              "Practitioner.practitionerRole.organization": {
+                "Reference.display": {
+                  "value": "Cleveland Clinic"
+                }
+              },
+              "Practitioner.practitionerRole.role": {
+                "CodeableConcept.coding": [
+                  {
+                    "Coding.code": {
+                      "value": "Primary Surgon"
+                    }
+                  }
+                ]
+              },
+              "Practitioner.practitionerRole.specialty": [
+                {
+                  "CodeableConcept.coding": [
+                    {
+                      "Coding.code": {
+                        "value": "Orthopedic"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "Practitioner.practitionerRole.organization": {
+                "Reference.display": {
+                  "value": "Berea Community"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "Bundle.entry.request": {
+        "Bundle.entry.request.method": {
+          "value": "POST"
+        },
+        "Bundle.entry.request.url": {
+          "value": "Practitioner"
+        }
+      }
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "http://localhost:9556/svc/fhir/Binary/1e404af3-077f-4bee-b7a6-a9be97e1ce32"
+      },
+      "Binary": [
+        {
+          "Resource.id": {
+            "value": "1e404af3-077f-4bee-b7a6-a9be97e1ce32"
+          },
+          "Resource.meta": {
+            "Meta.lastUpdated": {
+              "value": "2013-07-01T13:11:33Z"
+            }
+          },
+          "Binary.contentType": {
+            "value": "text/plain"
+          },
+          "Binary.content": {
+            "value": "YXNkYXNkYXNkYXNkYXNk"
+          }
+        }
+      ],
+      "Bundle.entry.request": {
+        "Bundle.entry.request.method": {
+          "value": "POST"
+        },
+        "Bundle.entry.request.url": {
+          "value": "Binary"
+        }
+      }
+    }
+  ]
+}

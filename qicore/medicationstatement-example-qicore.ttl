@@ -1,0 +1,46 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/MedicationStatementmedicationstatement-example-qicore> a fhir:MedicationStatement;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "medicationstatement-example-qicore"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>Penicillin VK 10ml suspension administered by oral route at 14:30 on 1 June 2012</p>\n      <p>to patient ref: a23</p>\n    </div>"
+  ];
+  fhir:MedicationStatement.status [ fhir:value "completed"];
+  fhir:MedicationStatement.medicationReference [
+     fhir:link <http://hl7.org/fhir/Medication/example>;
+     fhir:Reference.reference [ fhir:value "Medication/example" ]
+  ];
+  fhir:MedicationStatement.patient [
+     fhir:link <http://hl7.org/fhir/Patient/example>;
+     fhir:Reference.reference [ fhir:value "Patient/example" ]
+  ];
+  fhir:MedicationStatement.effectiveDateTime [ fhir:value "2012-06-01T14:30:00+14:00"^^xsd:dateTime];
+  fhir:MedicationStatement.dosage [
+     fhir:index 0;
+     fhir:MedicationStatement.dosage.route [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept sct:394899003;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "394899003" ];
+         fhir:Coding.display [ fhir:value "oral administration of treatment" ]
+       ]
+     ];
+     fhir:MedicationStatement.dosage.doseQuantity [
+       fhir:Quantity.value [ fhir:value "10"^^xsd:decimal ];
+       fhir:Quantity.unit [ fhir:value "ml" ];
+       fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+       fhir:Quantity.code [ fhir:value "ml" ]
+     ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

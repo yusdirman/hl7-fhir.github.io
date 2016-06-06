@@ -1,0 +1,61 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/MedicationDispensemeddisp008> a fhir:MedicationDispense;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "meddisp008"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n			<p>\n				<big>Capecitabine (Recurrent/Metastatic)</big>\n			</p>\n			<p>Course:</p>\n			<p>Name: Capecitabine</p>\n			<p>Agent Protocols Options:</p>\n			<p>\n				<b>Capecitabine 1000-1250 mg/m^2 PO twice daily D1-14</b>\n			</p>\n			<p>Offset: None</p>\n			<p>Cycle length: Q21D</p>\n		</div>"
+  ];
+  fhir:MedicationDispense.status [ fhir:value "completed"];
+  fhir:MedicationDispense.medicationReference [
+     fhir:link <http://hl7.org/fhir/Medication/f001>;
+     fhir:Reference.reference [ fhir:value "Medication/f001" ]
+  ];
+  fhir:MedicationDispense.patient [
+     fhir:link <http://hl7.org/fhir/Patient/example>;
+     fhir:Reference.reference [ fhir:value "Patient/example" ]
+  ];
+  fhir:MedicationDispense.dispenser [
+     fhir:link <http://hl7.org/fhir/Practitioner/example>;
+     fhir:Reference.reference [ fhir:value "Practitioner/example" ]
+  ];
+  fhir:MedicationDispense.authorizingPrescription [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/MedicationOrder/medrx006>;
+     fhir:Reference.reference [ fhir:value "MedicationOrder/medrx006" ]
+  ];
+  fhir:MedicationDispense.dosageInstruction [
+     fhir:index 0;
+     fhir:MedicationDispense.dosageInstruction.timing [
+       fhir:Timing.repeat [
+         fhir:Timing.repeat.frequency [ fhir:value "2"^^xsd:int ];
+         fhir:Timing.repeat.period [ fhir:value "21"^^xsd:decimal ];
+         fhir:Timing.repeat.periodUnit [ fhir:value "d" ]
+       ]
+     ];
+     fhir:MedicationDispense.dosageInstruction.route [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept sct:394899003;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "394899003" ];
+         fhir:Coding.display [ fhir:value "oral administration of treatment" ]
+       ]
+     ];
+     fhir:MedicationDispense.dosageInstruction.doseQuantity [
+       fhir:Quantity.value [ fhir:value "1000"^^xsd:decimal ];
+       fhir:Quantity.unit [ fhir:value "mg/m^2" ];
+       fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+       fhir:Quantity.code [ fhir:value "ml" ]
+     ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

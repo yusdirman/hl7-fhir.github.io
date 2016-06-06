@@ -1,0 +1,314 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/OperationDefinition",
+  "resourceType": "OperationDefinition",
+  "Resource.id": {
+    "value": "gao-order-evaluate"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Inputs</h2><table class=\"codes\">\n        <thead>\n          <tr>\n            <th><b>Parameters</b></th>\n            <th><b>Card.</b></th>\n            <th><b>Type</b></th>\n            <th><b>Description</b></th>\n          </tr>\n        </thead>\n        <tbody>\n          <tr>\n            <td>order</td>\n            <td>1..1</td>\n            <td><a href=\"../order.html\">Order</a><br/>(<a href=\"gao-order.html\">Guideline\n                Appropriate Order</a>)</td>\n            <td>The order to evaluate</td>\n          </tr>\n          <tr>\n            <td>coverage</td>\n            <td>0..*</td>\n            <td><a href=\"../coverage.html\">Coverage</a></td>\n            <td>Optional resources describing the patient’s coverage.</td>\n          </tr>\n          <tr>\n            <td>answers</td>\n            <td>0..*</td>\n            <td><a href=\"../questionnaireresponse.html\">QuestionnaireResponse</a><br/>(<a href=\"gao-questionnaireresponse.html\">GAO Questionnaire Response</a>)</td>\n            <td>Optional answers to any questions which have been or may be posed by the Decision\n              Support Service</td>\n          </tr>\n        </tbody>\n      </table><h2>Outputs</h2><table class=\"codes\">\n        <thead>\n          <tr>\n            <th><b>Parameters</b></th>\n            <th><b>Card.</b></th>\n            <th><b>Type</b></th>\n            <th><b>Description</b></th>\n          </tr>\n        </thead>\n        <tbody>\n          <tr>\n            <td>order</td>\n            <td>1..1</td>\n            <td><a href=\"../order.html\">Order</a><br/>(<a href=\"gao-order.html\">Guideline\n                Appropriate Order</a>)</td>\n            <td>The order that was evaluated. This is a copy of the order provided on input.</td>\n          </tr>\n          <tr>\n            <td>answers</td>\n            <td>0..*</td>\n            <td><a href=\"../questionnaireresponse.html\">QuestionnaireResponse</a><br/>(<a href=\"gao-questionnaireresponse.html\">GAO Questionnaire Response</a>)</td>\n            <td>Answers to any questions posed by the Decision Support Service. This SHALL be a copy\n              of the answers provided on input.</td>\n          </tr>\n          <tr>\n            <td>result</td>\n            <td>1..1</td>\n            <td><a href=\"../basic.html\">Basic</a><br/>(<a href=\"gao-result.html\">GAO\n              Result</a>)</td>\n            <td>A Basic resource indicating the status of the evaluation produced by evaluating the\n              order.</td>\n          </tr>\n          <tr>\n            <td>alternative</td>\n            <td>0..*</td>\n            <td><a href=\"../basic.html\">Basic</a><br/>(<a href=\"gao-alternate.html\">GAO\n                Alternate</a>)</td>\n            <td>Basic resources indicating the status of evaluations produced by evaluating\n              alternative orders suggested by the Decision Support Service Actor.</td>\n          </tr>\n          <tr>\n            <td>provenance</td>\n            <td>0..*</td>\n            <td><a href=\"../provenance.html\">Provenance</a></td>\n            <td>Provenance resources for the Result and Alternatives that can be used to verify that\n              those Resources came from a specific Decision Support Service. If the Decision Support\n              Service implements the Digital Signature option, there SHALL be one Provenance\n              resource for each Result or Alternate present in the output parameters.</td>\n          </tr>\n          <tr>\n            <td>dss</td>\n            <td>1..*</td>\n            <td><a href=\"../device.html\">Device</a></td>\n            <td>The Device resource shall identify the Decision Support Service device or devices\n              which evaluated the appropriateness of the order.</td>\n          </tr>\n          <tr>\n            <td>questions</td>\n            <td>0..*</td>\n            <td><a href=\"../questionnaire.html\">Questionnaire</a></td>\n            <td>A reference to one or more Questionnaire resources, which, if completed might\n              generate a different response from the Decision Support Service.</td>\n          </tr>\n          <tr>\n            <td>questionaireURI</td>\n            <td>0..1</td>\n            <td><a href=\"../datatypes.html#uri\">uri</a></td>\n            <td>Specifies a web endpoint where Questionnaire Resources returned by the Decision\n              Support Service can be invoked interactively. When the Decision Support Service\n              implements the Conversational Interaction Option and the questions parameter is\n              populated, this field SHALL be populated.</td>\n          </tr>\n        </tbody>\n      </table></div>"
+    }
+  },
+  "OperationDefinition.url": {
+    "value": "http://hl7.org/fhir/OperationDefinition/gao-order-evaluate"
+  },
+  "OperationDefinition.name": {
+    "value": "GAO Evaluate Order"
+  },
+  "OperationDefinition.status": {
+    "value": "draft"
+  },
+  "OperationDefinition.kind": {
+    "value": "operation"
+  },
+  "OperationDefinition.experimental": {
+    "value": false
+  },
+  "OperationDefinition.description": {
+    "value": "The evaluate operation examines an order, comparing it against known guidelines for appropriate use and returns the result of that evaluation to the caller."
+  },
+  "OperationDefinition.requirements": {
+    "value": "This operation enables clinical decision support to be invoked prior to ordering to ensure appropriate use of resources."
+  },
+  "OperationDefinition.idempotent": {
+    "value": true
+  },
+  "OperationDefinition.code": {
+    "value": "evaluate"
+  },
+  "OperationDefinition.comment": {
+    "value": "This operation is normally idempotent, but can depend upon the algorithm used."
+  },
+  "OperationDefinition.system": {
+    "value": false
+  },
+  "OperationDefinition.type": [
+    {
+      "value": "Order"
+    }
+  ],
+  "OperationDefinition.instance": {
+    "value": false
+  },
+  "OperationDefinition.parameter": [
+    {
+      "OperationDefinition.parameter.name": {
+        "value": "order"
+      },
+      "OperationDefinition.parameter.use": {
+        "value": "in"
+      },
+      "OperationDefinition.parameter.min": {
+        "value": 1
+      },
+      "OperationDefinition.parameter.max": {
+        "value": "1"
+      },
+      "OperationDefinition.parameter.documentation": {
+        "value": "The order to evaluate"
+      },
+      "OperationDefinition.parameter.type": {
+        "value": "Order"
+      },
+      "OperationDefinition.parameter.profile": {
+        "Reference.reference": {
+          "value": "http://hl7.org/fhir/StructureDefinition/gao-order"
+        },
+        "reference": "http://hl7.org/fhir/StructureDefinition/gao-order"
+      }
+    },
+    {
+      "OperationDefinition.parameter.name": {
+        "value": "coverage"
+      },
+      "OperationDefinition.parameter.use": {
+        "value": "in"
+      },
+      "OperationDefinition.parameter.min": {
+        "value": 0
+      },
+      "OperationDefinition.parameter.max": {
+        "value": "*"
+      },
+      "OperationDefinition.parameter.documentation": {
+        "value": "Optional resources describing the patient’s coverage."
+      },
+      "OperationDefinition.parameter.type": {
+        "value": "Coverage"
+      }
+    },
+    {
+      "OperationDefinition.parameter.name": {
+        "value": "answers"
+      },
+      "OperationDefinition.parameter.use": {
+        "value": "in"
+      },
+      "OperationDefinition.parameter.min": {
+        "value": 0
+      },
+      "OperationDefinition.parameter.max": {
+        "value": "*"
+      },
+      "OperationDefinition.parameter.documentation": {
+        "value": "Optional answers to any questions which have been or may be posed by the Decision Support Service"
+      },
+      "OperationDefinition.parameter.type": {
+        "value": "QuestionnaireResponse"
+      },
+      "OperationDefinition.parameter.profile": {
+        "Reference.reference": {
+          "value": "http://hl7.org/fhir/StructureDefinition/gao-questionnaireresponse"
+        },
+        "reference": "http://hl7.org/fhir/StructureDefinition/gao-questionnaireresponse"
+      }
+    },
+    {
+      "OperationDefinition.parameter.name": {
+        "value": "order"
+      },
+      "OperationDefinition.parameter.use": {
+        "value": "out"
+      },
+      "OperationDefinition.parameter.min": {
+        "value": 1
+      },
+      "OperationDefinition.parameter.max": {
+        "value": "1"
+      },
+      "OperationDefinition.parameter.documentation": {
+        "value": "The order that was evaluated. This is a copy of the order provided on input."
+      },
+      "OperationDefinition.parameter.type": {
+        "value": "Order"
+      },
+      "OperationDefinition.parameter.profile": {
+        "Reference.reference": {
+          "value": "http://hl7.org/fhir/StructureDefinition/gao-order"
+        },
+        "reference": "http://hl7.org/fhir/StructureDefinition/gao-order"
+      }
+    },
+    {
+      "OperationDefinition.parameter.name": {
+        "value": "answers"
+      },
+      "OperationDefinition.parameter.use": {
+        "value": "out"
+      },
+      "OperationDefinition.parameter.min": {
+        "value": 0
+      },
+      "OperationDefinition.parameter.max": {
+        "value": "*"
+      },
+      "OperationDefinition.parameter.documentation": {
+        "value": "Answers to any questions posed by the Decision Support Service. This SHALL be a copy of the answers provided on input."
+      },
+      "OperationDefinition.parameter.type": {
+        "value": "QuestionnaireResponse"
+      },
+      "OperationDefinition.parameter.profile": {
+        "Reference.reference": {
+          "value": "http://hl7.org/fhir/StructureDefinition/gao-questionnaireresponse"
+        },
+        "reference": "http://hl7.org/fhir/StructureDefinition/gao-questionnaireresponse"
+      }
+    },
+    {
+      "OperationDefinition.parameter.name": {
+        "value": "result"
+      },
+      "OperationDefinition.parameter.use": {
+        "value": "out"
+      },
+      "OperationDefinition.parameter.min": {
+        "value": 1
+      },
+      "OperationDefinition.parameter.max": {
+        "value": "1"
+      },
+      "OperationDefinition.parameter.documentation": {
+        "value": "A Basic resource indicating the status of the evaluation produced by evaluating the order."
+      },
+      "OperationDefinition.parameter.type": {
+        "value": "Basic"
+      },
+      "OperationDefinition.parameter.profile": {
+        "Reference.reference": {
+          "value": "http://hl7.org/fhir/StructureDefinition/gao-result"
+        },
+        "reference": "http://hl7.org/fhir/StructureDefinition/gao-result"
+      }
+    },
+    {
+      "OperationDefinition.parameter.name": {
+        "value": "alternative"
+      },
+      "OperationDefinition.parameter.use": {
+        "value": "out"
+      },
+      "OperationDefinition.parameter.min": {
+        "value": 0
+      },
+      "OperationDefinition.parameter.max": {
+        "value": "*"
+      },
+      "OperationDefinition.parameter.documentation": {
+        "value": "Basic resources indicating the status of evaluations produced by evaluating alternative orders suggested by the Decision Support Service Actor."
+      },
+      "OperationDefinition.parameter.type": {
+        "value": "Basic"
+      },
+      "OperationDefinition.parameter.profile": {
+        "Reference.reference": {
+          "value": "http://hl7.org/fhir/StructureDefinition/gao-alternate"
+        },
+        "reference": "http://hl7.org/fhir/StructureDefinition/gao-alternate"
+      }
+    },
+    {
+      "OperationDefinition.parameter.name": {
+        "value": "provenance"
+      },
+      "OperationDefinition.parameter.use": {
+        "value": "out"
+      },
+      "OperationDefinition.parameter.min": {
+        "value": 0
+      },
+      "OperationDefinition.parameter.max": {
+        "value": "*"
+      },
+      "OperationDefinition.parameter.documentation": {
+        "value": "Provenance resources for the Result and Alternatives that can be used to verify that those Resources came from a specific Decision Support Service.         If the Decision Support Service implements the Digital Signature option, there SHALL be one Provenance resource for each Result or Alternate present in the output parameters."
+      },
+      "OperationDefinition.parameter.type": {
+        "value": "Provenance"
+      }
+    },
+    {
+      "OperationDefinition.parameter.name": {
+        "value": "dss"
+      },
+      "OperationDefinition.parameter.use": {
+        "value": "out"
+      },
+      "OperationDefinition.parameter.min": {
+        "value": 1
+      },
+      "OperationDefinition.parameter.max": {
+        "value": "*"
+      },
+      "OperationDefinition.parameter.documentation": {
+        "value": "The Device resource shall identify the Decision Support Service device or devices which evaluated the appropriateness of the order."
+      },
+      "OperationDefinition.parameter.type": {
+        "value": "Device"
+      }
+    },
+    {
+      "OperationDefinition.parameter.name": {
+        "value": "questions"
+      },
+      "OperationDefinition.parameter.use": {
+        "value": "out"
+      },
+      "OperationDefinition.parameter.min": {
+        "value": 0
+      },
+      "OperationDefinition.parameter.max": {
+        "value": "*"
+      },
+      "OperationDefinition.parameter.documentation": {
+        "value": "A reference to one or more Questionnaire resources, which, if completed might generate a different response from the Decision Support Service."
+      },
+      "OperationDefinition.parameter.type": {
+        "value": "Questionnaire"
+      }
+    },
+    {
+      "OperationDefinition.parameter.name": {
+        "value": "questionaireURI"
+      },
+      "OperationDefinition.parameter.use": {
+        "value": "out"
+      },
+      "OperationDefinition.parameter.min": {
+        "value": 0
+      },
+      "OperationDefinition.parameter.max": {
+        "value": "1"
+      },
+      "OperationDefinition.parameter.documentation": {
+        "value": "Specifies a web endpoint where Questionnaire Resources returned by the Decision Support Service can be invoked interactively. When the Decision Support Service implements the Conversational Interaction Option and the questions parameter is populated, this field SHALL be populated."
+      },
+      "OperationDefinition.parameter.type": {
+        "value": "uri"
+      }
+    }
+  ]
+}

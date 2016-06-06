@@ -1,0 +1,48 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/PaymentNotice",
+  "resourceType": "PaymentNotice",
+  "Resource.id": {
+    "value": "77654"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">A human-readable rendering of the PaymentNotice</div>"
+    }
+  },
+  "PaymentNotice.identifier": [
+    {
+      "Identifier.system": {
+        "value": "http://benefitsinc.com/paymentnotice"
+      },
+      "Identifier.value": {
+        "value": "776543"
+      }
+    }
+  ],
+  "PaymentNotice.created": {
+    "value": "2014-08-16"
+  },
+  "PaymentNotice.organizationReference": {
+    "Reference.reference": {
+      "value": "Organization/1"
+    },
+    "reference": "http://hl7.org/fhir//Organization/1"
+  },
+  "PaymentNotice.requestReference": {
+    "Reference.reference": {
+      "value": "http://benefitsinc.com/fhir/oralhealthclaim/12345"
+    },
+    "reference": "http://benefitsinc.com/fhir/oralhealthclaim/12345"
+  },
+  "PaymentNotice.paymentStatus": {
+    "Coding.system": {
+      "value": "http://hl7.org/fhir/paymentstatus"
+    },
+    "Coding.code": {
+      "value": "paid"
+    }
+  }
+}

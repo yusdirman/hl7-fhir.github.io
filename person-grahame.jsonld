@@ -1,0 +1,134 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Person",
+  "resourceType": "Person",
+  "Resource.id": {
+    "value": "grahame"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <table>\n        <tbody>\n          <tr>\n            <td>Name</td>\n            <td>Peter James <b>Chalmers</b> (&quot;Jim&quot;)</td>\n          </tr>\n          <tr>\n            <td>Address</td>\n            <td>534 Erewhon, Pleasantville, Vic, 3999</td>\n          </tr>\n          <tr>\n            <td>Contacts</td>\n            <td>Home: unknown. Work: (03) 5555 6473</td>\n          </tr>\n          <tr>\n            <td>Id</td>\n            <td>MRN: 12345 (Acme Healthcare)</td>\n          </tr>\n        </tbody>\n      </table>\n    </div>"
+    }
+  },
+  "Person.identifier": [
+    {
+      "Identifier.use": {
+        "value": "usual"
+      },
+      "Identifier.type": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://hl7.org/fhir/v2/0203"
+            },
+            "Coding.code": {
+              "value": "MR"
+            }
+          }
+        ]
+      },
+      "Identifier.system": {
+        "value": "urn:oid:1.2.36.146.595.217.0.1"
+      },
+      "Identifier.value": {
+        "value": "12345"
+      },
+      "Identifier.period": {
+        "Period.start": {
+          "value": "2001-05-06"
+        }
+      },
+      "Identifier.assigner": {
+        "Reference.display": {
+          "value": "Acme Healthcare"
+        }
+      }
+    }
+  ],
+  "Person.name": [
+    {
+      "HumanName.use": {
+        "value": "official"
+      },
+      "HumanName.family": [
+        {
+          "value": "Chalmers"
+        }
+      ],
+      "HumanName.given": [
+        {
+          "value": "Peter"
+        },
+        {
+          "value": "James"
+        }
+      ]
+    },
+    {
+      "HumanName.use": {
+        "value": "usual"
+      },
+      "HumanName.given": [
+        {
+          "value": "Jim"
+        }
+      ]
+    }
+  ],
+  "Person.telecom": [
+    {
+      "ContactPoint.use": {
+        "value": "home"
+      }
+    },
+    {
+      "ContactPoint.system": {
+        "value": "phone"
+      },
+      "ContactPoint.value": {
+        "value": "(03) 5555 6473"
+      },
+      "ContactPoint.use": {
+        "value": "work"
+      }
+    }
+  ],
+  "Person.gender": {
+    "value": "male"
+  },
+  "Person.birthDate": {
+    "value": "1974-12-25"
+  },
+  "Person.address": [
+    {
+      "Address.use": {
+        "value": "home"
+      },
+      "Address.line": [
+        {
+          "value": "534 Erewhon St"
+        }
+      ],
+      "Address.city": {
+        "value": "PleasantVille"
+      },
+      "Address.state": {
+        "value": "Vic"
+      },
+      "Address.postalCode": {
+        "value": "3999"
+      }
+    }
+  ],
+  "Person.managingOrganization": {
+    "Reference.reference": {
+      "value": "Organization/1"
+    },
+    "reference": "http://hl7.org/fhir//Organization/1"
+  },
+  "Person.active": {
+    "value": true
+  }
+}

@@ -1,0 +1,388 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Library",
+  "resourceType": "Library",
+  "Resource.id": {
+    "value": "library-bcs"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Cohort Definition for Breast Cancer Screening Measure</div>"
+    }
+  },
+  "Library.moduleMetadata": {
+    "ModuleMetadata.identifier": [
+      {
+        "Identifier.use": {
+          "value": "official"
+        },
+        "Identifier.value": {
+          "value": "BCS"
+        }
+      }
+    ],
+    "ModuleMetadata.version": {
+      "value": "1.0.0"
+    },
+    "ModuleMetadata.title": {
+      "value": "Cohort Definition for Breast Cancer Screening Measure"
+    },
+    "ModuleMetadata.type": {
+      "value": "library"
+    },
+    "ModuleMetadata.status": {
+      "value": "active"
+    },
+    "ModuleMetadata.experimental": {
+      "value": true
+    },
+    "ModuleMetadata.publicationDate": {
+      "value": "2016-04-19"
+    },
+    "ModuleMetadata.topic": [
+      {
+        "CodeableConcept.text": {
+          "value": "something"
+        }
+      }
+    ]
+  },
+  "Library.model": [
+    {
+      "Library.model.identifier": {
+        "value": "FHIR"
+      }
+    }
+  ],
+  "Library.valueSet": [
+    {
+      "Library.valueSet.name": {
+        "value": "Bilateral Mastectomy"
+      },
+      "Library.valueSet.identifier": {
+        "value": "Bilateral Mastectomy"
+      }
+    },
+    {
+      "Library.valueSet.name": {
+        "value": "Unilateral Mastectomy"
+      },
+      "Library.valueSet.identifier": {
+        "value": "Unilateral Mastectomy + Bilateral Modifier"
+      }
+    },
+    {
+      "Library.valueSet.name": {
+        "value": "History of Bilateral Mastectomy"
+      },
+      "Library.valueSet.identifier": {
+        "value": "History of Bilateral Mastectomy"
+      }
+    },
+    {
+      "Library.valueSet.name": {
+        "value": "Left Modifier"
+      },
+      "Library.valueSet.identifier": {
+        "value": "Left Modifier"
+      }
+    },
+    {
+      "Library.valueSet.name": {
+        "value": "Absence of Left Breast"
+      },
+      "Library.valueSet.identifier": {
+        "value": "Absence of Left Breast"
+      }
+    },
+    {
+      "Library.valueSet.name": {
+        "value": "Unilateral Mastectomy Left"
+      },
+      "Library.valueSet.identifier": {
+        "value": "Unilateral Mastectomy Left"
+      }
+    },
+    {
+      "Library.valueSet.name": {
+        "value": "Right Modifier"
+      },
+      "Library.valueSet.identifier": {
+        "value": "Right Modifier"
+      }
+    },
+    {
+      "Library.valueSet.name": {
+        "value": "Absence of Right Breast"
+      },
+      "Library.valueSet.identifier": {
+        "value": "Absence of Right Breast"
+      }
+    },
+    {
+      "Library.valueSet.name": {
+        "value": "Unilateral Mastectomy Right"
+      },
+      "Library.valueSet.identifier": {
+        "value": "Unilateral Mastectomy Right"
+      }
+    },
+    {
+      "Library.valueSet.name": {
+        "value": "Mammography"
+      },
+      "Library.valueSet.identifier": {
+        "value": "Mammography"
+      }
+    }
+  ],
+  "Library.dataRequirement": [
+    {
+      "DataRequirement.type": {
+        "value": "Patient"
+      }
+    },
+    {
+      "DataRequirement.type": {
+        "value": "Procedure"
+      },
+      "DataRequirement.codeFilter": [
+        {
+          "DataRequirement.codeFilter.path": {
+            "value": "status"
+          },
+          "DataRequirement.codeFilter.valueCode": [
+            {
+              "value": "completed"
+            }
+          ]
+        },
+        {
+          "DataRequirement.codeFilter.path": {
+            "value": "code"
+          },
+          "DataRequirement.codeFilter.valueSetString": {
+            "value": "Bilateral Mastectomy"
+          }
+        }
+      ]
+    },
+    {
+      "DataRequirement.type": {
+        "value": "Procedure"
+      },
+      "DataRequirement.codeFilter": [
+        {
+          "DataRequirement.codeFilter.path": {
+            "value": "status"
+          },
+          "DataRequirement.codeFilter.valueCode": [
+            {
+              "value": "completed"
+            }
+          ]
+        },
+        {
+          "DataRequirement.codeFilter.path": {
+            "value": "code"
+          },
+          "DataRequirement.codeFilter.valueSetString": {
+            "value": "Unilateral Mastectomy + Bilateral Modifier"
+          }
+        }
+      ]
+    },
+    {
+      "DataRequirement.type": {
+        "value": "Procedure"
+      },
+      "DataRequirement.codeFilter": [
+        {
+          "DataRequirement.codeFilter.path": {
+            "value": "status"
+          },
+          "DataRequirement.codeFilter.valueCode": [
+            {
+              "value": "completed"
+            }
+          ]
+        },
+        {
+          "DataRequirement.codeFilter.path": {
+            "value": "code"
+          },
+          "DataRequirement.codeFilter.valueSetString": {
+            "value": "History of Bilateral Mastectomy"
+          }
+        }
+      ]
+    },
+    {
+      "DataRequirement.type": {
+        "value": "Procedure"
+      },
+      "DataRequirement.codeFilter": [
+        {
+          "DataRequirement.codeFilter.path": {
+            "value": "status"
+          },
+          "DataRequirement.codeFilter.valueCode": [
+            {
+              "value": "completed"
+            }
+          ]
+        },
+        {
+          "DataRequirement.codeFilter.path": {
+            "value": "code"
+          },
+          "DataRequirement.codeFilter.valueSetString": {
+            "value": "Unilateral Mastectomy + Left Modifier"
+          }
+        }
+      ]
+    },
+    {
+      "DataRequirement.type": {
+        "value": "Procedure"
+      },
+      "DataRequirement.codeFilter": [
+        {
+          "DataRequirement.codeFilter.path": {
+            "value": "status"
+          },
+          "DataRequirement.codeFilter.valueCode": [
+            {
+              "value": "completed"
+            }
+          ]
+        },
+        {
+          "DataRequirement.codeFilter.path": {
+            "value": "code"
+          },
+          "DataRequirement.codeFilter.valueSetString": {
+            "value": "Unilateral Mastectomy Left"
+          }
+        }
+      ]
+    },
+    {
+      "DataRequirement.type": {
+        "value": "Observation"
+      },
+      "DataRequirement.codeFilter": [
+        {
+          "DataRequirement.codeFilter.path": {
+            "value": "code"
+          },
+          "DataRequirement.codeFilter.valueSetString": {
+            "value": "Absence of Left Breast"
+          }
+        }
+      ]
+    },
+    {
+      "DataRequirement.type": {
+        "value": "Procedure"
+      },
+      "DataRequirement.codeFilter": [
+        {
+          "DataRequirement.codeFilter.path": {
+            "value": "status"
+          },
+          "DataRequirement.codeFilter.valueCode": [
+            {
+              "value": "completed"
+            }
+          ]
+        },
+        {
+          "DataRequirement.codeFilter.path": {
+            "value": "code"
+          },
+          "DataRequirement.codeFilter.valueSetString": {
+            "value": "Unilateral Mastectomy + Right Modifier"
+          }
+        }
+      ]
+    },
+    {
+      "DataRequirement.type": {
+        "value": "Procedure"
+      },
+      "DataRequirement.codeFilter": [
+        {
+          "DataRequirement.codeFilter.path": {
+            "value": "status"
+          },
+          "DataRequirement.codeFilter.valueCode": [
+            {
+              "value": "completed"
+            }
+          ]
+        },
+        {
+          "DataRequirement.codeFilter.path": {
+            "value": "code"
+          },
+          "DataRequirement.codeFilter.valueSetString": {
+            "value": "Unilateral Mastectomy Right"
+          }
+        }
+      ]
+    },
+    {
+      "DataRequirement.type": {
+        "value": "Observation"
+      },
+      "DataRequirement.codeFilter": [
+        {
+          "DataRequirement.codeFilter.path": {
+            "value": "code"
+          },
+          "DataRequirement.codeFilter.valueSetString": {
+            "value": "Absence of Right Breast"
+          }
+        }
+      ]
+    },
+    {
+      "DataRequirement.type": {
+        "value": "Procedure"
+      },
+      "DataRequirement.codeFilter": [
+        {
+          "DataRequirement.codeFilter.path": {
+            "value": "code"
+          },
+          "DataRequirement.codeFilter.valueSetString": {
+            "value": "Mammography"
+          }
+        }
+      ],
+      "DataRequirement.dateFilter": [
+        {
+          "DataRequirement.dateFilter.path": {
+            "value": "performedDateTime"
+          },
+          "DataRequirement.dateFilter.valuePeriod": {
+            "Period.start": {
+              "value": "2014-10-01"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "Library.document": {
+    "Attachment.contentType": {
+      "value": "application/xml+elm"
+    },
+    "Attachment.url": {
+      "value": "http://example.org/libraries/library-bcs.elm.xml"
+    }
+  }
+}

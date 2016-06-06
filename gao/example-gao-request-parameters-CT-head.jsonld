@@ -1,0 +1,168 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Parameters",
+  "resourceType": "Parameters",
+  "Resource.id": {
+    "value": "example-gao-request-parameters-CT-head"
+  },
+  "Parameters.parameter": [
+    {
+      "Parameters.parameter.name": {
+        "value": "order"
+      },
+      "Order": [
+        {
+          "Resource.id": {
+            "value": "example-gao-order"
+          },
+          "Resource.meta": {
+            "Meta.profile": [
+              {
+                "value": "http://hl7.org/fhir/StructureDefinition/gao-order"
+              }
+            ]
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <p>A 50-year-old male is ordered a CT of the Head for his headache by an identified practitioner.</p>\n          </div>"
+            }
+          },
+          "Patient": [
+            {
+              "Resource.id": {
+                "value": "patient"
+              },
+              "Resource.meta": {
+                "Meta.profile": [
+                  {
+                    "value": "http://hl7.org/fhir/StructureDefinition/gao-patient"
+                  }
+                ]
+              },
+              "Patient.gender": {
+                "value": "male"
+              },
+              "Patient.birthDate": {
+                "value": "1965-11-20"
+              }
+            },
+            {
+              "Resource.id": {
+                "value": "practitioner"
+              },
+              "Resource.meta": {
+                "Meta.profile": [
+                  {
+                    "value": "http://hl7.org/fhir/StructureDefinition/gao-practitioner"
+                  }
+                ]
+              },
+              "Practitioner.identifier": [
+                {
+                  "Identifier.system": {
+                    "value": "http://hl7.org/fhir/sid/us-npi"
+                  },
+                  "Identifier.value": {
+                    "value": "9999999999"
+                  }
+                }
+              ]
+            },
+            {
+              "Resource.id": {
+                "value": "diagnosticorder"
+              },
+              "Resource.meta": {
+                "Meta.profile": [
+                  {
+                    "value": "http://hl7.org/fhir/StructureDefinition/gao-diagnosticorder"
+                  }
+                ]
+              },
+              "DiagnosticOrder.subject": {
+                "Reference.reference": {
+                  "value": "example-gao-order#patient"
+                }
+              },
+              "DiagnosticOrder.orderer": {
+                "Reference.reference": {
+                  "value": "example-gao-order#practitioner"
+                }
+              },
+              "DiagnosticOrder.item": [
+                {
+                  "DiagnosticOrder.item.code": {
+                    "CodeableConcept.coding": [
+                      {
+                        "Coding.system": {
+                          "value": "http://loinc.org"
+                        },
+                        "Coding.code": {
+                          "value": "30799-1"
+                        },
+                        "Coding.display": {
+                          "value": "Head CT WO contrast"
+                        }
+                      }
+                    ],
+                    "CodeableConcept.text": {
+                      "value": "CT Head without contrast"
+                    },
+                    "concept": "http://loinc.org/owl#30799-1"
+                  }
+                }
+              ]
+            }
+          ],
+          "Order.identifier": [
+            {
+              "Identifier.system": {
+                "value": "http://example.com/OrderIdentifier"
+              },
+              "Identifier.value": {
+                "value": "123"
+              }
+            }
+          ],
+          "Order.date": {
+            "value": "2015-11-20"
+          },
+          "Order.subject": {
+            "Reference.reference": {
+              "value": "#patient"
+            }
+          },
+          "Order.source": {
+            "Reference.reference": {
+              "value": "#practitioner"
+            }
+          },
+          "Order.reasonCodeableConcept": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://example.com"
+                },
+                "Coding.code": {
+                  "value": "x"
+                }
+              }
+            ],
+            "CodeableConcept.text": {
+              "value": "Headache"
+            }
+          },
+          "Order.detail": [
+            {
+              "Reference.reference": {
+                "value": "#diagnosticorder"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Specimenspecimen-example-qicore> a fhir:Specimen;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "specimen-example-qicore"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: specimen-example-qicore</p><p><b>type</b>: Venous blood specimen <span>(Details : {SNOMED CT code '122555007' = 'Venous blood specimen (specimen)', given as 'Venous blood specimen'})</span></p><p><b>subject</b>: <a>Peter Patient</a></p><p><b>receivedTime</b>: Mar 4, 2011 7:03:00 AM</p><h3>Collections</h3><table><tr><td>-</td><td><b>Extension</b></td><td><b>Collected[x]</b></td><td><b>Quantity</b></td></tr><tr><td>*</td><td>Extensions: Todo</td><td>Mar 6, 2011 6:15:00 AM</td><td>6 mL</td></tr></table><h3>Treatments</h3><table><tr><td>-</td><td><b>Extension</b></td><td><b>Description</b></td><td><b>Additive</b></td></tr><tr><td>*</td><td>Extensions: Todo</td><td>Treated with anticoagulants.</td><td><a>Substance/example</a></td></tr></table><h3>Containers</h3><table><tr><td>-</td><td><b>Extension</b></td><td><b>Type</b></td><td><b>Capacity</b></td></tr><tr><td>*</td><td>Extensions: Todo</td><td>Specimen vial <span>(Details : {SNOMED CT code '434746001' = 'Specimen vial (physical object)', given as 'Specimen vial'})</span></td><td>10 mL</td></tr></table></div>"
+  ];
+  fhir:Specimen.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:concept sct:122555007;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "122555007" ];
+       fhir:Coding.display [ fhir:value "Venous blood specimen" ]
+     ]
+  ];
+  fhir:Specimen.subject [
+     fhir:link <http://hl7.org/fhir/Patient/example>;
+     fhir:Reference.reference [ fhir:value "Patient/example" ];
+     fhir:Reference.display [ fhir:value "Peter Patient" ]
+  ];
+  fhir:Specimen.receivedTime [ fhir:value "2011-03-04T07:03:00Z"^^xsd:dateTime];
+  fhir:Specimen.collection [
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/specimen-collectionPriority" ];
+       fhir:Extension.valueCodeableConcept [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://example.com" ];
+           fhir:Coding.code [ fhir:value "5" ];
+           fhir:Coding.display [ fhir:value "ROUTINE" ]
+         ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/specimen-specialHandling" ];
+       fhir:Extension.valueCodeableConcept [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v3/ActCode" ];
+           fhir:Coding.code [ fhir:value "NOPERSISTP" ];
+           fhir:Coding.display [ fhir:value "no collection beyond purpose of use" ]
+         ]
+       ]
+     ];
+     fhir:Specimen.collection.collectedDateTime [ fhir:value "2011-03-06T06:15:00Z"^^xsd:dateTime ];
+     fhir:Specimen.collection.quantity [
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/specimen-isDryWeight" ];
+         fhir:Extension.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+       ];
+       fhir:Quantity.value [ fhir:value "6"^^xsd:decimal ];
+       fhir:Quantity.unit [ fhir:value "mL" ]
+     ]
+  ];
+  fhir:Specimen.treatment [
+     fhir:index 0;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/specimen-treatmentTime" ];
+       fhir:Extension.valuePeriod [
+         fhir:Period.start [ fhir:value "2011-03-04T07:03:00Z"^^xsd:dateTime ];
+         fhir:Period.end [ fhir:value "2011-03-04T07:03:00Z"^^xsd:dateTime ]
+       ]
+     ];
+     fhir:Specimen.treatment.description [ fhir:value "Treated with anticoagulants." ];
+     fhir:Specimen.treatment.additive [
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/Substance/example>;
+       fhir:Reference.reference [ fhir:value "Substance/example" ]
+     ]
+  ];
+  fhir:Specimen.container [
+     fhir:index 0;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/specimen-sequenceNumber" ];
+       fhir:Extension.valueInteger [ fhir:value "1"^^xsd:int ]
+     ];
+     fhir:Specimen.container.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept sct:434746001;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "434746001" ];
+         fhir:Coding.display [ fhir:value "Specimen vial" ]
+       ]
+     ];
+     fhir:Specimen.container.capacity [
+       fhir:Quantity.value [ fhir:value "10"^^xsd:decimal ];
+       fhir:Quantity.unit [ fhir:value "mL" ]
+     ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

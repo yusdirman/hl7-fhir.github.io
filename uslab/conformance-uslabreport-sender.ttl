@@ -1,0 +1,128 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Conformanceconformance-uslabreport-sender> a fhir:Conformance;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "conformance-uslabreport-sender"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n			\n      <h2>USLabReport Sender</h2>\n			\n      <p>(Requirements Definition)</p>\n			\n      <p>Published: 2014-12-02 (draft)</p>\n			\n      <p>Published by: \n        <b>\n					\n          <a href=\"http://www.hl7.org/\">Published by: HL7 Orders and Observation Workgroup</a>\n				\n        </b> Primary Author: Eric Haas  Health eData Inc\n      </p>\n			\n      <p>This profile defines the expected capabilities of the USLabReport Sender actor when conforming to the \n        <a href=\"uslabreport.html\">The US Laboratory Report Implementation (USLabReport)</a>.  This actor is the source of a laboratory test order report and declares conformance to RESTful FHIR and FHIR profiles defined in this guide.  The order reference one or more FHIR resources conforming to profiles outlined in the USLabReport guide.\n      </p>\n			\n      <h2>General</h2>\n			\n      <table>\n				\n        <tbody>\n					\n          <tr>\n						\n            <th>FHIR Version:</th>\n						\n            <td>0.8</td>\n					\n          </tr>\n					\n          <tr>\n						\n            <th>Supported formats:</th>\n						\n            <td>xml, json</td>\n					\n          </tr>\n				\n        </tbody>\n			\n      </table>\n			\n      <h2>REST  behavior</h2>\n			\n      <p>\n				\n        <b>Mode:</b> Server\n			\n      </p>\n			\n      <p>This conformance resource assumes the USLabReport Sender is the server, in other words, operating in 'Pull'  or 'Push/Pull' RESTful interface.  The USLabReport Sender MUST support querying one or more resources outlined by the \n        <a href=\"uslabreport-guide.html\">USLabReport Guide</a>. The USLabReport Sender MUST use all the vocabularies and value set constraints defined by the individual resource profiles used by USLabReport. The USLabReport Sender MUST implement REST behavior according to the \n        <a href=\"../http.html\">FHIR specification</a> and MUST be able to handle errors gracefully from Query Responders who may not support the submitted query.\n      </p>\n			\n      <p>\n				\n        <b>Security:</b>\n			\n      </p>\n			\n      <p>Implementations must meet the security requirements documented in the \n        <a href=\"uslabreport-guide.html#assumptions\">USLabReport Guide assumptions</a>.\n      </p>\n			\n      <h3>Summary</h3>\n			\n      <table class=\"grid\">\n				\n        <thead>\n					\n          <tr>\n						\n            <th>Resource</th>\n						\n            <th>Search</th>\n						\n            <th>Read</th>\n						\n            <th>Read Version</th>\n						\n            <th>Instance History</th>\n						\n            <th>Resource History</th>\n						\n            <th>Validate</th>\n						\n            <th>Create</th>\n						\n            <th>Update</th>\n						\n            <th>Delete</th>\n					\n          </tr>\n				\n        </thead>\n				\n        <tbody>\n					\n          <tr>\n						\n            <th>DiagnosticReport</th>\n						\n            <td>\n							\n              <a href=\"#DiagnosticReport-search-type\" title=\"Allows a user to search for existing DiagnosticReport\">Yes</a>\n						\n            </td>\n						\n            <td>\n							\n              <a href=\"#DiagnosticReport-read\" title=\"Allows retrieval of a specific known DiagnosticReport\">Yes</a>\n						\n            </td>\n						\n            <td>\n							\n              <a href=\"#DiagnosticReport-vread\" title=\"Allows retrieval of a specific version of a DiagnosticReport\">Yes</a>\n						\n            </td>\n						\n            <td>\n							\n              <a href=\"#DiagnosticReport-history-instance\" title=\"Allows review of changes to a DiagnosticReport over time\">Yes</a>\n						\n            </td>\n						\n            <td/>\n						\n            <td>\n							\n              <a href=\"#DiagnosticReport-validate\" title=\"Allows a client to verify whether a particular new DiagnosticReport or revision of an existing DiagnosticReport would be accepted based on validation and other business rules.  Useful for some workflows\">Yes</a>\n						\n            </td>\n						\n            <td>\n							\n              <a href=\"#DiagnosticReport-create\" title=\"Allows defining a new DiagnosticReport\">Yes</a>\n						\n            </td>\n						\n            <td>\n							\n              <a href=\"#DiagnosticReport-update\" title=\"Allows editing of an existing DiagnosticReport.  Servers may choose to prohibit certain types of edits, instead requiring the creation of a new DiagnosticReport (and potentially the retiring of the existing DiagnosticReport).  Servers may also limit who can change particular DiagnosticReport.\">Yes</a>\n						\n            </td>\n						\n            <td/>\n					\n          </tr>\n				\n        </tbody>\n			\n      </table>\n			\n      <br/>\n			\n      <br/>\n			\n      <h3>\n				\n        <a href=\"../diagnosticreport.html\">DiagnosticReport</a>\n			\n      </h3>\n			\n      <h4>Interactions</h4>\n			\n      <table class=\"list\">\n				\n        <thead>\n					\n          <tr>\n						\n            <th>Name</th>\n						\n            <th>Description</th>\n					\n          </tr>\n				\n        </thead>\n				\n        <tbody>\n					\n          <tr>\n						\n            <th>\n							\n              <a name=\"DiagnosticReport-search-type\"> </a>\n							\n              <span>search-type</span>\n						\n            </th>\n						\n            <td>\n							\n              <p>Allows a user to search for existing DiagnosticReport</p>\n						\n            </td>\n					\n          </tr>\n					\n          <tr>\n						\n            <th>\n							\n              <a name=\"DiagnosticReport-read\"> </a>\n							\n              <span>read</span>\n						\n            </th>\n						\n            <td>\n							\n              <p>Allows retrieval of a specific known DiagnosticReport</p>\n						\n            </td>\n					\n          </tr>\n					\n          <tr>\n						\n            <th>\n							\n              <a name=\"DiagnosticReport-vread\"> </a>\n							\n              <span>vread</span>\n						\n            </th>\n						\n            <td>\n							\n              <p>Allows retrieval of a specific version of a DiagnosticReport</p>\n						\n            </td>\n					\n          </tr>\n					\n          <tr>\n						\n            <th>\n							\n              <a name=\"DiagnosticReport-history-instance\"> </a>\n							\n              <span>history-instance</span>\n						\n            </th>\n						\n            <td>\n							\n              <p>Allows review of changes to a DiagnosticReport over time</p>\n						\n            </td>\n					\n          </tr>\n					\n          <tr>\n						\n            <th>\n							\n              <a name=\"DiagnosticReport-create\"> </a>\n							\n              <span>create</span>\n						\n            </th>\n						\n            <td>\n							\n              <p>Allows defining a new DiagnosticReport</p>\n						\n            </td>\n					\n          </tr>\n					\n          <tr>\n						\n            <th>\n							\n              <a name=\"DiagnosticReport-update\"> </a>\n							\n              <span>update</span>\n						\n            </th>\n						\n            <td>\n							\n              <p>Allows editing of an existing DiagnosticReport.  Servers may choose to prohibit certain types of edits, instead requiring the creation of a new DiagnosticReport (and potentially the retiring of the existing DiagnosticReport).  Servers may also limit who can change particular DiagnosticReport.</p>\n						\n            </td>\n					\n          </tr>\n					\n          <tr>\n						\n            <th>\n							\n              <a name=\"DiagnosticReport-validate\"> </a>\n							\n              <span>validate</span>\n						\n            </th>\n						\n            <td>\n							\n              <p>Allows a client to verify whether a particular new DiagnosticReport or revision of an existing DiagnosticReport would be accepted based on validation and other business rules.  Useful for some workflows</p>\n						\n            </td>\n					\n          </tr>\n				\n        </tbody>\n			\n      </table>\n			\n      <h4>Search</h4>\n			\n      <p>Supported Includes: DiagnosticReport.subject, DiagnosticReport.performer, DiagnosticReport.request, DiagnosticReport.specimen, DiagnosticReport.report</p>\n			\n      <h2>REST  behavior</h2>\n			\n      <p>\n				\n        <b>Mode:</b> Client\n			\n      </p>\n			\n      <p>The following conformance rules assumes the USLabReport Sender is the client, in other words, operating in 'Push'  RESTful interface.  The USLabReport Sender MUST support querying one or more resources outlined by the \n        <a href=\"uslabreport.html\">USLabReport Guide</a>. The USLabReport Sender MUST use all the vocabularies and value set constraints defined by the individual resource profiles used by USLabReport. The USLabReport Sender MUST implement REST behavior according to the \n        <a href=\"../http.html\">FHIR specification</a> and MUST be able to handle errors gracefully from Query Responders who may not support the submitted query.\n      </p>\n			\n      <p>\n				\n        <b>Security:</b>\n			\n      </p>\n			\n      <p>Implementations must meet the security requirements documented in the \n        <a href=\"uslabreport.html\">USLabReport Guide assumptions</a>.\n      </p>\n			\n      <h3>Summary</h3>\n			\n      <table class=\"grid\">\n				\n        <thead>\n					\n          <tr>\n						\n            <th>Resource</th>\n						\n            <th>Search</th>\n						\n            <th>Read</th>\n						\n            <th>Read Version</th>\n						\n            <th>Instance History</th>\n						\n            <th>Resource History</th>\n						\n            <th>Validate</th>\n						\n            <th>Create</th>\n						\n            <th>Update</th>\n						\n            <th>Delete</th>\n					\n          </tr>\n				\n        </thead>\n				\n        <tbody>\n					\n          <tr>\n						\n            <th>DiagnosticReport</th>\n						\n            <td>\n							\n              <a href=\"#DiagnosticReport-search-type\" title=\"Allows a user to search for existing DiagnosticReport\">Yes</a>\n						\n            </td>\n						\n            <td>\n							\n              <a href=\"#DiagnosticReport-read\" title=\"Allows retrieval of a specific known DiagnosticReport\">Yes</a>\n						\n            </td>\n						\n            <td>\n							\n              <a href=\"#DiagnosticReport-vread\" title=\"Allows retrieval of a specific version of a DiagnosticReport\">Yes</a>\n						\n            </td>\n						\n            <td>\n							\n              <a href=\"#DiagnosticReport-history-instance\" title=\"Allows review of changes to a DiagnosticReport over time\">Yes</a>\n						\n            </td>\n						\n            <td/>\n						\n            <td>\n							\n              <a href=\"#DiagnosticReport-validate\" title=\"Allows a client to verify whether a particular new DiagnosticReport or revision of an existing DiagnosticReport would be accepted based on validation and other business rules.  Useful for some workflows\">Yes</a>\n						\n            </td>\n						\n            <td>\n							\n              <a href=\"#DiagnosticReport-create\" title=\"Allows defining a new DiagnosticReport\">Yes</a>\n						\n            </td>\n						\n            <td>\n							\n              <a href=\"#DiagnosticReport-update\" title=\"Allows editing of an existing DiagnosticReport.  Servers may choose to prohibit certain types of edits, instead requiring the creation of a new DiagnosticReport (and potentially the retiring of the existing DiagnosticReport).  Servers may also limit who can change particular DiagnosticReport.\">Yes</a>\n						\n            </td>\n						\n            <td/>\n					\n          </tr>\n				\n        </tbody>\n			\n      </table>\n			\n      <br/>\n			\n      <br/>\n			\n      <h3>\n				\n        <a href=\"../diagnosticreport.html\">DiagnosticReport</a>\n			\n      </h3>\n			\n      <h4>Interactions</h4>\n			\n      <table class=\"list\">\n				\n        <thead>\n					\n          <tr>\n						\n            <th>Name</th>\n						\n            <th>Description</th>\n					\n          </tr>\n				\n        </thead>\n				\n        <tbody>\n					\n          <tr>\n						\n            <th>\n							\n              <a name=\"DiagnosticReport-search-type\"> </a>\n							\n              <span>search-type</span>\n						\n            </th>\n						\n            <td>\n							\n              <p>Allows a user to search for existing DiagnosticReport</p>\n						\n            </td>\n					\n          </tr>\n					\n          <tr>\n						\n            <th>\n							\n              <a name=\"DiagnosticReport-read\"> </a>\n							\n              <span>read</span>\n						\n            </th>\n						\n            <td>\n							\n              <p>Allows retrieval of a specific known DiagnosticReport</p>\n						\n            </td>\n					\n          </tr>\n					\n          <tr>\n						\n            <th>\n							\n              <a name=\"DiagnosticReport-vread\"> </a>\n							\n              <span>vread</span>\n						\n            </th>\n						\n            <td>\n							\n              <p>Allows retrieval of a specific version of a DiagnosticReport</p>\n						\n            </td>\n					\n          </tr>\n					\n          <tr>\n						\n            <th>\n							\n              <a name=\"DiagnosticReport-history-instance\"> </a>\n							\n              <span>history-instance</span>\n						\n            </th>\n						\n            <td>\n							\n              <p>Allows review of changes to a DiagnosticReport over time</p>\n						\n            </td>\n					\n          </tr>\n					\n          <tr>\n						\n            <th>\n							\n              <a name=\"DiagnosticReport-create\"> </a>\n							\n              <span>create</span>\n						\n            </th>\n						\n            <td>\n							\n              <p>Allows defining a new DiagnosticReport</p>\n						\n            </td>\n					\n          </tr>\n					\n          <tr>\n						\n            <th>\n							\n              <a name=\"DiagnosticReport-update\"> </a>\n							\n              <span>update</span>\n						\n            </th>\n						\n            <td>\n							\n              <p>Allows editing of an existing DiagnosticReport.  Servers may choose to prohibit certain types of edits, instead requiring the creation of a new DiagnosticReport (and potentially the retiring of the existing DiagnosticReport).  Servers may also limit who can change particular DiagnosticReport.</p>\n						\n            </td>\n					\n          </tr>\n					\n          <tr>\n						\n            <th>\n							\n              <a name=\"DiagnosticReport-validate\"> </a>\n							\n              <span>validate</span>\n						\n            </th>\n						\n            <td>\n							\n              <p>Allows a client to verify whether a particular new DiagnosticReport or revision of an existing DiagnosticReport would be accepted based on validation and other business rules.  Useful for some workflows</p>\n						\n            </td>\n					\n          </tr>\n				\n        </tbody>\n			\n      </table>\n			\n      <h4>Search</h4>\n			\n      <p>Supported Includes: DiagnosticReport.subject, DiagnosticReport.performer, DiagnosticReport.request, DiagnosticReport.specimen, DiagnosticReport.report</p>\n		\n    </div>"
+  ];
+  fhir:Conformance.name [ fhir:value "USLabReport Sender"];
+  fhir:Conformance.status [ fhir:value "draft"];
+  fhir:Conformance.date [ fhir:value "2014-12-02"^^xsd:date];
+  fhir:Conformance.publisher [ fhir:value "Published by: HL7 Orders and Observation Workgroup. Primary Author: Eric Haas  Health eData Inc"];
+  fhir:Conformance.contact [
+     fhir:index 0;
+     fhir:Conformance.contact.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "other" ];
+       fhir:ContactPoint.value [ fhir:value "http://www.hl7.org/" ]
+     ]
+  ];
+  fhir:Conformance.description [ fhir:value "This profile defines the expected capabilities of the USLabReport Sender actor when conforming to the [[uslabreport.html|The US Sender Report Implementation (USLabReport)]].  This actor is the source of a laboratory test order report and declares conformance to RESTful FHIR and FHIR profiles defined in this guide.  The order reference one or more FHIR resources conforming to profiles outlined in the USLabReport guide."];
+  fhir:Conformance.kind [ fhir:value "requirements"];
+  fhir:Conformance.fhirVersion [ fhir:value "1.0.0"];
+  fhir:Conformance.acceptUnknown [ fhir:value "extensions"];
+  fhir:Conformance.format [
+     fhir:value "xml";
+     fhir:index 0
+  ], [
+     fhir:value "json";
+     fhir:index 1
+  ];
+  fhir:Conformance.rest [
+     fhir:index 0;
+     fhir:Conformance.rest.mode [ fhir:value "server" ];
+     fhir:Conformance.rest.documentation [ fhir:value "This conformance resource assumes the USLabReport Sender is the server, in other words, operating in 'Pull'  or 'Push/Pull' RESTful interface.  The USLabReport Sender MUST support querying one or more resources outlined by the [[uslabreport|USLabReport Guide]]. The USLabReport Sender MUST use all the vocabularies and value set constraints defined by the individual resource profiles used by USLabReport. The USLabReport Sender MUST implement REST behavior according to the [[http|FHIR specification]] and MUST be able to handle errors gracefully from Query Responders who may not support the submitted query." ];
+     fhir:Conformance.rest.security [
+       fhir:Conformance.rest.security.description [ fhir:value "Implementations must meet the security requirements documented in the [[uslabreport|USLabReport Guide assumptions]]." ]
+     ];
+     fhir:Conformance.rest.resource [
+       fhir:index 0;
+       fhir:Conformance.rest.resource.type [ fhir:value "DiagnosticReport" ];
+       fhir:Conformance.rest.resource.profile [
+         fhir:Reference.reference [ fhir:value "dr-uslab" ]
+       ];
+       fhir:Conformance.rest.resource.interaction [
+         fhir:index 0;
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "search-type" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows a user to search for existing DiagnosticReport" ]
+       ], [
+         fhir:index 1;
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "read" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows retrieval of a specific known DiagnosticReport" ]
+       ], [
+         fhir:index 2;
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "vread" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows retrieval of a specific version of a DiagnosticReport" ]
+       ], [
+         fhir:index 3;
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "history-instance" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows review of changes to a DiagnosticReport over time" ]
+       ], [
+         fhir:index 4;
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "create" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows defining a new DiagnosticReport" ]
+       ], [
+         fhir:index 5;
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "update" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows editing of an existing DiagnosticReport.  Servers may choose to prohibit certain types of edits, instead requiring the creation of a new DiagnosticReport (and potentially the retiring of the existing DiagnosticReport).  Servers may also limit who can change particular DiagnosticReport." ]
+       ];
+       fhir:Conformance.rest.resource.searchInclude [
+         fhir:value "DiagnosticReport.subject, DiagnosticReport.performer, DiagnosticReport.request, DiagnosticReport.specimen, DiagnosticReport.report";
+         fhir:index 0
+       ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Conformance.rest.mode [ fhir:value "client" ];
+     fhir:Conformance.rest.documentation [ fhir:value "The following conformance rules assumes the USLabReport Sender is the client, in other words, operating in 'Push'  RESTful interface.  The USLabReport Sender MUST support querying one or more resources outlined by the [[uslabreport|USLabReport Guide]]. The USLabReport Sender MUST use all the vocabularies and value set constraints defined by the individual resource profiles used by USLabReport. The USLabReport Sender MUST implement REST behavior according to the [[http|FHIR specification]] and MUST be able to handle errors gracefully from Query Responders who may not support the submitted query." ];
+     fhir:Conformance.rest.security [
+       fhir:Conformance.rest.security.description [ fhir:value "Implementations must meet the security requirements documented in the [[uslabreport|USLabReport Guide assumptions]]." ]
+     ];
+     fhir:Conformance.rest.resource [
+       fhir:index 0;
+       fhir:Conformance.rest.resource.type [ fhir:value "DiagnosticReport" ];
+       fhir:Conformance.rest.resource.profile [
+         fhir:link <http://hl7.org/fhir/StructureDefinition/do-uslab>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/do-uslab" ]
+       ];
+       fhir:Conformance.rest.resource.interaction [
+         fhir:index 0;
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "search-type" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows a user to search for existing DiagnosticReport" ]
+       ], [
+         fhir:index 1;
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "read" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows retrieval of a specific known DiagnosticReport" ]
+       ], [
+         fhir:index 2;
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "vread" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows retrieval of a specific version of a DiagnosticReport" ]
+       ], [
+         fhir:index 3;
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "history-instance" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows review of changes to a DiagnosticReport over time" ]
+       ], [
+         fhir:index 4;
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "create" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows defining a new DiagnosticReport" ]
+       ], [
+         fhir:index 5;
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "update" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows editing of an existing DiagnosticReport.  Servers may choose to prohibit certain types of edits, instead requiring the creation of a new DiagnosticReport (and potentially the retiring of the existing DiagnosticReport).  Servers may also limit who can change particular DiagnosticReport." ]
+       ];
+       fhir:Conformance.rest.resource.searchInclude [
+         fhir:value "DiagnosticReport.subject, DiagnosticReport.performer, DiagnosticReport.request, DiagnosticReport.specimen, DiagnosticReport.report";
+         fhir:index 0
+       ]
+     ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

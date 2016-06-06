@@ -1,0 +1,114 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/DocumentManifest",
+  "resourceType": "DocumentManifest",
+  "Resource.id": {
+    "value": "654789"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">A Financial Management Attachment example</div>"
+    }
+  },
+  "Organization": [
+    {
+      "Resource.id": {
+        "value": "org-1"
+      },
+      "Organization.identifier": [
+        {
+          "Identifier.system": {
+            "value": "http://nationalidentifiers.org/insurers"
+          },
+          "Identifier.value": {
+            "value": "52345"
+          }
+        }
+      ]
+    }
+  ],
+  "DocumentManifest.identifier": [
+    {
+      "Identifier.system": {
+        "value": "http://happyvalley.com/supportingdocumentation"
+      },
+      "Identifier.value": {
+        "value": "52345"
+      }
+    }
+  ],
+  "DocumentManifest.recipient": [
+    {
+      "Reference.reference": {
+        "value": "#org-1"
+      }
+    }
+  ],
+  "DocumentManifest.created": {
+    "value": "2014-09-21T11:50:23-05:00"
+  },
+  "DocumentManifest.status": {
+    "value": "current"
+  },
+  "DocumentManifest.content": [
+    {
+      "DocumentManifest.content.pAttachment": {
+        "Attachment.contentType": {
+          "value": "application/pdf"
+        },
+        "Attachment.data": {
+          "value": "SGVsbG8="
+        },
+        "Attachment.title": {
+          "value": "accident notes 20100201.pdf"
+        },
+        "Attachment.creation": {
+          "value": "2010-02-01T11:50:23-05:00"
+        }
+      }
+    },
+    {
+      "DocumentManifest.content.pAttachment": {
+        "Attachment.contentType": {
+          "value": "application/pdf"
+        },
+        "Attachment.url": {
+          "value": "http://happyvalley.com/docs/AB12345"
+        },
+        "Attachment.size": {
+          "value": 104274
+        },
+        "Attachment.hash": {
+          "value": "SGVsbG8gdGhlcmU="
+        },
+        "Attachment.creation": {
+          "value": "2010-02-01T10:57:34+01:00"
+        }
+      }
+    }
+  ],
+  "DocumentManifest.related": [
+    {
+      "DocumentManifest.related.identifier": {
+        "Identifier.system": {
+          "value": "http://happyvalley.com/claim"
+        },
+        "Identifier.value": {
+          "value": "12345"
+        }
+      }
+    },
+    {
+      "DocumentManifest.related.identifier": {
+        "Identifier.system": {
+          "value": "http://www.BenefitsInc.com/fhir/remittance"
+        },
+        "Identifier.value": {
+          "value": "R3500"
+        }
+      }
+    }
+  ]
+}

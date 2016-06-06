@@ -1,0 +1,3387 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Conformance",
+  "resourceType": "Conformance",
+  "Resource.id": {
+    "value": "conformance-daf-query-requestor"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      \n      \n      <h2>DAF Requestor</h2>\n      \n      \n      <p>(Requirements Definition)</p>\n      \n      \n      <p>Published: 2015-04-02 (draft)</p>\n      \n      \n      <p>Published by: \n        \n        <b>\n          \n          \n          <a href=\"http://www.healthit.gov/\">U.S. Office of the National Coordinator (ONC)</a>\n        \n        \n        </b>\n      \n      \n      </p>\n      \n      \n      <p>This profile defines the expected capabilities of the \n        \n        <i>DAF Requestor</i> actor when conforming to the \n        \n        <a href=\"daf.html\">DAF FHIR IG</a>.\n      \n      </p>\n      \n      \n      <h2>General</h2>\n      \n      \n      <table>\n        \n        \n        <tbody>\n          \n          \n          <tr>\n            \n            \n            <th>FHIR Version:</th>\n            \n            \n            <td>1.4.0 (DSTU2)</td>\n          \n          \n          </tr>\n          \n          \n          <tr>\n            \n            \n            <th>Supported formats:</th>\n            \n            \n            <td>JSON or XML</td>\n          \n          \n          </tr>\n        \n        \n        </tbody>\n      \n      \n      </table>\n      \n      \n      <h2>REST  behavior</h2>\n\t  \n      \n      \n      <p>The DAF Requestor SHALL support accessing at least one FHIR resource using the appropriate DAF profile(s) for the resource being accessed.\n\t  The DAF Requestor SHALL implement REST behavior according to the \n        \n        <a href=\"../http.html\">FHIR</a> specification.\n\t  The DAF Requestor SHALL support either json or xml resource formats for all DAF interactions.\n      \n      </p>\n\t  \n\t  \n      \n      <h3>RESTful Operations Summary</h3>\n      \n      \n      <table class=\"grid\">\n        \n        \n        <thead>\n          \n          \n          <tr>\n            \n            \n            <th>Resource(Profile Name)</th>\n            \n            \n            <th>\n              \n              <a href=\"../type-restful-interaction.html\">Search</a>\n            \n            </th>\n            \n            \n            <th>\n              \n              <a href=\"../type-restful-interaction.html\">Read</a>\n            \n            </th>\n            \n            \n            <th>\n              \n              <a href=\"../type-restful-interaction.html\">Read Version</a>\n            \n            </th>\n            \n            \n            <th>\n              \n              <a href=\"../type-restful-interaction.html\">Instance History</a>\n            \n            </th>\n          \n          \n          </tr>\n        \n        \n        </thead>\n        \n        \n        <tbody>\n          \n          \n          <tr>\n            \n            \n            <th>\n              \n              <a href=\"patient-daf.html\">DAFPatient</a>\n            \n            </th>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFPatientSearch\" title=\"Allows discovery of DAFPatient resources based on different search criteria\">SHOULD</a>\n            \n            \n            </td>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFPatientSearch\" title=\"Allows retrieval of a specific DAFPatients by resource id\">SHOULD</a>\n            \n            \n            </td>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFPatientSearch\" title=\"Allows retrieval of a historical version of a DAFPatient\">SHOULD</a>\n            \n            \n            </td>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFPatientSearch\" title=\"Allows review of changes to DAFPatient over time\">SHOULD</a>\n            \n            \n            </td>\n          \n          \n          </tr>\n\t\t  \n          \n          <tr>\n            \n            \n            <th>\n              \n              <a href=\"allergyintolerance-daf.html\">DAFAllergyIntolerance</a>\n            \n            </th>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFAllergyIntoleranceSearch\" title=\"Allows discovery of DAFAllergyIntolerance resources based on different search criteria\">SHOULD</a>\n            \n            \n            </td>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFAllergyIntoleranceSearch\" title=\"Allows retrieval of a specific DAFAllergyIntolerance by id\">SHOULD</a>\n            \n            \n            </td>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFAllergyIntoleranceSearch\" title=\"Allows retrieval of a historical version of a DAFAllergyIntolerance\">SHOULD</a>\n            \n            \n            </td>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFAllergyIntoleranceSearch\" title=\"Allows review of changes to DAFAllergyIntolerance over time\">SHOULD</a>\n            \n            \n            </td>\n          \n          \n          </tr>\n\t\t  \n          \n          <tr>\n            \n            \n            <th>\n              \n              <a href=\"diagnosticorder-daf.html\">DAFDiagnosticOrder</a>\n            \n            </th>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFDiagnosticOrderSearch\" title=\"Allows discovery of DAFDiagnosticOrder resources based on different search criteria\">SHOULD</a>\n            \n            \n            </td>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFDiagnosticOrderSearch\" title=\"Allows retrieval of a specific DAFDiagnosticOrder by id\">SHOULD</a>\n            \n            \n            </td>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFDiagnosticOrderSearch\" title=\"Allows retrieval of a historical version of a DAFDiagnosticOrder\">SHOULD</a>\n            \n            \n            </td>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFDiagnosticOrderSearch\" title=\"Allows review of changes to DAFDiagnosticOrder over time\">SHOULD</a>\n            \n            \n            </td>\n          \n          \n          </tr>\n\t\t  \n          \n          <tr>\n            \n            \n            <th>\n              \n              <a href=\"diagnosticreport-daf.html\">DAFDiagnosticReport</a>\n            \n            </th>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFDiagnosticReportSearch\" title=\"Allows discovery of DAFDiagnosticReport resources based on different search criteria\">SHOULD</a>\n            \n            \n            </td>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFDiagnosticReportSearch\" title=\"Allows retrieval of a specific DAFDiagnosticReport by id\">SHOULD</a>\n            \n            \n            </td>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFDiagnosticReportSearch\" title=\"Allows retrieval of a historical version of a DAFDiagnosticReport\">SHOULD</a>\n            \n            \n            </td>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFDiagnosticReportSearch\" title=\"Allows review of changes to DAFDiagnosticReport over time\">SHOULD</a>\n            \n            \n            </td>\n          \n          \n          </tr>\n\t\t  \n          \n          <tr>\n            \n            \n            <th>\n              \n              <a href=\"encounter-daf.html\">DAFEncounter</a>\n            \n            </th>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFEncounterSearch\" title=\"Allows discovery of DAFEncounter resources based on different search criteria\">SHOULD</a>\n            \n            \n            </td>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFEncounterSearch\" title=\"Allows retrieval of a specific DAFEncounter by id\">SHOULD</a>\n            \n            \n            </td>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFEncounterSearch\" title=\"Allows retrieval of a historical version of a DAFEncounter\">SHOULD</a>\n            \n            \n            </td>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFEncounterSearch\" title=\"Allows review of changes to DAFEncounter over time\">SHOULD</a>\n            \n            \n            </td>\n          \n          \n          </tr>\n\t\t  \n          \n          <tr>\n            \n            \n            <th>\n              \n              <a href=\"familymemberhistory-daf.html\">DAFFamilyMemberHistory</a>\n            \n            </th>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFFamilyHistorySearch\" title=\"Allows discovery of DAFFamilyHistory resources based on different search criteria\">SHOULD</a>\n            \n            \n            </td>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFFamilyHistorySearch\" title=\"Allows retrieval of a specific DAFFamilyHistory by id\">SHOULD</a>\n            \n            \n            </td>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFFamilyHistorySearch\" title=\"Allows retrieval of a historical version of a DAFFamilyHistory\">SHOULD</a>\n            \n            \n            </td>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFFamilyHistorySearch\" title=\"Allows review of changes to DAFFamilyHistory over time\">SHOULD</a>\n            \n            \n            </td>\n          \n          \n          </tr>\n\t\t  \n          \n          <tr>\n            \n            \n            <th>\n              \n              <a href=\"immunization-daf.html\">DAFImmunization</a>\n            \n            </th>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFImmunizationSearch\" title=\"Allows discovery of DAFImmunization resources based on different search criteria\">SHOULD</a>\n            \n            \n            </td>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFImmunizationSearch\" title=\"Allows retrieval of a specific DAFImmunization by id\">SHOULD</a>\n            \n            \n            </td>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFImmunizationSearch\" title=\"Allows retrieval of a historical version of a DAFImmunization\">SHOULD</a>\n            \n            \n            </td>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFImmunizationSearch\" title=\"Allows review of changes to DAFImmunization over time\">SHOULD</a>\n            \n            \n            </td>\n          \n          \n          </tr>\n\t\t  \n          \n          <tr>\n            \n            \n            <th>\n              \n              <a href=\"observation-daf-results.html\">DAFResults</a>\n            \n            </th>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFResultsSearch\" title=\"Allows discovery of DAFResults resources based on different search criteria\">SHOULD</a>\n            \n            \n            </td>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFResultsSearch\" title=\"Allows retrieval of a specific DAFResults by id\">SHOULD</a>\n            \n            \n            </td>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFResultsSearch\" title=\"Allows retrieval of a historical version of a DAFResults\">SHOULD</a>\n            \n            \n            </td>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFResultsSearch\" title=\"Allows review of changes to DAFResults over time\">SHOULD</a>\n            \n            \n            </td>\n          \n          \n          </tr>\n\t\t  \n          \n          <tr>\n            \n            \n            <th>\n              \n              <a href=\"medication-daf.html\">DAFMedication</a>\n            \n            </th>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFMedicationSearch\" title=\"Allows discovery of DAFMedication resources based on different search criteria\">SHOULD</a>\n            \n            \n            </td>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFMedicationSearch\" title=\"Allows retrieval of a specific DAFMedication by id\">SHOULD</a>\n            \n            \n            </td>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFMedicationSearch\" title=\"Allows retrieval of a historical version of a DAFMedication\">SHOULD</a>\n            \n            \n            </td>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFMedicationSearch\" title=\"Allows review of changes to DAFMedication over time\">SHOULD</a>\n            \n            \n            </td>\n          \n          \n          </tr>\n\t\t  \n          \n          <tr>\n            \n            \n            <th>\n              \n              <a href=\"medicationstatement-daf.html\">DAFMedicationStatement</a>\n            \n            </th>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFMedicationStatementSearch\" title=\"Allows discovery of DAFMedicationStatement resources based on different search criteria\">SHOULD</a>\n            \n            \n            </td>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFMedicationStatementSearch\" title=\"Allows retrieval of a specific DAFMedicationStatement by id\">SHOULD</a>\n            \n            \n            </td>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFMedicationStatementSearch\" title=\"Allows retrieval of a historical version of a DAFMedicationStatement\">SHOULD</a>\n            \n            \n            </td>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFMedicationStatementSearch\" title=\"Allows review of changes to DAFMedicationStatement over time\">SHOULD</a>\n            \n            \n            </td>\n          \n          \n          </tr>\n\t\t  \n          \n          <tr>\n            \n            \n            <th>\n              \n              <a href=\"medicationadministration-daf.html\">DAFMedicationAdministration</a>\n            \n            </th>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFMedicationAdministrationSearch\" title=\"Allows discovery of DAFMedicationAdministration resources based on different search criteria\">SHOULD</a>\n            \n            \n            </td>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFMedicationAdministrationSearch\" title=\"Allows retrieval of a specific DAFMedicationAdministration by id\">SHOULD</a>\n            \n            \n            </td>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFMedicationAdministrationSearch\" title=\"Allows retrieval of a historical version of a DAFMedicationAdministration\">SHOULD</a>\n            \n            \n            </td>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFMedicationAdministrationSearch\" title=\"Allows review of changes to DAFMedicationAdministration over time\">SHOULD</a>\n            \n            \n            </td>\n          \n          \n          </tr>\n\t\t  \n          \n          <tr>\n            \n            \n            <th>\n              \n              <a href=\"condition-daf.html\">DAFCondition</a>\n            \n            </th>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFConditionSearch\" title=\"Allows discovery of DAFCondition resources based on different search criteria\">SHOULD</a>\n            \n            \n            </td>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFConditionSearch\" title=\"Allows retrieval of a specific DAFCondition by id\">SHOULD</a>\n            \n            \n            </td>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFConditionSearch\" title=\"Allows retrieval of a historical version of a DAFCondition\">SHOULD</a>\n            \n            \n            </td>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFConditionSearch\" title=\"Allows review of changes to DAFCondition over time\">SHOULD</a>\n            \n            \n            </td>\n          \n          \n          </tr>\n\t\t  \n          \n          <tr>\n            \n            \n            <th>\n              \n              <a href=\"procedure-daf.html\">DAFProcedure</a>\n            \n            </th>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFProcedureSearch\" title=\"Allows discovery of DAFProcedure resources based on different search criteria\">SHOULD</a>\n            \n            \n            </td>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFProcedureSearch\" title=\"Allows retrieval of a specific DAFProcedure by id\">SHOULD</a>\n            \n            \n            </td>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFProcedureSearch\" title=\"Allows retrieval of a historical version of a DAFProcedure\">SHOULD</a>\n            \n            \n            </td>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFProcedureSearch\" title=\"Allows review of changes to DAFProcedure over time\">SHOULD</a>\n            \n            \n            </td>\n          \n          \n          </tr>\n\t\t  \n          \n          <tr>\n            \n            \n            <th>\n              \n              <a href=\"observation-daf-smokingstatus.html\">DAFSmokingStatus</a>\n            \n            </th>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFSmokingStatusSearch\" title=\"Allows discovery of DAFSmokingStatus resources based on different search criteria\">SHOULD</a>\n            \n            \n            </td>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFSmokingStatusSearch\" title=\"Allows retrieval of a specific DAFSmokingStatus by id\">SHOULD</a>\n            \n            \n            </td>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFSmokingStatusSearch\" title=\"Allows retrieval of a historical version of a DAFSmokingStatus\">SHOULD</a>\n            \n            \n            </td>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFSmokingStatusSearch\" title=\"Allows review of changes to DAFSmokingStatus over time\">SHOULD</a>\n            \n            \n            </td>\n          \n          \n          </tr>\n\t\t  \n          \n          <tr>\n            \n            \n            <th>\n              \n              <a href=\"observation-daf-vitalsigns.html\">DAFVitalSigns</a>\n            \n            </th>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFVitalSignsSearch\" title=\"Allows discovery of DAFVitalSigns resources based on different search criteria\">SHOULD</a>\n            \n            \n            </td>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFVitalSignsSearch\" title=\"Allows retrieval of a specific DAFVitalSigns by id\">SHOULD</a>\n            \n            \n            </td>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFVitalSignsSearch\" title=\"Allows retrieval of a historical version of a DAFVitalSigns\">SHOULD</a>\n            \n            \n            </td>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFVitalSignsSearch\" title=\"Allows review of changes to DAFVitalSigns over time\">SHOULD</a>\n            \n            \n            </td>\n          \n          \n          </tr>\n\t\t  \n          \n          <tr>\n            \n            \n            <th>\n              \n              <a href=\"list-daf.html\">DAFList</a>\n            \n            </th>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFListSearch\" title=\"Allows discovery of DAFList resources based on different search criteria\">SHOULD</a>\n            \n            \n            </td>\n\t\t\t\n            \n            <td>\n\t\t\t  \n              \n              <a href=\"#DAFListSearch\" title=\"Allows retrieval of a specific DAFList by id\">SHOULD</a>\n            \n            \n            </td>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFListSearch\" title=\"Allows retrieval of a historical version of a DAFList\">SHOULD</a>\n            \n            \n            </td>\n            \n            \n            <td>\n              \n              \n              <a href=\"#DAFListSearch\" title=\"Allows review of changes to DAFList over time\">SHOULD</a>\n            \n            \n            </td>\n          \n          \n          </tr>\n        \n        \n        </tbody>\n      \n      \n      </table>\n      \n      \n      <br/>\n      \n      \n      <br/>\n  \n\t  \n      \n      <h3>Search Operations Summary</h3>\n\t  \n      \n      <p>DAF Requestors MAY use the following common parameters as part of queries related to DAF profiles:</p>\n\t  \n      \n      <ul>\n\t     \n        \n        <li>\n          \n          <a href=\"../search.html#id\">_id</a>\n        \n        </li>\n\t\t \n        \n        <li>\n          \n          <a href=\"../search.html#lastUpdated\">_lastUpdated</a>\n        \n        </li>\n\t\t \n        \n        <li>\n          \n          <a href=\"../search.html#profile\">_profile</a>\n        \n        </li>\n\t\t \n        \n        <li>\n          \n          <a href=\"../search.html#security\">_security</a>\n        \n        </li>\n\t\t \n        \n        <li>\n          \n          <a href=\"../search.html#tag\">_tag</a>\n        \n        </li>\n\t\t \n        \n        <li>\n          \n          <a href=\"../search.html#text\">_text</a>\n        \n        </li>\n\t\t \n        \n        <li>\n          \n          <a href=\"../search.html#count\">_count</a>\n        \n        </li>\n\t\t \n        \n        <li>\n          \n          <a href=\"../search.html#summary\">_summary</a>\n        \n        </li>\n\t\t \n        \n        <li>\n          \n          <a href=\"../search.html#contained\">_contained</a>\n        \n        </li>\n\t\t \n        \n        <li>\n          \n          <a href=\"../search.html#containedType\">_containedType</a>\n        \n        </li>\n\t  \n      \n      </ul>\n\t  \n\t  \n      <p>DAF Requestors SHOULD use the following common parameters as part of queries related to DAF profiles to avoid repeated queries.</p>\n\t  \n      <ul>\n\t\t\n        <li>\n          \n          <a href=\"../search.html#include\">_include</a>\n        \n        </li>\n\t  \n      </ul>\n\t\n      \n      <p>DAF Requestors MAY use the following search contexts defined within the \n        \n        <a href=\"../search.html#Introduction\">FHIR</a> specification.\n      \n      </p> \n\t\n      \n      <ul>\n\t\t\n        \n        <li>Search context by specifying a particular resource type</li>\n\t\t\n        \n        <li>Search context which specifies a compartment</li>\n\t\n      \n      </ul>\n\t\n      \n      <p>DAF Requestors MAY use \n        \n        <a href=\"../search.html#Modifiers\">Modifiers</a> as applicable to the data types of the search parameters to access data.\n\t\tDAF Requestors MAY use any search parameters that are appropriate for querying a particular FHIR resource, however they can only count on the search parameters that are identified as SHALL within the \n        <a href=\"conformance-daf-query-responder.html\">DAF Responder's conformance statement</a> to be used in the execution of the search. For a complete list of search parameters that are available, please refer to \n        <a href=\"conformance-daf-query-responder.html\">DAF Responder's conformance statement</a> and the search parameters supported by the base FHIR resources profiled by DAF.\n      \n      </p>\n\t  \n\t  \n      \n      <br/>\n      \n      \n      <br/>\n      \n      \n      <p>\n        \n        \n        <b>Security:</b>\n      \n      \n      </p>\n      \n      \n      <p>Implementations must meet the security requirements documented in the \n        \n        <a href=\"daf-security.html\">DAF implementation guide</a>.\n      \n      </p>\n\t  \n    \n    \n    </div>"
+    }
+  },
+  "Conformance.name": {
+    "value": "DAF Requestor"
+  },
+  "Conformance.status": {
+    "value": "draft"
+  },
+  "Conformance.date": {
+    "value": "2015-04-02"
+  },
+  "Conformance.publisher": {
+    "value": "U.S. Office of the National Coordinator (ONC)"
+  },
+  "Conformance.contact": [
+    {
+      "Conformance.contact.telecom": [
+        {
+          "ContactPoint.system": {
+            "value": "other"
+          },
+          "ContactPoint.value": {
+            "value": "http://www.healthit.gov/"
+          }
+        }
+      ]
+    }
+  ],
+  "Conformance.description": {
+    "value": "This profile defines the expected capabilities of the DAF Responder actor when conforming to the DAF FHIR implementation guide."
+  },
+  "Conformance.kind": {
+    "value": "requirements"
+  },
+  "Conformance.fhirVersion": {
+    "value": "1.4.0"
+  },
+  "Conformance.acceptUnknown": {
+    "value": "extensions"
+  },
+  "Conformance.format": [
+    {
+      "value": "xml"
+    },
+    {
+      "value": "json"
+    }
+  ],
+  "Conformance.rest": [
+    {
+      "Conformance.rest.mode": {
+        "value": "client"
+      },
+      "Conformance.rest.documentation": {
+        "value": "The DAF Requestor SHOULD support querying of one or more FHIR resources using appropriate DAF profile(s), RESTful operations defined for the profile, Search parameters identified for the profile."
+      },
+      "Conformance.rest.security": {
+        "Conformance.rest.security.description": {
+          "value": "Implementations SHOULD meet the security requirements documented in the [[daf-security|DAF implementation guide]]."
+        }
+      },
+      "Conformance.rest.resource": [
+        {
+          "Conformance.rest.resource.type": {
+            "value": "Patient"
+          },
+          "Conformance.rest.resource.profile": {
+            "Reference.reference": {
+              "value": "http://hl7.org/fhir/StructureDefinition/daf-patient"
+            },
+            "reference": "http://hl7.org/fhir/StructureDefinition/daf-patient"
+          },
+          "Conformance.rest.resource.interaction": [
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "search-type"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows discovery of existing DAFPatient resources using different search criteria"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "read"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows retrieval of a specific DAFPatients by id"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "history-instance"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows review of changes to DAFPatient instance over time"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "vread"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows retrieval of a historical version of a DAFPatient instance"
+              }
+            }
+          ],
+          "Conformance.rest.resource.searchParam": [
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "name"
+              },
+              "Conformance.rest.resource.searchParam.definition": {
+                "value": "http://hl7.org/fhir/SearchParameter/Patient-name"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "string"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "family"
+              },
+              "Conformance.rest.resource.searchParam.definition": {
+                "value": "http://hl7.org/fhir/SearchParameter/Patient-family"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "string"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "given"
+              },
+              "Conformance.rest.resource.searchParam.definition": {
+                "value": "http://hl7.org/fhir/SearchParameter/Patient-given"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "string"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "identifier"
+              },
+              "Conformance.rest.resource.searchParam.definition": {
+                "value": "http://hl7.org/fhir/SearchParameter/Patient-identifier"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "token"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "language"
+              },
+              "Conformance.rest.resource.searchParam.definition": {
+                "value": "http://hl7.org/fhir/SearchParameter/Patient-language"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "token"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "telecom"
+              },
+              "Conformance.rest.resource.searchParam.definition": {
+                "value": "http://hl7.org/fhir/SearchParameter/Patient-telecom"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "string"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "gender"
+              },
+              "Conformance.rest.resource.searchParam.definition": {
+                "value": "http://hl7.org/fhir/SearchParameter/Patient-gender"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "token"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "birthdate"
+              },
+              "Conformance.rest.resource.searchParam.definition": {
+                "value": "http://hl7.org/fhir/SearchParameter/Patient-birthdate"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "date"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "city"
+              },
+              "Conformance.rest.resource.searchParam.definition": {
+                "value": "http://hl7.org/fhir/SearchParameter/patient-extensions-Patient-city"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "string"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "postalCode"
+              },
+              "Conformance.rest.resource.searchParam.definition": {
+                "value": "http://hl7.org/fhir/SearchParameter/patient-extensions-Patient-postalCode"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "string"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "state"
+              },
+              "Conformance.rest.resource.searchParam.definition": {
+                "value": "http://hl7.org/fhir/SearchParameter/patient-extensions-Patient-state"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "string"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "mothersMaidenName"
+              },
+              "Conformance.rest.resource.searchParam.definition": {
+                "value": "http://hl7.org/fhir/SearchParameter/patient-extensions-Patient-mothersMaidenName"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "string"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "age"
+              },
+              "Conformance.rest.resource.searchParam.definition": {
+                "value": "http://hl7.org/fhir/SearchParameter/patient-extensions-Patient-age"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "number"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "race"
+              },
+              "Conformance.rest.resource.searchParam.definition": {
+                "value": "http://hl7.org/fhir/SearchParameter/us-core-Patient-race"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "token"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "ethnicity"
+              },
+              "Conformance.rest.resource.searchParam.definition": {
+                "value": "http://hl7.org/fhir/SearchParameter/us-core-Patient-ethnicity"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "token"
+              }
+            }
+          ]
+        },
+        {
+          "Conformance.rest.resource.type": {
+            "value": "AllergyIntolerance"
+          },
+          "Conformance.rest.resource.profile": {
+            "Reference.reference": {
+              "value": "http://hl7.org/fhir/StructureDefinition/daf-allergyintolerance"
+            },
+            "reference": "http://hl7.org/fhir/StructureDefinition/daf-allergyintolerance"
+          },
+          "Conformance.rest.resource.interaction": [
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "search-type"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows discovery of existing DAFAllergyIntolerance resources using different search criteria"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "read"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows retrieval of a specific DAFAllergyIntolerance by id"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "history-instance"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows review of changes to DAFAllergyIntolerance instance over time"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "vread"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows retrieval of a historical version of a DAFAllergyIntolerance instance"
+              }
+            }
+          ],
+          "Conformance.rest.resource.searchInclude": [
+            {
+              "value": "AllergyIntolerance.patient"
+            }
+          ],
+          "Conformance.rest.resource.searchParam": [
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "identifier"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "token"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "patient"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "reference"
+              },
+              "Conformance.rest.resource.searchParam.chain": [
+                {
+                  "value": "patient.identifier"
+                },
+                {
+                  "value": "patient.name"
+                },
+                {
+                  "value": "patient.given"
+                },
+                {
+                  "value": "patient.family"
+                }
+              ]
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "category"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "token"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "status"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "token"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "substance"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "token"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "manifestation"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "token"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "severity"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "token"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "duration"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "quantity"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "onset"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "date"
+              }
+            }
+          ]
+        },
+        {
+          "Conformance.rest.resource.type": {
+            "value": "DiagnosticOrder"
+          },
+          "Conformance.rest.resource.profile": {
+            "Reference.reference": {
+              "value": "http://hl7.org/fhir/StructureDefinition/daf-diagnosticorder"
+            },
+            "reference": "http://hl7.org/fhir/StructureDefinition/daf-diagnosticorder"
+          },
+          "Conformance.rest.resource.interaction": [
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "search-type"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows discovery of existing DAFDiagnosticOrder resources using different search criteria"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "read"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows retrieval of a specific DAFDiagnosticOrder by id"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "history-instance"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows review of changes to DAFDiagnosticOrder instance over time"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "vread"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows retrieval of a historical version of a DAFDiagnosticOrder instance"
+              }
+            }
+          ],
+          "Conformance.rest.resource.searchInclude": [
+            {
+              "value": "DiagnosticOrder.subject"
+            },
+            {
+              "value": "DiagnosticOrder.orderer"
+            },
+            {
+              "value": "DiagnosticOrder.encounter"
+            }
+          ],
+          "Conformance.rest.resource.searchParam": [
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "identifier"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "token"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "patient"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "reference"
+              },
+              "Conformance.rest.resource.searchParam.chain": [
+                {
+                  "value": "patient.identifier"
+                },
+                {
+                  "value": "patient.name"
+                },
+                {
+                  "value": "patient.given"
+                },
+                {
+                  "value": "patient.family"
+                }
+              ]
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "orderer"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "reference"
+              },
+              "Conformance.rest.resource.searchParam.chain": [
+                {
+                  "value": "orderer.identifier"
+                },
+                {
+                  "value": "orderer.given"
+                },
+                {
+                  "value": "orderer.family"
+                }
+              ]
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "code"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "token"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "encounter"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "reference"
+              },
+              "Conformance.rest.resource.searchParam.chain": [
+                {
+                  "value": "encounter.identifier"
+                },
+                {
+                  "value": "encounter.type"
+                }
+              ]
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "item-date"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "date"
+              }
+            }
+          ]
+        },
+        {
+          "Conformance.rest.resource.type": {
+            "value": "DiagnosticReport"
+          },
+          "Conformance.rest.resource.profile": {
+            "Reference.reference": {
+              "value": "http://hl7.org/fhir/StructureDefinition/daf-diagnosticreport"
+            },
+            "reference": "http://hl7.org/fhir/StructureDefinition/daf-diagnosticreport"
+          },
+          "Conformance.rest.resource.interaction": [
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "search-type"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows discovery of existing DAFDiagnosticReport resources using different search criteria"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "read"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows retrieval of a specific DAFDiagnosticReport by id"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "history-instance"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows review of changes to DAFDiagnosticReport instance over time"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "vread"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows retrieval of a historical version of a DAFDiagnosticReport instance"
+              }
+            }
+          ],
+          "Conformance.rest.resource.searchInclude": [
+            {
+              "value": "DiagnosticReport.subject"
+            },
+            {
+              "value": "DiagnosticReport.performer"
+            },
+            {
+              "value": "DiagnosticReport.encounter"
+            },
+            {
+              "value": "DiagnosticReport.result"
+            }
+          ],
+          "Conformance.rest.resource.searchParam": [
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "identifier"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "token"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "patient"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "reference"
+              },
+              "Conformance.rest.resource.searchParam.chain": [
+                {
+                  "value": "patient.identifier"
+                },
+                {
+                  "value": "patient.name"
+                },
+                {
+                  "value": "patient.given"
+                },
+                {
+                  "value": "patient.family"
+                }
+              ]
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "name"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "token"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "date"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "date"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "encounter"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "reference"
+              },
+              "Conformance.rest.resource.searchParam.chain": [
+                {
+                  "value": "encounter.identifier"
+                },
+                {
+                  "value": "encounter.type"
+                }
+              ]
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "performer"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "reference"
+              },
+              "Conformance.rest.resource.searchParam.chain": [
+                {
+                  "value": "performer.identifier"
+                },
+                {
+                  "value": "performer.name"
+                }
+              ]
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "result"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "reference"
+              },
+              "Conformance.rest.resource.searchParam.chain": [
+                {
+                  "value": "result.code"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Conformance.rest.resource.type": {
+            "value": "Encounter"
+          },
+          "Conformance.rest.resource.profile": {
+            "Reference.reference": {
+              "value": "http://hl7.org/fhir/StructureDefinition/daf-encounter"
+            },
+            "reference": "http://hl7.org/fhir/StructureDefinition/daf-encounter"
+          },
+          "Conformance.rest.resource.interaction": [
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "search-type"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows discovery of existing DAFEncounter resources using different search criteria"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "read"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows retrieval of a specific DAFEncounter by id"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "history-instance"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows review of changes to DAFEncounter instance over time"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "vread"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows retrieval of a historical version of a DAFEncounter instance"
+              }
+            }
+          ],
+          "Conformance.rest.resource.searchInclude": [
+            {
+              "value": "Encounter.patient"
+            },
+            {
+              "value": "Encounter.location"
+            }
+          ],
+          "Conformance.rest.resource.searchParam": [
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "identifier"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "token"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "patient"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "reference"
+              },
+              "Conformance.rest.resource.searchParam.chain": [
+                {
+                  "value": "patient.identifier"
+                },
+                {
+                  "value": "patient.name"
+                },
+                {
+                  "value": "patient.given"
+                },
+                {
+                  "value": "patient.family"
+                }
+              ]
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "location"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "reference"
+              },
+              "Conformance.rest.resource.searchParam.chain": [
+                {
+                  "value": "location.identifier"
+                },
+                {
+                  "value": "location.name"
+                },
+                {
+                  "value": "location.address"
+                }
+              ]
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "type"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "token"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "date"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "date"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "location-period"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "date"
+              }
+            }
+          ]
+        },
+        {
+          "Conformance.rest.resource.type": {
+            "value": "FamilyMemberHistory"
+          },
+          "Conformance.rest.resource.profile": {
+            "Reference.reference": {
+              "value": "http://hl7.org/fhir/StructureDefinition/daf-familymemberhistory"
+            },
+            "reference": "http://hl7.org/fhir/StructureDefinition/daf-familymemberhistory"
+          },
+          "Conformance.rest.resource.interaction": [
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "search-type"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows discovery of existing DAFFamilyHistory resources using different search criteria"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "read"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows retrieval of a specific DAFFamilyHistory by id"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "history-instance"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows review of changes to DAFFamilyHistory instance over time"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "vread"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows retrieval of a historical version of a DAFFamilyHistory instance"
+              }
+            }
+          ],
+          "Conformance.rest.resource.searchInclude": [
+            {
+              "value": "FamilyMemberHistory.patient"
+            }
+          ],
+          "Conformance.rest.resource.searchParam": [
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "identifier"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "token"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "patient"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "reference"
+              },
+              "Conformance.rest.resource.searchParam.chain": [
+                {
+                  "value": "patient.identifier"
+                },
+                {
+                  "value": "patient.name"
+                },
+                {
+                  "value": "patient.given"
+                },
+                {
+                  "value": "patient.family"
+                }
+              ]
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "relationship"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "token"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "familymemberhistorycondition"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "token"
+              }
+            }
+          ]
+        },
+        {
+          "Conformance.rest.resource.type": {
+            "value": "Immunization"
+          },
+          "Conformance.rest.resource.profile": {
+            "Reference.reference": {
+              "value": "http://hl7.org/fhir/StructureDefinition/daf-immunization"
+            },
+            "reference": "http://hl7.org/fhir/StructureDefinition/daf-immunization"
+          },
+          "Conformance.rest.resource.interaction": [
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "search-type"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows discovery of existing DAFImmunization resources using different search criteria"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "read"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows retrieval of a specific DAFImmunization by id"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "history-instance"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows review of changes to DAFImmunization instance over time"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "vread"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows retrieval of a historical version of a DAFImmunization instance"
+              }
+            }
+          ],
+          "Conformance.rest.resource.searchInclude": [
+            {
+              "value": "Immunization.patient"
+            },
+            {
+              "value": "Immunization.performer"
+            },
+            {
+              "value": "Immunization.requester"
+            },
+            {
+              "value": "Immunization.manufacturer"
+            },
+            {
+              "value": "Immunization.reaction.detail"
+            }
+          ],
+          "Conformance.rest.resource.searchParam": [
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "identifier"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "token"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "patient"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "reference"
+              },
+              "Conformance.rest.resource.searchParam.chain": [
+                {
+                  "value": "patient.identifier"
+                },
+                {
+                  "value": "patient.name"
+                },
+                {
+                  "value": "patient.given"
+                },
+                {
+                  "value": "patient.family"
+                }
+              ]
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "date"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "date"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "vaccine-type"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "token"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "notgiven"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "token"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "lot-number"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "string"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "requester"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "reference"
+              },
+              "Conformance.rest.resource.searchParam.chain": [
+                {
+                  "value": "requester.identifier"
+                },
+                {
+                  "value": "requester.name"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Conformance.rest.resource.type": {
+            "value": "Observation"
+          },
+          "Conformance.rest.resource.profile": {
+            "Reference.reference": {
+              "value": "http://hl7.org/fhir/StructureDefinition/daf-resultobscode"
+            },
+            "reference": "http://hl7.org/fhir/StructureDefinition/daf-resultobscode"
+          },
+          "Conformance.rest.resource.interaction": [
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "search-type"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows discovery of existing DAFResults resources using different search criteria"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "read"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows retrieval of a specific DAFResults by id"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "history-instance"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows review of changes to DAFResults instance over time"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "vread"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows retrieval of a historical version of a DAFResults instance"
+              }
+            }
+          ],
+          "Conformance.rest.resource.searchInclude": [
+            {
+              "value": "Observation.encounter"
+            },
+            {
+              "value": "Observation.subject"
+            }
+          ],
+          "Conformance.rest.resource.searchParam": [
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "identifier"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "token"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "patient"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "reference"
+              },
+              "Conformance.rest.resource.searchParam.chain": [
+                {
+                  "value": "patient.identifier"
+                },
+                {
+                  "value": "patient.name"
+                },
+                {
+                  "value": "patient.given"
+                },
+                {
+                  "value": "patient.family"
+                }
+              ]
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "code"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "token"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "value-concept"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "token"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "code-value[x]"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "composite"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "date"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "date"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "encounter"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "reference"
+              },
+              "Conformance.rest.resource.searchParam.chain": [
+                {
+                  "value": "encounter.identifier"
+                },
+                {
+                  "value": "encounter.type"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Conformance.rest.resource.type": {
+            "value": "Medication"
+          },
+          "Conformance.rest.resource.profile": {
+            "Reference.reference": {
+              "value": "http://hl7.org/fhir/StructureDefinition/daf-medication"
+            },
+            "reference": "http://hl7.org/fhir/StructureDefinition/daf-medication"
+          },
+          "Conformance.rest.resource.interaction": [
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "search-type"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows discovery of existing DAFMedication resources using different search criteria"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "read"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows retrieval of a specific DAFMedication by id"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "history-instance"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows review of changes to DAFMedication instance over time"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "vread"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows retrieval of a historical version of a DAFMedication instance"
+              }
+            }
+          ],
+          "Conformance.rest.resource.searchInclude": [
+            {
+              "value": "Medication.manufacturer"
+            }
+          ],
+          "Conformance.rest.resource.searchParam": [
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "identifier"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "token"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "code"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "token"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "name"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "string"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "form"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "token"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "ingredient"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "reference"
+              }
+            }
+          ]
+        },
+        {
+          "Conformance.rest.resource.type": {
+            "value": "MedicationStatement"
+          },
+          "Conformance.rest.resource.profile": {
+            "Reference.reference": {
+              "value": "http://hl7.org/fhir/StructureDefinition/daf-medicationstatement"
+            },
+            "reference": "http://hl7.org/fhir/StructureDefinition/daf-medicationstatement"
+          },
+          "Conformance.rest.resource.interaction": [
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "search-type"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows discovery of existing DAFMedicationStatement resources using different search criteria"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "read"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows retrieval of a specific DAFMedicationStatement by id"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "history-instance"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows review of changes to DAFMedicationStatement instance over time"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "vread"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows retrieval of a historical version of a DAFMedicationStatement instance"
+              }
+            }
+          ],
+          "Conformance.rest.resource.searchInclude": [
+            {
+              "value": "MedicationStatement.patient"
+            },
+            {
+              "value": "MedicationStatement.medication"
+            }
+          ],
+          "Conformance.rest.resource.searchParam": [
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "identifier"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "token"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "patient"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "reference"
+              },
+              "Conformance.rest.resource.searchParam.chain": [
+                {
+                  "value": "patient.identifier"
+                },
+                {
+                  "value": "patient.name"
+                },
+                {
+                  "value": "patient.given"
+                },
+                {
+                  "value": "patient.family"
+                }
+              ]
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "effectivedate"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "date"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "medication"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "reference"
+              },
+              "Conformance.rest.resource.searchParam.chain": [
+                {
+                  "value": "medication.code"
+                },
+                {
+                  "value": "medication.name"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Conformance.rest.resource.type": {
+            "value": "MedicationAdministration"
+          },
+          "Conformance.rest.resource.profile": {
+            "Reference.reference": {
+              "value": "http://hl7.org/fhir/StructureDefinition/daf-medicationadministration"
+            },
+            "reference": "http://hl7.org/fhir/StructureDefinition/daf-medicationadministration"
+          },
+          "Conformance.rest.resource.interaction": [
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "search-type"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows discovery of existing DAFMedicationAdministration resources using different search criteria"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "read"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows retrieval of a specific DAFMedicationAdministration by id"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "history-instance"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows review of changes to DAFMedicationAdministration instance over time"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "vread"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows retrieval of a historical version of a DAFMedicationAdministration instance"
+              }
+            }
+          ],
+          "Conformance.rest.resource.searchInclude": [
+            {
+              "value": "MedicationAdministration.patient"
+            },
+            {
+              "value": "MedicationAdministration.practitioner"
+            },
+            {
+              "value": "MedicationAdministration.encounter"
+            },
+            {
+              "value": "MedicationAdministration.prescription"
+            }
+          ],
+          "Conformance.rest.resource.searchParam": [
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "identifier"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "token"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "patient"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "reference"
+              },
+              "Conformance.rest.resource.searchParam.chain": [
+                {
+                  "value": "patient.identifier"
+                },
+                {
+                  "value": "patient.name"
+                },
+                {
+                  "value": "patient.given"
+                },
+                {
+                  "value": "patient.family"
+                }
+              ]
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "effectivetime"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "date"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "encounter"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "reference"
+              },
+              "Conformance.rest.resource.searchParam.chain": [
+                {
+                  "value": "encounter.identifier"
+                },
+                {
+                  "value": "encounter.type"
+                }
+              ]
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "practitioner"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "reference"
+              },
+              "Conformance.rest.resource.searchParam.chain": [
+                {
+                  "value": "practitioner.identifier"
+                },
+                {
+                  "value": "practitioner.name"
+                }
+              ]
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "prescription"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "reference"
+              },
+              "Conformance.rest.resource.searchParam.chain": [
+                {
+                  "value": "prescription.identifier"
+                },
+                {
+                  "value": "prescription.datewritten"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Conformance.rest.resource.type": {
+            "value": "Condition"
+          },
+          "Conformance.rest.resource.profile": {
+            "Reference.reference": {
+              "value": "http://hl7.org/fhir/StructureDefinition/daf-condition"
+            },
+            "reference": "http://hl7.org/fhir/StructureDefinition/daf-condition"
+          },
+          "Conformance.rest.resource.interaction": [
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "search-type"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows discovery of existing DAFCondition resources using different search criteria"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "read"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows retrieval of a specific DAFCondition by id"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "history-instance"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows review of changes to DAFCondition instance over time"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "vread"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows retrieval of a historical version of a DAFCondition instance"
+              }
+            }
+          ],
+          "Conformance.rest.resource.searchInclude": [
+            {
+              "value": "Condition.patient"
+            },
+            {
+              "value": "Condition.encounter"
+            },
+            {
+              "value": "Condition.asserter"
+            }
+          ],
+          "Conformance.rest.resource.searchParam": [
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "identifier"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "token"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "patient"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "reference"
+              },
+              "Conformance.rest.resource.searchParam.chain": [
+                {
+                  "value": "patient.identifier"
+                },
+                {
+                  "value": "patient.name"
+                },
+                {
+                  "value": "patient.given"
+                },
+                {
+                  "value": "patient.family"
+                }
+              ]
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "code"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "token"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "date-asserted"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "date"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "encounter"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "reference"
+              },
+              "Conformance.rest.resource.searchParam.chain": [
+                {
+                  "value": "encounter.identifier"
+                },
+                {
+                  "value": "encounter.type"
+                }
+              ]
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "onset"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "date"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "severity"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "token"
+              }
+            }
+          ]
+        },
+        {
+          "Conformance.rest.resource.type": {
+            "value": "Procedure"
+          },
+          "Conformance.rest.resource.profile": {
+            "Reference.reference": {
+              "value": "http://hl7.org/fhir/StructureDefinition/daf-procedure"
+            },
+            "reference": "http://hl7.org/fhir/StructureDefinition/daf-procedure"
+          },
+          "Conformance.rest.resource.interaction": [
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "search-type"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows discovery of existing DAFProcedure resources using different search criteria"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "read"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows retrieval of a specific DAFProcedure by id"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "history-instance"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows review of changes to DAFProcedure instance over time"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "vread"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows retrieval of a historical version of a DAFProcedure instance"
+              }
+            }
+          ],
+          "Conformance.rest.resource.searchInclude": [
+            {
+              "value": "Procedure.patient"
+            },
+            {
+              "value": "Procedure.encounter"
+            },
+            {
+              "value": "Procedure.performer"
+            }
+          ],
+          "Conformance.rest.resource.searchParam": [
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "identifier"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "token"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "type"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "token"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "date"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "date"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "patient"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "reference"
+              },
+              "Conformance.rest.resource.searchParam.chain": [
+                {
+                  "value": "patient.identifier"
+                },
+                {
+                  "value": "patient.name"
+                },
+                {
+                  "value": "patient.given"
+                },
+                {
+                  "value": "patient.family"
+                }
+              ]
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "encounter"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "reference"
+              },
+              "Conformance.rest.resource.searchParam.chain": [
+                {
+                  "value": "encounter.identifier"
+                },
+                {
+                  "value": "encounter.type"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Conformance.rest.resource.type": {
+            "value": "List"
+          },
+          "Conformance.rest.resource.profile": {
+            "Reference.reference": {
+              "value": "http://hl7.org/fhir/StructureDefinition/daf-problemlist"
+            },
+            "reference": "http://hl7.org/fhir/StructureDefinition/daf-problemlist"
+          },
+          "Conformance.rest.resource.interaction": [
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "search-type"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows discovery of existing DAFList resources using different search criteria"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "read"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows retrieval of a specific DAFList by id"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "history-instance"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows review of changes to DAFList instance over time"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.interaction.code": {
+                "value": "vread"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Allows retrieval of a historical version of a DAFList instance"
+              }
+            }
+          ],
+          "Conformance.rest.resource.searchInclude": [
+            {
+              "value": "List.subject"
+            },
+            {
+              "value": "List.item"
+            }
+          ],
+          "Conformance.rest.resource.searchParam": [
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "patient"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "reference"
+              },
+              "Conformance.rest.resource.searchParam.chain": [
+                {
+                  "value": "patient.identifier"
+                },
+                {
+                  "value": "patient.name"
+                },
+                {
+                  "value": "patient.given"
+                },
+                {
+                  "value": "patient.family"
+                }
+              ]
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "code"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "token"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/conformance-expectation"
+                  },
+                  "Extension.valueCode": {
+                    "value": "SHOULD"
+                  }
+                }
+              ],
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "empty-reason"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "token"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

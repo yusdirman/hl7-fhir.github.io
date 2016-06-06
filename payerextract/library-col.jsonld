@@ -1,0 +1,227 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Library",
+  "resourceType": "Library",
+  "Resource.id": {
+    "value": "library-col"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Cohort Definition for Colorectal Cancer Screening Measure</div>"
+    }
+  },
+  "Library.moduleMetadata": {
+    "ModuleMetadata.identifier": [
+      {
+        "Identifier.use": {
+          "value": "official"
+        },
+        "Identifier.value": {
+          "value": "COL"
+        }
+      }
+    ],
+    "ModuleMetadata.version": {
+      "value": "1.0.0"
+    },
+    "ModuleMetadata.title": {
+      "value": "Cohort Definition for Colorectal Cancer Screening Measure"
+    },
+    "ModuleMetadata.type": {
+      "value": "library"
+    },
+    "ModuleMetadata.status": {
+      "value": "active"
+    },
+    "ModuleMetadata.experimental": {
+      "value": true
+    },
+    "ModuleMetadata.publicationDate": {
+      "value": "2016-04-19"
+    },
+    "ModuleMetadata.topic": [
+      {
+        "CodeableConcept.text": {
+          "value": "something"
+        }
+      }
+    ]
+  },
+  "Library.model": [
+    {
+      "Library.model.identifier": {
+        "value": "FHIR"
+      }
+    }
+  ],
+  "Library.valueSet": [
+    {
+      "Library.valueSet.name": {
+        "value": "Colonoscopy"
+      },
+      "Library.valueSet.identifier": {
+        "value": "2.16.840.1.113883.3.464.1004.1064"
+      }
+    },
+    {
+      "Library.valueSet.name": {
+        "value": "Colorectal Cancer"
+      },
+      "Library.valueSet.identifier": {
+        "value": "2.16.840.1.113883.3.464.1004.1064"
+      }
+    },
+    {
+      "Library.valueSet.name": {
+        "value": "Flexible Sigmoidoscopy"
+      },
+      "Library.valueSet.identifier": {
+        "value": "2.16.840.1.113883.3.464.1004.1102"
+      }
+    },
+    {
+      "Library.valueSet.name": {
+        "value": "Total Colectomy"
+      },
+      "Library.valueSet.identifier": {
+        "value": "2.16.840.1.113883.3.464.1003.198.12.1019"
+      }
+    },
+    {
+      "Library.valueSet.name": {
+        "value": "Fecal Occult Blood Test (FOBT)"
+      },
+      "Library.valueSet.identifier": {
+        "value": "2.16.840.1.113883.3.464.1003.198.12.1011"
+      }
+    }
+  ],
+  "Library.dataRequirement": [
+    {
+      "DataRequirement.type": {
+        "value": "Patient"
+      }
+    },
+    {
+      "DataRequirement.type": {
+        "value": "Procedure"
+      },
+      "DataRequirement.codeFilter": [
+        {
+          "DataRequirement.codeFilter.path": {
+            "value": "code"
+          },
+          "DataRequirement.codeFilter.valueSetString": {
+            "value": "Colonoscopy"
+          }
+        }
+      ],
+      "DataRequirement.dateFilter": [
+        {
+          "DataRequirement.dateFilter.path": {
+            "value": "performedDateTime.value"
+          },
+          "DataRequirement.dateFilter.valuePeriod": {
+            "Period.start": {
+              "value": "2006-01-01"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "DataRequirement.type": {
+        "value": "Condition"
+      },
+      "DataRequirement.codeFilter": [
+        {
+          "DataRequirement.codeFilter.path": {
+            "value": "code"
+          },
+          "DataRequirement.codeFilter.valueSetString": {
+            "value": "Colorectal Cancer"
+          }
+        }
+      ]
+    },
+    {
+      "DataRequirement.type": {
+        "value": "Procedure"
+      },
+      "DataRequirement.codeFilter": [
+        {
+          "DataRequirement.codeFilter.path": {
+            "value": "code"
+          },
+          "DataRequirement.codeFilter.valueSetString": {
+            "value": "Flexible Sigmoidoscopy"
+          }
+        }
+      ],
+      "DataRequirement.dateFilter": [
+        {
+          "DataRequirement.dateFilter.path": {
+            "value": "performedDateTime.value"
+          },
+          "DataRequirement.dateFilter.valuePeriod": {
+            "Period.start": {
+              "value": "2011-01-01"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "DataRequirement.type": {
+        "value": "Procedure"
+      },
+      "DataRequirement.codeFilter": [
+        {
+          "DataRequirement.codeFilter.path": {
+            "value": "code"
+          },
+          "DataRequirement.codeFilter.valueSetString": {
+            "value": "Total Colectomy"
+          }
+        }
+      ]
+    },
+    {
+      "DataRequirement.type": {
+        "value": "Procedure"
+      },
+      "DataRequirement.codeFilter": [
+        {
+          "DataRequirement.codeFilter.path": {
+            "value": "code"
+          },
+          "DataRequirement.codeFilter.valueSetString": {
+            "value": "FOBT"
+          }
+        }
+      ],
+      "DataRequirement.dateFilter": [
+        {
+          "DataRequirement.dateFilter.path": {
+            "value": "performedDateTime.value"
+          },
+          "DataRequirement.dateFilter.valuePeriod": {
+            "Period.start": {
+              "value": "2015-01-01"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "Library.document": {
+    "Attachment.contentType": {
+      "value": "application/xml+elm"
+    },
+    "Attachment.url": {
+      "value": "http://example.org/libraries/library-col.elm.xml"
+    }
+  }
+}

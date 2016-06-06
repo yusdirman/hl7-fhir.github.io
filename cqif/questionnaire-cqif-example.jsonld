@@ -1,0 +1,384 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Questionnaire",
+  "resourceType": "Questionnaire",
+  "Resource.id": {
+    "value": "questionnaire-cqif-example"
+  },
+  "Resource.meta": {
+    "Meta.profile": [
+      {
+        "value": "http://hl7.org/fhir/StructureDefinition/cqif-questionnaire"
+      }
+    ]
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">PHQ-9 Questionnaire with dynamic logic</div>"
+    }
+  },
+  "DomainResource.extension": [
+    {
+      "Extension.url": {
+        "value": "http://hl7.org/fhir/StructureDefinition/cqif-basic-library"
+      },
+      "Extension.valueReference": {
+        "Reference.reference": {
+          "value": "Library/phq-9-logic"
+        },
+        "reference": "http://hl7.org/fhir//Library/phq-9-logic"
+      }
+    }
+  ],
+  "Questionnaire.identifier": [
+    {
+      "Identifier.use": {
+        "value": "official"
+      },
+      "Identifier.value": {
+        "value": "phq-9"
+      }
+    }
+  ],
+  "Questionnaire.version": {
+    "value": "1.0.0"
+  },
+  "Questionnaire.status": {
+    "value": "draft"
+  },
+  "Questionnaire.title": {
+    "value": "Patient Health Questionnaire (PHQ-9)"
+  },
+  "Questionnaire.concept": [
+    {
+      "Coding.system": {
+        "value": "http://loinc.org"
+      },
+      "Coding.code": {
+        "value": "44249-1"
+      },
+      "Coding.display": {
+        "value": "PHQ-9 quick depression assessment panel:-:Pt:^Patient:-:Report.PHQ-9"
+      }
+    }
+  ],
+  "Questionnaire.subjectType": [
+    {
+      "value": "Patient"
+    }
+  ],
+  "Questionnaire.item": [
+    {
+      "Questionnaire.item.linkId": {
+        "value": "LittleInterest"
+      },
+      "Questionnaire.item.concept": [
+        {
+          "Coding.system": {
+            "value": "http://loinc.org"
+          },
+          "Coding.code": {
+            "value": "44250-9"
+          }
+        }
+      ],
+      "Questionnaire.item.text": {
+        "value": "Little interest or pleasure in doing things"
+      },
+      "Questionnaire.item.type": {
+        "value": "choice"
+      },
+      "Questionnaire.item.required": {
+        "value": true
+      },
+      "Questionnaire.item.options": {
+        "Reference.reference": {
+          "value": "ValueSet/LOINCDepressionAnswersList"
+        },
+        "reference": "http://hl7.org/fhir//ValueSet/LOINCDepressionAnswersList"
+      }
+    },
+    {
+      "Questionnaire.item.linkId": {
+        "value": "FeelingDown"
+      },
+      "Questionnaire.item.concept": [
+        {
+          "Coding.system": {
+            "value": "http://loinc.org"
+          },
+          "Coding.code": {
+            "value": "44255-8"
+          }
+        }
+      ],
+      "Questionnaire.item.text": {
+        "value": "Feeling down, depressed, or hopeless"
+      },
+      "Questionnaire.item.type": {
+        "value": "choice"
+      },
+      "Questionnaire.item.required": {
+        "value": true
+      },
+      "Questionnaire.item.options": {
+        "Reference.reference": {
+          "value": "ValueSet/LOINCDepressionAnswersList"
+        },
+        "reference": "http://hl7.org/fhir//ValueSet/LOINCDepressionAnswersList"
+      }
+    },
+    {
+      "Questionnaire.item.linkId": {
+        "value": "TroubleSleeping"
+      },
+      "Questionnaire.item.concept": [
+        {
+          "Coding.system": {
+            "value": "http://loinc.org"
+          },
+          "Coding.code": {
+            "value": "44259-0"
+          }
+        }
+      ],
+      "Questionnaire.item.text": {
+        "value": "Trouble falling or staying asleep"
+      },
+      "Questionnaire.item.type": {
+        "value": "choice"
+      },
+      "Questionnaire.item.required": {
+        "value": true
+      },
+      "Questionnaire.item.options": {
+        "Reference.reference": {
+          "value": "ValueSet/LOINCDepressionAnswersList"
+        },
+        "reference": "http://hl7.org/fhir//ValueSet/LOINCDepressionAnswersList"
+      }
+    },
+    {
+      "Questionnaire.item.linkId": {
+        "value": "FeelingTired"
+      },
+      "Questionnaire.item.concept": [
+        {
+          "Coding.system": {
+            "value": "http://loinc.org"
+          },
+          "Coding.code": {
+            "value": "44254-1"
+          }
+        }
+      ],
+      "Questionnaire.item.text": {
+        "value": "Feeling tired or having little energy"
+      },
+      "Questionnaire.item.type": {
+        "value": "choice"
+      },
+      "Questionnaire.item.required": {
+        "value": true
+      },
+      "Questionnaire.item.options": {
+        "Reference.reference": {
+          "value": "ValueSet/LOINCDepressionAnswersList"
+        },
+        "reference": "http://hl7.org/fhir//ValueSet/LOINCDepressionAnswersList"
+      }
+    },
+    {
+      "Questionnaire.item.linkId": {
+        "value": "BadAppetite"
+      },
+      "Questionnaire.item.concept": [
+        {
+          "Coding.system": {
+            "value": "http://loinc.org"
+          },
+          "Coding.code": {
+            "value": "44251-7"
+          }
+        }
+      ],
+      "Questionnaire.item.text": {
+        "value": "Poor appetite or overeating"
+      },
+      "Questionnaire.item.type": {
+        "value": "choice"
+      },
+      "Questionnaire.item.required": {
+        "value": true
+      },
+      "Questionnaire.item.options": {
+        "Reference.reference": {
+          "value": "ValueSet/LOINCDepressionAnswersList"
+        },
+        "reference": "http://hl7.org/fhir//ValueSet/LOINCDepressionAnswersList"
+      }
+    },
+    {
+      "Questionnaire.item.linkId": {
+        "value": "FeelingBadAboutSelf"
+      },
+      "Questionnaire.item.concept": [
+        {
+          "Coding.system": {
+            "value": "http://loinc.org"
+          },
+          "Coding.code": {
+            "value": "44258-2"
+          }
+        }
+      ],
+      "Questionnaire.item.text": {
+        "value": "Feeling bad about yourself - or that you are a failure or have let yourself or your family down"
+      },
+      "Questionnaire.item.type": {
+        "value": "choice"
+      },
+      "Questionnaire.item.required": {
+        "value": true
+      },
+      "Questionnaire.item.options": {
+        "Reference.reference": {
+          "value": "ValueSet/LOINCDepressionAnswersList"
+        },
+        "reference": "http://hl7.org/fhir//ValueSet/LOINCDepressionAnswersList"
+      }
+    },
+    {
+      "Questionnaire.item.linkId": {
+        "value": "TroubleConcentrating"
+      },
+      "Questionnaire.item.concept": [
+        {
+          "Coding.system": {
+            "value": "http://loinc.org"
+          },
+          "Coding.code": {
+            "value": "44252-5"
+          }
+        }
+      ],
+      "Questionnaire.item.text": {
+        "value": "Trouble concentrating on things, such as reading the newspaper or watching television"
+      },
+      "Questionnaire.item.type": {
+        "value": "choice"
+      },
+      "Questionnaire.item.required": {
+        "value": true
+      },
+      "Questionnaire.item.options": {
+        "Reference.reference": {
+          "value": "ValueSet/LOINCDepressionAnswersList"
+        },
+        "reference": "http://hl7.org/fhir//ValueSet/LOINCDepressionAnswersList"
+      }
+    },
+    {
+      "Questionnaire.item.linkId": {
+        "value": "MovingSpeaking"
+      },
+      "Questionnaire.item.concept": [
+        {
+          "Coding.system": {
+            "value": "http://loinc.org"
+          },
+          "Coding.code": {
+            "value": "44253-3"
+          }
+        }
+      ],
+      "Questionnaire.item.text": {
+        "value": "Moving or speaking so slowly that other people could have noticed. Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual"
+      },
+      "Questionnaire.item.type": {
+        "value": "choice"
+      },
+      "Questionnaire.item.required": {
+        "value": true
+      },
+      "Questionnaire.item.options": {
+        "Reference.reference": {
+          "value": "ValueSet/LOINCDepressionAnswersList"
+        },
+        "reference": "http://hl7.org/fhir//ValueSet/LOINCDepressionAnswersList"
+      }
+    },
+    {
+      "Element.extension": [
+        {
+          "Extension.url": {
+            "value": "http://hl7.org/fhir/StructureDefinition/cqif-basic-calculatedValue"
+          },
+          "Extension.valueString": {
+            "value": "CalculateTotalScore"
+          }
+        }
+      ],
+      "Questionnaire.item.linkId": {
+        "value": "TotalScore"
+      },
+      "Questionnaire.item.concept": [
+        {
+          "Coding.system": {
+            "value": "http://loinc.org"
+          },
+          "Coding.code": {
+            "value": "44261-6"
+          }
+        }
+      ],
+      "Questionnaire.item.text": {
+        "value": "Total score"
+      },
+      "Questionnaire.item.type": {
+        "value": "choice"
+      },
+      "Questionnaire.item.required": {
+        "value": true
+      },
+      "Questionnaire.item.options": {
+        "Reference.reference": {
+          "value": "ValueSet/LOINCDepressionAnswersList"
+        },
+        "reference": "http://hl7.org/fhir//ValueSet/LOINCDepressionAnswersList"
+      }
+    },
+    {
+      "Questionnaire.item.linkId": {
+        "value": "Difficulty"
+      },
+      "Questionnaire.item.concept": [
+        {
+          "Coding.system": {
+            "value": "http://loinc.org"
+          },
+          "Coding.code": {
+            "value": "44256-6"
+          }
+        }
+      ],
+      "Questionnaire.item.text": {
+        "value": "If you checked off any problems, how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people"
+      },
+      "Questionnaire.item.type": {
+        "value": "choice"
+      },
+      "Questionnaire.item.required": {
+        "value": true
+      },
+      "Questionnaire.item.options": {
+        "Reference.reference": {
+          "value": "ValueSet/LOINCDifficultyAnswersList"
+        },
+        "reference": "http://hl7.org/fhir//ValueSet/LOINCDifficultyAnswersList"
+      }
+    }
+  ]
+}

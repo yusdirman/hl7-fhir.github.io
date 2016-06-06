@@ -1,0 +1,102 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Device",
+  "resourceType": "Device",
+  "Resource.id": {
+    "value": "example"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: example</p><p><b>identifier</b>: 345675, Serial Number = AMID-342135-8464</p><p><b>status</b>: available</p><p><b>type</b>: ECG <span>(Details : {SNOMED CT code '86184003' = 'Electrocardiographic monitor and recorder, device (physical object)', given as 'Electrocardiographic monitor and recorder'})</span></p><p><b>lotNumber</b>: 43453424</p><p><b>manufacturer</b>: Acme Devices, Inc</p><p><b>model</b>: AB 45-J</p><p><b>contact</b>: ph: ext 4352</p><p><b>note</b>: QA Checked</p></div>"
+    }
+  },
+  "Device.identifier": [
+    {
+      "Identifier.system": {
+        "value": "http://goodcare.org/devices/id"
+      },
+      "Identifier.value": {
+        "value": "345675"
+      }
+    },
+    {
+      "Identifier.type": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://hl7.org/fhir/identifier-type"
+            },
+            "Coding.code": {
+              "value": "SNO"
+            }
+          }
+        ],
+        "CodeableConcept.text": {
+          "value": "Serial Number"
+        }
+      },
+      "Identifier.value": {
+        "value": "AMID-342135-8464"
+      }
+    }
+  ],
+  "Device.status": {
+    "value": "available"
+  },
+  "Device.type": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "value": "86184003"
+        },
+        "Coding.display": {
+          "value": "Electrocardiographic monitor and recorder"
+        }
+      }
+    ],
+    "CodeableConcept.text": {
+      "value": "ECG"
+    },
+    "concept": "http://snomed.info/sct#86184003"
+  },
+  "Device.lotNumber": {
+    "value": "43453424"
+  },
+  "Device.manufacturer": {
+    "value": "Acme Devices, Inc"
+  },
+  "Device.model": {
+    "value": "AB 45-J"
+  },
+  "Device.contact": [
+    {
+      "ContactPoint.system": {
+        "value": "phone"
+      },
+      "ContactPoint.value": {
+        "value": "ext 4352"
+      }
+    }
+  ],
+  "Device.note": [
+    {
+      "Annotation.authorReference": {
+        "Reference.reference": {
+          "value": "Practitioner/xcda-author"
+        },
+        "reference": "http://hl7.org/fhir//Practitioner/xcda-author"
+      },
+      "Annotation.time": {
+        "value": "2015-06-28T14:03:32+10:00"
+      },
+      "Annotation.text": {
+        "value": "QA Checked"
+      }
+    }
+  ]
+}

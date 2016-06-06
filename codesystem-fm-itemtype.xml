@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="fm-itemtype"/>
+  <meta>
+    <lastUpdated value="2016-06-06T20:14:04.181+00:00"/>
+    <profile value="http://hl7.org/fhir/StructureDefinition/codesystem-shareable-definition"/>
+  </meta>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <h2>Item Type Codes</h2>
+      <p>This value set includes sample Item Type codes.</p>
+      <p>
+        <b>Copyright Statement:</b> This is an example set.
+      </p>
+      <p>This code system http://hl7.org/fhir/ex-claimitemtype defines the following codes:</p>
+      <table class="codes">
+        <tr>
+          <td>
+            <b>Code</b>
+          </td>
+          <td>
+            <b>Display</b>
+          </td>
+          <td>
+            <b>Definition</b>
+          </td>
+        </tr>
+        <tr>
+          <td>group
+            <a name="group"> </a>
+          </td>
+          <td>Group</td>
+          <td>A group of products and/or Services, amount ar the summary or detail level products and services.</td>
+        </tr>
+        <tr>
+          <td>product
+            <a name="product"> </a>
+          </td>
+          <td>Product</td>
+          <td>A billed product line item.</td>
+        </tr>
+        <tr>
+          <td>service
+            <a name="service"> </a>
+          </td>
+          <td>Service</td>
+          <td>A billed service line item.</td>
+        </tr>
+      </table>
+    </div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/valueset-oid">
+    <valueUri value="urn:oid:2.16.840.1.113883.4.642.1.317"/>
+  </extension>
+  <url value="http://hl7.org/fhir/ex-claimitemtype"/>
+  <version value="1.4.0"/>
+  <name value="Item Type Codes"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <publisher value="Financial Management"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="http://hl7.org/fhir"/>
+    </telecom>
+  </contact>
+  <description value="This value set includes sample Item Type codes."/>
+  <copyright value="This is an example set."/>
+  <caseSensitive value="true"/>
+  <valueSet value="http://hl7.org/fhir/ValueSet/fm-itemtype"/>
+  <content value="complete"/>
+  <concept>
+    <code value="group"/>
+    <display value="Group"/>
+    <definition value="A group of products and/or Services, amount ar the summary or detail level products and services."/>
+  </concept>
+  <concept>
+    <code value="product"/>
+    <display value="Product"/>
+    <definition value="A billed product line item."/>
+  </concept>
+  <concept>
+    <code value="service"/>
+    <display value="Service"/>
+    <definition value="A billed service line item."/>
+  </concept>
+</CodeSystem>

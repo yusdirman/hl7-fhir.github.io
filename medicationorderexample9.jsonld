@@ -1,0 +1,87 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/MedicationOrder",
+  "resourceType": "MedicationOrder",
+  "Resource.id": {
+    "value": "medrx009"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p><big>AC followed by Paclitaxel + Trastuzumab Course 1</big></p>\n      <p>Name: Cyclophosphamide in AC (Doxorubicin + Cyclophosphamide)</p>\n      <p>Course: 1</p>\n      <p>Agent Protocols Options:</p>\n      <p><b>Cyclophosphamide 600 mg/m^2 IV over 30 minutes D1 </b></p>\n      <p>Offset: None</p>\n      <p>Cycle length: Q21D x 4 cycles</p>\n    </div>"
+    }
+  },
+  "MedicationOrder.status": {
+    "value": "on-hold",
+    "string.extension": [
+      {
+        "Extension.url": {
+          "value": "http://localhost:3000/MedicationOrder/mscode#original-status"
+        },
+        "Extension.valueCode": {
+          "value": "pending"
+        }
+      }
+    ]
+  },
+  "MedicationOrder.medicationReference": {
+    "Reference.reference": {
+      "value": "Medication/Cyclophosphamide"
+    },
+    "reference": "http://hl7.org/fhir//Medication/Cyclophosphamide"
+  },
+  "MedicationOrder.dosageInstruction": [
+    {
+      "MedicationOrder.dosageInstruction.text": {
+        "value": "Cyclophosphamide 600 mg/m^2 IV over 30 minutes D1"
+      },
+      "MedicationOrder.dosageInstruction.route": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "value": "47625008"
+            },
+            "Coding.display": {
+              "value": "Intravenous route"
+            }
+          }
+        ],
+        "concept": "http://snomed.info/sct#47625008"
+      },
+      "MedicationOrder.dosageInstruction.rateRatio": {
+        "Ratio.numerator": {
+          "Quantity.value": {
+            "value": 600
+          },
+          "Quantity.unit": {
+            "value": "mg/m^2"
+          },
+          "Quantity.system": {
+            "value": "http://snomed.info/sct"
+          },
+          "Quantity.code": {
+            "value": "258682000"
+          }
+        },
+        "Ratio.denominator": {
+          "Quantity.value": {
+            "value": 30
+          },
+          "Quantity.unit": {
+            "value": "minutes"
+          },
+          "Quantity.system": {
+            "value": "http://snomed.info/sct"
+          },
+          "Quantity.code": {
+            "value": "258702006"
+          }
+        }
+      }
+    }
+  ]
+}

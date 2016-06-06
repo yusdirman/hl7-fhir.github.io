@@ -1,0 +1,72 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Patient",
+  "resourceType": "Patient",
+  "Resource.id": {
+    "value": "xcda"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      \n      <p>Henry Levin the 7th</p>\n    \n    </div>"
+    }
+  },
+  "Patient.identifier": [
+    {
+      "Identifier.use": {
+        "value": "usual"
+      },
+      "Identifier.type": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://hl7.org/fhir/v2/0203"
+            },
+            "Coding.code": {
+              "value": "MR"
+            }
+          }
+        ]
+      },
+      "Identifier.system": {
+        "value": "urn:oid:2.16.840.1.113883.19.5"
+      },
+      "Identifier.value": {
+        "value": "12345"
+      }
+    }
+  ],
+  "Patient.active": {
+    "value": true
+  },
+  "Patient.name": [
+    {
+      "HumanName.family": [
+        {
+          "value": "Levin"
+        }
+      ],
+      "HumanName.given": [
+        {
+          "value": "Henry"
+        }
+      ]
+    }
+  ],
+  "Patient.gender": {
+    "value": "male"
+  },
+  "Patient.birthDate": {
+    "value": "1932-09-24"
+  },
+  "Patient.managingOrganization": {
+    "Reference.reference": {
+      "value": "Organization/2.16.840.1.113883.19.5"
+    },
+    "Reference.display": {
+      "value": "Good Health Clinic"
+    },
+    "reference": "http://hl7.org/fhir//Organization/2.16.840.1.113883.19.5"
+  }
+}

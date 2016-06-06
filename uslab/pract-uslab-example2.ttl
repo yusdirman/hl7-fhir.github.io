@@ -1,0 +1,74 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Practitionerpract-uslab-example2> a fhir:Practitioner;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "pract-uslab-example2"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: pract-uslab-example2</p><p><b>identifier</b>: 121121121 (OFFICIAL)</p><p><b>name</b>: Bill T Lookafter </p><p><b>telecom</b>: ph: (617)5551234 ext.12, docbill@healthedatainc.com</p><p><b>address</b>: 100 Medical Drive Suite 6 Boston MA 01236 USA (WORK)</p><h3>PractitionerRoles</h3><table><tr><td>-</td><td><b>Organization</b></td></tr><tr><td>*</td><td><a>Children's Hospital</a></td></tr></table></div>"
+  ];
+  fhir:Practitioner.identifier [
+     fhir:index 0;
+     fhir:Identifier.use [ fhir:value "official" ];
+     fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/sid/us-npi" ];
+     fhir:Identifier.value [ fhir:value "121121121" ]
+  ];
+  fhir:Practitioner.name [
+     fhir:index 0;
+     fhir:HumanName.family [
+       fhir:value "Lookafter";
+       fhir:index 0
+     ];
+     fhir:HumanName.given [
+       fhir:value "Bill";
+       fhir:index 0
+     ], [
+       fhir:value "T";
+       fhir:index 1
+     ];
+     fhir:HumanName.suffix [
+       fhir:value "Jr";
+       fhir:index 0
+     ]
+  ];
+  fhir:Practitioner.telecom [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value "phone" ];
+     fhir:ContactPoint.value [ fhir:value "(617)5551234 ext.12" ]
+  ], [
+     fhir:index 1;
+     fhir:ContactPoint.system [ fhir:value "email" ];
+     fhir:ContactPoint.value [ fhir:value "docbill@healthedatainc.com" ]
+  ];
+  fhir:Practitioner.address [
+     fhir:index 0;
+     fhir:Address.use [ fhir:value "work" ];
+     fhir:Address.line [
+       fhir:value "100 Medical Drive";
+       fhir:index 0
+     ], [
+       fhir:value "Suite 6";
+       fhir:index 1
+     ];
+     fhir:Address.city [ fhir:value "Boston" ];
+     fhir:Address.district [ fhir:value "42043" ];
+     fhir:Address.state [ fhir:value "MA" ];
+     fhir:Address.postalCode [ fhir:value "01236" ];
+     fhir:Address.country [ fhir:value "USA" ]
+  ];
+  fhir:Practitioner.practitionerRole [
+     fhir:index 0;
+     fhir:Practitioner.practitionerRole.organization [
+       fhir:link <http://hl7.org/fhir/Organization/org-uslab-example1>;
+       fhir:Reference.reference [ fhir:value "Organization/org-uslab-example1" ];
+       fhir:Reference.display [ fhir:value "Children's Hospital" ]
+     ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

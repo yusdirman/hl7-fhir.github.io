@@ -1,0 +1,1108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="SharedHealthSummary"/>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">to do</div>
+  </text>
+  <url value="http://hl7.org/fhir/StructureDefinition/SharedHealthSummary"/>
+  <name value="SharedHealthSummary"/>
+  <display value="nehta-shared-health-summary"/>
+  <status value="draft"/>
+  <publisher value="Health Level Seven International fhir"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="http://hl7.org/fhir"/>
+    </telecom>
+  </contact>
+  <date value="2016-06-06T20:14:04+00:00"/>
+  <description value="Logical Model: A clinical document written by the nominated provider, which contains key pieces of information about an individual’s health status and is useful to a wide range of providers in assessing individuals and delivering care. (PCEHR Concept of Operations document)."/>
+  <fhirVersion value="1.4.0"/>
+  <mapping>
+    <identity value="logical"/>
+    <uri value="http://hl7.org/fhir/logical"/>
+    <name value="Logical Mapping"/>
+  </mapping>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <snapshot>
+    <element>
+      <path value="SharedHealthSummary"/>
+      <short value="Shared Health Summary"/>
+      <definition value="A clinical document written by the nominated provider, which contains key pieces of information about an individual’s health status and is useful to a wide range of providers in assessing individuals and delivering care. (PCEHR Concept of Operations document)."/>
+      <min value="0"/>
+      <max value="*"/>
+      <mapping>
+        <identity value="logical"/>
+        <map value="for src make thing as tgt = create(Composition), tgt.code = concept(&quot;LOINC&quot;, &quot;60591-5&quot;)"/>
+      </mapping>
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-example">
+        <extension url="index">
+          <valueString value="1"/>
+        </extension>
+        <extension url="exValue">
+          <valueReference>
+            <reference value="Patient/nehta"/>
+          </valueReference>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-example">
+        <extension url="index">
+          <valueString value="2"/>
+        </extension>
+        <extension url="exValue">
+          <valueReference>
+            <reference value="Patient/nehta"/>
+          </valueReference>
+        </extension>
+      </extension>
+      <path value="SharedHealthSummary.subjectofCare"/>
+      <short value="Subject of Care"/>
+      <definition value="Person who receives healthcare services."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/Patient"/>
+      </type>
+      <mapping>
+        <identity value="logical"/>
+        <map value="for src.subjectofCare as x make tgt.subject = x"/>
+      </mapping>
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-example">
+        <extension url="index">
+          <valueString value="1"/>
+        </extension>
+        <extension url="exValue">
+          <valueReference>
+            <reference value="Practitioner/nehta"/>
+          </valueReference>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-example">
+        <extension url="index">
+          <valueString value="2"/>
+        </extension>
+        <extension url="exValue">
+          <valueReference>
+            <reference value="Practitioner/nehta"/>
+          </valueReference>
+        </extension>
+      </extension>
+      <path value="SharedHealthSummary.documentAuthor"/>
+      <short value="Document Author"/>
+      <definition value="Composer of the document."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/Patient"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/Device"/>
+      </type>
+      <mapping>
+        <identity value="logical"/>
+        <map value="for src.documentAuthor as x make tgt.author = x
+for src.documentAuthor as xa make tgt.attestor as y = x, y.party = xa"/>
+      </mapping>
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-example">
+        <extension url="index">
+          <valueString value="1"/>
+        </extension>
+        <extension url="exValue">
+          <valueIdentifier>
+            <system value="urn:ietf:rfc:3986"/>
+            <value value="7eeab8cd-9afe-478f-bdac-348e664ff452"/>
+          </valueIdentifier>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-example">
+        <extension url="index">
+          <valueString value="2"/>
+        </extension>
+        <extension url="exValue">
+          <valueIdentifier>
+            <system value="urn:ietf:rfc:3986"/>
+            <value value="58516afb-2e35-4c64-b880-0cb214f30103"/>
+          </valueIdentifier>
+        </extension>
+      </extension>
+      <path value="SharedHealthSummary.documentType"/>
+      <short value="Document Type"/>
+      <definition value="Type of document."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Identifier"/>
+      </type>
+      <mapping>
+        <identity value="logical"/>
+        <map value="for srcdocumentType make tgt.identifier then by type"/>
+      </mapping>
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-example">
+        <extension url="index">
+          <valueString value="1"/>
+        </extension>
+        <extension url="exValue">
+          <valueDateTime value="2015-07-22T15:32:20+10:00"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-example">
+        <extension url="index">
+          <valueString value="2"/>
+        </extension>
+        <extension url="exValue">
+          <valueDateTime value="2015-07-22T15:32:20+10:00"/>
+        </extension>
+      </extension>
+      <path value="SharedHealthSummary.dateTimeAttested"/>
+      <short value="DateTime Attested"/>
+      <definition value="The date and time that the document author or document authoriser or approver confirms that a document is complete and genuine."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="dateTime"/>
+      </type>
+      <mapping>
+        <identity value="logical"/>
+        <map value="for src.dateTimeAttested as x make tgt.date = x"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="SharedHealthSummary.adverseReactions"/>
+      <short value="Adverse Reactions"/>
+      <definition value="Information about adverse reactions of the patient (including allergies and intolerances), and any relevant reaction details. This includes statements about adverse reactions that need to be positively recorded as absent or excluded."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Element"/>
+      </type>
+      <mapping>
+        <identity value="logical"/>
+        <map value="for src.adverseReactions as ar make tgt.section as sct1, sct1.title = &quot;Adverse Reactions&quot;, sct1.code= concept(&quot;nehta-sct&quot; : &quot;101.20113&quot;)"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="SharedHealthSummary.adverseReactions.exclusionStatementAdverseReactions"/>
+      <short value="Exclusion Statement - Adverse Reactions"/>
+      <definition value="Statements about adverse reactions that need to be positively recorded as absent or excluded."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Element"/>
+      </type>
+      <mapping>
+        <identity value="logical"/>
+        <map value="for ar.exclusionStatementAdverseReactions as arex then by vars"/>
+      </mapping>
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-example">
+        <extension url="index">
+          <valueString value="2"/>
+        </extension>
+        <extension url="exValue">
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://hl7.org/fhir/global-statement-values"/>
+              <code value="03"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+      </extension>
+      <path value="SharedHealthSummary.adverseReactions.exclusionStatementAdverseReactions.globalStatement"/>
+      <short value="Global Statement"/>
+      <definition value="The statement about the absence or exclusion."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <description value="The set of values for the global statements about the exclusion."/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/nehta-global-statement-values"/>
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="logical"/>
+        <map value="for arex as x make  sct1.emptyReason = x"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="SharedHealthSummary.adverseReactions.adverseReaction"/>
+      <short value="Adverse Reaction"/>
+      <definition value="A harmful or undesirable effect associated with exposure to any substance or agent."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Element"/>
+      </type>
+      <mapping>
+        <identity value="logical"/>
+        <map value="for ar.adverseReasion make ai as ai = create(&quot;AllergyIntolerance&quot;), sct1.entry = pointer(ai)"/>
+      </mapping>
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-example">
+        <extension url="index">
+          <valueString value="1"/>
+        </extension>
+        <extension url="exValue">
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="285599002"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+      </extension>
+      <path value="SharedHealthSummary.adverseReactions.adverseReaction.substanceAgent"/>
+      <short value="Substance/Agent"/>
+      <definition value="Identification of a substance, agent, or a class of substance, that is considered to be responsible for the adverse reaction."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <description value="The set of values for the agent or substance causing the adverse reaction experienced by the subject of care."/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/nehta-nehta-SubstanceAgentValues"/>
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="logical"/>
+        <map value="for ai.substanceAgent as x make ai.substance = x"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="SharedHealthSummary.adverseReactions.adverseReaction.event"/>
+      <short value="Reaction Event"/>
+      <definition value="Details about each adverse reaction event."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Element"/>
+      </type>
+      <mapping>
+        <identity value="logical"/>
+        <map value="for  ai.event as ev make ai.reaction as air then by vars"/>
+      </mapping>
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-example">
+        <extension url="index">
+          <valueString value="1"/>
+        </extension>
+        <extension url="exValue">
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="20262006"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+      </extension>
+      <path value="SharedHealthSummary.adverseReactions.adverseReaction.event.manifestation"/>
+      <short value="Manifestation"/>
+      <definition value="Presentation or exhibition of signs and symptoms of the adverse reaction expressed as a single word, phrase or brief description."/>
+      <min value="1"/>
+      <max value="*"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <description value="The set of values for recording clinical manifestation of an adverse reaction."/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/nehta-nehta-ClinicalManifestationValues"/>
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="logical"/>
+        <map value="for ev.manifestation as x make air.manifestation = x"/>
+      </mapping>
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-example">
+        <extension url="index">
+          <valueString value="1"/>
+        </extension>
+        <extension url="exValue">
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="419076005"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+      </extension>
+      <path value="SharedHealthSummary.adverseReactions.adverseReaction.event.reactionType"/>
+      <short value="Reaction Type"/>
+      <definition value="The type of reaction, as determined by the clinician."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="example"/>
+        <description value="The set of values for the type of adverse reaction."/>
+      </binding>
+      <mapping>
+        <identity value="logical"/>
+        <map value="for ev.reactionType as x make ai.type as x {only-one}"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="SharedHealthSummary.medicationOrders"/>
+      <short value="Medication Orders"/>
+      <definition value="Medicines that the subject of care is using."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Element"/>
+      </type>
+      <mapping>
+        <identity value="logical"/>
+        <map value="for src.medicationOrders as mo make tgt.section as sct2, sct2.title = &quot;Medication Orders&quot;, sct2.code= concept(&quot;nehta-sct&quot; : &quot;101.16146&quot;)"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="SharedHealthSummary.medicationOrders.exclusionStatementMedications"/>
+      <short value="Exclusion Statement - Medications"/>
+      <definition value="Statement to positively assert that the patient has not been prescribed or is not taking certain medication."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Element"/>
+      </type>
+      <mapping>
+        <identity value="logical"/>
+        <map value="for mo.exclusionStatementMedications as moex then by vars"/>
+      </mapping>
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-example">
+        <extension url="index">
+          <valueString value="2"/>
+        </extension>
+        <extension url="exValue">
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://hl7.org/fhir/global-statement-values"/>
+              <code value="01"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+      </extension>
+      <path value="SharedHealthSummary.medicationOrders.exclusionStatementMedications.globalStatement"/>
+      <short value="Global Statement"/>
+      <definition value="The statement about the absence or exclusion of certain medication."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <description value="The set of values for the global statements about the exclusion."/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/nehta-global-statement-values"/>
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="logical"/>
+        <map value="for moex as x make sct2.emptyReason = x"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="SharedHealthSummary.medicationOrders.medicationInstruction"/>
+      <short value="Medication Instruction"/>
+      <definition value="Information pertaining to one or more therapeutic goods that is represented to achieve, or is likely to achieve, its principal intended action by pharmacological, chemical, immunological or metabolic means in or on the body of a human."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Element"/>
+      </type>
+      <mapping>
+        <identity value="logical"/>
+        <map value="for mo.medicationInstruction as moi make ms as ms = create(&quot;MedicationStatement&quot;), sct2.entry = pointer(ms)"/>
+      </mapping>
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-example">
+        <extension url="index">
+          <valueString value="1"/>
+        </extension>
+        <extension url="exValue">
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://nehta.gov.au/amtv2"/>
+              <code value="5884011000036107"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+      </extension>
+      <path value="SharedHealthSummary.medicationOrders.medicationInstruction.therapeuticGoodIdentification"/>
+      <short value="Therapeutic Good Identification"/>
+      <definition value="The medicine, vaccine or other therapeutic good being ordered for, administered to or used by the subject of care."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <description value="A set of values used to refer to medicines and other therapeutic goods."/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/nehta-nehta-MedicinesTerminology"/>
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="logical"/>
+        <map value="for moi.therapeuticGoodIdentification as x make ms.medicationCodeableConcept = x"/>
+      </mapping>
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-example">
+        <extension url="index">
+          <valueString value="1"/>
+        </extension>
+        <extension url="exValue">
+          <valueString value="2 tablets once daily oral"/>
+        </extension>
+      </extension>
+      <path value="SharedHealthSummary.medicationOrders.medicationInstruction.directions"/>
+      <short value="Directions"/>
+      <definition value="A complete narrative description of how much, when and how to use the medicine, vaccine or other therapeutic good."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <mapping>
+        <identity value="logical"/>
+        <map value="for moi.directions as moid make ms.dosage as msd, msd.text = moid"/>
+      </mapping>
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-example">
+        <extension url="index">
+          <valueString value="1"/>
+        </extension>
+        <extension url="exValue">
+          <valueString value="Diuretic induced hypokalemia"/>
+        </extension>
+      </extension>
+      <path value="SharedHealthSummary.medicationOrders.medicationInstruction.clinicalIndication"/>
+      <short value="Clinical Indication"/>
+      <definition value="Reason for ordering the medicine, vaccine or other therapeutic good."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <mapping>
+        <identity value="logical"/>
+        <map value="for moi.clinicalIndication as moic make ms.reasonForUseCodeableConcept as ru, ru.text = moic"/>
+      </mapping>
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-example">
+        <extension url="index">
+          <valueString value="1"/>
+        </extension>
+        <extension url="exValue">
+          <valueString value="Taken with food"/>
+        </extension>
+      </extension>
+      <path value="SharedHealthSummary.medicationOrders.medicationInstruction.comment"/>
+      <short value="Medication Instruction Comment"/>
+      <definition value="Any additional information that may be needed to ensure the continuity of supply, rationale for current dose and timing, or safe and appropriate use."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <mapping>
+        <identity value="logical"/>
+        <map value="for moi.comment as x make ms.note = x"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="SharedHealthSummary.medicalHistory"/>
+      <short value="Medical History"/>
+      <definition value="The history of the subject of care&#39;s problems, diagnoses and medical or surgical procedures."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Element"/>
+      </type>
+      <mapping>
+        <identity value="logical"/>
+        <map value="for src.medicalHistory as mh make tgt.section as sct3, sct3.title = &quot;Medical History&quot;, sct3.code= concept(&quot;nehta-sct&quot; : &quot;101.16117&quot;)"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="SharedHealthSummary.medicalHistory.problemDiagnosis"/>
+      <short value="Problem/Diagnosis"/>
+      <definition value="A health condition that, as determined by a clinician, may have impact on the physical, mental or social well-being of a person. A diagnosis is determined by scientific evaluation of pathological and pathophysiological findings identified from the patient&#39;s clinical history, family history, physical examination and diagnostic investigations."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Element"/>
+      </type>
+      <mapping>
+        <identity value="logical"/>
+        <map value="for mh.problemDiagnosis as pd make cnd as cnd = create(&quot;Condition&quot;), sct3.entry = pointer(cnd)"/>
+      </mapping>
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-example">
+        <extension url="index">
+          <valueString value="1"/>
+        </extension>
+        <extension url="exValue">
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="57883007"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+      </extension>
+      <path value="SharedHealthSummary.medicalHistory.problemDiagnosis.identification"/>
+      <short value="Problem/Diagnosis Identification"/>
+      <definition value="Identification of the problem or diagnosis."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="example"/>
+        <description value="The Problem/Diagnosis reference set provides terminology to support the recording of a subject of care problem or diagnosis for medical records within Australia."/>
+      </binding>
+      <mapping>
+        <identity value="logical"/>
+        <map value="for pd.identitification as x make cnd.code = x"/>
+      </mapping>
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-example">
+        <extension url="index">
+          <valueString value="1"/>
+        </extension>
+        <extension url="exValue">
+          <valueDateTime value="2013-07-22"/>
+        </extension>
+      </extension>
+      <path value="SharedHealthSummary.medicalHistory.problemDiagnosis.dateofOnset"/>
+      <short value="Date of Onset"/>
+      <definition value="Estimated or actual date the problem or diagnosis began, as indicated or identified by the clinician."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="dateTime"/>
+      </type>
+      <mapping>
+        <identity value="logical"/>
+        <map value="for pd.dateOfOnset as x make cnd.onsetDateTime = x"/>
+      </mapping>
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-example">
+        <extension url="index">
+          <valueString value="1"/>
+        </extension>
+        <extension url="exValue">
+          <valueDateTime value="2014-07-22"/>
+        </extension>
+      </extension>
+      <path value="SharedHealthSummary.medicalHistory.problemDiagnosis.dateofResolutionRemission"/>
+      <short value="Date of Resolution/Remission"/>
+      <definition value="Estimated or actual date the problem or diagnosis resolved or went into remission, as indicated or identified by the clinician."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="dateTime"/>
+      </type>
+      <mapping>
+        <identity value="logical"/>
+        <map value="for pd.dateOfResolutionRemission as x make cnd.abatementDate = x"/>
+      </mapping>
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-example">
+        <extension url="index">
+          <valueString value="1"/>
+        </extension>
+        <extension url="exValue">
+          <valueString value="Solved this"/>
+        </extension>
+      </extension>
+      <path value="SharedHealthSummary.medicalHistory.problemDiagnosis.comment"/>
+      <short value="Problem/Diagnosis Comment"/>
+      <definition value="Additional narrative about the problem or diagnosis not captured in other fields."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <mapping>
+        <identity value="logical"/>
+        <map value="for pd.comment as x make cnd.notes = x"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="SharedHealthSummary.medicalHistory.exclusionStatementProblemsandDiagnoses"/>
+      <short value="Exclusion Statement - Problems and Diagnoses"/>
+      <definition value="Statements which positively assert that the patient does not have the problem or diagnosis."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Element"/>
+      </type>
+      <mapping>
+        <identity value="logical"/>
+        <map value="for pd.exclusionStatementProblemsandDiagnoses as pdex then by vars"/>
+      </mapping>
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-example">
+        <extension url="index">
+          <valueString value="2"/>
+        </extension>
+        <extension url="exValue">
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://hl7.org/fhir/global-statement-values"/>
+              <code value="01"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+      </extension>
+      <path value="SharedHealthSummary.medicalHistory.exclusionStatementProblemsandDiagnoses.globalStatement"/>
+      <short value="Global Statement"/>
+      <definition value="The statement about the absence or exclusion."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <description value="The set of values for the global statements about the exclusion."/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/nehta-global-statement-values"/>
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="logical"/>
+        <map value="for pdex as x make sct3.emptyReason = x"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="SharedHealthSummary.medicalHistory.procedure"/>
+      <short value="Procedure"/>
+      <definition value="A clinical activity carried out for therapeutic, evaluative, investigative, screening or diagnostic purposes."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Element"/>
+      </type>
+      <mapping>
+        <identity value="logical"/>
+        <map value="for mh.procedure as pr make cndp as cndp = create(&quot;Condition&quot;), sct3.entry = pointer(cndp)"/>
+      </mapping>
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-example">
+        <extension url="index">
+          <valueString value="1"/>
+        </extension>
+        <extension url="exValue">
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="301040004"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+      </extension>
+      <path value="SharedHealthSummary.medicalHistory.procedure.name"/>
+      <short value="Procedure Name"/>
+      <definition value="The name of the procedure (to be) performed."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="example"/>
+        <description value="The Procedure foundation reference set provides the broadest possible terminology to support the recording of clinical interventions in Australian eHealth implementations."/>
+      </binding>
+      <mapping>
+        <identity value="logical"/>
+        <map value="for pd.name as x make cndp.code = x"/>
+      </mapping>
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-example">
+        <extension url="index">
+          <valueString value="1"/>
+        </extension>
+        <extension url="exValue">
+          <valueString value="L Procedure Comment"/>
+        </extension>
+      </extension>
+      <path value="SharedHealthSummary.medicalHistory.procedure.comment"/>
+      <short value="Procedure Comment"/>
+      <definition value="Additional narrative about the procedure not captured in other fields."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <mapping>
+        <identity value="logical"/>
+        <map value="for pd.comment as x make cndp.notes = x"/>
+      </mapping>
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-example">
+        <extension url="index">
+          <valueString value="1"/>
+        </extension>
+        <extension url="exValue">
+          <valuePeriod>
+            <start value="2014-06-15"/>
+            <end value="2014-06-17"/>
+          </valuePeriod>
+        </extension>
+      </extension>
+      <path value="SharedHealthSummary.medicalHistory.procedure.dateTime"/>
+      <short value="Procedure DateTime"/>
+      <definition value="Date, and optionally time, of the Procedure action."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Period"/>
+      </type>
+      <mapping>
+        <identity value="logical"/>
+        <map value="for pr.dateTime as x make cndp.onsetDateTime = x"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="SharedHealthSummary.medicalHistory.exclusionStatementProcedures"/>
+      <short value="Exclusion Statement - Procedures"/>
+      <definition value="Statements to positively assert that a certain procedure has not been performed on the patient."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Element"/>
+      </type>
+      <mapping>
+        <identity value="logical"/>
+        <map value="for mh.exclusionStatementProcedures as prex then by vars"/>
+      </mapping>
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-example">
+        <extension url="index">
+          <valueString value="2"/>
+        </extension>
+        <extension url="exValue">
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://hl7.org/fhir/global-statement-values"/>
+              <code value="02"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+      </extension>
+      <path value="SharedHealthSummary.medicalHistory.exclusionStatementProcedures.globalStatement"/>
+      <short value="Global Statement"/>
+      <definition value="The statement about the absence or exclusion of procedure performed on the patient."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <description value="The set of values for the global statements about the exclusion."/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/nehta-global-statement-values"/>
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="logical"/>
+        <map value="for prex as x make sct3.emptyReason = x"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="SharedHealthSummary.medicalHistory.uncategorisedMedicalHistoryItem"/>
+      <short value="Uncategorised Medical History Item"/>
+      <definition value="A medical history entry that has not been categorised as either Procedure or Problem/Diagnosis ."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Element"/>
+      </type>
+      <mapping>
+        <identity value="logical"/>
+        <map value="for mh.uncategorisedMedicalHistoryItem as item make cndi as cndp = create(&quot;Condition&quot;), sct3.entry = pointer(cndi) then by vars"/>
+      </mapping>
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-example">
+        <extension url="index">
+          <valueString value="1"/>
+        </extension>
+        <extension url="exValue">
+          <valueString value="Uncategorised Medical History item description"/>
+        </extension>
+      </extension>
+      <path value="SharedHealthSummary.medicalHistory.uncategorisedMedicalHistoryItem.description"/>
+      <short value="Medical History Item Description"/>
+      <definition value="A description of the problem, diagnosis or procedure as a medical history item."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <mapping>
+        <identity value="logical"/>
+        <map value="for item.description as x make cndi.code as y, y.text = x"/>
+      </mapping>
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-example">
+        <extension url="index">
+          <valueString value="1"/>
+        </extension>
+        <extension url="exValue">
+          <valuePeriod>
+            <start value="2014-06-17"/>
+          </valuePeriod>
+        </extension>
+      </extension>
+      <path value="SharedHealthSummary.medicalHistory.uncategorisedMedicalHistoryItem.timeInterval"/>
+      <short value="Medical History Item TimeInterval"/>
+      <definition value="The date range during which the problem or diagnosis applied or the procedure occurred."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Period"/>
+      </type>
+      <mapping>
+        <identity value="logical"/>
+        <map value="for item.timeInterval as ti then by vars
+for ti.start as x make cndi.onsetDateTime = x
+for ti.end as x make cndi.abatementDate = x"/>
+      </mapping>
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-example">
+        <extension url="index">
+          <valueString value="1"/>
+        </extension>
+        <extension url="exValue">
+          <valueString value="Item Comment"/>
+        </extension>
+      </extension>
+      <path value="SharedHealthSummary.medicalHistory.uncategorisedMedicalHistoryItem.comment"/>
+      <short value="Medical History Item Comment"/>
+      <definition value="Additional narrative about the problem, diagnosis or procedure."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <mapping>
+        <identity value="logical"/>
+        <map value="for item.comment as x make cndi.notes = x"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="SharedHealthSummary.immunisations"/>
+      <short value="Immunisations"/>
+      <definition value="Information about vaccines given to the subject of care."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Element"/>
+      </type>
+      <mapping>
+        <identity value="logical"/>
+        <map value="for src.immunizations as imm make tgt.section as sct4, sct4.title = &quot;Immunization&quot;, sct4.code= concept(&quot;nehta-sct&quot;, &quot;101.16117)"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="SharedHealthSummary.immunisations.medicationAction"/>
+      <short value="Medication Action"/>
+      <definition value="The act of administering a dose of a vaccine to a person for the purpose of preventing or minimising the effects of a disease by producing immunity or to counter the effects of an infectious organism."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Element"/>
+      </type>
+      <mapping>
+        <identity value="logical"/>
+        <map value="for imm.medicationAction as ima make im as im = create(&quot;Immunization&quot;), sct4.entry = pointer(im)"/>
+      </mapping>
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-example">
+        <extension url="index">
+          <valueString value="1"/>
+        </extension>
+        <extension url="exValue">
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://nehta.gov.au/amtv2"/>
+              <code value="74993011000036102"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+      </extension>
+      <path value="SharedHealthSummary.immunisations.medicationAction.therapeuticGoodIdentification"/>
+      <short value="Therapeutic Good Identification"/>
+      <definition value="The medicine, vaccine or other therapeutic good being ordered for, administered to or used by the subject of care."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <description value="A set of values used to refer to medicines and other therapeutic goods."/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/nehta-nehta-MedicinesTerminology"/>
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="logical"/>
+        <map value="for ima.therapeuticGoodIdentification as x make im.vaccineType = x"/>
+      </mapping>
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-example">
+        <extension url="index">
+          <valueString value="1"/>
+        </extension>
+        <extension url="exValue">
+          <valueInteger value="1"/>
+        </extension>
+      </extension>
+      <path value="SharedHealthSummary.immunisations.medicationAction.sequenceNumber"/>
+      <short value="Sequence Number"/>
+      <definition value="The sequence number specific to the action being recorded."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="integer"/>
+      </type>
+      <mapping>
+        <identity value="logical"/>
+        <map value="for ima.sequenceNumber as x make im.vaccinationProtocol as vp, vp.doseSequence = x"/>
+      </mapping>
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-example">
+        <extension url="index">
+          <valueString value="1"/>
+        </extension>
+        <extension url="exValue">
+          <valueDateTime value="2015-07-22T15:32:20+10:00"/>
+        </extension>
+      </extension>
+      <path value="SharedHealthSummary.immunisations.medicationAction.dateTime"/>
+      <short value="Medication Action DateTime"/>
+      <definition value="Date, and optionally time, that the medication action is completed."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="dateTime"/>
+      </type>
+      <mapping>
+        <identity value="logical"/>
+        <map value="for ima.dateTime as x make imm.date = x"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="SharedHealthSummary.immunisations.exclusionStatementMedications"/>
+      <short value="Exclusion Statement - Medications"/>
+      <definition value="Statements that positively assert that the patient has not received immunisations."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Element"/>
+      </type>
+      <mapping>
+        <identity value="logical"/>
+        <map value="for imm.exclusionStatementMedications  as imex then by vars"/>
+      </mapping>
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-example">
+        <extension url="index">
+          <valueString value="2"/>
+        </extension>
+        <extension url="exValue">
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://hl7.org/fhir/global-statement-values"/>
+              <code value="03"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+      </extension>
+      <path value="SharedHealthSummary.immunisations.exclusionStatementMedications.globalStatement"/>
+      <short value="Global Statement"/>
+      <definition value="The statement about the absence or exclusion of certain medication."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <description value="The set of values for the global statements about the exclusion."/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/nehta-global-statement-values"/>
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="logical"/>
+        <map value="for imex as x make sct4.emptyReason = x"/>
+      </mapping>
+    </element>
+  </snapshot>
+</StructureDefinition>

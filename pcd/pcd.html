@@ -1,0 +1,292 @@
+﻿<!DOCTYPE HTML>
+  <!--  --><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+  <title>Pcd/pcd - FHIR v1.4.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link rel="stylesheet" href="../fhir.css"/>
+  <link rel="Prev" href="http://hl7.org/fhir/pcd/pcd.html"/>
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href=".././dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href=".././assets/css/bootstrap-fhir.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href=".././assets/css/project.css"/>
+  <link rel="stylesheet" href=".././assets/css/pygments-manni.css"/>
+	<link rel="stylesheet" href="../jquery-ui.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src=".././assets/js/html5shiv.js"></script>
+  <script src=".././assets/js/respond.min.js"></script>
+  <![endif] -->
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href=".././assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href=".././assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href=".././assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href=".././assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href=".././assets/ico/favicon.png"/>
+
+  </head>
+  <body> 
+	<div id="segment-header" class="segment">  <!-- segment-header -->	
+		<div class="container">  <!-- container -->
+			<a no-external="true" id="logo" href="http://hl7.org/fhir"><img src=".././assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a no-external="true" id="hl7-logo" href="http://www.hl7.org">
+					<img src=".././assets/images/hl7-logo.png" width="42" alt="visit the hl7 website" height="50"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a no-external="true" id="hl7-logo" href="http://hl7.org/fhir/search.cfm"><img src="./../assets/images/search.png" alt="Search FHIR"/></a></div> 
+		</div>
+		<div class="container">  <!-- container -->
+	</div></div>  <!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+ 	      		
+ 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="../index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../documentation.html">Documentation</a></li>
+              <li><a href="../implementation.html">Implementation</a></li>
+              <li><a href="../resourcelist.html">Resources</a></li>
+              <li><a href="../clinical.html">Clinical</a></li>
+              <li><a href="../administration.html">Administrative</a></li>
+              <li><a href="../infrastructure.html">Infrastructure</a></li>
+              <li><a href="../financial.html">Financial</a></li>
+
+						</ul>
+					</div>  <!-- /.nav-collapse -->
+				</div>  <!-- /.container -->
+			</nav>  <!-- /.navbar -->
+      		
+				
+  <!-- /HEADER CONTENT -->				
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+		<div class="container">  <!-- container -->	
+			<ul class="breadcrumb">
+          <!-- pcd/pcd / page / pcd -->
+        <li title="Privacy Consent Directive on FHIR"><a href="pcd.html"><b>PCD</b></a></li>
+        <li title="Work in Progress yet"><b>unsorted</b></li>
+
+			</ul>	
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment">  <!-- segment-content -->
+	<div class="container">  <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+ 
+    <div class="col-9">
+      <a name="PCD"> Privacy Consent Directive (PCD) </a>
+      <h2><span class="sectioncount">N.0</span> PCD on FHIR Implementation Guide (IG) <a href="pcd.html#PCD" title="link to here" class="self-link"><img src="../target.png"/></a></h2>
+      <p>This is the IG Overview.</p>
+	  <h3><span class="sectioncount">N.0.1<a name="N.0.1"> </a></span> Introduction <a href="pcd.html#N.0.1" title="link to here" class="self-link"><img src="../target.png"/></a></h3>
+	  <p>
+	  The purpose of this document is to describe constraints on the FHIR Contract used to express a Privacy Consent Directive.
+	  </p><p>
+		Privacy policies define how Individually Identifiable Health Information (IIHI) is to be collected, accessed, 
+		used and disclosed.  A Privacy Consent Directive is a record of a client’s (e.g., patient, consumer) 
+		health information privacy policy.  A Privacy Consent Directive grants or withholds authorization to collect, 
+		access, use, or disclose IIHI about the client. A client may author/publish their privacy preferences as a 
+		self-declared Privacy Consent Directive.  Effective Privacy Consent Directives are a bilateral agreement between 
+		the client and an individual/organization that is in accord with law, regulation and organizational policies with 
+		regard to their content. In addition, Privacy Consent Directives provide the ability for a healthcare client 
+		to delegate authority to a Substitute Decision Maker who may act on behalf of that individual.
+	  </p><p>
+		The Privacy Consent Directive on FHIR provides support for alternative representations for expressing 
+		health information privacy consent directives in a standard form for the exchange of privacy policies 
+		that can be enforced by consuming systems (e.g., scanned documents, computable structured entries).
+	  </p><p>
+		The implementation guide also supports backward compatibility by enabling references to CDA Consent Directives 
+		following the 
+		<a href="http://gforge.hl7.org/gf/project/cbcc/frs/?action=FrsReleaseView&amp;release_id=732">HL7 CDAR2 ConsentDirective Implementation Guide <img src="../external.png" style="text-align: baseline"/></a> 
+		which incorporated the 
+		<a href="http://wiki.ihe.net/index.php?title=Basic_Patient_Privacy_Consents">IHE Basic Patient Privacy Consents (BPPC) <img src="../external.png" style="text-align: baseline"/></a> 
+		mechanism of acknowledging a Privacy Policy identifier and expanded upon it with privacy policy 
+		attributes captured in the CDA document according to the CDA-CD-IG specification.  This guide allows for the 
+		capture of a scanned document in the structuredBody of a CDA document to support manual interpretation of the 
+		meaning of the privacy consent directive as well as to support the capture of a client’s wet signature.
+	  </p><p>
+		This guide supports sending a computable representation of privacy consent directives using structured 
+		entries based on a mapping of the 
+		<a href="http://www.hl7.org/documentcenter/public/standards/dstu/V3DAM_MR_CPCD_DSTU_R2_2010APR.pdf">HL7 Version 3 Domain Analysis Model: Medical Records; Composite Privacy Consent Directive, Draft Standard for Trial Use (DSTU) Release 2 (CPCD DAM) <img src="../external.png" style="text-align: baseline"/></a> 
+		to HL7 FHIR Contract attributes, or by using standard access control markup languages (XACML, XrML and others).  
+		It is expected that other SDOs will use the Privacy domain analysis model to create profiles (e.g., OASIS 
+		Cross-Enterprise Security and Privacy Authorization (XSPA) Technical Committee) and that for encoding 
+		capabilities, formal policy languages will be used.
+	  </p>
+	  <h4><span class="sectioncount">N.0.1.1<a name="N.0.1.1"> </a></span> US Realm sample Use-Cases <a href="pcd.html#N.0.1.1" title="link to here" class="self-link"><img src="../target.png"/></a></h4>
+	  <p>
+		Five categories of Privacy Consent Directives are described in the Office of the National Coordinator for 
+		Health Information (ONC) Consent Directives Document released March 31, 2010, and include the following 
+		US-specific “Core consent options” for electronic exchange:
+	  </p>
+	  <ol>
+	  <li>No consent: Health information of patients is automatically included—patients cannot opt out;</li>
+	  <li>Opt-out: Default is for health information of patients to be included automatically, but the patient can opt out completely;</li>
+	  <li>Opt-out with exceptions: Default is for health information of patients to be included, but the patient can opt out completely or allow only select data to be included;</li>
+	  <li>Opt-in: Default is that no patient health information is included; patients must actively express consent to be included, but if they do so then their information must be all in or all out; and</li>
+	  <li>Opt-in with restrictions: Default is that no patient health information is made available, but the patient may allow a subset of select data to be included.</li>
+	  </ol>
+	  <h4><span class="sectioncount">N.0.1.2<a name="N.0.1.2"> </a></span> Canada Realm sample Use-Cases <a href="pcd.html#N.0.1.2" title="link to here" class="self-link"><img src="../target.png"/></a></h4>
+	  <p>
+	  The following scenarios are based on existing jurisdictional policy and are realized in existing systems in 
+	  Canada. The default policy is one of implied consent for the provision of care, so these scenarios all deal 
+	  with withdrawal or withholding consent for that purpose. In other jurisdictions, where an express consent 
+	  model is used (Opt-In), these would examples would contain the phrase &quot;consent to&quot; rather than &quot;withhold&quot; 
+	  or &quot;withdraw&quot; consent for.
+	  </p>
+	  <ol>
+	    <li>Withhold or withdraw consent for disclosure of records related to specific domain (e.g. DI, LAB, etc.)</li>
+		<li>Withhold or withdraw consent for disclosure of a specific record (e.g. Lab Order/Result) </li>
+		<li>Withhold or withdraw consent for disclosure to a specific provider organization </li>
+		<li>Withhold or withdraw consent for disclosure to a specific provider agent (an individual within an organization) </li>
+		<li>Withhold or withdraw consent for disclosure of records that were authored by a specific organization (or service delivery location). </li>
+		<li>Combinations of the above </li>
+	  </ol>
+      <h3><span class="sectioncount">N.0.2<a name="N.0.2"> </a></span> Scope <a href="pcd.html#N.0.2" title="link to here" class="self-link"><img src="../target.png"/></a></h3>
+      <p>The scope of this IG is to define a FHIR profile for a Privacy Consent Directive in a structured and coded way so 
+	  so that the rules can be enforced.
+      </p><p>
+	  The enforcement of the Privacy Consent Directive is not included in this Implementation Guide, but is expected that 
+	  enforcement can be done using various Access Control enforcement methodologies (e.g. XACML).
+	  </p>
+      <h3><span class="sectioncount">N.0.3<a name="N.0.3"> </a></span> Conformance <a href="pcd.html#N.0.3" title="link to here" class="self-link"><img src="../target.png"/></a></h3>
+      <p>This guide defines the following conformance statements. Systems implementing the
+        actors described below should provide a conformance resource documenting their conformance
+        to this implementation guide. 
+      </p>
+      <table class="codes">
+        <tr><td><b>Actor</b></td><td><b>Description</b></td></tr>
+        <tr><td><a href="actor-one.html">Actor 1 (Consent Writer?)</a></td>
+          <td>Brief description of Actor 1 conformance requirements.</td></tr>
+        <tr><td><a href="actor-two.html">Actor 2 (Consent Reader?)</a></td>
+          <td>Brief description of Actor 2 conformance requirements.</td></tr>
+        <tr><td><a href="actor-three.html">Actor 3 (Consent Enforcer?)</a></td>
+          <td>Brief description of Actor 3 conformance requirements.</td></tr>
+      </table>
+        <!-- <h3>Operations</h3>
+	  <p>This guide defines the following operations.</p>
+      <table class="codes">
+        <tr><td><b>Operation</b></td><td><b>Description</b></td></tr>
+        <tr><td><a href="operarion-one.html">[base]/[Resource]/$[operation-name]</a></td>
+          <td>Brief description of operation one.</td></tr>
+      </table> -->
+      <h3><span class="sectioncount">N.0.4<a name="N.0.4"> </a></span> Resource Profiles <a href="pcd.html#N.0.4" title="link to here" class="self-link"><img src="../target.png"/></a></h3>
+      <p>This guide defines the following profiles.</p>
+      <table class="codes">
+        <tr><td><b>Profile Name</b></td><td><b>Description</b></td></tr>
+        <tr><td><a href="consentdirective.html">Base Privacy Consent Directive</a></td><td>Constraints upon Contract to support documentation of a Patient Privacy Consent Directive.</td></tr>
+        <tr><td><a href="profile-contract-a.html">Profile 1-a</a></td><td>Brief description of profile 1-a.</td></tr>
+        <tr><td><a href="profile-two.html">Profile 2</a></td><td>Brief description of profile 2.</td></tr>
+      </table>
+      <h3><span class="sectioncount">N.0.5<a name="N.0.5"> </a></span> Extensions <a href="pcd.html#N.0.5" title="link to here" class="self-link"><img src="../target.png"/></a></h3>
+      <p>The following extensions have been defined to support ..
+        These extensions are used within the <a href="profile-one.html">Profile 1</a> and 
+		<a href="profile-two.html">Profile 2</a> profiles on the 
+		<a href="../resource.html">Resource Name</a> Resource. </p>
+      <table class="codes">
+        <tr>
+          <td><b>Extension</b></td><td><b>Definition</b></td>
+        </tr>
+        <tr>
+          <td><a href="extension-code-resource-property-one.html">Property 1</a></td>
+          <td>Brief description of the property 1 extension.</td>
+        </tr>
+      </table>
+      <h3><span class="sectioncount">N.0.6<a name="N.0.6"> </a></span> Value Sets and Terminologies <a href="pcd.html#N.0.6" title="link to here" class="self-link"><img src="../target.png"/></a></h3>
+      <table class="codes">
+        <tr><td><b>Name</b></td><td><b>Definition</b></td></tr>
+        <tr><td colspan="2" style="background: #DFDFDF"><b>Namespace:
+            </b>http://hl7.org/fhir/ValueSet</td></tr>
+        <tr><td><a href="valueset-one.html">Value Set 1</a></td><td>Brief description of value set 1.</td></tr>
+      </table>
+      <h3><span class="sectioncount">N.0.7<a name="N.0.7"> </a></span> References <a href="pcd.html#N.0.7" title="link to here" class="self-link"><img src="../target.png"/></a></h3>
+      <p><sup><a name="fn1">1</a></sup> <a href="http://www.hl7.org/documentcenter/public_temp_A58A06F7-1C23-BA17-0CBF5EBEE6FE410C/wg/secure/Report%20to%20Security%20WG_Blobel_Implications%20of%20SOA%20architectures%20for%20security%20and%20privacy.pdf">    Implications of SOA Architectures for Security and Privacy Bernd Blobel, PhD, FACMI, FACHI, FHL7 eHealth Competence Center Regensburg <img src="../external.png" style="text-align: baseline"/></a></p>
+	  <p><sup><a name="fn2">2</a></sup> <a href="http://gforge.hl7.org/gf/project/cbcc/frs/?action=FrsReleaseView&amp;release_id=732">HL7 CDAR2 ConsentDirective Implementation Guide <img src="../external.png" style="text-align: baseline"/></a></p>
+	  <p><sup><a name="fn3">3</a></sup> <a href="http://wiki.ihe.net/index.php?title=Basic_Patient_Privacy_Consents">IHE Basic Patient Privacy Consents (BPPC) <img src="../external.png" style="text-align: baseline"/></a></p>
+	  <p><sup><a name="fn4">4</a></sup> <a href="http://www.hl7.org/documentcenter/public/standards/dstu/V3DAM_MR_CPCD_DSTU_R2_2010APR.pdf">
+		HL7 Version 3 Domain Analysis Model: Medical Records; Composite Privacy 
+		Consent Directive, Draft Standard for Trial Use (DSTU) Release 2 (CPCD DAM) <img src="../external.png" style="text-align: baseline"/></a> </p>
+	  
+  </div>
+  
+				</div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+        
+    </div>  <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">  <!-- segment-footer -->
+		<div class="container">  <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.4.0-8453) generated on Mon, Jun 6, 2016 20:22+0000. <a href="../qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img src="../external.png" style="text-align: baseline"/></a> | 
+               <a style="color: #81BEF7" href="../history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="../toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fpcd%2Fpcd.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fpcd%2Fpcd.html">Compare to DSTU2 <img src="../external.png" style="text-align: baseline"/></a> |                
+               <a rel="license" style="color: #81BEF7" href="../license.html"><img src="../cc0.png" alt="CC0" style="border-style: none;"/></a> | 
+               <a style="color: #81BEF7" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank">Propose a change <img src="../external.png" style="text-align: baseline"/></a>   
+        </span>
+        </p>
+			</div>  <!-- /inner-wrapper -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+    
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src=".././assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src=".././dist/js/bootstrap.min.js"> </script>
+<script src=".././assets/js/respond.min.js"> </script>
+
+<script src=".././assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+  </body>
+</html>

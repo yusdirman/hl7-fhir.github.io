@@ -1,0 +1,46 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Practitionerpract-uslab-example3> a fhir:Practitioner;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "pract-uslab-example3"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: pract-uslab-example3</p><p><b>identifier</b>: 1234567893 (OFFICIAL)</p><p><b>name</b>: Gregory F House </p><p><b>telecom</b>: ph: 555 777 1234 11</p></div>"
+  ];
+  fhir:Practitioner.identifier [
+     fhir:index 0;
+     fhir:Identifier.use [ fhir:value "official" ];
+     fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/sid/us-npi" ];
+     fhir:Identifier.value [ fhir:value "1234567893" ]
+  ];
+  fhir:Practitioner.name [
+     fhir:index 0;
+     fhir:HumanName.family [
+       fhir:value "House";
+       fhir:index 0
+     ];
+     fhir:HumanName.given [
+       fhir:value "Gregory";
+       fhir:index 0
+     ], [
+       fhir:value "F";
+       fhir:index 1
+     ];
+     fhir:HumanName.suffix [
+       fhir:value "PhD";
+       fhir:index 0
+     ]
+  ];
+  fhir:Practitioner.telecom [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value "phone" ];
+     fhir:ContactPoint.value [ fhir:value "555 777 1234 11" ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

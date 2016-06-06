@@ -1,0 +1,96 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Measure",
+  "resourceType": "Measure",
+  "Resource.id": {
+    "value": "measure-col"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "additional"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      Cohort definition for Colorectal Cancer Screening.\n    </div>"
+    }
+  },
+  "Measure.moduleMetadata": {
+    "ModuleMetadata.identifier": [
+      {
+        "Identifier.use": {
+          "value": "official"
+        },
+        "Identifier.system": {
+          "value": "http://hl7.org/fhir/cqi/ecqm/Measure/Identifier/payer-extract"
+        },
+        "Identifier.value": {
+          "value": "COL"
+        }
+      }
+    ],
+    "ModuleMetadata.version": {
+      "value": "1.0.0"
+    },
+    "ModuleMetadata.title": {
+      "value": "Colorectal Cancer Screening. Cohort Definition"
+    },
+    "ModuleMetadata.type": {
+      "value": "module"
+    },
+    "ModuleMetadata.status": {
+      "value": "active"
+    },
+    "ModuleMetadata.experimental": {
+      "value": true
+    },
+    "ModuleMetadata.description": {
+      "value": "Colorectal Cancer Screening. Cohort Definition"
+    },
+    "ModuleMetadata.topic": [
+      {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://hl7.org/fhir/c80-doc-typecodes"
+            },
+            "Coding.code": {
+              "value": "57024-2"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "Measure.library": [
+    {
+      "Reference.reference": {
+        "value": "Library/library-col"
+      }
+    }
+  ],
+  "Measure.scoring": {
+    "value": "cohort"
+  },
+  "Measure.group": [
+    {
+      "Measure.group.identifier": {
+        "Identifier.value": {
+          "value": "COL-cohort"
+        }
+      },
+      "Measure.group.population": [
+        {
+          "Measure.group.population.type": {
+            "value": "initial-population"
+          },
+          "Measure.group.population.identifier": {
+            "Identifier.value": {
+              "value": "initial-population-identifier"
+            }
+          },
+          "Measure.group.population.criteria": {
+            "value": "COL.\"In Demographic\""
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,312 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>ClinicalImpression - FHIR v1.4.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link rel="stylesheet" href="fhir.css"/>
+  <link rel="Prev" href="http://hl7.org/fhir/clinicalimpression-definitions.html"/>
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="./dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="./assets/css/bootstrap-fhir.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href="./assets/css/project.css"/>
+  <link rel="stylesheet" href="./assets/css/pygments-manni.css"/>
+	<link rel="stylesheet" href="jquery-ui.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif] -->
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment">  <!-- segment-header -->	
+		<div class="container">  <!-- container -->
+			<a no-external="true" id="logo" href="http://hl7.org/fhir"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a no-external="true" id="hl7-logo" href="http://www.hl7.org">
+					<img src="./assets/images/hl7-logo.png" width="42" alt="visit the hl7 website" height="50"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a no-external="true" id="hl7-logo" href="http://hl7.org/fhir/search.cfm"><img src="./assets/images/search.png" alt="Search FHIR"/></a></div> 
+		</div>
+		<div class="container">  <!-- container -->
+	</div></div>  <!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+ 	      		
+ 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="documentation.html">Documentation</a></li>
+              <li><a href="implementation.html">Implementation</a></li>
+              <li><a href="resourcelist.html">Resources</a></li>
+              <li><a href="clinical.html">Clinical</a></li>
+              <li><a href="administration.html">Administrative</a></li>
+              <li><a href="infrastructure.html">Infrastructure</a></li>
+              <li><a href="financial.html">Financial</a></li>
+
+						</ul>
+					</div>  <!-- /.nav-collapse -->
+				</div>  <!-- /.container -->
+			</nav>  <!-- /.navbar -->
+      		
+				
+  <!-- /HEADER CONTENT -->				
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+		<div class="container">  <!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="clinical.html">Clinical</a></li>        <li><a href="clinicalimpression.html">ClinicalImpression</a></li>        <li><b>Detailed Descriptions</b></li>          <!-- clinicalimpression.html / res-Detailed Descriptions / ClinicalImpression -->
+
+			</ul>	
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment">  <!-- segment-content -->
+	<div class="container">  <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<ul class="nav nav-tabs"><li><a href="clinicalimpression.html">Content</a></li><li><a href="clinicalimpression-examples.html">Examples</a></li><li class="active"><a href="#">Detailed Descriptions</a></li><li><a href="clinicalimpression-mappings.html">Mappings</a></li><li><a href="clinicalimpression-profiles.html">Profiles</a></li></ul>
+
+<h2><span class="sectioncount">4.8.7<a name="4.8.7"> </a></span> Resource ClinicalImpression - Detailed Descriptions <a href="clinicalimpression-definitions.html#4.8.7" title="link to here" class="self-link"><img src="target.png"/></a></h2>
+
+<p>Detailed Descriptions for the elements in the ClinicalImpression resource.</p>
+
+<table class="dict">
+  <tr><td colspan="2" class="structure"><a name="ClinicalImpression"> </a><b>ClinicalImpression</b></td></tr>
+  <tr><td>Definition</td><td><p>A record of a clinical assessment performed to determine what problem(s) may affect the patient and before planning the treatments or management strategies that are best to manage a patient's condition. Assessments are often 1:1 with a clinical consultation / encounter,  but this varies greatly depending on the clinical workflow. This resource is called &quot;ClinicalImpression&quot; rather than &quot;ClinicalAssessment&quot; to avoid confusion with the recording of assessment tools such as Apgar score.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClinicalImpression.patient"> </a><b>ClinicalImpression.patient</b></td></tr>
+  <tr><td>Definition</td><td><p>The patient being assessed.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="patient.html">Patient</a>)</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClinicalImpression.assessor"> </a><b>ClinicalImpression.assessor</b></td></tr>
+  <tr><td>Definition</td><td><p>The clinician performing the assessment.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="practitioner.html">Practitioner</a>)</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClinicalImpression.status"> </a><b>ClinicalImpression.status</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies the workflow status of the assessment.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>ClinicalImpressionStatus: <a href="valueset-clinical-impression-status.html">The workflow state of a clinical impression.</a> (<a href="terminologies.html#required">Required</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#code">code</a></td></tr>
+  <tr><td><a href="conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClinicalImpression.date"> </a><b>ClinicalImpression.date</b></td></tr>
+  <tr><td>Definition</td><td><p>The point in time at which the assessment was concluded (not when it was recorded).</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#dateTime">dateTime</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>This SHOULD be accurate to at least the minute, though some assessments only have a known date.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClinicalImpression.description"> </a><b>ClinicalImpression.description</b></td></tr>
+  <tr><td>Definition</td><td><p>A summary of the context and/or cause of the assessment - why / where was it peformed, and what patient events/sstatus prompted it.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClinicalImpression.previous"> </a><b>ClinicalImpression.previous</b></td></tr>
+  <tr><td>Definition</td><td><p>A reference to the last assesment that was conducted bon this patient. Assessments are often/usually ongoing in nature; a care provider (practitioner or team) will make new assessments on an ongoing basis as new data arises or the patient's conditions changes.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="clinicalimpression.html">ClinicalImpression</a>)</td></tr>
+  <tr><td>Comments</td><td><p>It is always likely that multiple previous assessments exist for a patient. The point of quoting a previous assessment is that this assessment is relative to it (see resolved).</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClinicalImpression.problem"> </a><b>ClinicalImpression.problem</b></td></tr>
+  <tr><td>Definition</td><td><p>This a list of the general problems/conditions for a patient.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="condition.html">Condition</a> | <a href="allergyintolerance.html">AllergyIntolerance</a>)</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>e.g. The patient is a pregnant, and cardiac congestive failure, ‎Adenocarcinoma, and is allergic to penicillin.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClinicalImpression.trigger_x_"> </a><b>ClinicalImpression.trigger[x]</b></td></tr>
+  <tr><td>Definition</td><td><p>The request or event that necessitated this assessment. This may be a diagnosis, a Care Plan, a Request Referral, or some other resource.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>SNOMED CT Clinical Findings: <a href="valueset-clinical-findings.html">Clinical Findings that may cause an clinical evaluation.</a> (<a href="terminologies.html#example">Example</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#CodeableConcept">CodeableConcept</a>|<a href="references.html#Reference">Reference</a>(<a href="resourcelist.html#Any">Any</a>)</td></tr>
+  <tr><td>[x] Note</td><td>See <a href="formats.html#choice">Choice of Data Types</a> for further information about how to use [x]</td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClinicalImpression.investigations"> </a><b>ClinicalImpression.investigations</b></td></tr>
+  <tr><td>Definition</td><td><p>One or more sets of investigations (signs, symptions, etc.). The actual grouping of investigations vary greatly depending on the type and context of the assessment. These investigations may include data generated during the assessment process, or data previously generated and recorded that is pertinent to the outcomes.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClinicalImpression.investigations.code"> </a><b>ClinicalImpression.investigations.code</b></td></tr>
+  <tr><td>Definition</td><td><p>A name/code for the group (&quot;set&quot;) of investigations. Typically, this will be something like &quot;signs&quot;, &quot;symptoms&quot;, &quot;clinical&quot;, &quot;diagnostic&quot;, but the list is not constrained, and others such groups such as (exposure|family|travel|nutitirional) history may be used.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>Investigation Type: <a href="valueset-investigation-sets.html">A name/code for a set of investigations.</a> (<a href="terminologies.html#example">Example</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClinicalImpression.investigations.item"> </a><b>ClinicalImpression.investigations.item</b></td></tr>
+  <tr><td>Definition</td><td><p>A record of a specific investigation that was undertaken.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="observation.html">Observation</a> | <a href="questionnaireresponse.html">QuestionnaireResponse</a> | <a href="familymemberhistory.html">FamilyMemberHistory</a> | <a href="diagnosticreport.html">DiagnosticReport</a>)</td></tr>
+  <tr><td>Comments</td><td><p>Most investigations are observations of one kind of or another but some other specific types of data collection resources can also be used.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClinicalImpression.protocol"> </a><b>ClinicalImpression.protocol</b></td></tr>
+  <tr><td>Definition</td><td><p>Reference to a specific published clinical protocol that was followed during this assessment, and/or that provides evidence in support of the diagnosis.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#uri">uri</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClinicalImpression.summary"> </a><b>ClinicalImpression.summary</b></td></tr>
+  <tr><td>Definition</td><td><p>A text summary of the investigations and the diagnosis.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClinicalImpression.finding"> </a><b>ClinicalImpression.finding</b></td></tr>
+  <tr><td>Definition</td><td><p>Specific findings or diagnoses that was considered likely or relevant to ongoing treatment.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClinicalImpression.finding.item"> </a><b>ClinicalImpression.finding.item</b></td></tr>
+  <tr><td>Definition</td><td><p>Specific text of code for finding or diagnosis.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>Condition/Problem/Diagnosis Codes: <a href="valueset-condition-code.html">Identification of the Condition or diagnosis.</a> (<a href="terminologies.html#example">Example</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClinicalImpression.finding.cause"> </a><b>ClinicalImpression.finding.cause</b></td></tr>
+  <tr><td>Definition</td><td><p>Which investigations support finding or diagnosis.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClinicalImpression.resolved"> </a><b>ClinicalImpression.resolved</b></td></tr>
+  <tr><td>Definition</td><td><p>Diagnoses/conditions resolved since the last assessment.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>Condition/Problem/Diagnosis Codes: <a href="valueset-condition-code.html">Identification of the Condition or diagnosis.</a> (<a href="terminologies.html#example">Example</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClinicalImpression.ruledOut"> </a><b>ClinicalImpression.ruledOut</b></td></tr>
+  <tr><td>Definition</td><td><p>Diagnosis considered not possible.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClinicalImpression.ruledOut.item"> </a><b>ClinicalImpression.ruledOut.item</b></td></tr>
+  <tr><td>Definition</td><td><p>Specific text of code for diagnosis.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>Condition/Problem/Diagnosis Codes: <a href="valueset-condition-code.html">Identification of the Condition or diagnosis.</a> (<a href="terminologies.html#example">Example</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClinicalImpression.ruledOut.reason"> </a><b>ClinicalImpression.ruledOut.reason</b></td></tr>
+  <tr><td>Definition</td><td><p>Grounds for elimination.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClinicalImpression.prognosis"> </a><b>ClinicalImpression.prognosis</b></td></tr>
+  <tr><td>Definition</td><td><p>Estimate of likely outcome.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClinicalImpression.plan"> </a><b>ClinicalImpression.plan</b></td></tr>
+  <tr><td>Definition</td><td><p>Plan of action after assessment.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="careplan.html">CarePlan</a> | <a href="appointment.html">Appointment</a> | <a href="communicationrequest.html">CommunicationRequest</a> | <a href="deviceuserequest.html">DeviceUseRequest</a> | <a href="diagnosticorder.html">DiagnosticOrder</a> | <a href="medicationorder.html">MedicationOrder</a> | <a href="nutritionorder.html">NutritionOrder</a> | <a href="order.html">Order</a> | <a href="procedurerequest.html">ProcedureRequest</a> | <a href="processrequest.html">ProcessRequest</a> | <a href="referralrequest.html">ReferralRequest</a> | <a href="supplyrequest.html">SupplyRequest</a> | <a href="visionprescription.html">VisionPrescription</a>)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="ClinicalImpression.action"> </a><b>ClinicalImpression.action</b></td></tr>
+  <tr><td>Definition</td><td><p>Actions taken during assessment.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="referralrequest.html">ReferralRequest</a> | <a href="procedurerequest.html">ProcedureRequest</a> | <a href="procedure.html">Procedure</a> | <a href="medicationorder.html">MedicationOrder</a> | <a href="diagnosticorder.html">DiagnosticOrder</a> | <a href="nutritionorder.html">NutritionOrder</a> | <a href="supplyrequest.html">SupplyRequest</a> | <a href="appointment.html">Appointment</a>)</td></tr>
+</table>
+
+
+
+</div>
+
+
+				</div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+        
+    </div>  <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">  <!-- segment-footer -->
+		<div class="container">  <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.4.0-8453) generated on Mon, Jun 6, 2016 20:20+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img src="external.png" style="text-align: baseline"/></a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fclinicalimpression-definitions.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fclinicalimpression-definitions.html">Compare to DSTU2 <img src="external.png" style="text-align: baseline"/></a> |                
+               <a rel="license" style="color: #81BEF7" href="license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a> | 
+               <a style="color: #81BEF7" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank">Propose a change <img src="external.png" style="text-align: baseline"/></a>   
+        </span>
+        </p>
+			</div>  <!-- /inner-wrapper -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+    
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

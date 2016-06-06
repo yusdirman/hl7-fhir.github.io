@@ -1,0 +1,123 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Librarylibrary-wcc-aba> a fhir:Library;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "library-wcc-aba"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Cohort Definition for Adult BMI Assessment Measure</div>"
+  ];
+  fhir:Library.moduleMetadata [
+     fhir:ModuleMetadata.identifier [
+       fhir:index 0;
+       fhir:Identifier.use [ fhir:value "official" ];
+       fhir:Identifier.value [ fhir:value "WCCABA" ]
+     ];
+     fhir:ModuleMetadata.version [ fhir:value "1.0.0" ];
+     fhir:ModuleMetadata.title [ fhir:value "Cohort Definition for Adult BMI Assessment Measure" ];
+     fhir:ModuleMetadata.type [ fhir:value "library" ];
+     fhir:ModuleMetadata.status [ fhir:value "active" ];
+     fhir:ModuleMetadata.experimental [ fhir:value "true"^^xsd:boolean ];
+     fhir:ModuleMetadata.publicationDate [ fhir:value "2016-04-19"^^xsd:date ];
+     fhir:ModuleMetadata.topic [
+       fhir:index 0;
+       fhir:CodeableConcept.text [ fhir:value "something" ]
+     ]
+  ];
+  fhir:Library.model [
+     fhir:index 0;
+     fhir:Library.model.identifier [ fhir:value "FHIR" ]
+  ];
+  fhir:Library.valueSet [
+     fhir:index 0;
+     fhir:Library.valueSet.name [ fhir:value "BMI Percentile" ];
+     fhir:Library.valueSet.identifier [ fhir:value "BMI Percentile" ]
+  ], [
+     fhir:index 1;
+     fhir:Library.valueSet.name [ fhir:value "BMI Value" ];
+     fhir:Library.valueSet.identifier [ fhir:value "BMI Value" ]
+  ], [
+     fhir:index 2;
+     fhir:Library.valueSet.name [ fhir:value "Body Height" ];
+     fhir:Library.valueSet.identifier [ fhir:value "Body Height" ]
+  ], [
+     fhir:index 3;
+     fhir:Library.valueSet.name [ fhir:value "Body Weight" ];
+     fhir:Library.valueSet.identifier [ fhir:value "Body Weight" ]
+  ];
+  fhir:Library.dataRequirement [
+     fhir:index 0;
+     fhir:DataRequirement.type [ fhir:value "Patient" ]
+  ], [
+     fhir:index 1;
+     fhir:DataRequirement.type [ fhir:value "Observation" ];
+     fhir:DataRequirement.codeFilter [
+       fhir:index 0;
+       fhir:DataRequirement.codeFilter.path [ fhir:value "code" ];
+       fhir:DataRequirement.codeFilter.valueSetString [ fhir:value "BMI Percentile" ]
+     ];
+     fhir:DataRequirement.dateFilter [
+       fhir:index 0;
+       fhir:DataRequirement.dateFilter.path [ fhir:value "effectiveDateTime.value" ];
+       fhir:DataRequirement.dateFilter.valuePeriod [
+         fhir:Period.start [ fhir:value "2014-01-01"^^xsd:date ]
+       ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:DataRequirement.type [ fhir:value "Observation" ];
+     fhir:DataRequirement.codeFilter [
+       fhir:index 0;
+       fhir:DataRequirement.codeFilter.path [ fhir:value "code" ];
+       fhir:DataRequirement.codeFilter.valueSetString [ fhir:value "BMI Value" ]
+     ];
+     fhir:DataRequirement.dateFilter [
+       fhir:index 0;
+       fhir:DataRequirement.dateFilter.path [ fhir:value "effectiveDateTime.value" ];
+       fhir:DataRequirement.dateFilter.valuePeriod [
+         fhir:Period.start [ fhir:value "2014-01-01"^^xsd:date ]
+       ]
+     ]
+  ], [
+     fhir:index 3;
+     fhir:DataRequirement.type [ fhir:value "Observation" ];
+     fhir:DataRequirement.codeFilter [
+       fhir:index 0;
+       fhir:DataRequirement.codeFilter.path [ fhir:value "code" ];
+       fhir:DataRequirement.codeFilter.valueSetString [ fhir:value "Body Height" ]
+     ];
+     fhir:DataRequirement.dateFilter [
+       fhir:index 0;
+       fhir:DataRequirement.dateFilter.path [ fhir:value "effectiveDateTime.value" ];
+       fhir:DataRequirement.dateFilter.valuePeriod [
+         fhir:Period.start [ fhir:value "2014-01-01"^^xsd:date ]
+       ]
+     ]
+  ], [
+     fhir:index 4;
+     fhir:DataRequirement.type [ fhir:value "Observation" ];
+     fhir:DataRequirement.codeFilter [
+       fhir:index 0;
+       fhir:DataRequirement.codeFilter.path [ fhir:value "code" ];
+       fhir:DataRequirement.codeFilter.valueSetString [ fhir:value "Body Weight" ]
+     ];
+     fhir:DataRequirement.dateFilter [
+       fhir:index 0;
+       fhir:DataRequirement.dateFilter.path [ fhir:value "effectiveDateTime.value" ];
+       fhir:DataRequirement.dateFilter.valuePeriod [
+         fhir:Period.start [ fhir:value "2014-01-01"^^xsd:date ]
+       ]
+     ]
+  ];
+  fhir:Library.document [
+     fhir:Attachment.contentType [ fhir:value "application/xml+elm" ];
+     fhir:Attachment.url [ fhir:value "http://example.org/libraries/library-wcc-aba.elm.xml" ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

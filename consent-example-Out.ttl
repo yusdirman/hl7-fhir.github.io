@@ -1,0 +1,47 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Consentconsent-example-Out> a fhir:Consent;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "consent-example-Out"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">The following scenario is based on existing jurisdictional policy and are realized in existing systems in Canada. \n	The default policy is one of implied consent for the provision of care, so these scenarios all deal with withdrawal or withholding consent for that purpose. \n	In other jurisdictions, where an express consent model is used (Opt-In), these would examples would contain the phrase &quot;consent to&quot; rather \n	than &quot;withhold&quot; or &quot;withdraw&quot; consent for.\n    <p>\n	specific to use-case 0) Withhold Authorization for Treatment\n	</p><p>\n    Patient &quot;P. van de Heuvel&quot; wishes to have no data at the Good Health Psychiatric Hospital \n   available for normal treatment use.\n   </p>\n   </div>"
+  ];
+  fhir:Consent.status [ fhir:value "active"];
+  fhir:Consent.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/consenttypecodes" ];
+       fhir:Coding.code [ fhir:value "Opt-Out" ];
+       fhir:Coding.display [ fhir:value "Authorization refused with explicit exceptions." ]
+     ]
+  ];
+  fhir:Consent.issued [ fhir:value "2016-05-11"^^xsd:date];
+  fhir:Consent.patient [
+     fhir:link <http://hl7.org/fhir/Patient/f001>;
+     fhir:Reference.reference [ fhir:value "Patient/f001" ];
+     fhir:Reference.display [ fhir:value "P. van de Heuvel" ]
+  ];
+  fhir:Consent.authority [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/Organization/Infoway>;
+     fhir:Reference.reference [ fhir:value "Organization/Infoway" ];
+     fhir:Reference.display [ fhir:value "Canada Infoway" ]
+  ];
+  fhir:Consent.domain [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/Location/Infoway>;
+     fhir:Reference.reference [ fhir:value "Location/Infoway" ];
+     fhir:Reference.display [ fhir:value "Canada Infoway" ]
+  ];
+  fhir:Consent.contentAttachment [
+     fhir:Attachment.title [ fhir:value "The terms of the consent in lawyer speak." ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

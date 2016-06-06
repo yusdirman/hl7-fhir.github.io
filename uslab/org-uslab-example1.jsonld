@@ -1,0 +1,79 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Organization",
+  "resourceType": "Organization",
+  "Resource.id": {
+    "value": "org-uslab-example1"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: org-uslab-example1</p><p><b>identifier</b>: 1235349085 (OFFICIAL)</p><p><b>name</b>: University Hospital</p><p><b>telecom</b>: ph: (+1) 555-227-1234, fax: (+1) 555-227-6622</p><p><b>address</b>: Firstcare Way Building 1 Harrisburg PA 17111 USA (WORK)</p></div>"
+    }
+  },
+  "Organization.identifier": [
+    {
+      "Identifier.use": {
+        "value": "official"
+      },
+      "Identifier.system": {
+        "value": "http://hl7.org/fhir/sid/us-npi"
+      },
+      "Identifier.value": {
+        "value": "1235349085"
+      }
+    }
+  ],
+  "Organization.name": {
+    "value": "University Hospital"
+  },
+  "Organization.telecom": [
+    {
+      "ContactPoint.system": {
+        "value": "phone"
+      },
+      "ContactPoint.value": {
+        "value": "(+1) 555-227-1234"
+      }
+    },
+    {
+      "ContactPoint.system": {
+        "value": "fax"
+      },
+      "ContactPoint.value": {
+        "value": "(+1) 555-227-6622"
+      }
+    }
+  ],
+  "Organization.address": [
+    {
+      "Address.use": {
+        "value": "work"
+      },
+      "Address.line": [
+        {
+          "value": "Firstcare Way"
+        },
+        {
+          "value": "Building 1"
+        }
+      ],
+      "Address.city": {
+        "value": "Harrisburg"
+      },
+      "Address.district": {
+        "value": "42043"
+      },
+      "Address.state": {
+        "value": "PA"
+      },
+      "Address.postalCode": {
+        "value": "17111"
+      },
+      "Address.country": {
+        "value": "USA"
+      }
+    }
+  ]
+}

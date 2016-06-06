@@ -1,0 +1,105 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/DataElement",
+  "resourceType": "DataElement",
+  "Resource.id": {
+    "value": "dataelement-sdc-profile-example"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">TODO</div>"
+    }
+  },
+  "DataElement.identifier": [
+    {
+      "Identifier.system": {
+        "value": "http://nlm.nih.gov/some_other_text/data_element_identifier"
+      },
+      "Identifier.value": {
+        "value": "DE42AHRQ"
+      }
+    }
+  ],
+  "DataElement.status": {
+    "value": "draft"
+  },
+  "DataElement.publisher": {
+    "value": "Health Level Seven, International"
+  },
+  "DataElement.date": {
+    "value": "2015-02-04"
+  },
+  "DataElement.name": {
+    "value": "Patient Gender"
+  },
+  "DataElement.contact": [
+    {
+      "DataElement.contact.telecom": [
+        {
+          "ContactPoint.system": {
+            "value": "other"
+          },
+          "ContactPoint.value": {
+            "value": "http://hl7.org"
+          }
+        }
+      ]
+    }
+  ],
+  "DataElement.mapping": [
+    {
+      "DataElement.mapping.identity": {
+        "value": "c-cda"
+      },
+      "DataElement.mapping.uri": {
+        "value": "http://hl7.org/C-CDA-not-a-real-url"
+      },
+      "DataElement.mapping.name": {
+        "value": "Consolidated CDA R2"
+      }
+    }
+  ],
+  "DataElement.element": [
+    {
+      "ElementDefinition.path": {
+        "value": "administrativeGender"
+      },
+      "ElementDefinition.definition": {
+        "value": "The gender (i.e., the behavioral, cultural, or psychological traits typically associated with one sex) of a living subject as defined for administrative purposes."
+      },
+      "ElementDefinition.type": [
+        {
+          "ElementDefinition.type.code": {
+            "value": "CodeableConcept"
+          }
+        }
+      ],
+      "ElementDefinition.binding": {
+        "ElementDefinition.binding.strength": {
+          "value": "required"
+        },
+        "ElementDefinition.binding.valueSetReference": {
+          "Reference.reference": {
+            "value": "http://hl7.org/fhir/ValueSet/AdministrativeGender"
+          },
+          "reference": "http://hl7.org/fhir/ValueSet/AdministrativeGender"
+        }
+      },
+      "ElementDefinition.mapping": [
+        {
+          "ElementDefinition.mapping.identity": {
+            "value": "c-cda"
+          },
+          "ElementDefinition.mapping.language": {
+            "value": "xpath"
+          },
+          "ElementDefinition.mapping.map": {
+            "value": "/ClinicalDocument/recordTarget/patientRole/patient/administrativeGender"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "resourceType": "Parameters",
+  "id": "example-gao-request-parameters-CT-head",
+  "parameter": [
+    {
+      "name": "order",
+      "resource": {
+        "resourceType": "Order",
+        "id": "example-gao-order",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/gao-order"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <p>A 50-year-old male is ordered a CT of the Head for his headache by an identified practitioner.</p>\n          </div>"
+        },
+        "contained": [
+          {
+            "resourceType": "Patient",
+            "id": "patient",
+            "meta": {
+              "profile": [
+                "http://hl7.org/fhir/StructureDefinition/gao-patient"
+              ]
+            },
+            "gender": "male",
+            "birthDate": "1965-11-20"
+          },
+          {
+            "resourceType": "Practitioner",
+            "id": "practitioner",
+            "meta": {
+              "profile": [
+                "http://hl7.org/fhir/StructureDefinition/gao-practitioner"
+              ]
+            },
+            "identifier": [
+              {
+                "system": "http://hl7.org/fhir/sid/us-npi",
+                "value": "9999999999"
+              }
+            ]
+          },
+          {
+            "resourceType": "DiagnosticOrder",
+            "id": "diagnosticorder",
+            "meta": {
+              "profile": [
+                "http://hl7.org/fhir/StructureDefinition/gao-diagnosticorder"
+              ]
+            },
+            "subject": {
+              "reference": "example-gao-order#patient"
+            },
+            "orderer": {
+              "reference": "example-gao-order#practitioner"
+            },
+            "item": [
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://loinc.org",
+                      "code": "30799-1",
+                      "display": "Head CT WO contrast"
+                    }
+                  ],
+                  "text": "CT Head without contrast"
+                }
+              }
+            ]
+          }
+        ],
+        "identifier": [
+          {
+            "system": "http://example.com/OrderIdentifier",
+            "value": "123"
+          }
+        ],
+        "date": "2015-11-20",
+        "subject": {
+          "reference": "#patient"
+        },
+        "source": {
+          "reference": "#practitioner"
+        },
+        "reasonCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://example.com",
+              "code": "x"
+            }
+          ],
+          "text": "Headache"
+        },
+        "detail": [
+          {
+            "reference": "#diagnosticorder"
+          }
+        ]
+      }
+    }
+  ]
+}

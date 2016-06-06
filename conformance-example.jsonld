@@ -1,0 +1,360 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Conformance",
+  "resourceType": "Conformance",
+  "Resource.id": {
+    "value": "example"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      \n      <p>The EHR Server supports the following transactions for the resource Person: read, vread, \n        update, history, search(name,gender), create and updates.</p>\n      \n      <p>The EHR System supports the following message: admin-notify::Person.</p>\n      \n      <p>The EHR Application has a \n        <a href=\"http://fhir.hl7.org/base/Profilebc054d23-75e1-4dc6-aca5-838b6b1ac81d/_history/b5fdd9fc-b021-4ea1-911a-721a60663796\">general document profile</a>.\n      </p>\n    \n    </div>"
+    }
+  },
+  "Conformance.url": {
+    "value": "68D043B5-9ECF-4559-A57A-396E0D452311"
+  },
+  "Conformance.version": {
+    "value": "20130510"
+  },
+  "Conformance.name": {
+    "value": "ACME EHR Conformance statement"
+  },
+  "Conformance.status": {
+    "value": "draft"
+  },
+  "Conformance.experimental": {
+    "value": true
+  },
+  "Conformance.date": {
+    "value": "2012-01-04"
+  },
+  "Conformance.publisher": {
+    "value": "ACME Corporation"
+  },
+  "Conformance.contact": [
+    {
+      "Conformance.contact.name": {
+        "value": "System Administrator"
+      },
+      "Conformance.contact.telecom": [
+        {
+          "ContactPoint.system": {
+            "value": "email"
+          },
+          "ContactPoint.value": {
+            "value": "wile@acme.org"
+          }
+        }
+      ]
+    }
+  ],
+  "Conformance.description": {
+    "value": "This is the FHIR conformance statement for the main EHR at ACME for the private interface - it does not describe the public interface"
+  },
+  "Conformance.requirements": {
+    "value": "Main EHR conformance statement, published for contracting and operational support"
+  },
+  "Conformance.copyright": {
+    "value": "Copyright © Acme Healthcare and GoodCorp EHR Systems"
+  },
+  "Conformance.kind": {
+    "value": "instance"
+  },
+  "Conformance.software": {
+    "Conformance.software.name": {
+      "value": "EHR"
+    },
+    "Conformance.software.version": {
+      "value": "0.00.020.2134"
+    },
+    "Conformance.software.releaseDate": {
+      "value": "2012-01-04"
+    }
+  },
+  "Conformance.implementation": {
+    "Conformance.implementation.description": {
+      "value": "main EHR at ACME"
+    },
+    "Conformance.implementation.url": {
+      "value": "http://10.2.3.4/fhir"
+    }
+  },
+  "Conformance.fhirVersion": {
+    "value": "1.0.0"
+  },
+  "Conformance.acceptUnknown": {
+    "value": "both"
+  },
+  "Conformance.format": [
+    {
+      "value": "xml"
+    },
+    {
+      "value": "json"
+    }
+  ],
+  "Conformance.rest": [
+    {
+      "Conformance.rest.mode": {
+        "value": "server"
+      },
+      "Conformance.rest.documentation": {
+        "value": "Main FHIR endpoint for acem health"
+      },
+      "Conformance.rest.security": {
+        "Conformance.rest.security.cors": {
+          "value": true
+        },
+        "Conformance.rest.security.service": [
+          {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://hl7.org/fhir/restful-security-service"
+                },
+                "Coding.code": {
+                  "value": "SMART-on-FHIR"
+                }
+              }
+            ]
+          }
+        ],
+        "Conformance.rest.security.description": {
+          "value": "See Smart on FHIR documentation"
+        },
+        "Conformance.rest.security.certificate": [
+          {
+            "Conformance.rest.security.certificate.type": {
+              "value": "application/jwt"
+            },
+            "Conformance.rest.security.certificate.blob": {
+              "value": "IHRoaXMgYmxvYiBpcyBub3QgdmFsaWQ="
+            }
+          }
+        ]
+      },
+      "Conformance.rest.resource": [
+        {
+          "Conformance.rest.resource.type": {
+            "value": "Patient"
+          },
+          "Conformance.rest.resource.profile": {
+            "Reference.reference": {
+              "value": "http://fhir.hl7.org/base/Profile7896271d-57f6-4231-89dc-dcc91eab2416"
+            },
+            "reference": "http://fhir.hl7.org/base/Profile7896271d-57f6-4231-89dc-dcc91eab2416"
+          },
+          "Conformance.rest.resource.interaction": [
+            {
+              "Conformance.rest.resource.interaction.code": {
+                "value": "read"
+              }
+            },
+            {
+              "Conformance.rest.resource.interaction.code": {
+                "value": "vread"
+              },
+              "Conformance.rest.resource.interaction.documentation": {
+                "value": "Only supported for patient records since 12-Dec 2012"
+              }
+            },
+            {
+              "Conformance.rest.resource.interaction.code": {
+                "value": "update"
+              }
+            },
+            {
+              "Conformance.rest.resource.interaction.code": {
+                "value": "history-instance"
+              }
+            },
+            {
+              "Conformance.rest.resource.interaction.code": {
+                "value": "create"
+              }
+            },
+            {
+              "Conformance.rest.resource.interaction.code": {
+                "value": "history-type"
+              }
+            }
+          ],
+          "Conformance.rest.resource.versioning": {
+            "value": "versioned-update"
+          },
+          "Conformance.rest.resource.readHistory": {
+            "value": true
+          },
+          "Conformance.rest.resource.updateCreate": {
+            "value": false
+          },
+          "Conformance.rest.resource.conditionalCreate": {
+            "value": true
+          },
+          "Conformance.rest.resource.conditionalUpdate": {
+            "value": false
+          },
+          "Conformance.rest.resource.conditionalDelete": {
+            "value": "not-supported"
+          },
+          "Conformance.rest.resource.searchInclude": [
+            {
+              "value": "Organization"
+            }
+          ],
+          "Conformance.rest.resource.searchRevInclude": [
+            {
+              "value": "Person"
+            }
+          ],
+          "Conformance.rest.resource.searchParam": [
+            {
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "identifier"
+              },
+              "Conformance.rest.resource.searchParam.definition": {
+                "value": "http://hl7.org/fhir/SearchParameter/Patient-identifier"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "token"
+              },
+              "Conformance.rest.resource.searchParam.documentation": {
+                "value": "Only supports search by institution MRN"
+              },
+              "Conformance.rest.resource.searchParam.modifier": [
+                {
+                  "value": "missing"
+                }
+              ]
+            },
+            {
+              "Conformance.rest.resource.searchParam.name": {
+                "value": "careprovider"
+              },
+              "Conformance.rest.resource.searchParam.definition": {
+                "value": "http://hl7.org/fhir/SearchParameter/Patient-careprovider"
+              },
+              "Conformance.rest.resource.searchParam.type": {
+                "value": "reference"
+              },
+              "Conformance.rest.resource.searchParam.target": [
+                {
+                  "value": "Organization"
+                }
+              ],
+              "Conformance.rest.resource.searchParam.modifier": [
+                {
+                  "value": "missing"
+                }
+              ],
+              "Conformance.rest.resource.searchParam.chain": [
+                {
+                  "value": "name"
+                },
+                {
+                  "value": "identifier"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "Conformance.rest.interaction": [
+        {
+          "Conformance.rest.interaction.code": {
+            "value": "transaction"
+          }
+        },
+        {
+          "Conformance.rest.interaction.code": {
+            "value": "history-system"
+          }
+        }
+      ],
+      "Conformance.rest.compartment": [
+        {
+          "value": "http://hl7.org/fhir/compartment/Patient"
+        }
+      ]
+    }
+  ],
+  "Conformance.messaging": [
+    {
+      "Conformance.messaging.endpoint": [
+        {
+          "Conformance.messaging.endpoint.protocol": {
+            "Coding.system": {
+              "value": "http://hl7.org/fhir/message-transport"
+            },
+            "Coding.code": {
+              "value": "mllp"
+            }
+          },
+          "Conformance.messaging.endpoint.address": {
+            "value": "mllp:10.1.1.10:9234"
+          }
+        }
+      ],
+      "Conformance.messaging.reliableCache": {
+        "value": 30
+      },
+      "Conformance.messaging.documentation": {
+        "value": "ADT A08 equivalent for external system notifications"
+      },
+      "Conformance.messaging.event": [
+        {
+          "Conformance.messaging.event.code": {
+            "Coding.system": {
+              "value": "http://hl7.org/fhir/message-type"
+            },
+            "Coding.code": {
+              "value": "admin-notify"
+            }
+          },
+          "Conformance.messaging.event.category": {
+            "value": "Consequence"
+          },
+          "Conformance.messaging.event.mode": {
+            "value": "receiver"
+          },
+          "Conformance.messaging.event.focus": {
+            "value": "Patient"
+          },
+          "Conformance.messaging.event.request": {
+            "Reference.reference": {
+              "value": "StructureDefinition/daf-patient"
+            },
+            "reference": "http://hl7.org/fhir//StructureDefinition/daf-patient"
+          },
+          "Conformance.messaging.event.response": {
+            "Reference.reference": {
+              "value": "StructureDefinition/MessageHeader"
+            },
+            "reference": "http://hl7.org/fhir//StructureDefinition/MessageHeader"
+          },
+          "Conformance.messaging.event.documentation": {
+            "value": "Notification of an update to a patient resource. changing the links is not supported"
+          }
+        }
+      ]
+    }
+  ],
+  "Conformance.document": [
+    {
+      "Conformance.document.mode": {
+        "value": "consumer"
+      },
+      "Conformance.document.documentation": {
+        "value": "Basic rules for all documents in the EHR system"
+      },
+      "Conformance.document.profile": {
+        "Reference.reference": {
+          "value": "http://fhir.hl7.org/base/Profilebc054d23-75e1-4dc6-aca5-838b6b1ac81d/_history/b5fdd9fc-b021-4ea1-911a-721a60663796"
+        },
+        "reference": "http://fhir.hl7.org/base/Profilebc054d23-75e1-4dc6-aca5-838b6b1ac81d/_history/b5fdd9fc-b021-4ea1-911a-721a60663796"
+      }
+    }
+  ]
+}

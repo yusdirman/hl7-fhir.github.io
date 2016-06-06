@@ -1,0 +1,84 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/AllergyIntolerance",
+  "resourceType": "AllergyIntolerance",
+  "Resource.id": {
+    "value": "allergyintolerance-example-refuted"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: allergyintolerance-example-refuted</p><p><b>identifier</b>: 49476534</p><p><b>status</b>: refuted</p><p><b>category</b>: food</p><p><b>substance</b>: Cashew nuts <span>(Details : {SNOMED CT code '227493005' = 'Cashew nut (substance)', given as 'Cashew nuts'})</span></p><p><b>patient</b>: <a>Patient/example</a></p><p><b>recordedDate</b>: Oct 9, 2014 2:58:00 PM</p><p><b>recorder</b>: <a>Practitioner/example</a></p></div>"
+    }
+  },
+  "DomainResource.extension": [
+    {
+      "Extension.url": {
+        "value": "http://hl7.org/fhir/StructureDefinition/allergyintolerance-reasonRefuted"
+      },
+      "Extension.valueCodeableConcept": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://hl7.org/fhir/v3/ActReason"
+            },
+            "Coding.code": {
+              "value": "MED"
+            },
+            "Coding.display": {
+              "value": "Medical Status Altered"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "AllergyIntolerance.identifier": [
+    {
+      "Identifier.system": {
+        "value": "http://acme.com/ids/patients/risks"
+      },
+      "Identifier.value": {
+        "value": "49476534"
+      }
+    }
+  ],
+  "AllergyIntolerance.status": {
+    "value": "refuted"
+  },
+  "AllergyIntolerance.category": {
+    "value": "food"
+  },
+  "AllergyIntolerance.substance": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "value": "227493005"
+        },
+        "Coding.display": {
+          "value": "Cashew nuts"
+        }
+      }
+    ],
+    "concept": "http://snomed.info/sct#227493005"
+  },
+  "AllergyIntolerance.patient": {
+    "Reference.reference": {
+      "value": "Patient/example"
+    },
+    "reference": "http://hl7.org/fhir//Patient/example"
+  },
+  "AllergyIntolerance.recordedDate": {
+    "value": "2014-10-09T14:58:00+11:00"
+  },
+  "AllergyIntolerance.recorder": {
+    "Reference.reference": {
+      "value": "Practitioner/example"
+    },
+    "reference": "http://hl7.org/fhir//Practitioner/example"
+  }
+}

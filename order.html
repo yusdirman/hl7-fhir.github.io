@@ -1,0 +1,676 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Order - FHIR v1.4.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link rel="stylesheet" href="fhir.css"/>
+  <link rel="Prev" href="http://hl7.org/fhir/order.html"/>
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="./dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="./assets/css/bootstrap-fhir.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href="./assets/css/project.css"/>
+  <link rel="stylesheet" href="./assets/css/pygments-manni.css"/>
+	<link rel="stylesheet" href="jquery-ui.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif] -->
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment">  <!-- segment-header -->	
+		<div class="container">  <!-- container -->
+			<a no-external="true" id="logo" href="http://hl7.org/fhir"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a no-external="true" id="hl7-logo" href="http://www.hl7.org">
+					<img src="./assets/images/hl7-logo.png" width="42" alt="visit the hl7 website" height="50"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a no-external="true" id="hl7-logo" href="http://hl7.org/fhir/search.cfm"><img src="./assets/images/search.png" alt="Search FHIR"/></a></div> 
+		</div>
+		<div class="container">  <!-- container -->
+	</div></div>  <!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+ 	      		
+ 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="documentation.html">Documentation</a></li>
+              <li><a href="implementation.html">Implementation</a></li>
+              <li><a href="resourcelist.html">Resources</a></li>
+              <li><a href="clinical.html">Clinical</a></li>
+              <li><a href="administration.html">Administrative</a></li>
+              <li><a href="infrastructure.html">Infrastructure</a></li>
+              <li><a href="financial.html">Financial</a></li>
+
+						</ul>
+					</div>  <!-- /.nav-collapse -->
+				</div>  <!-- /.container -->
+			</nav>  <!-- /.navbar -->
+      		
+				
+  <!-- /HEADER CONTENT -->				
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+		<div class="container">  <!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="documentation.html">Documentation</a></li>        <li><b>Order</b></li>          <!-- order.html / resource / Order -->
+
+			</ul>	
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment">  <!-- segment-content -->
+	<div class="container">  <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<ul class="nav nav-tabs"><li class="active"><a href="#">Content</a></li><li><a href="order-examples.html">Examples</a></li><li><a href="order-definitions.html">Detailed Descriptions</a></li><li><a href="order-mappings.html">Mappings</a></li><li><a href="order-profiles.html">Profiles</a></li></ul>
+
+<h1><span class="sectioncount">5.27<a name="5.27"> </a></span> Resource Order - Content <a href="order.html#5.27" title="link to here" class="self-link"><img src="target.png"/></a></h1>
+<p style="background-color: salmon; border:1px solid maroon; padding: 5px;">This resource is <a href="timelines.html#levels">marked as a draft</a>.</p>
+
+<table class="cols">
+ <tr><td><a href="http://www.hl7.org/Special/committees/orders/index.cfm" _target="blank">Orders and Observations <img src="external.png" style="text-align: baseline"/></a> Work Group</td><td><a href="resource.html#maturity">Maturity Level</a>: 0</td><td><a href="compartments.html">Compartments</a>: <a href="compartment-device.html">Device</a>, <a href="compartment-patient.html">Patient</a>, <a href="compartment-practitioner.html">Practitioner</a></td></tr>
+</table>
+
+
+
+<p> 
+A request to perform an action. 
+</p>
+
+	<div>
+<a name="scope"> </a>
+		<h2><span class="sectioncount">5.27.1</span> Scope and Usage <a href="order.html#scope" title="link to here" class="self-link"><img src="target.png"/></a></h2>
+<p>
+<b>NOTE:</b> This resource is slated to be eliminated in favor of the <a href="task.html">Task</a>
+resource as part of the FHIR Workflow refactoring.  Readers of this resource are encouraged to
+review the Task resource and consider using it instead and/or to provide feedback if they feel
+it will be inadequate to satisfy the use-cases associated with this resource.
+</p>		
+		
+<p>
+An order resource describes a request that an action be performed. An order is 
+expected to lead to one or more <a href="orderresponse.html">responses</a> that describe 
+the outcome of processing/handling the order. The order resource is focused on
+the process of actually requesting an action be performed; the actual action to 
+be performed  is detailed in a separate resource that contains the details. 
+Note that orders are often called &quot;requests&quot;, but this name is not used here 
+since the word &quot;request&quot; is used differently elsewhere in this specification.
+</p>
+		<p>
+Note that there are a variety of processes associated with making and processing 
+orders. Some orders may be handled immediately by automated systems but most require 
+real world actions by one or more humans. Some orders can only be processed when other real 
+world actions happen, such as a patient actually presenting themselves so that 
+the action to be performed can actually be performed. Often these real world dependencies are only 
+implicit in the order details. 
+</p>
+	</div>
+	<div>
+<a name="bnc"> </a>
+		<h2><span class="sectioncount">5.27.2</span> Background and Context <a href="order.html#bnc" title="link to here" class="self-link"><img src="target.png"/></a></h2>
+		<h3><span class="sectioncount">5.27.2.1<a name="5.27.2.1"> </a></span> Separation of Order and Order details <a href="order.html#5.27.2.1" title="link to here" class="self-link"><img src="target.png"/></a></h3>
+		<p>
+In healthcare, information that a particular action has been requested is often widely 
+disseminated throughout the context of a patient's healthcare. For example, the patient's
+healthcare record will often include a list of prescriptions that have been made for 
+the patient. For this reason, the presence of a prescription record itself is not 
+enough to create an obligation for a dispense to occur. Most other things that can be
+ordered follow this same pattern. 
+</p>
+		<p>
+For this reason, the information about what is requested is separated from the 
+actual request for an action to be taken. The various workflows around the
+actual order/fulfillment process are associated with this resource and the 
+<a href="orderresponse.html">Order Response</a> resource, while the details
+of what is actually ordered are delegated to other resources.
+</p>
+		<h3><span class="sectioncount">5.27.2.2<a name="5.27.2.2"> </a></span> Using Orders in a RESTful context <a href="order.html#5.27.2.2" title="link to here" class="self-link"><img src="target.png"/></a></h3>
+		<p>In a RESTful context, a server functions as a repository of requests. When the 
+server accepts the order, it has only stored the order; there is no direct 
+response to the order. Some other process detects the existence of the order, 
+processes it, and creates one or more responses as the order is processed. 
+Usually, these responses are made available on the same server as the order, so that
+the client can monitor the result of the original order.</p>
+		<p>A client can determine that an order has not been performed by searching for order resources
+with no matching responses (see below)</p>
+		<h3><span class="sectioncount">5.27.2.3<a name="5.27.2.3"> </a></span> Using Orders with messaging <a href="order.html#5.27.2.3" title="link to here" class="self-link"><img src="target.png"/></a></h3>
+		<p>Two message event codes are defined for sending orders: synchronous and asynchronous.</p>
+		<p>
+In a  <a href="messaging.html#synchronous">synchronous message</a>, an order message (i.e. a <a href="bundle.html">bundle</a> with a
+<a href="messageheader.html">Message Header</a> resource, an order resource and a <i>detail</i> resource for the order - see below) 
+is sent to a system, and it responds with a message that includes the <a href="orderresponse.html">response</a> 
+(a Message Header resource, and Order Response resource, along with additional details as appropriate). This 
+synchronous message exchange is simple, but only useful where there only needs to be one response, and where 
+the response can be made in a timely fashion.
+</p>
+		<p>
+For more general use, an asynchronous message event code is also defined. With this code, 
+the requesting system sends the order message, and receives a simple acknowledgement message (only 
+a message resource) that acknowledges that the order was received. Then the receiving 
+system sends one or more response messages as the order is processed. Each of these response messages
+is sent back to the originating system, which also acknowledges receipt of these messages with
+an acknowledgement message.
+</p>
+		<h3><span class="sectioncount">5.27.2.4<a name="5.27.2.4"> </a></span> Using orders in other contexts <a href="order.html#5.27.2.4" title="link to here" class="self-link"><img src="target.png"/></a></h3>
+		<p>
+There are a wide variety of ways to implement Order/Order Response. The Order and Order Response 
+resources are special resources created to manage behavior in a RESTful or messaging context. 
+In other contexts, such as a Service based environment, there may be alternate methods for 
+managing this behavior that are more appropriate, and there is no need to use Order/Order Response
+in these contexts.
+</p>
+	</div>
+	<div>
+<a name="bnr"> </a>
+		<h2><span class="sectioncount">5.27.3</span> Boundaries and Relationships <a href="order.html#bnr" title="link to here" class="self-link"><img src="target.png"/></a></h2>
+		<p>
+			As described above, the split between the Order resource and the domain order resources is that  Order is a <b>workflow</b> resource, not a clinical resource. It is used to manage fulfillment requests and other state transitions for the 'real' clinical orders - <a href="deviceuserequest.html">DeviceUseRequest</a>, <a href="diagnosticorder.html">DiagnosticOrder</a>,  <a href="medicationorder.html">MedicationOrder</a>, <a href="nutritionorder.html">NutritionOrder</a> and <a href="procedurerequest.html">ProcedureRequest</a>.
+</p>
+	</div>
+
+
+<p>This resource is referenced by <a href="careplan.html">CarePlan</a>, <a href="clinicalimpression.html">ClinicalImpression</a> and <a href="orderresponse.html">OrderResponse</a></p>
+
+
+<a name="resource"/>
+<h2><span class="sectioncount">5.27.4</span> 
+Resource Content
+ <a href="order.html#resource" title="link to here" class="self-link"><img src="target.png"/></a></h2>
+<a name="def"> </a>
+<a name="order"> </a>
+<a name="Order"> </a>
+
+<div id="tabs">
+  <ul>
+    <li><a href="#tabs-struc">Structure</a></li>
+    <li><a href="#tabs-uml">UML</a></li>
+    <li><a href="#tabs-xml">XML</a></li>
+    <li><a href="#tabs-json">JSON</a></li>
+    <li><a href="#tabs-ttl">Turtle</a></li>
+    <li><a href="#tabs-all">All</a></li>
+  </ul>
+  <div id="tabs-struc">
+
+<div id="tbl">
+<p><b>Structure</b></p>
+ <div id="tbl-inner">
+  <table border="0" cellpadding="0" cellspacing="0" style="border: 0px; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="The logical name of the element">Name</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Information about the use of the element">Flags</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Minimum and Maximum # of times the the element can appear in the instance">Card.</a></th><th style="width: 100px" class="hierarchy"><a href="formats.html#table" title="Reference to the type of the element">Type</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Additional information about the element">Description &amp; Constraints</a><span style="float: right"><a href="formats.html#table" title="Legend for this format"><img src="help16.png" alt="doco" style="background-color: inherit"/></a></span></th></tr><tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: white; background-color: inherit" title="Resource" class="hierarchy"/> <a href="order-definitions.html#Order" title="Order : A request to perform an action.">Order</a><a name="Order"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="domainresource.html">DomainResource</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">A request to perform an action</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="order-definitions.html#Order.identifier" title="Order.identifier : Identifiers assigned to this order by the orderer or by the receiver.">identifier</a><a name="Order.identifier"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#Identifier">Identifier</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Identifiers assigned to this order by the orderer or by the receiver</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="order-definitions.html#Order.date" title="Order.date : When the order was made.">date</a><a name="Order.date"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#dateTime">dateTime</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">When the order was made</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_reference.png" alt="." style="background-color: white; background-color: inherit" title="Reference to another Resource" class="hierarchy"/> <a href="order-definitions.html#Order.subject" title="Order.subject : Patient this order is about.">subject</a><a name="Order.subject"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="references.html">Reference</a>(<a href="patient.html">Patient</a> | <a href="group.html">Group</a> | <a href="device.html">Device</a> | <a href="substance.html">Substance</a>)</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Patient this order is about</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_reference.png" alt="." style="background-color: white; background-color: inherit" title="Reference to another Resource" class="hierarchy"/> <a href="order-definitions.html#Order.source" title="Order.source : Who initiated the order.">source</a><a name="Order.source"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="references.html">Reference</a>(<a href="practitioner.html">Practitioner</a> | <a href="organization.html">Organization</a>)</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Who initiated the order</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_reference.png" alt="." style="background-color: white; background-color: inherit" title="Reference to another Resource" class="hierarchy"/> <a href="order-definitions.html#Order.target" title="Order.target : Who is intended to fulfill the order.">target</a><a name="Order.target"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="references.html">Reference</a>(<a href="organization.html">Organization</a> | <a href="device.html">Device</a> | <a href="practitioner.html">Practitioner</a>)</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Who is intended to fulfill the order</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_choice.gif" alt="." style="background-color: white; background-color: inherit" title="Choice of Types" class="hierarchy"/> <a href="order-definitions.html#Order.reason_x_" title="Order.reason[x] : Text - why the order was made.">reason[x]</a><a name="Order.reason_x_"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Text - why the order was made</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <span title="A concept that may be defined by a formal reference to a terminology or ontology or may be provided by text.">reasonCodeableConcept</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck100.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_reference.png" alt="." style="background-color: white; background-color: inherit" title="Reference to another Resource" class="hierarchy"/> reasonReference</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="references.html">Reference</a>(<a href="resourcelist.html">Any</a>)</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="order-definitions.html#Order.when" title="Order.when : When order should be fulfilled.">when</a><a name="Order.when"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span title="This element is included in summaries">Σ </span><span title="This element has or is affected by some invariants">I</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="backboneelement.html">BackboneElement</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">When order should be fulfilled<br/><span style="font-style: italic" title="ord-1">Provide a code or a schedule, but not both</span></td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="order-definitions.html#Order.when.code" title="Order.when.code : Code specifies when request should be done. The code may simply be a priority code.">code</a><a name="Order.when.code"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span title="This element is included in summaries">Σ </span><span title="This element has or is affected by some invariants">I</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Code specifies when request should be done. The code may simply be a priority code</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck100.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="order-definitions.html#Order.when.schedule" title="Order.when.schedule : A formal schedule.">schedule</a><a name="Order.when.schedule"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span title="This element is included in summaries">Σ </span><span title="This element has or is affected by some invariants">I</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#Timing">Timing</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">A formal schedule</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_reference.png" alt="." style="background-color: white; background-color: inherit" title="Reference to another Resource" class="hierarchy"/> <a href="order-definitions.html#Order.detail" title="Order.detail : What action is being ordered.">detail</a><a name="Order.detail"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">1..*</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="references.html">Reference</a>(<a href="resourcelist.html">Any</a>)</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">What action is being ordered</td></tr>
+<tr><td colspan="5" class="hierarchy"><br/><a href="formats.html#table" title="Legend for this format"><img src="help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table>
+ </div>
+</div>
+
+  </div>
+  <div id="tabs-uml">
+  
+<div id="uml">
+<p><b>UML Diagram</b></p>
+ <div id="uml-inner">
+ <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="720.4" version="1.1" height="144.0">  <defs>
+    <filter x="0" width="200%" y="0" id="shadowA" height="200%">
+      <feOffset result="offOut" dx="3" in="SourceGraphic" dy="3"/>
+      <feColorMatrix result="matrixOut" in="offOut" values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0" type="matrix"/>
+      <feGaussianBlur result="blurOut" stdDeviation="2" in="matrixOut"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="blurOut"/>
+    </filter>
+  </defs><g><rect filter="url(#shadowA)" rx="4" ry="4" x="0.0" width="272.8" y="0.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="134.0"/><line y1="28.0" x1="0.0" y2="28.0" x2="272.8" style="stroke:dimgrey;stroke-width:1"/><text x="136.4" y="20.0" fill="black" class="diagram-class-title  diagram-class-resource">Order<tspan class="diagram-class-title-link"> (<a class="diagram-class-reference" xlink:href="domainresource.html">DomainResource</a>)</tspan></text><text x="6.0" y="42.0" fill="black" class="diagram-class-detail"><a xlink:href="order-definitions.html#Order.identifier"><title>Identifiers assigned to this order by the orderer or by the receiver</title>identifier</a> : <a xlink:href="datatypes.html#Identifier">Identifier</a> [0..*]</text><text x="6.0" y="56.0" fill="black" class="diagram-class-detail"><a xlink:href="order-definitions.html#Order.date"><title>When the order was made</title>date</a> : <a xlink:href="datatypes.html#dateTime">dateTime</a> [0..1]</text><text x="6.0" y="70.0" fill="black" class="diagram-class-detail"><a xlink:href="order-definitions.html#Order.subject"><title>Patient this order is about</title>subject</a> : <a xlink:href="references.html#Reference">Reference</a> [0..1] « <a xlink:href="patient.html#Patient">Patient</a>|<a xlink:href="group.html#Group">Group</a>|<a xlink:href="device.html#Device">Device</a>|<a xlink:href="substance.html#Substance">Substance</a> »</text><text x="6.0" y="84.0" fill="black" class="diagram-class-detail"><a xlink:href="order-definitions.html#Order.source"><title>Who initiated the order</title>source</a> : <a xlink:href="references.html#Reference">Reference</a> [0..1] « <a xlink:href="practitioner.html#Practitioner">Practitioner</a>|<a xlink:href="organization.html#Organization">Organization</a> »</text><text x="6.0" y="98.0" fill="black" class="diagram-class-detail"><a xlink:href="order-definitions.html#Order.target"><title>Who is intended to fulfill the order</title>target</a> : <a xlink:href="references.html#Reference">Reference</a> [0..1] « <a xlink:href="organization.html#Organization">Organization</a>|<a xlink:href="device.html#Device">Device</a>|<a xlink:href="practitioner.html#Practitioner">Practitioner</a> »</text><text x="6.0" y="112.0" fill="black" class="diagram-class-detail"><a xlink:href="order-definitions.html#Order.reason_x_"><title>Text - why the order was made</title>reason[x]</a> : <a xlink:href="formats.html#umlchoice">Type</a> [0..1] « <a xlink:href="datatypes.html#CodeableConcept">CodeableConcept</a>|<a xlink:href="references.html#Reference">Reference</a>(<a xlink:href="resourcelist.html#Any">Any</a>) »</text><text x="6.0" y="126.0" fill="black" class="diagram-class-detail"><a xlink:href="order-definitions.html#Order.detail"><title>What action is being ordered</title>detail</a> : <a xlink:href="references.html#Reference">Reference</a> [1..*] « <a xlink:href="resourcelist.html#Any">Any</a> »</text><g><rect filter="url(#shadowA)" rx="4" ry="4" x="392.8" width="127.60000000000001" y="35.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="64.0"/><line y1="63.0" x1="392.8" y2="63.0" x2="520.4" style="stroke:dimgrey;stroke-width:1"/><text x="456.6" y="55.0" fill="black" class="diagram-class-title">When</text><text x="398.8" y="77.0" fill="black" class="diagram-class-detail"><a xlink:href="order-definitions.html#Order.when.code"><title>Code specifies when request should be done. The code may simply be a priority code</title>code</a> : <a xlink:href="datatypes.html#CodeableConcept">CodeableConcept</a> [0..1]</text><text x="398.8" y="91.0" fill="black" class="diagram-class-detail"><a xlink:href="order-definitions.html#Order.when.schedule"><title>A formal schedule</title>schedule</a> : <a xlink:href="datatypes.html#Timing">Timing</a> [0..1]</text></g></g><line y1="67.0" x1="272.8" y2="67.0" x2="392.8" style="stroke:navy;stroke-width:1"/><polygon transform="rotate(0.0 272.8 67.0)" style="fill:navy;stroke:navy;stroke-width:1" points="272.8,67.0 278.8,71.0 284.8,67.0 278.8,63.0 272.8,67.0"/><rect x="323.5" width="17.0" y="60.0" style="fill:white;stroke:black;stroke-width:0" height="18.0"/><text x="332.0" y="70.0" fill="black" class="diagram-class-linkage"><a xlink:href="order-definitions.html#Order.when"><title>When order should be fulfilled</title>when</a></text><text x="372.8" y="63.0" fill="black" class="diagram-class-linkage">[0..1]</text></svg>
+ </div>
+</div>
+
+  </div>
+  <div id="tabs-xml">
+
+<div id="xml">
+<p><b>XML Template</b></p>
+ <div id="xml-inner">
+  <pre class="spec">
+&lt;<a href="order-definitions.html#Order" title="A request to perform an action." class="dict"><b>Order</b></a> xmlns=&quot;http://hl7.org/fhir&quot;&gt; <span style="float: right"><a href="xml.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+ &lt;!-- from <a href="resource.html">Resource</a>: <a href="resource.html#id">id</a>, <a href="resource.html#meta">meta</a>, <a href="resource.html#implicitRules">implicitRules</a>, and <a href="resource.html#language">language</a> --&gt;
+ &lt;!-- from <a href="domainresource.html">DomainResource</a>: <a href="narrative.html#Narrative">text</a>, <a href="references.html#contained">contained</a>, <a href="extensibility.html">extension</a>, and <a href="extensibility.html#modifierExtension">modifierExtension</a> --&gt;
+ &lt;<a href="order-definitions.html#Order.identifier" title="Identifiers assigned to this order by the orderer or by the receiver." class="dict"><b>identifier</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..*</b></span> <span style="color: darkgreen"><a href="datatypes.html#Identifier">Identifier</a></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Identifiers assigned to this order by the orderer or by the receiver</a></span><span style="color: Gray"> --&gt;</span>&lt;/identifier&gt;
+ &lt;<a href="order-definitions.html#Order.date" title="When the order was made." class="dict"><b>date</b></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#dateTime">dateTime</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">When the order was made</a></span><span style="color: Gray"> --&gt;</span>
+ &lt;<a href="order-definitions.html#Order.subject" title="Patient this order is about." class="dict"><b>subject</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="patient.html#Patient">Patient</a>|<a href="group.html#Group">Group</a>|<a href="device.html#Device">Device</a>|<a href="substance.html#Substance">Substance</a>)</span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Patient this order is about</a></span><span style="color: Gray"> --&gt;</span>&lt;/subject&gt;
+ &lt;<a href="order-definitions.html#Order.source" title="Who initiated the order." class="dict"><b>source</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="practitioner.html#Practitioner">Practitioner</a>|<a href="organization.html#Organization">Organization</a>)</span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Who initiated the order</a></span><span style="color: Gray"> --&gt;</span>&lt;/source&gt;
+ &lt;<a href="order-definitions.html#Order.target" title="Who is intended to fulfill the order." class="dict"><b>target</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="organization.html#Organization">Organization</a>|<a href="device.html#Device">Device</a>|<a href="practitioner.html#Practitioner">Practitioner</a>)</span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Who is intended to fulfill the order</a></span><span style="color: Gray"> --&gt;</span>&lt;/target&gt;
+ &lt;<a href="order-definitions.html#Order.reason[x]" title="Text - why the order was made." class="dict"><b>reason[x]</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: darkgreen"><a href="datatypes.html#CodeableConcept">CodeableConcept</a>|<a href="references.html#Reference">Reference</a>(<a href="resourcelist.html">Any</a>)</span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Text - why the order was made</a></span><span style="color: Gray"> --&gt;</span>&lt;/reason[x]&gt;
+ &lt;<a href="order-definitions.html#Order.when" title="When order should be fulfilled." class="dict"><b>when</b></a>&gt;  <span style="color: Gray">&lt;!-- <span style="color: brown"><b>0..1</b></span> When order should be fulfilled --&gt;</span>
+  &lt;<a href="order-definitions.html#Order.when.code" title="Code specifies when request should be done. The code may simply be a priority code." class="dict"><b>code</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown" title="ord-1: Provide a code or a schedule, but not both"><b><img src="lock.png" alt="??"/> 0..1</b></span> <span style="color: darkgreen"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Code specifies when request should be done. The code may simply be a priority code</a></span><span style="color: Gray"> --&gt;</span>&lt;/code&gt;
+  &lt;<a href="order-definitions.html#Order.when.schedule" title="A formal schedule." class="dict"><b>schedule</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown" title="ord-1: Provide a code or a schedule, but not both"><b><img src="lock.png" alt="??"/> 0..1</b></span> <span style="color: darkgreen"><a href="datatypes.html#Timing">Timing</a></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">A formal schedule</a></span><span style="color: Gray"> --&gt;</span>&lt;/schedule&gt;
+ &lt;/when&gt;
+ &lt;<a href="order-definitions.html#Order.detail" title="What action is being ordered." class="dict"><b>detail</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>1..*</b></span> <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="resourcelist.html">Any</a>)</span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">What action is being ordered</a></span><span style="color: Gray"> --&gt;</span>&lt;/detail&gt;
+&lt;/Order&gt;
+</pre>
+
+ </div>
+</div>
+
+  </div>
+  <div id="tabs-json">
+
+<div id="json">
+<p><b>JSON Template</b></p>
+ <div id="json-inner">
+  <pre class="spec">
+{<span style="float: right"><a href="json.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+  &quot;resourceType&quot; : &quot;<a href="order-definitions.html#Order" title="A request to perform an action." class="dict"><b>Order</b></a>&quot;,
+  // from <a href="resource.html">Resource</a>: <a href="resource.html#id">id</a>, <a href="resource.html#meta">meta</a>, <a href="resource.html#implicitRules">implicitRules</a>, and <a href="resource.html#language">language</a>
+  // from <a href="domainresource.html">DomainResource</a>: <a href="narrative.html#Narrative">text</a>, <a href="references.html#contained">contained</a>, <a href="extensibility.html">extension</a>, and <a href="extensibility.html#modifierExtension">modifierExtension</a>
+  &quot;<a href="order-definitions.html#Order.identifier" title="Identifiers assigned to this order by the orderer or by the receiver." class="dict">identifier</a>&quot; : [{ <span style="color: darkgreen"><a href="datatypes.html#Identifier">Identifier</a></span> }], <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Identifiers assigned to this order by the orderer or by the receiver</a></span>
+  &quot;<a href="order-definitions.html#Order.date" title="When the order was made." class="dict">date</a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#dateTime">dateTime</a></span>&gt;&quot;, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">When the order was made</a></span>
+  &quot;<a href="order-definitions.html#Order.subject" title="Patient this order is about." class="dict">subject</a>&quot; : { <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="patient.html#Patient">Patient</a>|<a href="group.html#Group">Group</a>|<a href="device.html#Device">Device</a>|<a href="substance.html#Substance">Substance</a>)</span> }, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Patient this order is about</a></span>
+  &quot;<a href="order-definitions.html#Order.source" title="Who initiated the order." class="dict">source</a>&quot; : { <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="practitioner.html#Practitioner">Practitioner</a>|<a href="organization.html#Organization">Organization</a>)</span> }, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Who initiated the order</a></span>
+  &quot;<a href="order-definitions.html#Order.target" title="Who is intended to fulfill the order." class="dict">target</a>&quot; : { <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="organization.html#Organization">Organization</a>|<a href="device.html#Device">Device</a>|<a href="practitioner.html#Practitioner">Practitioner</a>)</span> }, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Who is intended to fulfill the order</a></span>
+  <span style="color: Gray">// reason[x]: <span style="color: navy; opacity: 0.8">Text - why the order was made</span>. One of these 2:</span>
+  &quot;<a href="order-definitions.html#Order.reasonCodeableConcept" title="Text - why the order was made." class="dict">reasonCodeableConcept</a>&quot; : { <span style="color: darkgreen"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></span> },
+  &quot;<a href="order-definitions.html#Order.reasonReference" title="Text - why the order was made." class="dict">reasonReference</a>&quot; : { <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="resourcelist.html">Any</a>)</span> },
+  &quot;<a href="order-definitions.html#Order.when" title="When order should be fulfilled." class="dict">when</a>&quot; : { <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">When order should be fulfilled</a></span>
+    &quot;<a href="order-definitions.html#Order.when.code" title="Code specifies when request should be done. The code may simply be a priority code." class="dict">code</a>&quot; : { <span style="color: darkgreen"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></span> }, <span style="color: Gray">//</span> <span style="color: brown" title="ord-1: Provide a code or a schedule, but not both"><b>C?</b></span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Code specifies when request should be done. The code may simply be a priority code</a></span>
+    &quot;<a href="order-definitions.html#Order.when.schedule" title="A formal schedule." class="dict">schedule</a>&quot; : { <span style="color: darkgreen"><a href="datatypes.html#Timing">Timing</a></span> } <span style="color: Gray">//</span> <span style="color: brown" title="ord-1: Provide a code or a schedule, but not both"><b>C?</b></span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">A formal schedule</a></span>
+  },
+  &quot;<a href="order-definitions.html#Order.detail" title="What action is being ordered." class="dict">detail</a>&quot; : [{ <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="resourcelist.html">Any</a>)</span> }] <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span>  <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">What action is being ordered</a></span>
+}
+</pre>
+
+ </div>
+</div>
+
+  </div>
+  <div id="tabs-ttl">
+
+<div id="ttl">
+<p><b>Turtle Template</b></p>
+ <div id="json-inner">
+  <pre class="spec">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .<span style="float: right"><a href="rdf.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+
+
+[ a fhir:<a href="order-definitions.html#Order" title="A request to perform an action." class="dict"><b>Order</b></a>;
+  fhir:nodeRole fhir:treeRoot; # if this is the parser root
+
+  # from <a href="resource.html">Resource</a>: <a href="resource.html#id">.id</a>, <a href="resource.html#meta">.meta</a>, <a href="resource.html#implicitRules">.implicitRules</a>, and <a href="resource.html#language">.language</a>
+  # from <a href="domainresource.html">DomainResource</a>: <a href="narrative.html#Narrative">.text</a>, <a href="references.html#contained">.contained</a>, <a href="extensibility.html">.extension</a>, and <a href="extensibility.html#modifierExtension">.modifierExtension</a>
+  fhir:<a href="order-definitions.html#Order.identifier" title="Identifiers assigned to this order by the orderer or by the receiver." class="dict">Order.identifier</a><a name="ttl-identifier"> </a>[ <a href="datatypes.html#Identifier">Identifier</a> ], ... ; # 0..* <span style="color: navy">Identifiers assigned to this order by the orderer or by the receiver</span>
+  fhir:<a href="order-definitions.html#Order.date" title="When the order was made." class="dict">Order.date</a><a name="ttl-date"> </a>[ <a href="datatypes.html#dateTime">dateTime</a> ]; # 0..1 <span style="color: navy">When the order was made</span>
+  fhir:<a href="order-definitions.html#Order.subject" title="Patient this order is about." class="dict">Order.subject</a><a name="ttl-subject"> </a>[ <a href="references.html#Reference">Reference</a>(<a href="patient.html#Patient">Patient</a>|<a href="group.html#Group">Group</a>|<a href="device.html#Device">Device</a>|<a href="substance.html#Substance">Substance</a>) ]; # 0..1 <span style="color: navy">Patient this order is about</span>
+  fhir:<a href="order-definitions.html#Order.source" title="Who initiated the order." class="dict">Order.source</a><a name="ttl-source"> </a>[ <a href="references.html#Reference">Reference</a>(<a href="practitioner.html#Practitioner">Practitioner</a>|<a href="organization.html#Organization">Organization</a>) ]; # 0..1 <span style="color: navy">Who initiated the order</span>
+  fhir:<a href="order-definitions.html#Order.target" title="Who is intended to fulfill the order." class="dict">Order.target</a><a name="ttl-target"> </a>[ <a href="references.html#Reference">Reference</a>(<a href="organization.html#Organization">Organization</a>|<a href="device.html#Device">Device</a>|<a href="practitioner.html#Practitioner">Practitioner</a>) ]; # 0..1 <span style="color: navy">Who is intended to fulfill the order</span>
+  # <a href="order-definitions.html#Order.reason[x]" title="Text - why the order was made." class="dict">Order.reason[x]</a><a name="ttl-reason[x]"> </a>: 0..1 <span style="color: navy">Text - why the order was made</span>. One of these 2
+    fhir:<a href="order-definitions.html#Order.reasonCodeableConcept" title="Text - why the order was made." class="dict">Order.reasonCodeableConcept</a><a name="ttl-reasonCodeableConcept"> </a>[ <a href="datatypes.html#CodeableConcept">CodeableConcept</a> ]
+    fhir:<a href="order-definitions.html#Order.reasonReference" title="Text - why the order was made." class="dict">Order.reasonReference</a><a name="ttl-reasonReference"> </a>[ <a href="references.html#Reference">Reference</a>(<a href="resourcelist.html">Any</a>) ]
+  fhir:<a href="order-definitions.html#Order.when" title="When order should be fulfilled." class="dict">Order.when</a><a name="ttl-when"> </a>[ # 0..1 <span style="color: navy">When order should be fulfilled</span>
+    fhir:<a href="order-definitions.html#Order.when.code" title="Code specifies when request should be done. The code may simply be a priority code." class="dict">Order.when.code</a><a name="ttl-code"> </a>[ <a href="datatypes.html#CodeableConcept">CodeableConcept</a> ]; # 0..1 <span style="color: navy">Code specifies when request should be done. The code may simply be a priority code</span>
+    fhir:<a href="order-definitions.html#Order.when.schedule" title="A formal schedule." class="dict">Order.when.schedule</a><a name="ttl-schedule"> </a>[ <a href="datatypes.html#Timing">Timing</a> ]; # 0..1 <span style="color: navy">A formal schedule</span>
+  ];
+  fhir:<a href="order-definitions.html#Order.detail" title="What action is being ordered." class="dict">Order.detail</a><a name="ttl-detail"> </a>[ <a href="references.html#Reference">Reference</a>(<a href="resourcelist.html">Any</a>) ], ... ; # 1..* <span style="color: navy">What action is being ordered</span>
+]
+</pre>
+
+ </div>
+</div>
+
+  </div>
+  <div id="tabs-all">
+
+<div id="tbl">
+<a name="tbl"> </a>
+<p><b>Structure</b></p>
+ <div id="tbl-inner">
+  <table border="0" cellpadding="0" cellspacing="0" style="border: 0px; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="The logical name of the element">Name</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Information about the use of the element">Flags</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Minimum and Maximum # of times the the element can appear in the instance">Card.</a></th><th style="width: 100px" class="hierarchy"><a href="formats.html#table" title="Reference to the type of the element">Type</a></th><th style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="formats.html#table" title="Additional information about the element">Description &amp; Constraints</a><span style="float: right"><a href="formats.html#table" title="Legend for this format"><img src="help16.png" alt="doco" style="background-color: inherit"/></a></span></th></tr><tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: white; background-color: inherit" title="Resource" class="hierarchy"/> <a href="order-definitions.html#Order" title="Order : A request to perform an action.">Order</a><a name="Order"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="domainresource.html">DomainResource</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">A request to perform an action</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="order-definitions.html#Order.identifier" title="Order.identifier : Identifiers assigned to this order by the orderer or by the receiver.">identifier</a><a name="Order.identifier"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#Identifier">Identifier</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Identifiers assigned to this order by the orderer or by the receiver</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="order-definitions.html#Order.date" title="Order.date : When the order was made.">date</a><a name="Order.date"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#dateTime">dateTime</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">When the order was made</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_reference.png" alt="." style="background-color: white; background-color: inherit" title="Reference to another Resource" class="hierarchy"/> <a href="order-definitions.html#Order.subject" title="Order.subject : Patient this order is about.">subject</a><a name="Order.subject"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="references.html">Reference</a>(<a href="patient.html">Patient</a> | <a href="group.html">Group</a> | <a href="device.html">Device</a> | <a href="substance.html">Substance</a>)</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Patient this order is about</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_reference.png" alt="." style="background-color: white; background-color: inherit" title="Reference to another Resource" class="hierarchy"/> <a href="order-definitions.html#Order.source" title="Order.source : Who initiated the order.">source</a><a name="Order.source"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="references.html">Reference</a>(<a href="practitioner.html">Practitioner</a> | <a href="organization.html">Organization</a>)</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Who initiated the order</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_reference.png" alt="." style="background-color: white; background-color: inherit" title="Reference to another Resource" class="hierarchy"/> <a href="order-definitions.html#Order.target" title="Order.target : Who is intended to fulfill the order.">target</a><a name="Order.target"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="references.html">Reference</a>(<a href="organization.html">Organization</a> | <a href="device.html">Device</a> | <a href="practitioner.html">Practitioner</a>)</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Who is intended to fulfill the order</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_choice.gif" alt="." style="background-color: white; background-color: inherit" title="Choice of Types" class="hierarchy"/> <a href="order-definitions.html#Order.reason_x_" title="Order.reason[x] : Text - why the order was made.">reason[x]</a><a name="Order.reason_x_"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Text - why the order was made</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <span title="A concept that may be defined by a formal reference to a terminology or ontology or may be provided by text.">reasonCodeableConcept</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck100.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_reference.png" alt="." style="background-color: white; background-color: inherit" title="Reference to another Resource" class="hierarchy"/> reasonReference</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="references.html">Reference</a>(<a href="resourcelist.html">Any</a>)</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="order-definitions.html#Order.when" title="Order.when : When order should be fulfilled.">when</a><a name="Order.when"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span title="This element is included in summaries">Σ </span><span title="This element has or is affected by some invariants">I</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="backboneelement.html">BackboneElement</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">When order should be fulfilled<br/><span style="font-style: italic" title="ord-1">Provide a code or a schedule, but not both</span></td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="order-definitions.html#Order.when.code" title="Order.when.code : Code specifies when request should be done. The code may simply be a priority code.">code</a><a name="Order.when.code"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span title="This element is included in summaries">Σ </span><span title="This element has or is affected by some invariants">I</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">Code specifies when request should be done. The code may simply be a priority code</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck100.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="order-definitions.html#Order.when.schedule" title="Order.when.schedule : A formal schedule.">schedule</a><a name="Order.when.schedule"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span title="This element is included in summaries">Σ </span><span title="This element has or is affected by some invariants">I</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="datatypes.html#Timing">Timing</a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">A formal schedule</td></tr>
+<tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_reference.png" alt="." style="background-color: white; background-color: inherit" title="Reference to another Resource" class="hierarchy"/> <a href="order-definitions.html#Order.detail" title="Order.detail : What action is being ordered.">detail</a><a name="Order.detail"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><span title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">1..*</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy"><a href="references.html">Reference</a>(<a href="resourcelist.html">Any</a>)</td><td style="vertical-align: top; text-align : left; background-color: white; padding:0px 4px 0px 4px" class="hierarchy">What action is being ordered</td></tr>
+<tr><td colspan="5" class="hierarchy"><br/><a href="formats.html#table" title="Legend for this format"><img src="help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table>
+ </div>
+</div>
+
+ 
+<div id="uml">
+<a name="uml"> </a>
+<p><b>UML Diagram</b></p>
+ <div id="uml-inner">
+ <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="720.4" version="1.1" height="144.0">  <defs>
+    <filter x="0" width="200%" y="0" id="shadowB" height="200%">
+      <feOffset result="offOut" dx="3" in="SourceGraphic" dy="3"/>
+      <feColorMatrix result="matrixOut" in="offOut" values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0" type="matrix"/>
+      <feGaussianBlur result="blurOut" stdDeviation="2" in="matrixOut"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="blurOut"/>
+    </filter>
+  </defs><g><rect filter="url(#shadowB)" rx="4" ry="4" x="0.0" width="272.8" y="0.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="134.0"/><line y1="28.0" x1="0.0" y2="28.0" x2="272.8" style="stroke:dimgrey;stroke-width:1"/><text x="136.4" y="20.0" fill="black" class="diagram-class-title  diagram-class-resource">Order<tspan class="diagram-class-title-link"> (<a class="diagram-class-reference" xlink:href="domainresource.html">DomainResource</a>)</tspan></text><text x="6.0" y="42.0" fill="black" class="diagram-class-detail"><a xlink:href="order-definitions.html#Order.identifier"><title>Identifiers assigned to this order by the orderer or by the receiver</title>identifier</a> : <a xlink:href="datatypes.html#Identifier">Identifier</a> [0..*]</text><text x="6.0" y="56.0" fill="black" class="diagram-class-detail"><a xlink:href="order-definitions.html#Order.date"><title>When the order was made</title>date</a> : <a xlink:href="datatypes.html#dateTime">dateTime</a> [0..1]</text><text x="6.0" y="70.0" fill="black" class="diagram-class-detail"><a xlink:href="order-definitions.html#Order.subject"><title>Patient this order is about</title>subject</a> : <a xlink:href="references.html#Reference">Reference</a> [0..1] « <a xlink:href="patient.html#Patient">Patient</a>|<a xlink:href="group.html#Group">Group</a>|<a xlink:href="device.html#Device">Device</a>|<a xlink:href="substance.html#Substance">Substance</a> »</text><text x="6.0" y="84.0" fill="black" class="diagram-class-detail"><a xlink:href="order-definitions.html#Order.source"><title>Who initiated the order</title>source</a> : <a xlink:href="references.html#Reference">Reference</a> [0..1] « <a xlink:href="practitioner.html#Practitioner">Practitioner</a>|<a xlink:href="organization.html#Organization">Organization</a> »</text><text x="6.0" y="98.0" fill="black" class="diagram-class-detail"><a xlink:href="order-definitions.html#Order.target"><title>Who is intended to fulfill the order</title>target</a> : <a xlink:href="references.html#Reference">Reference</a> [0..1] « <a xlink:href="organization.html#Organization">Organization</a>|<a xlink:href="device.html#Device">Device</a>|<a xlink:href="practitioner.html#Practitioner">Practitioner</a> »</text><text x="6.0" y="112.0" fill="black" class="diagram-class-detail"><a xlink:href="order-definitions.html#Order.reason_x_"><title>Text - why the order was made</title>reason[x]</a> : <a xlink:href="formats.html#umlchoice">Type</a> [0..1] « <a xlink:href="datatypes.html#CodeableConcept">CodeableConcept</a>|<a xlink:href="references.html#Reference">Reference</a>(<a xlink:href="resourcelist.html#Any">Any</a>) »</text><text x="6.0" y="126.0" fill="black" class="diagram-class-detail"><a xlink:href="order-definitions.html#Order.detail"><title>What action is being ordered</title>detail</a> : <a xlink:href="references.html#Reference">Reference</a> [1..*] « <a xlink:href="resourcelist.html#Any">Any</a> »</text><g><rect filter="url(#shadowB)" rx="4" ry="4" x="392.8" width="127.60000000000001" y="35.0" style="fill:#f0f8ff;stroke:black;stroke-width:1" height="64.0"/><line y1="63.0" x1="392.8" y2="63.0" x2="520.4" style="stroke:dimgrey;stroke-width:1"/><text x="456.6" y="55.0" fill="black" class="diagram-class-title">When</text><text x="398.8" y="77.0" fill="black" class="diagram-class-detail"><a xlink:href="order-definitions.html#Order.when.code"><title>Code specifies when request should be done. The code may simply be a priority code</title>code</a> : <a xlink:href="datatypes.html#CodeableConcept">CodeableConcept</a> [0..1]</text><text x="398.8" y="91.0" fill="black" class="diagram-class-detail"><a xlink:href="order-definitions.html#Order.when.schedule"><title>A formal schedule</title>schedule</a> : <a xlink:href="datatypes.html#Timing">Timing</a> [0..1]</text></g></g><line y1="67.0" x1="272.8" y2="67.0" x2="392.8" style="stroke:navy;stroke-width:1"/><polygon transform="rotate(0.0 272.8 67.0)" style="fill:navy;stroke:navy;stroke-width:1" points="272.8,67.0 278.8,71.0 284.8,67.0 278.8,63.0 272.8,67.0"/><rect x="323.5" width="17.0" y="60.0" style="fill:white;stroke:black;stroke-width:0" height="18.0"/><text x="332.0" y="70.0" fill="black" class="diagram-class-linkage"><a xlink:href="order-definitions.html#Order.when"><title>When order should be fulfilled</title>when</a></text><text x="372.8" y="63.0" fill="black" class="diagram-class-linkage">[0..1]</text></svg>
+ </div>
+</div>
+
+<div id="xml">
+<a name="xml"> </a>
+<p><b>XML Template</b></p>
+ <div id="xml-inner">
+  <pre class="spec">
+&lt;<a href="order-definitions.html#Order" title="A request to perform an action." class="dict"><b>Order</b></a> xmlns=&quot;http://hl7.org/fhir&quot;&gt; <span style="float: right"><a href="xml.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+ &lt;!-- from <a href="resource.html">Resource</a>: <a href="resource.html#id">id</a>, <a href="resource.html#meta">meta</a>, <a href="resource.html#implicitRules">implicitRules</a>, and <a href="resource.html#language">language</a> --&gt;
+ &lt;!-- from <a href="domainresource.html">DomainResource</a>: <a href="narrative.html#Narrative">text</a>, <a href="references.html#contained">contained</a>, <a href="extensibility.html">extension</a>, and <a href="extensibility.html#modifierExtension">modifierExtension</a> --&gt;
+ &lt;<a href="order-definitions.html#Order.identifier" title="Identifiers assigned to this order by the orderer or by the receiver." class="dict"><b>identifier</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..*</b></span> <span style="color: darkgreen"><a href="datatypes.html#Identifier">Identifier</a></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Identifiers assigned to this order by the orderer or by the receiver</a></span><span style="color: Gray"> --&gt;</span>&lt;/identifier&gt;
+ &lt;<a href="order-definitions.html#Order.date" title="When the order was made." class="dict"><b>date</b></a> value=&quot;[<span style="color: darkgreen"><a href="datatypes.html#dateTime">dateTime</a></span>]&quot;/&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">When the order was made</a></span><span style="color: Gray"> --&gt;</span>
+ &lt;<a href="order-definitions.html#Order.subject" title="Patient this order is about." class="dict"><b>subject</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="patient.html#Patient">Patient</a>|<a href="group.html#Group">Group</a>|<a href="device.html#Device">Device</a>|<a href="substance.html#Substance">Substance</a>)</span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Patient this order is about</a></span><span style="color: Gray"> --&gt;</span>&lt;/subject&gt;
+ &lt;<a href="order-definitions.html#Order.source" title="Who initiated the order." class="dict"><b>source</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="practitioner.html#Practitioner">Practitioner</a>|<a href="organization.html#Organization">Organization</a>)</span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Who initiated the order</a></span><span style="color: Gray"> --&gt;</span>&lt;/source&gt;
+ &lt;<a href="order-definitions.html#Order.target" title="Who is intended to fulfill the order." class="dict"><b>target</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="organization.html#Organization">Organization</a>|<a href="device.html#Device">Device</a>|<a href="practitioner.html#Practitioner">Practitioner</a>)</span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Who is intended to fulfill the order</a></span><span style="color: Gray"> --&gt;</span>&lt;/target&gt;
+ &lt;<a href="order-definitions.html#Order.reason[x]" title="Text - why the order was made." class="dict"><b>reason[x]</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>0..1</b></span> <span style="color: darkgreen"><a href="datatypes.html#CodeableConcept">CodeableConcept</a>|<a href="references.html#Reference">Reference</a>(<a href="resourcelist.html">Any</a>)</span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Text - why the order was made</a></span><span style="color: Gray"> --&gt;</span>&lt;/reason[x]&gt;
+ &lt;<a href="order-definitions.html#Order.when" title="When order should be fulfilled." class="dict"><b>when</b></a>&gt;  <span style="color: Gray">&lt;!-- <span style="color: brown"><b>0..1</b></span> When order should be fulfilled --&gt;</span>
+  &lt;<a href="order-definitions.html#Order.when.code" title="Code specifies when request should be done. The code may simply be a priority code." class="dict"><b>code</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown" title="ord-1: Provide a code or a schedule, but not both"><b><img src="lock.png" alt="??"/> 0..1</b></span> <span style="color: darkgreen"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">Code specifies when request should be done. The code may simply be a priority code</a></span><span style="color: Gray"> --&gt;</span>&lt;/code&gt;
+  &lt;<a href="order-definitions.html#Order.when.schedule" title="A formal schedule." class="dict"><b>schedule</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown" title="ord-1: Provide a code or a schedule, but not both"><b><img src="lock.png" alt="??"/> 0..1</b></span> <span style="color: darkgreen"><a href="datatypes.html#Timing">Timing</a></span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">A formal schedule</a></span><span style="color: Gray"> --&gt;</span>&lt;/schedule&gt;
+ &lt;/when&gt;
+ &lt;<a href="order-definitions.html#Order.detail" title="What action is being ordered." class="dict"><b>detail</b></a>&gt;<span style="color: Gray">&lt;!--</span> <span style="color: brown"><b>1..*</b></span> <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="resourcelist.html">Any</a>)</span> <span style="color: navy"><a style="color: navy" href="terminologies.html#unbound">What action is being ordered</a></span><span style="color: Gray"> --&gt;</span>&lt;/detail&gt;
+&lt;/Order&gt;
+</pre>
+
+ </div>
+</div>
+
+<div id="json2">
+<a name="json"> </a>
+<p><b>JSON Template</b></p>
+ <div id="json-inner">
+  <pre class="spec">
+{<span style="float: right"><a href="json.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+  &quot;resourceType&quot; : &quot;<a href="order-definitions.html#Order" title="A request to perform an action." class="dict"><b>Order</b></a>&quot;,
+  // from <a href="resource.html">Resource</a>: <a href="resource.html#id">id</a>, <a href="resource.html#meta">meta</a>, <a href="resource.html#implicitRules">implicitRules</a>, and <a href="resource.html#language">language</a>
+  // from <a href="domainresource.html">DomainResource</a>: <a href="narrative.html#Narrative">text</a>, <a href="references.html#contained">contained</a>, <a href="extensibility.html">extension</a>, and <a href="extensibility.html#modifierExtension">modifierExtension</a>
+  &quot;<a href="order-definitions.html#Order.identifier" title="Identifiers assigned to this order by the orderer or by the receiver." class="dict">identifier</a>&quot; : [{ <span style="color: darkgreen"><a href="datatypes.html#Identifier">Identifier</a></span> }], <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Identifiers assigned to this order by the orderer or by the receiver</a></span>
+  &quot;<a href="order-definitions.html#Order.date" title="When the order was made." class="dict">date</a>&quot; : &quot;&lt;<span style="color: darkgreen"><a href="datatypes.html#dateTime">dateTime</a></span>&gt;&quot;, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">When the order was made</a></span>
+  &quot;<a href="order-definitions.html#Order.subject" title="Patient this order is about." class="dict">subject</a>&quot; : { <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="patient.html#Patient">Patient</a>|<a href="group.html#Group">Group</a>|<a href="device.html#Device">Device</a>|<a href="substance.html#Substance">Substance</a>)</span> }, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Patient this order is about</a></span>
+  &quot;<a href="order-definitions.html#Order.source" title="Who initiated the order." class="dict">source</a>&quot; : { <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="practitioner.html#Practitioner">Practitioner</a>|<a href="organization.html#Organization">Organization</a>)</span> }, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Who initiated the order</a></span>
+  &quot;<a href="order-definitions.html#Order.target" title="Who is intended to fulfill the order." class="dict">target</a>&quot; : { <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="organization.html#Organization">Organization</a>|<a href="device.html#Device">Device</a>|<a href="practitioner.html#Practitioner">Practitioner</a>)</span> }, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Who is intended to fulfill the order</a></span>
+  <span style="color: Gray">// reason[x]: <span style="color: navy; opacity: 0.8">Text - why the order was made</span>. One of these 2:</span>
+  &quot;<a href="order-definitions.html#Order.reasonCodeableConcept" title="Text - why the order was made." class="dict">reasonCodeableConcept</a>&quot; : { <span style="color: darkgreen"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></span> },
+  &quot;<a href="order-definitions.html#Order.reasonReference" title="Text - why the order was made." class="dict">reasonReference</a>&quot; : { <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="resourcelist.html">Any</a>)</span> },
+  &quot;<a href="order-definitions.html#Order.when" title="When order should be fulfilled." class="dict">when</a>&quot; : { <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">When order should be fulfilled</a></span>
+    &quot;<a href="order-definitions.html#Order.when.code" title="Code specifies when request should be done. The code may simply be a priority code." class="dict">code</a>&quot; : { <span style="color: darkgreen"><a href="datatypes.html#CodeableConcept">CodeableConcept</a></span> }, <span style="color: Gray">//</span> <span style="color: brown" title="ord-1: Provide a code or a schedule, but not both"><b>C?</b></span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">Code specifies when request should be done. The code may simply be a priority code</a></span>
+    &quot;<a href="order-definitions.html#Order.when.schedule" title="A formal schedule." class="dict">schedule</a>&quot; : { <span style="color: darkgreen"><a href="datatypes.html#Timing">Timing</a></span> } <span style="color: Gray">//</span> <span style="color: brown" title="ord-1: Provide a code or a schedule, but not both"><b>C?</b></span> <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">A formal schedule</a></span>
+  },
+  &quot;<a href="order-definitions.html#Order.detail" title="What action is being ordered." class="dict">detail</a>&quot; : [{ <span style="color: darkgreen"><a href="references.html#Reference">Reference</a>(<a href="resourcelist.html">Any</a>)</span> }] <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span>  <span style="color: navy; opacity: 0.8"><a style="color: navy; opacity: 0.8" href="terminologies.html#unbound">What action is being ordered</a></span>
+}
+</pre>
+
+ </div>
+</div>
+  
+<div id="ttl2">
+<a name="ttl"> </a>
+<p><b>Turtle Template</b></p>
+ <div id="ttl-inner">
+  <pre class="spec">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .<span style="float: right"><a href="rdf.html" title="Documentation for this format"><img src="help.png" alt="doco"/></a></span>
+
+
+[ a fhir:<a href="order-definitions.html#Order" title="A request to perform an action." class="dict"><b>Order</b></a>;
+  fhir:nodeRole fhir:treeRoot; # if this is the parser root
+
+  # from <a href="resource.html">Resource</a>: <a href="resource.html#id">.id</a>, <a href="resource.html#meta">.meta</a>, <a href="resource.html#implicitRules">.implicitRules</a>, and <a href="resource.html#language">.language</a>
+  # from <a href="domainresource.html">DomainResource</a>: <a href="narrative.html#Narrative">.text</a>, <a href="references.html#contained">.contained</a>, <a href="extensibility.html">.extension</a>, and <a href="extensibility.html#modifierExtension">.modifierExtension</a>
+  fhir:<a href="order-definitions.html#Order.identifier" title="Identifiers assigned to this order by the orderer or by the receiver." class="dict">Order.identifier</a><a name="ttl-identifier"> </a>[ <a href="datatypes.html#Identifier">Identifier</a> ], ... ; # 0..* <span style="color: navy">Identifiers assigned to this order by the orderer or by the receiver</span>
+  fhir:<a href="order-definitions.html#Order.date" title="When the order was made." class="dict">Order.date</a><a name="ttl-date"> </a>[ <a href="datatypes.html#dateTime">dateTime</a> ]; # 0..1 <span style="color: navy">When the order was made</span>
+  fhir:<a href="order-definitions.html#Order.subject" title="Patient this order is about." class="dict">Order.subject</a><a name="ttl-subject"> </a>[ <a href="references.html#Reference">Reference</a>(<a href="patient.html#Patient">Patient</a>|<a href="group.html#Group">Group</a>|<a href="device.html#Device">Device</a>|<a href="substance.html#Substance">Substance</a>) ]; # 0..1 <span style="color: navy">Patient this order is about</span>
+  fhir:<a href="order-definitions.html#Order.source" title="Who initiated the order." class="dict">Order.source</a><a name="ttl-source"> </a>[ <a href="references.html#Reference">Reference</a>(<a href="practitioner.html#Practitioner">Practitioner</a>|<a href="organization.html#Organization">Organization</a>) ]; # 0..1 <span style="color: navy">Who initiated the order</span>
+  fhir:<a href="order-definitions.html#Order.target" title="Who is intended to fulfill the order." class="dict">Order.target</a><a name="ttl-target"> </a>[ <a href="references.html#Reference">Reference</a>(<a href="organization.html#Organization">Organization</a>|<a href="device.html#Device">Device</a>|<a href="practitioner.html#Practitioner">Practitioner</a>) ]; # 0..1 <span style="color: navy">Who is intended to fulfill the order</span>
+  # <a href="order-definitions.html#Order.reason[x]" title="Text - why the order was made." class="dict">Order.reason[x]</a><a name="ttl-reason[x]"> </a>: 0..1 <span style="color: navy">Text - why the order was made</span>. One of these 2
+    fhir:<a href="order-definitions.html#Order.reasonCodeableConcept" title="Text - why the order was made." class="dict">Order.reasonCodeableConcept</a><a name="ttl-reasonCodeableConcept"> </a>[ <a href="datatypes.html#CodeableConcept">CodeableConcept</a> ]
+    fhir:<a href="order-definitions.html#Order.reasonReference" title="Text - why the order was made." class="dict">Order.reasonReference</a><a name="ttl-reasonReference"> </a>[ <a href="references.html#Reference">Reference</a>(<a href="resourcelist.html">Any</a>) ]
+  fhir:<a href="order-definitions.html#Order.when" title="When order should be fulfilled." class="dict">Order.when</a><a name="ttl-when"> </a>[ # 0..1 <span style="color: navy">When order should be fulfilled</span>
+    fhir:<a href="order-definitions.html#Order.when.code" title="Code specifies when request should be done. The code may simply be a priority code." class="dict">Order.when.code</a><a name="ttl-code"> </a>[ <a href="datatypes.html#CodeableConcept">CodeableConcept</a> ]; # 0..1 <span style="color: navy">Code specifies when request should be done. The code may simply be a priority code</span>
+    fhir:<a href="order-definitions.html#Order.when.schedule" title="A formal schedule." class="dict">Order.when.schedule</a><a name="ttl-schedule"> </a>[ <a href="datatypes.html#Timing">Timing</a> ]; # 0..1 <span style="color: navy">A formal schedule</span>
+  ];
+  fhir:<a href="order-definitions.html#Order.detail" title="What action is being ordered." class="dict">Order.detail</a><a name="ttl-detail"> </a>[ <a href="references.html#Reference">Reference</a>(<a href="resourcelist.html">Any</a>) ], ... ; # 1..* <span style="color: navy">What action is being ordered</span>
+]
+</pre>
+
+ </div>
+</div>
+  
+  </div>
+</div>
+  
+<p>&nbsp;</p>  
+<p>Alternate definitions: 
+Master Definition (<a href="order.profile.xml.html">XML</a>, <a href="order.profile.json.html">JSON</a>),
+<a href="xml.html">XML</a> <a href="order.xsd">Schema</a>/<a href="order.sch">Schematron</a> (for ) + <a href="json.html">JSON</a> <a href="order.schema.json">Schema</a>, <a href="order.shex.html">ShEx</a> (for <a href="rdf.html">Turtle</a>), 
+<a href="order-questionnaire.html">Questionnaire</a></p>
+
+
+<a name="tx"> </a>
+<h3><span class="sectioncount">5.27.4.1</span> 
+Terminology Bindings
+ <a href="order.html#tx" title="link to here" class="self-link"><img src="target.png"/></a></h3>
+<table class="grid">
+ <tr><th>Path</th><th>Definition</th><th>Type</th><th>Reference</th></tr>
+ <tr><td valign="top" title="OrderReason">Order.reason[x] </td><td valign="top">Indicates the reason for seeking fulfillment of the order.</td><td>Unknown</td><td valign="top">No details provided yet</td> </tr>
+ <tr><td valign="top" title="RequestedTime">Order.when.code </td><td valign="top">When a requested action should be performed  (e.g. STAT, daily, evenings, etc.).</td><td>Unknown</td><td valign="top">No details provided yet</td> </tr>
+</table>
+<p> </p>
+
+
+<a name="invs"> </a>
+<h3><span class="sectioncount">5.27.4.2</span> Constraints <a href="order.html#invs" title="link to here" class="self-link"><img src="target.png"/></a></h3><ul><li><b title="Formal Invariant Identifier">ord-1</b>: On Order.when: Provide a code or a schedule, but not both (<a href="fluentpath.html">expression</a> on Order.when: <span style="font-family: Courier New, monospace">code.empty() or schedule.empty()</span>)</li></ul>
+
+
+<a name="order"> </a>
+<h2><span class="sectioncount">5.27.5</span> Processing Order Details <a href="order.html#order" title="link to here" class="self-link"><img src="target.png"/></a></h2>
+
+<p>
+Each request includes one or more <i>detail</i> elements that specify what is being ordered.
+The following kinds of orders have been defined:
+</p>
+<table class="grid">
+  <tr>
+    <th>Description</th>
+	<th>Order Resource</th>
+	<th>Response Resources</th>
+	<th>Notes</th>
+  </tr>
+  <tr>
+    <td>Request for Diagnostic Investigation</td>
+	<td><a href="diagnosticorder.html">DiagnosticOrder</a></td>
+	<td>0..* <a href="diagnosticreport.html">DiagnosticReport</a></td>
+	<td>Local work flow arrangements will determine whether the laboratory handles a request by waiting for a specimen, or for the patient, or by visiting the patient directly to obtain the specimen (i.e. phlebotomy ward round)</td>
+  </tr>
+  <tr>
+    <td>Order to supply a prescription</td>
+  	<td><a href="medicationorder.html">MedicationOrder</a></td>
+	<td>0..* <a href="medicationadministration.html">MedicationAdministration</a> or <a href="medicationdispense.html">MedicationDispense</a></td>
+	<td/>
+  </tr>
+  <tr>
+    <td>Transfer of care from one practitioner to another</td>
+	<td>Referral (Resource not yet developed)</td>
+	<td>n/a</td>
+	<td/>
+  </tr>
+</table>
+
+<p>
+Note that a resource may only be used for the order details if the definition
+for the resource used in the detail explicitly defines how it is known to be something 
+requested, as opposed to (for instance) something that has happened. For some 
+resources, such as a prescription, this is defined to be always true - it is always an
+instruction/request for something to be done, while other resources may have 
+some kind of status element for this purpose. If the definition of the resource does 
+not explicitly make it clear this, then it cannot be the target of an order (e.g.
+you cannot order a diagnostic report, for example - you have to order a diagnostic 
+order instead).
+</p>
+
+
+<a name="dstu"> </a>
+<blockquote>
+<p>
+DSTU note: This list is only a start - the full list of what can be ordered much longer, and yet to be described. 
+Implementers should expect this list to grow in subsequent versions, and feedback is welcome from implementers 
+who use the Order resource for other kinds of orders.
+</p>
+</blockquote>
+
+
+
+<a name="search"> </a>
+<h2><span class="sectioncount">5.27.6</span> Search Parameters <a href="order.html#search" title="link to here" class="self-link"><img src="target.png"/></a></h2>
+<p>Search parameters for this resource. The <a href="search.html#all">common parameters</a> also apply. See <a href="search.html">Searching</a> for more information about searching in REST, messaging, and services.</p>
+<table class="list">
+<tr><td><b>Name</b></td><td><b>Type</b></td><td><b>Description</b></td><td><b>Paths</b></td></tr>
+<tr><td>date</td><td><a href="search.html#date">date</a></td><td>When the order was made</td><td>Order.date</td></tr>
+<tr><td>detail</td><td><a href="search.html#reference">reference</a></td><td>What action is being ordered</td><td>Order.detail<br/>(Any)</td></tr>
+<tr><td>identifier</td><td><a href="search.html#token">token</a></td><td>Instance id from source, target, and/or  others</td><td>Order.identifier</td></tr>
+<tr><td>patient</td><td><a href="search.html#reference">reference</a></td><td>Patient this order is about</td><td>Order.subject<br/>(<a href="patient.html">Patient</a>)</td></tr>
+<tr><td>source</td><td><a href="search.html#reference">reference</a></td><td>Who initiated the order</td><td>Order.source<br/>(<a href="practitioner.html">Practitioner</a>, <a href="organization.html">Organization</a>)</td></tr>
+<tr><td>subject</td><td><a href="search.html#reference">reference</a></td><td>Patient this order is about</td><td>Order.subject<br/>(<a href="group.html">Group</a>, <a href="device.html">Device</a>, <a href="patient.html">Patient</a>, <a href="substance.html">Substance</a>)</td></tr>
+<tr><td>target</td><td><a href="search.html#reference">reference</a></td><td>Who is intended to fulfill the order</td><td>Order.target<br/>(<a href="practitioner.html">Practitioner</a>, <a href="organization.html">Organization</a>, <a href="device.html">Device</a>)</td></tr>
+<tr><td>when</td><td><a href="search.html#date">date</a></td><td>A formal schedule</td><td>Order.when.schedule</td></tr>
+<tr><td>when_code</td><td><a href="search.html#token">token</a></td><td>Code specifies when request should be done. The code may simply be a priority code</td><td>Order.when.code</td></tr>
+</table>
+
+
+
+</div>
+
+
+				</div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+        
+    </div>  <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">  <!-- segment-footer -->
+		<div class="container">  <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.4.0-8453) generated on Mon, Jun 6, 2016 20:21+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img src="external.png" style="text-align: baseline"/></a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Forder.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Forder.html">Compare to DSTU2 <img src="external.png" style="text-align: baseline"/></a> |                
+               <a rel="license" style="color: #81BEF7" href="license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a> | 
+               <a style="color: #81BEF7" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank">Propose a change <img src="external.png" style="text-align: baseline"/></a>   
+        </span>
+        </p>
+			</div>  <!-- /inner-wrapper -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+    
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+
+
+
+<script src="external/jquery/jquery.js"> </script>
+<script src="jquery-ui.min.js"> </script>
+<script>
+try {
+  var currentTabIndex = sessionStorage.getItem('fhir-resource-tab-index');
+}
+catch(exception){ 
+}
+
+if (!currentTabIndex)
+  currentTabIndex = '0';
+
+$( '#tabs' ).tabs({
+         active: currentTabIndex,
+         activate: function( event, ui ) {
+             var active = $('.selector').tabs('option', 'active');
+             currentTabIndex = ui.newTab.index();
+             document.activeElement.blur();
+             try {
+               sessionStorage.setItem('fhir-resource-tab-index', currentTabIndex);
+             }
+             catch(exception){ 
+             }
+         }
+     });
+</script>
+    
+</body>
+</html>

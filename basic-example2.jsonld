@@ -1,0 +1,106 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Basic",
+  "resourceType": "Basic",
+  "Resource.id": {
+    "value": "classModel"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p><b>Class1</b></p>\n      <ul>\n        <li>Attribute1: 1..*</li>\n        <li>Attribute2: 0..1</li>\n      </ul>\n    </div>"
+    }
+  },
+  "DomainResource.extension": [
+    {
+      "Extension.url": {
+        "value": "http://example.org/do-not-use/fhir-extensions/UMLclass"
+      },
+      "Element.extension": [
+        {
+          "Extension.url": {
+            "value": "name"
+          },
+          "Extension.valueString": {
+            "value": "Class1"
+          }
+        },
+        {
+          "Extension.url": {
+            "value": "attribute"
+          },
+          "Element.extension": [
+            {
+              "Extension.url": {
+                "value": "name"
+              },
+              "Extension.valueString": {
+                "value": "attribute1"
+              }
+            },
+            {
+              "Extension.url": {
+                "value": "minOccurs"
+              },
+              "Extension.valueInteger": {
+                "value": 1
+              }
+            },
+            {
+              "Extension.url": {
+                "value": "maxOccurs"
+              },
+              "Extension.valueCode": {
+                "value": "*"
+              }
+            }
+          ]
+        },
+        {
+          "Extension.url": {
+            "value": "attribute"
+          },
+          "Element.extension": [
+            {
+              "Extension.url": {
+                "value": "name"
+              },
+              "Extension.valueString": {
+                "value": "attribute2"
+              }
+            },
+            {
+              "Extension.url": {
+                "value": "minOccurs"
+              },
+              "Extension.valueInteger": {
+                "value": 0
+              }
+            },
+            {
+              "Extension.url": {
+                "value": "maxOccurs"
+              },
+              "Extension.valueInteger": {
+                "value": 1
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "Basic.code": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://example.org/do-not-use/fhir-codes#resourceTypes"
+        },
+        "Coding.code": {
+          "value": "UMLCLASSMODEL"
+        }
+      }
+    ]
+  }
+}

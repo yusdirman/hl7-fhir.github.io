@@ -1,0 +1,88 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Schedule",
+  "resourceType": "Schedule",
+  "Resource.id": {
+    "value": "example"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      Burgers UMC, South Wing, second floor Physiotherapy Schedule\n    </div>"
+    }
+  },
+  "Schedule.identifier": [
+    {
+      "Identifier.use": {
+        "value": "usual"
+      },
+      "Identifier.system": {
+        "value": "http://example.org/scheduleid"
+      },
+      "Identifier.value": {
+        "value": "45"
+      }
+    }
+  ],
+  "Schedule.serviceCategory": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.code": {
+          "value": "17"
+        },
+        "Coding.display": {
+          "value": "General Practice"
+        }
+      }
+    ]
+  },
+  "Schedule.serviceType": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.code": {
+            "value": "57"
+          },
+          "Coding.display": {
+            "value": "Immunisation"
+          }
+        }
+      ]
+    }
+  ],
+  "Schedule.specialty": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.code": {
+            "value": "408480009"
+          },
+          "Coding.display": {
+            "value": "Clinical immunology"
+          }
+        }
+      ]
+    }
+  ],
+  "Schedule.actor": {
+    "Reference.reference": {
+      "value": "Location/1"
+    },
+    "Reference.display": {
+      "value": "Burgers UMC, South Wing, second floor"
+    },
+    "reference": "http://hl7.org/fhir//Location/1"
+  },
+  "Schedule.planningHorizon": {
+    "Period.start": {
+      "value": "2013-12-25T09:15:00Z"
+    },
+    "Period.end": {
+      "value": "2013-12-25T09:30:00Z"
+    }
+  },
+  "Schedule.comment": {
+    "value": "The slots attached to this schedule should be specialized to cover immunizations within the clinic"
+  }
+}

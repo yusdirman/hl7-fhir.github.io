@@ -1,0 +1,58 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Slot",
+  "resourceType": "Slot",
+  "Resource.id": {
+    "value": "1"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t\t\t25 Dec 2013 9:00am - 9:15am: <b>Busy</b> Physiotherapy\n\t\t</div>"
+    }
+  },
+  "Slot.identifier": [
+    {
+      "Identifier.system": {
+        "value": "http://example.org/identifiers/slots"
+      },
+      "Identifier.value": {
+        "value": "123132"
+      }
+    }
+  ],
+  "Slot.serviceCategory": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.code": {
+          "value": "17"
+        },
+        "Coding.display": {
+          "value": "General Practice"
+        }
+      }
+    ]
+  },
+  "Slot.schedule": {
+    "Reference.reference": {
+      "value": "Schedule/example"
+    },
+    "reference": "http://hl7.org/fhir//Schedule/example"
+  },
+  "Slot.status": {
+    "value": "busy"
+  },
+  "Slot.start": {
+    "value": "2013-12-25T09:00:00Z"
+  },
+  "Slot.end": {
+    "value": "2013-12-25T09:15:00Z"
+  },
+  "Slot.overbooked": {
+    "value": true
+  },
+  "Slot.comment": {
+    "value": "Assessments should be performed before requesting appointments in this slot."
+  }
+}

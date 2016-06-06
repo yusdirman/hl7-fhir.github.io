@@ -1,0 +1,75 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Basicbasic-adverseevent-example> a fhir:Basic;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "basic-adverseevent-example"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: basic-adverseevent-example</p><p><b>code</b>: Adverse Event <span>(Details : {http://hl7.org/fhir/basic-resource-type code 'advevent' = 'Adverse Event)</span></p><p><b>subject</b>: <a>Patient/example</a></p><p><b>created</b>: Sep 16, 2015</p><p><b>author</b>: <a>Practitioner/example</a></p></div>"
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/qicore-adverseevent-cause" ];
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/qicore-adverseevent-cause#item" ];
+       fhir:Extension.valueReference [
+         fhir:link <http://hl7.org/fhir/Medication/qicore>;
+         fhir:Reference.reference [ fhir:value "Medication/qicore" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/qicore-adverseevent-cause#certainty" ];
+       fhir:Extension.valueCodeableConcept [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:concept sct:410605003;
+           fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+           fhir:Coding.code [ fhir:value "410605003" ]
+         ]
+       ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/qicore-adverseevent-type" ];
+     fhir:Extension.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/qicore-adverseevent-type" ];
+         fhir:Coding.code [ fhir:value "unsafe" ];
+         fhir:Coding.display [ fhir:value "Eruption due to drug (disorder)" ]
+       ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/qicore-adverseevent-period" ];
+     fhir:Extension.valuePeriod [
+       fhir:Period.start [ fhir:value "2014-01-14"^^xsd:date ];
+       fhir:Period.end [ fhir:value "2014-01-15"^^xsd:date ]
+     ]
+  ];
+  fhir:Basic.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/basic-resource-type" ];
+       fhir:Coding.code [ fhir:value "advevent" ]
+     ]
+  ];
+  fhir:Basic.subject [
+     fhir:link <http://hl7.org/fhir/Patient/example>;
+     fhir:Reference.reference [ fhir:value "Patient/example" ]
+  ];
+  fhir:Basic.created [ fhir:value "2015-09-16"^^xsd:date];
+  fhir:Basic.author [
+     fhir:link <http://hl7.org/fhir/Practitioner/example>;
+     fhir:Reference.reference [ fhir:value "Practitioner/example" ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

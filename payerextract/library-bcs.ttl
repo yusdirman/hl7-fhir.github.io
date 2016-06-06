@@ -1,0 +1,223 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Librarylibrary-bcs> a fhir:Library;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "library-bcs"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Cohort Definition for Breast Cancer Screening Measure</div>"
+  ];
+  fhir:Library.moduleMetadata [
+     fhir:ModuleMetadata.identifier [
+       fhir:index 0;
+       fhir:Identifier.use [ fhir:value "official" ];
+       fhir:Identifier.value [ fhir:value "BCS" ]
+     ];
+     fhir:ModuleMetadata.version [ fhir:value "1.0.0" ];
+     fhir:ModuleMetadata.title [ fhir:value "Cohort Definition for Breast Cancer Screening Measure" ];
+     fhir:ModuleMetadata.type [ fhir:value "library" ];
+     fhir:ModuleMetadata.status [ fhir:value "active" ];
+     fhir:ModuleMetadata.experimental [ fhir:value "true"^^xsd:boolean ];
+     fhir:ModuleMetadata.publicationDate [ fhir:value "2016-04-19"^^xsd:date ];
+     fhir:ModuleMetadata.topic [
+       fhir:index 0;
+       fhir:CodeableConcept.text [ fhir:value "something" ]
+     ]
+  ];
+  fhir:Library.model [
+     fhir:index 0;
+     fhir:Library.model.identifier [ fhir:value "FHIR" ]
+  ];
+  fhir:Library.valueSet [
+     fhir:index 0;
+     fhir:Library.valueSet.name [ fhir:value "Bilateral Mastectomy" ];
+     fhir:Library.valueSet.identifier [ fhir:value "Bilateral Mastectomy" ]
+  ], [
+     fhir:index 1;
+     fhir:Library.valueSet.name [ fhir:value "Unilateral Mastectomy" ];
+     fhir:Library.valueSet.identifier [ fhir:value "Unilateral Mastectomy + Bilateral Modifier" ]
+  ], [
+     fhir:index 2;
+     fhir:Library.valueSet.name [ fhir:value "History of Bilateral Mastectomy" ];
+     fhir:Library.valueSet.identifier [ fhir:value "History of Bilateral Mastectomy" ]
+  ], [
+     fhir:index 3;
+     fhir:Library.valueSet.name [ fhir:value "Left Modifier" ];
+     fhir:Library.valueSet.identifier [ fhir:value "Left Modifier" ]
+  ], [
+     fhir:index 4;
+     fhir:Library.valueSet.name [ fhir:value "Absence of Left Breast" ];
+     fhir:Library.valueSet.identifier [ fhir:value "Absence of Left Breast" ]
+  ], [
+     fhir:index 5;
+     fhir:Library.valueSet.name [ fhir:value "Unilateral Mastectomy Left" ];
+     fhir:Library.valueSet.identifier [ fhir:value "Unilateral Mastectomy Left" ]
+  ], [
+     fhir:index 6;
+     fhir:Library.valueSet.name [ fhir:value "Right Modifier" ];
+     fhir:Library.valueSet.identifier [ fhir:value "Right Modifier" ]
+  ], [
+     fhir:index 7;
+     fhir:Library.valueSet.name [ fhir:value "Absence of Right Breast" ];
+     fhir:Library.valueSet.identifier [ fhir:value "Absence of Right Breast" ]
+  ], [
+     fhir:index 8;
+     fhir:Library.valueSet.name [ fhir:value "Unilateral Mastectomy Right" ];
+     fhir:Library.valueSet.identifier [ fhir:value "Unilateral Mastectomy Right" ]
+  ], [
+     fhir:index 9;
+     fhir:Library.valueSet.name [ fhir:value "Mammography" ];
+     fhir:Library.valueSet.identifier [ fhir:value "Mammography" ]
+  ];
+  fhir:Library.dataRequirement [
+     fhir:index 0;
+     fhir:DataRequirement.type [ fhir:value "Patient" ]
+  ], [
+     fhir:index 1;
+     fhir:DataRequirement.type [ fhir:value "Procedure" ];
+     fhir:DataRequirement.codeFilter [
+       fhir:index 0;
+       fhir:DataRequirement.codeFilter.path [ fhir:value "status" ];
+       fhir:DataRequirement.codeFilter.valueCode [
+         fhir:value "completed";
+         fhir:index 0
+       ]
+     ], [
+       fhir:index 1;
+       fhir:DataRequirement.codeFilter.path [ fhir:value "code" ];
+       fhir:DataRequirement.codeFilter.valueSetString [ fhir:value "Bilateral Mastectomy" ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:DataRequirement.type [ fhir:value "Procedure" ];
+     fhir:DataRequirement.codeFilter [
+       fhir:index 0;
+       fhir:DataRequirement.codeFilter.path [ fhir:value "status" ];
+       fhir:DataRequirement.codeFilter.valueCode [
+         fhir:value "completed";
+         fhir:index 0
+       ]
+     ], [
+       fhir:index 1;
+       fhir:DataRequirement.codeFilter.path [ fhir:value "code" ];
+       fhir:DataRequirement.codeFilter.valueSetString [ fhir:value "Unilateral Mastectomy + Bilateral Modifier" ]
+     ]
+  ], [
+     fhir:index 3;
+     fhir:DataRequirement.type [ fhir:value "Procedure" ];
+     fhir:DataRequirement.codeFilter [
+       fhir:index 0;
+       fhir:DataRequirement.codeFilter.path [ fhir:value "status" ];
+       fhir:DataRequirement.codeFilter.valueCode [
+         fhir:value "completed";
+         fhir:index 0
+       ]
+     ], [
+       fhir:index 1;
+       fhir:DataRequirement.codeFilter.path [ fhir:value "code" ];
+       fhir:DataRequirement.codeFilter.valueSetString [ fhir:value "History of Bilateral Mastectomy" ]
+     ]
+  ], [
+     fhir:index 4;
+     fhir:DataRequirement.type [ fhir:value "Procedure" ];
+     fhir:DataRequirement.codeFilter [
+       fhir:index 0;
+       fhir:DataRequirement.codeFilter.path [ fhir:value "status" ];
+       fhir:DataRequirement.codeFilter.valueCode [
+         fhir:value "completed";
+         fhir:index 0
+       ]
+     ], [
+       fhir:index 1;
+       fhir:DataRequirement.codeFilter.path [ fhir:value "code" ];
+       fhir:DataRequirement.codeFilter.valueSetString [ fhir:value "Unilateral Mastectomy + Left Modifier" ]
+     ]
+  ], [
+     fhir:index 5;
+     fhir:DataRequirement.type [ fhir:value "Procedure" ];
+     fhir:DataRequirement.codeFilter [
+       fhir:index 0;
+       fhir:DataRequirement.codeFilter.path [ fhir:value "status" ];
+       fhir:DataRequirement.codeFilter.valueCode [
+         fhir:value "completed";
+         fhir:index 0
+       ]
+     ], [
+       fhir:index 1;
+       fhir:DataRequirement.codeFilter.path [ fhir:value "code" ];
+       fhir:DataRequirement.codeFilter.valueSetString [ fhir:value "Unilateral Mastectomy Left" ]
+     ]
+  ], [
+     fhir:index 6;
+     fhir:DataRequirement.type [ fhir:value "Observation" ];
+     fhir:DataRequirement.codeFilter [
+       fhir:index 0;
+       fhir:DataRequirement.codeFilter.path [ fhir:value "code" ];
+       fhir:DataRequirement.codeFilter.valueSetString [ fhir:value "Absence of Left Breast" ]
+     ]
+  ], [
+     fhir:index 7;
+     fhir:DataRequirement.type [ fhir:value "Procedure" ];
+     fhir:DataRequirement.codeFilter [
+       fhir:index 0;
+       fhir:DataRequirement.codeFilter.path [ fhir:value "status" ];
+       fhir:DataRequirement.codeFilter.valueCode [
+         fhir:value "completed";
+         fhir:index 0
+       ]
+     ], [
+       fhir:index 1;
+       fhir:DataRequirement.codeFilter.path [ fhir:value "code" ];
+       fhir:DataRequirement.codeFilter.valueSetString [ fhir:value "Unilateral Mastectomy + Right Modifier" ]
+     ]
+  ], [
+     fhir:index 8;
+     fhir:DataRequirement.type [ fhir:value "Procedure" ];
+     fhir:DataRequirement.codeFilter [
+       fhir:index 0;
+       fhir:DataRequirement.codeFilter.path [ fhir:value "status" ];
+       fhir:DataRequirement.codeFilter.valueCode [
+         fhir:value "completed";
+         fhir:index 0
+       ]
+     ], [
+       fhir:index 1;
+       fhir:DataRequirement.codeFilter.path [ fhir:value "code" ];
+       fhir:DataRequirement.codeFilter.valueSetString [ fhir:value "Unilateral Mastectomy Right" ]
+     ]
+  ], [
+     fhir:index 9;
+     fhir:DataRequirement.type [ fhir:value "Observation" ];
+     fhir:DataRequirement.codeFilter [
+       fhir:index 0;
+       fhir:DataRequirement.codeFilter.path [ fhir:value "code" ];
+       fhir:DataRequirement.codeFilter.valueSetString [ fhir:value "Absence of Right Breast" ]
+     ]
+  ], [
+     fhir:index 10;
+     fhir:DataRequirement.type [ fhir:value "Procedure" ];
+     fhir:DataRequirement.codeFilter [
+       fhir:index 0;
+       fhir:DataRequirement.codeFilter.path [ fhir:value "code" ];
+       fhir:DataRequirement.codeFilter.valueSetString [ fhir:value "Mammography" ]
+     ];
+     fhir:DataRequirement.dateFilter [
+       fhir:index 0;
+       fhir:DataRequirement.dateFilter.path [ fhir:value "performedDateTime" ];
+       fhir:DataRequirement.dateFilter.valuePeriod [
+         fhir:Period.start [ fhir:value "2014-10-01"^^xsd:date ]
+       ]
+     ]
+  ];
+  fhir:Library.document [
+     fhir:Attachment.contentType [ fhir:value "application/xml+elm" ];
+     fhir:Attachment.url [ fhir:value "http://example.org/libraries/library-bcs.elm.xml" ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

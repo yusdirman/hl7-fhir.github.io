@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="endpoint-status"/>
+  <meta>
+    <lastUpdated value="2016-06-06T20:14:04.181+00:00"/>
+  </meta>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <h2>EndpointStatus</h2>
+      <p>The status of the encounter.</p>
+      <p>This code system http://hl7.org/fhir/endpoint-status defines the following codes:</p>
+      <table class="codes">
+        <tr>
+          <td>
+            <b>Code</b>
+          </td>
+          <td>
+            <b>Display</b>
+          </td>
+          <td>
+            <b>Definition</b>
+          </td>
+        </tr>
+        <tr>
+          <td>active
+            <a name="active"> </a>
+          </td>
+          <td>Active</td>
+          <td>This endpoint is expected to be active and can be used</td>
+        </tr>
+        <tr>
+          <td>suspended
+            <a name="suspended"> </a>
+          </td>
+          <td>Suspended</td>
+          <td>This endpoint is temporarily unavailable</td>
+        </tr>
+        <tr>
+          <td>error
+            <a name="error"> </a>
+          </td>
+          <td>Error</td>
+          <td>This endpoint has exceeded connectivity thresholds and is considered in an error state and should no longer be attempted to connect to until corrective action is taken</td>
+        </tr>
+        <tr>
+          <td>off
+            <a name="off"> </a>
+          </td>
+          <td>Off</td>
+          <td>This endpoint is no longer to be used</td>
+        </tr>
+      </table>
+    </div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/valueset-oid">
+    <valueUri value="urn:oid:2.16.840.1.113883.4.642.1.883"/>
+  </extension>
+  <url value="http://hl7.org/fhir/endpoint-status"/>
+  <version value="1.4.0"/>
+  <name value="EndpointStatus"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <publisher value="HL7 (FHIR Project)"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="http://hl7.org/fhir"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="fhir@lists.hl7.org"/>
+    </telecom>
+  </contact>
+  <date value="2016-06-06T20:14:04+00:00"/>
+  <description value="The status of the encounter."/>
+  <caseSensitive value="true"/>
+  <valueSet value="http://hl7.org/fhir/ValueSet/endpoint-status"/>
+  <content value="complete"/>
+  <concept>
+    <code value="active"/>
+    <display value="Active"/>
+    <definition value="This endpoint is expected to be active and can be used"/>
+  </concept>
+  <concept>
+    <code value="suspended"/>
+    <display value="Suspended"/>
+    <definition value="This endpoint is temporarily unavailable"/>
+  </concept>
+  <concept>
+    <code value="error"/>
+    <display value="Error"/>
+    <definition value="This endpoint has exceeded connectivity thresholds and is considered in an error state and should no longer be attempted to connect to until corrective action is taken"/>
+  </concept>
+  <concept>
+    <code value="off"/>
+    <display value="Off"/>
+    <definition value="This endpoint is no longer to be used"/>
+  </concept>
+</CodeSystem>

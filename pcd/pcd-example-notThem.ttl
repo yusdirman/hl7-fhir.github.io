@@ -1,0 +1,84 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Contractpcd-example-notThem> a fhir:Contract;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "pcd-example-notThem"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">The following scenario is based on existing jurisdictional policy and are realized in existing systems in Canada. \n	The default policy is one of implied consent for the provision of care, so these scenarios all deal with withdrawal or withholding consent for that purpose. \n	In other jurisdictions, where an express consent model is used (Opt-In), these would examples would contain the phrase &quot;consent to&quot; rather \n	than &quot;withhold&quot; or &quot;withdraw&quot; consent for.\n    <p>\n	specific to use-case 4) Withhold or withdraw consent for disclosure to a specific provider agent (an individual within an organization) \n	</p><p>\n    Patient &quot;P. van de Heuvel&quot; ex-spouse, Bill T Lookafter is a Nurse that is employed by Good Health Hospital.\n   P. realizes that she may receive treatment at GHH, however she does not want her ex-spouse to have any \n   access to her IIHI.  She indicates that she would like to withdraw/withhold consent to disclose any instance \n   of her health information to her ex-spouse as a result of his employment at Good Health Clinic.\n   </p>\n   </div>"
+  ];
+  fhir:Contract.issued [ fhir:value "2015-11-18"^^xsd:date];
+  fhir:Contract.subject [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/Patient/f001>;
+     fhir:Reference.reference [ fhir:value "Patient/f001" ];
+     fhir:Reference.display [ fhir:value "P. van de Heuvel" ]
+  ];
+  fhir:Contract.authority [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/Organization/Infoway>;
+     fhir:Reference.reference [ fhir:value "Organization/Infoway" ];
+     fhir:Reference.display [ fhir:value "Canada Infoway" ]
+  ];
+  fhir:Contract.domain [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/Location/Infoway>;
+     fhir:Reference.reference [ fhir:value "Location/Infoway" ];
+     fhir:Reference.display [ fhir:value "Canada Infoway" ]
+  ];
+  fhir:Contract.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:concept loinc:57016-8;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "57016-8" ]
+     ]
+  ];
+  fhir:Contract.subType [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://www.infoway-inforoute.ca.org/Consent-subtype-codes" ];
+       fhir:Coding.code [ fhir:value "Opt-In" ];
+       fhir:Coding.display [ fhir:value "Default Authorization with exceptions." ]
+     ]
+  ];
+  fhir:Contract.term [
+     fhir:index 0;
+     fhir:Contract.term.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/consent-term-type-codes" ];
+         fhir:Coding.code [ fhir:value "withhold-from" ];
+         fhir:Coding.display [ fhir:value "Withhold all data from specified actor entity." ]
+       ]
+     ];
+     fhir:Contract.term.topic [
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/Practitioner/f204>;
+       fhir:Reference.reference [ fhir:value "Practitioner/f204" ];
+       fhir:Reference.display [ fhir:value "Fictive Nurse" ]
+     ];
+     fhir:Contract.term.text [ fhir:value "Withhold this order and any results or related objects from specified nurse provider." ]
+  ];
+  fhir:Contract.friendly [
+     fhir:index 0;
+     fhir:Contract.friendly.contentAttachment [
+       fhir:Attachment.title [ fhir:value "The terms of the consent in friendly consumer speak." ]
+     ]
+  ];
+  fhir:Contract.legal [
+     fhir:index 0;
+     fhir:Contract.legal.contentAttachment [
+       fhir:Attachment.title [ fhir:value "The terms of the consent in lawyer speak." ]
+     ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="uslab-spec-bodysite"/>
+  <meta>
+    <lastUpdated value="2016-06-06T20:14:04.181+00:00"/>
+    <profile value="http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"/>
+  </meta>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <h2>USLab Specimen Body Site</h2>
+      <p>USLab Specimen Body Site: Codes to describe the specimen collection body site. This value set includes all SNOMED CT concepts that are descendents of Anatomical Structure (91723000)</p>
+      <p>
+        <b>Copyright Statement:</b> This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement
+      </p>
+      <p>This value set includes codes from the following code systems:</p>
+      <ul>
+        <li>Include codes from http://snomed.info/sct where concept  is-a  91723000</li>
+      </ul>
+    </div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/valueset-oid">
+    <valueUri value="urn:oid:2.16.840.1.113883.4.642.2.579"/>
+  </extension>
+  <url value="http://hl7.org/fhir/ValueSet/uslab-spec-bodysite"/>
+  <version value="1.4.0"/>
+  <name value="USLab Specimen Body Site"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <publisher value="Published by:  HL7 Orders and Observations Workgroup"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="http://hl7.org/fhir"/>
+    </telecom>
+  </contact>
+  <date value="2016-06-06T20:14:04+00:00"/>
+  <description value="USLab Specimen Body Site: Codes to describe the specimen collection body site. This value set includes all SNOMED CT concepts that are descendents of Anatomical Structure (91723000)"/>
+  <copyright value="This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"/>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="91723000"/>
+      </filter>
+    </include>
+  </compose>
+</ValueSet>

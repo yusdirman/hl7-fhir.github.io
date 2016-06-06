@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="referralcategory"/>
+  <meta>
+    <lastUpdated value="2016-06-06T20:14:04.181+00:00"/>
+  </meta>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <h2>ReferralCategory</h2>
+      <p>Identifies the degree of intention/authorization associated with the request</p>
+      <p>This code system http://hl7.org/fhir/referralcategory defines the following codes:</p>
+      <table class="codes">
+        <tr>
+          <td>
+            <b>Code</b>
+          </td>
+          <td>
+            <b>Display</b>
+          </td>
+          <td>
+            <b>Definition</b>
+          </td>
+        </tr>
+        <tr>
+          <td>proposal
+            <a name="proposal"> </a>
+          </td>
+          <td>Proposal</td>
+          <td>The referral request represents a suggestion or recommendation that a referral be made.</td>
+        </tr>
+        <tr>
+          <td>plan
+            <a name="plan"> </a>
+          </td>
+          <td>Plan</td>
+          <td>The referral request represents an intention by the author to make a referral, but no actual referral has yet been made/authorized.</td>
+        </tr>
+        <tr>
+          <td>request
+            <a name="request"> </a>
+          </td>
+          <td>Request</td>
+          <td>This is an actual referral request which, when active, will have the authorizations needed to allow it to be actioned.</td>
+        </tr>
+      </table>
+    </div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/valueset-oid">
+    <valueUri value="urn:oid:2.16.840.1.113883.4.642.1.885"/>
+  </extension>
+  <url value="http://hl7.org/fhir/referralcategory"/>
+  <version value="1.4.0"/>
+  <name value="ReferralCategory"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <publisher value="HL7 (FHIR Project)"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="http://hl7.org/fhir"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="fhir@lists.hl7.org"/>
+    </telecom>
+  </contact>
+  <date value="2016-06-06T20:14:04+00:00"/>
+  <description value="Identifies the degree of intention/authorization associated with the request"/>
+  <caseSensitive value="true"/>
+  <valueSet value="http://hl7.org/fhir/ValueSet/referralcategory"/>
+  <content value="complete"/>
+  <concept>
+    <code value="proposal"/>
+    <display value="Proposal"/>
+    <definition value="The referral request represents a suggestion or recommendation that a referral be made."/>
+  </concept>
+  <concept>
+    <code value="plan"/>
+    <display value="Plan"/>
+    <definition value="The referral request represents an intention by the author to make a referral, but no actual referral has yet been made/authorized."/>
+  </concept>
+  <concept>
+    <code value="request"/>
+    <display value="Request"/>
+    <definition value="This is an actual referral request which, when active, will have the authorizations needed to allow it to be actioned."/>
+  </concept>
+</CodeSystem>

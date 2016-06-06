@@ -1,0 +1,2563 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Questionnaire",
+  "resourceType": "Questionnaire",
+  "Resource.id": {
+    "value": "questionnaire-sdc-profile-example-loinc"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Todo</div>"
+    }
+  },
+  "ValueSet": [
+    {
+      "Resource.id": {
+        "value": "ll2654-3"
+      },
+      "ValueSet.name": {
+        "value": "AHRQ_Medication_Q1"
+      },
+      "ValueSet.status": {
+        "value": "active"
+      },
+      "ValueSet.description": {
+        "value": "The answer list for question 1 on the AHRQ \"Medication or Other Substance\" form"
+      },
+      "ValueSet.copyright": {
+        "value": "This content from LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use"
+      },
+      "ValueSet.compose": {
+        "ValueSet.compose.include": [
+          {
+            "ValueSet.compose.include.system": {
+              "value": "http://loinc.org"
+            },
+            "ValueSet.compose.include.concept": [
+              {
+                "Element.extension": [
+                  {
+                    "Extension.url": {
+                      "value": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder"
+                    },
+                    "Extension.valueInteger": {
+                      "value": 1
+                    }
+                  },
+                  {
+                    "Extension.url": {
+                      "value": "http://hl7.org/fhir/StructureDefinition/valueset-label"
+                    },
+                    "Extension.valueString": {
+                      "value": "a."
+                    }
+                  }
+                ],
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20271-5"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Medications"
+                }
+              },
+              {
+                "Element.extension": [
+                  {
+                    "Extension.url": {
+                      "value": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder"
+                    },
+                    "Extension.valueInteger": {
+                      "value": 2
+                    }
+                  },
+                  {
+                    "Extension.url": {
+                      "value": "http://hl7.org/fhir/StructureDefinition/valueset-label"
+                    },
+                    "Extension.valueString": {
+                      "value": "b."
+                    }
+                  }
+                ],
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20335-8"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Biological products"
+                }
+              },
+              {
+                "Element.extension": [
+                  {
+                    "Extension.url": {
+                      "value": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder"
+                    },
+                    "Extension.valueInteger": {
+                      "value": 3
+                    }
+                  },
+                  {
+                    "Extension.url": {
+                      "value": "http://hl7.org/fhir/StructureDefinition/valueset-label"
+                    },
+                    "Extension.valueString": {
+                      "value": "c."
+                    }
+                  }
+                ],
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20336-6"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Nutritional products"
+                }
+              },
+              {
+                "Element.extension": [
+                  {
+                    "Extension.url": {
+                      "value": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder"
+                    },
+                    "Extension.valueInteger": {
+                      "value": 4
+                    }
+                  },
+                  {
+                    "Extension.url": {
+                      "value": "http://hl7.org/fhir/StructureDefinition/valueset-label"
+                    },
+                    "Extension.valueString": {
+                      "value": "d."
+                    }
+                  }
+                ],
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20337-4"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Expressed human breast milk"
+                }
+              },
+              {
+                "Element.extension": [
+                  {
+                    "Extension.url": {
+                      "value": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder"
+                    },
+                    "Extension.valueInteger": {
+                      "value": 5
+                    }
+                  },
+                  {
+                    "Extension.url": {
+                      "value": "http://hl7.org/fhir/StructureDefinition/valueset-label"
+                    },
+                    "Extension.valueString": {
+                      "value": "e."
+                    }
+                  }
+                ],
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20338-2"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Medical gases (e.g., oxygen, nitrogen, nitrous oxide)"
+                }
+              },
+              {
+                "Element.extension": [
+                  {
+                    "Extension.url": {
+                      "value": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder"
+                    },
+                    "Extension.valueInteger": {
+                      "value": 6
+                    }
+                  },
+                  {
+                    "Extension.url": {
+                      "value": "http://hl7.org/fhir/StructureDefinition/valueset-label"
+                    },
+                    "Extension.valueString": {
+                      "value": "f."
+                    }
+                  }
+                ],
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20339-0"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Contrast media"
+                }
+              },
+              {
+                "Element.extension": [
+                  {
+                    "Extension.url": {
+                      "value": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder"
+                    },
+                    "Extension.valueInteger": {
+                      "value": 7
+                    }
+                  },
+                  {
+                    "Extension.url": {
+                      "value": "http://hl7.org/fhir/StructureDefinition/valueset-label"
+                    },
+                    "Extension.valueString": {
+                      "value": "g."
+                    }
+                  }
+                ],
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20340-8"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Radiopharmaceuticals"
+                }
+              },
+              {
+                "Element.extension": [
+                  {
+                    "Extension.url": {
+                      "value": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder"
+                    },
+                    "Extension.valueInteger": {
+                      "value": 8
+                    }
+                  },
+                  {
+                    "Extension.url": {
+                      "value": "http://hl7.org/fhir/StructureDefinition/valueset-label"
+                    },
+                    "Extension.valueString": {
+                      "value": "h."
+                    }
+                  }
+                ],
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20341-6"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Patient food (not suspected in drug-food interactions)"
+                }
+              },
+              {
+                "Element.extension": [
+                  {
+                    "Extension.url": {
+                      "value": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder"
+                    },
+                    "Extension.valueInteger": {
+                      "value": 9
+                    }
+                  },
+                  {
+                    "Extension.url": {
+                      "value": "http://hl7.org/fhir/StructureDefinition/valueset-label"
+                    },
+                    "Extension.valueString": {
+                      "value": "i."
+                    }
+                  }
+                ],
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20342-4"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Drug-drug, drug-food, or adverse drug reaction as a result of a prescription and/or administration of a drug and/or food prior to admission"
+                }
+              },
+              {
+                "Element.extension": [
+                  {
+                    "Extension.url": {
+                      "value": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder"
+                    },
+                    "Extension.valueInteger": {
+                      "value": 10
+                    }
+                  },
+                  {
+                    "Extension.url": {
+                      "value": "http://hl7.org/fhir/StructureDefinition/valueset-label"
+                    },
+                    "Extension.valueString": {
+                      "value": "j."
+                    }
+                  }
+                ],
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20343-2"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Other"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Resource.id": {
+        "value": "ll2655-0"
+      },
+      "ValueSet.name": {
+        "value": "AHRQ_Medication_Q2"
+      },
+      "ValueSet.status": {
+        "value": "active"
+      },
+      "ValueSet.description": {
+        "value": "The answer list for question 2 on the AHRQ \"Medication or Other Substance\" form"
+      },
+      "ValueSet.copyright": {
+        "value": "This content from LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use"
+      },
+      "ValueSet.compose": {
+        "ValueSet.compose.include": [
+          {
+            "ValueSet.compose.include.system": {
+              "value": "http://loinc.org/vs/LL2655-0"
+            },
+            "ValueSet.compose.include.concept": [
+              {
+                "Element.extension": [
+                  {
+                    "Extension.url": {
+                      "value": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder"
+                    },
+                    "Extension.valueInteger": {
+                      "value": 1
+                    }
+                  },
+                  {
+                    "Extension.url": {
+                      "value": "http://hl7.org/fhir/StructureDefinition/valueset-label"
+                    },
+                    "Extension.valueString": {
+                      "value": "a."
+                    }
+                  }
+                ],
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20278-0"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Prescription or over-the-counter (including herbal supplements)"
+                }
+              },
+              {
+                "Element.extension": [
+                  {
+                    "Extension.url": {
+                      "value": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder"
+                    },
+                    "Extension.valueInteger": {
+                      "value": 2
+                    }
+                  },
+                  {
+                    "Extension.url": {
+                      "value": "http://hl7.org/fhir/StructureDefinition/valueset-label"
+                    },
+                    "Extension.valueString": {
+                      "value": "b."
+                    }
+                  }
+                ],
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20298-8"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Compounded preparations"
+                }
+              },
+              {
+                "Element.extension": [
+                  {
+                    "Extension.url": {
+                      "value": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder"
+                    },
+                    "Extension.valueInteger": {
+                      "value": 3
+                    }
+                  },
+                  {
+                    "Extension.url": {
+                      "value": "http://hl7.org/fhir/StructureDefinition/valueset-label"
+                    },
+                    "Extension.valueString": {
+                      "value": "c."
+                    }
+                  }
+                ],
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20299-6"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Investigational drugs"
+                }
+              },
+              {
+                "Element.extension": [
+                  {
+                    "Extension.url": {
+                      "value": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder"
+                    },
+                    "Extension.valueInteger": {
+                      "value": 4
+                    }
+                  },
+                  {
+                    "Extension.url": {
+                      "value": "http://hl7.org/fhir/StructureDefinition/valueset-label"
+                    },
+                    "Extension.valueString": {
+                      "value": "d."
+                    }
+                  }
+                ],
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA4489-6"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Unknown"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Resource.id": {
+        "value": "ll2657-6"
+      },
+      "ValueSet.name": {
+        "value": "AHRQ_Medication_Q4"
+      },
+      "ValueSet.status": {
+        "value": "active"
+      },
+      "ValueSet.description": {
+        "value": "The answer list for question 4 on the AHRQ \"Medication or Other Substance\" form"
+      },
+      "ValueSet.copyright": {
+        "value": "This content from LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use"
+      },
+      "ValueSet.compose": {
+        "ValueSet.compose.include": [
+          {
+            "ValueSet.compose.include.system": {
+              "value": "http://loinc.org/vs/LL2657-6"
+            },
+            "ValueSet.compose.include.concept": [
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20283-0"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Vaccines"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20287-1"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Other biological products (e.g., thrombolytic)"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Resource.id": {
+        "value": "ll2659-2"
+      },
+      "ValueSet.name": {
+        "value": "AHRQ_Medication_Q6"
+      },
+      "ValueSet.status": {
+        "value": "active"
+      },
+      "ValueSet.description": {
+        "value": "The answer list for question 6 on the AHRQ \"Medication or Other Substance\" form"
+      },
+      "ValueSet.copyright": {
+        "value": "This content from LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use"
+      },
+      "ValueSet.compose": {
+        "ValueSet.compose.include": [
+          {
+            "ValueSet.compose.include.system": {
+              "value": "http://loinc.org"
+            },
+            "ValueSet.compose.include.concept": [
+              {
+                "Element.extension": [
+                  {
+                    "Extension.url": {
+                      "value": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder"
+                    },
+                    "Extension.valueInteger": {
+                      "value": 1
+                    }
+                  },
+                  {
+                    "Extension.url": {
+                      "value": "http://hl7.org/fhir/StructureDefinition/valueset-label"
+                    },
+                    "Extension.valueString": {
+                      "value": "a."
+                    }
+                  }
+                ],
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20273-1"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Dietary supplements (other than vitamins or minerals)"
+                }
+              },
+              {
+                "Element.extension": [
+                  {
+                    "Extension.url": {
+                      "value": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder"
+                    },
+                    "Extension.valueInteger": {
+                      "value": 2
+                    }
+                  },
+                  {
+                    "Extension.url": {
+                      "value": "http://hl7.org/fhir/StructureDefinition/valueset-label"
+                    },
+                    "Extension.valueString": {
+                      "value": "b."
+                    }
+                  }
+                ],
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA16117-6"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Vitamins or minerals"
+                }
+              },
+              {
+                "Element.extension": [
+                  {
+                    "Extension.url": {
+                      "value": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder"
+                    },
+                    "Extension.valueInteger": {
+                      "value": 3
+                    }
+                  },
+                  {
+                    "Extension.url": {
+                      "value": "http://hl7.org/fhir/StructureDefinition/valueset-label"
+                    },
+                    "Extension.valueString": {
+                      "value": "c."
+                    }
+                  }
+                ],
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20320-0"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Enteral nutritional products, including infant formula"
+                }
+              },
+              {
+                "Element.extension": [
+                  {
+                    "Extension.url": {
+                      "value": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder"
+                    },
+                    "Extension.valueInteger": {
+                      "value": 4
+                    }
+                  },
+                  {
+                    "Extension.url": {
+                      "value": "http://hl7.org/fhir/StructureDefinition/valueset-label"
+                    },
+                    "Extension.valueString": {
+                      "value": "d."
+                    }
+                  }
+                ],
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20321-8"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Parenteral nutritional products"
+                }
+              },
+              {
+                "Element.extension": [
+                  {
+                    "Extension.url": {
+                      "value": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder"
+                    },
+                    "Extension.valueInteger": {
+                      "value": 5
+                    }
+                  },
+                  {
+                    "Extension.url": {
+                      "value": "http://hl7.org/fhir/StructureDefinition/valueset-label"
+                    },
+                    "Extension.valueString": {
+                      "value": "e."
+                    }
+                  }
+                ],
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20318-4"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Other"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Resource.id": {
+        "value": "ll2660-0"
+      },
+      "ValueSet.name": {
+        "value": "AHRQ_Medication_Q7"
+      },
+      "ValueSet.status": {
+        "value": "active"
+      },
+      "ValueSet.description": {
+        "value": "The answer list for question 7 on the AHRQ 'Medication or Other Substance' form"
+      },
+      "ValueSet.copyright": {
+        "value": "This content from LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use"
+      },
+      "ValueSet.compose": {
+        "ValueSet.compose.include": [
+          {
+            "ValueSet.compose.include.system": {
+              "value": "http://loinc.org"
+            },
+            "ValueSet.compose.include.concept": [
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20275-6"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Incorrect action (process failure or error) (e.g., such as administering overdose or incorrect medication)",
+                  "string.extension": [
+                    {
+                      "Extension.url": {
+                        "value": "http://hl7.org/fhir/StructureDefinition/markup"
+                      },
+                      "Extension.valueString": {
+                        "value": "Incorrect action (process failure or error) <i>(e.g., such as administering overdose or incorrect medication)</i>"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20314-3"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Unsafe condition",
+                  "string.extension": [
+                    {
+                      "Extension.url": {
+                        "value": "http://hl7.org/fhir/StructureDefinition/style"
+                      },
+                      "Extension.valueString": {
+                        "value": "color:green"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20315-0"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Adverse reaction in patient to the administered substance without any apparent incorrect                  action"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA4489-6"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Unknown"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Resource.id": {
+        "value": "ll2661-8"
+      },
+      "ValueSet.name": {
+        "value": "AHRQ_Medication_Q8"
+      },
+      "ValueSet.status": {
+        "value": "active"
+      },
+      "ValueSet.description": {
+        "value": "The answer list for question 8 on the AHRQ 'Medication or Other Substance' form"
+      },
+      "ValueSet.copyright": {
+        "value": "This content from LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use"
+      },
+      "ValueSet.compose": {
+        "ValueSet.compose.include": [
+          {
+            "ValueSet.compose.include.system": {
+              "value": "http://loinc.org"
+            },
+            "ValueSet.compose.include.concept": [
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20276-4"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Incorrect patient"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20302-8"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Incorrect medication/substance"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20303-6"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Incorrect dose(s)"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20304-4"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Incorrect route of administration"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20305-1"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Incorrect timing"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20306-9"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Incorrect rate"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20307-7"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Incorrect duration of administration or course of therapy"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20308-5"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Incorrect dosage form (e.g., sustained release instead of immediate release)"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20309-3"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Incorrect strength or concentration"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20310-1"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Incorrect preparation, including inappropriate cutting of tablets, error in compounding,                  mixing, etc."
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20311-9"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Expired or deteriorated medication/substance"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20312-7"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Medication/substance that is known to be an allergen to the patient"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20345-7"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Medication/substance that is known to be contraindicated for the patient"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20313-5"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Incorrect patient/family action (e.g., self-administration error)"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20318-4"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Other"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Resource.id": {
+        "value": "ll2662-6"
+      },
+      "ValueSet.name": {
+        "value": "AHRQ_Medication_Q9"
+      },
+      "ValueSet.status": {
+        "value": "active"
+      },
+      "ValueSet.description": {
+        "value": "The answer list for question 9 on the AHRQ 'Medication or Other Substance' form"
+      },
+      "ValueSet.copyright": {
+        "value": "This content from LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use"
+      },
+      "ValueSet.compose": {
+        "ValueSet.compose.include": [
+          {
+            "ValueSet.compose.include.system": {
+              "value": "http://loinc.org/vs/LL2662-6"
+            },
+            "ValueSet.compose.include.concept": [
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20277-2"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Overdose"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20300-2"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Underdose"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20301-0"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Missed or omitted dose"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA7271-5"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Extra dose"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA4489-6"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Unknown"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Resource.id": {
+        "value": "ll2663-4"
+      },
+      "ValueSet.name": {
+        "value": "AHRQ_Medication_Q10"
+      },
+      "ValueSet.status": {
+        "value": "active"
+      },
+      "ValueSet.description": {
+        "value": "The answer list for question 10 on the AHRQ 'Medication or Other Substance' form"
+      },
+      "ValueSet.copyright": {
+        "value": "This content from LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use"
+      },
+      "ValueSet.compose": {
+        "ValueSet.compose.include": [
+          {
+            "ValueSet.compose.include.system": {
+              "value": "http://loinc.org/vs/LL2663-4"
+            },
+            "ValueSet.compose.include.concept": [
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20280-6"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Too early"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20290-5"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Too late"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA4489-6"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Unknown"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Resource.id": {
+        "value": "ll2664-2"
+      },
+      "ValueSet.name": {
+        "value": "AHRQ_Medication_Q11"
+      },
+      "ValueSet.status": {
+        "value": "active"
+      },
+      "ValueSet.description": {
+        "value": "The answer list for question 11 on the AHRQ 'Medication or Other Substance' form"
+      },
+      "ValueSet.copyright": {
+        "value": "This content from LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use"
+      },
+      "ValueSet.compose": {
+        "ValueSet.compose.include": [
+          {
+            "ValueSet.compose.include.system": {
+              "value": "http://loinc.org/vs/LL2664-2"
+            },
+            "ValueSet.compose.include.concept": [
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20282-2"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Too quickly"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20288-"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Too slowly"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA4489-6"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Unknown"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Resource.id": {
+        "value": "ll2665-9"
+      },
+      "ValueSet.name": {
+        "value": "AHRQ_Medication_Q12"
+      },
+      "ValueSet.status": {
+        "value": "active"
+      },
+      "ValueSet.description": {
+        "value": "The answer list for question 12 on the AHRQ 'Medication or Other Substance' form"
+      },
+      "ValueSet.copyright": {
+        "value": "This content from LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use"
+      },
+      "ValueSet.compose": {
+        "ValueSet.compose.include": [
+          {
+            "ValueSet.compose.include.system": {
+              "value": "http://loinc.org/vs/LL2665-9"
+            },
+            "ValueSet.compose.include.concept": [
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20281-4"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Too high"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20289-7"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Too low"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA4489-6"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Unknown"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Resource.id": {
+        "value": "ll2817-6"
+      },
+      "ValueSet.name": {
+        "value": "AHRQ_Y/N/UNK"
+      },
+      "ValueSet.status": {
+        "value": "active"
+      },
+      "ValueSet.description": {
+        "value": "AHRQ Common Format Answer list for Yes (A15), No (A18), Unknown (UNK)"
+      },
+      "ValueSet.copyright": {
+        "value": "This content from LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use"
+      },
+      "ValueSet.compose": {
+        "ValueSet.compose.include": [
+          {
+            "ValueSet.compose.include.system": {
+              "value": "http://loinc.org/vs/LL2817-6"
+            },
+            "ValueSet.compose.include.concept": [
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA33-6"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Yes"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA32-8"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "No"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA4489-6"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Unkown"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Resource.id": {
+        "value": "ll2668-3"
+      },
+      "ValueSet.name": {
+        "value": "AHRQ_Medication_Q15"
+      },
+      "ValueSet.status": {
+        "value": "active"
+      },
+      "ValueSet.description": {
+        "value": "The answer list for question 15 on the AHRQ 'Medication or Other Substance' form"
+      },
+      "ValueSet.copyright": {
+        "value": "This content from LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use"
+      },
+      "ValueSet.compose": {
+        "ValueSet.compose.include": [
+          {
+            "ValueSet.compose.include.system": {
+              "value": "http://loinc.org/vs/LL2668-3"
+            },
+            "ValueSet.compose.include.concept": [
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20274-9"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Drug-drug"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20316-8"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Drug-food"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20317-6"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Drug-disease"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20318-4"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Other"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Resource.id": {
+        "value": "ll2669-1"
+      },
+      "ValueSet.name": {
+        "value": "AHRQ_Medication_Q16"
+      },
+      "ValueSet.status": {
+        "value": "active"
+      },
+      "ValueSet.description": {
+        "value": "The answer list for question 16 on the AHRQ 'Medication or Other Substance' form"
+      },
+      "ValueSet.copyright": {
+        "value": "This content from LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use"
+      },
+      "ValueSet.compose": {
+        "ValueSet.compose.include": [
+          {
+            "ValueSet.compose.include.system": {
+              "value": "http://loinc.org/vs/LL2669-1"
+            },
+            "ValueSet.compose.include.concept": [
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20279-8"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Purchasing"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20291-3"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Storing"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20292-1"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Prescribing/ordering"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20293-9"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Transcribing"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20294-7"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Preparing"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20295-4"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Dispensing"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20296-2"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Administering"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20297-0"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Monitoring"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA4489-6"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Unknown"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20318-4"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Other"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Resource.id": {
+        "value": "ll2828-3"
+      },
+      "ValueSet.name": {
+        "value": "AHRQ_Y/N"
+      },
+      "ValueSet.status": {
+        "value": "active"
+      },
+      "ValueSet.description": {
+        "value": "AHRQ Common Format Answer list for Yes (A15) and No (A18)"
+      },
+      "ValueSet.copyright": {
+        "value": "This content from LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use"
+      },
+      "ValueSet.compose": {
+        "ValueSet.compose.include": [
+          {
+            "ValueSet.compose.include.system": {
+              "value": "http://loinc.org/vs/LL2828-3"
+            },
+            "ValueSet.compose.include.concept": [
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA33-6"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Yes"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA32-8"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "No"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Resource.id": {
+        "value": "ll2682-4"
+      },
+      "ValueSet.name": {
+        "value": "AHRQ_Medication_Q28_Q29"
+      },
+      "ValueSet.status": {
+        "value": "active"
+      },
+      "ValueSet.description": {
+        "value": "The answer list for questions 28 and 29 on the AHRQ 'Medication or Other Substance' form"
+      },
+      "ValueSet.copyright": {
+        "value": "This content from LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use"
+      },
+      "ValueSet.compose": {
+        "ValueSet.compose.include": [
+          {
+            "ValueSet.compose.include.system": {
+              "value": "http://loinc.org"
+            },
+            "ValueSet.compose.include.concept": [
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20272-3"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Cutaneous, topical application, including ointment, spray, patch"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA9451-1"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Subcutaneous"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA9444-6"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Ophthalmic"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20324-2"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Oral, including sublingual or buccal"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA9445-"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Otic"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA9263-0"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Nasal"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA9427-1"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Inhalation"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA9437-0"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Intravenous"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA9429-7"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Intramuscular"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA9435-4"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Intrathecal"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA9418-0"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Epidural"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20332-5"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Gastric"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA9369-5"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Rectal"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA9459-4"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Vaginal"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA4489-6"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Unknown"
+                }
+              },
+              {
+                "ValueSet.compose.include.concept.code": {
+                  "value": "LA20318-4"
+                },
+                "ValueSet.compose.include.concept.display": {
+                  "value": "Other"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "Questionnaire.identifier": [
+    {
+      "Identifier.system": {
+        "value": "http://loinc.org/vs"
+      },
+      "Identifier.value": {
+        "value": "74080-3"
+      }
+    }
+  ],
+  "Questionnaire.status": {
+    "value": "published"
+  },
+  "Questionnaire.date": {
+    "value": "2012-04-01"
+  },
+  "Questionnaire.publisher": {
+    "value": "Agency for Healthcare Research and Quality (AHRQ)"
+  },
+  "Questionnaire.title": {
+    "value": "Medication or Other Substance",
+    "string.extension": [
+      {
+        "Extension.url": {
+          "value": "http://hl7.org/fhir/StructureDefinition/style"
+        },
+        "Extension.valueString": {
+          "value": "color:#0000FF"
+        }
+      }
+    ]
+  },
+  "Questionnaire.subjectType": [
+    {
+      "value": "Patient"
+    }
+  ],
+  "Questionnaire.item": [
+    {
+      "Element.extension": [
+        {
+          "Extension.url": {
+            "value": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+          },
+          "Extension.valueCodeableConcept": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://hl7.org/fhir/questionnaire-item-control"
+                },
+                "Coding.code": {
+                  "value": "header"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "Questionnaire.item.linkId": {
+        "value": "Medication/header"
+      },
+      "Questionnaire.item.type": {
+        "value": "group"
+      },
+      "Questionnaire.item.item": [
+        {
+          "Element.extension": [
+            {
+              "Extension.url": {
+                "value": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden"
+              },
+              "Extension.valueBoolean": {
+                "value": true
+              }
+            }
+          ],
+          "Questionnaire.item.text": {
+            "value": "Form ID:"
+          },
+          "Questionnaire.item.type": {
+            "value": "string"
+          },
+          "Questionnaire.item.required": {
+            "value": true
+          }
+        },
+        {
+          "Element.extension": [
+            {
+              "Extension.url": {
+                "value": "http://hl7.org/fhir/StructureDefinition/minLength"
+              },
+              "Extension.valueInteger": {
+                "value": 3
+              }
+            }
+          ],
+          "Questionnaire.item.linkId": {
+            "value": "74080-3/74081-1"
+          },
+          "Questionnaire.item.text": {
+            "value": "Event ID:"
+          },
+          "Questionnaire.item.type": {
+            "value": "string"
+          },
+          "Questionnaire.item.required": {
+            "value": true
+          }
+        },
+        {
+          "Questionnaire.item.linkId": {
+            "value": "74080-3/30947-6"
+          },
+          "Questionnaire.item.text": {
+            "value": "Initial Report Date (HERF Q1)"
+          },
+          "Questionnaire.item.type": {
+            "value": "string"
+          },
+          "Questionnaire.item.required": {
+            "value": true
+          }
+        }
+      ]
+    },
+    {
+      "Questionnaire.item.linkId": {
+        "value": "Medication/SEC00"
+      },
+      "Questionnaire.item.text": {
+        "value": "Medication or Other Substance"
+      },
+      "Questionnaire.item.type": {
+        "value": "group"
+      },
+      "Questionnaire.item.item": [
+        {
+          "Questionnaire.item.text": {
+            "value": "Use this form to report any patient safety event or unsafe condition involving a substance such as a medications, biological products, nutritional products, expressed human breast milk, medical gases, or contrast media. Do not complete this form if the event involves appropriateness of therapeutic choice or decision making (e.g., physician decision to prescribe medication despite known drug-drug interaction). If the event involves a device, please also complete the Device or Medical/Surgical Supply including Health Information Technology (HIT) form. Narrative detail can be captured on the Healthcare Event Reporting Form (HERF).",
+            "string.extension": [
+              {
+                "Extension.url": {
+                  "value": "http://hl7.org/fhir/StructureDefinition/markup"
+                },
+                "Extension.valueString": {
+                  "value": "Use this form to report any patient safety event or unsafe condition involving a substance such as a medications, biological products, nutritional products, expressed human breast milk, medical gases, or contrast media. Do not complete this form if the event involves appropriateness of therapeutic choice or decision making (e.g., physician decision to prescribe medication despite known drug-drug interaction). If the event involves a device, please also complete the <i>Device or Medical/Surgical Supply including Health Information Technology (HIT)</i> form. Narrative detail can be captured on the <i>Healthcare Event Reporting Form (HERF)</i>."
+                }
+              }
+            ]
+          },
+          "Questionnaire.item.type": {
+            "value": "display"
+          }
+        },
+        {
+          "Questionnaire.item.linkId": {
+            "value": "Medication/SEC01/74080-3"
+          },
+          "Questionnaire.item.type": {
+            "value": "group"
+          },
+          "Questionnaire.item.required": {
+            "value": true
+          },
+          "Questionnaire.item.item": [
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/minLength"
+                  },
+                  "Extension.valueInteger": {
+                    "value": 1
+                  }
+                },
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/questionnaire-deReference"
+                  },
+                  "Extension.valueReference": {
+                    "Reference.reference": {
+                      "value": "http://loinc.org/74076-1"
+                    },
+                    "reference": "http://loinc.org/74076-1"
+                  }
+                }
+              ],
+              "Questionnaire.item.linkId": {
+                "value": "74080-3/74076-1"
+              },
+              "Questionnaire.item.text": {
+                "value": "What type of medication/substance was involved?"
+              },
+              "Questionnaire.item.type": {
+                "value": "open-choice"
+              },
+              "Questionnaire.item.required": {
+                "value": true
+              },
+              "Questionnaire.item.options": {
+                "Reference.reference": {
+                  "value": "#ll2654-3"
+                }
+              },
+              "Questionnaire.item.item": [
+                {
+                  "Element.extension": [
+                    {
+                      "Extension.url": {
+                        "value": "http://hl7.org/fhir/StructureDefinition/minLength"
+                      },
+                      "Extension.valueInteger": {
+                        "value": 7
+                      }
+                    },
+                    {
+                      "Extension.url": {
+                        "value": "http://hl7.org/fhir/StructureDefinition/questionnaire-deReference"
+                      },
+                      "Extension.valueReference": {
+                        "Reference.reference": {
+                          "value": "http://loinc.org/vs/74075-3"
+                        },
+                        "reference": "http://loinc.org/vs/74075-3"
+                      }
+                    }
+                  ],
+                  "Questionnaire.item.linkId": {
+                    "value": "74080-3/74075-3"
+                  },
+                  "Questionnaire.item.text": {
+                    "value": "What type of medication?"
+                  },
+                  "Questionnaire.item.type": {
+                    "value": "choice"
+                  },
+                  "Questionnaire.item.required": {
+                    "value": true
+                  },
+                  "Questionnaire.item.options": {
+                    "Reference.reference": {
+                      "value": "#ll2655-0"
+                    }
+                  },
+                  "Questionnaire.item.item": [
+                    {
+                      "Element.extension": [
+                        {
+                          "Extension.url": {
+                            "value": "http://hl7.org/fhir/StructureDefinition/minLength"
+                          },
+                          "Extension.valueInteger": {
+                            "value": 0
+                          }
+                        },
+                        {
+                          "Extension.url": {
+                            "value": "http://hl7.org/fhir/StructureDefinition/questionnaire-deReference"
+                          },
+                          "Extension.valueReference": {
+                            "Reference.reference": {
+                              "value": "http://loinc.org/74077-9"
+                            },
+                            "reference": "http://loinc.org/74077-9"
+                          }
+                        }
+                      ],
+                      "Questionnaire.item.linkId": {
+                        "value": "74080-3/74077-9-q"
+                      },
+                      "Questionnaire.item.text": {
+                        "value": "Please list all ingredients:"
+                      },
+                      "Questionnaire.item.type": {
+                        "value": "string"
+                      },
+                      "Questionnaire.item.repeats": {
+                        "value": true
+                      }
+                    }
+                  ]
+                },
+                {
+                  "Element.extension": [
+                    {
+                      "Extension.url": {
+                        "value": "http://hl7.org/fhir/StructureDefinition/minLength"
+                      },
+                      "Extension.valueInteger": {
+                        "value": 8
+                      }
+                    }
+                  ],
+                  "Questionnaire.item.linkId": {
+                    "value": "74080-3/74074-6"
+                  },
+                  "Questionnaire.item.text": {
+                    "value": "What type of biological product?"
+                  },
+                  "Questionnaire.item.type": {
+                    "value": "open-choice"
+                  },
+                  "Questionnaire.item.options": {
+                    "Reference.reference": {
+                      "value": "#ll2657-6"
+                    }
+                  },
+                  "Questionnaire.item.item": [
+                    {
+                      "Questionnaire.item.linkId": {
+                        "value": "74080-3/30959-1"
+                      },
+                      "Questionnaire.item.text": {
+                        "value": "What was the lot number of the vaccine?"
+                      },
+                      "Questionnaire.item.type": {
+                        "value": "string"
+                      },
+                      "Questionnaire.item.required": {
+                        "value": true
+                      }
+                    }
+                  ]
+                },
+                {
+                  "Questionnaire.item.linkId": {
+                    "value": "74080-3/74073-8"
+                  },
+                  "Questionnaire.item.text": {
+                    "value": "What type of nutritional product?"
+                  },
+                  "Questionnaire.item.type": {
+                    "value": "open-choice"
+                  },
+                  "Questionnaire.item.required": {
+                    "value": true
+                  },
+                  "Questionnaire.item.options": {
+                    "Reference.reference": {
+                      "value": "#ll2659-2"
+                    }
+                  },
+                  "Questionnaire.item.item": [
+                    {
+                      "Questionnaire.item.linkId": {
+                        "value": "74080-3/74073-8/Other/Specify"
+                      },
+                      "Questionnaire.item.text": {
+                        "value": "PLEASE SPECIFY"
+                      },
+                      "Questionnaire.item.type": {
+                        "value": "string"
+                      },
+                      "Questionnaire.item.required": {
+                        "value": true
+                      }
+                    }
+                  ]
+                },
+                {
+                  "Questionnaire.item.linkId": {
+                    "value": "74080-3/74076-1/Other/Specify"
+                  },
+                  "Questionnaire.item.text": {
+                    "value": "PLEASE SPECIFY"
+                  },
+                  "Questionnaire.item.type": {
+                    "value": "string"
+                  },
+                  "Questionnaire.item.required": {
+                    "value": true
+                  }
+                }
+              ]
+            },
+            {
+              "Questionnaire.item.linkId": {
+                "value": "74080-3/74072-0"
+              },
+              "Questionnaire.item.text": {
+                "value": "Which of the following best characterizes the event?"
+              },
+              "Questionnaire.item.type": {
+                "value": "open-choice"
+              },
+              "Questionnaire.item.required": {
+                "value": true
+              },
+              "Questionnaire.item.options": {
+                "Reference.reference": {
+                  "value": "#ll2660-0"
+                }
+              }
+            },
+            {
+              "Questionnaire.item.linkId": {
+                "value": "74080-3/74071-2"
+              },
+              "Questionnaire.item.text": {
+                "value": "What was the incorrect action?"
+              },
+              "Questionnaire.item.type": {
+                "value": "choice"
+              },
+              "Questionnaire.item.options": {
+                "Reference.reference": {
+                  "value": "#ll2661-8"
+                }
+              },
+              "Questionnaire.item.item": [
+                {
+                  "Questionnaire.item.linkId": {
+                    "value": "74080-3/74070-4"
+                  },
+                  "Questionnaire.item.text": {
+                    "value": "Which best describes the incorrect dose(s)?"
+                  },
+                  "Questionnaire.item.type": {
+                    "value": "open-choice"
+                  },
+                  "Questionnaire.item.required": {
+                    "value": true
+                  },
+                  "Questionnaire.item.options": {
+                    "Reference.reference": {
+                      "value": "#ll2662-6"
+                    }
+                  }
+                },
+                {
+                  "Questionnaire.item.linkId": {
+                    "value": "Medication/74069-6"
+                  },
+                  "Questionnaire.item.text": {
+                    "value": "Which best describes the incorrect timing?"
+                  },
+                  "Questionnaire.item.type": {
+                    "value": "open-choice"
+                  },
+                  "Questionnaire.item.required": {
+                    "value": true
+                  },
+                  "Questionnaire.item.options": {
+                    "Reference.reference": {
+                      "value": "#ll2663-4"
+                    }
+                  }
+                },
+                {
+                  "Questionnaire.item.linkId": {
+                    "value": "74080-3/74068-8"
+                  },
+                  "Questionnaire.item.text": {
+                    "value": "Which best describes the incorrect rate?"
+                  },
+                  "Questionnaire.item.type": {
+                    "value": "open-choice"
+                  },
+                  "Questionnaire.item.required": {
+                    "value": true
+                  },
+                  "Questionnaire.item.options": {
+                    "Reference.reference": {
+                      "value": "#ll2664-2"
+                    }
+                  }
+                },
+                {
+                  "Questionnaire.item.linkId": {
+                    "value": "Medication/74067-0"
+                  },
+                  "Questionnaire.item.text": {
+                    "value": "Which best describes the incorrect strength or concentration?"
+                  },
+                  "Questionnaire.item.type": {
+                    "value": "open-choice"
+                  },
+                  "Questionnaire.item.required": {
+                    "value": true
+                  },
+                  "Questionnaire.item.options": {
+                    "Reference.reference": {
+                      "value": "#ll2665-9"
+                    }
+                  }
+                },
+                {
+                  "Questionnaire.item.linkId": {
+                    "value": "Medication/74066-2"
+                  },
+                  "Questionnaire.item.text": {
+                    "value": "What was the expiration date?"
+                  },
+                  "Questionnaire.item.type": {
+                    "value": "string"
+                  },
+                  "Questionnaire.item.required": {
+                    "value": true
+                  }
+                },
+                {
+                  "Questionnaire.item.linkId": {
+                    "value": "Medication/74065-4"
+                  },
+                  "Questionnaire.item.text": {
+                    "value": "Was there a documented history of allergies or sensitivities to the medication/substance                      administered?"
+                  },
+                  "Questionnaire.item.type": {
+                    "value": "open-choice"
+                  },
+                  "Questionnaire.item.required": {
+                    "value": true
+                  },
+                  "Questionnaire.item.options": {
+                    "Reference.reference": {
+                      "value": "#ll2817-6"
+                    }
+                  }
+                },
+                {
+                  "Questionnaire.item.linkId": {
+                    "value": "Medication/74064-7"
+                  },
+                  "Questionnaire.item.text": {
+                    "value": "What was the contraindication (potential or actual interaction)?"
+                  },
+                  "Questionnaire.item.type": {
+                    "value": "open-choice"
+                  },
+                  "Questionnaire.item.required": {
+                    "value": true
+                  },
+                  "Questionnaire.item.options": {
+                    "Reference.reference": {
+                      "value": "#ll2668-3"
+                    }
+                  },
+                  "Questionnaire.item.item": [
+                    {
+                      "Questionnaire.item.linkId": {
+                        "value": "Medication/74064-7/Other/Specify"
+                      },
+                      "Questionnaire.item.text": {
+                        "value": "PLEASE SPECIFY"
+                      },
+                      "Questionnaire.item.type": {
+                        "value": "string"
+                      },
+                      "Questionnaire.item.required": {
+                        "value": true
+                      }
+                    }
+                  ]
+                },
+                {
+                  "Questionnaire.item.linkId": {
+                    "value": "74080-3/74071-2/Other/Specify"
+                  },
+                  "Questionnaire.item.text": {
+                    "value": "PLEASE SPECIFY"
+                  },
+                  "Questionnaire.item.type": {
+                    "value": "string"
+                  },
+                  "Questionnaire.item.required": {
+                    "value": true
+                  }
+                }
+              ]
+            },
+            {
+              "Questionnaire.item.linkId": {
+                "value": "74080-3/74063-9"
+              },
+              "Questionnaire.item.text": {
+                "value": "At what stage in the process did the event originate, regardless of the stage at which                  it was discovered?"
+              },
+              "Questionnaire.item.type": {
+                "value": "open-choice"
+              },
+              "Questionnaire.item.required": {
+                "value": true
+              },
+              "Questionnaire.item.options": {
+                "Reference.reference": {
+                  "value": "#ll2669-1"
+                }
+              },
+              "Questionnaire.item.item": [
+                {
+                  "Questionnaire.item.linkId": {
+                    "value": "74080-3/74063-9/Other/Specify"
+                  },
+                  "Questionnaire.item.text": {
+                    "value": "PLEASE SPECIFY"
+                  },
+                  "Questionnaire.item.type": {
+                    "value": "string"
+                  },
+                  "Questionnaire.item.required": {
+                    "value": true
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Element.extension": [
+            {
+              "Extension.url": {
+                "value": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs"
+              },
+              "Extension.valueInteger": {
+                "value": 5
+              }
+            }
+          ],
+          "Questionnaire.item.linkId": {
+            "value": "74080-3/74078-7"
+          },
+          "Questionnaire.item.type": {
+            "value": "group"
+          },
+          "Questionnaire.item.repeats": {
+            "value": true
+          },
+          "Questionnaire.item.item": [
+            {
+              "Questionnaire.item.text": {
+                "value": "Please provide the following medication details for any medications or other substances                directly involved in the event."
+              },
+              "Questionnaire.item.type": {
+                "value": "display"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/minLength"
+                  },
+                  "Extension.valueInteger": {
+                    "value": 0
+                  }
+                }
+              ],
+              "Questionnaire.item.linkId": {
+                "value": "74080-3/74078-7/74062-1"
+              },
+              "Questionnaire.item.text": {
+                "value": "Generic name or investigational drug name"
+              },
+              "Questionnaire.item.type": {
+                "value": "string"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/minLength"
+                  },
+                  "Extension.valueInteger": {
+                    "value": 0
+                  }
+                }
+              ],
+              "Questionnaire.item.linkId": {
+                "value": "74080-3/74078-7/74061-3"
+              },
+              "Questionnaire.item.text": {
+                "value": "Ingredient RXCUI (if known)"
+              },
+              "Questionnaire.item.type": {
+                "value": "string"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/minLength"
+                  },
+                  "Extension.valueInteger": {
+                    "value": 0
+                  }
+                }
+              ],
+              "Questionnaire.item.linkId": {
+                "value": "74080-3/74078-7/74060-5"
+              },
+              "Questionnaire.item.text": {
+                "value": "Brand name (if known)"
+              },
+              "Questionnaire.item.type": {
+                "value": "string"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/minLength"
+                  },
+                  "Extension.valueInteger": {
+                    "value": 0
+                  }
+                }
+              ],
+              "Questionnaire.item.linkId": {
+                "value": "74080-3/74078-7/74059-7"
+              },
+              "Questionnaire.item.text": {
+                "value": "Brand name RXCUI (if known)"
+              },
+              "Questionnaire.item.type": {
+                "value": "string"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/minLength"
+                  },
+                  "Extension.valueInteger": {
+                    "value": 0
+                  }
+                }
+              ],
+              "Questionnaire.item.linkId": {
+                "value": "74080-3/74078-7/74058-9"
+              },
+              "Questionnaire.item.text": {
+                "value": "Manufacturer (if known)"
+              },
+              "Questionnaire.item.type": {
+                "value": "string"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/minLength"
+                  },
+                  "Extension.valueInteger": {
+                    "value": 0
+                  }
+                }
+              ],
+              "Questionnaire.item.linkId": {
+                "value": "74080-3/74078-7/74057-1"
+              },
+              "Questionnaire.item.text": {
+                "value": "Strength or concentration of product"
+              },
+              "Questionnaire.item.type": {
+                "value": "string"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/minLength"
+                  },
+                  "Extension.valueInteger": {
+                    "value": 0
+                  }
+                }
+              ],
+              "Questionnaire.item.linkId": {
+                "value": "74080-3/74078-7/74056-3"
+              },
+              "Questionnaire.item.text": {
+                "value": "Clinical drug component RXCUI (if known)"
+              },
+              "Questionnaire.item.type": {
+                "value": "string"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/minLength"
+                  },
+                  "Extension.valueInteger": {
+                    "value": 0
+                  }
+                }
+              ],
+              "Questionnaire.item.linkId": {
+                "value": "74080-3/74078-7/74055-5"
+              },
+              "Questionnaire.item.text": {
+                "value": "Dosage form of Product"
+              },
+              "Questionnaire.item.type": {
+                "value": "string"
+              }
+            },
+            {
+              "Element.extension": [
+                {
+                  "Extension.url": {
+                    "value": "http://hl7.org/fhir/StructureDefinition/minLength"
+                  },
+                  "Extension.valueInteger": {
+                    "value": 0
+                  }
+                }
+              ],
+              "Questionnaire.item.linkId": {
+                "value": "74080-3/74078-7/74054-8"
+              },
+              "Questionnaire.item.text": {
+                "value": "Dose form RXCUI (if known)"
+              },
+              "Questionnaire.item.type": {
+                "value": "string"
+              }
+            },
+            {
+              "Questionnaire.item.linkId": {
+                "value": "74080-3/74078-7/74053-0"
+              },
+              "Questionnaire.item.text": {
+                "value": "Was this medication/substance prescribed for this patient?"
+              },
+              "Questionnaire.item.type": {
+                "value": "choice"
+              },
+              "Questionnaire.item.required": {
+                "value": true
+              },
+              "Questionnaire.item.options": {
+                "Reference.reference": {
+                  "value": "#ll2828-3"
+                }
+              }
+            },
+            {
+              "Questionnaire.item.linkId": {
+                "value": "Medication/74052-2"
+              },
+              "Questionnaire.item.text": {
+                "value": "Was this medication/substance given to this patient?"
+              },
+              "Questionnaire.item.type": {
+                "value": "choice"
+              },
+              "Questionnaire.item.required": {
+                "value": true
+              },
+              "Questionnaire.item.options": {
+                "Reference.reference": {
+                  "value": "#ll2828-3"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Questionnaire.item.linkId": {
+            "value": "Medication/SEC03"
+          },
+          "Questionnaire.item.type": {
+            "value": "group"
+          },
+          "Questionnaire.item.item": [
+            {
+              "Questionnaire.item.linkId": {
+                "value": "74080-3/74051-4"
+              },
+              "Questionnaire.item.text": {
+                "value": "What was the intended route of administration?"
+              },
+              "Questionnaire.item.type": {
+                "value": "open-choice"
+              },
+              "Questionnaire.item.required": {
+                "value": true
+              },
+              "Questionnaire.item.options": {
+                "Reference.reference": {
+                  "value": "#ll2682-4"
+                }
+              },
+              "Questionnaire.item.item": [
+                {
+                  "Questionnaire.item.linkId": {
+                    "value": "74080-3/74051-4/Other/Specify"
+                  },
+                  "Questionnaire.item.text": {
+                    "value": "PLEASE SPECIFY"
+                  },
+                  "Questionnaire.item.type": {
+                    "value": "string"
+                  },
+                  "Questionnaire.item.required": {
+                    "value": true
+                  }
+                }
+              ]
+            },
+            {
+              "Questionnaire.item.linkId": {
+                "value": "74080-3/74050-6"
+              },
+              "Questionnaire.item.text": {
+                "value": "What was the actual route of administration (attempted or completed)?"
+              },
+              "Questionnaire.item.type": {
+                "value": "open-choice"
+              },
+              "Questionnaire.item.required": {
+                "value": true
+              },
+              "Questionnaire.item.options": {
+                "Reference.reference": {
+                  "value": "#ll2682-4"
+                }
+              },
+              "Questionnaire.item.item": [
+                {
+                  "Questionnaire.item.linkId": {
+                    "value": "74080-3/74050-6/Other/Specify"
+                  },
+                  "Questionnaire.item.text": {
+                    "value": "PLEASE SPECIFY"
+                  },
+                  "Questionnaire.item.type": {
+                    "value": "string"
+                  },
+                  "Questionnaire.item.required": {
+                    "value": true
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Questionnaire.item.linkId": {
+            "value": "Medication/SEC04"
+          },
+          "Questionnaire.item.text": {
+            "value": "Thank you for completing these questions."
+          },
+          "Questionnaire.item.type": {
+            "value": "group"
+          },
+          "Questionnaire.item.item": [
+            {
+              "Questionnaire.item.text": {
+                "value": "OMB No. 0935-0143 Exp. Date 10/31/2014 Public reporting burden for the collection of information is estimated to average 10 minutes per response. An agency may not conduct or sponsor, and a person is not required to respond to, a collection of information unless it displays a currently valid OMB control number. Send comments regarding this burden estimate or any other aspect of this collection of information, including suggestions for reducing this burden, to: AHRQ Reports Clearance Officer, Attention: PRA, Paperwork Reduction Project (0935-0143), AHRQ, 540 Gaither Road, Room #5036, Rockville, MD 20850."
+              },
+              "Questionnaire.item.type": {
+                "value": "display"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Element.extension": [
+        {
+          "Extension.url": {
+            "value": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden"
+          },
+          "Extension.valueBoolean": {
+            "value": true
+          }
+        }
+      ],
+      "Questionnaire.item.linkId": {
+        "value": "Reporting"
+      },
+      "Questionnaire.item.text": {
+        "value": "Reporting information"
+      },
+      "Questionnaire.item.type": {
+        "value": "group"
+      },
+      "Questionnaire.item.item": [
+        {
+          "Questionnaire.item.linkId": {
+            "value": "Reporting/who"
+          },
+          "Questionnaire.item.text": {
+            "value": "Reported by:"
+          },
+          "Questionnaire.item.type": {
+            "value": "string"
+          }
+        },
+        {
+          "Questionnaire.item.linkId": {
+            "value": "Reporting/when"
+          },
+          "Questionnaire.item.text": {
+            "value": "Reported date:"
+          },
+          "Questionnaire.item.type": {
+            "value": "date"
+          }
+        }
+      ]
+    },
+    {
+      "Element.extension": [
+        {
+          "Extension.url": {
+            "value": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+          },
+          "Extension.valueCodeableConcept": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://hl7.org/fhir/questionnaire-item-control"
+                },
+                "Coding.code": {
+                  "value": "footer"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "Questionnaire.item.linkId": {
+        "value": "Medication/footer"
+      },
+      "Questionnaire.item.type": {
+        "value": "group"
+      },
+      "Questionnaire.item.item": [
+        {
+          "Questionnaire.item.text": {
+            "value": "AHRQ Common Formats - Hospital Version 1.2 - 2012 Medication or Other Substance"
+          },
+          "Questionnaire.item.type": {
+            "value": "display"
+          }
+        }
+      ]
+    }
+  ]
+}

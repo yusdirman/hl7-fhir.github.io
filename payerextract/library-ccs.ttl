@@ -1,0 +1,169 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Librarylibrary-ccs> a fhir:Library;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "library-ccs"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Cohort Definition for Cervical Cancer Screening Measure</div>"
+  ];
+  fhir:Library.moduleMetadata [
+     fhir:ModuleMetadata.identifier [
+       fhir:index 0;
+       fhir:Identifier.use [ fhir:value "official" ];
+       fhir:Identifier.value [ fhir:value "CCS" ]
+     ];
+     fhir:ModuleMetadata.version [ fhir:value "1.0.0" ];
+     fhir:ModuleMetadata.title [ fhir:value "Cohort Definition for Cervical Cancer Screening Measure" ];
+     fhir:ModuleMetadata.type [ fhir:value "library" ];
+     fhir:ModuleMetadata.status [ fhir:value "active" ];
+     fhir:ModuleMetadata.experimental [ fhir:value "true"^^xsd:boolean ];
+     fhir:ModuleMetadata.publicationDate [ fhir:value "2016-04-19"^^xsd:date ];
+     fhir:ModuleMetadata.topic [
+       fhir:index 0;
+       fhir:CodeableConcept.text [ fhir:value "something" ]
+     ]
+  ];
+  fhir:Library.model [
+     fhir:index 0;
+     fhir:Library.model.identifier [ fhir:value "FHIR" ]
+  ];
+  fhir:Library.valueSet [
+     fhir:index 0;
+     fhir:Library.valueSet.name [ fhir:value "HPVTests" ];
+     fhir:Library.valueSet.identifier [ fhir:value "HPV Tests" ]
+  ], [
+     fhir:index 1;
+     fhir:Library.valueSet.name [ fhir:value "Cervical Cytology" ];
+     fhir:Library.valueSet.identifier [ fhir:value "2.16.840.1.113883.3.464.1004.1208" ]
+  ], [
+     fhir:index 2;
+     fhir:Library.valueSet.name [ fhir:value "Hysterectomy" ];
+     fhir:Library.valueSet.identifier [ fhir:value "Hysterectomy" ]
+  ], [
+     fhir:index 3;
+     fhir:Library.valueSet.name [ fhir:value "Absence of Cervix" ];
+     fhir:Library.valueSet.identifier [ fhir:value "Absence of Cervix" ]
+  ];
+  fhir:Library.dataRequirement [
+     fhir:index 0;
+     fhir:DataRequirement.type [ fhir:value "Patient" ]
+  ], [
+     fhir:index 1;
+     fhir:DataRequirement.type [ fhir:value "Procedure" ];
+     fhir:DataRequirement.codeFilter [
+       fhir:index 0;
+       fhir:DataRequirement.codeFilter.path [ fhir:value "code" ];
+       fhir:DataRequirement.codeFilter.valueSetString [ fhir:value "Cervical Cytology" ]
+     ];
+     fhir:DataRequirement.dateFilter [
+       fhir:index 0;
+       fhir:DataRequirement.dateFilter.path [ fhir:value "performedDateTime.value" ];
+       fhir:DataRequirement.dateFilter.valuePeriod [
+         fhir:Period.start [ fhir:value "2011-01-01"^^xsd:date ]
+       ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:DataRequirement.type [ fhir:value "DiagnosticReport" ];
+     fhir:DataRequirement.codeFilter [
+       fhir:index 0;
+       fhir:DataRequirement.codeFilter.path [ fhir:value "code" ];
+       fhir:DataRequirement.codeFilter.valueSetString [ fhir:value "Cervical Cytology" ]
+     ];
+     fhir:DataRequirement.dateFilter [
+       fhir:index 0;
+       fhir:DataRequirement.dateFilter.path [ fhir:value "effectiveDateTime.value" ];
+       fhir:DataRequirement.dateFilter.valuePeriod [
+         fhir:Period.start [ fhir:value "2011-01-01"^^xsd:date ]
+       ]
+     ]
+  ], [
+     fhir:index 3;
+     fhir:DataRequirement.type [ fhir:value "Observation" ];
+     fhir:DataRequirement.codeFilter [
+       fhir:index 0;
+       fhir:DataRequirement.codeFilter.path [ fhir:value "code" ];
+       fhir:DataRequirement.codeFilter.valueSetString [ fhir:value "Cervical Cytology" ]
+     ];
+     fhir:DataRequirement.dateFilter [
+       fhir:index 0;
+       fhir:DataRequirement.dateFilter.path [ fhir:value "effectiveDateTime.value" ];
+       fhir:DataRequirement.dateFilter.valuePeriod [
+         fhir:Period.start [ fhir:value "2011-01-01"^^xsd:date ]
+       ]
+     ]
+  ], [
+     fhir:index 4;
+     fhir:DataRequirement.type [ fhir:value "Procedure" ];
+     fhir:DataRequirement.codeFilter [
+       fhir:index 0;
+       fhir:DataRequirement.codeFilter.path [ fhir:value "code" ];
+       fhir:DataRequirement.codeFilter.valueSetString [ fhir:value "HPV Tests" ]
+     ];
+     fhir:DataRequirement.dateFilter [
+       fhir:index 0;
+       fhir:DataRequirement.dateFilter.path [ fhir:value "performedDateTime.value" ];
+       fhir:DataRequirement.dateFilter.valuePeriod [
+         fhir:Period.start [ fhir:value "2011-01-01"^^xsd:date ]
+       ]
+     ]
+  ], [
+     fhir:index 5;
+     fhir:DataRequirement.type [ fhir:value "DiagnosticReport" ];
+     fhir:DataRequirement.codeFilter [
+       fhir:index 0;
+       fhir:DataRequirement.codeFilter.path [ fhir:value "code" ];
+       fhir:DataRequirement.codeFilter.valueSetString [ fhir:value "HPV Tests" ]
+     ];
+     fhir:DataRequirement.dateFilter [
+       fhir:index 0;
+       fhir:DataRequirement.dateFilter.path [ fhir:value "effectiveDateTime.value" ];
+       fhir:DataRequirement.dateFilter.valuePeriod [
+         fhir:Period.start [ fhir:value "2011-01-01"^^xsd:date ]
+       ]
+     ]
+  ], [
+     fhir:index 6;
+     fhir:DataRequirement.type [ fhir:value "Observation" ];
+     fhir:DataRequirement.codeFilter [
+       fhir:index 0;
+       fhir:DataRequirement.codeFilter.path [ fhir:value "code" ];
+       fhir:DataRequirement.codeFilter.valueSetString [ fhir:value "HPV Tests" ]
+     ];
+     fhir:DataRequirement.dateFilter [
+       fhir:index 0;
+       fhir:DataRequirement.dateFilter.path [ fhir:value "effectiveDateTime.value" ];
+       fhir:DataRequirement.dateFilter.valuePeriod [
+         fhir:Period.start [ fhir:value "2011-01-01"^^xsd:date ]
+       ]
+     ]
+  ], [
+     fhir:index 7;
+     fhir:DataRequirement.type [ fhir:value "Procedure" ];
+     fhir:DataRequirement.codeFilter [
+       fhir:index 0;
+       fhir:DataRequirement.codeFilter.path [ fhir:value "code" ];
+       fhir:DataRequirement.codeFilter.valueSetString [ fhir:value "Hysterectomy" ]
+     ]
+  ], [
+     fhir:index 8;
+     fhir:DataRequirement.type [ fhir:value "Procedure" ];
+     fhir:DataRequirement.codeFilter [
+       fhir:index 0;
+       fhir:DataRequirement.codeFilter.path [ fhir:value "code" ];
+       fhir:DataRequirement.codeFilter.valueSetString [ fhir:value "Absence of Cervix" ]
+     ]
+  ];
+  fhir:Library.document [
+     fhir:Attachment.contentType [ fhir:value "application/xml+elm" ];
+     fhir:Attachment.url [ fhir:value "http://example.org/libraries/library-ccs.elm.xml" ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

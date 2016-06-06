@@ -1,0 +1,65 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Device",
+  "resourceType": "Device",
+  "Resource.id": {
+    "value": "example-pacemaker"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: example-pacemaker</p><p><b>identifier</b>: 1234-5678-90AB-CDEF</p><p><b>type</b>: Performance pace maker for high octane patients <span>(Details : {http://acme.com/devices code 'octane2014' = '??', given as 'Performance pace maker for high octane patients'})</span></p><p><b>lotNumber</b>: 1234-5678</p><p><b>manufacturer</b>: Acme Devices, Inc</p><p><b>model</b>: PM/Octane 2014</p><p><b>patient</b>: <a>Patient/example</a></p><p><b>contact</b>: ph: ext 4352</p></div>"
+    }
+  },
+  "Device.identifier": [
+    {
+      "Identifier.system": {
+        "value": "http://acme.com/devices/pacemakers/octane/serial"
+      },
+      "Identifier.value": {
+        "value": "1234-5678-90AB-CDEF"
+      }
+    }
+  ],
+  "Device.type": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://acme.com/devices"
+        },
+        "Coding.code": {
+          "value": "octane2014"
+        },
+        "Coding.display": {
+          "value": "Performance pace maker for high octane patients"
+        }
+      }
+    ]
+  },
+  "Device.lotNumber": {
+    "value": "1234-5678"
+  },
+  "Device.manufacturer": {
+    "value": "Acme Devices, Inc"
+  },
+  "Device.model": {
+    "value": "PM/Octane 2014"
+  },
+  "Device.patient": {
+    "Reference.reference": {
+      "value": "Patient/example"
+    },
+    "reference": "http://hl7.org/fhir//Patient/example"
+  },
+  "Device.contact": [
+    {
+      "ContactPoint.system": {
+        "value": "phone"
+      },
+      "ContactPoint.value": {
+        "value": "ext 4352"
+      }
+    }
+  ]
+}

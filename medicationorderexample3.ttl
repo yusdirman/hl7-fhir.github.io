@@ -1,0 +1,204 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/MedicationOrdermedrx003> a fhir:MedicationOrder;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "medrx003"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: medrx003</p><p><b>identifier</b>: 12345 (OFFICIAL)</p><p><b>status</b>: active</p><p><b>medication</b>: <a>prescribed medication</a></p><p><b>patient</b>: <a>Eve Everywoman</a></p><p><b>encounter</b>: <a>encounter who leads to this priscription</a></p><p><b>dateWritten</b>: Jan 15, 2015</p><p><b>prescriber</b>: <a>Patrick Pump</a></p><p><b>reasonCode</b>: Asthma <span>(Details : {SNOMED CT code '195967001' = 'Asthma (disorder)', given as 'Asthma'})</span></p><blockquote><p><b>dosageInstruction</b></p><p><b>text</b>: Take 1 tablet twice daily for 3 days</p><p><b>additionalInstructions</b>: With or after food <span>(Details : {SNOMED CT code '311504000' = 'With or after food (qualifier value)', given as 'With or after food'})</span></p><p><b>timing</b>: Events: Mar 1, 2015, Duration 3days, Do 2 per 1 days</p><p><b>site</b>: Entire oral cavity <span>(Details : {SNOMED CT code '181220002' = 'Entire oral cavity (body structure)', given as 'Entire oral cavity'})</span></p><p><b>route</b>: Oral Route <span>(Details : {SNOMED CT code '26643006' = 'Oral route (qualifier value)', given as 'Oral Route'})</span></p><p><b>dose</b>: 1 TAB<span> (Details: http://hl7.org/fhir/v3/orderableDrugForm code TAB = 'Tablet')</span></p></blockquote><blockquote><p><b>dosageInstruction</b></p><p><b>text</b>: Take 2 tablet twice daily for 3 days</p><p><b>additionalInstructions</b>: With or after food <span>(Details : {SNOMED CT code '311504000' = 'With or after food (qualifier value)', given as 'With or after food'})</span></p><p><b>timing</b>: Events: Mar 4, 2015, Duration 3days, Do 2 per 1 days</p><p><b>site</b>: Entire oral cavity <span>(Details : {SNOMED CT code '181220002' = 'Entire oral cavity (body structure)', given as 'Entire oral cavity'})</span></p><p><b>route</b>: Oral Route <span>(Details : {SNOMED CT code '26643006' = 'Oral route (qualifier value)', given as 'Oral Route'})</span></p><p><b>dose</b>: 2 TAB<span> (Details: http://hl7.org/fhir/v3/orderableDrugForm code TAB = 'Tablet')</span></p></blockquote><blockquote><p><b>dosageInstruction</b></p><p><b>text</b>: Take 3 tablet twice daily for 3 days</p><p><b>additionalInstructions</b>: With or after food <span>(Details : {SNOMED CT code '311504000' = 'With or after food (qualifier value)', given as 'With or after food'})</span></p><p><b>timing</b>: Events: Mar 7, 2015, Duration 3days, Do 2 per 1 days</p><p><b>site</b>: Entire oral cavity <span>(Details : {SNOMED CT code '181220002' = 'Entire oral cavity (body structure)', given as 'Entire oral cavity'})</span></p><p><b>route</b>: Oral Route <span>(Details : {SNOMED CT code '26643006' = 'Oral route (qualifier value)', given as 'Oral Route'})</span></p><p><b>dose</b>: 3 TAB<span> (Details: http://hl7.org/fhir/v3/orderableDrugForm code TAB = 'Tablet')</span></p></blockquote></div>"
+  ];
+  fhir:MedicationOrder.identifier [
+     fhir:index 0;
+     fhir:Identifier.use [ fhir:value "official" ];
+     fhir:Identifier.system [ fhir:value "http://www.bmc.nl/portal/prescriptions" ];
+     fhir:Identifier.value [ fhir:value "12345" ]
+  ];
+  fhir:MedicationOrder.status [ fhir:value "active"];
+  fhir:MedicationOrder.medicationReference [
+     fhir:link <http://hl7.org/fhir/Medication/MedicationExample11>;
+     fhir:Reference.reference [ fhir:value "Medication/MedicationExample11" ];
+     fhir:Reference.display [ fhir:value "prescribed medication" ]
+  ];
+  fhir:MedicationOrder.patient [
+     fhir:link <http://hl7.org/fhir/Patient/f001>;
+     fhir:Reference.reference [ fhir:value "Patient/f001" ];
+     fhir:Reference.display [ fhir:value "Eve Everywoman" ]
+  ];
+  fhir:MedicationOrder.encounter [
+     fhir:link <http://hl7.org/fhir/Encounter/f002>;
+     fhir:Reference.reference [ fhir:value "Encounter/f002" ];
+     fhir:Reference.display [ fhir:value "encounter who leads to this priscription" ]
+  ];
+  fhir:MedicationOrder.dateWritten [ fhir:value "2015-01-15"^^xsd:date];
+  fhir:MedicationOrder.prescriber [
+     fhir:link <http://hl7.org/fhir/Practitioner/f007>;
+     fhir:Reference.reference [ fhir:value "Practitioner/f007" ];
+     fhir:Reference.display [ fhir:value "Patrick Pump" ]
+  ];
+  fhir:MedicationOrder.reasonCode [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:concept sct:195967001;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "195967001" ];
+       fhir:Coding.display [ fhir:value "Asthma" ]
+     ]
+  ];
+  fhir:MedicationOrder.dosageInstruction [
+     fhir:index 0;
+     fhir:MedicationOrder.dosageInstruction.text [ fhir:value "Take 1 tablet twice daily for 3 days" ];
+     fhir:MedicationOrder.dosageInstruction.additionalInstructions [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept sct:311504000;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "311504000" ];
+         fhir:Coding.display [ fhir:value "With or after food" ]
+       ]
+     ];
+     fhir:MedicationOrder.dosageInstruction.timing [
+       fhir:Timing.event [
+         fhir:value "2015-03-01"^^xsd:date;
+         fhir:index 0
+       ];
+       fhir:Timing.repeat [
+         fhir:Timing.repeat.duration [ fhir:value "3"^^xsd:decimal ];
+         fhir:Timing.repeat.durationUnit [ fhir:value "d" ];
+         fhir:Timing.repeat.frequency [ fhir:value "2"^^xsd:int ];
+         fhir:Timing.repeat.period [ fhir:value "1"^^xsd:decimal ];
+         fhir:Timing.repeat.periodUnit [ fhir:value "d" ]
+       ]
+     ];
+     fhir:MedicationOrder.dosageInstruction.siteCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept sct:181220002;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "181220002" ];
+         fhir:Coding.display [ fhir:value "Entire oral cavity" ]
+       ]
+     ];
+     fhir:MedicationOrder.dosageInstruction.route [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept sct:26643006;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "26643006" ];
+         fhir:Coding.display [ fhir:value "Oral Route" ]
+       ]
+     ];
+     fhir:MedicationOrder.dosageInstruction.doseQuantity [
+       fhir:Quantity.value [ fhir:value "1"^^xsd:decimal ];
+       fhir:Quantity.system [ fhir:value "http://hl7.org/fhir/v3/orderableDrugForm" ];
+       fhir:Quantity.code [ fhir:value "TAB" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:MedicationOrder.dosageInstruction.text [ fhir:value "Take 2 tablet twice daily for 3 days" ];
+     fhir:MedicationOrder.dosageInstruction.additionalInstructions [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept sct:311504000;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "311504000" ];
+         fhir:Coding.display [ fhir:value "With or after food" ]
+       ]
+     ];
+     fhir:MedicationOrder.dosageInstruction.timing [
+       fhir:Timing.event [
+         fhir:value "2015-03-04"^^xsd:date;
+         fhir:index 0
+       ];
+       fhir:Timing.repeat [
+         fhir:Timing.repeat.duration [ fhir:value "3"^^xsd:decimal ];
+         fhir:Timing.repeat.durationUnit [ fhir:value "d" ];
+         fhir:Timing.repeat.frequency [ fhir:value "2"^^xsd:int ];
+         fhir:Timing.repeat.period [ fhir:value "1"^^xsd:decimal ];
+         fhir:Timing.repeat.periodUnit [ fhir:value "d" ]
+       ]
+     ];
+     fhir:MedicationOrder.dosageInstruction.siteCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept sct:181220002;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "181220002" ];
+         fhir:Coding.display [ fhir:value "Entire oral cavity" ]
+       ]
+     ];
+     fhir:MedicationOrder.dosageInstruction.route [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept sct:26643006;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "26643006" ];
+         fhir:Coding.display [ fhir:value "Oral Route" ]
+       ]
+     ];
+     fhir:MedicationOrder.dosageInstruction.doseQuantity [
+       fhir:Quantity.value [ fhir:value "2"^^xsd:decimal ];
+       fhir:Quantity.system [ fhir:value "http://hl7.org/fhir/v3/orderableDrugForm" ];
+       fhir:Quantity.code [ fhir:value "TAB" ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:MedicationOrder.dosageInstruction.text [ fhir:value "Take 3 tablet twice daily for 3 days" ];
+     fhir:MedicationOrder.dosageInstruction.additionalInstructions [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept sct:311504000;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "311504000" ];
+         fhir:Coding.display [ fhir:value "With or after food" ]
+       ]
+     ];
+     fhir:MedicationOrder.dosageInstruction.timing [
+       fhir:Timing.event [
+         fhir:value "2015-03-07"^^xsd:date;
+         fhir:index 0
+       ];
+       fhir:Timing.repeat [
+         fhir:Timing.repeat.duration [ fhir:value "3"^^xsd:decimal ];
+         fhir:Timing.repeat.durationUnit [ fhir:value "d" ];
+         fhir:Timing.repeat.frequency [ fhir:value "2"^^xsd:int ];
+         fhir:Timing.repeat.period [ fhir:value "1"^^xsd:decimal ];
+         fhir:Timing.repeat.periodUnit [ fhir:value "d" ]
+       ]
+     ];
+     fhir:MedicationOrder.dosageInstruction.siteCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept sct:181220002;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "181220002" ];
+         fhir:Coding.display [ fhir:value "Entire oral cavity" ]
+       ]
+     ];
+     fhir:MedicationOrder.dosageInstruction.route [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept sct:26643006;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "26643006" ];
+         fhir:Coding.display [ fhir:value "Oral Route" ]
+       ]
+     ];
+     fhir:MedicationOrder.dosageInstruction.doseQuantity [
+       fhir:Quantity.value [ fhir:value "3"^^xsd:decimal ];
+       fhir:Quantity.system [ fhir:value "http://hl7.org/fhir/v3/orderableDrugForm" ];
+       fhir:Quantity.code [ fhir:value "TAB" ]
+     ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

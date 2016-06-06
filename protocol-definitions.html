@@ -1,0 +1,491 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Protocol - FHIR v1.4.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link rel="stylesheet" href="fhir.css"/>
+  <link rel="Prev" href="http://hl7.org/fhir/protocol-definitions.html"/>
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="./dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="./assets/css/bootstrap-fhir.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href="./assets/css/project.css"/>
+  <link rel="stylesheet" href="./assets/css/pygments-manni.css"/>
+	<link rel="stylesheet" href="jquery-ui.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif] -->
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment">  <!-- segment-header -->	
+		<div class="container">  <!-- container -->
+			<a no-external="true" id="logo" href="http://hl7.org/fhir"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a no-external="true" id="hl7-logo" href="http://www.hl7.org">
+					<img src="./assets/images/hl7-logo.png" width="42" alt="visit the hl7 website" height="50"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a no-external="true" id="hl7-logo" href="http://hl7.org/fhir/search.cfm"><img src="./assets/images/search.png" alt="Search FHIR"/></a></div> 
+		</div>
+		<div class="container">  <!-- container -->
+	</div></div>  <!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+ 	      		
+ 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="documentation.html">Documentation</a></li>
+              <li><a href="implementation.html">Implementation</a></li>
+              <li><a href="resourcelist.html">Resources</a></li>
+              <li><a href="clinical.html">Clinical</a></li>
+              <li><a href="administration.html">Administrative</a></li>
+              <li><a href="infrastructure.html">Infrastructure</a></li>
+              <li><a href="financial.html">Financial</a></li>
+
+						</ul>
+					</div>  <!-- /.nav-collapse -->
+				</div>  <!-- /.container -->
+			</nav>  <!-- /.navbar -->
+      		
+				
+  <!-- /HEADER CONTENT -->				
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+		<div class="container">  <!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="clinical.html">Clinical</a></li>        <li><a href="protocol.html">Protocol</a></li>        <li><b>Detailed Descriptions</b></li>          <!-- protocol.html / res-Detailed Descriptions / Protocol -->
+
+			</ul>	
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment">  <!-- segment-content -->
+	<div class="container">  <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<ul class="nav nav-tabs"><li><a href="protocol.html">Content</a></li><li><a href="protocol-examples.html">Examples</a></li><li class="active"><a href="#">Detailed Descriptions</a></li><li><a href="protocol-mappings.html">Mappings</a></li><li><a href="protocol-profiles.html">Profiles</a></li></ul>
+
+<h2><span class="sectioncount">4.7.6<a name="4.7.6"> </a></span> Resource Protocol - Detailed Descriptions <a href="protocol-definitions.html#4.7.6" title="link to here" class="self-link"><img src="target.png"/></a></h2>
+
+<p>Detailed Descriptions for the elements in the Protocol resource.</p>
+
+<table class="dict">
+  <tr><td colspan="2" class="structure"><a name="Protocol"> </a><b>Protocol</b></td></tr>
+  <tr><td>Definition</td><td><p>A definition of behaviors to be taken in particular circumstances, often including conditions, options and other decision points.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Protocol.identifier"> </a><b>Protocol.identifier</b></td></tr>
+  <tr><td>Definition</td><td><p>A unique identifier for the protocol instance.</p>
+</td></tr>
+  <tr><td>Note</td><td>This is a business identifer, not a resource identifier (see <a href="resource.html#identifiers">discussion</a>)</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#Identifier">Identifier</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Protocol.title"> </a><b>Protocol.title</b></td></tr>
+  <tr><td>Definition</td><td><p>Name of protocol.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Protocol.status"> </a><b>Protocol.status</b></td></tr>
+  <tr><td>Definition</td><td><p>The status of the protocol.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>ProtocolStatus: <a href="valueset-protocol-status.html">The lifecycle status of a Protocol</a> (<a href="terminologies.html#required">Required</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#code">code</a></td></tr>
+  <tr><td><a href="conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
+  <tr><td>Requirements</td><td><p>Allow for filtering of Protocols that are appropriate for use in production.</p>
+</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Protocol.type"> </a><b>Protocol.type</b></td></tr>
+  <tr><td>Definition</td><td><p>A code that classifies the general type of context to which these behavior definitions apply.  This is used for searching, sorting and display purposes.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>ProtocolType: <a href="valueset-protocol-type.html">High-level categorization of the protocol</a> (<a href="terminologies.html#required">Required</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#code">code</a></td></tr>
+  <tr><td><a href="conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Protocol.subject"> </a><b>Protocol.subject</b></td></tr>
+  <tr><td>Definition</td><td><p>What does protocol deal with?</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="condition.html">Condition</a> | <a href="device.html">Device</a> | <a href="medication.html">Medication</a>)</td></tr>
+  <tr><td><a href="conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Protocol.group"> </a><b>Protocol.group</b></td></tr>
+  <tr><td>Definition</td><td><p>To whom does Protocol apply?</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="group.html">Group</a>)</td></tr>
+  <tr><td><a href="conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Protocol.purpose"> </a><b>Protocol.purpose</b></td></tr>
+  <tr><td>Definition</td><td><p>When is protocol to be used?</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Protocol.author"> </a><b>Protocol.author</b></td></tr>
+  <tr><td>Definition</td><td><p>Who wrote protocol?</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="organization.html">Organization</a>)</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Protocol.step"> </a><b>Protocol.step</b></td></tr>
+  <tr><td>Definition</td><td><p>What's done as part of protocol.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>item</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Protocol.step.name"> </a><b>Protocol.step.name</b></td></tr>
+  <tr><td>Definition</td><td><p>Label for step.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Protocol.step.description"> </a><b>Protocol.step.description</b></td></tr>
+  <tr><td>Definition</td><td><p>Human description of activity.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Protocol.step.duration"> </a><b>Protocol.step.duration</b></td></tr>
+  <tr><td>Definition</td><td><p>How long does step last?</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#Duration">Duration</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Protocol.step.precondition"> </a><b>Protocol.step.precondition</b></td></tr>
+  <tr><td>Definition</td><td><p>Rules prior to execution.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Invariants</td><td><b>Defined on this element</b><br/>
+<b title="Formal Invariant Identifier">ptl-1</b>: Only one of condition, intersection, union or exclude may be present (<a href="fluentpath.html">expression</a>: (condition.count() + intersection[0].count() + union[0].count() + exclude[0].count()) &lt;= 1, xpath: (count(f:condition) + count(f:intersection[1]) + count(f:union[1]) + count(f:exclude[1])) &lt;= 1)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Protocol.step.precondition.description"> </a><b>Protocol.step.precondition.description</b></td></tr>
+  <tr><td>Definition</td><td><p>Human-readable description of the condition.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Protocol.step.precondition.condition"> </a><b>Protocol.step.precondition.condition</b></td></tr>
+  <tr><td>Definition</td><td><p>Defines the name/value pair that must hold for the condition to be met.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Invariants</td><td><b>Affect this element</b><br/>
+<b title="Formal Invariant Identifier">ptl-1</b>: Only one of condition, intersection, union or exclude may be present (<a href="fluentpath.html">expression</a>: (condition.count() + intersection[0].count() + union[0].count() + exclude[0].count()) &lt;= 1, xpath: (count(f:condition) + count(f:intersection[1]) + count(f:union[1]) + count(f:exclude[1])) &lt;= 1)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Protocol.step.precondition.condition.type"> </a><b>Protocol.step.precondition.condition.type</b></td></tr>
+  <tr><td>Definition</td><td><p>The type of observation, test or other assertion being evaluated by the condition.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td><a href="terminologies.html#unbound">ConditionType</a>: Type of observation used as basis for conditional execution of one or more activities</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Protocol.step.precondition.condition.value_x_"> </a><b>Protocol.step.precondition.condition.value[x]</b></td></tr>
+  <tr><td>Definition</td><td><p>Indicates what value the observation/test/assertion must have in order for the condition to be considered to be satisfied.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#CodeableConcept">CodeableConcept</a>|<a href="datatypes.html#boolean">boolean</a>|<a href="datatypes.html#SimpleQuantity">SimpleQuantity</a>|<a href="datatypes.html#Range">Range</a></td></tr>
+  <tr><td>[x] Note</td><td>See <a href="formats.html#choice">Choice of Data Types</a> for further information about how to use [x]</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>If the value is an interval, the condition matches if the value falls within the interval.   The binding of .condition.valueCodeableConcept is unbound and is a coded value of an  observation used as basis for conditional execution of one or more activities.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Protocol.step.precondition.intersection"> </a><b>Protocol.step.precondition.intersection</b></td></tr>
+  <tr><td>Definition</td><td><p>Lists a set of conditions that must all be met.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="#Protocol.step.precondition">See Protocol.step.precondition</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Invariants</td><td><b>Affect this element</b><br/>
+<b title="Formal Invariant Identifier">ptl-1</b>: Only one of condition, intersection, union or exclude may be present (<a href="fluentpath.html">expression</a>: (condition.count() + intersection[0].count() + union[0].count() + exclude[0].count()) &lt;= 1, xpath: (count(f:condition) + count(f:intersection[1]) + count(f:union[1]) + count(f:exclude[1])) &lt;= 1)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Protocol.step.precondition.union"> </a><b>Protocol.step.precondition.union</b></td></tr>
+  <tr><td>Definition</td><td><p>Lists alternative conditions, at least one of must be met.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="#Protocol.step.precondition">See Protocol.step.precondition</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Invariants</td><td><b>Affect this element</b><br/>
+<b title="Formal Invariant Identifier">ptl-1</b>: Only one of condition, intersection, union or exclude may be present (<a href="fluentpath.html">expression</a>: (condition.count() + intersection[0].count() + union[0].count() + exclude[0].count()) &lt;= 1, xpath: (count(f:condition) + count(f:intersection[1]) + count(f:union[1]) + count(f:exclude[1])) &lt;= 1)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Protocol.step.precondition.exclude"> </a><b>Protocol.step.precondition.exclude</b></td></tr>
+  <tr><td>Definition</td><td><p>Lists conditions of which none must be met.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="#Protocol.step.precondition">See Protocol.step.precondition</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Invariants</td><td><b>Affect this element</b><br/>
+<b title="Formal Invariant Identifier">ptl-1</b>: Only one of condition, intersection, union or exclude may be present (<a href="fluentpath.html">expression</a>: (condition.count() + intersection[0].count() + union[0].count() + exclude[0].count()) &lt;= 1, xpath: (count(f:condition) + count(f:intersection[1]) + count(f:union[1]) + count(f:exclude[1])) &lt;= 1)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Protocol.step.exit"> </a><b>Protocol.step.exit</b></td></tr>
+  <tr><td>Definition</td><td><p>Indicates the conditions that must be met for activities that are part of this time point to terminate.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="#Protocol.step.precondition">See Protocol.step.precondition</a></td></tr>
+  <tr><td><a href="conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>If not specified, activities end based on occurrence and duration information specified in the activity.  Conditions specified here may be used to allow exception handling as well as to ensure certain conditions are met while activities are proceeding.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Protocol.step.firstActivity"> </a><b>Protocol.step.firstActivity</b></td></tr>
+  <tr><td>Definition</td><td><p>First activity within timepoint.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#uri">uri</a></td></tr>
+  <tr><td><a href="conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>Multiple activities are assumed to start in parallel.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Protocol.step.activity"> </a><b>Protocol.step.activity</b></td></tr>
+  <tr><td>Definition</td><td><p>Activities that occur within timepoint.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>We send them as a collection because a single activity may be referenced multiple times; e.g. Activity C may be a follow-on activity to both A and B which happen in parallel.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Protocol.step.activity.alternative"> </a><b>Protocol.step.activity.alternative</b></td></tr>
+  <tr><td>Definition</td><td><p>What can be done instead?</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#uri">uri</a></td></tr>
+  <tr><td><a href="conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Protocol.step.activity.component"> </a><b>Protocol.step.activity.component</b></td></tr>
+  <tr><td>Definition</td><td><p>Activities that are part of this activity.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Protocol.step.activity.component.sequence"> </a><b>Protocol.step.activity.component.sequence</b></td></tr>
+  <tr><td>Definition</td><td><p>Order of occurrence.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#integer">integer</a></td></tr>
+  <tr><td><a href="conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>Equivalent values happen in parallel.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Protocol.step.activity.component.activity"> </a><b>Protocol.step.activity.component.activity</b></td></tr>
+  <tr><td>Definition</td><td><p>Component activity.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#uri">uri</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Protocol.step.activity.following"> </a><b>Protocol.step.activity.following</b></td></tr>
+  <tr><td>Definition</td><td><p>What happens next.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#uri">uri</a></td></tr>
+  <tr><td><a href="conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>Multiple activities are assumed to start in parallel.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Protocol.step.activity.wait"> </a><b>Protocol.step.activity.wait</b></td></tr>
+  <tr><td>Definition</td><td><p>Indicates the length of time to wait between the conditions being satisfied for the activity to start and the actual start of the activity.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#Duration">Duration</a></td></tr>
+  <tr><td><a href="conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Protocol.step.activity.detail"> </a><b>Protocol.step.activity.detail</b></td></tr>
+  <tr><td>Definition</td><td><p>Information about the nature of the activity, including type, timing and other qualifiers.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>To Do</td><td>10/7/2015 EH: there is an 'activityDefinition Datatype that I converted to inline until I understand where else it would be used.  Careplan activity details are different.</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Protocol.step.activity.detail.category"> </a><b>Protocol.step.activity.detail.category</b></td></tr>
+  <tr><td>Definition</td><td><p>High-level categorization of the type of activity.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td>ActivityDefinitionCategory: <a href="valueset-activity-definition-category.html">High-level categorization of the type of activity in a protocol.</a> (<a href="terminologies.html#required">Required</a>)</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#code">code</a></td></tr>
+  <tr><td>Requirements</td><td><p>May determine what types of extensions are permitted.</p>
+</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Protocol.step.activity.detail.code"> </a><b>Protocol.step.activity.detail.code</b></td></tr>
+  <tr><td>Definition</td><td><p>Detailed description of the type of activity; e.g. What lab test, what procedure, what kind of encounter.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td><a href="terminologies.html#unbound">ActivityDefinitionType</a>: Detailed type of planned activity; e.g. CBC</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td>Requirements</td><td><p>Allows matching performed to planned as well as validation against protocols.</p>
+</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>Tends to be less relevant for activities involving particular products.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Protocol.step.activity.detail.timing_x_"> </a><b>Protocol.step.activity.detail.timing[x]</b></td></tr>
+  <tr><td>Definition</td><td><p>The period, timing or frequency upon which the described activity is to occur.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td><a href="terminologies.html#unbound">ActivityTiming</a>: Code describing the timing of an activity; e.g. BID, QD</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#CodeableConcept">CodeableConcept</a>|<a href="datatypes.html#Timing">Timing</a></td></tr>
+  <tr><td>[x] Note</td><td>See <a href="formats.html#choice">Choice of Data Types</a> for further information about how to use [x]</td></tr>
+  <tr><td>Requirements</td><td><p>Allows prompting for activities and detection of missed planned activities.</p>
+</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>To Do</td><td>Add constraint prohibiting event (once it won't raise an error on the name timingSchedule).</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Protocol.step.activity.detail.location"> </a><b>Protocol.step.activity.detail.location</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies the facility where the activity will occur; e.g. home, hospital, specific clinic, etc.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="location.html">Location</a>)</td></tr>
+  <tr><td>Requirements</td><td><p>Helps in planning of activity.</p>
+</td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>facility</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>May reference a specific clinical location or may just identify a type of location.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Protocol.step.activity.detail.performer"> </a><b>Protocol.step.activity.detail.performer</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies who's expected to be involved in the activity.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="practitioner.html">Practitioner</a> | <a href="organization.html">Organization</a> | <a href="relatedperson.html">RelatedPerson</a> | <a href="patient.html">Patient</a>)</td></tr>
+  <tr><td>Requirements</td><td><p>Helps in planning of activity.</p>
+</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Protocol.step.activity.detail.product_x_"> </a><b>Protocol.step.activity.detail.product[x]</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies the food, drug or other product being consumed or supplied in the activity.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="terminologies.html">Binding</a></td><td><a href="terminologies.html#unbound">PerformerProduct</a>: Code describing the type of substance or medication</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="references.html#Reference">Reference</a>(<a href="medication.html">Medication</a> | <a href="substance.html">Substance</a>)|<a href="datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td>[x] Note</td><td>See <a href="formats.html#choice">Choice of Data Types</a> for further information about how to use [x]</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Protocol.step.activity.detail.quantity"> </a><b>Protocol.step.activity.detail.quantity</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies the quantity expected to be consumed at once (per dose, per meal, etc.).</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#SimpleQuantity">SimpleQuantity</a></td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>dose</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Protocol.step.activity.detail.description"> </a><b>Protocol.step.activity.detail.description</b></td></tr>
+  <tr><td>Definition</td><td><p>This provides a textual description of constraints on the activity occurrence, including relation to other activities.  It may also include objectives, pre-conditions and end-conditions.  Finally, it may convey specifics about the activity such as body site, method, route, etc.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Protocol.step.next"> </a><b>Protocol.step.next</b></td></tr>
+  <tr><td>Definition</td><td><p>What happens next?</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Protocol.step.next.description"> </a><b>Protocol.step.next.description</b></td></tr>
+  <tr><td>Definition</td><td><p>Description of what happens next.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#string">string</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Protocol.step.next.reference"> </a><b>Protocol.step.next.reference</b></td></tr>
+  <tr><td>Definition</td><td><p>Id of following step.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="datatypes.html#uri">uri</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Protocol.step.next.condition"> </a><b>Protocol.step.next.condition</b></td></tr>
+  <tr><td>Definition</td><td><p>Condition in which next step is executed.</p>
+</td></tr>
+  <tr><td><a href="conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="datatypes.html">Type</a></td><td><a href="#Protocol.step.precondition">See Protocol.step.precondition</a></td></tr>
+  <tr><td><a href="search.html#summary">Summary</a></td><td>true</td></tr>
+</table>
+
+
+
+</div>
+
+
+				</div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+        
+    </div>  <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">  <!-- segment-footer -->
+		<div class="container">  <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.4.0-8453) generated on Mon, Jun 6, 2016 20:22+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img src="external.png" style="text-align: baseline"/></a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fprotocol-definitions.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fprotocol-definitions.html">Compare to DSTU2 <img src="external.png" style="text-align: baseline"/></a> |                
+               <a rel="license" style="color: #81BEF7" href="license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a> | 
+               <a style="color: #81BEF7" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank">Propose a change <img src="external.png" style="text-align: baseline"/></a>   
+        </span>
+        </p>
+			</div>  <!-- /inner-wrapper -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+    
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

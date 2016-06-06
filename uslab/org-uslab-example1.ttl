@@ -1,0 +1,49 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Organizationorg-uslab-example1> a fhir:Organization;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "org-uslab-example1"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: org-uslab-example1</p><p><b>identifier</b>: 1235349085 (OFFICIAL)</p><p><b>name</b>: University Hospital</p><p><b>telecom</b>: ph: (+1) 555-227-1234, fax: (+1) 555-227-6622</p><p><b>address</b>: Firstcare Way Building 1 Harrisburg PA 17111 USA (WORK)</p></div>"
+  ];
+  fhir:Organization.identifier [
+     fhir:index 0;
+     fhir:Identifier.use [ fhir:value "official" ];
+     fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/sid/us-npi" ];
+     fhir:Identifier.value [ fhir:value "1235349085" ]
+  ];
+  fhir:Organization.name [ fhir:value "University Hospital"];
+  fhir:Organization.telecom [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value "phone" ];
+     fhir:ContactPoint.value [ fhir:value "(+1) 555-227-1234" ]
+  ], [
+     fhir:index 1;
+     fhir:ContactPoint.system [ fhir:value "fax" ];
+     fhir:ContactPoint.value [ fhir:value "(+1) 555-227-6622" ]
+  ];
+  fhir:Organization.address [
+     fhir:index 0;
+     fhir:Address.use [ fhir:value "work" ];
+     fhir:Address.line [
+       fhir:value "Firstcare Way";
+       fhir:index 0
+     ], [
+       fhir:value "Building 1";
+       fhir:index 1
+     ];
+     fhir:Address.city [ fhir:value "Harrisburg" ];
+     fhir:Address.district [ fhir:value "42043" ];
+     fhir:Address.state [ fhir:value "PA" ];
+     fhir:Address.postalCode [ fhir:value "17111" ];
+     fhir:Address.country [ fhir:value "USA" ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

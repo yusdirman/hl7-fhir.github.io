@@ -1,0 +1,106 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Consent",
+  "resourceType": "Consent",
+  "Resource.id": {
+    "value": "consent-example-Emergency"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t<p>\n\tWithhold Authorization for Treatment except for Emegency Treatment\n\t</p><p>\n    Patient &quot;P. van de Heuvel&quot; wishes to have no data at the Good Health Psychiatric Hospital \n   available except for Emegency treatment use.\n   </p>\n   </div>"
+    }
+  },
+  "Consent.status": {
+    "value": "active"
+  },
+  "Consent.type": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/consenttypecodes"
+        },
+        "Coding.code": {
+          "value": "Opt-Out"
+        },
+        "Coding.display": {
+          "value": "Authorization refused with explicit exceptions."
+        }
+      }
+    ]
+  },
+  "Consent.issued": {
+    "value": "2016-05-11"
+  },
+  "Consent.patient": {
+    "Reference.reference": {
+      "value": "Patient/f001"
+    },
+    "Reference.display": {
+      "value": "P. van de Heuvel"
+    },
+    "reference": "http://hl7.org/fhir//Patient/f001"
+  },
+  "Consent.authority": [
+    {
+      "Reference.reference": {
+        "value": "Organization/Infoway"
+      },
+      "Reference.display": {
+        "value": "Canada Infoway"
+      }
+    }
+  ],
+  "Consent.domain": [
+    {
+      "Reference.reference": {
+        "value": "Location/Infoway"
+      },
+      "Reference.display": {
+        "value": "Canada Infoway"
+      }
+    }
+  ],
+  "Consent.except": [
+    {
+      "Consent.except.type": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://hl7.org/fhir/consentexcepttypecodes"
+            },
+            "Coding.code": {
+              "value": "authorized-action"
+            },
+            "Coding.display": {
+              "value": "Authorize a specified action."
+            }
+          }
+        ]
+      },
+      "Consent.except.action": [
+        {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "value": "http://hl7.org/fhir/v3/ActReason"
+              },
+              "Coding.code": {
+                "value": "ETREAT"
+              },
+              "Coding.display": {
+                "value": "Emergency Treatment"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "Consent.contentAttachment": {
+    "Attachment.title": {
+      "value": "The terms of the consent in lawyer speak."
+    }
+  }
+}

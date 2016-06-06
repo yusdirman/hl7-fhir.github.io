@@ -1,0 +1,267 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/TestScriptsearch> a fhir:TestScript;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "search"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: search</p><p><b>name</b>: Read, Search and Conditional Create and Delete</p><p><b>description</b>: Test Script for testing search, read, and conditional create and delete</p><h3>Fixtures</h3><table><tr><td>-</td><td><b>Resource</b></td></tr><tr><td>*</td><td><a>Patient/patient-example.xml</a></td></tr></table><blockquote><p><b>variable</b></p><p><b>name</b>: V1</p><p><b>sourceId</b>: R1</p><p><b>headerField</b>: Location</p></blockquote><blockquote><p><b>variable</b></p><p><b>name</b>: V2</p><p><b>sourceId</b>: R3</p><p><b>path</b>: fhir:Patient/fhir:name/fhir:given/@value</p></blockquote><blockquote><p><b>setup</b></p><blockquote><p><b>action</b></p><h3>Operations</h3><table><tr><td>-</td><td><b>Type</b></td><td><b>Resource</b></td><td><b>Params</b></td></tr><tr><td>*</td><td>delete</td><td>Patient</td><td>given=John&amp;family=Doe</td></tr></table></blockquote></blockquote><blockquote><p><b>test</b></p><p><b>name</b>: Create</p><p><b>description</b>: Create, read, search, conditional create, conditional delete.</p><blockquote><p><b>metadata</b></p><h3>Links</h3><table><tr><td>-</td><td><b>Url</b></td><td><b>Description</b></td></tr><tr><td>*</td><td><a>http://hl7.org/implement/standards/FHIR-Develop/patient.html</a></td><td>FHIR Patient</td></tr></table><blockquote><p><b>operation</b></p><p><b>type</b>: create</p><p><b>resource</b>: Patient</p><p><b>description</b>: Conditional Create Operation</p><p><b>link</b>: <a>http://hl7-fhir.github.io/http.html#2.1.0.13.1</a></p><p><b>required</b>: true</p><p><b>validated</b>: true</p></blockquote><blockquote><p><b>operation</b></p><p><b>type</b>: delete</p><p><b>resource</b>: Patient</p><p><b>description</b>: Conditional Delete Operation</p><p><b>link</b>: <a>http://hl7-fhir.github.io/http.html#2.1.0.12.1</a></p><p><b>required</b>: true</p><p><b>validated</b>: true</p></blockquote><blockquote><p><b>operation</b></p><p><b>type</b>: read</p><p><b>resource</b>: Patient</p><p><b>description</b>: Patient Read Operation</p><p><b>link</b>: <a>http://hl7.org/implement/standards/FHIR-Develop/http.html#read</a></p><p><b>validated</b>: true</p></blockquote><blockquote><p><b>operation</b></p><p><b>type</b>: search</p><p><b>resource</b>: Patient</p><p><b>description</b>: Patient Search Operation</p><p><b>link</b>: <a>http://hl7-fhir.github.io/http.html#2.1.0.14</a></p><p><b>validated</b>: true</p></blockquote></blockquote><blockquote><p><b>action</b></p><h3>Operations</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Operations</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Operations</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Operations</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Operations</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Operations</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Operations</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote></blockquote></div>"
+  ];
+  fhir:TestScript.url [ fhir:value "http://hl7.org/fhir/TestScript/search"];
+  fhir:TestScript.name [ fhir:value "Read, Search and Conditional Create and Delete"];
+  fhir:TestScript.status [ fhir:value "draft"];
+  fhir:TestScript.description [ fhir:value "Test Script for testing search, read, and conditional create and delete"];
+  fhir:TestScript.metadata [
+     fhir:TestScript.metadata.capability [
+       fhir:index 0;
+       fhir:TestScript.metadata.capability.required [ fhir:value "true"^^xsd:boolean ];
+       fhir:TestScript.metadata.capability.description [ fhir:value "Patient Create and Read Operations" ];
+       fhir:TestScript.metadata.capability.link [
+         fhir:value "http://hl7.org/implement/standards/FHIR-Develop/http.html#create";
+         fhir:index 0
+       ], [
+         fhir:value "http://hl7.org/implement/standards/FHIR-Develop/http.html#read";
+         fhir:index 1
+       ];
+       fhir:TestScript.metadata.capability.conformance [
+         fhir:link <http://hl7.org/fhir/Conformance/example>;
+         fhir:Reference.reference [ fhir:value "Conformance/example" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:TestScript.metadata.capability.required [ fhir:value "true"^^xsd:boolean ];
+       fhir:TestScript.metadata.capability.description [ fhir:value "Patient Conditional Delete Operation" ];
+       fhir:TestScript.metadata.capability.link [
+         fhir:value "http://hl7-fhir.github.io/http.html#2.1.0.12.1";
+         fhir:index 0
+       ];
+       fhir:TestScript.metadata.capability.conformance [
+         fhir:link <http://hl7.org/fhir/Conformance/example>;
+         fhir:Reference.reference [ fhir:value "Conformance/example" ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:TestScript.metadata.capability.required [ fhir:value "true"^^xsd:boolean ];
+       fhir:TestScript.metadata.capability.description [ fhir:value "Patient Conditional Create Operation" ];
+       fhir:TestScript.metadata.capability.link [
+         fhir:value "http://hl7-fhir.github.io/http.html#2.1.0.13.1";
+         fhir:index 0
+       ];
+       fhir:TestScript.metadata.capability.conformance [
+         fhir:link <http://hl7.org/fhir/Conformance/example>;
+         fhir:Reference.reference [ fhir:value "Conformance/example" ]
+       ]
+     ]
+  ];
+  fhir:TestScript.fixture [
+     fhir:index 0;
+     fhir:Element.id [ fhir:value "example-patient" ];
+     fhir:TestScript.fixture.resource [
+       fhir:link <http://hl7.org/fhir/Patient/example>;
+       fhir:Reference.reference [ fhir:value "Patient/example" ]
+     ]
+  ];
+  fhir:TestScript.variable [
+     fhir:index 0;
+     fhir:TestScript.variable.name [ fhir:value "V1" ];
+     fhir:TestScript.variable.headerField [ fhir:value "Location" ];
+     fhir:TestScript.variable.sourceId [ fhir:value "R1" ]
+  ], [
+     fhir:index 1;
+     fhir:TestScript.variable.name [ fhir:value "V2" ];
+     fhir:TestScript.variable.path [ fhir:value "fhir:Patient/fhir:name/fhir:given/@value" ];
+     fhir:TestScript.variable.sourceId [ fhir:value "R3" ]
+  ], [
+     fhir:index 2;
+     fhir:TestScript.variable.name [ fhir:value "DefaultValue" ];
+     fhir:TestScript.variable.defaultValue [ fhir:value "Replace at Runtime" ]
+  ];
+  fhir:TestScript.setup [
+     fhir:TestScript.setup.action [
+       fhir:index 0;
+       fhir:TestScript.setup.action.operation [
+         fhir:TestScript.setup.action.operation.type [
+           fhir:Coding.code [ fhir:value "delete" ]
+         ];
+         fhir:TestScript.setup.action.operation.resource [ fhir:value "Patient" ];
+         fhir:TestScript.setup.action.operation.params [ fhir:value "given=John&family=Doe" ]
+       ]
+     ]
+  ];
+  fhir:TestScript.test [
+     fhir:index 0;
+     fhir:Element.id [ fhir:value "Test1" ];
+     fhir:TestScript.test.name [ fhir:value "Create" ];
+     fhir:TestScript.test.description [ fhir:value "Create, read, search, conditional create, conditional delete." ];
+     fhir:TestScript.test.metadata [
+       fhir:TestScript.metadata.link [
+         fhir:index 0;
+         fhir:TestScript.metadata.link.url [ fhir:value "http://hl7.org/implement/standards/FHIR-Develop/patient.html" ];
+         fhir:TestScript.metadata.link.description [ fhir:value "FHIR Patient" ]
+       ];
+       fhir:TestScript.metadata.capability [
+         fhir:index 0;
+         fhir:TestScript.metadata.capability.validated [ fhir:value "true"^^xsd:boolean ];
+         fhir:TestScript.metadata.capability.description [ fhir:value "Patient Search Operation" ];
+         fhir:TestScript.metadata.capability.link [
+           fhir:value "http://hl7.org/implement/standards/FHIR-Develop/http.html#search";
+           fhir:index 0
+         ];
+         fhir:TestScript.metadata.capability.conformance [
+           fhir:link <http://hl7.org/fhir/Conformance/example>;
+           fhir:Reference.reference [ fhir:value "Conformance/example" ]
+         ]
+       ]
+     ];
+     fhir:TestScript.test.action [
+       fhir:index 0;
+       fhir:TestScript.test.action.operation [
+         fhir:TestScript.setup.action.operation.type [
+           fhir:Coding.code [ fhir:value "create" ]
+         ];
+         fhir:TestScript.setup.action.operation.sourceId [ fhir:value "example-patient" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:TestScript.test.action.assert [
+         fhir:TestScript.setup.action.assert.responseCode [ fhir:value "201" ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:TestScript.test.action.operation [
+         fhir:TestScript.setup.action.operation.type [
+           fhir:Coding.code [ fhir:value "search" ]
+         ];
+         fhir:TestScript.setup.action.operation.resource [ fhir:value "Patient" ];
+         fhir:TestScript.setup.action.operation.contentType [ fhir:value "json" ];
+         fhir:TestScript.setup.action.operation.params [ fhir:value "?given=John&family=Doe" ];
+         fhir:TestScript.setup.action.operation.responseId [ fhir:value "R1" ]
+       ]
+     ], [
+       fhir:index 3;
+       fhir:TestScript.test.action.assert [
+         fhir:TestScript.setup.action.assert.headerField [ fhir:value "Location" ];
+         fhir:TestScript.setup.action.assert.operator [ fhir:value "notEmpty" ];
+         fhir:TestScript.setup.action.assert.warningOnly [ fhir:value "true"^^xsd:boolean ]
+       ]
+     ], [
+       fhir:index 4;
+       fhir:TestScript.test.action.assert [
+         fhir:TestScript.setup.action.assert.operator [ fhir:value "equals" ];
+         fhir:TestScript.setup.action.assert.path [ fhir:value "fhir:Patient/fhir:birthDate/@value" ];
+         fhir:TestScript.setup.action.assert.sourceId [ fhir:value "R1" ];
+         fhir:TestScript.setup.action.assert.value [ fhir:value "1974-12-31" ]
+       ]
+     ], [
+       fhir:index 5;
+       fhir:TestScript.test.action.assert [
+         fhir:TestScript.setup.action.assert.navigationLinks [ fhir:value "true"^^xsd:boolean ];
+         fhir:TestScript.setup.action.assert.warningOnly [ fhir:value "true"^^xsd:boolean ]
+       ]
+     ], [
+       fhir:index 6;
+       fhir:TestScript.test.action.operation [
+         fhir:TestScript.setup.action.operation.type [
+           fhir:Coding.code [ fhir:value "search" ]
+         ];
+         fhir:TestScript.setup.action.operation.accept [ fhir:value "json" ];
+         fhir:TestScript.setup.action.operation.responseId [ fhir:value "R2" ];
+         fhir:TestScript.setup.action.operation.url [ fhir:value "${V1}" ]
+       ]
+     ], [
+       fhir:index 7;
+       fhir:TestScript.test.action.assert [
+         fhir:TestScript.setup.action.assert.contentType [ fhir:value "json" ]
+       ]
+     ], [
+       fhir:index 8;
+       fhir:TestScript.test.action.assert [
+         fhir:TestScript.setup.action.assert.response [ fhir:value "okay" ]
+       ]
+     ], [
+       fhir:index 9;
+       fhir:TestScript.test.action.operation [
+         fhir:TestScript.setup.action.operation.type [
+           fhir:Coding.code [ fhir:value "search" ]
+         ];
+         fhir:TestScript.setup.action.operation.resource [ fhir:value "Patient" ];
+         fhir:TestScript.setup.action.operation.accept [ fhir:value "json" ];
+         fhir:TestScript.setup.action.operation.params [ fhir:value "?given=John&family=Doe&birthdate=1974-12-31" ];
+         fhir:TestScript.setup.action.operation.responseId [ fhir:value "R3" ]
+       ]
+     ], [
+       fhir:index 10;
+       fhir:TestScript.test.action.assert [
+         fhir:TestScript.setup.action.assert.contentType [ fhir:value "json" ]
+       ]
+     ], [
+       fhir:index 11;
+       fhir:TestScript.test.action.assert [
+         fhir:TestScript.setup.action.assert.response [ fhir:value "okay" ]
+       ]
+     ], [
+       fhir:index 12;
+       fhir:TestScript.test.action.assert [
+         fhir:TestScript.setup.action.assert.compareToSourceId [ fhir:value "R2" ];
+         fhir:TestScript.setup.action.assert.compareToSourcePath [ fhir:value "fhir:Patient/fhir:birthDate/@value" ];
+         fhir:TestScript.setup.action.assert.path [ fhir:value "fhir:Patient/fhir:birthDate/@value" ];
+         fhir:TestScript.setup.action.assert.sourceId [ fhir:value "R3" ]
+       ]
+     ], [
+       fhir:index 13;
+       fhir:TestScript.test.action.assert [
+         fhir:TestScript.setup.action.assert.path [ fhir:value "fhir:Patient/fhir:name/fhir:given/@value" ];
+         fhir:TestScript.setup.action.assert.sourceId [ fhir:value "R3" ];
+         fhir:TestScript.setup.action.assert.value [ fhir:value "John" ]
+       ]
+     ], [
+       fhir:index 14;
+       fhir:TestScript.test.action.operation [
+         fhir:TestScript.setup.action.operation.type [
+           fhir:Coding.code [ fhir:value "create" ]
+         ];
+         fhir:TestScript.setup.action.operation.requestHeader [
+           fhir:index 0;
+           fhir:TestScript.setup.action.operation.requestHeader.field [ fhir:value "If-None-Exist" ];
+           fhir:TestScript.setup.action.operation.requestHeader.value [ fhir:value "Patient?given=John&Doe&birthdate=1974-12-31" ]
+         ];
+         fhir:TestScript.setup.action.operation.sourceId [ fhir:value "F1" ]
+       ]
+     ], [
+       fhir:index 15;
+       fhir:TestScript.test.action.assert [
+         fhir:TestScript.setup.action.assert.responseCode [ fhir:value "200" ]
+       ]
+     ], [
+       fhir:index 16;
+       fhir:TestScript.test.action.operation [
+         fhir:TestScript.setup.action.operation.type [
+           fhir:Coding.code [ fhir:value "delete" ]
+         ];
+         fhir:TestScript.setup.action.operation.resource [ fhir:value "Patient" ];
+         fhir:TestScript.setup.action.operation.params [ fhir:value "?given=John&family=Doe&birthdate=1974-12-31" ]
+       ]
+     ], [
+       fhir:index 17;
+       fhir:TestScript.test.action.operation [
+         fhir:TestScript.setup.action.operation.type [
+           fhir:Coding.code [ fhir:value "read" ]
+         ];
+         fhir:TestScript.setup.action.operation.resource [ fhir:value "Patient" ];
+         fhir:TestScript.setup.action.operation.params [ fhir:value "/${V2}" ]
+       ]
+     ], [
+       fhir:index 18;
+       fhir:TestScript.test.action.assert [
+         fhir:TestScript.setup.action.assert.responseCode [ fhir:value "410" ]
+       ]
+     ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

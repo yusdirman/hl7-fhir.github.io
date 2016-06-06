@@ -1,0 +1,198 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Patient",
+  "resourceType": "Patient",
+  "Resource.id": {
+    "value": "patient-example-qicore"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\n      <table>\n\n        <tbody>\n\n          <tr>\n\n            <td>Name</td>\n\n            <td>Todd G.\n              <b>Lerr</b>, Jr.\n            </td>\n\n          </tr>\n\n          <tr>\n\n            <td>Address</td>\n\n            <td>123 North 102nd Street, Apt 4d, Harrisburg, PA 17102</td>\n\n          </tr>\n\n          <tr>\n\n            <td>Contacts</td>\n\n            <td>Home: unknown. Work: (555) 555 1212</td>\n\n          </tr>\n\n        </tbody>\n\n      </table>\n\n    </div>"
+    }
+  },
+  "DomainResource.extension": [
+    {
+      "Extension.url": {
+        "value": "http://hl7.org/fhir/StructureDefinition/us-core-race"
+      },
+      "Extension.valueCodeableConcept": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://hl7.org/fhir/v3/Race"
+            },
+            "Coding.code": {
+              "value": "2106-3"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "Extension.url": {
+        "value": "http://hl7.org/fhir/StructureDefinition/us-core-ethnicity"
+      },
+      "Extension.valueCodeableConcept": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://hl7.org/fhir/v3/Ethnicity"
+            },
+            "Coding.code": {
+              "value": "2135-2"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "Extension.url": {
+        "value": "http://hl7.org/fhir/StructureDefinition/patient-clinicalTrial"
+      },
+      "Element.extension": [
+        {
+          "Extension.url": {
+            "value": "NCT"
+          },
+          "Extension.valueString": {
+            "value": "NCT01647425"
+          }
+        },
+        {
+          "Extension.url": {
+            "value": "period"
+          },
+          "Extension.valuePeriod": {
+            "Period.start": {
+              "value": "2012-04-01"
+            },
+            "Period.end": {
+              "value": "2013-09-30"
+            }
+          }
+        },
+        {
+          "Extension.url": {
+            "value": "reason"
+          },
+          "Extension.valueCodeableConcept": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://snomed.info/sct"
+                },
+                "Coding.code": {
+                  "value": "254637007"
+                },
+                "Coding.display": {
+                  "value": "NSCLC - Non-small cell lung cancer"
+                }
+              }
+            ],
+            "concept": "http://snomed.info/sct#254637007"
+          }
+        }
+      ]
+    }
+  ],
+  "Patient.active": {
+    "value": true
+  },
+  "Patient.name": [
+    {
+      "HumanName.use": {
+        "value": "official"
+      },
+      "HumanName.family": [
+        {
+          "value": "Lerr"
+        }
+      ],
+      "HumanName.given": [
+        {
+          "value": "Todd"
+        },
+        {
+          "value": "G."
+        }
+      ],
+      "HumanName.suffix": [
+        {
+          "value": "Jr"
+        }
+      ]
+    }
+  ],
+  "Patient.telecom": [
+    {
+      "ContactPoint.system": {
+        "value": "phone"
+      },
+      "ContactPoint.value": {
+        "value": "(555) 555 1212"
+      },
+      "ContactPoint.use": {
+        "value": "work"
+      }
+    },
+    {
+      "ContactPoint.system": {
+        "value": "email"
+      },
+      "ContactPoint.value": {
+        "value": "person@example.org"
+      },
+      "ContactPoint.use": {
+        "value": "work"
+      }
+    }
+  ],
+  "Patient.gender": {
+    "value": "male"
+  },
+  "Patient.birthDate": {
+    "value": "2012-06-07",
+    "date.extension": [
+      {
+        "Extension.url": {
+          "value": "http://hl7.org/fhir/StructureDefinition/patient-birthTime"
+        },
+        "Extension.valueDateTime": {
+          "value": "2012-06-07T06:12:45-05:00"
+        }
+      }
+    ]
+  },
+  "Patient.deceasedBoolean": {
+    "value": false
+  },
+  "Patient.address": [
+    {
+      "Address.use": {
+        "value": "home"
+      },
+      "Address.line": [
+        {
+          "value": "123 North 102nd Street"
+        },
+        {
+          "value": "Apt 4d"
+        }
+      ],
+      "Address.city": {
+        "value": "Harrisburg"
+      },
+      "Address.state": {
+        "value": "PA"
+      },
+      "Address.postalCode": {
+        "value": "17102"
+      },
+      "Address.country": {
+        "value": "USA"
+      }
+    }
+  ]
+}

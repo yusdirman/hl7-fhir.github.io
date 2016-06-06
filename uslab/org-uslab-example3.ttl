@@ -1,0 +1,64 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Organizationorg-uslab-example3> a fhir:Organization;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "org-uslab-example3"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: org-uslab-example3</p><p><b>identifier</b>: 01D1111111 (OFFICIAL)</p><p><b>name</b>: Acme Labs</p><p><b>address</b>: Firstcare Way Building 2 Harrisburg PA 42043 USA (WORK)</p><h3>Contacts</h3><table><tr><td>-</td><td><b>Name</b></td></tr><tr><td>*</td><td>Gregory F House </td></tr></table></div>"
+  ];
+  fhir:Organization.identifier [
+     fhir:index 0;
+     fhir:Identifier.use [ fhir:value "official" ];
+     fhir:Identifier.system [ fhir:value "http://www.cms.gov/Regulations-and-Guidance/Legislation/CLIA/index.html" ];
+     fhir:Identifier.value [ fhir:value "01D1111111" ]
+  ];
+  fhir:Organization.name [ fhir:value "Acme Labs"];
+  fhir:Organization.address [
+     fhir:index 0;
+     fhir:Address.use [ fhir:value "work" ];
+     fhir:Address.line [
+       fhir:value "Firstcare Way";
+       fhir:index 0
+     ], [
+       fhir:value "Building 2";
+       fhir:index 1
+     ];
+     fhir:Address.city [ fhir:value "Harrisburg" ];
+     fhir:Address.district [ fhir:value "42043" ];
+     fhir:Address.state [ fhir:value "PA" ];
+     fhir:Address.postalCode [ fhir:value "42043" ];
+     fhir:Address.country [ fhir:value "USA" ]
+  ];
+  fhir:Organization.contact [
+     fhir:index 0;
+     fhir:Organization.contact.name [
+       fhir:HumanName.family [
+         fhir:value "House";
+         fhir:index 0
+       ];
+       fhir:HumanName.given [
+         fhir:value "Gregory";
+         fhir:index 0
+       ], [
+         fhir:value "F";
+         fhir:index 1
+       ];
+       fhir:HumanName.prefix [
+         fhir:value "Dr";
+         fhir:index 0
+       ];
+       fhir:HumanName.suffix [
+         fhir:value "PhD";
+         fhir:index 0
+       ]
+     ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,92 @@
+{
+  "resourceType": "DecisionSupportRule",
+  "id": "decisionsupportrule-azathioprine-need-test",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Azathioprine Myelotoxicity Intervention - Need Test</div>"
+  },
+  "moduleMetadata": {
+    "identifier": [
+      {
+        "use": "official",
+        "value": "azathioprine-myelotoxicity-need-test"
+      }
+    ],
+    "version": "1.0.0",
+    "title": "Azathioprine Myelotoxicity Need Test",
+    "type": "decision-support-rule",
+    "status": "active",
+    "description": "Azathioprine myelotoxicity intervention to alert the user that a TPMT genotype test should be administered.",
+    "publicationDate": "2016-04-01",
+    "topic": [
+      {
+        "text": "Azathioprine Myelotoxicity - Need Test"
+      }
+    ]
+  },
+  "library": [
+    {
+      "reference": "Library/library-azathioprine-myelotoxicity-cds-logic"
+    }
+  ],
+  "trigger": [
+    {
+      "type": "data-added",
+      "eventData": {
+        "type": "MedicationOrder",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueCodeableConcept": [
+              {
+                "coding": [
+                  {
+                    "system": "http://snomed.org/sct",
+                    "code": "372574004"
+                  }
+                ],
+                "text": "Azathioprine (substance)"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "condition": "Needs TPMT Test",
+  "action": [
+    {
+      "title": "Patient should be administered a TPMT Genotype Test.",
+      "action": [
+        {
+          "title": "Create the TPMT Genotype Test.",
+          "textEquivalent": "Administer a TPMT Genotype Test.",
+          "participantType": [
+            "practitioner"
+          ],
+          "type": "create",
+          "customization": [
+            {
+              "path": "/",
+              "expression": "Create Diagnostic Order for TPMT Genotype Test"
+            }
+          ]
+        },
+        {
+          "title": "Notify the provider to sign the order.",
+          "textEquivalent": "A TPMT Genotype Test is recommended, please authorize or reject the order.",
+          "participantType": [
+            "practitioner"
+          ],
+          "type": "create",
+          "customization": [
+            {
+              "path": "/",
+              "expression": "Missing TPMT Test Alert"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

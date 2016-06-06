@@ -1,0 +1,144 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/VisionPrescription",
+  "resourceType": "VisionPrescription",
+  "Resource.id": {
+    "value": "33124"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Sample Contract Lens prescription</div>"
+    }
+  },
+  "VisionPrescription.identifier": [
+    {
+      "Identifier.system": {
+        "value": "http://www.happysight.com/prescription"
+      },
+      "Identifier.value": {
+        "value": "15014"
+      }
+    }
+  ],
+  "VisionPrescription.dateWritten": {
+    "value": "2014-06-15"
+  },
+  "VisionPrescription.patient": {
+    "Reference.reference": {
+      "value": "Patient/example"
+    },
+    "reference": "http://hl7.org/fhir//Patient/example"
+  },
+  "VisionPrescription.prescriber": {
+    "Reference.reference": {
+      "value": "Practitioner/example"
+    },
+    "reference": "http://hl7.org/fhir//Practitioner/example"
+  },
+  "VisionPrescription.dispense": [
+    {
+      "VisionPrescription.dispense.product": {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/ex-visionprescriptionproduct"
+        },
+        "Coding.code": {
+          "value": "contact"
+        }
+      },
+      "VisionPrescription.dispense.eye": {
+        "value": "right"
+      },
+      "VisionPrescription.dispense.cylinder": {
+        "value": -2.25
+      },
+      "VisionPrescription.dispense.axis": {
+        "value": 160
+      },
+      "VisionPrescription.dispense.add": {
+        "value": 1.75
+      },
+      "VisionPrescription.dispense.power": {
+        "value": -2.75
+      },
+      "VisionPrescription.dispense.backCurve": {
+        "value": 8.7
+      },
+      "VisionPrescription.dispense.diameter": {
+        "value": 14.0
+      },
+      "VisionPrescription.dispense.duration": {
+        "Quantity.value": {
+          "value": 1
+        },
+        "Quantity.unit": {
+          "value": "month"
+        },
+        "Quantity.system": {
+          "value": "http://unitsofmeasure.org"
+        },
+        "Quantity.code": {
+          "value": "month"
+        }
+      },
+      "VisionPrescription.dispense.color": {
+        "value": "green"
+      },
+      "VisionPrescription.dispense.brand": {
+        "value": "OphthaGuard"
+      }
+    },
+    {
+      "VisionPrescription.dispense.product": {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/ex-visionprescriptionproduct"
+        },
+        "Coding.code": {
+          "value": "contact"
+        }
+      },
+      "VisionPrescription.dispense.eye": {
+        "value": "left"
+      },
+      "VisionPrescription.dispense.cylinder": {
+        "value": -3.50
+      },
+      "VisionPrescription.dispense.axis": {
+        "value": 160
+      },
+      "VisionPrescription.dispense.add": {
+        "value": 1.75
+      },
+      "VisionPrescription.dispense.power": {
+        "value": -2.75
+      },
+      "VisionPrescription.dispense.backCurve": {
+        "value": 8.7
+      },
+      "VisionPrescription.dispense.diameter": {
+        "value": 14.0
+      },
+      "VisionPrescription.dispense.duration": {
+        "Quantity.value": {
+          "value": 1
+        },
+        "Quantity.unit": {
+          "value": "month"
+        },
+        "Quantity.system": {
+          "value": "http://unitsofmeasure.org"
+        },
+        "Quantity.code": {
+          "value": "month"
+        }
+      },
+      "VisionPrescription.dispense.color": {
+        "value": "green"
+      },
+      "VisionPrescription.dispense.brand": {
+        "value": "OphthaGuard"
+      }
+    }
+  ]
+}

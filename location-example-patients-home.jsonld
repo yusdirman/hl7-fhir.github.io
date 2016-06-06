@@ -1,0 +1,63 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Location",
+  "resourceType": "Location",
+  "Resource.id": {
+    "value": "ph"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Patient's Home</div>"
+    }
+  },
+  "Location.status": {
+    "value": "active"
+  },
+  "Location.name": {
+    "value": "Patient's Home"
+  },
+  "Location.description": {
+    "value": "Patient's Home"
+  },
+  "Location.mode": {
+    "value": "kind"
+  },
+  "Location.type": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/v3/RoleCode"
+        },
+        "Coding.code": {
+          "value": "PTRES"
+        },
+        "Coding.display": {
+          "value": "Patient's Residence"
+        }
+      }
+    ]
+  },
+  "Location.physicalType": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/location-physical-type"
+        },
+        "Coding.code": {
+          "value": "ho"
+        },
+        "Coding.display": {
+          "value": "House"
+        }
+      }
+    ]
+  },
+  "Location.managingOrganization": {
+    "Reference.reference": {
+      "value": "Organization/f001"
+    },
+    "reference": "http://hl7.org/fhir//Organization/f001"
+  }
+}

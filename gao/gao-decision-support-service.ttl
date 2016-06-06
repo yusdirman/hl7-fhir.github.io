@@ -1,0 +1,121 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Conformancegao-decision-support-service> a fhir:Conformance;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "gao-decision-support-service"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <h2>GAO Decision Support Service</h2>\n      <p>The Decision Support Service actor implements the $evaluate operation to determine      whether that an order is appropriate according to clinical guidelines.</p>\n      <table>\n        <tr>\n          <td>Mode</td>\n          <td>SERVER</td>\n        </tr>\n        <tr>\n          <td>Description</td>\n          <td/>\n        </tr>\n        <tr>\n          <td>Transaction</td>\n          <td/>\n        </tr>\n        <tr>\n          <td>System History</td>\n          <td/>\n        </tr>\n        <tr>\n          <td>System Search</td>\n          <td/>\n        </tr>\n      </table>\n      <table>\n        <tr>\n          <th>\n            <b>Resource Type</b>\n          </th>\n          <th>\n            <b>Profile</b>\n          </th>\n          <th>\n            <b>Read</b>\n          </th>\n          <th>\n            <b>V-Read</b>\n          </th>\n          <th>\n            <b>Search</b>\n          </th>\n          <th>\n            <b>Update</b>\n          </th>\n          <th>\n            <b>Updates</b>\n          </th>\n          <th>\n            <b>Create</b>\n          </th>\n          <th>\n            <b>Delete</b>\n          </th>\n          <th>\n            <b>History</b>\n          </th>\n        </tr>\n        <tr>\n          <td>Order</td>\n          <td>\n            <a href=\"http://hl7.org/fhir/StructureDefinition/gao-order\">http://hl7.org/fhir/StructureDefinition/gao-order</a>\n          </td>\n          <td>y</td>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n          <td/>\n        </tr>\n      </table>\n    </div>"
+  ];
+  fhir:Conformance.url [ fhir:value "http://hl7.org/fhir/Conformance/gao-decision-support-service"];
+  fhir:Conformance.name [ fhir:value "GAO Decision Support Service"];
+  fhir:Conformance.status [ fhir:value "draft"];
+  fhir:Conformance.experimental [ fhir:value "false"^^xsd:boolean];
+  fhir:Conformance.date [ fhir:value "2015-11-19"^^xsd:date];
+  fhir:Conformance.publisher [ fhir:value "HL7"];
+  fhir:Conformance.description [ fhir:value "The Decision Support Service actor implements the $evaluate operation to determine      whether that an order is appropriate according to clinical guidelines."];
+  fhir:Conformance.requirements [ fhir:value "A Decision Support actor must implement the requirements expressed in this conformance resource."];
+  fhir:Conformance.kind [ fhir:value "requirements"];
+  fhir:Conformance.fhirVersion [ fhir:value "1.4.0"];
+  fhir:Conformance.acceptUnknown [ fhir:value "extensions"];
+  fhir:Conformance.format [
+     fhir:value "xml";
+     fhir:index 0
+  ], [
+     fhir:value "json";
+     fhir:index 1
+  ];
+  fhir:Conformance.profile [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/StructureDefinition/gao-order>;
+     fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/StructureDefinition/gao-order" ]
+  ], [
+     fhir:index 1;
+     fhir:link <http://hl7.org/fhir/StructureDefinition/gao-diagnosticorder>;
+     fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/StructureDefinition/gao-diagnosticorder" ]
+  ], [
+     fhir:index 2;
+     fhir:link <http://hl7.org/fhir/StructureDefinition/gao-medicationorder>;
+     fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/StructureDefinition/gao-medicationorder" ]
+  ], [
+     fhir:index 3;
+     fhir:link <http://hl7.org/fhir/StructureDefinition/gao-referralrequest>;
+     fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/StructureDefinition/gao-referralrequest" ]
+  ], [
+     fhir:index 4;
+     fhir:link <http://hl7.org/fhir/StructureDefinition/gao-procedurerequest>;
+     fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/StructureDefinition/gao-procedurerequest" ]
+  ], [
+     fhir:index 5;
+     fhir:link <http://hl7.org/fhir/StructureDefinition/gao-result>;
+     fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/StructureDefinition/gao-result" ]
+  ], [
+     fhir:index 6;
+     fhir:link <http://hl7.org/fhir/StructureDefinition/gao-alternate>;
+     fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/StructureDefinition/gao-alternate" ]
+  ], [
+     fhir:index 7;
+     fhir:link <http://hl7.org/fhir/StructureDefinition/gao-questionnaire>;
+     fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/StructureDefinition/gao-questionnaire" ]
+  ], [
+     fhir:index 8;
+     fhir:link <http://hl7.org/fhir/StructureDefinition/gao-extension-signature>;
+     fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/StructureDefinition/gao-extension-signature" ]
+  ], [
+     fhir:index 9;
+     fhir:link <http://hl7.org/fhir/StructureDefinition/gao-extension-score>;
+     fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/StructureDefinition/gao-extension-score" ]
+  ], [
+     fhir:index 10;
+     fhir:link <http://hl7.org/fhir/StructureDefinition/gao-extension-item>;
+     fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/StructureDefinition/gao-extension-item" ]
+  ], [
+     fhir:index 11;
+     fhir:link <http://hl7.org/fhir/StructureDefinition/gao-extension-period>;
+     fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/StructureDefinition/gao-extension-period" ]
+  ], [
+     fhir:index 12;
+     fhir:link <http://hl7.org/fhir/StructureDefinition/gao-extension-guideline>;
+     fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/StructureDefinition/gao-extension-guideline" ]
+  ], [
+     fhir:index 13;
+     fhir:link <http://hl7.org/fhir/StructureDefinition/gao-extension-device>;
+     fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/StructureDefinition/gao-extension-device" ]
+  ], [
+     fhir:index 14;
+     fhir:link <http://hl7.org/fhir/StructureDefinition/gao-extension-practitioner>;
+     fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/StructureDefinition/gao-extension-practitioner" ]
+  ];
+  fhir:Conformance.rest [
+     fhir:index 0;
+     fhir:Conformance.rest.mode [ fhir:value "server" ];
+     fhir:Conformance.rest.resource [
+       fhir:index 0;
+       fhir:Conformance.rest.resource.type [ fhir:value "Order" ];
+       fhir:Conformance.rest.resource.profile [
+         fhir:link <http://hl7.org/fhir/StructureDefinition/gao-order>;
+         fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/StructureDefinition/gao-order" ]
+       ];
+       fhir:Conformance.rest.resource.interaction [
+         fhir:index 0;
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "read" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "A Decision Support Server must support the $evaluate operation on Order.             At present, there is no way to express this in the Interaction component in a compliance resource." ]
+       ]
+     ];
+     fhir:Conformance.rest.operation [
+       fhir:index 0;
+       fhir:Conformance.rest.operation.name [ fhir:value "GAO Evaluate Order" ];
+       fhir:Conformance.rest.operation.definition [
+         fhir:link <http://hl7.org/fhir/OperationDefinition/gao-order-evaluate>;
+         fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/OperationDefinition/gao-order-evaluate" ]
+       ]
+     ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

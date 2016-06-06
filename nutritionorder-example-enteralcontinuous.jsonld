@@ -1,0 +1,201 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/NutritionOrder",
+  "resourceType": "NutritionOrder",
+  "Resource.id": {
+    "value": "enteralcontinuous"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: enteralcontinuous</p><p><b>identifier</b>: 123</p><p><b>status</b>: active</p><p><b>patient</b>: <a>Peter Chalmers</a></p><p><b>encounter</b>: <a>Inpatient</a></p><p><b>dateTime</b>: Sep 17, 2014</p><p><b>orderer</b>: <a>Dr Adam Careful</a></p><blockquote><p><b>enteralFormula</b></p><p><b>baseFormulaType</b>: Diabetic specialty enteral formula <span>(Details : {http://snomed/sct code '6547210000124112' = '??', given as 'Diabetic specialty enteral formula'})</span></p><p><b>baseFormulaProductName</b>:  Acme Diabetes Formula</p><p><b>caloricDensity</b>: 1 calories per milliliter<span> (Details: http://unitsofmeasure.org code cal/mL = 'cal/mL')</span></p><p><b>routeofAdministration</b>: Instillation, nasogastric tube <span>(Details : {http://hl7.org/fhir/v3/RouteOfAdministration code 'NGT' = 'Instillation, nasogastric tube', given as 'Instillation, nasogastric tube'})</span></p><blockquote><p><b>administration</b></p><p><b>schedule</b>: Starting Sep 17, 2014 7:00:00 AM, Do Once</p><p><b>rate</b>: 60 ml/hr<span> (Details: http://unitsofmeasure.org code mL/h = 'mL/h')</span></p></blockquote><blockquote><p><b>administration</b></p><p><b>schedule</b>: Starting Sep 17, 2014 11:00:00 AM, Do Once</p><p><b>rate</b>: 80 ml/hr<span> (Details: http://unitsofmeasure.org code mL/h = 'mL/h')</span></p></blockquote><blockquote><p><b>administration</b></p><p><b>schedule</b>: Starting Sep 17, 2014 3:00:00 PM, Do Once</p><p><b>rate</b>: 100 ml/hr<span> (Details: http://unitsofmeasure.org code mL/h = 'mL/h')</span></p></blockquote><p><b>maxVolumeToDeliver</b>: 880 milliliter/day<span> (Details: http://unitsofmeasure.org code mL/d = 'mL/d')</span></p><p><b>administrationInstruction</b>: Hold feedings from 7 pm to 7 am. Add MCT oil to increase calories from 1.0 cal/mL to 1.5 cal/mL</p></blockquote></div>"
+    }
+  },
+  "NutritionOrder.identifier": [
+    {
+      "Identifier.system": {
+        "value": "http://www.acme.org/nutritionorders"
+      },
+      "Identifier.value": {
+        "value": "123"
+      }
+    }
+  ],
+  "NutritionOrder.status": {
+    "value": "active"
+  },
+  "NutritionOrder.patient": {
+    "Reference.reference": {
+      "value": "Patient/example"
+    },
+    "Reference.display": {
+      "value": "Peter Chalmers"
+    },
+    "reference": "http://hl7.org/fhir//Patient/example"
+  },
+  "NutritionOrder.encounter": {
+    "Reference.reference": {
+      "value": "Encounter/example"
+    },
+    "Reference.display": {
+      "value": "Inpatient"
+    },
+    "reference": "http://hl7.org/fhir//Encounter/example"
+  },
+  "NutritionOrder.dateTime": {
+    "value": "2014-09-17"
+  },
+  "NutritionOrder.orderer": {
+    "Reference.reference": {
+      "value": "Practitioner/example"
+    },
+    "Reference.display": {
+      "value": "Dr Adam Careful"
+    },
+    "reference": "http://hl7.org/fhir//Practitioner/example"
+  },
+  "NutritionOrder.enteralFormula": {
+    "NutritionOrder.enteralFormula.baseFormulaType": {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "value": "http://snomed/sct"
+          },
+          "Coding.code": {
+            "value": "6547210000124112"
+          },
+          "Coding.display": {
+            "value": "Diabetic specialty enteral formula"
+          }
+        }
+      ]
+    },
+    "NutritionOrder.enteralFormula.baseFormulaProductName": {
+      "value": " Acme Diabetes Formula"
+    },
+    "NutritionOrder.enteralFormula.caloricDensity": {
+      "Quantity.value": {
+        "value": 1
+      },
+      "Quantity.unit": {
+        "value": "calories per milliliter"
+      },
+      "Quantity.system": {
+        "value": "http://unitsofmeasure.org"
+      },
+      "Quantity.code": {
+        "value": "cal/mL"
+      }
+    },
+    "NutritionOrder.enteralFormula.routeofAdministration": {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "value": "http://hl7.org/fhir/v3/RouteOfAdministration"
+          },
+          "Coding.code": {
+            "value": "NGT"
+          },
+          "Coding.display": {
+            "value": "Instillation, nasogastric tube"
+          }
+        }
+      ]
+    },
+    "NutritionOrder.enteralFormula.administration": [
+      {
+        "NutritionOrder.enteralFormula.administration.schedule": {
+          "Timing.repeat": {
+            "Timing.repeat.boundsPeriod": {
+              "Period.start": {
+                "value": "2014-09-17T07:00:00Z"
+              }
+            }
+          }
+        },
+        "NutritionOrder.enteralFormula.administration.rateQuantity": {
+          "Quantity.value": {
+            "value": 60
+          },
+          "Quantity.unit": {
+            "value": "ml/hr"
+          },
+          "Quantity.system": {
+            "value": "http://unitsofmeasure.org"
+          },
+          "Quantity.code": {
+            "value": "mL/h"
+          }
+        }
+      },
+      {
+        "NutritionOrder.enteralFormula.administration.schedule": {
+          "Timing.repeat": {
+            "Timing.repeat.boundsPeriod": {
+              "Period.start": {
+                "value": "2014-09-17T11:00:00Z"
+              }
+            }
+          }
+        },
+        "NutritionOrder.enteralFormula.administration.rateQuantity": {
+          "Quantity.value": {
+            "value": 80
+          },
+          "Quantity.unit": {
+            "value": "ml/hr"
+          },
+          "Quantity.system": {
+            "value": "http://unitsofmeasure.org"
+          },
+          "Quantity.code": {
+            "value": "mL/h"
+          }
+        }
+      },
+      {
+        "NutritionOrder.enteralFormula.administration.schedule": {
+          "Timing.repeat": {
+            "Timing.repeat.boundsPeriod": {
+              "Period.start": {
+                "value": "2014-09-17T15:00:00Z"
+              }
+            }
+          }
+        },
+        "NutritionOrder.enteralFormula.administration.rateQuantity": {
+          "Quantity.value": {
+            "value": 100
+          },
+          "Quantity.unit": {
+            "value": "ml/hr"
+          },
+          "Quantity.system": {
+            "value": "http://unitsofmeasure.org"
+          },
+          "Quantity.code": {
+            "value": "mL/h"
+          }
+        }
+      }
+    ],
+    "NutritionOrder.enteralFormula.maxVolumeToDeliver": {
+      "Quantity.value": {
+        "value": 880
+      },
+      "Quantity.unit": {
+        "value": "milliliter/day"
+      },
+      "Quantity.system": {
+        "value": "http://unitsofmeasure.org"
+      },
+      "Quantity.code": {
+        "value": "mL/d"
+      }
+    },
+    "NutritionOrder.enteralFormula.administrationInstruction": {
+      "value": "Hold feedings from 7 pm to 7 am. Add MCT oil to increase calories from 1.0 cal/mL to 1.5 cal/mL"
+    }
+  }
+}

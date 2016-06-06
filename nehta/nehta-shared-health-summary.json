@@ -1,0 +1,1551 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "SharedHealthSummary",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">to do</div>"
+  },
+  "url": "http://hl7.org/fhir/StructureDefinition/SharedHealthSummary",
+  "name": "SharedHealthSummary",
+  "display": "nehta-shared-health-summary",
+  "status": "draft",
+  "publisher": "Health Level Seven International fhir",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "other",
+          "value": "http://hl7.org/fhir"
+        }
+      ]
+    }
+  ],
+  "date": "2016-06-06T20:14:04+00:00",
+  "description": "Logical Model: A clinical document written by the nominated provider, which contains key pieces of information about an individual’s health status and is useful to a wide range of providers in assessing individuals and delivering care. (PCEHR Concept of Operations document).",
+  "fhirVersion": "1.4.0",
+  "mapping": [
+    {
+      "identity": "logical",
+      "uri": "http://hl7.org/fhir/logical",
+      "name": "Logical Mapping"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "snapshot": {
+    "element": [
+      {
+        "path": "SharedHealthSummary",
+        "short": "Shared Health Summary",
+        "definition": "A clinical document written by the nominated provider, which contains key pieces of information about an individual’s health status and is useful to a wide range of providers in assessing individuals and delivering care. (PCEHR Concept of Operations document).",
+        "min": 0,
+        "max": "*",
+        "mapping": [
+          {
+            "identity": "logical",
+            "map": "for src make thing as tgt = create(Composition), tgt.code = concept(\"LOINC\", \"60591-5\")"
+          }
+        ]
+      },
+      {
+        "extension": [
+          {
+            "extension": [
+              {
+                "url": "index",
+                "valueString": "1"
+              },
+              {
+                "url": "exValue",
+                "valueReference": {
+                  "reference": "Patient/nehta"
+                }
+              }
+            ],
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-example"
+          },
+          {
+            "extension": [
+              {
+                "url": "index",
+                "valueString": "2"
+              },
+              {
+                "url": "exValue",
+                "valueReference": {
+                  "reference": "Patient/nehta"
+                }
+              }
+            ],
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-example"
+          }
+        ],
+        "path": "SharedHealthSummary.subjectofCare",
+        "short": "Subject of Care",
+        "definition": "Person who receives healthcare services.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "logical",
+            "map": "for src.subjectofCare as x make tgt.subject = x"
+          }
+        ]
+      },
+      {
+        "extension": [
+          {
+            "extension": [
+              {
+                "url": "index",
+                "valueString": "1"
+              },
+              {
+                "url": "exValue",
+                "valueReference": {
+                  "reference": "Practitioner/nehta"
+                }
+              }
+            ],
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-example"
+          },
+          {
+            "extension": [
+              {
+                "url": "index",
+                "valueString": "2"
+              },
+              {
+                "url": "exValue",
+                "valueReference": {
+                  "reference": "Practitioner/nehta"
+                }
+              }
+            ],
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-example"
+          }
+        ],
+        "path": "SharedHealthSummary.documentAuthor",
+        "short": "Document Author",
+        "definition": "Composer of the document.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
+          },
+          {
+            "code": "Reference",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/Practitioner"
+            ]
+          },
+          {
+            "code": "Reference",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
+            ]
+          },
+          {
+            "code": "Reference",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/Device"
+            ]
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "logical",
+            "map": "for src.documentAuthor as x make tgt.author = x\nfor src.documentAuthor as xa make tgt.attestor as y = x, y.party = xa"
+          }
+        ]
+      },
+      {
+        "extension": [
+          {
+            "extension": [
+              {
+                "url": "index",
+                "valueString": "1"
+              },
+              {
+                "url": "exValue",
+                "valueIdentifier": {
+                  "system": "urn:ietf:rfc:3986",
+                  "value": "7eeab8cd-9afe-478f-bdac-348e664ff452"
+                }
+              }
+            ],
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-example"
+          },
+          {
+            "extension": [
+              {
+                "url": "index",
+                "valueString": "2"
+              },
+              {
+                "url": "exValue",
+                "valueIdentifier": {
+                  "system": "urn:ietf:rfc:3986",
+                  "value": "58516afb-2e35-4c64-b880-0cb214f30103"
+                }
+              }
+            ],
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-example"
+          }
+        ],
+        "path": "SharedHealthSummary.documentType",
+        "short": "Document Type",
+        "definition": "Type of document.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "logical",
+            "map": "for srcdocumentType make tgt.identifier then by type"
+          }
+        ]
+      },
+      {
+        "extension": [
+          {
+            "extension": [
+              {
+                "url": "index",
+                "valueString": "1"
+              },
+              {
+                "url": "exValue",
+                "valueDateTime": "2015-07-22T15:32:20+10:00"
+              }
+            ],
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-example"
+          },
+          {
+            "extension": [
+              {
+                "url": "index",
+                "valueString": "2"
+              },
+              {
+                "url": "exValue",
+                "valueDateTime": "2015-07-22T15:32:20+10:00"
+              }
+            ],
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-example"
+          }
+        ],
+        "path": "SharedHealthSummary.dateTimeAttested",
+        "short": "DateTime Attested",
+        "definition": "The date and time that the document author or document authoriser or approver confirms that a document is complete and genuine.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "logical",
+            "map": "for src.dateTimeAttested as x make tgt.date = x"
+          }
+        ]
+      },
+      {
+        "path": "SharedHealthSummary.adverseReactions",
+        "short": "Adverse Reactions",
+        "definition": "Information about adverse reactions of the patient (including allergies and intolerances), and any relevant reaction details. This includes statements about adverse reactions that need to be positively recorded as absent or excluded.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "logical",
+            "map": "for src.adverseReactions as ar make tgt.section as sct1, sct1.title = \"Adverse Reactions\", sct1.code= concept(\"nehta-sct\" : \"101.20113\")"
+          }
+        ]
+      },
+      {
+        "path": "SharedHealthSummary.adverseReactions.exclusionStatementAdverseReactions",
+        "short": "Exclusion Statement - Adverse Reactions",
+        "definition": "Statements about adverse reactions that need to be positively recorded as absent or excluded.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "logical",
+            "map": "for ar.exclusionStatementAdverseReactions as arex then by vars"
+          }
+        ]
+      },
+      {
+        "extension": [
+          {
+            "extension": [
+              {
+                "url": "index",
+                "valueString": "2"
+              },
+              {
+                "url": "exValue",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/global-statement-values",
+                      "code": "03"
+                    }
+                  ]
+                }
+              }
+            ],
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-example"
+          }
+        ],
+        "path": "SharedHealthSummary.adverseReactions.exclusionStatementAdverseReactions.globalStatement",
+        "short": "Global Statement",
+        "definition": "The statement about the absence or exclusion.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "The set of values for the global statements about the exclusion.",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/nehta-global-statement-values"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "logical",
+            "map": "for arex as x make  sct1.emptyReason = x"
+          }
+        ]
+      },
+      {
+        "path": "SharedHealthSummary.adverseReactions.adverseReaction",
+        "short": "Adverse Reaction",
+        "definition": "A harmful or undesirable effect associated with exposure to any substance or agent.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "logical",
+            "map": "for ar.adverseReasion make ai as ai = create(\"AllergyIntolerance\"), sct1.entry = pointer(ai)"
+          }
+        ]
+      },
+      {
+        "extension": [
+          {
+            "extension": [
+              {
+                "url": "index",
+                "valueString": "1"
+              },
+              {
+                "url": "exValue",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "285599002"
+                    }
+                  ]
+                }
+              }
+            ],
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-example"
+          }
+        ],
+        "path": "SharedHealthSummary.adverseReactions.adverseReaction.substanceAgent",
+        "short": "Substance/Agent",
+        "definition": "Identification of a substance, agent, or a class of substance, that is considered to be responsible for the adverse reaction.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "preferred",
+          "description": "The set of values for the agent or substance causing the adverse reaction experienced by the subject of care.",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/nehta-nehta-SubstanceAgentValues"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "logical",
+            "map": "for ai.substanceAgent as x make ai.substance = x"
+          }
+        ]
+      },
+      {
+        "path": "SharedHealthSummary.adverseReactions.adverseReaction.event",
+        "short": "Reaction Event",
+        "definition": "Details about each adverse reaction event.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "logical",
+            "map": "for  ai.event as ev make ai.reaction as air then by vars"
+          }
+        ]
+      },
+      {
+        "extension": [
+          {
+            "extension": [
+              {
+                "url": "index",
+                "valueString": "1"
+              },
+              {
+                "url": "exValue",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "20262006"
+                    }
+                  ]
+                }
+              }
+            ],
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-example"
+          }
+        ],
+        "path": "SharedHealthSummary.adverseReactions.adverseReaction.event.manifestation",
+        "short": "Manifestation",
+        "definition": "Presentation or exhibition of signs and symptoms of the adverse reaction expressed as a single word, phrase or brief description.",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "preferred",
+          "description": "The set of values for recording clinical manifestation of an adverse reaction.",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/nehta-nehta-ClinicalManifestationValues"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "logical",
+            "map": "for ev.manifestation as x make air.manifestation = x"
+          }
+        ]
+      },
+      {
+        "extension": [
+          {
+            "extension": [
+              {
+                "url": "index",
+                "valueString": "1"
+              },
+              {
+                "url": "exValue",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "419076005"
+                    }
+                  ]
+                }
+              }
+            ],
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-example"
+          }
+        ],
+        "path": "SharedHealthSummary.adverseReactions.adverseReaction.event.reactionType",
+        "short": "Reaction Type",
+        "definition": "The type of reaction, as determined by the clinician.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "example",
+          "description": "The set of values for the type of adverse reaction."
+        },
+        "mapping": [
+          {
+            "identity": "logical",
+            "map": "for ev.reactionType as x make ai.type as x {only-one}"
+          }
+        ]
+      },
+      {
+        "path": "SharedHealthSummary.medicationOrders",
+        "short": "Medication Orders",
+        "definition": "Medicines that the subject of care is using.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "logical",
+            "map": "for src.medicationOrders as mo make tgt.section as sct2, sct2.title = \"Medication Orders\", sct2.code= concept(\"nehta-sct\" : \"101.16146\")"
+          }
+        ]
+      },
+      {
+        "path": "SharedHealthSummary.medicationOrders.exclusionStatementMedications",
+        "short": "Exclusion Statement - Medications",
+        "definition": "Statement to positively assert that the patient has not been prescribed or is not taking certain medication.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "logical",
+            "map": "for mo.exclusionStatementMedications as moex then by vars"
+          }
+        ]
+      },
+      {
+        "extension": [
+          {
+            "extension": [
+              {
+                "url": "index",
+                "valueString": "2"
+              },
+              {
+                "url": "exValue",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/global-statement-values",
+                      "code": "01"
+                    }
+                  ]
+                }
+              }
+            ],
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-example"
+          }
+        ],
+        "path": "SharedHealthSummary.medicationOrders.exclusionStatementMedications.globalStatement",
+        "short": "Global Statement",
+        "definition": "The statement about the absence or exclusion of certain medication.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "The set of values for the global statements about the exclusion.",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/nehta-global-statement-values"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "logical",
+            "map": "for moex as x make sct2.emptyReason = x"
+          }
+        ]
+      },
+      {
+        "path": "SharedHealthSummary.medicationOrders.medicationInstruction",
+        "short": "Medication Instruction",
+        "definition": "Information pertaining to one or more therapeutic goods that is represented to achieve, or is likely to achieve, its principal intended action by pharmacological, chemical, immunological or metabolic means in or on the body of a human.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "logical",
+            "map": "for mo.medicationInstruction as moi make ms as ms = create(\"MedicationStatement\"), sct2.entry = pointer(ms)"
+          }
+        ]
+      },
+      {
+        "extension": [
+          {
+            "extension": [
+              {
+                "url": "index",
+                "valueString": "1"
+              },
+              {
+                "url": "exValue",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://nehta.gov.au/amtv2",
+                      "code": "5884011000036107"
+                    }
+                  ]
+                }
+              }
+            ],
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-example"
+          }
+        ],
+        "path": "SharedHealthSummary.medicationOrders.medicationInstruction.therapeuticGoodIdentification",
+        "short": "Therapeutic Good Identification",
+        "definition": "The medicine, vaccine or other therapeutic good being ordered for, administered to or used by the subject of care.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "preferred",
+          "description": "A set of values used to refer to medicines and other therapeutic goods.",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/nehta-nehta-MedicinesTerminology"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "logical",
+            "map": "for moi.therapeuticGoodIdentification as x make ms.medicationCodeableConcept = x"
+          }
+        ]
+      },
+      {
+        "extension": [
+          {
+            "extension": [
+              {
+                "url": "index",
+                "valueString": "1"
+              },
+              {
+                "url": "exValue",
+                "valueString": "2 tablets once daily oral"
+              }
+            ],
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-example"
+          }
+        ],
+        "path": "SharedHealthSummary.medicationOrders.medicationInstruction.directions",
+        "short": "Directions",
+        "definition": "A complete narrative description of how much, when and how to use the medicine, vaccine or other therapeutic good.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "logical",
+            "map": "for moi.directions as moid make ms.dosage as msd, msd.text = moid"
+          }
+        ]
+      },
+      {
+        "extension": [
+          {
+            "extension": [
+              {
+                "url": "index",
+                "valueString": "1"
+              },
+              {
+                "url": "exValue",
+                "valueString": "Diuretic induced hypokalemia"
+              }
+            ],
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-example"
+          }
+        ],
+        "path": "SharedHealthSummary.medicationOrders.medicationInstruction.clinicalIndication",
+        "short": "Clinical Indication",
+        "definition": "Reason for ordering the medicine, vaccine or other therapeutic good.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "logical",
+            "map": "for moi.clinicalIndication as moic make ms.reasonForUseCodeableConcept as ru, ru.text = moic"
+          }
+        ]
+      },
+      {
+        "extension": [
+          {
+            "extension": [
+              {
+                "url": "index",
+                "valueString": "1"
+              },
+              {
+                "url": "exValue",
+                "valueString": "Taken with food"
+              }
+            ],
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-example"
+          }
+        ],
+        "path": "SharedHealthSummary.medicationOrders.medicationInstruction.comment",
+        "short": "Medication Instruction Comment",
+        "definition": "Any additional information that may be needed to ensure the continuity of supply, rationale for current dose and timing, or safe and appropriate use.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "logical",
+            "map": "for moi.comment as x make ms.note = x"
+          }
+        ]
+      },
+      {
+        "path": "SharedHealthSummary.medicalHistory",
+        "short": "Medical History",
+        "definition": "The history of the subject of care's problems, diagnoses and medical or surgical procedures.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "logical",
+            "map": "for src.medicalHistory as mh make tgt.section as sct3, sct3.title = \"Medical History\", sct3.code= concept(\"nehta-sct\" : \"101.16117\")"
+          }
+        ]
+      },
+      {
+        "path": "SharedHealthSummary.medicalHistory.problemDiagnosis",
+        "short": "Problem/Diagnosis",
+        "definition": "A health condition that, as determined by a clinician, may have impact on the physical, mental or social well-being of a person. A diagnosis is determined by scientific evaluation of pathological and pathophysiological findings identified from the patient's clinical history, family history, physical examination and diagnostic investigations.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "logical",
+            "map": "for mh.problemDiagnosis as pd make cnd as cnd = create(\"Condition\"), sct3.entry = pointer(cnd)"
+          }
+        ]
+      },
+      {
+        "extension": [
+          {
+            "extension": [
+              {
+                "url": "index",
+                "valueString": "1"
+              },
+              {
+                "url": "exValue",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "57883007"
+                    }
+                  ]
+                }
+              }
+            ],
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-example"
+          }
+        ],
+        "path": "SharedHealthSummary.medicalHistory.problemDiagnosis.identification",
+        "short": "Problem/Diagnosis Identification",
+        "definition": "Identification of the problem or diagnosis.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "example",
+          "description": "The Problem/Diagnosis reference set provides terminology to support the recording of a subject of care problem or diagnosis for medical records within Australia."
+        },
+        "mapping": [
+          {
+            "identity": "logical",
+            "map": "for pd.identitification as x make cnd.code = x"
+          }
+        ]
+      },
+      {
+        "extension": [
+          {
+            "extension": [
+              {
+                "url": "index",
+                "valueString": "1"
+              },
+              {
+                "url": "exValue",
+                "valueDateTime": "2013-07-22"
+              }
+            ],
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-example"
+          }
+        ],
+        "path": "SharedHealthSummary.medicalHistory.problemDiagnosis.dateofOnset",
+        "short": "Date of Onset",
+        "definition": "Estimated or actual date the problem or diagnosis began, as indicated or identified by the clinician.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "logical",
+            "map": "for pd.dateOfOnset as x make cnd.onsetDateTime = x"
+          }
+        ]
+      },
+      {
+        "extension": [
+          {
+            "extension": [
+              {
+                "url": "index",
+                "valueString": "1"
+              },
+              {
+                "url": "exValue",
+                "valueDateTime": "2014-07-22"
+              }
+            ],
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-example"
+          }
+        ],
+        "path": "SharedHealthSummary.medicalHistory.problemDiagnosis.dateofResolutionRemission",
+        "short": "Date of Resolution/Remission",
+        "definition": "Estimated or actual date the problem or diagnosis resolved or went into remission, as indicated or identified by the clinician.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "logical",
+            "map": "for pd.dateOfResolutionRemission as x make cnd.abatementDate = x"
+          }
+        ]
+      },
+      {
+        "extension": [
+          {
+            "extension": [
+              {
+                "url": "index",
+                "valueString": "1"
+              },
+              {
+                "url": "exValue",
+                "valueString": "Solved this"
+              }
+            ],
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-example"
+          }
+        ],
+        "path": "SharedHealthSummary.medicalHistory.problemDiagnosis.comment",
+        "short": "Problem/Diagnosis Comment",
+        "definition": "Additional narrative about the problem or diagnosis not captured in other fields.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "logical",
+            "map": "for pd.comment as x make cnd.notes = x"
+          }
+        ]
+      },
+      {
+        "path": "SharedHealthSummary.medicalHistory.exclusionStatementProblemsandDiagnoses",
+        "short": "Exclusion Statement - Problems and Diagnoses",
+        "definition": "Statements which positively assert that the patient does not have the problem or diagnosis.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "logical",
+            "map": "for pd.exclusionStatementProblemsandDiagnoses as pdex then by vars"
+          }
+        ]
+      },
+      {
+        "extension": [
+          {
+            "extension": [
+              {
+                "url": "index",
+                "valueString": "2"
+              },
+              {
+                "url": "exValue",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/global-statement-values",
+                      "code": "01"
+                    }
+                  ]
+                }
+              }
+            ],
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-example"
+          }
+        ],
+        "path": "SharedHealthSummary.medicalHistory.exclusionStatementProblemsandDiagnoses.globalStatement",
+        "short": "Global Statement",
+        "definition": "The statement about the absence or exclusion.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "The set of values for the global statements about the exclusion.",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/nehta-global-statement-values"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "logical",
+            "map": "for pdex as x make sct3.emptyReason = x"
+          }
+        ]
+      },
+      {
+        "path": "SharedHealthSummary.medicalHistory.procedure",
+        "short": "Procedure",
+        "definition": "A clinical activity carried out for therapeutic, evaluative, investigative, screening or diagnostic purposes.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "logical",
+            "map": "for mh.procedure as pr make cndp as cndp = create(\"Condition\"), sct3.entry = pointer(cndp)"
+          }
+        ]
+      },
+      {
+        "extension": [
+          {
+            "extension": [
+              {
+                "url": "index",
+                "valueString": "1"
+              },
+              {
+                "url": "exValue",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "301040004"
+                    }
+                  ]
+                }
+              }
+            ],
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-example"
+          }
+        ],
+        "path": "SharedHealthSummary.medicalHistory.procedure.name",
+        "short": "Procedure Name",
+        "definition": "The name of the procedure (to be) performed.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "example",
+          "description": "The Procedure foundation reference set provides the broadest possible terminology to support the recording of clinical interventions in Australian eHealth implementations."
+        },
+        "mapping": [
+          {
+            "identity": "logical",
+            "map": "for pd.name as x make cndp.code = x"
+          }
+        ]
+      },
+      {
+        "extension": [
+          {
+            "extension": [
+              {
+                "url": "index",
+                "valueString": "1"
+              },
+              {
+                "url": "exValue",
+                "valueString": "L Procedure Comment"
+              }
+            ],
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-example"
+          }
+        ],
+        "path": "SharedHealthSummary.medicalHistory.procedure.comment",
+        "short": "Procedure Comment",
+        "definition": "Additional narrative about the procedure not captured in other fields.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "logical",
+            "map": "for pd.comment as x make cndp.notes = x"
+          }
+        ]
+      },
+      {
+        "extension": [
+          {
+            "extension": [
+              {
+                "url": "index",
+                "valueString": "1"
+              },
+              {
+                "url": "exValue",
+                "valuePeriod": {
+                  "start": "2014-06-15",
+                  "end": "2014-06-17"
+                }
+              }
+            ],
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-example"
+          }
+        ],
+        "path": "SharedHealthSummary.medicalHistory.procedure.dateTime",
+        "short": "Procedure DateTime",
+        "definition": "Date, and optionally time, of the Procedure action.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Period"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "logical",
+            "map": "for pr.dateTime as x make cndp.onsetDateTime = x"
+          }
+        ]
+      },
+      {
+        "path": "SharedHealthSummary.medicalHistory.exclusionStatementProcedures",
+        "short": "Exclusion Statement - Procedures",
+        "definition": "Statements to positively assert that a certain procedure has not been performed on the patient.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "logical",
+            "map": "for mh.exclusionStatementProcedures as prex then by vars"
+          }
+        ]
+      },
+      {
+        "extension": [
+          {
+            "extension": [
+              {
+                "url": "index",
+                "valueString": "2"
+              },
+              {
+                "url": "exValue",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/global-statement-values",
+                      "code": "02"
+                    }
+                  ]
+                }
+              }
+            ],
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-example"
+          }
+        ],
+        "path": "SharedHealthSummary.medicalHistory.exclusionStatementProcedures.globalStatement",
+        "short": "Global Statement",
+        "definition": "The statement about the absence or exclusion of procedure performed on the patient.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "The set of values for the global statements about the exclusion.",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/nehta-global-statement-values"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "logical",
+            "map": "for prex as x make sct3.emptyReason = x"
+          }
+        ]
+      },
+      {
+        "path": "SharedHealthSummary.medicalHistory.uncategorisedMedicalHistoryItem",
+        "short": "Uncategorised Medical History Item",
+        "definition": "A medical history entry that has not been categorised as either Procedure or Problem/Diagnosis .",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "logical",
+            "map": "for mh.uncategorisedMedicalHistoryItem as item make cndi as cndp = create(\"Condition\"), sct3.entry = pointer(cndi) then by vars"
+          }
+        ]
+      },
+      {
+        "extension": [
+          {
+            "extension": [
+              {
+                "url": "index",
+                "valueString": "1"
+              },
+              {
+                "url": "exValue",
+                "valueString": "Uncategorised Medical History item description"
+              }
+            ],
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-example"
+          }
+        ],
+        "path": "SharedHealthSummary.medicalHistory.uncategorisedMedicalHistoryItem.description",
+        "short": "Medical History Item Description",
+        "definition": "A description of the problem, diagnosis or procedure as a medical history item.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "logical",
+            "map": "for item.description as x make cndi.code as y, y.text = x"
+          }
+        ]
+      },
+      {
+        "extension": [
+          {
+            "extension": [
+              {
+                "url": "index",
+                "valueString": "1"
+              },
+              {
+                "url": "exValue",
+                "valuePeriod": {
+                  "start": "2014-06-17"
+                }
+              }
+            ],
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-example"
+          }
+        ],
+        "path": "SharedHealthSummary.medicalHistory.uncategorisedMedicalHistoryItem.timeInterval",
+        "short": "Medical History Item TimeInterval",
+        "definition": "The date range during which the problem or diagnosis applied or the procedure occurred.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Period"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "logical",
+            "map": "for item.timeInterval as ti then by vars\nfor ti.start as x make cndi.onsetDateTime = x\nfor ti.end as x make cndi.abatementDate = x"
+          }
+        ]
+      },
+      {
+        "extension": [
+          {
+            "extension": [
+              {
+                "url": "index",
+                "valueString": "1"
+              },
+              {
+                "url": "exValue",
+                "valueString": "Item Comment"
+              }
+            ],
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-example"
+          }
+        ],
+        "path": "SharedHealthSummary.medicalHistory.uncategorisedMedicalHistoryItem.comment",
+        "short": "Medical History Item Comment",
+        "definition": "Additional narrative about the problem, diagnosis or procedure.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "logical",
+            "map": "for item.comment as x make cndi.notes = x"
+          }
+        ]
+      },
+      {
+        "path": "SharedHealthSummary.immunisations",
+        "short": "Immunisations",
+        "definition": "Information about vaccines given to the subject of care.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "logical",
+            "map": "for src.immunizations as imm make tgt.section as sct4, sct4.title = \"Immunization\", sct4.code= concept(\"nehta-sct\", \"101.16117)"
+          }
+        ]
+      },
+      {
+        "path": "SharedHealthSummary.immunisations.medicationAction",
+        "short": "Medication Action",
+        "definition": "The act of administering a dose of a vaccine to a person for the purpose of preventing or minimising the effects of a disease by producing immunity or to counter the effects of an infectious organism.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "logical",
+            "map": "for imm.medicationAction as ima make im as im = create(\"Immunization\"), sct4.entry = pointer(im)"
+          }
+        ]
+      },
+      {
+        "extension": [
+          {
+            "extension": [
+              {
+                "url": "index",
+                "valueString": "1"
+              },
+              {
+                "url": "exValue",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://nehta.gov.au/amtv2",
+                      "code": "74993011000036102"
+                    }
+                  ]
+                }
+              }
+            ],
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-example"
+          }
+        ],
+        "path": "SharedHealthSummary.immunisations.medicationAction.therapeuticGoodIdentification",
+        "short": "Therapeutic Good Identification",
+        "definition": "The medicine, vaccine or other therapeutic good being ordered for, administered to or used by the subject of care.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "preferred",
+          "description": "A set of values used to refer to medicines and other therapeutic goods.",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/nehta-nehta-MedicinesTerminology"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "logical",
+            "map": "for ima.therapeuticGoodIdentification as x make im.vaccineType = x"
+          }
+        ]
+      },
+      {
+        "extension": [
+          {
+            "extension": [
+              {
+                "url": "index",
+                "valueString": "1"
+              },
+              {
+                "url": "exValue",
+                "valueInteger": 1
+              }
+            ],
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-example"
+          }
+        ],
+        "path": "SharedHealthSummary.immunisations.medicationAction.sequenceNumber",
+        "short": "Sequence Number",
+        "definition": "The sequence number specific to the action being recorded.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "integer"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "logical",
+            "map": "for ima.sequenceNumber as x make im.vaccinationProtocol as vp, vp.doseSequence = x"
+          }
+        ]
+      },
+      {
+        "extension": [
+          {
+            "extension": [
+              {
+                "url": "index",
+                "valueString": "1"
+              },
+              {
+                "url": "exValue",
+                "valueDateTime": "2015-07-22T15:32:20+10:00"
+              }
+            ],
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-example"
+          }
+        ],
+        "path": "SharedHealthSummary.immunisations.medicationAction.dateTime",
+        "short": "Medication Action DateTime",
+        "definition": "Date, and optionally time, that the medication action is completed.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "logical",
+            "map": "for ima.dateTime as x make imm.date = x"
+          }
+        ]
+      },
+      {
+        "path": "SharedHealthSummary.immunisations.exclusionStatementMedications",
+        "short": "Exclusion Statement - Medications",
+        "definition": "Statements that positively assert that the patient has not received immunisations.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "logical",
+            "map": "for imm.exclusionStatementMedications  as imex then by vars"
+          }
+        ]
+      },
+      {
+        "extension": [
+          {
+            "extension": [
+              {
+                "url": "index",
+                "valueString": "2"
+              },
+              {
+                "url": "exValue",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/global-statement-values",
+                      "code": "03"
+                    }
+                  ]
+                }
+              }
+            ],
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-example"
+          }
+        ],
+        "path": "SharedHealthSummary.immunisations.exclusionStatementMedications.globalStatement",
+        "short": "Global Statement",
+        "definition": "The statement about the absence or exclusion of certain medication.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "The set of values for the global statements about the exclusion.",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/nehta-global-statement-values"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "logical",
+            "map": "for imex as x make sct4.emptyReason = x"
+          }
+        ]
+      }
+    ]
+  }
+}

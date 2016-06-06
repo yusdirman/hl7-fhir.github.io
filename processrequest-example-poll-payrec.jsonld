@@ -1,0 +1,50 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/ProcessRequest",
+  "resourceType": "ProcessRequest",
+  "Resource.id": {
+    "value": "1114"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">A human-readable rendering of the Poll ProcessRequest</div>"
+    }
+  },
+  "ProcessRequest.action": {
+    "value": "poll"
+  },
+  "ProcessRequest.identifier": [
+    {
+      "Identifier.system": {
+        "value": "http://happyvalley.com/processrequest"
+      },
+      "Identifier.value": {
+        "value": "114"
+      }
+    }
+  ],
+  "ProcessRequest.created": {
+    "value": "2014-08-16"
+  },
+  "ProcessRequest.organizationReference": {
+    "Reference.reference": {
+      "value": "Organization/1"
+    },
+    "reference": "http://hl7.org/fhir//Organization/1"
+  },
+  "ProcessRequest.include": [
+    {
+      "value": "Reconciliation"
+    }
+  ],
+  "ProcessRequest.period": {
+    "Period.start": {
+      "value": "2014-08-10"
+    },
+    "Period.end": {
+      "value": "2014-08-20"
+    }
+  }
+}

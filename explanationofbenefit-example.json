@@ -1,0 +1,103 @@
+{
+  "resourceType": "ExplanationOfBenefit",
+  "id": "EB3500",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">A human-readable rendering of the ExplanationOfBenefit</div>"
+  },
+  "identifier": [
+    {
+      "system": "http://www.BenefitsInc.com/fhir/explanationofbenefit",
+      "value": "987654321"
+    }
+  ],
+  "claimReference": {
+    "reference": "Claim/100150"
+  },
+  "type": "oral",
+  "created": "2014-08-16",
+  "outcome": {
+    "system": "http://hl7.org/fhir/remittanceoutcome",
+    "code": "complete"
+  },
+  "disposition": "Claim settled as per contract.",
+  "organizationReference": {
+    "reference": "Organization/2"
+  },
+  "patientReference": {
+    "reference": "Patient/pat1"
+  },
+  "coverage": {
+    "coverageReference": {
+      "reference": "Coverage/9876B1"
+    }
+  },
+  "item": [
+    {
+      "sequence": 1,
+      "type": {
+        "code": "service"
+      },
+      "careTeam": [
+        {
+          "providerReference": {
+            "reference": "Practitioner/example"
+          }
+        }
+      ],
+      "service": {
+        "system": "http://hl7.org/fhir/service-uscls",
+        "code": "1200"
+      },
+      "servicedDate": "2014-08-16",
+      "unitPrice": {
+        "value": 135.57,
+        "system": "urn:iso:std:iso:4217",
+        "code": "USD"
+      },
+      "net": {
+        "value": 135.57,
+        "system": "urn:iso:std:iso:4217",
+        "code": "USD"
+      },
+      "adjudication": [
+        {
+          "category": {
+            "code": "eligible"
+          },
+          "amount": {
+            "value": 120.00,
+            "system": "urn:iso:std:iso:4217",
+            "code": "USD"
+          }
+        },
+        {
+          "category": {
+            "code": "eligpercent"
+          },
+          "value": 0.80
+        },
+        {
+          "category": {
+            "code": "benefit"
+          },
+          "amount": {
+            "value": 96.00,
+            "system": "urn:iso:std:iso:4217",
+            "code": "USD"
+          }
+        }
+      ]
+    }
+  ],
+  "totalCost": {
+    "value": 135.57,
+    "system": "urn:iso:std:iso:4217",
+    "code": "USD"
+  },
+  "totalBenefit": {
+    "value": 96.00,
+    "system": "urn:iso:std:iso:4217",
+    "code": "USD"
+  }
+}

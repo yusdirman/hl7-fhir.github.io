@@ -1,0 +1,4236 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Bundle",
+  "resourceType": "Bundle",
+  "Resource.id": {
+    "value": "registry"
+  },
+  "Bundle.type": {
+    "value": "collection"
+  },
+  "Bundle.entry": [
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "http://hl7.org/fhir/NamingSystem/us-ssn"
+      },
+      "NamingSystem": [
+        {
+          "Resource.id": {
+            "value": "us-ssn"
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: us-ssn</p><p><b>name</b>: United States Social Security Number</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: Jul 31, 2015</p><p><b>publisher</b>: United States Social Security Administration</p><h3>Contacts</h3><table><tr><td>-</td><td><b>Telecom</b></td></tr><tr><td>*</td><td>http://www.ssa.gov/</td></tr></table><p><b>type</b>: Social Beneficiary Identifier <span>(Details : {http://hl7.org/fhir/identifier-type code 'SB' = 'Social Beneficiary Identifier)</span></p><p><b>description</b>: The SSN is represented in resources with dashes removed</p><p><b>useContext</b>: ?? <span>(Details : {urn:iso:std:iso:3166 code 'US' = '??)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: http://hl7.org/fhir/sid/us-ssn</p><p><b>preferred</b>: true</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.1</p></blockquote></div>"
+            }
+          },
+          "NamingSystem.name": {
+            "value": "United States Social Security Number"
+          },
+          "NamingSystem.status": {
+            "value": "active"
+          },
+          "NamingSystem.kind": {
+            "value": "identifier"
+          },
+          "NamingSystem.date": {
+            "value": "2015-07-31"
+          },
+          "NamingSystem.publisher": {
+            "value": "United States Social Security Administration"
+          },
+          "NamingSystem.contact": [
+            {
+              "NamingSystem.contact.telecom": [
+                {
+                  "ContactPoint.system": {
+                    "value": "other"
+                  },
+                  "ContactPoint.value": {
+                    "value": "http://www.ssa.gov/"
+                  }
+                }
+              ]
+            }
+          ],
+          "NamingSystem.type": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://hl7.org/fhir/identifier-type"
+                },
+                "Coding.code": {
+                  "value": "SB"
+                }
+              }
+            ]
+          },
+          "NamingSystem.description": {
+            "value": "The SSN is represented in resources with dashes removed"
+          },
+          "NamingSystem.useContext": [
+            {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "value": "urn:iso:std:iso:3166"
+                  },
+                  "Coding.code": {
+                    "value": "US"
+                  }
+                }
+              ]
+            }
+          ],
+          "NamingSystem.uniqueId": [
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "uri"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "http://hl7.org/fhir/sid/us-ssn"
+              },
+              "NamingSystem.uniqueId.preferred": {
+                "value": true
+              }
+            },
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "oid"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "2.16.840.1.113883.4.1"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "http://hl7.org/fhir/NamingSystem/us-npi"
+      },
+      "NamingSystem": [
+        {
+          "Resource.id": {
+            "value": "us-npi"
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: us-npi</p><p><b>name</b>: United States National Provider Identifier</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: Jul 31, 2015</p><p><b>publisher</b>: Centers for Medicare and Medicaid Services</p><h3>Contacts</h3><table><tr><td>-</td><td><b>Telecom</b></td></tr><tr><td>*</td><td>http://www.cms.gov/</td></tr></table><p><b>type</b>: Provider number <span>(Details : {http://hl7.org/fhir/v2/0203 code 'PRN' = 'Provider number)</span></p><p><b>useContext</b>: ?? <span>(Details : {urn:iso:std:iso:3166 code 'US' = '??)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: http://hl7.org/fhir/sid/us-npi</p><p><b>preferred</b>: true</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.6</p></blockquote></div>"
+            }
+          },
+          "NamingSystem.name": {
+            "value": "United States National Provider Identifier"
+          },
+          "NamingSystem.status": {
+            "value": "active"
+          },
+          "NamingSystem.kind": {
+            "value": "identifier"
+          },
+          "NamingSystem.date": {
+            "value": "2015-07-31"
+          },
+          "NamingSystem.publisher": {
+            "value": "Centers for Medicare and Medicaid Services"
+          },
+          "NamingSystem.contact": [
+            {
+              "NamingSystem.contact.telecom": [
+                {
+                  "ContactPoint.system": {
+                    "value": "other"
+                  },
+                  "ContactPoint.value": {
+                    "value": "http://www.cms.gov/"
+                  }
+                }
+              ]
+            }
+          ],
+          "NamingSystem.type": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://hl7.org/fhir/v2/0203"
+                },
+                "Coding.code": {
+                  "value": "PRN"
+                }
+              }
+            ]
+          },
+          "NamingSystem.useContext": [
+            {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "value": "urn:iso:std:iso:3166"
+                  },
+                  "Coding.code": {
+                    "value": "US"
+                  }
+                }
+              ]
+            }
+          ],
+          "NamingSystem.uniqueId": [
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "uri"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "http://hl7.org/fhir/sid/us-npi"
+              },
+              "NamingSystem.uniqueId.preferred": {
+                "value": true
+              }
+            },
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "oid"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "2.16.840.1.113883.4.6"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "http://hl7.org/fhir/NamingSystem/4.3.2"
+      },
+      "NamingSystem": [
+        {
+          "Resource.id": {
+            "value": "4.3.2"
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.2</p><p><b>name</b>: Alaska Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: Jul 3, 2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://hl7.org/fhir/v2/0203 code 'DL' = 'Driver's license number)</span></p><p><b>useContext</b>: ?? <span>(Details : {urn:iso:std:iso:3166 code 'US' = '??)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.2</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.2</p></blockquote></div>"
+            }
+          },
+          "NamingSystem.name": {
+            "value": "Alaska Driver's License"
+          },
+          "NamingSystem.status": {
+            "value": "active"
+          },
+          "NamingSystem.kind": {
+            "value": "identifier"
+          },
+          "NamingSystem.date": {
+            "value": "2015-07-03"
+          },
+          "NamingSystem.publisher": {
+            "value": "HL7 International"
+          },
+          "NamingSystem.type": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://hl7.org/fhir/v2/0203"
+                },
+                "Coding.code": {
+                  "value": "DL"
+                }
+              }
+            ]
+          },
+          "NamingSystem.useContext": [
+            {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "value": "urn:iso:std:iso:3166"
+                  },
+                  "Coding.code": {
+                    "value": "US"
+                  }
+                }
+              ]
+            }
+          ],
+          "NamingSystem.uniqueId": [
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "oid"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "2.16.840.1.113883.4.3.2"
+              }
+            },
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "uri"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "urn:oid:2.16.840.1.113883.4.3.2"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "http://hl7.org/fhir/NamingSystem/4.3.1"
+      },
+      "NamingSystem": [
+        {
+          "Resource.id": {
+            "value": "4.3.1"
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.1</p><p><b>name</b>: Alabama Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: Jul 3, 2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://hl7.org/fhir/v2/0203 code 'DL' = 'Driver's license number)</span></p><p><b>useContext</b>: ?? <span>(Details : {urn:iso:std:iso:3166 code 'US' = '??)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.1</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.1</p></blockquote></div>"
+            }
+          },
+          "NamingSystem.name": {
+            "value": "Alabama Driver's License"
+          },
+          "NamingSystem.status": {
+            "value": "active"
+          },
+          "NamingSystem.kind": {
+            "value": "identifier"
+          },
+          "NamingSystem.date": {
+            "value": "2015-07-03"
+          },
+          "NamingSystem.publisher": {
+            "value": "HL7 International"
+          },
+          "NamingSystem.type": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://hl7.org/fhir/v2/0203"
+                },
+                "Coding.code": {
+                  "value": "DL"
+                }
+              }
+            ]
+          },
+          "NamingSystem.useContext": [
+            {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "value": "urn:iso:std:iso:3166"
+                  },
+                  "Coding.code": {
+                    "value": "US"
+                  }
+                }
+              ]
+            }
+          ],
+          "NamingSystem.uniqueId": [
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "oid"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "2.16.840.1.113883.4.3.1"
+              }
+            },
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "uri"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "urn:oid:2.16.840.1.113883.4.3.1"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "http://hl7.org/fhir/NamingSystem/4.3.5"
+      },
+      "NamingSystem": [
+        {
+          "Resource.id": {
+            "value": "4.3.5"
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.5</p><p><b>name</b>: Arkansas Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: Jul 3, 2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://hl7.org/fhir/v2/0203 code 'DL' = 'Driver's license number)</span></p><p><b>useContext</b>: ?? <span>(Details : {urn:iso:std:iso:3166 code 'US' = '??)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.5</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.5</p></blockquote></div>"
+            }
+          },
+          "NamingSystem.name": {
+            "value": "Arkansas Driver's License"
+          },
+          "NamingSystem.status": {
+            "value": "active"
+          },
+          "NamingSystem.kind": {
+            "value": "identifier"
+          },
+          "NamingSystem.date": {
+            "value": "2015-07-03"
+          },
+          "NamingSystem.publisher": {
+            "value": "HL7 International"
+          },
+          "NamingSystem.type": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://hl7.org/fhir/v2/0203"
+                },
+                "Coding.code": {
+                  "value": "DL"
+                }
+              }
+            ]
+          },
+          "NamingSystem.useContext": [
+            {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "value": "urn:iso:std:iso:3166"
+                  },
+                  "Coding.code": {
+                    "value": "US"
+                  }
+                }
+              ]
+            }
+          ],
+          "NamingSystem.uniqueId": [
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "oid"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "2.16.840.1.113883.4.3.5"
+              }
+            },
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "uri"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "urn:oid:2.16.840.1.113883.4.3.5"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "http://hl7.org/fhir/NamingSystem/4.3.4"
+      },
+      "NamingSystem": [
+        {
+          "Resource.id": {
+            "value": "4.3.4"
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.4</p><p><b>name</b>: Arizona Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: Jul 3, 2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://hl7.org/fhir/v2/0203 code 'DL' = 'Driver's license number)</span></p><p><b>useContext</b>: ?? <span>(Details : {urn:iso:std:iso:3166 code 'US' = '??)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.4</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.4</p></blockquote></div>"
+            }
+          },
+          "NamingSystem.name": {
+            "value": "Arizona Driver's License"
+          },
+          "NamingSystem.status": {
+            "value": "active"
+          },
+          "NamingSystem.kind": {
+            "value": "identifier"
+          },
+          "NamingSystem.date": {
+            "value": "2015-07-03"
+          },
+          "NamingSystem.publisher": {
+            "value": "HL7 International"
+          },
+          "NamingSystem.type": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://hl7.org/fhir/v2/0203"
+                },
+                "Coding.code": {
+                  "value": "DL"
+                }
+              }
+            ]
+          },
+          "NamingSystem.useContext": [
+            {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "value": "urn:iso:std:iso:3166"
+                  },
+                  "Coding.code": {
+                    "value": "US"
+                  }
+                }
+              ]
+            }
+          ],
+          "NamingSystem.uniqueId": [
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "oid"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "2.16.840.1.113883.4.3.4"
+              }
+            },
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "uri"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "urn:oid:2.16.840.1.113883.4.3.4"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "http://hl7.org/fhir/NamingSystem/4.3.6"
+      },
+      "NamingSystem": [
+        {
+          "Resource.id": {
+            "value": "4.3.6"
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.6</p><p><b>name</b>: California Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: Jul 3, 2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://hl7.org/fhir/v2/0203 code 'DL' = 'Driver's license number)</span></p><p><b>useContext</b>: ?? <span>(Details : {urn:iso:std:iso:3166 code 'US' = '??)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.6</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.6</p></blockquote></div>"
+            }
+          },
+          "NamingSystem.name": {
+            "value": "California Driver's License"
+          },
+          "NamingSystem.status": {
+            "value": "active"
+          },
+          "NamingSystem.kind": {
+            "value": "identifier"
+          },
+          "NamingSystem.date": {
+            "value": "2015-07-03"
+          },
+          "NamingSystem.publisher": {
+            "value": "HL7 International"
+          },
+          "NamingSystem.type": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://hl7.org/fhir/v2/0203"
+                },
+                "Coding.code": {
+                  "value": "DL"
+                }
+              }
+            ]
+          },
+          "NamingSystem.useContext": [
+            {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "value": "urn:iso:std:iso:3166"
+                  },
+                  "Coding.code": {
+                    "value": "US"
+                  }
+                }
+              ]
+            }
+          ],
+          "NamingSystem.uniqueId": [
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "oid"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "2.16.840.1.113883.4.3.6"
+              }
+            },
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "uri"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "urn:oid:2.16.840.1.113883.4.3.6"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "http://hl7.org/fhir/NamingSystem/4.3.8"
+      },
+      "NamingSystem": [
+        {
+          "Resource.id": {
+            "value": "4.3.8"
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.8</p><p><b>name</b>: Colorado Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: Jul 3, 2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://hl7.org/fhir/v2/0203 code 'DL' = 'Driver's license number)</span></p><p><b>useContext</b>: ?? <span>(Details : {urn:iso:std:iso:3166 code 'US' = '??)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.8</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.8</p></blockquote></div>"
+            }
+          },
+          "NamingSystem.name": {
+            "value": "Colorado Driver's License"
+          },
+          "NamingSystem.status": {
+            "value": "active"
+          },
+          "NamingSystem.kind": {
+            "value": "identifier"
+          },
+          "NamingSystem.date": {
+            "value": "2015-07-03"
+          },
+          "NamingSystem.publisher": {
+            "value": "HL7 International"
+          },
+          "NamingSystem.type": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://hl7.org/fhir/v2/0203"
+                },
+                "Coding.code": {
+                  "value": "DL"
+                }
+              }
+            ]
+          },
+          "NamingSystem.useContext": [
+            {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "value": "urn:iso:std:iso:3166"
+                  },
+                  "Coding.code": {
+                    "value": "US"
+                  }
+                }
+              ]
+            }
+          ],
+          "NamingSystem.uniqueId": [
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "oid"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "2.16.840.1.113883.4.3.8"
+              }
+            },
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "uri"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "urn:oid:2.16.840.1.113883.4.3.8"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "http://hl7.org/fhir/NamingSystem/4.3.9"
+      },
+      "NamingSystem": [
+        {
+          "Resource.id": {
+            "value": "4.3.9"
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.9</p><p><b>name</b>: Connecticut Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: Jul 3, 2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://hl7.org/fhir/v2/0203 code 'DL' = 'Driver's license number)</span></p><p><b>useContext</b>: ?? <span>(Details : {urn:iso:std:iso:3166 code 'US' = '??)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.9</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.9</p></blockquote></div>"
+            }
+          },
+          "NamingSystem.name": {
+            "value": "Connecticut Driver's License"
+          },
+          "NamingSystem.status": {
+            "value": "active"
+          },
+          "NamingSystem.kind": {
+            "value": "identifier"
+          },
+          "NamingSystem.date": {
+            "value": "2015-07-03"
+          },
+          "NamingSystem.publisher": {
+            "value": "HL7 International"
+          },
+          "NamingSystem.type": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://hl7.org/fhir/v2/0203"
+                },
+                "Coding.code": {
+                  "value": "DL"
+                }
+              }
+            ]
+          },
+          "NamingSystem.useContext": [
+            {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "value": "urn:iso:std:iso:3166"
+                  },
+                  "Coding.code": {
+                    "value": "US"
+                  }
+                }
+              ]
+            }
+          ],
+          "NamingSystem.uniqueId": [
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "oid"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "2.16.840.1.113883.4.3.9"
+              }
+            },
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "uri"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "urn:oid:2.16.840.1.113883.4.3.9"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "http://hl7.org/fhir/NamingSystem/4.3.11"
+      },
+      "NamingSystem": [
+        {
+          "Resource.id": {
+            "value": "4.3.11"
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.11</p><p><b>name</b>: DC Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: Jul 3, 2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://hl7.org/fhir/v2/0203 code 'DL' = 'Driver's license number)</span></p><p><b>useContext</b>: ?? <span>(Details : {urn:iso:std:iso:3166 code 'US' = '??)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.11</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.11</p></blockquote></div>"
+            }
+          },
+          "NamingSystem.name": {
+            "value": "DC Driver's License"
+          },
+          "NamingSystem.status": {
+            "value": "active"
+          },
+          "NamingSystem.kind": {
+            "value": "identifier"
+          },
+          "NamingSystem.date": {
+            "value": "2015-07-03"
+          },
+          "NamingSystem.publisher": {
+            "value": "HL7 International"
+          },
+          "NamingSystem.type": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://hl7.org/fhir/v2/0203"
+                },
+                "Coding.code": {
+                  "value": "DL"
+                }
+              }
+            ]
+          },
+          "NamingSystem.useContext": [
+            {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "value": "urn:iso:std:iso:3166"
+                  },
+                  "Coding.code": {
+                    "value": "US"
+                  }
+                }
+              ]
+            }
+          ],
+          "NamingSystem.uniqueId": [
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "oid"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "2.16.840.1.113883.4.3.11"
+              }
+            },
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "uri"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "urn:oid:2.16.840.1.113883.4.3.11"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "http://hl7.org/fhir/NamingSystem/4.3.10"
+      },
+      "NamingSystem": [
+        {
+          "Resource.id": {
+            "value": "4.3.10"
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.10</p><p><b>name</b>: Delaware Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: Jul 3, 2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://hl7.org/fhir/v2/0203 code 'DL' = 'Driver's license number)</span></p><p><b>useContext</b>: ?? <span>(Details : {urn:iso:std:iso:3166 code 'US' = '??)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.10</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.10</p></blockquote></div>"
+            }
+          },
+          "NamingSystem.name": {
+            "value": "Delaware Driver's License"
+          },
+          "NamingSystem.status": {
+            "value": "active"
+          },
+          "NamingSystem.kind": {
+            "value": "identifier"
+          },
+          "NamingSystem.date": {
+            "value": "2015-07-03"
+          },
+          "NamingSystem.publisher": {
+            "value": "HL7 International"
+          },
+          "NamingSystem.type": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://hl7.org/fhir/v2/0203"
+                },
+                "Coding.code": {
+                  "value": "DL"
+                }
+              }
+            ]
+          },
+          "NamingSystem.useContext": [
+            {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "value": "urn:iso:std:iso:3166"
+                  },
+                  "Coding.code": {
+                    "value": "US"
+                  }
+                }
+              ]
+            }
+          ],
+          "NamingSystem.uniqueId": [
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "oid"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "2.16.840.1.113883.4.3.10"
+              }
+            },
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "uri"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "urn:oid:2.16.840.1.113883.4.3.10"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "http://hl7.org/fhir/NamingSystem/4.3.12"
+      },
+      "NamingSystem": [
+        {
+          "Resource.id": {
+            "value": "4.3.12"
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.12</p><p><b>name</b>: Florida Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: Jul 3, 2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://hl7.org/fhir/v2/0203 code 'DL' = 'Driver's license number)</span></p><p><b>useContext</b>: ?? <span>(Details : {urn:iso:std:iso:3166 code 'US' = '??)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.12</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.12</p></blockquote></div>"
+            }
+          },
+          "NamingSystem.name": {
+            "value": "Florida Driver's License"
+          },
+          "NamingSystem.status": {
+            "value": "active"
+          },
+          "NamingSystem.kind": {
+            "value": "identifier"
+          },
+          "NamingSystem.date": {
+            "value": "2015-07-03"
+          },
+          "NamingSystem.publisher": {
+            "value": "HL7 International"
+          },
+          "NamingSystem.type": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://hl7.org/fhir/v2/0203"
+                },
+                "Coding.code": {
+                  "value": "DL"
+                }
+              }
+            ]
+          },
+          "NamingSystem.useContext": [
+            {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "value": "urn:iso:std:iso:3166"
+                  },
+                  "Coding.code": {
+                    "value": "US"
+                  }
+                }
+              ]
+            }
+          ],
+          "NamingSystem.uniqueId": [
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "oid"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "2.16.840.1.113883.4.3.12"
+              }
+            },
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "uri"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "urn:oid:2.16.840.1.113883.4.3.12"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "http://hl7.org/fhir/NamingSystem/4.3.13"
+      },
+      "NamingSystem": [
+        {
+          "Resource.id": {
+            "value": "4.3.13"
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.13</p><p><b>name</b>: Georgia Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: Jul 3, 2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://hl7.org/fhir/v2/0203 code 'DL' = 'Driver's license number)</span></p><p><b>useContext</b>: ?? <span>(Details : {urn:iso:std:iso:3166 code 'US' = '??)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.13</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.13</p></blockquote></div>"
+            }
+          },
+          "NamingSystem.name": {
+            "value": "Georgia Driver's License"
+          },
+          "NamingSystem.status": {
+            "value": "active"
+          },
+          "NamingSystem.kind": {
+            "value": "identifier"
+          },
+          "NamingSystem.date": {
+            "value": "2015-07-03"
+          },
+          "NamingSystem.publisher": {
+            "value": "HL7 International"
+          },
+          "NamingSystem.type": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://hl7.org/fhir/v2/0203"
+                },
+                "Coding.code": {
+                  "value": "DL"
+                }
+              }
+            ]
+          },
+          "NamingSystem.useContext": [
+            {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "value": "urn:iso:std:iso:3166"
+                  },
+                  "Coding.code": {
+                    "value": "US"
+                  }
+                }
+              ]
+            }
+          ],
+          "NamingSystem.uniqueId": [
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "oid"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "2.16.840.1.113883.4.3.13"
+              }
+            },
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "uri"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "urn:oid:2.16.840.1.113883.4.3.13"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "http://hl7.org/fhir/NamingSystem/4.3.15"
+      },
+      "NamingSystem": [
+        {
+          "Resource.id": {
+            "value": "4.3.15"
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.15</p><p><b>name</b>: Hawaii Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: Jul 3, 2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://hl7.org/fhir/v2/0203 code 'DL' = 'Driver's license number)</span></p><p><b>useContext</b>: ?? <span>(Details : {urn:iso:std:iso:3166 code 'US' = '??)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.15</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.15</p></blockquote></div>"
+            }
+          },
+          "NamingSystem.name": {
+            "value": "Hawaii Driver's License"
+          },
+          "NamingSystem.status": {
+            "value": "active"
+          },
+          "NamingSystem.kind": {
+            "value": "identifier"
+          },
+          "NamingSystem.date": {
+            "value": "2015-07-03"
+          },
+          "NamingSystem.publisher": {
+            "value": "HL7 International"
+          },
+          "NamingSystem.type": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://hl7.org/fhir/v2/0203"
+                },
+                "Coding.code": {
+                  "value": "DL"
+                }
+              }
+            ]
+          },
+          "NamingSystem.useContext": [
+            {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "value": "urn:iso:std:iso:3166"
+                  },
+                  "Coding.code": {
+                    "value": "US"
+                  }
+                }
+              ]
+            }
+          ],
+          "NamingSystem.uniqueId": [
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "oid"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "2.16.840.1.113883.4.3.15"
+              }
+            },
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "uri"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "urn:oid:2.16.840.1.113883.4.3.15"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "http://hl7.org/fhir/NamingSystem/4.3.18"
+      },
+      "NamingSystem": [
+        {
+          "Resource.id": {
+            "value": "4.3.18"
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.18</p><p><b>name</b>: Indiana Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: Jul 3, 2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://hl7.org/fhir/v2/0203 code 'DL' = 'Driver's license number)</span></p><p><b>useContext</b>: ?? <span>(Details : {urn:iso:std:iso:3166 code 'US' = '??)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.18</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.18</p></blockquote></div>"
+            }
+          },
+          "NamingSystem.name": {
+            "value": "Indiana Driver's License"
+          },
+          "NamingSystem.status": {
+            "value": "active"
+          },
+          "NamingSystem.kind": {
+            "value": "identifier"
+          },
+          "NamingSystem.date": {
+            "value": "2015-07-03"
+          },
+          "NamingSystem.publisher": {
+            "value": "HL7 International"
+          },
+          "NamingSystem.type": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://hl7.org/fhir/v2/0203"
+                },
+                "Coding.code": {
+                  "value": "DL"
+                }
+              }
+            ]
+          },
+          "NamingSystem.useContext": [
+            {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "value": "urn:iso:std:iso:3166"
+                  },
+                  "Coding.code": {
+                    "value": "US"
+                  }
+                }
+              ]
+            }
+          ],
+          "NamingSystem.uniqueId": [
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "oid"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "2.16.840.1.113883.4.3.18"
+              }
+            },
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "uri"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "urn:oid:2.16.840.1.113883.4.3.18"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "http://hl7.org/fhir/NamingSystem/4.3.19"
+      },
+      "NamingSystem": [
+        {
+          "Resource.id": {
+            "value": "4.3.19"
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.19</p><p><b>name</b>: Iowa Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: Jul 3, 2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://hl7.org/fhir/v2/0203 code 'DL' = 'Driver's license number)</span></p><p><b>useContext</b>: ?? <span>(Details : {urn:iso:std:iso:3166 code 'US' = '??)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.19</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.19</p></blockquote></div>"
+            }
+          },
+          "NamingSystem.name": {
+            "value": "Iowa Driver's License"
+          },
+          "NamingSystem.status": {
+            "value": "active"
+          },
+          "NamingSystem.kind": {
+            "value": "identifier"
+          },
+          "NamingSystem.date": {
+            "value": "2015-07-03"
+          },
+          "NamingSystem.publisher": {
+            "value": "HL7 International"
+          },
+          "NamingSystem.type": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://hl7.org/fhir/v2/0203"
+                },
+                "Coding.code": {
+                  "value": "DL"
+                }
+              }
+            ]
+          },
+          "NamingSystem.useContext": [
+            {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "value": "urn:iso:std:iso:3166"
+                  },
+                  "Coding.code": {
+                    "value": "US"
+                  }
+                }
+              ]
+            }
+          ],
+          "NamingSystem.uniqueId": [
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "oid"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "2.16.840.1.113883.4.3.19"
+              }
+            },
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "uri"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "urn:oid:2.16.840.1.113883.4.3.19"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "http://hl7.org/fhir/NamingSystem/4.3.16"
+      },
+      "NamingSystem": [
+        {
+          "Resource.id": {
+            "value": "4.3.16"
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.16</p><p><b>name</b>: Idaho Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: Jul 3, 2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://hl7.org/fhir/v2/0203 code 'DL' = 'Driver's license number)</span></p><p><b>useContext</b>: ?? <span>(Details : {urn:iso:std:iso:3166 code 'US' = '??)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.16</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.16</p></blockquote></div>"
+            }
+          },
+          "NamingSystem.name": {
+            "value": "Idaho Driver's License"
+          },
+          "NamingSystem.status": {
+            "value": "active"
+          },
+          "NamingSystem.kind": {
+            "value": "identifier"
+          },
+          "NamingSystem.date": {
+            "value": "2015-07-03"
+          },
+          "NamingSystem.publisher": {
+            "value": "HL7 International"
+          },
+          "NamingSystem.type": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://hl7.org/fhir/v2/0203"
+                },
+                "Coding.code": {
+                  "value": "DL"
+                }
+              }
+            ]
+          },
+          "NamingSystem.useContext": [
+            {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "value": "urn:iso:std:iso:3166"
+                  },
+                  "Coding.code": {
+                    "value": "US"
+                  }
+                }
+              ]
+            }
+          ],
+          "NamingSystem.uniqueId": [
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "oid"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "2.16.840.1.113883.4.3.16"
+              }
+            },
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "uri"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "urn:oid:2.16.840.1.113883.4.3.16"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "http://hl7.org/fhir/NamingSystem/4.3.17"
+      },
+      "NamingSystem": [
+        {
+          "Resource.id": {
+            "value": "4.3.17"
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.17</p><p><b>name</b>: Illinois Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: Jul 3, 2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://hl7.org/fhir/v2/0203 code 'DL' = 'Driver's license number)</span></p><p><b>useContext</b>: ?? <span>(Details : {urn:iso:std:iso:3166 code 'US' = '??)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.17</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.17</p></blockquote></div>"
+            }
+          },
+          "NamingSystem.name": {
+            "value": "Illinois Driver's License"
+          },
+          "NamingSystem.status": {
+            "value": "active"
+          },
+          "NamingSystem.kind": {
+            "value": "identifier"
+          },
+          "NamingSystem.date": {
+            "value": "2015-07-03"
+          },
+          "NamingSystem.publisher": {
+            "value": "HL7 International"
+          },
+          "NamingSystem.type": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://hl7.org/fhir/v2/0203"
+                },
+                "Coding.code": {
+                  "value": "DL"
+                }
+              }
+            ]
+          },
+          "NamingSystem.useContext": [
+            {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "value": "urn:iso:std:iso:3166"
+                  },
+                  "Coding.code": {
+                    "value": "US"
+                  }
+                }
+              ]
+            }
+          ],
+          "NamingSystem.uniqueId": [
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "oid"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "2.16.840.1.113883.4.3.17"
+              }
+            },
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "uri"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "urn:oid:2.16.840.1.113883.4.3.17"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "http://hl7.org/fhir/NamingSystem/4.3.20"
+      },
+      "NamingSystem": [
+        {
+          "Resource.id": {
+            "value": "4.3.20"
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.20</p><p><b>name</b>: Kansas Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: Jul 3, 2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://hl7.org/fhir/v2/0203 code 'DL' = 'Driver's license number)</span></p><p><b>useContext</b>: ?? <span>(Details : {urn:iso:std:iso:3166 code 'US' = '??)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.20</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.20</p></blockquote></div>"
+            }
+          },
+          "NamingSystem.name": {
+            "value": "Kansas Driver's License"
+          },
+          "NamingSystem.status": {
+            "value": "active"
+          },
+          "NamingSystem.kind": {
+            "value": "identifier"
+          },
+          "NamingSystem.date": {
+            "value": "2015-07-03"
+          },
+          "NamingSystem.publisher": {
+            "value": "HL7 International"
+          },
+          "NamingSystem.type": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://hl7.org/fhir/v2/0203"
+                },
+                "Coding.code": {
+                  "value": "DL"
+                }
+              }
+            ]
+          },
+          "NamingSystem.useContext": [
+            {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "value": "urn:iso:std:iso:3166"
+                  },
+                  "Coding.code": {
+                    "value": "US"
+                  }
+                }
+              ]
+            }
+          ],
+          "NamingSystem.uniqueId": [
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "oid"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "2.16.840.1.113883.4.3.20"
+              }
+            },
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "uri"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "urn:oid:2.16.840.1.113883.4.3.20"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "http://hl7.org/fhir/NamingSystem/4.3.21"
+      },
+      "NamingSystem": [
+        {
+          "Resource.id": {
+            "value": "4.3.21"
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.21</p><p><b>name</b>: Kentucky Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: Jul 3, 2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://hl7.org/fhir/v2/0203 code 'DL' = 'Driver's license number)</span></p><p><b>useContext</b>: ?? <span>(Details : {urn:iso:std:iso:3166 code 'US' = '??)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.21</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.21</p></blockquote></div>"
+            }
+          },
+          "NamingSystem.name": {
+            "value": "Kentucky Driver's License"
+          },
+          "NamingSystem.status": {
+            "value": "active"
+          },
+          "NamingSystem.kind": {
+            "value": "identifier"
+          },
+          "NamingSystem.date": {
+            "value": "2015-07-03"
+          },
+          "NamingSystem.publisher": {
+            "value": "HL7 International"
+          },
+          "NamingSystem.type": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://hl7.org/fhir/v2/0203"
+                },
+                "Coding.code": {
+                  "value": "DL"
+                }
+              }
+            ]
+          },
+          "NamingSystem.useContext": [
+            {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "value": "urn:iso:std:iso:3166"
+                  },
+                  "Coding.code": {
+                    "value": "US"
+                  }
+                }
+              ]
+            }
+          ],
+          "NamingSystem.uniqueId": [
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "oid"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "2.16.840.1.113883.4.3.21"
+              }
+            },
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "uri"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "urn:oid:2.16.840.1.113883.4.3.21"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "http://hl7.org/fhir/NamingSystem/4.3.22"
+      },
+      "NamingSystem": [
+        {
+          "Resource.id": {
+            "value": "4.3.22"
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.22</p><p><b>name</b>: Louisiana Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: Jul 3, 2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://hl7.org/fhir/v2/0203 code 'DL' = 'Driver's license number)</span></p><p><b>useContext</b>: ?? <span>(Details : {urn:iso:std:iso:3166 code 'US' = '??)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.22</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.22</p></blockquote></div>"
+            }
+          },
+          "NamingSystem.name": {
+            "value": "Louisiana Driver's License"
+          },
+          "NamingSystem.status": {
+            "value": "active"
+          },
+          "NamingSystem.kind": {
+            "value": "identifier"
+          },
+          "NamingSystem.date": {
+            "value": "2015-07-03"
+          },
+          "NamingSystem.publisher": {
+            "value": "HL7 International"
+          },
+          "NamingSystem.type": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://hl7.org/fhir/v2/0203"
+                },
+                "Coding.code": {
+                  "value": "DL"
+                }
+              }
+            ]
+          },
+          "NamingSystem.useContext": [
+            {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "value": "urn:iso:std:iso:3166"
+                  },
+                  "Coding.code": {
+                    "value": "US"
+                  }
+                }
+              ]
+            }
+          ],
+          "NamingSystem.uniqueId": [
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "oid"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "2.16.840.1.113883.4.3.22"
+              }
+            },
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "uri"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "urn:oid:2.16.840.1.113883.4.3.22"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "http://hl7.org/fhir/NamingSystem/4.3.25"
+      },
+      "NamingSystem": [
+        {
+          "Resource.id": {
+            "value": "4.3.25"
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.25</p><p><b>name</b>: Massachusetts Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: Jul 3, 2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://hl7.org/fhir/v2/0203 code 'DL' = 'Driver's license number)</span></p><p><b>useContext</b>: ?? <span>(Details : {urn:iso:std:iso:3166 code 'US' = '??)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.25</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.25</p></blockquote></div>"
+            }
+          },
+          "NamingSystem.name": {
+            "value": "Massachusetts Driver's License"
+          },
+          "NamingSystem.status": {
+            "value": "active"
+          },
+          "NamingSystem.kind": {
+            "value": "identifier"
+          },
+          "NamingSystem.date": {
+            "value": "2015-07-03"
+          },
+          "NamingSystem.publisher": {
+            "value": "HL7 International"
+          },
+          "NamingSystem.type": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://hl7.org/fhir/v2/0203"
+                },
+                "Coding.code": {
+                  "value": "DL"
+                }
+              }
+            ]
+          },
+          "NamingSystem.useContext": [
+            {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "value": "urn:iso:std:iso:3166"
+                  },
+                  "Coding.code": {
+                    "value": "US"
+                  }
+                }
+              ]
+            }
+          ],
+          "NamingSystem.uniqueId": [
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "oid"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "2.16.840.1.113883.4.3.25"
+              }
+            },
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "uri"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "urn:oid:2.16.840.1.113883.4.3.25"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "http://hl7.org/fhir/NamingSystem/4.3.24"
+      },
+      "NamingSystem": [
+        {
+          "Resource.id": {
+            "value": "4.3.24"
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.24</p><p><b>name</b>: Maryland Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: Jul 3, 2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://hl7.org/fhir/v2/0203 code 'DL' = 'Driver's license number)</span></p><p><b>useContext</b>: ?? <span>(Details : {urn:iso:std:iso:3166 code 'US' = '??)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.24</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.24</p></blockquote></div>"
+            }
+          },
+          "NamingSystem.name": {
+            "value": "Maryland Driver's License"
+          },
+          "NamingSystem.status": {
+            "value": "active"
+          },
+          "NamingSystem.kind": {
+            "value": "identifier"
+          },
+          "NamingSystem.date": {
+            "value": "2015-07-03"
+          },
+          "NamingSystem.publisher": {
+            "value": "HL7 International"
+          },
+          "NamingSystem.type": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://hl7.org/fhir/v2/0203"
+                },
+                "Coding.code": {
+                  "value": "DL"
+                }
+              }
+            ]
+          },
+          "NamingSystem.useContext": [
+            {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "value": "urn:iso:std:iso:3166"
+                  },
+                  "Coding.code": {
+                    "value": "US"
+                  }
+                }
+              ]
+            }
+          ],
+          "NamingSystem.uniqueId": [
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "oid"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "2.16.840.1.113883.4.3.24"
+              }
+            },
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "uri"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "urn:oid:2.16.840.1.113883.4.3.24"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "http://hl7.org/fhir/NamingSystem/4.3.23"
+      },
+      "NamingSystem": [
+        {
+          "Resource.id": {
+            "value": "4.3.23"
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.23</p><p><b>name</b>: Maine Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: Jul 3, 2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://hl7.org/fhir/v2/0203 code 'DL' = 'Driver's license number)</span></p><p><b>useContext</b>: ?? <span>(Details : {urn:iso:std:iso:3166 code 'US' = '??)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.23</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.23</p></blockquote></div>"
+            }
+          },
+          "NamingSystem.name": {
+            "value": "Maine Driver's License"
+          },
+          "NamingSystem.status": {
+            "value": "active"
+          },
+          "NamingSystem.kind": {
+            "value": "identifier"
+          },
+          "NamingSystem.date": {
+            "value": "2015-07-03"
+          },
+          "NamingSystem.publisher": {
+            "value": "HL7 International"
+          },
+          "NamingSystem.type": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://hl7.org/fhir/v2/0203"
+                },
+                "Coding.code": {
+                  "value": "DL"
+                }
+              }
+            ]
+          },
+          "NamingSystem.useContext": [
+            {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "value": "urn:iso:std:iso:3166"
+                  },
+                  "Coding.code": {
+                    "value": "US"
+                  }
+                }
+              ]
+            }
+          ],
+          "NamingSystem.uniqueId": [
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "oid"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "2.16.840.1.113883.4.3.23"
+              }
+            },
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "uri"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "urn:oid:2.16.840.1.113883.4.3.23"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "http://hl7.org/fhir/NamingSystem/4.3.26"
+      },
+      "NamingSystem": [
+        {
+          "Resource.id": {
+            "value": "4.3.26"
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.26</p><p><b>name</b>: Michigan Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: Jul 3, 2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://hl7.org/fhir/v2/0203 code 'DL' = 'Driver's license number)</span></p><p><b>useContext</b>: ?? <span>(Details : {urn:iso:std:iso:3166 code 'US' = '??)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.26</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.26</p></blockquote></div>"
+            }
+          },
+          "NamingSystem.name": {
+            "value": "Michigan Driver's License"
+          },
+          "NamingSystem.status": {
+            "value": "active"
+          },
+          "NamingSystem.kind": {
+            "value": "identifier"
+          },
+          "NamingSystem.date": {
+            "value": "2015-07-03"
+          },
+          "NamingSystem.publisher": {
+            "value": "HL7 International"
+          },
+          "NamingSystem.type": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://hl7.org/fhir/v2/0203"
+                },
+                "Coding.code": {
+                  "value": "DL"
+                }
+              }
+            ]
+          },
+          "NamingSystem.useContext": [
+            {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "value": "urn:iso:std:iso:3166"
+                  },
+                  "Coding.code": {
+                    "value": "US"
+                  }
+                }
+              ]
+            }
+          ],
+          "NamingSystem.uniqueId": [
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "oid"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "2.16.840.1.113883.4.3.26"
+              }
+            },
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "uri"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "urn:oid:2.16.840.1.113883.4.3.26"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "http://hl7.org/fhir/NamingSystem/4.3.27"
+      },
+      "NamingSystem": [
+        {
+          "Resource.id": {
+            "value": "4.3.27"
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.27</p><p><b>name</b>: Minnesota Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: Jul 3, 2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://hl7.org/fhir/v2/0203 code 'DL' = 'Driver's license number)</span></p><p><b>useContext</b>: ?? <span>(Details : {urn:iso:std:iso:3166 code 'US' = '??)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.27</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.27</p></blockquote></div>"
+            }
+          },
+          "NamingSystem.name": {
+            "value": "Minnesota Driver's License"
+          },
+          "NamingSystem.status": {
+            "value": "active"
+          },
+          "NamingSystem.kind": {
+            "value": "identifier"
+          },
+          "NamingSystem.date": {
+            "value": "2015-07-03"
+          },
+          "NamingSystem.publisher": {
+            "value": "HL7 International"
+          },
+          "NamingSystem.type": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://hl7.org/fhir/v2/0203"
+                },
+                "Coding.code": {
+                  "value": "DL"
+                }
+              }
+            ]
+          },
+          "NamingSystem.useContext": [
+            {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "value": "urn:iso:std:iso:3166"
+                  },
+                  "Coding.code": {
+                    "value": "US"
+                  }
+                }
+              ]
+            }
+          ],
+          "NamingSystem.uniqueId": [
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "oid"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "2.16.840.1.113883.4.3.27"
+              }
+            },
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "uri"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "urn:oid:2.16.840.1.113883.4.3.27"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "http://hl7.org/fhir/NamingSystem/4.3.29"
+      },
+      "NamingSystem": [
+        {
+          "Resource.id": {
+            "value": "4.3.29"
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.29</p><p><b>name</b>: Missouri Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: Jul 3, 2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://hl7.org/fhir/v2/0203 code 'DL' = 'Driver's license number)</span></p><p><b>useContext</b>: ?? <span>(Details : {urn:iso:std:iso:3166 code 'US' = '??)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.29</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.29</p></blockquote></div>"
+            }
+          },
+          "NamingSystem.name": {
+            "value": "Missouri Driver's License"
+          },
+          "NamingSystem.status": {
+            "value": "active"
+          },
+          "NamingSystem.kind": {
+            "value": "identifier"
+          },
+          "NamingSystem.date": {
+            "value": "2015-07-03"
+          },
+          "NamingSystem.publisher": {
+            "value": "HL7 International"
+          },
+          "NamingSystem.type": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://hl7.org/fhir/v2/0203"
+                },
+                "Coding.code": {
+                  "value": "DL"
+                }
+              }
+            ]
+          },
+          "NamingSystem.useContext": [
+            {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "value": "urn:iso:std:iso:3166"
+                  },
+                  "Coding.code": {
+                    "value": "US"
+                  }
+                }
+              ]
+            }
+          ],
+          "NamingSystem.uniqueId": [
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "oid"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "2.16.840.1.113883.4.3.29"
+              }
+            },
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "uri"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "urn:oid:2.16.840.1.113883.4.3.29"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "http://hl7.org/fhir/NamingSystem/4.3.28"
+      },
+      "NamingSystem": [
+        {
+          "Resource.id": {
+            "value": "4.3.28"
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.28</p><p><b>name</b>: Mississippi Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: Jul 3, 2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://hl7.org/fhir/v2/0203 code 'DL' = 'Driver's license number)</span></p><p><b>useContext</b>: ?? <span>(Details : {urn:iso:std:iso:3166 code 'US' = '??)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.28</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.28</p></blockquote></div>"
+            }
+          },
+          "NamingSystem.name": {
+            "value": "Mississippi Driver's License"
+          },
+          "NamingSystem.status": {
+            "value": "active"
+          },
+          "NamingSystem.kind": {
+            "value": "identifier"
+          },
+          "NamingSystem.date": {
+            "value": "2015-07-03"
+          },
+          "NamingSystem.publisher": {
+            "value": "HL7 International"
+          },
+          "NamingSystem.type": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://hl7.org/fhir/v2/0203"
+                },
+                "Coding.code": {
+                  "value": "DL"
+                }
+              }
+            ]
+          },
+          "NamingSystem.useContext": [
+            {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "value": "urn:iso:std:iso:3166"
+                  },
+                  "Coding.code": {
+                    "value": "US"
+                  }
+                }
+              ]
+            }
+          ],
+          "NamingSystem.uniqueId": [
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "oid"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "2.16.840.1.113883.4.3.28"
+              }
+            },
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "uri"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "urn:oid:2.16.840.1.113883.4.3.28"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "http://hl7.org/fhir/NamingSystem/4.3.30"
+      },
+      "NamingSystem": [
+        {
+          "Resource.id": {
+            "value": "4.3.30"
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.30</p><p><b>name</b>: Montana Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: Jul 3, 2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://hl7.org/fhir/v2/0203 code 'DL' = 'Driver's license number)</span></p><p><b>useContext</b>: ?? <span>(Details : {urn:iso:std:iso:3166 code 'US' = '??)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.30</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.30</p></blockquote></div>"
+            }
+          },
+          "NamingSystem.name": {
+            "value": "Montana Driver's License"
+          },
+          "NamingSystem.status": {
+            "value": "active"
+          },
+          "NamingSystem.kind": {
+            "value": "identifier"
+          },
+          "NamingSystem.date": {
+            "value": "2015-07-03"
+          },
+          "NamingSystem.publisher": {
+            "value": "HL7 International"
+          },
+          "NamingSystem.type": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://hl7.org/fhir/v2/0203"
+                },
+                "Coding.code": {
+                  "value": "DL"
+                }
+              }
+            ]
+          },
+          "NamingSystem.useContext": [
+            {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "value": "urn:iso:std:iso:3166"
+                  },
+                  "Coding.code": {
+                    "value": "US"
+                  }
+                }
+              ]
+            }
+          ],
+          "NamingSystem.uniqueId": [
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "oid"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "2.16.840.1.113883.4.3.30"
+              }
+            },
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "uri"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "urn:oid:2.16.840.1.113883.4.3.30"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "http://hl7.org/fhir/NamingSystem/4.3.36"
+      },
+      "NamingSystem": [
+        {
+          "Resource.id": {
+            "value": "4.3.36"
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.36</p><p><b>name</b>: New York Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: Jul 3, 2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://hl7.org/fhir/v2/0203 code 'DL' = 'Driver's license number)</span></p><p><b>useContext</b>: ?? <span>(Details : {urn:iso:std:iso:3166 code 'US' = '??)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.36</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.36</p></blockquote></div>"
+            }
+          },
+          "NamingSystem.name": {
+            "value": "New York Driver's License"
+          },
+          "NamingSystem.status": {
+            "value": "active"
+          },
+          "NamingSystem.kind": {
+            "value": "identifier"
+          },
+          "NamingSystem.date": {
+            "value": "2015-07-03"
+          },
+          "NamingSystem.publisher": {
+            "value": "HL7 International"
+          },
+          "NamingSystem.type": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://hl7.org/fhir/v2/0203"
+                },
+                "Coding.code": {
+                  "value": "DL"
+                }
+              }
+            ]
+          },
+          "NamingSystem.useContext": [
+            {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "value": "urn:iso:std:iso:3166"
+                  },
+                  "Coding.code": {
+                    "value": "US"
+                  }
+                }
+              ]
+            }
+          ],
+          "NamingSystem.uniqueId": [
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "oid"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "2.16.840.1.113883.4.3.36"
+              }
+            },
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "uri"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "urn:oid:2.16.840.1.113883.4.3.36"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "http://hl7.org/fhir/NamingSystem/4.3.37"
+      },
+      "NamingSystem": [
+        {
+          "Resource.id": {
+            "value": "4.3.37"
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.37</p><p><b>name</b>: North Carolina Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: Jul 3, 2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://hl7.org/fhir/v2/0203 code 'DL' = 'Driver's license number)</span></p><p><b>useContext</b>: ?? <span>(Details : {urn:iso:std:iso:3166 code 'US' = '??)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.37</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.37</p></blockquote></div>"
+            }
+          },
+          "NamingSystem.name": {
+            "value": "North Carolina Driver's License"
+          },
+          "NamingSystem.status": {
+            "value": "active"
+          },
+          "NamingSystem.kind": {
+            "value": "identifier"
+          },
+          "NamingSystem.date": {
+            "value": "2015-07-03"
+          },
+          "NamingSystem.publisher": {
+            "value": "HL7 International"
+          },
+          "NamingSystem.type": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://hl7.org/fhir/v2/0203"
+                },
+                "Coding.code": {
+                  "value": "DL"
+                }
+              }
+            ]
+          },
+          "NamingSystem.useContext": [
+            {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "value": "urn:iso:std:iso:3166"
+                  },
+                  "Coding.code": {
+                    "value": "US"
+                  }
+                }
+              ]
+            }
+          ],
+          "NamingSystem.uniqueId": [
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "oid"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "2.16.840.1.113883.4.3.37"
+              }
+            },
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "uri"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "urn:oid:2.16.840.1.113883.4.3.37"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "http://hl7.org/fhir/NamingSystem/4.3.38"
+      },
+      "NamingSystem": [
+        {
+          "Resource.id": {
+            "value": "4.3.38"
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.38</p><p><b>name</b>: North Dakota Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: Jul 3, 2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://hl7.org/fhir/v2/0203 code 'DL' = 'Driver's license number)</span></p><p><b>useContext</b>: ?? <span>(Details : {urn:iso:std:iso:3166 code 'US' = '??)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.38</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.38</p></blockquote></div>"
+            }
+          },
+          "NamingSystem.name": {
+            "value": "North Dakota Driver's License"
+          },
+          "NamingSystem.status": {
+            "value": "active"
+          },
+          "NamingSystem.kind": {
+            "value": "identifier"
+          },
+          "NamingSystem.date": {
+            "value": "2015-07-03"
+          },
+          "NamingSystem.publisher": {
+            "value": "HL7 International"
+          },
+          "NamingSystem.type": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://hl7.org/fhir/v2/0203"
+                },
+                "Coding.code": {
+                  "value": "DL"
+                }
+              }
+            ]
+          },
+          "NamingSystem.useContext": [
+            {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "value": "urn:iso:std:iso:3166"
+                  },
+                  "Coding.code": {
+                    "value": "US"
+                  }
+                }
+              ]
+            }
+          ],
+          "NamingSystem.uniqueId": [
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "oid"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "2.16.840.1.113883.4.3.38"
+              }
+            },
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "uri"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "urn:oid:2.16.840.1.113883.4.3.38"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "http://hl7.org/fhir/NamingSystem/4.3.31"
+      },
+      "NamingSystem": [
+        {
+          "Resource.id": {
+            "value": "4.3.31"
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.31</p><p><b>name</b>: Nebraska Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: Jul 3, 2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://hl7.org/fhir/v2/0203 code 'DL' = 'Driver's license number)</span></p><p><b>useContext</b>: ?? <span>(Details : {urn:iso:std:iso:3166 code 'US' = '??)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.31</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.31</p></blockquote></div>"
+            }
+          },
+          "NamingSystem.name": {
+            "value": "Nebraska Driver's License"
+          },
+          "NamingSystem.status": {
+            "value": "active"
+          },
+          "NamingSystem.kind": {
+            "value": "identifier"
+          },
+          "NamingSystem.date": {
+            "value": "2015-07-03"
+          },
+          "NamingSystem.publisher": {
+            "value": "HL7 International"
+          },
+          "NamingSystem.type": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://hl7.org/fhir/v2/0203"
+                },
+                "Coding.code": {
+                  "value": "DL"
+                }
+              }
+            ]
+          },
+          "NamingSystem.useContext": [
+            {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "value": "urn:iso:std:iso:3166"
+                  },
+                  "Coding.code": {
+                    "value": "US"
+                  }
+                }
+              ]
+            }
+          ],
+          "NamingSystem.uniqueId": [
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "oid"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "2.16.840.1.113883.4.3.31"
+              }
+            },
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "uri"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "urn:oid:2.16.840.1.113883.4.3.31"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "http://hl7.org/fhir/NamingSystem/4.3.33"
+      },
+      "NamingSystem": [
+        {
+          "Resource.id": {
+            "value": "4.3.33"
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.33</p><p><b>name</b>: New Hampshire Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: Jul 3, 2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://hl7.org/fhir/v2/0203 code 'DL' = 'Driver's license number)</span></p><p><b>useContext</b>: ?? <span>(Details : {urn:iso:std:iso:3166 code 'US' = '??)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.33</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.33</p></blockquote></div>"
+            }
+          },
+          "NamingSystem.name": {
+            "value": "New Hampshire Driver's License"
+          },
+          "NamingSystem.status": {
+            "value": "active"
+          },
+          "NamingSystem.kind": {
+            "value": "identifier"
+          },
+          "NamingSystem.date": {
+            "value": "2015-07-03"
+          },
+          "NamingSystem.publisher": {
+            "value": "HL7 International"
+          },
+          "NamingSystem.type": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://hl7.org/fhir/v2/0203"
+                },
+                "Coding.code": {
+                  "value": "DL"
+                }
+              }
+            ]
+          },
+          "NamingSystem.useContext": [
+            {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "value": "urn:iso:std:iso:3166"
+                  },
+                  "Coding.code": {
+                    "value": "US"
+                  }
+                }
+              ]
+            }
+          ],
+          "NamingSystem.uniqueId": [
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "oid"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "2.16.840.1.113883.4.3.33"
+              }
+            },
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "uri"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "urn:oid:2.16.840.1.113883.4.3.33"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "http://hl7.org/fhir/NamingSystem/4.3.34"
+      },
+      "NamingSystem": [
+        {
+          "Resource.id": {
+            "value": "4.3.34"
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.34</p><p><b>name</b>: New Jersey Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: Jul 3, 2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://hl7.org/fhir/v2/0203 code 'DL' = 'Driver's license number)</span></p><p><b>useContext</b>: ?? <span>(Details : {urn:iso:std:iso:3166 code 'US' = '??)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.34</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.34</p></blockquote></div>"
+            }
+          },
+          "NamingSystem.name": {
+            "value": "New Jersey Driver's License"
+          },
+          "NamingSystem.status": {
+            "value": "active"
+          },
+          "NamingSystem.kind": {
+            "value": "identifier"
+          },
+          "NamingSystem.date": {
+            "value": "2015-07-03"
+          },
+          "NamingSystem.publisher": {
+            "value": "HL7 International"
+          },
+          "NamingSystem.type": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://hl7.org/fhir/v2/0203"
+                },
+                "Coding.code": {
+                  "value": "DL"
+                }
+              }
+            ]
+          },
+          "NamingSystem.useContext": [
+            {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "value": "urn:iso:std:iso:3166"
+                  },
+                  "Coding.code": {
+                    "value": "US"
+                  }
+                }
+              ]
+            }
+          ],
+          "NamingSystem.uniqueId": [
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "oid"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "2.16.840.1.113883.4.3.34"
+              }
+            },
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "uri"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "urn:oid:2.16.840.1.113883.4.3.34"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "http://hl7.org/fhir/NamingSystem/4.3.35"
+      },
+      "NamingSystem": [
+        {
+          "Resource.id": {
+            "value": "4.3.35"
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.35</p><p><b>name</b>: New Mexico Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: Jul 3, 2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://hl7.org/fhir/v2/0203 code 'DL' = 'Driver's license number)</span></p><p><b>useContext</b>: ?? <span>(Details : {urn:iso:std:iso:3166 code 'US' = '??)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.35</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.35</p></blockquote></div>"
+            }
+          },
+          "NamingSystem.name": {
+            "value": "New Mexico Driver's License"
+          },
+          "NamingSystem.status": {
+            "value": "active"
+          },
+          "NamingSystem.kind": {
+            "value": "identifier"
+          },
+          "NamingSystem.date": {
+            "value": "2015-07-03"
+          },
+          "NamingSystem.publisher": {
+            "value": "HL7 International"
+          },
+          "NamingSystem.type": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://hl7.org/fhir/v2/0203"
+                },
+                "Coding.code": {
+                  "value": "DL"
+                }
+              }
+            ]
+          },
+          "NamingSystem.useContext": [
+            {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "value": "urn:iso:std:iso:3166"
+                  },
+                  "Coding.code": {
+                    "value": "US"
+                  }
+                }
+              ]
+            }
+          ],
+          "NamingSystem.uniqueId": [
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "oid"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "2.16.840.1.113883.4.3.35"
+              }
+            },
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "uri"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "urn:oid:2.16.840.1.113883.4.3.35"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "http://hl7.org/fhir/NamingSystem/4.3.32"
+      },
+      "NamingSystem": [
+        {
+          "Resource.id": {
+            "value": "4.3.32"
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.32</p><p><b>name</b>: Nevada Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: Jul 3, 2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://hl7.org/fhir/v2/0203 code 'DL' = 'Driver's license number)</span></p><p><b>useContext</b>: ?? <span>(Details : {urn:iso:std:iso:3166 code 'US' = '??)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.32</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.32</p></blockquote></div>"
+            }
+          },
+          "NamingSystem.name": {
+            "value": "Nevada Driver's License"
+          },
+          "NamingSystem.status": {
+            "value": "active"
+          },
+          "NamingSystem.kind": {
+            "value": "identifier"
+          },
+          "NamingSystem.date": {
+            "value": "2015-07-03"
+          },
+          "NamingSystem.publisher": {
+            "value": "HL7 International"
+          },
+          "NamingSystem.type": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://hl7.org/fhir/v2/0203"
+                },
+                "Coding.code": {
+                  "value": "DL"
+                }
+              }
+            ]
+          },
+          "NamingSystem.useContext": [
+            {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "value": "urn:iso:std:iso:3166"
+                  },
+                  "Coding.code": {
+                    "value": "US"
+                  }
+                }
+              ]
+            }
+          ],
+          "NamingSystem.uniqueId": [
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "oid"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "2.16.840.1.113883.4.3.32"
+              }
+            },
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "uri"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "urn:oid:2.16.840.1.113883.4.3.32"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "http://hl7.org/fhir/NamingSystem/4.3.39"
+      },
+      "NamingSystem": [
+        {
+          "Resource.id": {
+            "value": "4.3.39"
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.39</p><p><b>name</b>: Ohio Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: Jul 3, 2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://hl7.org/fhir/v2/0203 code 'DL' = 'Driver's license number)</span></p><p><b>useContext</b>: ?? <span>(Details : {urn:iso:std:iso:3166 code 'US' = '??)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.39</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.39</p></blockquote></div>"
+            }
+          },
+          "NamingSystem.name": {
+            "value": "Ohio Driver's License"
+          },
+          "NamingSystem.status": {
+            "value": "active"
+          },
+          "NamingSystem.kind": {
+            "value": "identifier"
+          },
+          "NamingSystem.date": {
+            "value": "2015-07-03"
+          },
+          "NamingSystem.publisher": {
+            "value": "HL7 International"
+          },
+          "NamingSystem.type": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://hl7.org/fhir/v2/0203"
+                },
+                "Coding.code": {
+                  "value": "DL"
+                }
+              }
+            ]
+          },
+          "NamingSystem.useContext": [
+            {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "value": "urn:iso:std:iso:3166"
+                  },
+                  "Coding.code": {
+                    "value": "US"
+                  }
+                }
+              ]
+            }
+          ],
+          "NamingSystem.uniqueId": [
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "oid"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "2.16.840.1.113883.4.3.39"
+              }
+            },
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "uri"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "urn:oid:2.16.840.1.113883.4.3.39"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "http://hl7.org/fhir/NamingSystem/4.3.40"
+      },
+      "NamingSystem": [
+        {
+          "Resource.id": {
+            "value": "4.3.40"
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.40</p><p><b>name</b>: Oklahoma Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: Jul 3, 2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://hl7.org/fhir/v2/0203 code 'DL' = 'Driver's license number)</span></p><p><b>useContext</b>: ?? <span>(Details : {urn:iso:std:iso:3166 code 'US' = '??)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.40</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.40</p></blockquote></div>"
+            }
+          },
+          "NamingSystem.name": {
+            "value": "Oklahoma Driver's License"
+          },
+          "NamingSystem.status": {
+            "value": "active"
+          },
+          "NamingSystem.kind": {
+            "value": "identifier"
+          },
+          "NamingSystem.date": {
+            "value": "2015-07-03"
+          },
+          "NamingSystem.publisher": {
+            "value": "HL7 International"
+          },
+          "NamingSystem.type": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://hl7.org/fhir/v2/0203"
+                },
+                "Coding.code": {
+                  "value": "DL"
+                }
+              }
+            ]
+          },
+          "NamingSystem.useContext": [
+            {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "value": "urn:iso:std:iso:3166"
+                  },
+                  "Coding.code": {
+                    "value": "US"
+                  }
+                }
+              ]
+            }
+          ],
+          "NamingSystem.uniqueId": [
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "oid"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "2.16.840.1.113883.4.3.40"
+              }
+            },
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "uri"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "urn:oid:2.16.840.1.113883.4.3.40"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "http://hl7.org/fhir/NamingSystem/4.3.41"
+      },
+      "NamingSystem": [
+        {
+          "Resource.id": {
+            "value": "4.3.41"
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.41</p><p><b>name</b>: Oregon Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: Jul 3, 2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://hl7.org/fhir/v2/0203 code 'DL' = 'Driver's license number)</span></p><p><b>useContext</b>: ?? <span>(Details : {urn:iso:std:iso:3166 code 'US' = '??)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.41</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.41</p></blockquote></div>"
+            }
+          },
+          "NamingSystem.name": {
+            "value": "Oregon Driver's License"
+          },
+          "NamingSystem.status": {
+            "value": "active"
+          },
+          "NamingSystem.kind": {
+            "value": "identifier"
+          },
+          "NamingSystem.date": {
+            "value": "2015-07-03"
+          },
+          "NamingSystem.publisher": {
+            "value": "HL7 International"
+          },
+          "NamingSystem.type": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://hl7.org/fhir/v2/0203"
+                },
+                "Coding.code": {
+                  "value": "DL"
+                }
+              }
+            ]
+          },
+          "NamingSystem.useContext": [
+            {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "value": "urn:iso:std:iso:3166"
+                  },
+                  "Coding.code": {
+                    "value": "US"
+                  }
+                }
+              ]
+            }
+          ],
+          "NamingSystem.uniqueId": [
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "oid"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "2.16.840.1.113883.4.3.41"
+              }
+            },
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "uri"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "urn:oid:2.16.840.1.113883.4.3.41"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "http://hl7.org/fhir/NamingSystem/4.3.42"
+      },
+      "NamingSystem": [
+        {
+          "Resource.id": {
+            "value": "4.3.42"
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.42</p><p><b>name</b>: Pennsylvania Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: Jul 3, 2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://hl7.org/fhir/v2/0203 code 'DL' = 'Driver's license number)</span></p><p><b>useContext</b>: ?? <span>(Details : {urn:iso:std:iso:3166 code 'US' = '??)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.42</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.42</p></blockquote></div>"
+            }
+          },
+          "NamingSystem.name": {
+            "value": "Pennsylvania Driver's License"
+          },
+          "NamingSystem.status": {
+            "value": "active"
+          },
+          "NamingSystem.kind": {
+            "value": "identifier"
+          },
+          "NamingSystem.date": {
+            "value": "2015-07-03"
+          },
+          "NamingSystem.publisher": {
+            "value": "HL7 International"
+          },
+          "NamingSystem.type": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://hl7.org/fhir/v2/0203"
+                },
+                "Coding.code": {
+                  "value": "DL"
+                }
+              }
+            ]
+          },
+          "NamingSystem.useContext": [
+            {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "value": "urn:iso:std:iso:3166"
+                  },
+                  "Coding.code": {
+                    "value": "US"
+                  }
+                }
+              ]
+            }
+          ],
+          "NamingSystem.uniqueId": [
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "oid"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "2.16.840.1.113883.4.3.42"
+              }
+            },
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "uri"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "urn:oid:2.16.840.1.113883.4.3.42"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "http://hl7.org/fhir/NamingSystem/4.3.44"
+      },
+      "NamingSystem": [
+        {
+          "Resource.id": {
+            "value": "4.3.44"
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.44</p><p><b>name</b>: Rhode Island Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: Jul 3, 2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://hl7.org/fhir/v2/0203 code 'DL' = 'Driver's license number)</span></p><p><b>useContext</b>: ?? <span>(Details : {urn:iso:std:iso:3166 code 'US' = '??)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.44</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.44</p></blockquote></div>"
+            }
+          },
+          "NamingSystem.name": {
+            "value": "Rhode Island Driver's License"
+          },
+          "NamingSystem.status": {
+            "value": "active"
+          },
+          "NamingSystem.kind": {
+            "value": "identifier"
+          },
+          "NamingSystem.date": {
+            "value": "2015-07-03"
+          },
+          "NamingSystem.publisher": {
+            "value": "HL7 International"
+          },
+          "NamingSystem.type": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://hl7.org/fhir/v2/0203"
+                },
+                "Coding.code": {
+                  "value": "DL"
+                }
+              }
+            ]
+          },
+          "NamingSystem.useContext": [
+            {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "value": "urn:iso:std:iso:3166"
+                  },
+                  "Coding.code": {
+                    "value": "US"
+                  }
+                }
+              ]
+            }
+          ],
+          "NamingSystem.uniqueId": [
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "oid"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "2.16.840.1.113883.4.3.44"
+              }
+            },
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "uri"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "urn:oid:2.16.840.1.113883.4.3.44"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "http://hl7.org/fhir/NamingSystem/4.3.45"
+      },
+      "NamingSystem": [
+        {
+          "Resource.id": {
+            "value": "4.3.45"
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.45</p><p><b>name</b>: South Carolina Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: Jul 3, 2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://hl7.org/fhir/v2/0203 code 'DL' = 'Driver's license number)</span></p><p><b>useContext</b>: ?? <span>(Details : {urn:iso:std:iso:3166 code 'US' = '??)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.45</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.45</p></blockquote></div>"
+            }
+          },
+          "NamingSystem.name": {
+            "value": "South Carolina Driver's License"
+          },
+          "NamingSystem.status": {
+            "value": "active"
+          },
+          "NamingSystem.kind": {
+            "value": "identifier"
+          },
+          "NamingSystem.date": {
+            "value": "2015-07-03"
+          },
+          "NamingSystem.publisher": {
+            "value": "HL7 International"
+          },
+          "NamingSystem.type": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://hl7.org/fhir/v2/0203"
+                },
+                "Coding.code": {
+                  "value": "DL"
+                }
+              }
+            ]
+          },
+          "NamingSystem.useContext": [
+            {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "value": "urn:iso:std:iso:3166"
+                  },
+                  "Coding.code": {
+                    "value": "US"
+                  }
+                }
+              ]
+            }
+          ],
+          "NamingSystem.uniqueId": [
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "oid"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "2.16.840.1.113883.4.3.45"
+              }
+            },
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "uri"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "urn:oid:2.16.840.1.113883.4.3.45"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "http://hl7.org/fhir/NamingSystem/4.3.46"
+      },
+      "NamingSystem": [
+        {
+          "Resource.id": {
+            "value": "4.3.46"
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.46</p><p><b>name</b>: South Dakota Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: Jul 3, 2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://hl7.org/fhir/v2/0203 code 'DL' = 'Driver's license number)</span></p><p><b>useContext</b>: ?? <span>(Details : {urn:iso:std:iso:3166 code 'US' = '??)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.46</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.46</p></blockquote></div>"
+            }
+          },
+          "NamingSystem.name": {
+            "value": "South Dakota Driver's License"
+          },
+          "NamingSystem.status": {
+            "value": "active"
+          },
+          "NamingSystem.kind": {
+            "value": "identifier"
+          },
+          "NamingSystem.date": {
+            "value": "2015-07-03"
+          },
+          "NamingSystem.publisher": {
+            "value": "HL7 International"
+          },
+          "NamingSystem.type": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://hl7.org/fhir/v2/0203"
+                },
+                "Coding.code": {
+                  "value": "DL"
+                }
+              }
+            ]
+          },
+          "NamingSystem.useContext": [
+            {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "value": "urn:iso:std:iso:3166"
+                  },
+                  "Coding.code": {
+                    "value": "US"
+                  }
+                }
+              ]
+            }
+          ],
+          "NamingSystem.uniqueId": [
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "oid"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "2.16.840.1.113883.4.3.46"
+              }
+            },
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "uri"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "urn:oid:2.16.840.1.113883.4.3.46"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "http://hl7.org/fhir/NamingSystem/4.3.47"
+      },
+      "NamingSystem": [
+        {
+          "Resource.id": {
+            "value": "4.3.47"
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.47</p><p><b>name</b>: Tennessee Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: Jul 3, 2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://hl7.org/fhir/v2/0203 code 'DL' = 'Driver's license number)</span></p><p><b>useContext</b>: ?? <span>(Details : {urn:iso:std:iso:3166 code 'US' = '??)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.47</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.47</p></blockquote></div>"
+            }
+          },
+          "NamingSystem.name": {
+            "value": "Tennessee Driver's License"
+          },
+          "NamingSystem.status": {
+            "value": "active"
+          },
+          "NamingSystem.kind": {
+            "value": "identifier"
+          },
+          "NamingSystem.date": {
+            "value": "2015-07-03"
+          },
+          "NamingSystem.publisher": {
+            "value": "HL7 International"
+          },
+          "NamingSystem.type": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://hl7.org/fhir/v2/0203"
+                },
+                "Coding.code": {
+                  "value": "DL"
+                }
+              }
+            ]
+          },
+          "NamingSystem.useContext": [
+            {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "value": "urn:iso:std:iso:3166"
+                  },
+                  "Coding.code": {
+                    "value": "US"
+                  }
+                }
+              ]
+            }
+          ],
+          "NamingSystem.uniqueId": [
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "oid"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "2.16.840.1.113883.4.3.47"
+              }
+            },
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "uri"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "urn:oid:2.16.840.1.113883.4.3.47"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "http://hl7.org/fhir/NamingSystem/4.3.48"
+      },
+      "NamingSystem": [
+        {
+          "Resource.id": {
+            "value": "4.3.48"
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.48</p><p><b>name</b>: Texas Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: Jul 3, 2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://hl7.org/fhir/v2/0203 code 'DL' = 'Driver's license number)</span></p><p><b>useContext</b>: ?? <span>(Details : {urn:iso:std:iso:3166 code 'US' = '??)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.48</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.48</p></blockquote></div>"
+            }
+          },
+          "NamingSystem.name": {
+            "value": "Texas Driver's License"
+          },
+          "NamingSystem.status": {
+            "value": "active"
+          },
+          "NamingSystem.kind": {
+            "value": "identifier"
+          },
+          "NamingSystem.date": {
+            "value": "2015-07-03"
+          },
+          "NamingSystem.publisher": {
+            "value": "HL7 International"
+          },
+          "NamingSystem.type": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://hl7.org/fhir/v2/0203"
+                },
+                "Coding.code": {
+                  "value": "DL"
+                }
+              }
+            ]
+          },
+          "NamingSystem.useContext": [
+            {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "value": "urn:iso:std:iso:3166"
+                  },
+                  "Coding.code": {
+                    "value": "US"
+                  }
+                }
+              ]
+            }
+          ],
+          "NamingSystem.uniqueId": [
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "oid"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "2.16.840.1.113883.4.3.48"
+              }
+            },
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "uri"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "urn:oid:2.16.840.1.113883.4.3.48"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "http://hl7.org/fhir/NamingSystem/4.3.49"
+      },
+      "NamingSystem": [
+        {
+          "Resource.id": {
+            "value": "4.3.49"
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.49</p><p><b>name</b>: Utah Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: Jul 3, 2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://hl7.org/fhir/v2/0203 code 'DL' = 'Driver's license number)</span></p><p><b>useContext</b>: ?? <span>(Details : {urn:iso:std:iso:3166 code 'US' = '??)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.49</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.49</p></blockquote></div>"
+            }
+          },
+          "NamingSystem.name": {
+            "value": "Utah Driver's License"
+          },
+          "NamingSystem.status": {
+            "value": "active"
+          },
+          "NamingSystem.kind": {
+            "value": "identifier"
+          },
+          "NamingSystem.date": {
+            "value": "2015-07-03"
+          },
+          "NamingSystem.publisher": {
+            "value": "HL7 International"
+          },
+          "NamingSystem.type": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://hl7.org/fhir/v2/0203"
+                },
+                "Coding.code": {
+                  "value": "DL"
+                }
+              }
+            ]
+          },
+          "NamingSystem.useContext": [
+            {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "value": "urn:iso:std:iso:3166"
+                  },
+                  "Coding.code": {
+                    "value": "US"
+                  }
+                }
+              ]
+            }
+          ],
+          "NamingSystem.uniqueId": [
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "oid"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "2.16.840.1.113883.4.3.49"
+              }
+            },
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "uri"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "urn:oid:2.16.840.1.113883.4.3.49"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "http://hl7.org/fhir/NamingSystem/4.3.51"
+      },
+      "NamingSystem": [
+        {
+          "Resource.id": {
+            "value": "4.3.51"
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.51</p><p><b>name</b>: Virginia Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: Jul 3, 2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://hl7.org/fhir/v2/0203 code 'DL' = 'Driver's license number)</span></p><p><b>useContext</b>: ?? <span>(Details : {urn:iso:std:iso:3166 code 'US' = '??)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.51</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.51</p></blockquote></div>"
+            }
+          },
+          "NamingSystem.name": {
+            "value": "Virginia Driver's License"
+          },
+          "NamingSystem.status": {
+            "value": "active"
+          },
+          "NamingSystem.kind": {
+            "value": "identifier"
+          },
+          "NamingSystem.date": {
+            "value": "2015-07-03"
+          },
+          "NamingSystem.publisher": {
+            "value": "HL7 International"
+          },
+          "NamingSystem.type": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://hl7.org/fhir/v2/0203"
+                },
+                "Coding.code": {
+                  "value": "DL"
+                }
+              }
+            ]
+          },
+          "NamingSystem.useContext": [
+            {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "value": "urn:iso:std:iso:3166"
+                  },
+                  "Coding.code": {
+                    "value": "US"
+                  }
+                }
+              ]
+            }
+          ],
+          "NamingSystem.uniqueId": [
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "oid"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "2.16.840.1.113883.4.3.51"
+              }
+            },
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "uri"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "urn:oid:2.16.840.1.113883.4.3.51"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "http://hl7.org/fhir/NamingSystem/4.3.50"
+      },
+      "NamingSystem": [
+        {
+          "Resource.id": {
+            "value": "4.3.50"
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.50</p><p><b>name</b>: Vermont Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: Jul 3, 2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://hl7.org/fhir/v2/0203 code 'DL' = 'Driver's license number)</span></p><p><b>useContext</b>: ?? <span>(Details : {urn:iso:std:iso:3166 code 'US' = '??)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.50</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.50</p></blockquote></div>"
+            }
+          },
+          "NamingSystem.name": {
+            "value": "Vermont Driver's License"
+          },
+          "NamingSystem.status": {
+            "value": "active"
+          },
+          "NamingSystem.kind": {
+            "value": "identifier"
+          },
+          "NamingSystem.date": {
+            "value": "2015-07-03"
+          },
+          "NamingSystem.publisher": {
+            "value": "HL7 International"
+          },
+          "NamingSystem.type": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://hl7.org/fhir/v2/0203"
+                },
+                "Coding.code": {
+                  "value": "DL"
+                }
+              }
+            ]
+          },
+          "NamingSystem.useContext": [
+            {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "value": "urn:iso:std:iso:3166"
+                  },
+                  "Coding.code": {
+                    "value": "US"
+                  }
+                }
+              ]
+            }
+          ],
+          "NamingSystem.uniqueId": [
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "oid"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "2.16.840.1.113883.4.3.50"
+              }
+            },
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "uri"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "urn:oid:2.16.840.1.113883.4.3.50"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "http://hl7.org/fhir/NamingSystem/4.3.53"
+      },
+      "NamingSystem": [
+        {
+          "Resource.id": {
+            "value": "4.3.53"
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.53</p><p><b>name</b>: Washington Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: Jul 3, 2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://hl7.org/fhir/v2/0203 code 'DL' = 'Driver's license number)</span></p><p><b>useContext</b>: ?? <span>(Details : {urn:iso:std:iso:3166 code 'US' = '??)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.53</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.53</p></blockquote></div>"
+            }
+          },
+          "NamingSystem.name": {
+            "value": "Washington Driver's License"
+          },
+          "NamingSystem.status": {
+            "value": "active"
+          },
+          "NamingSystem.kind": {
+            "value": "identifier"
+          },
+          "NamingSystem.date": {
+            "value": "2015-07-03"
+          },
+          "NamingSystem.publisher": {
+            "value": "HL7 International"
+          },
+          "NamingSystem.type": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://hl7.org/fhir/v2/0203"
+                },
+                "Coding.code": {
+                  "value": "DL"
+                }
+              }
+            ]
+          },
+          "NamingSystem.useContext": [
+            {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "value": "urn:iso:std:iso:3166"
+                  },
+                  "Coding.code": {
+                    "value": "US"
+                  }
+                }
+              ]
+            }
+          ],
+          "NamingSystem.uniqueId": [
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "oid"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "2.16.840.1.113883.4.3.53"
+              }
+            },
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "uri"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "urn:oid:2.16.840.1.113883.4.3.53"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "http://hl7.org/fhir/NamingSystem/4.3.55"
+      },
+      "NamingSystem": [
+        {
+          "Resource.id": {
+            "value": "4.3.55"
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.55</p><p><b>name</b>: Wisconsin Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: Jul 3, 2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://hl7.org/fhir/v2/0203 code 'DL' = 'Driver's license number)</span></p><p><b>useContext</b>: ?? <span>(Details : {urn:iso:std:iso:3166 code 'US' = '??)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.55</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.55</p></blockquote></div>"
+            }
+          },
+          "NamingSystem.name": {
+            "value": "Wisconsin Driver's License"
+          },
+          "NamingSystem.status": {
+            "value": "active"
+          },
+          "NamingSystem.kind": {
+            "value": "identifier"
+          },
+          "NamingSystem.date": {
+            "value": "2015-07-03"
+          },
+          "NamingSystem.publisher": {
+            "value": "HL7 International"
+          },
+          "NamingSystem.type": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://hl7.org/fhir/v2/0203"
+                },
+                "Coding.code": {
+                  "value": "DL"
+                }
+              }
+            ]
+          },
+          "NamingSystem.useContext": [
+            {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "value": "urn:iso:std:iso:3166"
+                  },
+                  "Coding.code": {
+                    "value": "US"
+                  }
+                }
+              ]
+            }
+          ],
+          "NamingSystem.uniqueId": [
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "oid"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "2.16.840.1.113883.4.3.55"
+              }
+            },
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "uri"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "urn:oid:2.16.840.1.113883.4.3.55"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "http://hl7.org/fhir/NamingSystem/4.3.54"
+      },
+      "NamingSystem": [
+        {
+          "Resource.id": {
+            "value": "4.3.54"
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.54</p><p><b>name</b>: West Virginia Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: Jul 3, 2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://hl7.org/fhir/v2/0203 code 'DL' = 'Driver's license number)</span></p><p><b>useContext</b>: ?? <span>(Details : {urn:iso:std:iso:3166 code 'US' = '??)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.54</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.54</p></blockquote></div>"
+            }
+          },
+          "NamingSystem.name": {
+            "value": "West Virginia Driver's License"
+          },
+          "NamingSystem.status": {
+            "value": "active"
+          },
+          "NamingSystem.kind": {
+            "value": "identifier"
+          },
+          "NamingSystem.date": {
+            "value": "2015-07-03"
+          },
+          "NamingSystem.publisher": {
+            "value": "HL7 International"
+          },
+          "NamingSystem.type": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://hl7.org/fhir/v2/0203"
+                },
+                "Coding.code": {
+                  "value": "DL"
+                }
+              }
+            ]
+          },
+          "NamingSystem.useContext": [
+            {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "value": "urn:iso:std:iso:3166"
+                  },
+                  "Coding.code": {
+                    "value": "US"
+                  }
+                }
+              ]
+            }
+          ],
+          "NamingSystem.uniqueId": [
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "oid"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "2.16.840.1.113883.4.3.54"
+              }
+            },
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "uri"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "urn:oid:2.16.840.1.113883.4.3.54"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Bundle.entry.fullUrl": {
+        "value": "http://hl7.org/fhir/NamingSystem/4.3.56"
+      },
+      "NamingSystem": [
+        {
+          "Resource.id": {
+            "value": "4.3.56"
+          },
+          "DomainResource.text": {
+            "Narrative.status": {
+              "value": "generated"
+            },
+            "Narrative.div": {
+              "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.56</p><p><b>name</b>: Wyoming Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: Jul 3, 2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://hl7.org/fhir/v2/0203 code 'DL' = 'Driver's license number)</span></p><p><b>useContext</b>: ?? <span>(Details : {urn:iso:std:iso:3166 code 'US' = '??)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.56</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.56</p></blockquote></div>"
+            }
+          },
+          "NamingSystem.name": {
+            "value": "Wyoming Driver's License"
+          },
+          "NamingSystem.status": {
+            "value": "active"
+          },
+          "NamingSystem.kind": {
+            "value": "identifier"
+          },
+          "NamingSystem.date": {
+            "value": "2015-07-03"
+          },
+          "NamingSystem.publisher": {
+            "value": "HL7 International"
+          },
+          "NamingSystem.type": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://hl7.org/fhir/v2/0203"
+                },
+                "Coding.code": {
+                  "value": "DL"
+                }
+              }
+            ]
+          },
+          "NamingSystem.useContext": [
+            {
+              "CodeableConcept.coding": [
+                {
+                  "Coding.system": {
+                    "value": "urn:iso:std:iso:3166"
+                  },
+                  "Coding.code": {
+                    "value": "US"
+                  }
+                }
+              ]
+            }
+          ],
+          "NamingSystem.uniqueId": [
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "oid"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "2.16.840.1.113883.4.3.56"
+              }
+            },
+            {
+              "NamingSystem.uniqueId.type": {
+                "value": "uri"
+              },
+              "NamingSystem.uniqueId.value": {
+                "value": "urn:oid:2.16.840.1.113883.4.3.56"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

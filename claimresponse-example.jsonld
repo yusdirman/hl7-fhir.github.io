@@ -1,0 +1,178 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/ClaimResponse",
+  "resourceType": "ClaimResponse",
+  "Resource.id": {
+    "value": "R3500"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">A human-readable rendering of the ClaimResponse</div>"
+    }
+  },
+  "ClaimResponse.identifier": [
+    {
+      "Identifier.system": {
+        "value": "http://www.BenefitsInc.com/fhir/remittance"
+      },
+      "Identifier.value": {
+        "value": "R3500"
+      }
+    }
+  ],
+  "ClaimResponse.requestReference": {
+    "Reference.reference": {
+      "value": "http://www.BenefitsInc.com/fhir/oralhealthclaim/15476332402"
+    },
+    "reference": "http://www.BenefitsInc.com/fhir/oralhealthclaim/15476332402"
+  },
+  "ClaimResponse.created": {
+    "value": "2014-08-16"
+  },
+  "ClaimResponse.organizationIdentifier": {
+    "Identifier.system": {
+      "value": "http://www.jurisdiction.org/insurers"
+    },
+    "Identifier.value": {
+      "value": "555123"
+    }
+  },
+  "ClaimResponse.outcome": {
+    "Coding.system": {
+      "value": "http://hl7.org/fhir/remittanceoutcome"
+    },
+    "Coding.code": {
+      "value": "complete"
+    }
+  },
+  "ClaimResponse.disposition": {
+    "value": "Claim settled as per contract."
+  },
+  "ClaimResponse.payeeType": {
+    "Coding.system": {
+      "value": "http://hl7.org/fhir/payeetype"
+    },
+    "Coding.code": {
+      "value": "provider"
+    }
+  },
+  "ClaimResponse.item": [
+    {
+      "ClaimResponse.item.sequenceLinkId": {
+        "value": 1
+      },
+      "ClaimResponse.item.adjudication": [
+        {
+          "ClaimResponse.item.adjudication.category": {
+            "Coding.code": {
+              "value": "eligible"
+            }
+          },
+          "ClaimResponse.item.adjudication.amount": {
+            "Quantity.value": {
+              "value": 135.57
+            },
+            "Quantity.system": {
+              "value": "urn:iso:std:iso:4217"
+            },
+            "Quantity.code": {
+              "value": "USD"
+            }
+          }
+        },
+        {
+          "ClaimResponse.item.adjudication.category": {
+            "Coding.code": {
+              "value": "copay"
+            }
+          },
+          "ClaimResponse.item.adjudication.amount": {
+            "Quantity.value": {
+              "value": 10.00
+            },
+            "Quantity.system": {
+              "value": "urn:iso:std:iso:4217"
+            },
+            "Quantity.code": {
+              "value": "USD"
+            }
+          }
+        },
+        {
+          "ClaimResponse.item.adjudication.category": {
+            "Coding.code": {
+              "value": "eligpercent"
+            }
+          },
+          "ClaimResponse.item.adjudication.value": {
+            "value": 80.00
+          }
+        },
+        {
+          "ClaimResponse.item.adjudication.category": {
+            "Coding.code": {
+              "value": "benefit"
+            }
+          },
+          "ClaimResponse.item.adjudication.amount": {
+            "Quantity.value": {
+              "value": 100.47
+            },
+            "Quantity.system": {
+              "value": "urn:iso:std:iso:4217"
+            },
+            "Quantity.code": {
+              "value": "USD"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "ClaimResponse.totalCost": {
+    "Quantity.value": {
+      "value": 135.57
+    },
+    "Quantity.system": {
+      "value": "urn:iso:std:iso:4217"
+    },
+    "Quantity.code": {
+      "value": "USD"
+    }
+  },
+  "ClaimResponse.totalBenefit": {
+    "Quantity.value": {
+      "value": 100.47
+    },
+    "Quantity.system": {
+      "value": "urn:iso:std:iso:4217"
+    },
+    "Quantity.code": {
+      "value": "USD"
+    }
+  },
+  "ClaimResponse.paymentDate": {
+    "value": "2014-08-31"
+  },
+  "ClaimResponse.paymentAmount": {
+    "Quantity.value": {
+      "value": 100.47
+    },
+    "Quantity.system": {
+      "value": "urn:iso:std:iso:4217"
+    },
+    "Quantity.code": {
+      "value": "USD"
+    }
+  },
+  "ClaimResponse.paymentRef": {
+    "Identifier.system": {
+      "value": "http://www.BenefitsInc.com/fhir/paymentRef"
+    },
+    "Identifier.value": {
+      "value": "201408-2-1569478"
+    }
+  }
+}

@@ -1,0 +1,209 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/MedicationOrder",
+  "resourceType": "MedicationOrder",
+  "Resource.id": {
+    "value": "f001"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f001</p><p><b>identifier</b>: order9837293 (OFFICIAL)</p><p><b>status</b>: active</p><p><b>medication</b>: <a>prescribed medication</a></p><p><b>patient</b>: <a>P. van den Heuvel</a></p><p><b>encounter</b>: <a>visit who leads to this priscription</a></p><p><b>dateWritten</b>: May 25, 2013 7:32:52 PM</p><p><b>prescriber</b>: <a>R.A. van den Berk</a></p><p><b>reasonCode</b>: Chronic obstructive pulmonary disease <span>(Details : {SNOMED CT code '13645005' = 'Chronic obstructive lung disease (disorder)', given as 'Chronic obstructive pulmonary disease'})</span></p><h3>DosageInstructions</h3><table><tr><td>-</td><td><b>Text</b></td><td><b>AdditionalInstructions</b></td><td><b>Timing</b></td><td><b>Site[x]</b></td><td><b>Route</b></td><td><b>Dose[x]</b></td></tr><tr><td>*</td><td>3 tot 4 maal daags 1 flacon</td><td>for use during pregnancy, contact physician <span>(Details )</span></td><td>Starting Aug 4, 2013, Do 3 per 1 days, Until Nov 5, 2013</td><td>Entire oral cavity <span>(Details : {SNOMED CT code '181220002' = 'Entire oral cavity (body structure)', given as 'Entire oral cavity'})</span></td><td>oral administration of treatment <span>(Details : {SNOMED CT code '394899003' = 'Oral administration of treatment (navigational concept)', given as 'oral administration of treatment'})</span></td><td>10 ml<span> (Details: http://unitsofmeasure.org code ml = 'ml')</span></td></tr></table><h3>DispenseRequests</h3><table><tr><td>-</td><td><b>ValidityPeriod</b></td><td><b>NumberOfRepeatsAllowed</b></td><td><b>Quantity</b></td><td><b>ExpectedSupplyDuration</b></td></tr><tr><td>*</td><td>Apr 8, 2013 --&gt; May 30, 2013</td><td>20</td><td>100 mcg<span> (Details: http://unitsofmeasure.org code ug = 'ug')</span></td><td>40 days<span> (Details: http://unitsofmeasure.org code d = 'd')</span></td></tr></table></div>"
+    }
+  },
+  "MedicationOrder.identifier": [
+    {
+      "Identifier.use": {
+        "value": "official"
+      },
+      "Identifier.system": {
+        "value": "http://www.bmc/portal/prescriptions"
+      },
+      "Identifier.value": {
+        "value": "order9837293"
+      }
+    }
+  ],
+  "MedicationOrder.status": {
+    "value": "active"
+  },
+  "MedicationOrder.medicationReference": {
+    "Reference.reference": {
+      "value": "Medication/f001"
+    },
+    "Reference.display": {
+      "value": "prescribed medication"
+    },
+    "reference": "http://hl7.org/fhir//Medication/f001"
+  },
+  "MedicationOrder.patient": {
+    "Reference.reference": {
+      "value": "Patient/f001"
+    },
+    "Reference.display": {
+      "value": "P. van den Heuvel"
+    },
+    "reference": "http://hl7.org/fhir//Patient/f001"
+  },
+  "MedicationOrder.encounter": {
+    "Reference.reference": {
+      "value": "Encounter/f001"
+    },
+    "Reference.display": {
+      "value": "visit who leads to this priscription"
+    },
+    "reference": "http://hl7.org/fhir//Encounter/f001"
+  },
+  "MedicationOrder.dateWritten": {
+    "value": "2013-05-25T19:32:52+01:00"
+  },
+  "MedicationOrder.prescriber": {
+    "Reference.reference": {
+      "value": "Practitioner/f006"
+    },
+    "Reference.display": {
+      "value": "R.A. van den Berk"
+    },
+    "reference": "http://hl7.org/fhir//Practitioner/f006"
+  },
+  "MedicationOrder.reasonCode": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "value": "http://snomed.info/sct"
+          },
+          "Coding.code": {
+            "value": "13645005"
+          },
+          "Coding.display": {
+            "value": "Chronic obstructive pulmonary disease"
+          }
+        }
+      ]
+    }
+  ],
+  "MedicationOrder.dosageInstruction": [
+    {
+      "MedicationOrder.dosageInstruction.text": {
+        "value": "3 tot 4 maal daags 1 flacon"
+      },
+      "MedicationOrder.dosageInstruction.additionalInstructions": [
+        {
+          "CodeableConcept.text": {
+            "value": "for use during pregnancy, contact physician"
+          }
+        }
+      ],
+      "MedicationOrder.dosageInstruction.timing": {
+        "Timing.repeat": {
+          "Timing.repeat.boundsPeriod": {
+            "Period.start": {
+              "value": "2013-08-04"
+            },
+            "Period.end": {
+              "value": "2013-11-05"
+            }
+          },
+          "Timing.repeat.frequency": {
+            "value": 3
+          },
+          "Timing.repeat.period": {
+            "value": 1
+          },
+          "Timing.repeat.periodUnit": {
+            "value": "d"
+          }
+        }
+      },
+      "MedicationOrder.dosageInstruction.siteCodeableConcept": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "value": "181220002"
+            },
+            "Coding.display": {
+              "value": "Entire oral cavity"
+            }
+          }
+        ],
+        "concept": "http://snomed.info/sct#181220002"
+      },
+      "MedicationOrder.dosageInstruction.route": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "value": "394899003"
+            },
+            "Coding.display": {
+              "value": "oral administration of treatment"
+            }
+          }
+        ],
+        "concept": "http://snomed.info/sct#394899003"
+      },
+      "MedicationOrder.dosageInstruction.doseQuantity": {
+        "Quantity.value": {
+          "value": 10
+        },
+        "Quantity.unit": {
+          "value": "ml"
+        },
+        "Quantity.system": {
+          "value": "http://unitsofmeasure.org"
+        },
+        "Quantity.code": {
+          "value": "ml"
+        }
+      }
+    }
+  ],
+  "MedicationOrder.dispenseRequest": {
+    "MedicationOrder.dispenseRequest.validityPeriod": {
+      "Period.start": {
+        "value": "2013-04-08"
+      },
+      "Period.end": {
+        "value": "2013-05-30"
+      }
+    },
+    "MedicationOrder.dispenseRequest.numberOfRepeatsAllowed": {
+      "value": 20
+    },
+    "MedicationOrder.dispenseRequest.quantity": {
+      "Quantity.value": {
+        "value": 100
+      },
+      "Quantity.unit": {
+        "value": "mcg"
+      },
+      "Quantity.system": {
+        "value": "http://unitsofmeasure.org"
+      },
+      "Quantity.code": {
+        "value": "ug"
+      }
+    },
+    "MedicationOrder.dispenseRequest.expectedSupplyDuration": {
+      "Quantity.value": {
+        "value": 40
+      },
+      "Quantity.unit": {
+        "value": "days"
+      },
+      "Quantity.system": {
+        "value": "http://unitsofmeasure.org"
+      },
+      "Quantity.code": {
+        "value": "d"
+      }
+    }
+  }
+}

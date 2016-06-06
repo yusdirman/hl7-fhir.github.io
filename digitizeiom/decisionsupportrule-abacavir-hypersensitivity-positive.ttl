@@ -1,0 +1,75 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/DecisionSupportRuledecisionsupportrule-abacavir-hypersensitivity-positive> a fhir:DecisionSupportRule;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "decisionsupportrule-abacavir-hypersensitivity-positive"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Abacavir Hypersensitivity Intervention - Positive</div>"
+  ];
+  fhir:DecisionSupportRule.moduleMetadata [
+     fhir:ModuleMetadata.identifier [
+       fhir:index 0;
+       fhir:Identifier.use [ fhir:value "official" ];
+       fhir:Identifier.value [ fhir:value "abacavir-hypersensitivity-positive" ]
+     ];
+     fhir:ModuleMetadata.version [ fhir:value "1.0.0" ];
+     fhir:ModuleMetadata.title [ fhir:value "Abacavir Hypersensitivity Positive" ];
+     fhir:ModuleMetadata.type [ fhir:value "decision-support-rule" ];
+     fhir:ModuleMetadata.status [ fhir:value "active" ];
+     fhir:ModuleMetadata.description [ fhir:value "Abacavir hypersensitivity intervention to alert the user that the patient's genotype test results indicate a hypersensitivity to Abacavir." ];
+     fhir:ModuleMetadata.publicationDate [ fhir:value "2016-04-01"^^xsd:date ];
+     fhir:ModuleMetadata.topic [
+       fhir:index 0;
+       fhir:CodeableConcept.text [ fhir:value "Abacavir Hypersensitivity - Positive Finding" ]
+     ]
+  ];
+  fhir:DecisionSupportRule.library [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/Library/library-abacavir-hypersensitivity-cds-logic>;
+     fhir:Reference.reference [ fhir:value "Library/library-abacavir-hypersensitivity-cds-logic" ]
+  ];
+  fhir:DecisionSupportRule.trigger [
+     fhir:index 0;
+     fhir:TriggerDefinition.type [ fhir:value "data-added" ];
+     fhir:TriggerDefinition.eventData [
+       fhir:DataRequirement.type [ fhir:value "MedicationOrder" ];
+       fhir:DataRequirement.codeFilter [
+         fhir:index 0;
+         fhir:DataRequirement.codeFilter.path [ fhir:value "code" ];
+         fhir:DataRequirement.codeFilter.valueCodeableConcept [
+           fhir:index 0;
+           fhir:CodeableConcept.coding [
+             fhir:index 0;
+             fhir:Coding.system [ fhir:value "http://snomed.org/sct" ];
+             fhir:Coding.code [ fhir:value "387005008" ]
+           ];
+           fhir:CodeableConcept.text [ fhir:value "Abacavir (substance)" ]
+         ]
+       ]
+     ]
+  ];
+  fhir:DecisionSupportRule.condition [ fhir:value "Should Notify User of Patient's Hypersensitivity"];
+  fhir:DecisionSupportRule.action [
+     fhir:index 0;
+     fhir:ActionDefinition.title [ fhir:value "Patient Shows Hypersensitivity to Abacavir in Genotype Test Results." ];
+     fhir:ActionDefinition.textEquivalent [ fhir:value "The HLA-B*57:01 allele is present in the Patient's Genotype Test results." ];
+     fhir:ActionDefinition.participantType [
+       fhir:value "practitioner";
+       fhir:index 0
+     ];
+     fhir:ActionDefinition.type [ fhir:value "create" ];
+     fhir:ActionDefinition.customization [
+       fhir:index 0;
+       fhir:ActionDefinition.customization.path [ fhir:value "/" ];
+       fhir:ActionDefinition.customization.expression [ fhir:value "Hypersensitivity To Abacavir Alert" ]
+     ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,247 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/CarePlan",
+  "resourceType": "CarePlan",
+  "Resource.id": {
+    "value": "f201"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f201</p><p><b>contained</b>: , </p><p><b>subject</b>: <a>Roel</a></p><p><b>status</b>: draft</p><p><b>period</b>: Mar 11, 2013 --&gt; Mar 13, 2013</p><p><b>modified</b>: Mar 11, 2013</p><p><b>addresses</b>: <a>Roel's renal insufficiency</a></p><p><b>careTeam</b>: id: careteam</p><p><b>goal</b>: id: goal; Roel; description: Re-established renal function with at least healthy nutrients.; status: achieved</p><blockquote><p><b>activity</b></p><h3>Details</h3><table><tr><td>-</td><td><b>Category</b></td><td><b>Code</b></td><td><b>Status</b></td><td><b>Prohibited</b></td><td><b>Scheduled[x]</b></td><td><b>Product[x]</b></td><td><b>DailyAmount</b></td></tr><tr><td>*</td><td>Diet <span>(Details : {http://hl7.org/fhir/care-plan-activity-category code 'diet' = 'Diet)</span></td><td>Potassium supplementation <span>(Details : {SNOMED CT code '284093001' = 'Potassium supplementation (product)', given as 'Potassium supplementation'})</span></td><td>completed</td><td>false</td><td>daily</td><td><a>Potassium</a></td><td>80 mmol<span> (Details: SNOMED CT code 258718000 = 'millimole (qualifier value)')</span></td></tr></table></blockquote><blockquote><p><b>activity</b></p><h3>Details</h3><table><tr><td>-</td><td><b>Category</b></td><td><b>Code</b></td><td><b>Status</b></td><td><b>Prohibited</b></td></tr><tr><td>*</td><td>Observation <span>(Details : {http://hl7.org/fhir/care-plan-activity-category code 'observation' = 'Observation)</span></td><td>Echography of kidney <span>(Details : {SNOMED CT code '306005' = 'Echography of kidney (procedure)', given as 'Echography of kidney'})</span></td><td>completed</td><td>false</td></tr></table></blockquote></div>"
+    }
+  },
+  "CareTeam": [
+    {
+      "Resource.id": {
+        "value": "careteam"
+      },
+      "CareTeam.participant": [
+        {
+          "CareTeam.participant.role": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://snomed.info/sct"
+                },
+                "Coding.code": {
+                  "value": "425268008"
+                },
+                "Coding.display": {
+                  "value": "Review of care plan"
+                }
+              }
+            ],
+            "concept": "http://snomed.info/sct#425268008"
+          },
+          "CareTeam.participant.member": {
+            "Reference.reference": {
+              "value": "Practitioner/f201"
+            },
+            "Reference.display": {
+              "value": "Dokter Bronsig"
+            },
+            "reference": "http://hl7.org/fhir//Practitioner/f201"
+          }
+        },
+        {
+          "CareTeam.participant.role": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://snomed.info/sct"
+                },
+                "Coding.code": {
+                  "value": "229774002"
+                },
+                "Coding.display": {
+                  "value": "Carer"
+                }
+              }
+            ],
+            "concept": "http://snomed.info/sct#229774002"
+          },
+          "CareTeam.participant.member": {
+            "Reference.reference": {
+              "value": "Practitioner/f204"
+            },
+            "Reference.display": {
+              "value": "Nurse Carla Espinosa"
+            },
+            "reference": "http://hl7.org/fhir//Practitioner/f204"
+          }
+        }
+      ]
+    },
+    {
+      "Resource.id": {
+        "value": "goal"
+      },
+      "Goal.subject": {
+        "Reference.reference": {
+          "value": "Patient/f201"
+        },
+        "Reference.display": {
+          "value": "Roel"
+        },
+        "reference": "http://hl7.org/fhir//Patient/f201"
+      },
+      "Goal.description": {
+        "value": "Re-established renal function with at least healthy nutrients."
+      },
+      "Goal.status": {
+        "value": "achieved"
+      }
+    }
+  ],
+  "CarePlan.subject": {
+    "Reference.reference": {
+      "value": "Patient/f201"
+    },
+    "Reference.display": {
+      "value": "Roel"
+    },
+    "reference": "http://hl7.org/fhir//Patient/f201"
+  },
+  "CarePlan.status": {
+    "value": "draft"
+  },
+  "CarePlan.period": {
+    "Period.start": {
+      "value": "2013-03-11"
+    },
+    "Period.end": {
+      "value": "2013-03-13"
+    }
+  },
+  "CarePlan.modified": {
+    "value": "2013-03-11"
+  },
+  "CarePlan.addresses": [
+    {
+      "Reference.reference": {
+        "value": "Condition/f204"
+      },
+      "Reference.display": {
+        "value": "Roel's renal insufficiency"
+      }
+    }
+  ],
+  "CarePlan.careTeam": {
+    "Reference.reference": {
+      "value": "#careteam"
+    }
+  },
+  "CarePlan.goal": [
+    {
+      "Reference.reference": {
+        "value": "#goal"
+      }
+    }
+  ],
+  "CarePlan.activity": [
+    {
+      "CarePlan.activity.detail": {
+        "CarePlan.activity.detail.category": {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "value": "http://hl7.org/fhir/care-plan-activity-category"
+              },
+              "Coding.code": {
+                "value": "diet"
+              }
+            }
+          ]
+        },
+        "CarePlan.activity.detail.code": {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "value": "http://snomed.info/sct"
+              },
+              "Coding.code": {
+                "value": "284093001"
+              },
+              "Coding.display": {
+                "value": "Potassium supplementation"
+              }
+            }
+          ],
+          "concept": "http://snomed.info/sct#284093001"
+        },
+        "CarePlan.activity.detail.status": {
+          "value": "completed"
+        },
+        "CarePlan.activity.detail.prohibited": {
+          "value": false
+        },
+        "CarePlan.activity.detail.scheduledString": {
+          "value": "daily"
+        },
+        "CarePlan.activity.detail.productReference": {
+          "Reference.reference": {
+            "value": "Substance/f203"
+          },
+          "Reference.display": {
+            "value": "Potassium"
+          },
+          "reference": "http://hl7.org/fhir//Substance/f203"
+        },
+        "CarePlan.activity.detail.dailyAmount": {
+          "Quantity.value": {
+            "value": 80
+          },
+          "Quantity.unit": {
+            "value": "mmol"
+          },
+          "Quantity.system": {
+            "value": "http://snomed.info/sct"
+          },
+          "Quantity.code": {
+            "value": "258718000"
+          }
+        }
+      }
+    },
+    {
+      "CarePlan.activity.detail": {
+        "CarePlan.activity.detail.category": {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "value": "http://hl7.org/fhir/care-plan-activity-category"
+              },
+              "Coding.code": {
+                "value": "observation"
+              }
+            }
+          ]
+        },
+        "CarePlan.activity.detail.code": {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "value": "http://snomed.info/sct"
+              },
+              "Coding.code": {
+                "value": "306005"
+              },
+              "Coding.display": {
+                "value": "Echography of kidney"
+              }
+            }
+          ],
+          "concept": "http://snomed.info/sct#306005"
+        },
+        "CarePlan.activity.detail.status": {
+          "value": "completed"
+        },
+        "CarePlan.activity.detail.prohibited": {
+          "value": false
+        }
+      }
+    }
+  ]
+}

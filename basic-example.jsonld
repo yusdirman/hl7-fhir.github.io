@@ -1,0 +1,124 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Basic",
+  "resourceType": "Basic",
+  "Resource.id": {
+    "value": "referral"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p><b>Patient:</b>Roel</p>\n      <p><b>Requestor:</b>Dokter Bronsig</p>\n      <p><b>Type:</b>Consultation</p>\n      <p><b>Target Date:</b>April 1 - April 31</p>\n      <p>COMPLETED</p>\n      <b>The patient had fever peaks over the last couple of days. He is worried about these peaks.</b>\n    </div>"
+    }
+  },
+  "DomainResource.extension": [
+    {
+      "Extension.url": {
+        "value": "http://example.org/do-not-use/fhir-extensions/referral#requestingPractitioner"
+      },
+      "Extension.valueReference": {
+        "Reference.reference": {
+          "value": "Practitioner/f201"
+        },
+        "Reference.display": {
+          "value": "Dokter Bronsig"
+        },
+        "reference": "http://hl7.org/fhir//Practitioner/f201"
+      }
+    },
+    {
+      "Extension.url": {
+        "value": "http://example.org/do-not-use/fhir-extensions/referral#notes"
+      },
+      "Extension.valueString": {
+        "value": "The patient had fever peaks over the last couple of days. He is worried about these peaks."
+      }
+    },
+    {
+      "Extension.url": {
+        "value": "http://example.org/do-not-use/fhir-extensions/referral#fulfillingEncounter"
+      },
+      "Extension.valueReference": {
+        "Reference.reference": {
+          "value": "Encounter/f201"
+        },
+        "reference": "http://hl7.org/fhir//Encounter/f201"
+      }
+    }
+  ],
+  "DomainResource.modifierExtension": [
+    {
+      "Extension.url": {
+        "value": "http://example.org/do-not-use/fhir-extensions/referral#referredForService"
+      },
+      "Extension.valueCodeableConcept": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "value": "11429006"
+            },
+            "Coding.display": {
+              "value": "Consultation"
+            }
+          }
+        ],
+        "concept": "http://snomed.info/sct#11429006"
+      }
+    },
+    {
+      "Extension.url": {
+        "value": "http://example.org/do-not-use/fhir-extensions/referral#targetDate"
+      },
+      "Extension.valuePeriod": {
+        "Period.start": {
+          "value": "2013-04-01"
+        },
+        "Period.end": {
+          "value": "2013-04-15"
+        }
+      }
+    },
+    {
+      "Extension.url": {
+        "value": "http://example.org/do-not-use/fhir-extensions/referral#status"
+      },
+      "Extension.valueCode": {
+        "value": "complete"
+      }
+    }
+  ],
+  "Basic.code": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/basic-resource-type"
+        },
+        "Coding.code": {
+          "value": "referral"
+        }
+      }
+    ]
+  },
+  "Basic.subject": {
+    "Reference.reference": {
+      "value": "Patient/f201"
+    },
+    "Reference.display": {
+      "value": "Roel"
+    },
+    "reference": "http://hl7.org/fhir//Patient/f201"
+  },
+  "Basic.created": {
+    "value": "2013-05-14"
+  },
+  "Basic.author": {
+    "Reference.reference": {
+      "value": "Practitioner/example"
+    },
+    "reference": "http://hl7.org/fhir//Practitioner/example"
+  }
+}

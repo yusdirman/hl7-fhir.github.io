@@ -1,0 +1,515 @@
+﻿<!DOCTYPE HTML>
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Conformance-daf-query-responder-core - FHIR v1.4.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="../fhir.css" rel="stylesheet"/>
+  <link rel="Prev" href="http://hl7.org/fhir/conformance-daf-query-responder-core.html"/>
+
+  <!-- Bootstrap core CSS -->
+  <link href=".././dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href=".././assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href=".././assets/css/project.css" rel="stylesheet"/>
+  <link href=".././assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="../jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src=".././assets/js/html5shiv.js"></script>
+  <script src=".././assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href=".././assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href=".././assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href=".././assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href=".././assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href=".././assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment"><!-- segment-header -->	
+		<div class="container"><!-- container -->
+			<a id="logo" href="http://hl7.org/fhir" no-external="true"><img src=".././assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a id="hl7-logo" href="http://www.hl7.org" no-external="true">
+					<img src=".././assets/images/hl7-logo.png" width="42" height="50" alt="visit the hl7 website"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="./../assets/images/search.png"/></a></div> 
+		</div>
+		<div class="container"><!-- container -->
+	</div></div><!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment"><!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container"><!-- container -->
+ <!-- HEADER CONTENT -->
+ 	      		
+ 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="../index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../documentation.html">Documentation</a></li>
+              <li><a href="../implementation.html">Implementation</a></li>
+              <li><a href="../resourcelist.html">Resources</a></li>
+              <li><a href="../clinical.html">Clinical</a></li>
+              <li><a href="../administration.html">Administrative</a></li>
+              <li><a href="../infrastructure.html">Infrastructure</a></li>
+              <li><a href="../financial.html">Financial</a></li>
+
+						</ul>
+					</div><!-- /.nav-collapse -->
+				</div><!-- /.container -->
+			</nav><!-- /.navbar -->
+      		
+				
+<!-- /HEADER CONTENT -->				
+		</div><!-- /container -->
+	</div><!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment"><!-- segment-breadcrumb -->
+		<div class="container"><!-- container -->	
+			<ul class="breadcrumb">
+        <!-- conformance-daf-query-responder-core / resource-instance:Conformance / Example -->
+        <li title="Data Access Framework"><a href="daf.html"><b>DAF</b></a></li>
+        <li><a href="registry.html"><b>Registry</b></a></li>
+        <li><b>DAF Responder Basic</b></li>
+
+			</ul>	
+		</div><!-- /container -->
+	</div><!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment"><!-- segment-content -->
+	<div class="container"><!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+<!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<h1>Conformance-daf-query-responder-core</h1>
+
+<p>
+
+This is the narrative for the resource. See also the <a href="conformance-daf-query-responder-core.xml.html">XML</a> or <a href="conformance-daf-query-responder-core.json.html">JSON</a> format. This example conforms to the <a href="conformance.html">profile Conformance</a>.
+</p>
+
+<hr/>
+<div>
+      
+      <h2>DAF Responder</h2>
+      
+      <p>(Requirements Definition)</p>
+      
+      <p>Published: 2016-03-28</p>
+      
+      <p>Published by: 
+        <b>
+          
+          <a href="http://www.healthit.gov/">U.S. Office of the National Coordinator (ONC)</a>
+        
+        </b>
+      
+      </p>
+      
+      <p>This profile defines the expected capabilities of the 
+        <i>DAF Responder</i> actor when conforming to the 
+        <a href="daf.html">DAF FHIR IG</a>. The profile includes the complete list of actual profiles, RESTful operations, search parameters supported by DAF Responders. DAF Requestors have the option of choosing from this list to access necessary data based on their local use cases and other contextual requirements.
+      </p>
+      
+      <h2>General</h2>
+      
+      <table>
+        
+        <tbody>
+          
+          <tr>
+            
+            <th>FHIR Version:</th>
+            
+            <td>DSTU2</td>
+          
+          </tr>
+          
+          <tr>
+            
+            <th>Supported formats:</th>
+            
+            <td>json and xml</td>
+          
+          </tr>
+        
+        </tbody>
+      
+      </table>
+	  
+      
+      <h2>REST  behavior</h2>
+      
+      <p>The DAF Responder SHALL support the 
+        <a href="patient-daf.html">DAF-Patient</a> resource profile. In addition to the DAFPatient, the DAF Responder SHALL support at least one additional resource profile from the list of 
+        <a href="daf.html">DAF profiles</a>. 
+	  The DAF Responder SHALL implement REST behavior according to the 
+        <a href="../http.html">FHIR</a> specification.
+	  The DAF Responder SHALL support both json and xml resource formats for all DAF interactions. The DAF Responder SHALL identify the DAF profile(s) supported as part of the FHIR BaseResource.Meta.profile attribute for each instance.
+      </p>
+      
+      <p>
+        
+        <b>Security:</b>
+      
+      </p>
+      
+      <p>DAF Responders SHALL meet the security requirements documented in the 
+        <a href="daf-security.html">DAF FHIR IG</a>.
+      </p>
+      
+      <h3>RESTful Operations Summary</h3>
+      
+      <table class="grid">
+        
+        <thead>
+          
+          <tr>
+            
+            <th>Resource(Profile Name)</th>
+            
+            <th>
+              <a href="../type-restful-interaction.html">Search</a>
+            </th>
+            
+            <th>
+              <a href="../type-restful-interaction.html">Read</a>
+            </th>
+            
+            <th>
+              <a href="../type-restful-interaction.html">Read Version</a>
+            </th>
+            
+            <th>
+              <a href="../type-restful-interaction.html">Instance History</a>
+            </th>
+          
+          </tr>
+        
+        </thead>
+        
+        <tbody>
+          
+          <tr>
+            
+            <th>
+              <a href="patient-daf.html">DAF-Patient</a>
+            </th>
+            
+            <td>
+              
+              <a href="#DAFPatientSearch" title="Allows discovery of DAF-Patient resources based on different search criteria">SHALL</a>
+            
+            </td>
+            
+            <td>
+              
+              <a href="#DAFPatientSearch" title="Allows retrieval of a specific DAF-Patients by resource id">SHALL</a>
+            
+            </td>
+            
+            <td>
+              
+              <a href="#DAFPatientSearch" title="Allows retrieval of a historical version of a DAF-Patient">SHOULD</a>
+            
+            </td>
+            
+            <td>
+              
+              <a href="#DAFPatientSearch" title="Allows review of changes to DAF-Patient over time">SHOULD</a>
+            
+            </td>
+          
+          </tr>
+		  
+          <tr>
+            
+            <th>
+              <a href="allergyintolerance-daf.html">DAF-AllergyIntolerance</a>
+            </th>
+            
+            <td>
+              
+              <a href="#DAFAllergyIntoleranceSearch" title="Allows discovery of DAF-AllergyIntolerance resources based on different search criteria">SHALL</a>
+            
+            </td>
+            
+            <td>
+              
+              <a href="#DAFAllergyIntoleranceSearch" title="Allows retrieval of a specific DAF-AllergyIntolerance by id">SHALL</a>
+            
+            </td>
+            
+            <td>
+              
+              <a href="#DAFAllergyIntoleranceSearch" title="Allows retrieval of a historical version of a DAF-AllergyIntolerance">SHOULD</a>
+            
+            </td>
+            
+            <td>
+              
+              <a href="#DAFAllergyIntoleranceSearch" title="Allows review of changes to DAF-AllergyIntolerance over time">SHOULD</a>
+            
+            </td>
+          
+          </tr>
+		  
+          <tr>
+            <th>Other Requirements TBD from Argonaut IGs</th>
+            
+          </tr>
+        
+        </tbody>
+      
+      </table>
+      
+      <br/>
+      
+      <br/>
+
+	  
+      <h3>Supported profiles</h3>
+	  
+      <p>DAF Responders SHALL support the 
+        <a href="patient-daf.html">DAFPatient</a> profile. In addition to the DAFPatient profile, DAF Responders SHALL support at least one more profile (for e.g DAFCondition, DAFMedicationAdministration, DAFResults) from the DAF profiles listed in the DAF implementation guide.
+      </p>
+	  	  
+	  
+      <h3>Search Operations Summary</h3>
+	  
+      <p>DAF Responders SHALL support the following common parameters as part of queries related to DAF profiles:</p>
+	  
+      <ul>
+	     
+        <li>
+          <a href="../search.html#id">_id</a>
+        </li>
+	
+        <li>
+          <a href="../search.html#lastUpdated">_lastUpdated</a>
+        </li>
+		 
+        <li>
+          <a href="../search.html#profile">_profile</a>
+        </li>
+        
+      </ul>
+	 
+	
+      <p>DAF Responders SHALL support the following search contexts defined within the 
+        <a href="../search.html#Introduction">FHIR</a>specification.
+      </p> 
+	
+      <ul>
+		
+        <li>Search context by specifying a particular resource type</li>
+		
+	
+      </ul>
+	
+      <p>DAF Responders SHALL support 
+        <a href="../search.html#Modifiers">Modifiers</a> as applicable to the data types of the search parameters. DAF Responders SHALL also support 
+        <a href="../search.html#Composite Search Parameters">Composite Search Parameters</a> as defined in the FHIR specification.
+      </p>
+	  
+      <table class="grid">
+        
+        <thead>
+          
+          <tr>
+            
+            <th>Resource Name</th>
+            
+            <th>Search and Include Parameters</th>
+          
+          </tr>
+        
+        </thead>
+        
+        <tbody>
+          
+          <tr>
+			
+            <td id="DAFPatientSearch">DAF-Patient</td>
+			
+            <td>
+				
+              <ul>
+					
+                <li>
+                  <a href="../patient.html#search">name</a> - Search based on given name or family name or text name (
+                  <a href="../search.html#string">string</a>)
+                </li>
+					
+                <li>
+                  <a href="../patient.html#search">family</a> - Search based on family name (
+                  <a href="../search.html#string">string</a>)
+                </li>
+					
+                <li>
+                  <a href="../patient.html#search">given</a> - Search based on given name (
+                  <a href="../search.html#string">string</a>)
+                </li>
+					
+                <li>
+                  <a href="../patient.html#search">identifier</a> - Search based on patient identifier (
+                  <a href="../search.html#token">token</a>)
+                </li>
+										
+                <li>
+                  <a href="../patient.html#search">gender</a> - Search based on gender  (
+                  <a href="../search.html#token">token</a>)
+                </li>
+                
+                <li>
+                  <a href="../patient.html#search">birthdate</a> - Search based on birthDate (
+                  <a href="../search.html#date">date</a>)
+                </li>
+                
+					
+				
+              </ul>
+			
+            </td>
+		  
+          </tr>
+		  
+          <tr>
+		    
+            <td id="DAFAllergyIntoleranceSearch">DAF-AllergyIntolerance</td>
+			
+            <td>
+				
+              <ul>
+					
+					
+                <li>
+                  <a href="../allergyintolerance.html#search">patient</a> - Search allergies for a patient(<a href="../search.html#reference">reference</a>)
+                </li>
+					
+                <li>Chained parameter - patient.identifier</li>
+					
+              </ul>  
+			
+            </td>
+		  
+          </tr>
+		  
+		  
+		
+        </tbody>
+	  
+      </table>
+      
+      <br/>
+      
+      <br/>
+    
+    </div>
+<hr/>
+
+<p>
+<!-- spacer -->
+&nbsp;
+</p>
+
+
+
+<p>
+<!-- spacer -->
+&nbsp;
+</p>
+
+
+<p>
+Usage note: every effort has been made to ensure that the 
+examples are correct and useful, but they are not a normative part 
+of the specification. 
+</p>
+
+
+</div>
+
+
+				</div><!-- /inner-wrapper -->
+            </div><!-- /row -->
+        </div><!-- /container -->
+        
+    </div><!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment"><!-- segment-footer -->
+		<div class="container"><!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        © HL7.org 2011+. FHIR STU3 Candidate (v1.4.0-8453) generated on Mon, Jun 6, 2016 20:20+0000. <a href="../qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search</a> | 
+               <a style="color: #81BEF7" href="../history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="../toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fconformance-daf-query-responder-core.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fconformance-daf-query-responder-core.html">Compare to DSTU2</a> |                
+               <a style="color: #81BEF7" rel="license" href="../license.html"><img src="../cc0.png" style="border-style: none;" alt="CC0"/></a> | 
+               <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>   
+        </span>
+        </p>
+			</div><!-- /inner-wrapper -->
+		</div><!-- /container -->
+	</div><!-- /segment-footer -->
+<!-- disqus thread -->
+<!--disqus-->
+<!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden"><!-- segment-post-footer -->
+		<div class="container"><!-- container -->
+		</div><!-- /container -->
+	</div><!-- /segment-post-footer -->
+    
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src=".././assets/js/jquery.js"> </script>   <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src=".././dist/js/bootstrap.min.js"> </script>
+<script src=".././assets/js/respond.min.js"> </script>
+
+<script src=".././assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

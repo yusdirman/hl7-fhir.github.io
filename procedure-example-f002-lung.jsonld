@@ -1,0 +1,132 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Procedure",
+  "resourceType": "Procedure",
+  "Resource.id": {
+    "value": "f002"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f002</p><p><b>subject</b>: <a>P. van de Heuvel</a></p><p><b>status</b>: completed</p><p><b>code</b>: Partial lobectomy of lung <span>(Details : {SNOMED CT code '359615001' = 'Partial lobectomy of lung (procedure)', given as 'Partial lobectomy of lung'})</span></p><p><b>bodySite</b>: Lung structure <span>(Details : {SNOMED CT code '39607008' = 'Lung structure (body structure)', given as 'Lung structure'})</span></p><p><b>reason</b>: Malignant tumor of lung <span>(Details )</span></p><h3>Performers</h3><table><tr><td>-</td><td><b>Actor</b></td><td><b>Role</b></td></tr><tr><td>*</td><td><a>M.I.M. Versteegh</a></td><td>Care role <span>(Details : {urn:oid:2.16.840.1.113883.2.4.15.111 code '01.000' = '??', given as 'Arts'})</span></td></tr></table><p><b>performed</b>: Mar 8, 2013 9:00:10 AM --&gt; Mar 8, 2013 9:30:10 AM</p><p><b>encounter</b>: <a>Encounter/f002</a></p><p><b>outcome</b>: improved blood circulation <span>(Details )</span></p><p><b>report</b>: <a>Lab results blood test</a></p><p><b>followUp</b>: described in care plan <span>(Details )</span></p></div>"
+    }
+  },
+  "Procedure.subject": {
+    "Reference.reference": {
+      "value": "Patient/f001"
+    },
+    "Reference.display": {
+      "value": "P. van de Heuvel"
+    },
+    "reference": "http://hl7.org/fhir//Patient/f001"
+  },
+  "Procedure.status": {
+    "value": "completed"
+  },
+  "Procedure.code": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "value": "359615001"
+        },
+        "Coding.display": {
+          "value": "Partial lobectomy of lung"
+        }
+      }
+    ],
+    "concept": "http://snomed.info/sct#359615001"
+  },
+  "Procedure.bodySite": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "value": "http://snomed.info/sct"
+          },
+          "Coding.code": {
+            "value": "39607008"
+          },
+          "Coding.display": {
+            "value": "Lung structure"
+          }
+        }
+      ]
+    }
+  ],
+  "Procedure.reasonCodeableConcept": {
+    "CodeableConcept.text": {
+      "value": "Malignant tumor of lung"
+    }
+  },
+  "Procedure.performer": [
+    {
+      "Procedure.performer.actor": {
+        "Reference.reference": {
+          "value": "Practitioner/f003"
+        },
+        "Reference.display": {
+          "value": "M.I.M. Versteegh"
+        },
+        "reference": "http://hl7.org/fhir//Practitioner/f003"
+      },
+      "Procedure.performer.role": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "urn:oid:2.16.840.1.113883.2.4.15.111"
+            },
+            "Coding.code": {
+              "value": "01.000"
+            },
+            "Coding.display": {
+              "value": "Arts"
+            }
+          }
+        ],
+        "CodeableConcept.text": {
+          "value": "Care role"
+        }
+      }
+    }
+  ],
+  "Procedure.performedPeriod": {
+    "Period.start": {
+      "value": "2013-03-08T09:00:10+01:00"
+    },
+    "Period.end": {
+      "value": "2013-03-08T09:30:10+01:00"
+    }
+  },
+  "Procedure.encounter": {
+    "Reference.reference": {
+      "value": "Encounter/f002"
+    },
+    "reference": "http://hl7.org/fhir//Encounter/f002"
+  },
+  "Procedure.outcome": {
+    "CodeableConcept.text": {
+      "value": "improved blood circulation"
+    }
+  },
+  "Procedure.report": [
+    {
+      "Reference.reference": {
+        "value": "DiagnosticReport/f001"
+      },
+      "Reference.display": {
+        "value": "Lab results blood test"
+      }
+    }
+  ],
+  "Procedure.followUp": [
+    {
+      "CodeableConcept.text": {
+        "value": "described in care plan"
+      }
+    }
+  ]
+}

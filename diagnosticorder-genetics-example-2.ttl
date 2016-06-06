@@ -1,0 +1,64 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/DiagnosticOrderog-example2> a fhir:DiagnosticOrder;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "og-example2"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: og-example2</p><p><b>status</b>: received</p><p><b>subject</b>: <a>Patient/example</a></p><p><b>encounter</b>: <a>Encounter/example</a></p><p><b>orderer</b>: <a>Practitioner/example</a></p><h3>Events</h3><table><tr><td>-</td><td><b>Status</b></td><td><b>DateTime</b></td><td><b>Actor</b></td></tr><tr><td>*</td><td>requested</td><td>May 12, 2014 4:16:00 PM</td><td><a>Practitioner/456</a></td></tr></table></div>"
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/diagnosticorder-geneticsItem" ];
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "code" ];
+       fhir:Extension.valueCodeableConcept [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:concept loinc:49874-1;
+           fhir:Coding.system [ fhir:value "http://loinc.org" ];
+           fhir:Coding.code [ fhir:value "49874-1" ]
+         ];
+         fhir:CodeableConcept.text [ fhir:value "ABCB4 gene mutation analysis" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:Extension.url [ fhir:value "geneticsObservation" ];
+       fhir:Extension.valueReference [
+         fhir:link <http://hl7.org/fhir/Observation/example>;
+         fhir:Reference.reference [ fhir:value "Observation/example" ]
+       ]
+     ]
+  ];
+  fhir:DiagnosticOrder.status [ fhir:value "received"];
+  fhir:DiagnosticOrder.subject [
+     fhir:link <http://hl7.org/fhir/Patient/example>;
+     fhir:Reference.reference [ fhir:value "Patient/example" ]
+  ];
+  fhir:DiagnosticOrder.encounter [
+     fhir:link <http://hl7.org/fhir/Encounter/example>;
+     fhir:Reference.reference [ fhir:value "Encounter/example" ]
+  ];
+  fhir:DiagnosticOrder.orderer [
+     fhir:link <http://hl7.org/fhir/Practitioner/example>;
+     fhir:Reference.reference [ fhir:value "Practitioner/example" ]
+  ];
+  fhir:DiagnosticOrder.event [
+     fhir:index 0;
+     fhir:DiagnosticOrder.event.status [ fhir:value "requested" ];
+     fhir:DiagnosticOrder.event.dateTime [ fhir:value "2014-05-12T16:16:00-07:00"^^xsd:dateTime ];
+     fhir:DiagnosticOrder.event.actor [
+       fhir:link <http://hl7.org/fhir/Practitioner/456>;
+       fhir:Reference.reference [ fhir:value "Practitioner/456" ]
+     ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

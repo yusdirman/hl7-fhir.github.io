@@ -1,0 +1,104 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/ProcedureRequest",
+  "resourceType": "ProcedureRequest",
+  "Resource.id": {
+    "value": "procedurerequest-example-qicore"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Request for Routine Appendectomy</div>"
+    }
+  },
+  "DomainResource.extension": [
+    {
+      "Extension.url": {
+        "value": "http://hl7.org/fhir/StructureDefinition/procedurerequest-authorizedBy"
+      },
+      "Extension.valueReference": {
+        "Reference.reference": {
+          "value": "Practitioner/example"
+        },
+        "reference": "http://hl7.org/fhir//Practitioner/example"
+      }
+    }
+  ],
+  "ProcedureRequest.subject": {
+    "Reference.reference": {
+      "value": "Patient/example"
+    },
+    "reference": "http://hl7.org/fhir//Patient/example"
+  },
+  "ProcedureRequest.code": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "value": "80146002"
+        },
+        "Coding.display": {
+          "value": "Appendectomy (Procedure)"
+        }
+      }
+    ],
+    "CodeableConcept.text": {
+      "value": "Appendectomy"
+    },
+    "concept": "http://snomed.info/sct#80146002"
+  },
+  "ProcedureRequest.bodySite": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "value": "http://snomed.info/sct"
+          },
+          "Coding.code": {
+            "value": "66754008"
+          },
+          "Coding.display": {
+            "value": "Appendix structure"
+          }
+        }
+      ]
+    }
+  ],
+  "ProcedureRequest.reasonCodeableConcept": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "value": "163220003"
+        },
+        "Coding.display": {
+          "value": "On examination - abdominal pain - right iliac"
+        }
+      }
+    ],
+    "concept": "http://snomed.info/sct#163220003"
+  },
+  "ProcedureRequest.scheduledDateTime": {
+    "value": "2013-04-05"
+  },
+  "ProcedureRequest.encounter": {
+    "Reference.reference": {
+      "value": "Encounter/example"
+    },
+    "reference": "http://hl7.org/fhir//Encounter/example"
+  },
+  "ProcedureRequest.status": {
+    "value": "completed"
+  },
+  "ProcedureRequest.orderedOn": {
+    "value": "2013-04-04"
+  },
+  "ProcedureRequest.priority": {
+    "value": "urgent"
+  }
+}

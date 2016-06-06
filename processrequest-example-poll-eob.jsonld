@@ -1,0 +1,36 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/ProcessRequest",
+  "resourceType": "ProcessRequest",
+  "Resource.id": {
+    "value": "1115"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">A human-readable rendering of the Poll ProcessRequest</div>"
+    }
+  },
+  "ProcessRequest.action": {
+    "value": "poll"
+  },
+  "ProcessRequest.identifier": [
+    {
+      "Identifier.system": {
+        "value": "http://www.phr.com/patient/12345/processrequest"
+      },
+      "Identifier.value": {
+        "value": "115"
+      }
+    }
+  ],
+  "ProcessRequest.created": {
+    "value": "2014-08-16"
+  },
+  "ProcessRequest.include": [
+    {
+      "value": "ExplanationOfBenefit"
+    }
+  ]
+}

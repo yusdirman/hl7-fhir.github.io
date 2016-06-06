@@ -1,0 +1,155 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/AuditEvent",
+  "resourceType": "AuditEvent",
+  "Resource.id": {
+    "value": "example"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Application Start for under service login &quot;Grahame&quot; (id: Grahame's Test HL7Connect)</div>"
+    }
+  },
+  "AuditEvent.type": {
+    "Coding.system": {
+      "value": "http://nema.org/dicom/dicm"
+    },
+    "Coding.code": {
+      "value": "110100"
+    },
+    "Coding.display": {
+      "value": "Application Activity"
+    }
+  },
+  "AuditEvent.subtype": [
+    {
+      "Coding.system": {
+        "value": "http://nema.org/dicom/dicm"
+      },
+      "Coding.code": {
+        "value": "110120"
+      },
+      "Coding.display": {
+        "value": "Application Start"
+      }
+    }
+  ],
+  "AuditEvent.action": {
+    "value": "E"
+  },
+  "AuditEvent.recorded": {
+    "value": "2012-10-25T22:04:27+11:00"
+  },
+  "AuditEvent.outcome": {
+    "value": "0"
+  },
+  "AuditEvent.agent": [
+    {
+      "AuditEvent.agent.role": [
+        {
+          "CodeableConcept.text": {
+            "value": "Service User (Logon)"
+          }
+        }
+      ],
+      "AuditEvent.agent.userId": {
+        "Identifier.value": {
+          "value": "Grahame"
+        }
+      },
+      "AuditEvent.agent.requestor": {
+        "value": false
+      },
+      "AuditEvent.agent.network": {
+        "AuditEvent.agent.network.address": {
+          "value": "127.0.0.1"
+        },
+        "AuditEvent.agent.network.type": {
+          "value": "2"
+        }
+      }
+    }
+  ],
+  "AuditEvent.source": {
+    "AuditEvent.source.site": {
+      "value": "Development"
+    },
+    "AuditEvent.source.identifier": {
+      "Identifier.value": {
+        "value": "Grahame's Laptop"
+      }
+    },
+    "AuditEvent.source.type": [
+      {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/audit-event-sub-type"
+        },
+        "Coding.code": {
+          "value": "1"
+        }
+      }
+    ]
+  },
+  "AuditEvent.entity": [
+    {
+      "AuditEvent.entity.identifier": {
+        "Identifier.type": {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "value": "http://hl7.org/fhir/identifier-type"
+              },
+              "Coding.code": {
+                "value": "SNO"
+              }
+            }
+          ],
+          "CodeableConcept.text": {
+            "value": "Dell Serial Number"
+          }
+        },
+        "Identifier.value": {
+          "value": "ABCDEF"
+        }
+      },
+      "AuditEvent.entity.type": {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/object-type"
+        },
+        "Coding.code": {
+          "value": "4"
+        },
+        "Coding.display": {
+          "value": "Other"
+        }
+      },
+      "AuditEvent.entity.role": {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/object-role"
+        },
+        "Coding.code": {
+          "value": "4"
+        },
+        "Coding.display": {
+          "value": "Domain Resource"
+        }
+      },
+      "AuditEvent.entity.lifecycle": {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/object-lifecycle"
+        },
+        "Coding.code": {
+          "value": "6"
+        },
+        "Coding.display": {
+          "value": "Access / Use"
+        }
+      },
+      "AuditEvent.entity.name": {
+        "value": "Grahame's Laptop"
+      }
+    }
+  ]
+}

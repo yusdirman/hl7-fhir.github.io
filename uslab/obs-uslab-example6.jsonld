@@ -1,0 +1,140 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Observation",
+  "resourceType": "Observation",
+  "Resource.id": {
+    "value": "obs-uslab-example6"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: obs-uslab-example6</p><p><b>identifier</b>: lab test result ID = 8901 (OFFICIAL)</p><p><b>status</b>: final</p><p><b>code</b>: GC CT RNA Panel <span>(Details : {LOINC code '64017-7' = 'Chlamydia trachomatis and Neisseria gonorrhoeae rRNA panel - Unspecified specimen by Probe and target amplification method', given as 'Chlamydia trachomatis and Neisseria gonorrhoeae rRNA panel - Unspecified specimen by Probe and target amplification method'}; {urn:oid:2.16.840.1.113883.3.72.5.24 code 'GCCTPCR' = '??', given as 'GC CT PCR'})</span></p><p><b>subject</b>: <a>Todd Lerr</a></p><p><b>effective</b>: Dec 5, 2014</p><p><b>issued</b>: Dec 6, 2014 3:42:15 PM</p><p><b>performer</b>: <a>Dr Leonard T Bloodraw Jr</a></p><p><b>specimen</b>: <a>Urine First Void</a></p><blockquote><p><b>related</b></p><p><b>type</b>: has-member</p><p><b>target</b>: <a>CT RNA</a></p></blockquote><blockquote><p><b>related</b></p><p><b>type</b>: has-member</p><p><b>target</b>: <a>GC-RNA</a></p></blockquote></div>"
+    }
+  },
+  "DomainResource.extension": [
+    {
+      "Extension.url": {
+        "value": "http://hl7.org/fhir/StructureDefinition/uslab-observationkind"
+      },
+      "Extension.valueCode": {
+        "value": "result"
+      }
+    }
+  ],
+  "Observation.identifier": [
+    {
+      "Identifier.use": {
+        "value": "official"
+      },
+      "Identifier.type": {
+        "CodeableConcept.text": {
+          "value": "lab test result ID"
+        }
+      },
+      "Identifier.system": {
+        "value": "http://lis.acmelabs.org/identifiers/labtestresult"
+      },
+      "Identifier.value": {
+        "value": "8901"
+      }
+    }
+  ],
+  "Observation.status": {
+    "value": "final"
+  },
+  "Observation.code": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://loinc.org"
+        },
+        "Coding.code": {
+          "value": "64017-7"
+        },
+        "Coding.display": {
+          "value": "Chlamydia trachomatis and Neisseria gonorrhoeae rRNA panel - Unspecified specimen by Probe and target amplification method"
+        }
+      },
+      {
+        "Coding.system": {
+          "value": "urn:oid:2.16.840.1.113883.3.72.5.24"
+        },
+        "Coding.code": {
+          "value": "GCCTPCR"
+        },
+        "Coding.display": {
+          "value": "GC CT PCR"
+        }
+      }
+    ],
+    "CodeableConcept.text": {
+      "value": "GC CT RNA Panel"
+    },
+    "concept": "http://loinc.org/owl#64017-7"
+  },
+  "Observation.subject": {
+    "Reference.reference": {
+      "value": "Patient/patient-uslab-example1"
+    },
+    "Reference.display": {
+      "value": "Todd Lerr"
+    },
+    "reference": "http://hl7.org/fhir//Patient/patient-uslab-example1"
+  },
+  "Observation.effectiveDateTime": {
+    "value": "2014-12-05"
+  },
+  "Observation.issued": {
+    "value": "2014-12-06T15:42:15-08:00"
+  },
+  "Observation.performer": [
+    {
+      "Reference.reference": {
+        "value": "Practitioner/pract-uslab-example1"
+      },
+      "Reference.display": {
+        "value": "Dr Leonard T Bloodraw Jr"
+      }
+    }
+  ],
+  "Observation.specimen": {
+    "Reference.reference": {
+      "value": "Specimen/spec-uslab-example2"
+    },
+    "Reference.display": {
+      "value": "Urine First Void"
+    },
+    "reference": "http://hl7.org/fhir//Specimen/spec-uslab-example2"
+  },
+  "Observation.related": [
+    {
+      "Observation.related.type": {
+        "value": "has-member"
+      },
+      "Observation.related.target": {
+        "Reference.reference": {
+          "value": "Observation/obs-uslab-example7"
+        },
+        "Reference.display": {
+          "value": "CT RNA"
+        },
+        "reference": "http://hl7.org/fhir//Observation/obs-uslab-example7"
+      }
+    },
+    {
+      "Observation.related.type": {
+        "value": "has-member"
+      },
+      "Observation.related.target": {
+        "Reference.reference": {
+          "value": "Observation/obs-uslab-example2"
+        },
+        "Reference.display": {
+          "value": "GC-RNA"
+        },
+        "reference": "http://hl7.org/fhir//Observation/obs-uslab-example2"
+      }
+    }
+  ]
+}

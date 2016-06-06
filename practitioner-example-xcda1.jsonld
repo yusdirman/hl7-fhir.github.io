@@ -1,0 +1,73 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Practitioner",
+  "resourceType": "Practitioner",
+  "Resource.id": {
+    "value": "xcda1"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: xcda1</p><p><b>identifier</b>: D234123 (OFFICIAL)</p><p><b>name</b>: Sherry Dopplemeyer </p><p><b>telecom</b>: john.doe@healthcare.example.org</p><h3>PractitionerRoles</h3><table><tr><td>-</td><td><b>Organization</b></td><td><b>Role</b></td><td><b>Specialty</b></td></tr><tr><td>*</td><td>Cleveland Clinic</td><td>Primary Surgon <span>(Details )</span></td><td>Orthopedic <span>(Details )</span></td></tr></table></div>"
+    }
+  },
+  "Practitioner.identifier": [
+    {
+      "Identifier.use": {
+        "value": "official"
+      },
+      "Identifier.system": {
+        "value": "http://healthcare.example.org/identifiers/staff"
+      },
+      "Identifier.value": {
+        "value": "D234123"
+      }
+    }
+  ],
+  "Practitioner.name": [
+    {
+      "HumanName.family": [
+        {
+          "value": "Dopplemeyer"
+        }
+      ],
+      "HumanName.given": [
+        {
+          "value": "Sherry"
+        }
+      ]
+    }
+  ],
+  "Practitioner.telecom": [
+    {
+      "ContactPoint.system": {
+        "value": "email"
+      },
+      "ContactPoint.value": {
+        "value": "john.doe@healthcare.example.org"
+      }
+    }
+  ],
+  "Practitioner.practitionerRole": [
+    {
+      "Practitioner.practitionerRole.organization": {
+        "Reference.display": {
+          "value": "Cleveland Clinic"
+        }
+      },
+      "Practitioner.practitionerRole.role": {
+        "CodeableConcept.text": {
+          "value": "Primary Surgon"
+        }
+      },
+      "Practitioner.practitionerRole.specialty": [
+        {
+          "CodeableConcept.text": {
+            "value": "Orthopedic"
+          }
+        }
+      ]
+    }
+  ]
+}

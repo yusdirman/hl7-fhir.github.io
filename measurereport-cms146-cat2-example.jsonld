@@ -1,0 +1,754 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/MeasureReport",
+  "resourceType": "MeasureReport",
+  "Resource.id": {
+    "value": "measurereport-cms146-cat2-example"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      Calculated Patient-List Report for CMS146:\n      Percentage of children 2-18 years of age who were diagnosed with\n      pharyngitis, ordered an antibiotic and received a group A streptococcus\n      (strep) test for the episode.\n    </div>"
+    }
+  },
+  "Organization": [
+    {
+      "Resource.id": {
+        "value": "reporter"
+      },
+      "Organization.name": {
+        "value": "Good Health Hospital"
+      }
+    }
+  ],
+  "MeasureReport.measure": {
+    "Reference.reference": {
+      "value": "Measure/CMS146"
+    },
+    "reference": "http://hl7.org/fhir//Measure/CMS146"
+  },
+  "MeasureReport.type": {
+    "value": "patient-list"
+  },
+  "MeasureReport.period": {
+    "Period.start": {
+      "value": "2014-01-01"
+    },
+    "Period.end": {
+      "value": "2014-03-31"
+    }
+  },
+  "MeasureReport.status": {
+    "value": "complete"
+  },
+  "MeasureReport.reportingOrganization": {
+    "Reference.reference": {
+      "value": "#reporter"
+    }
+  },
+  "MeasureReport.group": [
+    {
+      "MeasureReport.group.identifier": {
+        "Identifier.value": {
+          "value": "CMS146-group-1"
+        }
+      },
+      "MeasureReport.group.population": [
+        {
+          "MeasureReport.group.population.type": {
+            "value": "initial-population"
+          },
+          "MeasureReport.group.population.count": {
+            "value": 500
+          },
+          "MeasureReport.group.population.patients": {
+            "Reference.reference": {
+              "value": "List/CMS146-initial-population"
+            },
+            "reference": "http://hl7.org/fhir//List/CMS146-initial-population"
+          }
+        },
+        {
+          "MeasureReport.group.population.type": {
+            "value": "numerator"
+          },
+          "MeasureReport.group.population.count": {
+            "value": 200
+          },
+          "MeasureReport.group.population.patients": {
+            "Reference.reference": {
+              "value": "List/CMS146-numerator"
+            },
+            "reference": "http://hl7.org/fhir//List/CMS146-numerator"
+          }
+        },
+        {
+          "MeasureReport.group.population.type": {
+            "value": "denominator"
+          },
+          "MeasureReport.group.population.count": {
+            "value": 500
+          },
+          "MeasureReport.group.population.patients": {
+            "Reference.reference": {
+              "value": "List/CMS146-denominator"
+            },
+            "reference": "http://hl7.org/fhir//List/CMS146-denominator"
+          }
+        },
+        {
+          "MeasureReport.group.population.type": {
+            "value": "denominator-exclusion"
+          },
+          "MeasureReport.group.population.count": {
+            "value": 100
+          },
+          "MeasureReport.group.population.patients": {
+            "Reference.reference": {
+              "value": "List/CMS146-denominator-exclusions"
+            },
+            "reference": "http://hl7.org/fhir//List/CMS146-denominator-exclusions"
+          }
+        }
+      ],
+      "MeasureReport.group.stratifier": [
+        {
+          "MeasureReport.group.stratifier.identifier": {
+            "Identifier.value": {
+              "value": "stratifier-ages-up-to-9"
+            }
+          },
+          "MeasureReport.group.stratifier.group": [
+            {
+              "MeasureReport.group.stratifier.group.value": {
+                "value": "true"
+              },
+              "MeasureReport.group.stratifier.group.population": [
+                {
+                  "MeasureReport.group.stratifier.group.population.type": {
+                    "value": "initial-population"
+                  },
+                  "MeasureReport.group.stratifier.group.population.count": {
+                    "value": 250
+                  },
+                  "MeasureReport.group.stratifier.group.population.patients": {
+                    "Reference.reference": {
+                      "value": "List/CMS146-stratifier-ages-up-to-9-true-initial-population"
+                    },
+                    "reference": "http://hl7.org/fhir//List/CMS146-stratifier-ages-up-to-9-true-initial-population"
+                  }
+                },
+                {
+                  "MeasureReport.group.stratifier.group.population.type": {
+                    "value": "numerator"
+                  },
+                  "MeasureReport.group.stratifier.group.population.count": {
+                    "value": 100
+                  },
+                  "MeasureReport.group.stratifier.group.population.patients": {
+                    "Reference.reference": {
+                      "value": "List/CMS146-stratifier-ages-up-to-9-true-numerator"
+                    },
+                    "reference": "http://hl7.org/fhir//List/CMS146-stratifier-ages-up-to-9-true-numerator"
+                  }
+                },
+                {
+                  "MeasureReport.group.stratifier.group.population.type": {
+                    "value": "denominator"
+                  },
+                  "MeasureReport.group.stratifier.group.population.count": {
+                    "value": 250
+                  },
+                  "MeasureReport.group.stratifier.group.population.patients": {
+                    "Reference.reference": {
+                      "value": "List/CMS146-stratifier-ages-up-to-9-true-denominator"
+                    },
+                    "reference": "http://hl7.org/fhir//List/CMS146-stratifier-ages-up-to-9-true-denominator"
+                  }
+                },
+                {
+                  "MeasureReport.group.stratifier.group.population.type": {
+                    "value": "denominator-exclusion"
+                  },
+                  "MeasureReport.group.stratifier.group.population.count": {
+                    "value": 50
+                  },
+                  "MeasureReport.group.stratifier.group.population.patients": {
+                    "Reference.reference": {
+                      "value": "List/CMS146-stratifier-ages-up-to-9-true-denominator-exclusions"
+                    },
+                    "reference": "http://hl7.org/fhir//List/CMS146-stratifier-ages-up-to-9-true-denominator-exclusions"
+                  }
+                }
+              ]
+            },
+            {
+              "MeasureReport.group.stratifier.group.value": {
+                "value": "false"
+              },
+              "MeasureReport.group.stratifier.group.population": [
+                {
+                  "MeasureReport.group.stratifier.group.population.type": {
+                    "value": "initial-population"
+                  },
+                  "MeasureReport.group.stratifier.group.population.count": {
+                    "value": 250
+                  },
+                  "MeasureReport.group.stratifier.group.population.patients": {
+                    "Reference.reference": {
+                      "value": "List/CMS146-stratifier-ages-up-to-9-false-initial-population"
+                    },
+                    "reference": "http://hl7.org/fhir//List/CMS146-stratifier-ages-up-to-9-false-initial-population"
+                  }
+                },
+                {
+                  "MeasureReport.group.stratifier.group.population.type": {
+                    "value": "numerator"
+                  },
+                  "MeasureReport.group.stratifier.group.population.count": {
+                    "value": 100
+                  },
+                  "MeasureReport.group.stratifier.group.population.patients": {
+                    "Reference.reference": {
+                      "value": "List/CMS146-stratifier-ages-up-to-9-false-numerator"
+                    },
+                    "reference": "http://hl7.org/fhir//List/CMS146-stratifier-ages-up-to-9-false-numerator"
+                  }
+                },
+                {
+                  "MeasureReport.group.stratifier.group.population.type": {
+                    "value": "denominator"
+                  },
+                  "MeasureReport.group.stratifier.group.population.count": {
+                    "value": 250
+                  },
+                  "MeasureReport.group.stratifier.group.population.patients": {
+                    "Reference.reference": {
+                      "value": "List/CMS146-stratifier-ages-up-to-9-false-denominator"
+                    },
+                    "reference": "http://hl7.org/fhir//List/CMS146-stratifier-ages-up-to-9-false-denominator"
+                  }
+                },
+                {
+                  "MeasureReport.group.stratifier.group.population.type": {
+                    "value": "denominator-exclusion"
+                  },
+                  "MeasureReport.group.stratifier.group.population.count": {
+                    "value": 50
+                  },
+                  "MeasureReport.group.stratifier.group.population.patients": {
+                    "Reference.reference": {
+                      "value": "List/CMS146-stratifier-ages-up-to-9-false-denominator-exclusions"
+                    },
+                    "reference": "http://hl7.org/fhir//List/CMS146-stratifier-ages-up-to-9-false-denominator-exclusions"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "MeasureReport.group.stratifier.identifier": {
+            "Identifier.value": {
+              "value": "stratifier-ages-10-plus"
+            }
+          },
+          "MeasureReport.group.stratifier.group": [
+            {
+              "MeasureReport.group.stratifier.group.value": {
+                "value": "true"
+              },
+              "MeasureReport.group.stratifier.group.population": [
+                {
+                  "MeasureReport.group.stratifier.group.population.type": {
+                    "value": "initial-population"
+                  },
+                  "MeasureReport.group.stratifier.group.population.count": {
+                    "value": 250
+                  },
+                  "MeasureReport.group.stratifier.group.population.patients": {
+                    "Reference.reference": {
+                      "value": "List/CMS146-stratifier-ages-10-plus-true-initial-population"
+                    },
+                    "reference": "http://hl7.org/fhir//List/CMS146-stratifier-ages-10-plus-true-initial-population"
+                  }
+                },
+                {
+                  "MeasureReport.group.stratifier.group.population.type": {
+                    "value": "numerator"
+                  },
+                  "MeasureReport.group.stratifier.group.population.count": {
+                    "value": 100
+                  },
+                  "MeasureReport.group.stratifier.group.population.patients": {
+                    "Reference.reference": {
+                      "value": "List/CMS146-stratifier-ages-10-plus-true-numerator"
+                    },
+                    "reference": "http://hl7.org/fhir//List/CMS146-stratifier-ages-10-plus-true-numerator"
+                  }
+                },
+                {
+                  "MeasureReport.group.stratifier.group.population.type": {
+                    "value": "denominator"
+                  },
+                  "MeasureReport.group.stratifier.group.population.count": {
+                    "value": 250
+                  },
+                  "MeasureReport.group.stratifier.group.population.patients": {
+                    "Reference.reference": {
+                      "value": "List/CMS146-stratifier-ages-10-plus-true-denominator"
+                    },
+                    "reference": "http://hl7.org/fhir//List/CMS146-stratifier-ages-10-plus-true-denominator"
+                  }
+                },
+                {
+                  "MeasureReport.group.stratifier.group.population.type": {
+                    "value": "denominator-exclusion"
+                  },
+                  "MeasureReport.group.stratifier.group.population.count": {
+                    "value": 50
+                  },
+                  "MeasureReport.group.stratifier.group.population.patients": {
+                    "Reference.reference": {
+                      "value": "List/CMS146-stratifier-ages-10-plus-true-denominator-exclusions"
+                    },
+                    "reference": "http://hl7.org/fhir//List/CMS146-stratifier-ages-10-plus-true-denominator-exclusions"
+                  }
+                }
+              ]
+            },
+            {
+              "MeasureReport.group.stratifier.group.value": {
+                "value": "false"
+              },
+              "MeasureReport.group.stratifier.group.population": [
+                {
+                  "MeasureReport.group.stratifier.group.population.type": {
+                    "value": "initial-population"
+                  },
+                  "MeasureReport.group.stratifier.group.population.count": {
+                    "value": 250
+                  },
+                  "MeasureReport.group.stratifier.group.population.patients": {
+                    "Reference.reference": {
+                      "value": "List/CMS146-stratifier-ages-10-plus-false-initial-population"
+                    },
+                    "reference": "http://hl7.org/fhir//List/CMS146-stratifier-ages-10-plus-false-initial-population"
+                  }
+                },
+                {
+                  "MeasureReport.group.stratifier.group.population.type": {
+                    "value": "numerator"
+                  },
+                  "MeasureReport.group.stratifier.group.population.count": {
+                    "value": 100
+                  },
+                  "MeasureReport.group.stratifier.group.population.patients": {
+                    "Reference.reference": {
+                      "value": "List/CMS146-stratifier-ages-10-plus-false-numerator"
+                    },
+                    "reference": "http://hl7.org/fhir//List/CMS146-stratifier-ages-10-plus-false-numerator"
+                  }
+                },
+                {
+                  "MeasureReport.group.stratifier.group.population.type": {
+                    "value": "denominator"
+                  },
+                  "MeasureReport.group.stratifier.group.population.count": {
+                    "value": 250
+                  },
+                  "MeasureReport.group.stratifier.group.population.patients": {
+                    "Reference.reference": {
+                      "value": "List/CMS146-stratifier-ages-10-plus-false-denominator"
+                    },
+                    "reference": "http://hl7.org/fhir//List/CMS146-stratifier-ages-10-plus-false-denominator"
+                  }
+                },
+                {
+                  "MeasureReport.group.stratifier.group.population.type": {
+                    "value": "denominator-exclusion"
+                  },
+                  "MeasureReport.group.stratifier.group.population.count": {
+                    "value": 50
+                  },
+                  "MeasureReport.group.stratifier.group.population.patients": {
+                    "Reference.reference": {
+                      "value": "List/CMS146-stratifier-ages-10-plus-false-denominator-exclusions"
+                    },
+                    "reference": "http://hl7.org/fhir//List/CMS146-stratifier-ages-10-plus-false-denominator-exclusions"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "MeasureReport.group.stratifier.identifier": {
+            "Identifier.value": {
+              "value": "stratifier-gender"
+            }
+          },
+          "MeasureReport.group.stratifier.group": [
+            {
+              "MeasureReport.group.stratifier.group.value": {
+                "value": "male"
+              },
+              "MeasureReport.group.stratifier.group.population": [
+                {
+                  "MeasureReport.group.stratifier.group.population.type": {
+                    "value": "initial-population"
+                  },
+                  "MeasureReport.group.stratifier.group.population.count": {
+                    "value": 250
+                  },
+                  "MeasureReport.group.stratifier.group.population.patients": {
+                    "Reference.reference": {
+                      "value": "List/CMS146-stratifier-gender-male-initial-population"
+                    },
+                    "reference": "http://hl7.org/fhir//List/CMS146-stratifier-gender-male-initial-population"
+                  }
+                },
+                {
+                  "MeasureReport.group.stratifier.group.population.type": {
+                    "value": "numerator"
+                  },
+                  "MeasureReport.group.stratifier.group.population.count": {
+                    "value": 100
+                  },
+                  "MeasureReport.group.stratifier.group.population.patients": {
+                    "Reference.reference": {
+                      "value": "List/CMS146-stratifier-gender-male-numerator"
+                    },
+                    "reference": "http://hl7.org/fhir//List/CMS146-stratifier-gender-male-numerator"
+                  }
+                },
+                {
+                  "MeasureReport.group.stratifier.group.population.type": {
+                    "value": "denominator"
+                  },
+                  "MeasureReport.group.stratifier.group.population.count": {
+                    "value": 250
+                  },
+                  "MeasureReport.group.stratifier.group.population.patients": {
+                    "Reference.reference": {
+                      "value": "List/CMS146-stratifier-gender-male-denominator"
+                    },
+                    "reference": "http://hl7.org/fhir//List/CMS146-stratifier-gender-male-denominator"
+                  }
+                },
+                {
+                  "MeasureReport.group.stratifier.group.population.type": {
+                    "value": "denominator-exclusion"
+                  },
+                  "MeasureReport.group.stratifier.group.population.count": {
+                    "value": 50
+                  },
+                  "MeasureReport.group.stratifier.group.population.patients": {
+                    "Reference.reference": {
+                      "value": "List/CMS146-stratifier-gender-male-denominator-exclusions"
+                    },
+                    "reference": "http://hl7.org/fhir//List/CMS146-stratifier-gender-male-denominator-exclusions"
+                  }
+                }
+              ]
+            },
+            {
+              "MeasureReport.group.stratifier.group.value": {
+                "value": "female"
+              },
+              "MeasureReport.group.stratifier.group.population": [
+                {
+                  "MeasureReport.group.stratifier.group.population.type": {
+                    "value": "initial-population"
+                  },
+                  "MeasureReport.group.stratifier.group.population.count": {
+                    "value": 250
+                  },
+                  "MeasureReport.group.stratifier.group.population.patients": {
+                    "Reference.reference": {
+                      "value": "List/CMS146-stratifier-gender-female-initial-population"
+                    },
+                    "reference": "http://hl7.org/fhir//List/CMS146-stratifier-gender-female-initial-population"
+                  }
+                },
+                {
+                  "MeasureReport.group.stratifier.group.population.type": {
+                    "value": "numerator"
+                  },
+                  "MeasureReport.group.stratifier.group.population.count": {
+                    "value": 100
+                  },
+                  "MeasureReport.group.stratifier.group.population.patients": {
+                    "Reference.reference": {
+                      "value": "List/CMS146-stratifier-gender-female-numerator"
+                    },
+                    "reference": "http://hl7.org/fhir//List/CMS146-stratifier-gender-female-numerator"
+                  }
+                },
+                {
+                  "MeasureReport.group.stratifier.group.population.type": {
+                    "value": "denominator"
+                  },
+                  "MeasureReport.group.stratifier.group.population.count": {
+                    "value": 250
+                  },
+                  "MeasureReport.group.stratifier.group.population.patients": {
+                    "Reference.reference": {
+                      "value": "List/CMS146-stratifier-gender-female-denominator"
+                    },
+                    "reference": "http://hl7.org/fhir//List/CMS146-stratifier-gender-female-denominator"
+                  }
+                },
+                {
+                  "MeasureReport.group.stratifier.group.population.type": {
+                    "value": "denominator-exclusion"
+                  },
+                  "MeasureReport.group.stratifier.group.population.count": {
+                    "value": 50
+                  },
+                  "MeasureReport.group.stratifier.group.population.patients": {
+                    "Reference.reference": {
+                      "value": "List/CMS146-stratifier-gender-female-denominator-exclusions"
+                    },
+                    "reference": "http://hl7.org/fhir//List/CMS146-stratifier-gender-female-denominator-exclusions"
+                  }
+                }
+              ]
+            },
+            {
+              "MeasureReport.group.stratifier.group.value": {
+                "value": "other"
+              },
+              "MeasureReport.group.stratifier.group.population": [
+                {
+                  "MeasureReport.group.stratifier.group.population.type": {
+                    "value": "initial-population"
+                  },
+                  "MeasureReport.group.stratifier.group.population.count": {
+                    "value": 0
+                  },
+                  "MeasureReport.group.stratifier.group.population.patients": {
+                    "Reference.reference": {
+                      "value": "List/CMS146-stratifier-gender-other-initial-population"
+                    },
+                    "reference": "http://hl7.org/fhir//List/CMS146-stratifier-gender-other-initial-population"
+                  }
+                },
+                {
+                  "MeasureReport.group.stratifier.group.population.type": {
+                    "value": "numerator"
+                  },
+                  "MeasureReport.group.stratifier.group.population.count": {
+                    "value": 0
+                  },
+                  "MeasureReport.group.stratifier.group.population.patients": {
+                    "Reference.reference": {
+                      "value": "List/CMS146-stratifier-gender-other-numerator"
+                    },
+                    "reference": "http://hl7.org/fhir//List/CMS146-stratifier-gender-other-numerator"
+                  }
+                },
+                {
+                  "MeasureReport.group.stratifier.group.population.type": {
+                    "value": "denominator"
+                  },
+                  "MeasureReport.group.stratifier.group.population.count": {
+                    "value": 0
+                  },
+                  "MeasureReport.group.stratifier.group.population.patients": {
+                    "Reference.reference": {
+                      "value": "List/CMS146-stratifier-gender-other-denominator"
+                    },
+                    "reference": "http://hl7.org/fhir//List/CMS146-stratifier-gender-other-denominator"
+                  }
+                },
+                {
+                  "MeasureReport.group.stratifier.group.population.type": {
+                    "value": "denominator-exclusion"
+                  },
+                  "MeasureReport.group.stratifier.group.population.count": {
+                    "value": 0
+                  },
+                  "MeasureReport.group.stratifier.group.population.patients": {
+                    "Reference.reference": {
+                      "value": "List/CMS146-stratifier-gender-other-denominator-exclusions"
+                    },
+                    "reference": "http://hl7.org/fhir//List/CMS146-stratifier-gender-other-denominator-exclusions"
+                  }
+                }
+              ]
+            },
+            {
+              "MeasureReport.group.stratifier.group.value": {
+                "value": "unknown"
+              },
+              "MeasureReport.group.stratifier.group.population": [
+                {
+                  "MeasureReport.group.stratifier.group.population.type": {
+                    "value": "initial-population"
+                  },
+                  "MeasureReport.group.stratifier.group.population.count": {
+                    "value": 0
+                  },
+                  "MeasureReport.group.stratifier.group.population.patients": {
+                    "Reference.reference": {
+                      "value": "List/CMS146-stratifier-gender-unknown-initial-population"
+                    },
+                    "reference": "http://hl7.org/fhir//List/CMS146-stratifier-gender-unknown-initial-population"
+                  }
+                },
+                {
+                  "MeasureReport.group.stratifier.group.population.type": {
+                    "value": "numerator"
+                  },
+                  "MeasureReport.group.stratifier.group.population.count": {
+                    "value": 0
+                  },
+                  "MeasureReport.group.stratifier.group.population.patients": {
+                    "Reference.reference": {
+                      "value": "List/CMS146-stratifier-gender-unknown-numerator"
+                    },
+                    "reference": "http://hl7.org/fhir//List/CMS146-stratifier-gender-unknown-numerator"
+                  }
+                },
+                {
+                  "MeasureReport.group.stratifier.group.population.type": {
+                    "value": "denominator"
+                  },
+                  "MeasureReport.group.stratifier.group.population.count": {
+                    "value": 0
+                  },
+                  "MeasureReport.group.stratifier.group.population.patients": {
+                    "Reference.reference": {
+                      "value": "List/CMS146-stratifier-gender-unknown-denominator"
+                    },
+                    "reference": "http://hl7.org/fhir//List/CMS146-stratifier-gender-unknown-denominator"
+                  }
+                },
+                {
+                  "MeasureReport.group.stratifier.group.population.type": {
+                    "value": "denominator-exclusion"
+                  },
+                  "MeasureReport.group.stratifier.group.population.count": {
+                    "value": 0
+                  },
+                  "MeasureReport.group.stratifier.group.population.patients": {
+                    "Reference.reference": {
+                      "value": "List/CMS146-stratifier-gender-unknown-denominator-exclusions"
+                    },
+                    "reference": "http://hl7.org/fhir//List/CMS146-stratifier-gender-unknown-denominator-exclusions"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "MeasureReport.group.supplementalData": [
+        {
+          "MeasureReport.group.supplementalData.identifier": {
+            "Identifier.value": {
+              "value": "supplemental-data-gender"
+            }
+          },
+          "MeasureReport.group.supplementalData.group": [
+            {
+              "MeasureReport.group.supplementalData.group.value": {
+                "value": "male"
+              },
+              "MeasureReport.group.supplementalData.group.count": {
+                "value": 250
+              },
+              "MeasureReport.group.supplementalData.group.patients": {
+                "Reference.reference": {
+                  "value": "List/CMS146-supplemental-data-gender-male"
+                },
+                "reference": "http://hl7.org/fhir//List/CMS146-supplemental-data-gender-male"
+              }
+            },
+            {
+              "MeasureReport.group.supplementalData.group.value": {
+                "value": "female"
+              },
+              "MeasureReport.group.supplementalData.group.count": {
+                "value": 250
+              },
+              "MeasureReport.group.supplementalData.group.patients": {
+                "Reference.reference": {
+                  "value": "List/CMS146-supplemental-data-gender-female"
+                },
+                "reference": "http://hl7.org/fhir//List/CMS146-supplemental-data-gender-female"
+              }
+            },
+            {
+              "MeasureReport.group.supplementalData.group.value": {
+                "value": "other"
+              },
+              "MeasureReport.group.supplementalData.group.count": {
+                "value": 0
+              },
+              "MeasureReport.group.supplementalData.group.patients": {
+                "Reference.reference": {
+                  "value": "List/CMS146-supplemental-data-gender-other"
+                },
+                "reference": "http://hl7.org/fhir//List/CMS146-supplemental-data-gender-other"
+              }
+            },
+            {
+              "MeasureReport.group.supplementalData.group.value": {
+                "value": "unknown"
+              },
+              "MeasureReport.group.supplementalData.group.count": {
+                "value": 0
+              },
+              "MeasureReport.group.supplementalData.group.patients": {
+                "Reference.reference": {
+                  "value": "List/CMS146-supplemental-data-gender-unknown"
+                },
+                "reference": "http://hl7.org/fhir//List/CMS146-supplemental-data-gender-unknown"
+              }
+            }
+          ]
+        },
+        {
+          "MeasureReport.group.supplementalData.identifier": {
+            "Identifier.value": {
+              "value": "supplemental-data-deceased"
+            }
+          },
+          "MeasureReport.group.supplementalData.group": [
+            {
+              "MeasureReport.group.supplementalData.group.value": {
+                "value": "true"
+              },
+              "MeasureReport.group.supplementalData.group.count": {
+                "value": 0
+              },
+              "MeasureReport.group.supplementalData.group.patients": {
+                "Reference.reference": {
+                  "value": "List/CMS146-supplemental-data-deceased-true"
+                },
+                "reference": "http://hl7.org/fhir//List/CMS146-supplemental-data-deceased-true"
+              }
+            },
+            {
+              "MeasureReport.group.supplementalData.group.value": {
+                "value": "false"
+              },
+              "MeasureReport.group.supplementalData.group.count": {
+                "value": 500
+              },
+              "MeasureReport.group.supplementalData.group.patients": {
+                "Reference.reference": {
+                  "value": "List/CMS146-supplemental-data-deceased-false"
+                },
+                "reference": "http://hl7.org/fhir//List/CMS146-supplemental-data-deceased-false"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

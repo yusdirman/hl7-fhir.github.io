@@ -1,0 +1,67 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/StructureMap",
+  "resourceType": "StructureMap",
+  "Resource.id": {
+    "value": "example"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">[Put rendering here]</div>"
+    }
+  },
+  "StructureMap.url": {
+    "value": "http://hl7.org/fhir/StructureMap/example"
+  },
+  "StructureMap.name": {
+    "value": "Example Map"
+  },
+  "StructureMap.status": {
+    "value": "draft"
+  },
+  "StructureMap.group": [
+    {
+      "StructureMap.group.name": {
+        "value": "Examples"
+      },
+      "StructureMap.group.input": [
+        {
+          "StructureMap.group.input.name": {
+            "value": "test"
+          },
+          "StructureMap.group.input.mode": {
+            "value": "source"
+          }
+        }
+      ],
+      "StructureMap.group.rule": [
+        {
+          "StructureMap.group.rule.name": {
+            "value": "rule1"
+          },
+          "StructureMap.group.rule.source": [
+            {
+              "StructureMap.group.rule.source.required": {
+                "value": true
+              },
+              "StructureMap.group.rule.source.context": {
+                "value": "test"
+              },
+              "StructureMap.group.rule.source.contextType": {
+                "value": "variable"
+              },
+              "StructureMap.group.rule.source.element": {
+                "value": "test"
+              },
+              "StructureMap.group.rule.source.variable": {
+                "value": "t"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

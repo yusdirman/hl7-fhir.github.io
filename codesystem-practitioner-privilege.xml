@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="hspc-practitioner-privilege"/>
+  <meta>
+    <lastUpdated value="2016-06-06T20:14:04.181+00:00"/>
+    <profile value="http://hl7.org/fhir/StructureDefinition/codesystem-shareable-definition"/>
+  </meta>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <h2>HSPC ProviderPractitioner Privilege</h2>
+      <p>A set of codes that describe the level of authorization given to a provider to practice medicine at an institution.</p>
+      <p>This code system http://hl7.org/fhir/practitioner-hspc-privilege defines the following codes:</p>
+      <table class="codes">
+        <tr>
+          <td>
+            <b>Code</b>
+          </td>
+          <td>
+            <b>Display</b>
+          </td>
+          <td>
+            <b>Definition</b>
+          </td>
+        </tr>
+        <tr>
+          <td>50453110
+            <a name="50453110"> </a>
+          </td>
+          <td>Full Privileges</td>
+          <td>The provider is allowed to practice and admit</td>
+        </tr>
+        <tr>
+          <td>50453109
+            <a name="50453109"> </a>
+          </td>
+          <td>No Privileges to practice or admit</td>
+          <td>The provider is not allowed to practice or admit</td>
+        </tr>
+        <tr>
+          <td>50453111
+            <a name="50453111"> </a>
+          </td>
+          <td>Privileges Suspended</td>
+          <td>The provider is not allowed to practice or admit at this time</td>
+        </tr>
+        <tr>
+          <td>50453112
+            <a name="50453112"> </a>
+          </td>
+          <td>Practice Privileges Only (not allowed to admit)</td>
+          <td>The provider is allowed to practice only, cannot admit patients</td>
+        </tr>
+        <tr>
+          <td>50450945
+            <a name="50450945"> </a>
+          </td>
+          <td>Temporary Privileges</td>
+          <td>The provider is allowed to practice and admit for a limited time</td>
+        </tr>
+      </table>
+    </div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/valueset-oid">
+    <valueUri value="urn:oid:2.16.840.1.113883.4.642.1.673"/>
+  </extension>
+  <url value="http://hl7.org/fhir/practitioner-hspc-privilege"/>
+  <version value="1.4.0"/>
+  <name value="HSPC ProviderPractitioner Privilege"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <publisher value="HSPC"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="http://healthcaresoa.org"/>
+    </telecom>
+  </contact>
+  <description value="A set of codes that describe the level of authorization given to a provider to practice medicine at an institution."/>
+  <caseSensitive value="true"/>
+  <valueSet value="http://hl7.org/fhir/ValueSet/hspc-practitioner-privilege"/>
+  <content value="complete"/>
+  <concept>
+    <code value="50453110"/>
+    <display value="Full Privileges"/>
+    <definition value="The provider is allowed to practice and admit"/>
+  </concept>
+  <concept>
+    <code value="50453109"/>
+    <display value="No Privileges to practice or admit"/>
+    <definition value="The provider is not allowed to practice or admit"/>
+  </concept>
+  <concept>
+    <code value="50453111"/>
+    <display value="Privileges Suspended"/>
+    <definition value="The provider is not allowed to practice or admit at this time"/>
+  </concept>
+  <concept>
+    <code value="50453112"/>
+    <display value="Practice Privileges Only (not allowed to admit)"/>
+    <definition value="The provider is allowed to practice only, cannot admit patients"/>
+  </concept>
+  <concept>
+    <code value="50450945"/>
+    <display value="Temporary Privileges"/>
+    <definition value="The provider is allowed to practice and admit for a limited time"/>
+  </concept>
+</CodeSystem>

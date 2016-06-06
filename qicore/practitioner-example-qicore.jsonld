@@ -1,0 +1,96 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Practitioner",
+  "resourceType": "Practitioner",
+  "Resource.id": {
+    "value": "practitioner-example-qicore"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>Dr Ronald Heart is a cardiologist at Acme Hospital</p>\n    </div>"
+    }
+  },
+  "Practitioner.identifier": [
+    {
+      "Identifier.system": {
+        "value": "http://www.acme.org/practitioners"
+      },
+      "Identifier.value": {
+        "value": "24"
+      }
+    }
+  ],
+  "Practitioner.name": [
+    {
+      "HumanName.family": [
+        {
+          "value": "Heart"
+        }
+      ],
+      "HumanName.given": [
+        {
+          "value": "Ronald"
+        }
+      ],
+      "HumanName.prefix": [
+        {
+          "value": "Dr"
+        }
+      ]
+    }
+  ],
+  "Practitioner.practitionerRole": [
+    {
+      "Practitioner.practitionerRole.organization": {
+        "Reference.reference": {
+          "value": "Organization/1"
+        },
+        "reference": "http://hl7.org/fhir//Organization/1"
+      },
+      "Practitioner.practitionerRole.role": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://hl7.org/fhir/practitioner-role"
+            },
+            "Coding.code": {
+              "value": "doctor"
+            },
+            "Coding.display": {
+              "value": "Doctor"
+            }
+          }
+        ]
+      },
+      "Practitioner.practitionerRole.specialty": [
+        {
+          "Element.extension": [
+            {
+              "Extension.url": {
+                "value": "http://hl7.org/fhir/StructureDefinition/practitioner-primaryInd"
+              },
+              "Extension.valueBoolean": {
+                "value": true
+              }
+            }
+          ],
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "value": "http://hl7.org/fhir/practitioner-specialty"
+              },
+              "Coding.code": {
+                "value": "cardio"
+              },
+              "Coding.display": {
+                "value": "Cardiologist"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

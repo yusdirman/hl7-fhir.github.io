@@ -1,0 +1,70 @@
+{
+  "resourceType": "ValueSet",
+  "id": "hspc-amsperiodicity",
+  "meta": {
+    "lastUpdated": "2016-06-06T20:14:04.181+00:00",
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>HSPC Altered Mental Status Periodicity Value Set</h2><p>SELECT SNOMED CT code system values describing how frequent an altered mental status occurs.</p><p><b>Copyright Statement:</b> TBD</p><p>This value set includes codes from the following code systems:</p><ul><li>Include these codes as defined in http://snomed.info/sct<table><tr><td><b>Code</b></td><td><b>Display</b></td></tr><tr><td>255227004</td><td>Recurrent (qualifier value)</td><td/></tr><tr><td>278499009</td><td>Episodic (qualifier value)</td><td/></tr><tr><td>255238004</td><td>Continuous (qualifier value)</td><td/></tr><tr><td>7087005</td><td>Intermittent (qualifier value)</td><td/></tr></table></li></ul></div>"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/valueset-oid",
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.742"
+    }
+  ],
+  "url": "http://hl7.org/fhir/ValueSet/hspc-amsperiodicity",
+  "version": "0.01",
+  "name": "HSPC Altered Mental Status Periodicity Value Set",
+  "status": "draft",
+  "experimental": true,
+  "publisher": "Health Services Platform Consortium (HSPC)",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "other",
+          "value": "http://hl7.org/fhir"
+        },
+        {
+          "system": "email",
+          "value": "fhir@lists.hl7.org"
+        }
+      ]
+    }
+  ],
+  "date": "2015-02-09",
+  "description": "SELECT SNOMED CT code system values describing how frequent an altered mental status occurs.",
+  "immutable": true,
+  "copyright": "TBD",
+  "extensible": true,
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "255227004",
+            "display": "Recurrent (qualifier value)"
+          },
+          {
+            "code": "278499009",
+            "display": "Episodic (qualifier value)"
+          },
+          {
+            "code": "255238004",
+            "display": "Continuous (qualifier value)"
+          },
+          {
+            "code": "7087005",
+            "display": "Intermittent (qualifier value)"
+          }
+        ]
+      }
+    ]
+  }
+}

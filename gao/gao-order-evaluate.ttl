@@ -1,0 +1,146 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/OperationDefinitiongao-order-evaluate> a fhir:OperationDefinition;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "gao-order-evaluate"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Inputs</h2><table class=\"codes\">\n        <thead>\n          <tr>\n            <th><b>Parameters</b></th>\n            <th><b>Card.</b></th>\n            <th><b>Type</b></th>\n            <th><b>Description</b></th>\n          </tr>\n        </thead>\n        <tbody>\n          <tr>\n            <td>order</td>\n            <td>1..1</td>\n            <td><a href=\"../order.html\">Order</a><br/>(<a href=\"gao-order.html\">Guideline\n                Appropriate Order</a>)</td>\n            <td>The order to evaluate</td>\n          </tr>\n          <tr>\n            <td>coverage</td>\n            <td>0..*</td>\n            <td><a href=\"../coverage.html\">Coverage</a></td>\n            <td>Optional resources describing the patient’s coverage.</td>\n          </tr>\n          <tr>\n            <td>answers</td>\n            <td>0..*</td>\n            <td><a href=\"../questionnaireresponse.html\">QuestionnaireResponse</a><br/>(<a href=\"gao-questionnaireresponse.html\">GAO Questionnaire Response</a>)</td>\n            <td>Optional answers to any questions which have been or may be posed by the Decision\n              Support Service</td>\n          </tr>\n        </tbody>\n      </table><h2>Outputs</h2><table class=\"codes\">\n        <thead>\n          <tr>\n            <th><b>Parameters</b></th>\n            <th><b>Card.</b></th>\n            <th><b>Type</b></th>\n            <th><b>Description</b></th>\n          </tr>\n        </thead>\n        <tbody>\n          <tr>\n            <td>order</td>\n            <td>1..1</td>\n            <td><a href=\"../order.html\">Order</a><br/>(<a href=\"gao-order.html\">Guideline\n                Appropriate Order</a>)</td>\n            <td>The order that was evaluated. This is a copy of the order provided on input.</td>\n          </tr>\n          <tr>\n            <td>answers</td>\n            <td>0..*</td>\n            <td><a href=\"../questionnaireresponse.html\">QuestionnaireResponse</a><br/>(<a href=\"gao-questionnaireresponse.html\">GAO Questionnaire Response</a>)</td>\n            <td>Answers to any questions posed by the Decision Support Service. This SHALL be a copy\n              of the answers provided on input.</td>\n          </tr>\n          <tr>\n            <td>result</td>\n            <td>1..1</td>\n            <td><a href=\"../basic.html\">Basic</a><br/>(<a href=\"gao-result.html\">GAO\n              Result</a>)</td>\n            <td>A Basic resource indicating the status of the evaluation produced by evaluating the\n              order.</td>\n          </tr>\n          <tr>\n            <td>alternative</td>\n            <td>0..*</td>\n            <td><a href=\"../basic.html\">Basic</a><br/>(<a href=\"gao-alternate.html\">GAO\n                Alternate</a>)</td>\n            <td>Basic resources indicating the status of evaluations produced by evaluating\n              alternative orders suggested by the Decision Support Service Actor.</td>\n          </tr>\n          <tr>\n            <td>provenance</td>\n            <td>0..*</td>\n            <td><a href=\"../provenance.html\">Provenance</a></td>\n            <td>Provenance resources for the Result and Alternatives that can be used to verify that\n              those Resources came from a specific Decision Support Service. If the Decision Support\n              Service implements the Digital Signature option, there SHALL be one Provenance\n              resource for each Result or Alternate present in the output parameters.</td>\n          </tr>\n          <tr>\n            <td>dss</td>\n            <td>1..*</td>\n            <td><a href=\"../device.html\">Device</a></td>\n            <td>The Device resource shall identify the Decision Support Service device or devices\n              which evaluated the appropriateness of the order.</td>\n          </tr>\n          <tr>\n            <td>questions</td>\n            <td>0..*</td>\n            <td><a href=\"../questionnaire.html\">Questionnaire</a></td>\n            <td>A reference to one or more Questionnaire resources, which, if completed might\n              generate a different response from the Decision Support Service.</td>\n          </tr>\n          <tr>\n            <td>questionaireURI</td>\n            <td>0..1</td>\n            <td><a href=\"../datatypes.html#uri\">uri</a></td>\n            <td>Specifies a web endpoint where Questionnaire Resources returned by the Decision\n              Support Service can be invoked interactively. When the Decision Support Service\n              implements the Conversational Interaction Option and the questions parameter is\n              populated, this field SHALL be populated.</td>\n          </tr>\n        </tbody>\n      </table></div>"
+  ];
+  fhir:OperationDefinition.url [ fhir:value "http://hl7.org/fhir/OperationDefinition/gao-order-evaluate"];
+  fhir:OperationDefinition.name [ fhir:value "GAO Evaluate Order"];
+  fhir:OperationDefinition.status [ fhir:value "draft"];
+  fhir:OperationDefinition.kind [ fhir:value "operation"];
+  fhir:OperationDefinition.experimental [ fhir:value "false"^^xsd:boolean];
+  fhir:OperationDefinition.description [ fhir:value "The evaluate operation examines an order, comparing it against known guidelines for appropriate use and returns the result of that evaluation to the caller."];
+  fhir:OperationDefinition.requirements [ fhir:value "This operation enables clinical decision support to be invoked prior to ordering to ensure appropriate use of resources."];
+  fhir:OperationDefinition.idempotent [ fhir:value "true"^^xsd:boolean];
+  fhir:OperationDefinition.code [ fhir:value "evaluate"];
+  fhir:OperationDefinition.comment [ fhir:value "This operation is normally idempotent, but can depend upon the algorithm used."];
+  fhir:OperationDefinition.system [ fhir:value "false"^^xsd:boolean];
+  fhir:OperationDefinition.type [
+     fhir:value "Order";
+     fhir:index 0
+  ];
+  fhir:OperationDefinition.instance [ fhir:value "false"^^xsd:boolean];
+  fhir:OperationDefinition.parameter [
+     fhir:index 0;
+     fhir:OperationDefinition.parameter.name [ fhir:value "order" ];
+     fhir:OperationDefinition.parameter.use [ fhir:value "in" ];
+     fhir:OperationDefinition.parameter.min [ fhir:value "1"^^xsd:int ];
+     fhir:OperationDefinition.parameter.max [ fhir:value "1" ];
+     fhir:OperationDefinition.parameter.documentation [ fhir:value "The order to evaluate" ];
+     fhir:OperationDefinition.parameter.type [ fhir:value "Order" ];
+     fhir:OperationDefinition.parameter.profile [
+       fhir:link <http://hl7.org/fhir/StructureDefinition/gao-order>;
+       fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/StructureDefinition/gao-order" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:OperationDefinition.parameter.name [ fhir:value "coverage" ];
+     fhir:OperationDefinition.parameter.use [ fhir:value "in" ];
+     fhir:OperationDefinition.parameter.min [ fhir:value "0"^^xsd:int ];
+     fhir:OperationDefinition.parameter.max [ fhir:value "*" ];
+     fhir:OperationDefinition.parameter.documentation [ fhir:value "Optional resources describing the patient’s coverage." ];
+     fhir:OperationDefinition.parameter.type [ fhir:value "Coverage" ]
+  ], [
+     fhir:index 2;
+     fhir:OperationDefinition.parameter.name [ fhir:value "answers" ];
+     fhir:OperationDefinition.parameter.use [ fhir:value "in" ];
+     fhir:OperationDefinition.parameter.min [ fhir:value "0"^^xsd:int ];
+     fhir:OperationDefinition.parameter.max [ fhir:value "*" ];
+     fhir:OperationDefinition.parameter.documentation [ fhir:value "Optional answers to any questions which have been or may be posed by the Decision Support Service" ];
+     fhir:OperationDefinition.parameter.type [ fhir:value "QuestionnaireResponse" ];
+     fhir:OperationDefinition.parameter.profile [
+       fhir:link <http://hl7.org/fhir/StructureDefinition/gao-questionnaireresponse>;
+       fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/StructureDefinition/gao-questionnaireresponse" ]
+     ]
+  ], [
+     fhir:index 3;
+     fhir:OperationDefinition.parameter.name [ fhir:value "order" ];
+     fhir:OperationDefinition.parameter.use [ fhir:value "out" ];
+     fhir:OperationDefinition.parameter.min [ fhir:value "1"^^xsd:int ];
+     fhir:OperationDefinition.parameter.max [ fhir:value "1" ];
+     fhir:OperationDefinition.parameter.documentation [ fhir:value "The order that was evaluated. This is a copy of the order provided on input." ];
+     fhir:OperationDefinition.parameter.type [ fhir:value "Order" ];
+     fhir:OperationDefinition.parameter.profile [
+       fhir:link <http://hl7.org/fhir/StructureDefinition/gao-order>;
+       fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/StructureDefinition/gao-order" ]
+     ]
+  ], [
+     fhir:index 4;
+     fhir:OperationDefinition.parameter.name [ fhir:value "answers" ];
+     fhir:OperationDefinition.parameter.use [ fhir:value "out" ];
+     fhir:OperationDefinition.parameter.min [ fhir:value "0"^^xsd:int ];
+     fhir:OperationDefinition.parameter.max [ fhir:value "*" ];
+     fhir:OperationDefinition.parameter.documentation [ fhir:value "Answers to any questions posed by the Decision Support Service. This SHALL be a copy of the answers provided on input." ];
+     fhir:OperationDefinition.parameter.type [ fhir:value "QuestionnaireResponse" ];
+     fhir:OperationDefinition.parameter.profile [
+       fhir:link <http://hl7.org/fhir/StructureDefinition/gao-questionnaireresponse>;
+       fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/StructureDefinition/gao-questionnaireresponse" ]
+     ]
+  ], [
+     fhir:index 5;
+     fhir:OperationDefinition.parameter.name [ fhir:value "result" ];
+     fhir:OperationDefinition.parameter.use [ fhir:value "out" ];
+     fhir:OperationDefinition.parameter.min [ fhir:value "1"^^xsd:int ];
+     fhir:OperationDefinition.parameter.max [ fhir:value "1" ];
+     fhir:OperationDefinition.parameter.documentation [ fhir:value "A Basic resource indicating the status of the evaluation produced by evaluating the order." ];
+     fhir:OperationDefinition.parameter.type [ fhir:value "Basic" ];
+     fhir:OperationDefinition.parameter.profile [
+       fhir:link <http://hl7.org/fhir/StructureDefinition/gao-result>;
+       fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/StructureDefinition/gao-result" ]
+     ]
+  ], [
+     fhir:index 6;
+     fhir:OperationDefinition.parameter.name [ fhir:value "alternative" ];
+     fhir:OperationDefinition.parameter.use [ fhir:value "out" ];
+     fhir:OperationDefinition.parameter.min [ fhir:value "0"^^xsd:int ];
+     fhir:OperationDefinition.parameter.max [ fhir:value "*" ];
+     fhir:OperationDefinition.parameter.documentation [ fhir:value "Basic resources indicating the status of evaluations produced by evaluating alternative orders suggested by the Decision Support Service Actor." ];
+     fhir:OperationDefinition.parameter.type [ fhir:value "Basic" ];
+     fhir:OperationDefinition.parameter.profile [
+       fhir:link <http://hl7.org/fhir/StructureDefinition/gao-alternate>;
+       fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/StructureDefinition/gao-alternate" ]
+     ]
+  ], [
+     fhir:index 7;
+     fhir:OperationDefinition.parameter.name [ fhir:value "provenance" ];
+     fhir:OperationDefinition.parameter.use [ fhir:value "out" ];
+     fhir:OperationDefinition.parameter.min [ fhir:value "0"^^xsd:int ];
+     fhir:OperationDefinition.parameter.max [ fhir:value "*" ];
+     fhir:OperationDefinition.parameter.documentation [ fhir:value "Provenance resources for the Result and Alternatives that can be used to verify that those Resources came from a specific Decision Support Service.         If the Decision Support Service implements the Digital Signature option, there SHALL be one Provenance resource for each Result or Alternate present in the output parameters." ];
+     fhir:OperationDefinition.parameter.type [ fhir:value "Provenance" ]
+  ], [
+     fhir:index 8;
+     fhir:OperationDefinition.parameter.name [ fhir:value "dss" ];
+     fhir:OperationDefinition.parameter.use [ fhir:value "out" ];
+     fhir:OperationDefinition.parameter.min [ fhir:value "1"^^xsd:int ];
+     fhir:OperationDefinition.parameter.max [ fhir:value "*" ];
+     fhir:OperationDefinition.parameter.documentation [ fhir:value "The Device resource shall identify the Decision Support Service device or devices which evaluated the appropriateness of the order." ];
+     fhir:OperationDefinition.parameter.type [ fhir:value "Device" ]
+  ], [
+     fhir:index 9;
+     fhir:OperationDefinition.parameter.name [ fhir:value "questions" ];
+     fhir:OperationDefinition.parameter.use [ fhir:value "out" ];
+     fhir:OperationDefinition.parameter.min [ fhir:value "0"^^xsd:int ];
+     fhir:OperationDefinition.parameter.max [ fhir:value "*" ];
+     fhir:OperationDefinition.parameter.documentation [ fhir:value "A reference to one or more Questionnaire resources, which, if completed might generate a different response from the Decision Support Service." ];
+     fhir:OperationDefinition.parameter.type [ fhir:value "Questionnaire" ]
+  ], [
+     fhir:index 10;
+     fhir:OperationDefinition.parameter.name [ fhir:value "questionaireURI" ];
+     fhir:OperationDefinition.parameter.use [ fhir:value "out" ];
+     fhir:OperationDefinition.parameter.min [ fhir:value "0"^^xsd:int ];
+     fhir:OperationDefinition.parameter.max [ fhir:value "1" ];
+     fhir:OperationDefinition.parameter.documentation [ fhir:value "Specifies a web endpoint where Questionnaire Resources returned by the Decision Support Service can be invoked interactively. When the Decision Support Service implements the Conversational Interaction Option and the questions parameter is populated, this field SHALL be populated." ];
+     fhir:OperationDefinition.parameter.type [ fhir:value "uri" ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

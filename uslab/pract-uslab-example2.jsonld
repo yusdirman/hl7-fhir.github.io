@@ -1,0 +1,111 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Practitioner",
+  "resourceType": "Practitioner",
+  "Resource.id": {
+    "value": "pract-uslab-example2"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: pract-uslab-example2</p><p><b>identifier</b>: 121121121 (OFFICIAL)</p><p><b>name</b>: Bill T Lookafter </p><p><b>telecom</b>: ph: (617)5551234 ext.12, docbill@healthedatainc.com</p><p><b>address</b>: 100 Medical Drive Suite 6 Boston MA 01236 USA (WORK)</p><h3>PractitionerRoles</h3><table><tr><td>-</td><td><b>Organization</b></td></tr><tr><td>*</td><td><a>Children's Hospital</a></td></tr></table></div>"
+    }
+  },
+  "Practitioner.identifier": [
+    {
+      "Identifier.use": {
+        "value": "official"
+      },
+      "Identifier.system": {
+        "value": "http://hl7.org/fhir/sid/us-npi"
+      },
+      "Identifier.value": {
+        "value": "121121121"
+      }
+    }
+  ],
+  "Practitioner.name": [
+    {
+      "HumanName.family": [
+        {
+          "value": "Lookafter"
+        }
+      ],
+      "HumanName.given": [
+        {
+          "value": "Bill"
+        },
+        {
+          "value": "T"
+        }
+      ],
+      "HumanName.suffix": [
+        {
+          "value": "Jr"
+        }
+      ]
+    }
+  ],
+  "Practitioner.telecom": [
+    {
+      "ContactPoint.system": {
+        "value": "phone"
+      },
+      "ContactPoint.value": {
+        "value": "(617)5551234 ext.12"
+      }
+    },
+    {
+      "ContactPoint.system": {
+        "value": "email"
+      },
+      "ContactPoint.value": {
+        "value": "docbill@healthedatainc.com"
+      }
+    }
+  ],
+  "Practitioner.address": [
+    {
+      "Address.use": {
+        "value": "work"
+      },
+      "Address.line": [
+        {
+          "value": "100 Medical Drive"
+        },
+        {
+          "value": "Suite 6"
+        }
+      ],
+      "Address.city": {
+        "value": "Boston"
+      },
+      "Address.district": {
+        "value": "42043"
+      },
+      "Address.state": {
+        "value": "MA"
+      },
+      "Address.postalCode": {
+        "value": "01236"
+      },
+      "Address.country": {
+        "value": "USA"
+      }
+    }
+  ],
+  "Practitioner.practitionerRole": [
+    {
+      "Practitioner.practitionerRole.organization": {
+        "Reference.reference": {
+          "value": "Organization/org-uslab-example1"
+        },
+        "Reference.display": {
+          "value": "Children's Hospital"
+        },
+        "reference": "http://hl7.org/fhir//Organization/org-uslab-example1"
+      }
+    }
+  ]
+}

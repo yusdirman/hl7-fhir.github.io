@@ -1,0 +1,121 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/AuditEvent",
+  "resourceType": "AuditEvent",
+  "Resource.id": {
+    "value": "example-rest"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: example-rest</p><p><b>type</b>: Restful Operation (Details: http://hl7.org/fhir/audit-event-type code rest = 'RESTful Operation', stated as 'Restful Operation')</p><p><b>subtype</b>: vread (Details: http://hl7.org/fhir/restful-interaction code vread = 'vread', stated as 'vread')</p><p><b>action</b>: R</p><p><b>recorded</b>: Jun 20, 2013 11:42:24 PM</p><p><b>outcome</b>: 0</p><h3>Agents</h3><table><tr><td>-</td><td><b>UserId</b></td><td><b>AltId</b></td><td><b>Name</b></td><td><b>Requestor</b></td></tr><tr><td>*</td><td>95</td><td>601847123</td><td>Grahame Grieve</td><td>true</td></tr></table><h3>Sources</h3><table><tr><td>-</td><td><b>Site</b></td><td><b>Identifier</b></td><td><b>Type</b></td></tr><tr><td>*</td><td>Cloud</td><td>hl7connect.healthintersections.com.au</td><td>Web Server (Details: http://hl7.org/fhir/security-source-type code 3 = 'Web Server', stated as 'Web Server')</td></tr></table><h3>Entities</h3><table><tr><td>-</td><td><b>Reference</b></td><td><b>Type</b></td><td><b>Lifecycle</b></td></tr><tr><td>*</td><td><a>Patient/example/_history/1</a></td><td>System Object (Details: http://hl7.org/fhir/object-type code 2 = 'System Object', stated as 'System Object')</td><td>Access / Use (Details: http://hl7.org/fhir/object-lifecycle code 6 = 'Access / Use', stated as 'Access / Use')</td></tr></table></div>"
+    }
+  },
+  "AuditEvent.type": {
+    "Coding.system": {
+      "value": "http://hl7.org/fhir/audit-event-type"
+    },
+    "Coding.code": {
+      "value": "rest"
+    },
+    "Coding.display": {
+      "value": "Restful Operation"
+    }
+  },
+  "AuditEvent.subtype": [
+    {
+      "Coding.system": {
+        "value": "http://hl7.org/fhir/restful-interaction"
+      },
+      "Coding.code": {
+        "value": "vread"
+      },
+      "Coding.display": {
+        "value": "vread"
+      }
+    }
+  ],
+  "AuditEvent.action": {
+    "value": "R"
+  },
+  "AuditEvent.recorded": {
+    "value": "2013-06-20T23:42:24Z"
+  },
+  "AuditEvent.outcome": {
+    "value": "0"
+  },
+  "AuditEvent.agent": [
+    {
+      "AuditEvent.agent.userId": {
+        "Identifier.value": {
+          "value": "95"
+        }
+      },
+      "AuditEvent.agent.altId": {
+        "value": "601847123"
+      },
+      "AuditEvent.agent.name": {
+        "value": "Grahame Grieve"
+      },
+      "AuditEvent.agent.requestor": {
+        "value": true
+      }
+    }
+  ],
+  "AuditEvent.source": {
+    "AuditEvent.source.site": {
+      "value": "Cloud"
+    },
+    "AuditEvent.source.identifier": {
+      "Identifier.value": {
+        "value": "hl7connect.healthintersections.com.au"
+      }
+    },
+    "AuditEvent.source.type": [
+      {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/security-source-type"
+        },
+        "Coding.code": {
+          "value": "3"
+        },
+        "Coding.display": {
+          "value": "Web Server"
+        }
+      }
+    ]
+  },
+  "AuditEvent.entity": [
+    {
+      "AuditEvent.entity.reference": {
+        "Reference.reference": {
+          "value": "Patient/example/_history/1"
+        },
+        "reference": "http://hl7.org/fhir//Patient/example/_history/1"
+      },
+      "AuditEvent.entity.type": {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/object-type"
+        },
+        "Coding.code": {
+          "value": "2"
+        },
+        "Coding.display": {
+          "value": "System Object"
+        }
+      },
+      "AuditEvent.entity.lifecycle": {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/object-lifecycle"
+        },
+        "Coding.code": {
+          "value": "6"
+        },
+        "Coding.display": {
+          "value": "Access / Use"
+        }
+      }
+    }
+  ]
+}

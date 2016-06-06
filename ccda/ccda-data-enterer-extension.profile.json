@@ -1,0 +1,199 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ccda-data-enterer-extension",
+  "url": "http://hl7.org/fhir/StructureDefinition/ccda-data-enterer-extension",
+  "name": "C-CDA on FHIR Data Enterer",
+  "status": "draft",
+  "contact": [
+    {
+      "name": "Sarah Gaunt",
+      "telecom": [
+        {
+          "system": "phone",
+          "value": "+6 141-029-2506",
+          "use": "work"
+        },
+        {
+          "system": "email",
+          "value": "sarah.gaunt@lantanagroup.com",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "date": "2016-06-06T20:14:04+00:00",
+  "description": "Extension for the CDA data enterer (transcriptionist)",
+  "kind": "resource",
+  "abstract": false,
+  "contextType": "resource",
+  "context": [
+    "Composition"
+  ],
+  "baseType": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "snapshot": {
+    "element": [
+      {
+        "path": "Extension",
+        "short": "Extension",
+        "definition": "An Extension",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "Extension.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "definition": "unique id for the element within a resource (for internal references).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.id",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "path": "Extension.extension",
+        "short": "Additional Content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "path": "Extension.url",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "@url",
+        "definition": "SHALL contain exactly one [1..1] @url=\"http://hl7.org/fhir/StructureDefinition/ccda-data-enterer\" (CONF:2219-1842).",
+        "comments": "The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition should be version specific.  This will ideally be the URI for the Resource Profile defining the extension, with the code for the extension after a #.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "fixedUri": "http://hl7.org/fhir/StructureDefinition/ccda-data-enterer",
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "path": "Extension.valueReference",
+        "short": "A referenced to the data enterer",
+        "definition": "SHALL contain exactly one [1..1] valueReference (CONF:2219-1843).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/daf-practitioner"
+            ]
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "path": "Extension"
+      },
+      {
+        "path": "Extension.url",
+        "short": "@url",
+        "definition": "SHALL contain exactly one [1..1] @url=\"http://hl7.org/fhir/StructureDefinition/ccda-data-enterer\" (CONF:2219-1842).",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "fixedUri": "http://hl7.org/fhir/StructureDefinition/ccda-data-enterer"
+      },
+      {
+        "path": "Extension.value[x]",
+        "short": "A referenced to the data enterer",
+        "definition": "SHALL contain exactly one [1..1] valueReference (CONF:2219-1843).",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/daf-practitioner"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,287 @@
+{
+  "resourceType": "Library",
+  "id": "library-cdc",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Cohort Definition for Comprehensive Diabetes Care Measure</div>"
+  },
+  "moduleMetadata": {
+    "identifier": [
+      {
+        "use": "official",
+        "value": "CCS"
+      }
+    ],
+    "version": "1.0.0",
+    "title": "Cohort Definition for Comprehensive Diabetes Care Measure",
+    "type": "library",
+    "status": "active",
+    "experimental": true,
+    "publicationDate": "2016-04-19",
+    "topic": [
+      {
+        "text": "something"
+      }
+    ]
+  },
+  "model": [
+    {
+      "identifier": "FHIR"
+    }
+  ],
+  "valueSet": [
+    {
+      "name": "HbA1c Tests",
+      "identifier": "2.16.840.1.113883.3.464.1004.1116"
+    },
+    {
+      "name": "HbA1c Level Less than 7.0",
+      "identifier": "2.16.840.1.113883.3.464.1004.1115"
+    },
+    {
+      "name": "HbA1c Level 7.0-9.0",
+      "identifier": "2.16.840.1.113883.3.464.1004.1113"
+    },
+    {
+      "name": "HbA1c Level Greater Than 9.0",
+      "identifier": "2.16.840.1.113883.3.464.1004.1114"
+    },
+    {
+      "name": "Diabetic Retinal Screening",
+      "identifier": "2.16.840.1.113883.3.464.1004.1078"
+    },
+    {
+      "name": "Diabetic Retinal Screening Negative",
+      "identifier": "2.16.840.1.113883.3.464.1004.1079"
+    },
+    {
+      "name": "Diabetic Retinal Screening With Eye Care Professional",
+      "identifier": "2.16.840.1.113883.3.464.1004.1080"
+    },
+    {
+      "name": "Urine Macroalbumin Tests",
+      "identifier": "2.16.840.1.113883.3.464.1004.1257"
+    },
+    {
+      "name": "Positive Urine Macroalbumin Tests",
+      "identifier": "2.16.840.1.113883.3.464.1004.1216"
+    },
+    {
+      "name": "Urine Protein Test",
+      "identifier": "Urine Protein Test"
+    }
+  ],
+  "dataRequirement": [
+    {
+      "type": "Patient"
+    },
+    {
+      "type": "Observation",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSetString": "HbA1c Tests"
+        }
+      ],
+      "dateFilter": [
+        {
+          "path": "effectiveDateTime.value",
+          "valuePeriod": {
+            "start": "2015-01-01"
+          }
+        }
+      ]
+    },
+    {
+      "type": "Observation",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSetString": "HbA1c Level Less than 7.0"
+        }
+      ],
+      "dateFilter": [
+        {
+          "path": "effectiveDateTime.value",
+          "valuePeriod": {
+            "start": "2015-01-01"
+          }
+        }
+      ]
+    },
+    {
+      "type": "Observation",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSetString": "HbA1c Level 7.0-9.0"
+        }
+      ],
+      "dateFilter": [
+        {
+          "path": "effectiveDateTime.value",
+          "valuePeriod": {
+            "start": "2015-01-01"
+          }
+        }
+      ]
+    },
+    {
+      "type": "Observation",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSetString": "HbA1c Level Greater Than 9.0"
+        }
+      ],
+      "dateFilter": [
+        {
+          "path": "effectiveDateTime.value",
+          "valuePeriod": {
+            "start": "2015-01-01"
+          }
+        }
+      ]
+    },
+    {
+      "type": "MedicationOrder",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSetString": "ARB"
+        }
+      ],
+      "dateFilter": [
+        {
+          "path": "dateWritten.value",
+          "valuePeriod": {
+            "start": "2015-01-01"
+          }
+        }
+      ]
+    },
+    {
+      "type": "MedicationOrder",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSetString": "ACE"
+        }
+      ],
+      "dateFilter": [
+        {
+          "path": "dateWritten.value",
+          "valuePeriod": {
+            "start": "2015-01-01"
+          }
+        }
+      ]
+    },
+    {
+      "type": "Procedure",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSetString": "Diabetic Retinal Screening"
+        }
+      ],
+      "dateFilter": [
+        {
+          "path": "performedDateTime.value",
+          "valuePeriod": {
+            "start": "2014-01-01"
+          }
+        }
+      ]
+    },
+    {
+      "type": "Procedure",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSetString": "Diabetic Retinal Screening Negative"
+        }
+      ],
+      "dateFilter": [
+        {
+          "path": "performedDateTime.value",
+          "valuePeriod": {
+            "start": "2014-01-01"
+          }
+        }
+      ]
+    },
+    {
+      "type": "Procedure",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSetString": "Diabetic Retinal Screening With Eye Care Professional"
+        }
+      ],
+      "dateFilter": [
+        {
+          "path": "performedDateTime.value",
+          "valuePeriod": {
+            "start": "2014-01-01"
+          }
+        }
+      ]
+    },
+    {
+      "type": "Observation",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSetString": "Urine Macroalbumin Tests"
+        }
+      ],
+      "dateFilter": [
+        {
+          "path": "effectiveDateTime.value",
+          "valuePeriod": {
+            "start": "2015-01-01"
+          }
+        }
+      ]
+    },
+    {
+      "type": "Observation",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSetString": "Positive Urine Macroalbumin Tests"
+        }
+      ],
+      "dateFilter": [
+        {
+          "path": "effectiveDateTime.value",
+          "valuePeriod": {
+            "start": "2015-01-01"
+          }
+        }
+      ]
+    },
+    {
+      "type": "Observation",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSetString": "Diabetic Retinal Screening"
+        }
+      ],
+      "dateFilter": [
+        {
+          "path": "effectiveDateTime.value",
+          "valuePeriod": {
+            "start": "2014-01-01"
+          }
+        }
+      ]
+    }
+  ],
+  "document": {
+    "contentType": "application/xml+elm",
+    "url": "http://example.org/libraries/library-cdc.elm.xml"
+  }
+}

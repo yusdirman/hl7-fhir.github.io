@@ -1,0 +1,480 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Library",
+  "resourceType": "Library",
+  "Resource.id": {
+    "value": "library-cdc"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Cohort Definition for Comprehensive Diabetes Care Measure</div>"
+    }
+  },
+  "Library.moduleMetadata": {
+    "ModuleMetadata.identifier": [
+      {
+        "Identifier.use": {
+          "value": "official"
+        },
+        "Identifier.value": {
+          "value": "CCS"
+        }
+      }
+    ],
+    "ModuleMetadata.version": {
+      "value": "1.0.0"
+    },
+    "ModuleMetadata.title": {
+      "value": "Cohort Definition for Comprehensive Diabetes Care Measure"
+    },
+    "ModuleMetadata.type": {
+      "value": "library"
+    },
+    "ModuleMetadata.status": {
+      "value": "active"
+    },
+    "ModuleMetadata.experimental": {
+      "value": true
+    },
+    "ModuleMetadata.publicationDate": {
+      "value": "2016-04-19"
+    },
+    "ModuleMetadata.topic": [
+      {
+        "CodeableConcept.text": {
+          "value": "something"
+        }
+      }
+    ]
+  },
+  "Library.model": [
+    {
+      "Library.model.identifier": {
+        "value": "FHIR"
+      }
+    }
+  ],
+  "Library.valueSet": [
+    {
+      "Library.valueSet.name": {
+        "value": "HbA1c Tests"
+      },
+      "Library.valueSet.identifier": {
+        "value": "2.16.840.1.113883.3.464.1004.1116"
+      }
+    },
+    {
+      "Library.valueSet.name": {
+        "value": "HbA1c Level Less than 7.0"
+      },
+      "Library.valueSet.identifier": {
+        "value": "2.16.840.1.113883.3.464.1004.1115"
+      }
+    },
+    {
+      "Library.valueSet.name": {
+        "value": "HbA1c Level 7.0-9.0"
+      },
+      "Library.valueSet.identifier": {
+        "value": "2.16.840.1.113883.3.464.1004.1113"
+      }
+    },
+    {
+      "Library.valueSet.name": {
+        "value": "HbA1c Level Greater Than 9.0"
+      },
+      "Library.valueSet.identifier": {
+        "value": "2.16.840.1.113883.3.464.1004.1114"
+      }
+    },
+    {
+      "Library.valueSet.name": {
+        "value": "Diabetic Retinal Screening"
+      },
+      "Library.valueSet.identifier": {
+        "value": "2.16.840.1.113883.3.464.1004.1078"
+      }
+    },
+    {
+      "Library.valueSet.name": {
+        "value": "Diabetic Retinal Screening Negative"
+      },
+      "Library.valueSet.identifier": {
+        "value": "2.16.840.1.113883.3.464.1004.1079"
+      }
+    },
+    {
+      "Library.valueSet.name": {
+        "value": "Diabetic Retinal Screening With Eye Care Professional"
+      },
+      "Library.valueSet.identifier": {
+        "value": "2.16.840.1.113883.3.464.1004.1080"
+      }
+    },
+    {
+      "Library.valueSet.name": {
+        "value": "Urine Macroalbumin Tests"
+      },
+      "Library.valueSet.identifier": {
+        "value": "2.16.840.1.113883.3.464.1004.1257"
+      }
+    },
+    {
+      "Library.valueSet.name": {
+        "value": "Positive Urine Macroalbumin Tests"
+      },
+      "Library.valueSet.identifier": {
+        "value": "2.16.840.1.113883.3.464.1004.1216"
+      }
+    },
+    {
+      "Library.valueSet.name": {
+        "value": "Urine Protein Test"
+      },
+      "Library.valueSet.identifier": {
+        "value": "Urine Protein Test"
+      }
+    }
+  ],
+  "Library.dataRequirement": [
+    {
+      "DataRequirement.type": {
+        "value": "Patient"
+      }
+    },
+    {
+      "DataRequirement.type": {
+        "value": "Observation"
+      },
+      "DataRequirement.codeFilter": [
+        {
+          "DataRequirement.codeFilter.path": {
+            "value": "code"
+          },
+          "DataRequirement.codeFilter.valueSetString": {
+            "value": "HbA1c Tests"
+          }
+        }
+      ],
+      "DataRequirement.dateFilter": [
+        {
+          "DataRequirement.dateFilter.path": {
+            "value": "effectiveDateTime.value"
+          },
+          "DataRequirement.dateFilter.valuePeriod": {
+            "Period.start": {
+              "value": "2015-01-01"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "DataRequirement.type": {
+        "value": "Observation"
+      },
+      "DataRequirement.codeFilter": [
+        {
+          "DataRequirement.codeFilter.path": {
+            "value": "code"
+          },
+          "DataRequirement.codeFilter.valueSetString": {
+            "value": "HbA1c Level Less than 7.0"
+          }
+        }
+      ],
+      "DataRequirement.dateFilter": [
+        {
+          "DataRequirement.dateFilter.path": {
+            "value": "effectiveDateTime.value"
+          },
+          "DataRequirement.dateFilter.valuePeriod": {
+            "Period.start": {
+              "value": "2015-01-01"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "DataRequirement.type": {
+        "value": "Observation"
+      },
+      "DataRequirement.codeFilter": [
+        {
+          "DataRequirement.codeFilter.path": {
+            "value": "code"
+          },
+          "DataRequirement.codeFilter.valueSetString": {
+            "value": "HbA1c Level 7.0-9.0"
+          }
+        }
+      ],
+      "DataRequirement.dateFilter": [
+        {
+          "DataRequirement.dateFilter.path": {
+            "value": "effectiveDateTime.value"
+          },
+          "DataRequirement.dateFilter.valuePeriod": {
+            "Period.start": {
+              "value": "2015-01-01"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "DataRequirement.type": {
+        "value": "Observation"
+      },
+      "DataRequirement.codeFilter": [
+        {
+          "DataRequirement.codeFilter.path": {
+            "value": "code"
+          },
+          "DataRequirement.codeFilter.valueSetString": {
+            "value": "HbA1c Level Greater Than 9.0"
+          }
+        }
+      ],
+      "DataRequirement.dateFilter": [
+        {
+          "DataRequirement.dateFilter.path": {
+            "value": "effectiveDateTime.value"
+          },
+          "DataRequirement.dateFilter.valuePeriod": {
+            "Period.start": {
+              "value": "2015-01-01"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "DataRequirement.type": {
+        "value": "MedicationOrder"
+      },
+      "DataRequirement.codeFilter": [
+        {
+          "DataRequirement.codeFilter.path": {
+            "value": "code"
+          },
+          "DataRequirement.codeFilter.valueSetString": {
+            "value": "ARB"
+          }
+        }
+      ],
+      "DataRequirement.dateFilter": [
+        {
+          "DataRequirement.dateFilter.path": {
+            "value": "dateWritten.value"
+          },
+          "DataRequirement.dateFilter.valuePeriod": {
+            "Period.start": {
+              "value": "2015-01-01"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "DataRequirement.type": {
+        "value": "MedicationOrder"
+      },
+      "DataRequirement.codeFilter": [
+        {
+          "DataRequirement.codeFilter.path": {
+            "value": "code"
+          },
+          "DataRequirement.codeFilter.valueSetString": {
+            "value": "ACE"
+          }
+        }
+      ],
+      "DataRequirement.dateFilter": [
+        {
+          "DataRequirement.dateFilter.path": {
+            "value": "dateWritten.value"
+          },
+          "DataRequirement.dateFilter.valuePeriod": {
+            "Period.start": {
+              "value": "2015-01-01"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "DataRequirement.type": {
+        "value": "Procedure"
+      },
+      "DataRequirement.codeFilter": [
+        {
+          "DataRequirement.codeFilter.path": {
+            "value": "code"
+          },
+          "DataRequirement.codeFilter.valueSetString": {
+            "value": "Diabetic Retinal Screening"
+          }
+        }
+      ],
+      "DataRequirement.dateFilter": [
+        {
+          "DataRequirement.dateFilter.path": {
+            "value": "performedDateTime.value"
+          },
+          "DataRequirement.dateFilter.valuePeriod": {
+            "Period.start": {
+              "value": "2014-01-01"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "DataRequirement.type": {
+        "value": "Procedure"
+      },
+      "DataRequirement.codeFilter": [
+        {
+          "DataRequirement.codeFilter.path": {
+            "value": "code"
+          },
+          "DataRequirement.codeFilter.valueSetString": {
+            "value": "Diabetic Retinal Screening Negative"
+          }
+        }
+      ],
+      "DataRequirement.dateFilter": [
+        {
+          "DataRequirement.dateFilter.path": {
+            "value": "performedDateTime.value"
+          },
+          "DataRequirement.dateFilter.valuePeriod": {
+            "Period.start": {
+              "value": "2014-01-01"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "DataRequirement.type": {
+        "value": "Procedure"
+      },
+      "DataRequirement.codeFilter": [
+        {
+          "DataRequirement.codeFilter.path": {
+            "value": "code"
+          },
+          "DataRequirement.codeFilter.valueSetString": {
+            "value": "Diabetic Retinal Screening With Eye Care Professional"
+          }
+        }
+      ],
+      "DataRequirement.dateFilter": [
+        {
+          "DataRequirement.dateFilter.path": {
+            "value": "performedDateTime.value"
+          },
+          "DataRequirement.dateFilter.valuePeriod": {
+            "Period.start": {
+              "value": "2014-01-01"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "DataRequirement.type": {
+        "value": "Observation"
+      },
+      "DataRequirement.codeFilter": [
+        {
+          "DataRequirement.codeFilter.path": {
+            "value": "code"
+          },
+          "DataRequirement.codeFilter.valueSetString": {
+            "value": "Urine Macroalbumin Tests"
+          }
+        }
+      ],
+      "DataRequirement.dateFilter": [
+        {
+          "DataRequirement.dateFilter.path": {
+            "value": "effectiveDateTime.value"
+          },
+          "DataRequirement.dateFilter.valuePeriod": {
+            "Period.start": {
+              "value": "2015-01-01"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "DataRequirement.type": {
+        "value": "Observation"
+      },
+      "DataRequirement.codeFilter": [
+        {
+          "DataRequirement.codeFilter.path": {
+            "value": "code"
+          },
+          "DataRequirement.codeFilter.valueSetString": {
+            "value": "Positive Urine Macroalbumin Tests"
+          }
+        }
+      ],
+      "DataRequirement.dateFilter": [
+        {
+          "DataRequirement.dateFilter.path": {
+            "value": "effectiveDateTime.value"
+          },
+          "DataRequirement.dateFilter.valuePeriod": {
+            "Period.start": {
+              "value": "2015-01-01"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "DataRequirement.type": {
+        "value": "Observation"
+      },
+      "DataRequirement.codeFilter": [
+        {
+          "DataRequirement.codeFilter.path": {
+            "value": "code"
+          },
+          "DataRequirement.codeFilter.valueSetString": {
+            "value": "Diabetic Retinal Screening"
+          }
+        }
+      ],
+      "DataRequirement.dateFilter": [
+        {
+          "DataRequirement.dateFilter.path": {
+            "value": "effectiveDateTime.value"
+          },
+          "DataRequirement.dateFilter.valuePeriod": {
+            "Period.start": {
+              "value": "2014-01-01"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "Library.document": {
+    "Attachment.contentType": {
+      "value": "application/xml+elm"
+    },
+    "Attachment.url": {
+      "value": "http://example.org/libraries/library-cdc.elm.xml"
+    }
+  }
+}

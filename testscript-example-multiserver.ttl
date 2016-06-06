@@ -1,0 +1,323 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/TestScriptmultiserver> a fhir:TestScript;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "multiserver"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: multiserver</p><p><b>name</b>: Multiserver Test Script</p><p><b>description</b>: Multiserver Test Script</p><h3>Fixtures</h3><table><tr><td>-</td><td><b>Resource</b></td></tr><tr><td>*</td><td><a>Patient/patient-example.xml</a></td></tr></table><blockquote><p><b>setup</b></p><blockquote><p><b>action</b></p><h3>Operations</h3><table><tr><td>-</td><td><b>Type</b></td><td><b>ContentType</b></td><td><b>Destination</b></td><td><b>SourceId</b></td></tr><tr><td>*</td><td>create</td><td>xml</td><td>0</td><td>F1</td></tr></table></blockquote></blockquote><blockquote><p><b>test</b></p><p><b>name</b>: Read Patient</p><p><b>description</b>: Read the patient from server 0.</p><blockquote><p><b>metadata</b></p><h3>Links</h3><table><tr><td>-</td><td><b>Url</b></td><td><b>Description</b></td></tr><tr><td>*</td><td><a>http://hl7.org/implement/standards/FHIR-Develop/patient.html</a></td><td>FHIR Patient</td></tr></table><blockquote><p><b>operation</b></p><p><b>type</b>: create</p><p><b>resource</b>: Patient</p><p><b>description</b>: Patient Create Operation</p><p><b>link</b>: <a>http://hl7.org/implement/standards/FHIR-Develop/http.html#create</a></p><p><b>required</b>: true</p></blockquote><blockquote><p><b>operation</b></p><p><b>type</b>: read</p><p><b>resource</b>: Patient</p><p><b>description</b>: Patient Read Operation</p><p><b>link</b>: <a>http://hl7.org/implement/standards/FHIR-Develop/http.html#read</a></p><p><b>validated</b>: true</p></blockquote></blockquote><blockquote><p><b>action</b></p><h3>Operations</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote></blockquote><blockquote><p><b>test</b></p><p><b>name</b>: Write Patient</p><p><b>description</b>: Write the patient read from server 0 to server 1.</p><blockquote><p><b>metadata</b></p><h3>Links</h3><table><tr><td>-</td><td><b>Url</b></td><td><b>Description</b></td></tr><tr><td>*</td><td><a>http://hl7.org/implement/standards/FHIR-Develop/patient.html</a></td><td>FHIR Patient</td></tr></table><blockquote><p><b>operation</b></p><p><b>type</b>: create</p><p><b>resource</b>: Patient</p><p><b>description</b>: Patient Create Operation</p><p><b>link</b>: <a>http://hl7.org/implement/standards/FHIR-Develop/http.html#create</a></p><p><b>required</b>: true</p></blockquote><blockquote><p><b>operation</b></p><p><b>type</b>: read</p><p><b>resource</b>: Patient</p><p><b>description</b>: Patient Read Operation</p><p><b>link</b>: <a>http://hl7.org/implement/standards/FHIR-Develop/http.html#read</a></p><p><b>validated</b>: true</p></blockquote></blockquote><blockquote><p><b>action</b></p><h3>Operations</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Operations</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote></blockquote><blockquote><p><b>test</b></p><p><b>name</b>: Update Patient</p><p><b>description</b>: Update the patient on server 0 with the one read from server 1.</p><blockquote><p><b>metadata</b></p><h3>Links</h3><table><tr><td>-</td><td><b>Url</b></td><td><b>Description</b></td></tr><tr><td>*</td><td><a>http://hl7.org/implement/standards/FHIR-Develop/patient.html</a></td><td>FHIR Patient</td></tr></table><blockquote><p><b>operation</b></p><p><b>type</b>: create</p><p><b>resource</b>: Patient</p><p><b>description</b>: Patient Create Operation</p><p><b>link</b>: <a>http://hl7.org/implement/standards/FHIR-Develop/http.html#create</a></p><p><b>required</b>: true</p></blockquote><blockquote><p><b>operation</b></p><p><b>type</b>: read</p><p><b>resource</b>: Patient</p><p><b>description</b>: Patient Read Operation</p><p><b>link</b>: <a>http://hl7.org/implement/standards/FHIR-Develop/http.html#read</a></p><p><b>validated</b>: true</p></blockquote></blockquote><blockquote><p><b>action</b></p><h3>Operations</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Operations</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote></blockquote><blockquote><p><b>teardown</b></p><blockquote><p><b>action</b></p><h3>Operations</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Operations</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote></blockquote></div>"
+  ];
+  fhir:TestScript.url [ fhir:value "http://hl7.org/fhir/TestScript/multiserver"];
+  fhir:TestScript.name [ fhir:value "Multiserver Test Script"];
+  fhir:TestScript.status [ fhir:value "draft"];
+  fhir:TestScript.description [ fhir:value "Multiserver Test Script"];
+  fhir:TestScript.origin [
+     fhir:index 0;
+     fhir:TestScript.origin.index [ fhir:value "1"^^xsd:int ];
+     fhir:TestScript.origin.profile [
+       fhir:Coding.code [ fhir:value "FHIR-Client" ]
+     ]
+  ];
+  fhir:TestScript.destination [
+     fhir:index 0;
+     fhir:TestScript.destination.index [ fhir:value "1"^^xsd:int ];
+     fhir:TestScript.destination.profile [
+       fhir:Coding.code [ fhir:value "FHIR-Server" ]
+     ]
+  ];
+  fhir:TestScript.fixture [
+     fhir:index 0;
+     fhir:Element.id [ fhir:value "F1" ];
+     fhir:TestScript.fixture.resource [
+       fhir:link <http://hl7.org/fhir/Patient/example>;
+       fhir:Reference.reference [ fhir:value "Patient/example" ]
+     ]
+  ];
+  fhir:TestScript.setup [
+     fhir:TestScript.setup.metadata [
+       fhir:TestScript.metadata.link [
+         fhir:index 0;
+         fhir:TestScript.metadata.link.url [ fhir:value "http://hl7.org/implement/standards/FHIR-Develop/patient.html" ];
+         fhir:TestScript.metadata.link.description [ fhir:value "FHIR Patient" ]
+       ];
+       fhir:TestScript.metadata.capability [
+         fhir:index 0;
+         fhir:TestScript.metadata.capability.required [ fhir:value "true"^^xsd:boolean ];
+         fhir:TestScript.metadata.capability.validated [ fhir:value "true"^^xsd:boolean ];
+         fhir:TestScript.metadata.capability.description [ fhir:value "Patient Create Operation" ];
+         fhir:TestScript.metadata.capability.origin [
+           fhir:value "1"^^xsd:int;
+           fhir:index 0
+         ];
+         fhir:TestScript.metadata.capability.destination [ fhir:value "1"^^xsd:int ];
+         fhir:TestScript.metadata.capability.link [
+           fhir:value "http://hl7.org/implement/standards/FHIR-Develop/http.html#create";
+           fhir:index 0
+         ];
+         fhir:TestScript.metadata.capability.conformance [
+           fhir:link <http://hl7.org/fhir/Conformance/example>;
+           fhir:Reference.reference [ fhir:value "Conformance/example" ]
+         ]
+       ]
+     ];
+     fhir:TestScript.setup.action [
+       fhir:index 0;
+       fhir:TestScript.setup.action.operation [
+         fhir:TestScript.setup.action.operation.type [
+           fhir:Coding.code [ fhir:value "create" ]
+         ];
+         fhir:TestScript.setup.action.operation.contentType [ fhir:value "xml" ];
+         fhir:TestScript.setup.action.operation.destination [ fhir:value "0"^^xsd:int ];
+         fhir:TestScript.setup.action.operation.origin [ fhir:value "0"^^xsd:int ];
+         fhir:TestScript.setup.action.operation.sourceId [ fhir:value "F1" ]
+       ]
+     ]
+  ];
+  fhir:TestScript.test [
+     fhir:index 0;
+     fhir:Element.id [ fhir:value "READ01" ];
+     fhir:TestScript.test.name [ fhir:value "Read Patient" ];
+     fhir:TestScript.test.description [ fhir:value "Read the patient from server 0." ];
+     fhir:TestScript.test.metadata [
+       fhir:TestScript.metadata.capability [
+         fhir:index 0;
+         fhir:TestScript.metadata.capability.required [ fhir:value "true"^^xsd:boolean ];
+         fhir:TestScript.metadata.capability.validated [ fhir:value "true"^^xsd:boolean ];
+         fhir:TestScript.metadata.capability.description [ fhir:value "Patient Read Operation" ];
+         fhir:TestScript.metadata.capability.origin [
+           fhir:value "1"^^xsd:int;
+           fhir:index 0
+         ];
+         fhir:TestScript.metadata.capability.destination [ fhir:value "1"^^xsd:int ];
+         fhir:TestScript.metadata.capability.link [
+           fhir:value "http://hl7.org/implement/standards/FHIR-Develop/http.html#read";
+           fhir:index 0
+         ];
+         fhir:TestScript.metadata.capability.conformance [
+           fhir:link <http://hl7.org/fhir/Conformance/example>;
+           fhir:Reference.reference [ fhir:value "Conformance/example" ]
+         ]
+       ]
+     ];
+     fhir:TestScript.test.action [
+       fhir:index 0;
+       fhir:TestScript.test.action.operation [
+         fhir:TestScript.setup.action.operation.type [
+           fhir:Coding.code [ fhir:value "read" ]
+         ];
+         fhir:TestScript.setup.action.operation.destination [ fhir:value "0"^^xsd:int ];
+         fhir:TestScript.setup.action.operation.responseId [ fhir:value "R1" ];
+         fhir:TestScript.setup.action.operation.targetId [ fhir:value "F1" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:TestScript.test.action.assert [
+         fhir:TestScript.setup.action.assert.response [ fhir:value "okay" ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:TestScript.test.action.assert [
+         fhir:TestScript.setup.action.assert.headerField [ fhir:value "Last-Modified" ];
+         fhir:TestScript.setup.action.assert.operator [ fhir:value "notEmpty" ]
+       ]
+     ], [
+       fhir:index 3;
+       fhir:TestScript.test.action.assert [
+         fhir:TestScript.setup.action.assert.resource [ fhir:value "Patient" ]
+       ]
+     ], [
+       fhir:index 4;
+       fhir:TestScript.test.action.assert [
+         fhir:TestScript.setup.action.assert.minimumId [ fhir:value "F1" ]
+       ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Element.id [ fhir:value "WRITE01" ];
+     fhir:TestScript.test.name [ fhir:value "Write Patient" ];
+     fhir:TestScript.test.description [ fhir:value "Write the patient read from server 0 to server 1." ];
+     fhir:TestScript.test.metadata [
+       fhir:TestScript.metadata.capability [
+         fhir:index 0;
+         fhir:TestScript.metadata.capability.validated [ fhir:value "true"^^xsd:boolean ];
+         fhir:TestScript.metadata.capability.description [ fhir:value "Patient Create Operation" ];
+         fhir:TestScript.metadata.capability.link [
+           fhir:value "http://hl7.org/implement/standards/FHIR-Develop/http.html#create";
+           fhir:index 0
+         ];
+         fhir:TestScript.metadata.capability.conformance [
+           fhir:link <http://hl7.org/fhir/Conformance/example>;
+           fhir:Reference.reference [ fhir:value "Conformance/example" ]
+         ]
+       ], [
+         fhir:index 1;
+         fhir:TestScript.metadata.capability.validated [ fhir:value "true"^^xsd:boolean ];
+         fhir:TestScript.metadata.capability.description [ fhir:value "Patient Read Operation" ];
+         fhir:TestScript.metadata.capability.link [
+           fhir:value "http://hl7.org/implement/standards/FHIR-Develop/http.html#read";
+           fhir:index 0
+         ];
+         fhir:TestScript.metadata.capability.conformance [
+           fhir:link <http://hl7.org/fhir/Conformance/example>;
+           fhir:Reference.reference [ fhir:value "Conformance/example" ]
+         ]
+       ]
+     ];
+     fhir:TestScript.test.action [
+       fhir:index 0;
+       fhir:TestScript.test.action.operation [
+         fhir:TestScript.setup.action.operation.type [
+           fhir:Coding.code [ fhir:value "create" ]
+         ];
+         fhir:TestScript.setup.action.operation.destination [ fhir:value "1"^^xsd:int ];
+         fhir:TestScript.setup.action.operation.sourceId [ fhir:value "R1" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:TestScript.test.action.assert [
+         fhir:TestScript.setup.action.assert.response [ fhir:value "okay" ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:TestScript.test.action.operation [
+         fhir:TestScript.setup.action.operation.type [
+           fhir:Coding.code [ fhir:value "read" ]
+         ];
+         fhir:TestScript.setup.action.operation.destination [ fhir:value "1"^^xsd:int ];
+         fhir:TestScript.setup.action.operation.responseId [ fhir:value "R2" ];
+         fhir:TestScript.setup.action.operation.targetId [ fhir:value "R1" ]
+       ]
+     ], [
+       fhir:index 3;
+       fhir:TestScript.test.action.assert [
+         fhir:TestScript.setup.action.assert.response [ fhir:value "okay" ]
+       ]
+     ], [
+       fhir:index 4;
+       fhir:TestScript.test.action.assert [
+         fhir:TestScript.setup.action.assert.headerField [ fhir:value "Last-Modified" ];
+         fhir:TestScript.setup.action.assert.operator [ fhir:value "notEmpty" ]
+       ]
+     ], [
+       fhir:index 5;
+       fhir:TestScript.test.action.assert [
+         fhir:TestScript.setup.action.assert.resource [ fhir:value "Patient" ]
+       ]
+     ], [
+       fhir:index 6;
+       fhir:TestScript.test.action.assert [
+         fhir:TestScript.setup.action.assert.minimumId [ fhir:value "F1" ]
+       ]
+     ], [
+       fhir:index 7;
+       fhir:TestScript.test.action.assert [
+         fhir:TestScript.setup.action.assert.minimumId [ fhir:value "R1" ]
+       ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:Element.id [ fhir:value "UPDATE01" ];
+     fhir:TestScript.test.name [ fhir:value "Update Patient" ];
+     fhir:TestScript.test.description [ fhir:value "Update the patient on server 0 with the one read from server 1." ];
+     fhir:TestScript.test.metadata [
+       fhir:TestScript.metadata.capability [
+         fhir:index 0;
+         fhir:TestScript.metadata.capability.validated [ fhir:value "true"^^xsd:boolean ];
+         fhir:TestScript.metadata.capability.description [ fhir:value "Patient Update Operation" ];
+         fhir:TestScript.metadata.capability.link [
+           fhir:value "http://hl7.org/implement/standards/FHIR-Develop/http.html#update";
+           fhir:index 0
+         ];
+         fhir:TestScript.metadata.capability.conformance [
+           fhir:link <http://hl7.org/fhir/Conformance/example>;
+           fhir:Reference.reference [ fhir:value "Conformance/example" ]
+         ]
+       ]
+     ];
+     fhir:TestScript.test.action [
+       fhir:index 0;
+       fhir:TestScript.test.action.operation [
+         fhir:TestScript.setup.action.operation.type [
+           fhir:Coding.code [ fhir:value "update" ]
+         ];
+         fhir:TestScript.setup.action.operation.destination [ fhir:value "0"^^xsd:int ];
+         fhir:TestScript.setup.action.operation.sourceId [ fhir:value "R2" ];
+         fhir:TestScript.setup.action.operation.targetId [ fhir:value "R1" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:TestScript.test.action.assert [
+         fhir:TestScript.setup.action.assert.response [ fhir:value "okay" ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:TestScript.test.action.operation [
+         fhir:TestScript.setup.action.operation.type [
+           fhir:Coding.code [ fhir:value "read" ]
+         ];
+         fhir:TestScript.setup.action.operation.destination [ fhir:value "0"^^xsd:int ];
+         fhir:TestScript.setup.action.operation.responseId [ fhir:value "R3" ];
+         fhir:TestScript.setup.action.operation.targetId [ fhir:value "R1" ]
+       ]
+     ], [
+       fhir:index 3;
+       fhir:TestScript.test.action.assert [
+         fhir:TestScript.setup.action.assert.response [ fhir:value "okay" ]
+       ]
+     ], [
+       fhir:index 4;
+       fhir:TestScript.test.action.assert [
+         fhir:TestScript.setup.action.assert.headerField [ fhir:value "Last-Modified" ];
+         fhir:TestScript.setup.action.assert.operator [ fhir:value "notEmpty" ]
+       ]
+     ], [
+       fhir:index 5;
+       fhir:TestScript.test.action.assert [
+         fhir:TestScript.setup.action.assert.resource [ fhir:value "Patient" ]
+       ]
+     ], [
+       fhir:index 6;
+       fhir:TestScript.test.action.assert [
+         fhir:TestScript.setup.action.assert.minimumId [ fhir:value "F1" ]
+       ]
+     ], [
+       fhir:index 7;
+       fhir:TestScript.test.action.assert [
+         fhir:TestScript.setup.action.assert.minimumId [ fhir:value "R1" ]
+       ]
+     ], [
+       fhir:index 8;
+       fhir:TestScript.test.action.assert [
+         fhir:TestScript.setup.action.assert.minimumId [ fhir:value "R2" ]
+       ]
+     ]
+  ];
+  fhir:TestScript.teardown [
+     fhir:TestScript.teardown.action [
+       fhir:index 0;
+       fhir:TestScript.teardown.action.operation [
+         fhir:TestScript.setup.action.operation.type [
+           fhir:Coding.code [ fhir:value "delete" ]
+         ];
+         fhir:TestScript.setup.action.operation.destination [ fhir:value "0"^^xsd:int ];
+         fhir:TestScript.setup.action.operation.targetId [ fhir:value "F1" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:TestScript.teardown.action.operation [
+         fhir:TestScript.setup.action.operation.type [
+           fhir:Coding.code [ fhir:value "delete" ]
+         ];
+         fhir:TestScript.setup.action.operation.destination [ fhir:value "1"^^xsd:int ];
+         fhir:TestScript.setup.action.operation.targetId [ fhir:value "F1" ]
+       ]
+     ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

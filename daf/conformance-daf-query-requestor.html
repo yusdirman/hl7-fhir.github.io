@@ -1,0 +1,898 @@
+﻿<!DOCTYPE HTML>
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Conformance-daf-query-requestor - FHIR v1.4.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="../fhir.css" rel="stylesheet"/>
+  <link rel="Prev" href="http://hl7.org/fhir/conformance-daf-query-requestor.html"/>
+
+  <!-- Bootstrap core CSS -->
+  <link href=".././dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href=".././assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href=".././assets/css/project.css" rel="stylesheet"/>
+  <link href=".././assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="../jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src=".././assets/js/html5shiv.js"></script>
+  <script src=".././assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href=".././assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href=".././assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href=".././assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href=".././assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href=".././assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment"><!-- segment-header -->	
+		<div class="container"><!-- container -->
+			<a id="logo" href="http://hl7.org/fhir" no-external="true"><img src=".././assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a id="hl7-logo" href="http://www.hl7.org" no-external="true">
+					<img src=".././assets/images/hl7-logo.png" width="42" height="50" alt="visit the hl7 website"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="./../assets/images/search.png"/></a></div> 
+		</div>
+		<div class="container"><!-- container -->
+	</div></div><!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment"><!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container"><!-- container -->
+ <!-- HEADER CONTENT -->
+ 	      		
+ 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="../index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../documentation.html">Documentation</a></li>
+              <li><a href="../implementation.html">Implementation</a></li>
+              <li><a href="../resourcelist.html">Resources</a></li>
+              <li><a href="../clinical.html">Clinical</a></li>
+              <li><a href="../administration.html">Administrative</a></li>
+              <li><a href="../infrastructure.html">Infrastructure</a></li>
+              <li><a href="../financial.html">Financial</a></li>
+
+						</ul>
+					</div><!-- /.nav-collapse -->
+				</div><!-- /.container -->
+			</nav><!-- /.navbar -->
+      		
+				
+<!-- /HEADER CONTENT -->				
+		</div><!-- /container -->
+	</div><!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment"><!-- segment-breadcrumb -->
+		<div class="container"><!-- container -->	
+			<ul class="breadcrumb">
+        <!-- conformance-daf-query-requestor / resource-instance:Conformance / Example -->
+        <li title="Data Access Framework"><a href="daf.html"><b>DAF</b></a></li>
+        <li><a href="registry.html"><b>Registry</b></a></li>
+        <li><b>DAF Requestor</b></li>
+
+			</ul>	
+		</div><!-- /container -->
+	</div><!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment"><!-- segment-content -->
+	<div class="container"><!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+<!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<h1>Conformance-daf-query-requestor</h1>
+
+<p>
+
+This is the narrative for the resource. See also the <a href="conformance-daf-query-requestor.xml.html">XML</a> or <a href="conformance-daf-query-requestor.json.html">JSON</a> format. This example conforms to the <a href="conformance.html">profile Conformance</a>.
+</p>
+
+<hr/>
+<div>
+      
+      <h2>DAF Requestor</h2>
+      
+      <p>(Requirements Definition)</p>
+      
+      <p>Published: 2015-04-02 (draft)</p>
+      
+      <p>Published by: 
+        <b>
+          
+          <a href="http://www.healthit.gov/">U.S. Office of the National Coordinator (ONC)</a>
+        
+        </b>
+      
+      </p>
+      
+      <p>This profile defines the expected capabilities of the 
+        <i>DAF Requestor</i> actor when conforming to the 
+        <a href="daf.html">DAF FHIR IG</a>.
+      </p>
+      
+      <h2>General</h2>
+      
+      <table>
+        
+        <tbody>
+          
+          <tr>
+            
+            <th>FHIR Version:</th>
+            
+            <td>1.4.0 (DSTU2)</td>
+          
+          </tr>
+          
+          <tr>
+            
+            <th>Supported formats:</th>
+            
+            <td>JSON or XML</td>
+          
+          </tr>
+        
+        </tbody>
+      
+      </table>
+      
+      <h2>REST  behavior</h2>
+	  
+      
+      <p>The DAF Requestor SHALL support accessing at least one FHIR resource using the appropriate DAF profile(s) for the resource being accessed.
+	  The DAF Requestor SHALL implement REST behavior according to the 
+        <a href="../http.html">FHIR</a> specification.
+	  The DAF Requestor SHALL support either json or xml resource formats for all DAF interactions.
+      </p>
+	  
+	  
+      <h3>RESTful Operations Summary</h3>
+      
+      <table class="grid">
+        
+        <thead>
+          
+          <tr>
+            
+            <th>Resource(Profile Name)</th>
+            
+            <th>
+              <a href="../type-restful-interaction.html">Search</a>
+            </th>
+            
+            <th>
+              <a href="../type-restful-interaction.html">Read</a>
+            </th>
+            
+            <th>
+              <a href="../type-restful-interaction.html">Read Version</a>
+            </th>
+            
+            <th>
+              <a href="../type-restful-interaction.html">Instance History</a>
+            </th>
+          
+          </tr>
+        
+        </thead>
+        
+        <tbody>
+          
+          <tr>
+            
+            <th>
+              <a href="patient-daf.html">DAFPatient</a>
+            </th>
+            
+            <td>
+              
+              <a href="#DAFPatientSearch" title="Allows discovery of DAFPatient resources based on different search criteria">SHOULD</a>
+            
+            </td>
+            
+            <td>
+              
+              <a href="#DAFPatientSearch" title="Allows retrieval of a specific DAFPatients by resource id">SHOULD</a>
+            
+            </td>
+            
+            <td>
+              
+              <a href="#DAFPatientSearch" title="Allows retrieval of a historical version of a DAFPatient">SHOULD</a>
+            
+            </td>
+            
+            <td>
+              
+              <a href="#DAFPatientSearch" title="Allows review of changes to DAFPatient over time">SHOULD</a>
+            
+            </td>
+          
+          </tr>
+		  
+          <tr>
+            
+            <th>
+              <a href="allergyintolerance-daf.html">DAFAllergyIntolerance</a>
+            </th>
+            
+            <td>
+              
+              <a href="#DAFAllergyIntoleranceSearch" title="Allows discovery of DAFAllergyIntolerance resources based on different search criteria">SHOULD</a>
+            
+            </td>
+            
+            <td>
+              
+              <a href="#DAFAllergyIntoleranceSearch" title="Allows retrieval of a specific DAFAllergyIntolerance by id">SHOULD</a>
+            
+            </td>
+            
+            <td>
+              
+              <a href="#DAFAllergyIntoleranceSearch" title="Allows retrieval of a historical version of a DAFAllergyIntolerance">SHOULD</a>
+            
+            </td>
+            
+            <td>
+              
+              <a href="#DAFAllergyIntoleranceSearch" title="Allows review of changes to DAFAllergyIntolerance over time">SHOULD</a>
+            
+            </td>
+          
+          </tr>
+		  
+          <tr>
+            
+            <th>
+              <a href="diagnosticorder-daf.html">DAFDiagnosticOrder</a>
+            </th>
+            
+            <td>
+              
+              <a href="#DAFDiagnosticOrderSearch" title="Allows discovery of DAFDiagnosticOrder resources based on different search criteria">SHOULD</a>
+            
+            </td>
+            
+            <td>
+              
+              <a href="#DAFDiagnosticOrderSearch" title="Allows retrieval of a specific DAFDiagnosticOrder by id">SHOULD</a>
+            
+            </td>
+            
+            <td>
+              
+              <a href="#DAFDiagnosticOrderSearch" title="Allows retrieval of a historical version of a DAFDiagnosticOrder">SHOULD</a>
+            
+            </td>
+            
+            <td>
+              
+              <a href="#DAFDiagnosticOrderSearch" title="Allows review of changes to DAFDiagnosticOrder over time">SHOULD</a>
+            
+            </td>
+          
+          </tr>
+		  
+          <tr>
+            
+            <th>
+              <a href="diagnosticreport-daf.html">DAFDiagnosticReport</a>
+            </th>
+            
+            <td>
+              
+              <a href="#DAFDiagnosticReportSearch" title="Allows discovery of DAFDiagnosticReport resources based on different search criteria">SHOULD</a>
+            
+            </td>
+            
+            <td>
+              
+              <a href="#DAFDiagnosticReportSearch" title="Allows retrieval of a specific DAFDiagnosticReport by id">SHOULD</a>
+            
+            </td>
+            
+            <td>
+              
+              <a href="#DAFDiagnosticReportSearch" title="Allows retrieval of a historical version of a DAFDiagnosticReport">SHOULD</a>
+            
+            </td>
+            
+            <td>
+              
+              <a href="#DAFDiagnosticReportSearch" title="Allows review of changes to DAFDiagnosticReport over time">SHOULD</a>
+            
+            </td>
+          
+          </tr>
+		  
+          <tr>
+            
+            <th>
+              <a href="encounter-daf.html">DAFEncounter</a>
+            </th>
+            
+            <td>
+              
+              <a href="#DAFEncounterSearch" title="Allows discovery of DAFEncounter resources based on different search criteria">SHOULD</a>
+            
+            </td>
+            
+            <td>
+              
+              <a href="#DAFEncounterSearch" title="Allows retrieval of a specific DAFEncounter by id">SHOULD</a>
+            
+            </td>
+            
+            <td>
+              
+              <a href="#DAFEncounterSearch" title="Allows retrieval of a historical version of a DAFEncounter">SHOULD</a>
+            
+            </td>
+            
+            <td>
+              
+              <a href="#DAFEncounterSearch" title="Allows review of changes to DAFEncounter over time">SHOULD</a>
+            
+            </td>
+          
+          </tr>
+		  
+          <tr>
+            
+            <th>
+              <a href="familymemberhistory-daf.html">DAFFamilyMemberHistory</a>
+            </th>
+            
+            <td>
+              
+              <a href="#DAFFamilyHistorySearch" title="Allows discovery of DAFFamilyHistory resources based on different search criteria">SHOULD</a>
+            
+            </td>
+            
+            <td>
+              
+              <a href="#DAFFamilyHistorySearch" title="Allows retrieval of a specific DAFFamilyHistory by id">SHOULD</a>
+            
+            </td>
+            
+            <td>
+              
+              <a href="#DAFFamilyHistorySearch" title="Allows retrieval of a historical version of a DAFFamilyHistory">SHOULD</a>
+            
+            </td>
+            
+            <td>
+              
+              <a href="#DAFFamilyHistorySearch" title="Allows review of changes to DAFFamilyHistory over time">SHOULD</a>
+            
+            </td>
+          
+          </tr>
+		  
+          <tr>
+            
+            <th>
+              <a href="immunization-daf.html">DAFImmunization</a>
+            </th>
+            
+            <td>
+              
+              <a href="#DAFImmunizationSearch" title="Allows discovery of DAFImmunization resources based on different search criteria">SHOULD</a>
+            
+            </td>
+            
+            <td>
+              
+              <a href="#DAFImmunizationSearch" title="Allows retrieval of a specific DAFImmunization by id">SHOULD</a>
+            
+            </td>
+            
+            <td>
+              
+              <a href="#DAFImmunizationSearch" title="Allows retrieval of a historical version of a DAFImmunization">SHOULD</a>
+            
+            </td>
+            
+            <td>
+              
+              <a href="#DAFImmunizationSearch" title="Allows review of changes to DAFImmunization over time">SHOULD</a>
+            
+            </td>
+          
+          </tr>
+		  
+          <tr>
+            
+            <th>
+              <a href="observation-daf-results.html">DAFResults</a>
+            </th>
+            
+            <td>
+              
+              <a href="#DAFResultsSearch" title="Allows discovery of DAFResults resources based on different search criteria">SHOULD</a>
+            
+            </td>
+            
+            <td>
+              
+              <a href="#DAFResultsSearch" title="Allows retrieval of a specific DAFResults by id">SHOULD</a>
+            
+            </td>
+            
+            <td>
+              
+              <a href="#DAFResultsSearch" title="Allows retrieval of a historical version of a DAFResults">SHOULD</a>
+            
+            </td>
+            
+            <td>
+              
+              <a href="#DAFResultsSearch" title="Allows review of changes to DAFResults over time">SHOULD</a>
+            
+            </td>
+          
+          </tr>
+		  
+          <tr>
+            
+            <th>
+              <a href="medication-daf.html">DAFMedication</a>
+            </th>
+            
+            <td>
+              
+              <a href="#DAFMedicationSearch" title="Allows discovery of DAFMedication resources based on different search criteria">SHOULD</a>
+            
+            </td>
+            
+            <td>
+              
+              <a href="#DAFMedicationSearch" title="Allows retrieval of a specific DAFMedication by id">SHOULD</a>
+            
+            </td>
+            
+            <td>
+              
+              <a href="#DAFMedicationSearch" title="Allows retrieval of a historical version of a DAFMedication">SHOULD</a>
+            
+            </td>
+            
+            <td>
+              
+              <a href="#DAFMedicationSearch" title="Allows review of changes to DAFMedication over time">SHOULD</a>
+            
+            </td>
+          
+          </tr>
+		  
+          <tr>
+            
+            <th>
+              <a href="medicationstatement-daf.html">DAFMedicationStatement</a>
+            </th>
+            
+            <td>
+              
+              <a href="#DAFMedicationStatementSearch" title="Allows discovery of DAFMedicationStatement resources based on different search criteria">SHOULD</a>
+            
+            </td>
+            
+            <td>
+              
+              <a href="#DAFMedicationStatementSearch" title="Allows retrieval of a specific DAFMedicationStatement by id">SHOULD</a>
+            
+            </td>
+            
+            <td>
+              
+              <a href="#DAFMedicationStatementSearch" title="Allows retrieval of a historical version of a DAFMedicationStatement">SHOULD</a>
+            
+            </td>
+            
+            <td>
+              
+              <a href="#DAFMedicationStatementSearch" title="Allows review of changes to DAFMedicationStatement over time">SHOULD</a>
+            
+            </td>
+          
+          </tr>
+		  
+          <tr>
+            
+            <th>
+              <a href="medicationadministration-daf.html">DAFMedicationAdministration</a>
+            </th>
+            
+            <td>
+              
+              <a href="#DAFMedicationAdministrationSearch" title="Allows discovery of DAFMedicationAdministration resources based on different search criteria">SHOULD</a>
+            
+            </td>
+            
+            <td>
+              
+              <a href="#DAFMedicationAdministrationSearch" title="Allows retrieval of a specific DAFMedicationAdministration by id">SHOULD</a>
+            
+            </td>
+            
+            <td>
+              
+              <a href="#DAFMedicationAdministrationSearch" title="Allows retrieval of a historical version of a DAFMedicationAdministration">SHOULD</a>
+            
+            </td>
+            
+            <td>
+              
+              <a href="#DAFMedicationAdministrationSearch" title="Allows review of changes to DAFMedicationAdministration over time">SHOULD</a>
+            
+            </td>
+          
+          </tr>
+		  
+          <tr>
+            
+            <th>
+              <a href="condition-daf.html">DAFCondition</a>
+            </th>
+            
+            <td>
+              
+              <a href="#DAFConditionSearch" title="Allows discovery of DAFCondition resources based on different search criteria">SHOULD</a>
+            
+            </td>
+            
+            <td>
+              
+              <a href="#DAFConditionSearch" title="Allows retrieval of a specific DAFCondition by id">SHOULD</a>
+            
+            </td>
+            
+            <td>
+              
+              <a href="#DAFConditionSearch" title="Allows retrieval of a historical version of a DAFCondition">SHOULD</a>
+            
+            </td>
+            
+            <td>
+              
+              <a href="#DAFConditionSearch" title="Allows review of changes to DAFCondition over time">SHOULD</a>
+            
+            </td>
+          
+          </tr>
+		  
+          <tr>
+            
+            <th>
+              <a href="procedure-daf.html">DAFProcedure</a>
+            </th>
+            
+            <td>
+              
+              <a href="#DAFProcedureSearch" title="Allows discovery of DAFProcedure resources based on different search criteria">SHOULD</a>
+            
+            </td>
+            
+            <td>
+              
+              <a href="#DAFProcedureSearch" title="Allows retrieval of a specific DAFProcedure by id">SHOULD</a>
+            
+            </td>
+            
+            <td>
+              
+              <a href="#DAFProcedureSearch" title="Allows retrieval of a historical version of a DAFProcedure">SHOULD</a>
+            
+            </td>
+            
+            <td>
+              
+              <a href="#DAFProcedureSearch" title="Allows review of changes to DAFProcedure over time">SHOULD</a>
+            
+            </td>
+          
+          </tr>
+		  
+          <tr>
+            
+            <th>
+              <a href="observation-daf-smokingstatus.html">DAFSmokingStatus</a>
+            </th>
+            
+            <td>
+              
+              <a href="#DAFSmokingStatusSearch" title="Allows discovery of DAFSmokingStatus resources based on different search criteria">SHOULD</a>
+            
+            </td>
+            
+            <td>
+              
+              <a href="#DAFSmokingStatusSearch" title="Allows retrieval of a specific DAFSmokingStatus by id">SHOULD</a>
+            
+            </td>
+            
+            <td>
+              
+              <a href="#DAFSmokingStatusSearch" title="Allows retrieval of a historical version of a DAFSmokingStatus">SHOULD</a>
+            
+            </td>
+            
+            <td>
+              
+              <a href="#DAFSmokingStatusSearch" title="Allows review of changes to DAFSmokingStatus over time">SHOULD</a>
+            
+            </td>
+          
+          </tr>
+		  
+          <tr>
+            
+            <th>
+              <a href="observation-daf-vitalsigns.html">DAFVitalSigns</a>
+            </th>
+            
+            <td>
+              
+              <a href="#DAFVitalSignsSearch" title="Allows discovery of DAFVitalSigns resources based on different search criteria">SHOULD</a>
+            
+            </td>
+            
+            <td>
+              
+              <a href="#DAFVitalSignsSearch" title="Allows retrieval of a specific DAFVitalSigns by id">SHOULD</a>
+            
+            </td>
+            
+            <td>
+              
+              <a href="#DAFVitalSignsSearch" title="Allows retrieval of a historical version of a DAFVitalSigns">SHOULD</a>
+            
+            </td>
+            
+            <td>
+              
+              <a href="#DAFVitalSignsSearch" title="Allows review of changes to DAFVitalSigns over time">SHOULD</a>
+            
+            </td>
+          
+          </tr>
+		  
+          <tr>
+            
+            <th>
+              <a href="list-daf.html">DAFList</a>
+            </th>
+            
+            <td>
+              
+              <a href="#DAFListSearch" title="Allows discovery of DAFList resources based on different search criteria">SHOULD</a>
+            
+            </td>
+			
+            <td>
+			  
+              <a href="#DAFListSearch" title="Allows retrieval of a specific DAFList by id">SHOULD</a>
+            
+            </td>
+            
+            <td>
+              
+              <a href="#DAFListSearch" title="Allows retrieval of a historical version of a DAFList">SHOULD</a>
+            
+            </td>
+            
+            <td>
+              
+              <a href="#DAFListSearch" title="Allows review of changes to DAFList over time">SHOULD</a>
+            
+            </td>
+          
+          </tr>
+        
+        </tbody>
+      
+      </table>
+      
+      <br/>
+      
+      <br/>
+  
+	  
+      <h3>Search Operations Summary</h3>
+	  
+      <p>DAF Requestors MAY use the following common parameters as part of queries related to DAF profiles:</p>
+	  
+      <ul>
+	     
+        <li>
+          <a href="../search.html#id">_id</a>
+        </li>
+		 
+        <li>
+          <a href="../search.html#lastUpdated">_lastUpdated</a>
+        </li>
+		 
+        <li>
+          <a href="../search.html#profile">_profile</a>
+        </li>
+		 
+        <li>
+          <a href="../search.html#security">_security</a>
+        </li>
+		 
+        <li>
+          <a href="../search.html#tag">_tag</a>
+        </li>
+		 
+        <li>
+          <a href="../search.html#text">_text</a>
+        </li>
+		 
+        <li>
+          <a href="../search.html#count">_count</a>
+        </li>
+		 
+        <li>
+          <a href="../search.html#summary">_summary</a>
+        </li>
+		 
+        <li>
+          <a href="../search.html#contained">_contained</a>
+        </li>
+		 
+        <li>
+          <a href="../search.html#containedType">_containedType</a>
+        </li>
+	  
+      </ul>
+	  
+	  <p>DAF Requestors SHOULD use the following common parameters as part of queries related to DAF profiles to avoid repeated queries.</p>
+	  <ul>
+		<li>
+          <a href="../search.html#include">_include</a>
+        </li>
+	  </ul>
+	
+      <p>DAF Requestors MAY use the following search contexts defined within the 
+        <a href="../search.html#Introduction">FHIR</a> specification.
+      </p> 
+	
+      <ul>
+		
+        <li>Search context by specifying a particular resource type</li>
+		
+        <li>Search context which specifies a compartment</li>
+	
+      </ul>
+	
+      <p>DAF Requestors MAY use 
+        <a href="../search.html#Modifiers">Modifiers</a> as applicable to the data types of the search parameters to access data.
+		DAF Requestors MAY use any search parameters that are appropriate for querying a particular FHIR resource, however they can only count on the search parameters that are identified as SHALL within the <a href="conformance-daf-query-responder.html">DAF Responder's conformance statement</a> to be used in the execution of the search. For a complete list of search parameters that are available, please refer to <a href="conformance-daf-query-responder.html">DAF Responder's conformance statement</a> and the search parameters supported by the base FHIR resources profiled by DAF.
+      </p>
+	  
+	  
+      <br/>
+      
+      <br/>
+      
+      <p>
+        
+        <b>Security:</b>
+      
+      </p>
+      
+      <p>Implementations must meet the security requirements documented in the 
+        <a href="daf-security.html">DAF implementation guide</a>.
+      </p>
+	  
+    
+    </div>
+<hr/>
+
+<p>
+<!-- spacer -->
+&nbsp;
+</p>
+
+
+
+<p>
+<!-- spacer -->
+&nbsp;
+</p>
+
+
+<p>
+Usage note: every effort has been made to ensure that the 
+examples are correct and useful, but they are not a normative part 
+of the specification. 
+</p>
+
+
+</div>
+
+
+				</div><!-- /inner-wrapper -->
+            </div><!-- /row -->
+        </div><!-- /container -->
+        
+    </div><!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment"><!-- segment-footer -->
+		<div class="container"><!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        © HL7.org 2011+. FHIR STU3 Candidate (v1.4.0-8453) generated on Mon, Jun 6, 2016 20:20+0000. <a href="../qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search</a> | 
+               <a style="color: #81BEF7" href="../history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="../toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fconformance-daf-query-requestor.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fconformance-daf-query-requestor.html">Compare to DSTU2</a> |                
+               <a style="color: #81BEF7" rel="license" href="../license.html"><img src="../cc0.png" style="border-style: none;" alt="CC0"/></a> | 
+               <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>   
+        </span>
+        </p>
+			</div><!-- /inner-wrapper -->
+		</div><!-- /container -->
+	</div><!-- /segment-footer -->
+<!-- disqus thread -->
+<!--disqus-->
+<!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden"><!-- segment-post-footer -->
+		<div class="container"><!-- container -->
+		</div><!-- /container -->
+	</div><!-- /segment-post-footer -->
+    
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src=".././assets/js/jquery.js"> </script>   <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src=".././dist/js/bootstrap.min.js"> </script>
+<script src=".././assets/js/respond.min.js"> </script>
+
+<script src=".././assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

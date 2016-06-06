@@ -1,0 +1,51 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Medication",
+  "resourceType": "Medication",
+  "Resource.id": {
+    "value": "med0315"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: med0315</p><p><b>code</b>: Mometasone Furoate 0.05mg/Actuat <span>(Details : {RxNorm code '358793' = '??', given as 'Mometasone Furoate 0.05mg/Actuat'})</span></p><p><b>isBrand</b>: false</p><h3>Products</h3><table><tr><td>-</td><td><b>Form</b></td></tr><tr><td>*</td><td>Nasal Spray <span>(Details : {SNOMED CT code '385157007' = 'Nasal spray', given as 'Nasal Spray'})</span></td></tr></table></div>"
+    }
+  },
+  "Medication.code": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://www.nlm.nih.gov/research/umls/rxnorm"
+        },
+        "Coding.code": {
+          "value": "358793"
+        },
+        "Coding.display": {
+          "value": "Mometasone Furoate 0.05mg/Actuat"
+        }
+      }
+    ]
+  },
+  "Medication.isBrand": {
+    "value": false
+  },
+  "Medication.product": {
+    "Medication.product.form": {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "value": "http://snomed.info/sct"
+          },
+          "Coding.code": {
+            "value": "385157007"
+          },
+          "Coding.display": {
+            "value": "Nasal Spray"
+          }
+        }
+      ],
+      "concept": "http://snomed.info/sct#385157007"
+    }
+  }
+}

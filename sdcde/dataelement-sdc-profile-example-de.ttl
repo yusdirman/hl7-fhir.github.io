@@ -1,0 +1,314 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/DataElementdataelement-sdc-profile-example-de> a fhir:DataElement;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "dataelement-sdc-profile-example-de"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">TODO</div>"
+  ];
+  fhir:DomainResource.contained [
+     a fhir:ValueSet;
+     fhir:index 0;
+     fhir:Resource.id [ fhir:value "vm-valueset" ];
+     fhir:ValueSet.identifier [
+       fhir:Identifier.system [ fhir:value "http://r.details.loinc.org/AnswerList" ];
+       fhir:Identifier.value [ fhir:value "LL2827-5" ]
+     ];
+     fhir:ValueSet.name [ fhir:value "AHRQ_M/F/UNK" ];
+     fhir:ValueSet.status [ fhir:value "active" ];
+     fhir:ValueSet.description [ fhir:value "AHRQ Common Formats answer list for Patient and Neonate Gender" ];
+     fhir:ValueSet.compose [
+       fhir:ValueSet.compose.include [
+         fhir:index 0;
+         fhir:ValueSet.compose.include.system [ fhir:value "http://loinc.org" ];
+         fhir:ValueSet.compose.include.concept [
+           fhir:index 0;
+           fhir:Element.extension [
+             fhir:index 0;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder" ];
+             fhir:Extension.valueInteger [ fhir:value "1"^^xsd:int ]
+           ];
+           fhir:ValueSet.compose.include.concept.code [ fhir:value "a" ];
+           fhir:ValueSet.compose.include.concept.display [ fhir:value "Male" ];
+           fhir:ValueSet.compose.include.concept.designation [
+             fhir:index 0;
+             fhir:ValueSet.compose.include.concept.designation.use [
+               fhir:Coding.display [ fhir:value "Answer ID" ]
+             ];
+             fhir:ValueSet.compose.include.concept.designation.value [ fhir:value "LA2-8" ]
+           ]
+         ], [
+           fhir:index 1;
+           fhir:Element.extension [
+             fhir:index 0;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder" ];
+             fhir:Extension.valueInteger [ fhir:value "2"^^xsd:int ]
+           ];
+           fhir:ValueSet.compose.include.concept.code [ fhir:value "b" ];
+           fhir:ValueSet.compose.include.concept.display [ fhir:value "Female" ];
+           fhir:ValueSet.compose.include.concept.designation [
+             fhir:index 0;
+             fhir:ValueSet.compose.include.concept.designation.use [
+               fhir:Coding.display [ fhir:value "Answer ID" ]
+             ];
+             fhir:ValueSet.compose.include.concept.designation.value [ fhir:value "LA3-6" ]
+           ]
+         ], [
+           fhir:index 2;
+           fhir:Element.extension [
+             fhir:index 0;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder" ];
+             fhir:Extension.valueInteger [ fhir:value "3"^^xsd:int ]
+           ];
+           fhir:ValueSet.compose.include.concept.code [ fhir:value "c" ];
+           fhir:ValueSet.compose.include.concept.display [ fhir:value "Unknown" ];
+           fhir:ValueSet.compose.include.concept.designation [
+             fhir:index 0;
+             fhir:ValueSet.compose.include.concept.designation.use [
+               fhir:Coding.display [ fhir:value "Answer ID" ]
+             ];
+             fhir:ValueSet.compose.include.concept.designation.value [ fhir:value "LA4489-6" ]
+           ]
+         ]
+       ]
+     ]
+  ], [
+     a fhir:ValueSet;
+     fhir:index 1;
+     fhir:Resource.id [ fhir:value "pv-valueset" ];
+     fhir:ValueSet.status [ fhir:value "draft" ];
+     fhir:ValueSet.compose [
+       fhir:ValueSet.compose.include [
+         fhir:index 0;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-systemName" ];
+           fhir:Extension.valueString [ fhir:value "HL7 AdministrativeGender" ]
+         ];
+         fhir:ValueSet.compose.include.system [ fhir:value "http://hl7.org/fhir/v3/AdministrativeGender" ];
+         fhir:ValueSet.compose.include.version [ fhir:value "1" ];
+         fhir:ValueSet.compose.include.concept [
+           fhir:index 0;
+           fhir:ValueSet.compose.include.concept.code [ fhir:value "M" ];
+           fhir:ValueSet.compose.include.concept.display [ fhir:value "Male" ]
+         ], [
+           fhir:index 1;
+           fhir:ValueSet.compose.include.concept.code [ fhir:value "F" ];
+           fhir:ValueSet.compose.include.concept.display [ fhir:value "Female" ]
+         ]
+       ], [
+         fhir:index 1;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-systemName" ];
+           fhir:Extension.valueString [ fhir:value "HL7 NullFlavor" ]
+         ];
+         fhir:ValueSet.compose.include.system [ fhir:value "http://hl7.org/fhir/v3/NullFlavor" ];
+         fhir:ValueSet.compose.include.concept [
+           fhir:index 0;
+           fhir:ValueSet.compose.include.concept.code [ fhir:value "UNK" ];
+           fhir:ValueSet.compose.include.concept.display [ fhir:value "Unknown" ]
+         ]
+       ]
+     ]
+  ], [
+     a fhir:ConceptMap;
+     fhir:index 2;
+     fhir:Resource.id [ fhir:value "pv-conceptmap" ];
+     fhir:ConceptMap.status [ fhir:value "draft" ];
+     fhir:ConceptMap.sourceUri [ fhir:value "#vm-valueset" ];
+     fhir:ConceptMap.targetUri [ fhir:value "#pv-valueset" ];
+     fhir:ConceptMap.element [
+       fhir:index 0;
+       fhir:ConceptMap.element.system [ fhir:value "http://loinc.org" ];
+       fhir:ConceptMap.element.code [ fhir:value "a" ];
+       fhir:ConceptMap.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.element.target.system [ fhir:value "http://hl7.org/fhir/v3/AdministrativeGender" ];
+         fhir:ConceptMap.element.target.code [ fhir:value "M" ];
+         fhir:ConceptMap.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:ConceptMap.element.system [ fhir:value "http://loinc.org" ];
+       fhir:ConceptMap.element.code [ fhir:value "b" ];
+       fhir:ConceptMap.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.element.target.system [ fhir:value "http://hl7.org/fhir/v3/AdministrativeGender" ];
+         fhir:ConceptMap.element.target.code [ fhir:value "F" ];
+         fhir:ConceptMap.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:ConceptMap.element.system [ fhir:value "http://loinc.org" ];
+       fhir:ConceptMap.element.code [ fhir:value "c" ];
+       fhir:ConceptMap.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.element.target.system [ fhir:value "http://hl7.org/fhir/v3/Unknown" ];
+         fhir:ConceptMap.element.target.code [ fhir:value "UNK" ];
+         fhir:ConceptMap.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ]
+  ], [
+     a fhir:Organization;
+     fhir:index 3;
+     fhir:Resource.id [ fhir:value "sub-org" ];
+     fhir:Organization.name [ fhir:value "Agency for Healthcare Research and Quality (AHRQ) Center for Patient Safety and Quality" ];
+     fhir:Organization.address [
+       fhir:index 0;
+       fhir:Address.text [ fhir:value "540 Gaither Rd Rockvill MD 20850" ]
+     ];
+     fhir:Organization.contact [
+       fhir:index 0;
+       fhir:Organization.contact.name [
+         fhir:HumanName.text [ fhir:value "Bill Munier" ]
+       ];
+       fhir:Organization.contact.telecom [
+         fhir:index 0;
+         fhir:ContactPoint.system [ fhir:value "email" ];
+         fhir:ContactPoint.value [ fhir:value "william.munier@ahrq.hhs.gov" ]
+       ]
+     ]
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/11179-de-document-reference" ];
+     fhir:Extension.valueReference [
+       fhir:Reference.reference [ fhir:value "#doc" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/11179-de-effective-period" ];
+     fhir:Extension.valuePeriod [
+       fhir:Period.start [ fhir:value "2010-03-31"^^xsd:date ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/11179-de-submitter-org" ];
+     fhir:Extension.valueReference [
+       fhir:Reference.reference [ fhir:value "#sub-org" ]
+     ]
+  ];
+  fhir:DataElement.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "http://nlm.nih.gov/some_other_text/data_element_identifier" ];
+     fhir:Identifier.value [ fhir:value "DE42AHRQ" ]
+  ];
+  fhir:DataElement.version [ fhir:value "1.2"];
+  fhir:DataElement.status [ fhir:value "draft"];
+  fhir:DataElement.publisher [ fhir:value "Agency for Healthcare Research and Quality (AHRQ) Center for Patient Safety and Quality"];
+  fhir:DataElement.date [ fhir:value "2010-03-31"^^xsd:date];
+  fhir:DataElement.name [ fhir:value "Patient Gender"];
+  fhir:DataElement.contact [
+     fhir:index 0;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/11179-de-contact-address" ];
+       fhir:Extension.valueAddress [
+         fhir:Address.text [ fhir:value "540 Gaither Rd Rockville MD 20850" ]
+       ]
+     ];
+     fhir:DataElement.contact.name [ fhir:value "Bill Munier" ];
+     fhir:DataElement.contact.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "william.munier@ahrq.hhs.gov" ]
+     ]
+  ];
+  fhir:DataElement.useContext [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.code [ fhir:value "Healthcare Event Reporting Form" ];
+       fhir:Coding.display [ fhir:value "Patient safety event report - hospital: healthcare event reporting form" ]
+     ]
+  ];
+  fhir:DataElement.mapping [
+     fhir:index 0;
+     fhir:DataElement.mapping.identity [ fhir:value "objclass" ];
+     fhir:DataElement.mapping.uri [ fhir:value "http://healthit.gov/sdc/objectclassproperty" ];
+     fhir:DataElement.mapping.name [ fhir:value "Structured Data Capture ObjectClass/Property" ]
+  ];
+  fhir:DataElement.element [
+     fhir:index 0;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-question" ];
+       fhir:Extension.valueString [ fhir:value "Patient's Gender" ]
+     ], [
+       fhir:index 1;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-question" ];
+       fhir:Extension.valueString [ fhir:value "Patient-Gender,CD" ]
+     ];
+     fhir:ElementDefinition.path [ fhir:value "gender" ];
+     fhir:ElementDefinition.code [
+       fhir:index 0;
+       fhir:concept loinc:74698-2;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/11179-de-is-data-element-concept" ];
+         fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]
+       ];
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "74698-2" ]
+     ];
+     fhir:ElementDefinition.definition [ fhir:value "The patient's documented gender on arrival at the hospital." ];
+     fhir:ElementDefinition.type [
+       fhir:index 0;
+       fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
+     ];
+     fhir:ElementDefinition.binding [
+       fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
+       fhir:ElementDefinition.binding.valueSetReference [
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/11179-permitted-value-valueset" ];
+           fhir:Extension.valueReference [
+             fhir:Reference.reference [ fhir:value "#pv-valueset" ]
+           ]
+         ], [
+           fhir:index 1;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/11179-permitted-value-valueset" ];
+           fhir:Extension.valueReference [
+             fhir:Reference.reference [ fhir:value "#pv-conceptmap" ]
+           ]
+         ];
+         fhir:Reference.reference [ fhir:value "#vm-valueset" ]
+       ]
+     ];
+     fhir:ElementDefinition.mapping [
+       fhir:index 0;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/11179-objectClass" ];
+         fhir:Extension.valueCoding [
+           fhir:concept sct:116154003;
+           fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+           fhir:Coding.code [ fhir:value "116154003" ];
+           fhir:Coding.display [ fhir:value "Patient" ]
+         ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/11179-objectClassProperty" ];
+         fhir:Extension.valueCoding [
+           fhir:concept sct:263495000;
+           fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+           fhir:Coding.code [ fhir:value "263495000" ];
+           fhir:Coding.display [ fhir:value "Gender" ]
+         ]
+       ];
+       fhir:ElementDefinition.mapping.identity [ fhir:value "objclass" ];
+       fhir:ElementDefinition.mapping.map [ fhir:value "http://snomed.info/sct#116154003 | http://snomed.info/sct | 263495000" ]
+     ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

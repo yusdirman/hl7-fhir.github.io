@@ -1,0 +1,104 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/MedicationOrder",
+  "resourceType": "MedicationOrder",
+  "Resource.id": {
+    "value": "medrx008"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>Name: Gentamicin 80mg/100ml IV</p>\n      <p><b>80mg IV over one hour</b></p>\n    </div>"
+    }
+  },
+  "MedicationOrder.status": {
+    "value": "active"
+  },
+  "MedicationOrder.medicationReference": {
+    "Reference.reference": {
+      "value": "Medication/medicationexample17"
+    },
+    "reference": "http://hl7.org/fhir//Medication/medicationexample17"
+  },
+  "MedicationOrder.dosageInstruction": [
+    {
+      "MedicationOrder.dosageInstruction.text": {
+        "value": "Gentamicin 80mg IV over one hour"
+      },
+      "MedicationOrder.dosageInstruction.timing": {
+        "Timing.repeat": {
+          "Timing.repeat.frequency": {
+            "value": 3
+          },
+          "Timing.repeat.period": {
+            "value": 1
+          },
+          "Timing.repeat.periodUnit": {
+            "value": "d"
+          }
+        }
+      },
+      "MedicationOrder.dosageInstruction.route": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "value": "47625008"
+            },
+            "Coding.display": {
+              "value": "Intravenous route"
+            }
+          }
+        ],
+        "concept": "http://snomed.info/sct#47625008"
+      },
+      "MedicationOrder.dosageInstruction.doseQuantity": {
+        "Quantity.value": {
+          "value": 80
+        },
+        "Quantity.unit": {
+          "value": "mg"
+        },
+        "Quantity.system": {
+          "value": "http://unitsofmeasure.org"
+        },
+        "Quantity.code": {
+          "value": "mg"
+        }
+      },
+      "MedicationOrder.dosageInstruction.rateRatio": {
+        "Ratio.numerator": {
+          "Quantity.value": {
+            "value": 80
+          },
+          "Quantity.unit": {
+            "value": "mg"
+          },
+          "Quantity.system": {
+            "value": "http://unitsofmeasure.org"
+          },
+          "Quantity.code": {
+            "value": "mg"
+          }
+        },
+        "Ratio.denominator": {
+          "Quantity.value": {
+            "value": 60
+          },
+          "Quantity.unit": {
+            "value": "minutes"
+          },
+          "Quantity.system": {
+            "value": "http://snomed.info/sct"
+          },
+          "Quantity.code": {
+            "value": "258702006"
+          }
+        }
+      }
+    }
+  ]
+}

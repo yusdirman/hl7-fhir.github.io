@@ -1,0 +1,283 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Claim",
+  "resourceType": "Claim",
+  "Resource.id": {
+    "value": "660151"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">A human-readable rendering of the Vision Claim for Glasses</div>"
+    }
+  },
+  "Claim.type": {
+    "value": "vision"
+  },
+  "Claim.identifier": [
+    {
+      "Identifier.system": {
+        "value": "http://happysight.com/claim"
+      },
+      "Identifier.value": {
+        "value": "6612346"
+      }
+    }
+  ],
+  "Claim.created": {
+    "value": "2014-08-16"
+  },
+  "Claim.targetReference": {
+    "Reference.reference": {
+      "value": "Organization/2"
+    },
+    "reference": "http://hl7.org/fhir//Organization/2"
+  },
+  "Claim.organizationReference": {
+    "Reference.reference": {
+      "value": "Organization/1"
+    },
+    "reference": "http://hl7.org/fhir//Organization/1"
+  },
+  "Claim.use": {
+    "value": "complete"
+  },
+  "Claim.priority": {
+    "Coding.code": {
+      "value": "normal"
+    }
+  },
+  "Claim.prescriptionReference": {
+    "Reference.reference": {
+      "value": "http://www.optdocs.com/prescription/12345"
+    },
+    "reference": "http://www.optdocs.com/prescription/12345"
+  },
+  "Claim.payee": {
+    "Claim.payee.type": {
+      "Coding.code": {
+        "value": "provider"
+      }
+    }
+  },
+  "Claim.diagnosis": [
+    {
+      "Claim.diagnosis.sequence": {
+        "value": 1
+      },
+      "Claim.diagnosis.diagnosis": {
+        "Coding.code": {
+          "value": "654321"
+        }
+      }
+    }
+  ],
+  "Claim.patientReference": {
+    "Reference.reference": {
+      "value": "Patient/1"
+    },
+    "reference": "http://hl7.org/fhir//Patient/1"
+  },
+  "Claim.coverage": [
+    {
+      "Claim.coverage.sequence": {
+        "value": 1
+      },
+      "Claim.coverage.focal": {
+        "value": true
+      },
+      "Claim.coverage.coverageReference": {
+        "Reference.reference": {
+          "value": "Coverage/9876B1"
+        },
+        "reference": "http://hl7.org/fhir//Coverage/9876B1"
+      }
+    }
+  ],
+  "Claim.item": [
+    {
+      "Claim.item.sequence": {
+        "value": 1
+      },
+      "Claim.item.type": {
+        "Coding.code": {
+          "value": "group"
+        }
+      },
+      "Claim.item.careTeam": [
+        {
+          "Claim.item.careTeam.providerReference": {
+            "Reference.reference": {
+              "value": "Practitioner/example"
+            },
+            "reference": "http://hl7.org/fhir//Practitioner/example"
+          }
+        }
+      ],
+      "Claim.item.service": {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/ex-visionservice"
+        },
+        "Coding.code": {
+          "value": "glasses"
+        }
+      },
+      "Claim.item.servicedDate": {
+        "value": "2014-08-16"
+      },
+      "Claim.item.unitPrice": {
+        "Quantity.value": {
+          "value": 214.00
+        },
+        "Quantity.system": {
+          "value": "urn:iso:std:iso:4217"
+        },
+        "Quantity.code": {
+          "value": "USD"
+        }
+      },
+      "Claim.item.net": {
+        "Quantity.value": {
+          "value": 214.00
+        },
+        "Quantity.system": {
+          "value": "urn:iso:std:iso:4217"
+        },
+        "Quantity.code": {
+          "value": "USD"
+        }
+      },
+      "Claim.item.detail": [
+        {
+          "Claim.item.detail.sequence": {
+            "value": 1
+          },
+          "Claim.item.detail.type": {
+            "Coding.code": {
+              "value": "product"
+            }
+          },
+          "Claim.item.detail.service": {
+            "Coding.system": {
+              "value": "http://hl7.org/fhir/ex-visionservice"
+            },
+            "Coding.code": {
+              "value": "frame"
+            }
+          },
+          "Claim.item.detail.unitPrice": {
+            "Quantity.value": {
+              "value": 100.00
+            },
+            "Quantity.system": {
+              "value": "urn:iso:std:iso:4217"
+            },
+            "Quantity.code": {
+              "value": "USD"
+            }
+          },
+          "Claim.item.detail.net": {
+            "Quantity.value": {
+              "value": 100.00
+            },
+            "Quantity.system": {
+              "value": "urn:iso:std:iso:4217"
+            },
+            "Quantity.code": {
+              "value": "USD"
+            }
+          }
+        },
+        {
+          "Claim.item.detail.sequence": {
+            "value": 2
+          },
+          "Claim.item.detail.type": {
+            "Coding.code": {
+              "value": "product"
+            }
+          },
+          "Claim.item.detail.service": {
+            "Coding.system": {
+              "value": "http://hl7.org/fhir/ex-visionservice"
+            },
+            "Coding.code": {
+              "value": "lens"
+            }
+          },
+          "Claim.item.detail.quantity": {
+            "Quantity.value": {
+              "value": 2
+            }
+          },
+          "Claim.item.detail.unitPrice": {
+            "Quantity.value": {
+              "value": 50.00
+            },
+            "Quantity.system": {
+              "value": "urn:iso:std:iso:4217"
+            },
+            "Quantity.code": {
+              "value": "USD"
+            }
+          },
+          "Claim.item.detail.net": {
+            "Quantity.value": {
+              "value": 100.00
+            },
+            "Quantity.system": {
+              "value": "urn:iso:std:iso:4217"
+            },
+            "Quantity.code": {
+              "value": "USD"
+            }
+          }
+        },
+        {
+          "Claim.item.detail.sequence": {
+            "value": 3
+          },
+          "Claim.item.detail.type": {
+            "Coding.code": {
+              "value": "tax"
+            }
+          },
+          "Claim.item.detail.service": {
+            "Coding.system": {
+              "value": "http://hl7.org/fhir/ex-visionservice"
+            },
+            "Coding.code": {
+              "value": "fst"
+            }
+          },
+          "Claim.item.detail.unitPrice": {
+            "Quantity.value": {
+              "value": 200.00
+            },
+            "Quantity.system": {
+              "value": "urn:iso:std:iso:4217"
+            },
+            "Quantity.code": {
+              "value": "USD"
+            }
+          },
+          "Claim.item.detail.factor": {
+            "value": 0.07
+          },
+          "Claim.item.detail.net": {
+            "Quantity.value": {
+              "value": 14.00
+            },
+            "Quantity.system": {
+              "value": "urn:iso:std:iso:4217"
+            },
+            "Quantity.code": {
+              "value": "USD"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

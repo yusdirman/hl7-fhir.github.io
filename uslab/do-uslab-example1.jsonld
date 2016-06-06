@@ -1,0 +1,153 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/DiagnosticOrder",
+  "resourceType": "DiagnosticOrder",
+  "Resource.id": {
+    "value": "do-uslab-example1"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: do-uslab-example1</p><p><b>identifier</b>: ORD000123A (OFFICIAL)</p><p><b>status</b>: requested</p><p><b>priority</b>: routine</p><p><b>subject</b>: <a>Todd Lerr</a></p><p><b>orderer</b>: <a>Dr Leonard T Bloodraw Jr</a></p><p><b>reason</b>: Abnormal lead level in blood <span>(Details : {http://www.icd10data.com/icd10pcs code 'R78.71' = '??', given as 'Abnormal lead level in blood'})</span></p><p><b>supportingInformation</b>: <a>Prior Results Observation</a>, <a>Lead Exposure</a></p><h3>Events</h3><table><tr><td>-</td><td><b>Status</b></td><td><b>Description</b></td><td><b>DateTime</b></td></tr><tr><td>*</td><td>requested</td><td>new-request <span>(Details : {[not stated] code 'new-request' = '??)</span></td><td>Dec 4, 2014 3:42:15 PM</td></tr></table><h3>Items</h3><table><tr><td>-</td><td><b>Code</b></td><td><b>Status</b></td></tr><tr><td>*</td><td>Blood Lead <span>(Details : {LOINC code '5671-3' = 'Lead [Mass/volume] in Blood', given as 'Lead [Mass/volume] in Blood'}; {urn:oid:2.16.840.1.113883.3.72.5.24 code 'BLDLD' = '??', given as 'Blood Lead'})</span></td><td>requested</td></tr></table><p><b>note</b>: patient is afraid of needles</p></div>"
+    }
+  },
+  "DiagnosticOrder.identifier": [
+    {
+      "Identifier.use": {
+        "value": "official"
+      },
+      "Identifier.system": {
+        "value": "urn:oid:2.16.840.1.113883.3.72.5.24"
+      },
+      "Identifier.value": {
+        "value": "ORD000123A"
+      }
+    }
+  ],
+  "DiagnosticOrder.status": {
+    "value": "requested"
+  },
+  "DiagnosticOrder.priority": {
+    "value": "routine"
+  },
+  "DiagnosticOrder.subject": {
+    "Reference.reference": {
+      "value": "Patient/patient-uslab-example1"
+    },
+    "Reference.display": {
+      "value": "Todd Lerr"
+    },
+    "reference": "http://hl7.org/fhir//Patient/patient-uslab-example1"
+  },
+  "DiagnosticOrder.orderer": {
+    "Reference.reference": {
+      "value": "Practitioner/pract-uslab-example1"
+    },
+    "Reference.display": {
+      "value": "Dr Leonard T Bloodraw Jr"
+    },
+    "reference": "http://hl7.org/fhir//Practitioner/pract-uslab-example1"
+  },
+  "DiagnosticOrder.reason": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "value": "http://www.icd10data.com/icd10pcs"
+          },
+          "Coding.code": {
+            "value": "R78.71"
+          },
+          "Coding.display": {
+            "value": "Abnormal lead level in blood"
+          }
+        }
+      ],
+      "CodeableConcept.text": {
+        "value": "Abnormal lead level in blood"
+      }
+    }
+  ],
+  "DiagnosticOrder.supportingInformation": [
+    {
+      "Reference.reference": {
+        "value": "Observation/obs-uslab-example1"
+      },
+      "Reference.display": {
+        "value": "Prior Results Observation"
+      }
+    },
+    {
+      "Reference.reference": {
+        "value": "Condition/cond-uslab-example1"
+      },
+      "Reference.display": {
+        "value": "Lead Exposure"
+      }
+    }
+  ],
+  "DiagnosticOrder.event": [
+    {
+      "DiagnosticOrder.event.status": {
+        "value": "requested"
+      },
+      "DiagnosticOrder.event.description": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.code": {
+              "value": "new-request"
+            }
+          }
+        ]
+      },
+      "DiagnosticOrder.event.dateTime": {
+        "value": "2014-12-04T15:42:15-08:00"
+      }
+    }
+  ],
+  "DiagnosticOrder.item": [
+    {
+      "DiagnosticOrder.item.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://loinc.org"
+            },
+            "Coding.code": {
+              "value": "5671-3"
+            },
+            "Coding.display": {
+              "value": "Lead [Mass/volume] in Blood"
+            }
+          },
+          {
+            "Coding.system": {
+              "value": "urn:oid:2.16.840.1.113883.3.72.5.24"
+            },
+            "Coding.code": {
+              "value": "BLDLD"
+            },
+            "Coding.display": {
+              "value": "Blood Lead"
+            }
+          }
+        ],
+        "CodeableConcept.text": {
+          "value": "Blood Lead"
+        },
+        "concept": "http://loinc.org/owl#5671-3"
+      },
+      "DiagnosticOrder.item.status": {
+        "value": "requested"
+      }
+    }
+  ],
+  "DiagnosticOrder.note": [
+    {
+      "Annotation.text": {
+        "value": "patient is afraid of needles"
+      }
+    }
+  ]
+}

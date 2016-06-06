@@ -1,0 +1,54 @@
+{
+  "resourceType": "Library",
+  "id": "library-abacavir-hypersensitivity-cds-logic",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Abacavir Hypersensitivity CDS Logic</div>"
+  },
+  "moduleMetadata": {
+    "identifier": [
+      {
+        "use": "official",
+        "value": "Abacavir_Hypersensitivity_CDS_Logic"
+      }
+    ],
+    "version": "1.0.0",
+    "title": "Abacavir Hypersensitivity CDS Logic",
+    "type": "library",
+    "status": "active",
+    "experimental": true,
+    "description": "Decision support logic for improving detection of hypersensitivity to Abacavir caused by the HLA-B*57:01 allele",
+    "publicationDate": "2016-03-14",
+    "topic": [
+      {
+        "text": "Abacavir Hypersensitivity"
+      }
+    ]
+  },
+  "model": [
+    {
+      "identifier": "QUICK"
+    }
+  ],
+  "valueSet": [
+    {
+      "name": "snomed-CT",
+      "identifier": "2.16.840.1.113883.6.96"
+    }
+  ],
+  "dataRequirement": [
+    {
+      "type": "Observation",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSetString": "Observed HLA-B*57:01 Allele"
+        }
+      ]
+    }
+  ],
+  "document": {
+    "contentType": "application/cql+text",
+    "url": "http://cqlrepository.org/"
+  }
+}

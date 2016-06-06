@@ -1,0 +1,173 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/CarePlan",
+  "resourceType": "CarePlan",
+  "Resource.id": {
+    "value": "f001"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f001</p><p><b>contained</b>: , </p><p><b>identifier</b>: CP2903 (OFFICIAL)</p><p><b>subject</b>: <a>P. van de Heuvel</a></p><p><b>status</b>: completed</p><p><b>period</b>: Jun 26, 2011 --&gt; Jun 27, 2011</p><p><b>modified</b>: Jun 27, 2011 9:30:10 AM</p><p><b>addresses</b>: <a>?????</a></p><p><b>careTeam</b>: id: careteam</p><p><b>goal</b>: id: goal; P. van de Heuvel; description: recovery surgery on heart of patient; status: achieved; Annotation: goal accomplished without complications</p><blockquote><p><b>activity</b></p><h3>Details</h3><table><tr><td>-</td><td><b>Category</b></td><td><b>Code</b></td><td><b>Status</b></td><td><b>Prohibited</b></td><td><b>Scheduled[x]</b></td><td><b>Performer</b></td></tr><tr><td>*</td><td>Procedure <span>(Details : {http://hl7.org/fhir/care-plan-activity-category code 'procedure' = 'Procedure)</span></td><td>Operation on heart <span>(Details : {SNOMED CT code '64915003' = 'Operation on heart (procedure)', given as 'Operation on heart'})</span></td><td>completed</td><td>true</td><td>2011-06-27T09:30:10+01:00</td><td><a>P. Voigt</a></td></tr></table></blockquote></div>"
+    }
+  },
+  "CareTeam": [
+    {
+      "Resource.id": {
+        "value": "careteam"
+      },
+      "CareTeam.participant": [
+        {
+          "CareTeam.participant.member": {
+            "Reference.reference": {
+              "value": "Practitioner/f002"
+            },
+            "Reference.display": {
+              "value": "P. Voigt"
+            },
+            "reference": "http://hl7.org/fhir//Practitioner/f002"
+          }
+        }
+      ]
+    },
+    {
+      "Resource.id": {
+        "value": "goal"
+      },
+      "Goal.subject": {
+        "Reference.reference": {
+          "value": "Patient/f001"
+        },
+        "Reference.display": {
+          "value": "P. van de Heuvel"
+        },
+        "reference": "http://hl7.org/fhir//Patient/f001"
+      },
+      "Goal.description": {
+        "value": "recovery surgery on heart of patient"
+      },
+      "Goal.status": {
+        "value": "achieved"
+      },
+      "Goal.note": [
+        {
+          "Annotation.text": {
+            "value": "goal accomplished without complications"
+          }
+        }
+      ]
+    }
+  ],
+  "CarePlan.identifier": [
+    {
+      "Identifier.use": {
+        "value": "official"
+      },
+      "Identifier.system": {
+        "value": "http://www.bmc.nl/zorgportal/identifiers/careplans"
+      },
+      "Identifier.value": {
+        "value": "CP2903"
+      }
+    }
+  ],
+  "CarePlan.subject": {
+    "Reference.reference": {
+      "value": "Patient/f001"
+    },
+    "Reference.display": {
+      "value": "P. van de Heuvel"
+    },
+    "reference": "http://hl7.org/fhir//Patient/f001"
+  },
+  "CarePlan.status": {
+    "value": "completed"
+  },
+  "CarePlan.period": {
+    "Period.start": {
+      "value": "2011-06-26"
+    },
+    "Period.end": {
+      "value": "2011-06-27"
+    }
+  },
+  "CarePlan.modified": {
+    "value": "2011-06-27T09:30:10+01:00"
+  },
+  "CarePlan.addresses": [
+    {
+      "Reference.reference": {
+        "value": "Condition/f201"
+      },
+      "Reference.display": {
+        "value": "?????"
+      }
+    }
+  ],
+  "CarePlan.careTeam": {
+    "Reference.reference": {
+      "value": "#careteam"
+    }
+  },
+  "CarePlan.goal": [
+    {
+      "Reference.reference": {
+        "value": "#goal"
+      }
+    }
+  ],
+  "CarePlan.activity": [
+    {
+      "CarePlan.activity.detail": {
+        "CarePlan.activity.detail.category": {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "value": "http://hl7.org/fhir/care-plan-activity-category"
+              },
+              "Coding.code": {
+                "value": "procedure"
+              }
+            }
+          ]
+        },
+        "CarePlan.activity.detail.code": {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "value": "http://snomed.info/sct"
+              },
+              "Coding.code": {
+                "value": "64915003"
+              },
+              "Coding.display": {
+                "value": "Operation on heart"
+              }
+            }
+          ],
+          "concept": "http://snomed.info/sct#64915003"
+        },
+        "CarePlan.activity.detail.status": {
+          "value": "completed"
+        },
+        "CarePlan.activity.detail.prohibited": {
+          "value": true
+        },
+        "CarePlan.activity.detail.scheduledString": {
+          "value": "2011-06-27T09:30:10+01:00"
+        },
+        "CarePlan.activity.detail.performer": [
+          {
+            "Reference.reference": {
+              "value": "Practitioner/f002"
+            },
+            "Reference.display": {
+              "value": "P. Voigt"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

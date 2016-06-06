@@ -1,0 +1,76 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Location",
+  "resourceType": "Location",
+  "Resource.id": {
+    "value": "amb"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mobile Clinic</div>"
+    }
+  },
+  "Location.status": {
+    "value": "active"
+  },
+  "Location.name": {
+    "value": "BUMC Ambulance"
+  },
+  "Location.description": {
+    "value": "Ambulance provided by Burgers University Medical Center"
+  },
+  "Location.mode": {
+    "value": "kind"
+  },
+  "Location.type": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/v3/RoleCode"
+        },
+        "Coding.code": {
+          "value": "AMB"
+        },
+        "Coding.display": {
+          "value": "Ambulance"
+        }
+      }
+    ]
+  },
+  "Location.telecom": [
+    {
+      "ContactPoint.system": {
+        "value": "phone"
+      },
+      "ContactPoint.value": {
+        "value": "2329"
+      },
+      "ContactPoint.use": {
+        "value": "mobile"
+      }
+    }
+  ],
+  "Location.physicalType": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/location-physical-type"
+        },
+        "Coding.code": {
+          "value": "ve"
+        },
+        "Coding.display": {
+          "value": "Vehicle"
+        }
+      }
+    ]
+  },
+  "Location.managingOrganization": {
+    "Reference.reference": {
+      "value": "Organization/f001"
+    },
+    "reference": "http://hl7.org/fhir//Organization/f001"
+  }
+}

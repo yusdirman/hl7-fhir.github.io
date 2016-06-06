@@ -1,0 +1,267 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Librarylibrary-cdc> a fhir:Library;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "library-cdc"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Cohort Definition for Comprehensive Diabetes Care Measure</div>"
+  ];
+  fhir:Library.moduleMetadata [
+     fhir:ModuleMetadata.identifier [
+       fhir:index 0;
+       fhir:Identifier.use [ fhir:value "official" ];
+       fhir:Identifier.value [ fhir:value "CCS" ]
+     ];
+     fhir:ModuleMetadata.version [ fhir:value "1.0.0" ];
+     fhir:ModuleMetadata.title [ fhir:value "Cohort Definition for Comprehensive Diabetes Care Measure" ];
+     fhir:ModuleMetadata.type [ fhir:value "library" ];
+     fhir:ModuleMetadata.status [ fhir:value "active" ];
+     fhir:ModuleMetadata.experimental [ fhir:value "true"^^xsd:boolean ];
+     fhir:ModuleMetadata.publicationDate [ fhir:value "2016-04-19"^^xsd:date ];
+     fhir:ModuleMetadata.topic [
+       fhir:index 0;
+       fhir:CodeableConcept.text [ fhir:value "something" ]
+     ]
+  ];
+  fhir:Library.model [
+     fhir:index 0;
+     fhir:Library.model.identifier [ fhir:value "FHIR" ]
+  ];
+  fhir:Library.valueSet [
+     fhir:index 0;
+     fhir:Library.valueSet.name [ fhir:value "HbA1c Tests" ];
+     fhir:Library.valueSet.identifier [ fhir:value "2.16.840.1.113883.3.464.1004.1116" ]
+  ], [
+     fhir:index 1;
+     fhir:Library.valueSet.name [ fhir:value "HbA1c Level Less than 7.0" ];
+     fhir:Library.valueSet.identifier [ fhir:value "2.16.840.1.113883.3.464.1004.1115" ]
+  ], [
+     fhir:index 2;
+     fhir:Library.valueSet.name [ fhir:value "HbA1c Level 7.0-9.0" ];
+     fhir:Library.valueSet.identifier [ fhir:value "2.16.840.1.113883.3.464.1004.1113" ]
+  ], [
+     fhir:index 3;
+     fhir:Library.valueSet.name [ fhir:value "HbA1c Level Greater Than 9.0" ];
+     fhir:Library.valueSet.identifier [ fhir:value "2.16.840.1.113883.3.464.1004.1114" ]
+  ], [
+     fhir:index 4;
+     fhir:Library.valueSet.name [ fhir:value "Diabetic Retinal Screening" ];
+     fhir:Library.valueSet.identifier [ fhir:value "2.16.840.1.113883.3.464.1004.1078" ]
+  ], [
+     fhir:index 5;
+     fhir:Library.valueSet.name [ fhir:value "Diabetic Retinal Screening Negative" ];
+     fhir:Library.valueSet.identifier [ fhir:value "2.16.840.1.113883.3.464.1004.1079" ]
+  ], [
+     fhir:index 6;
+     fhir:Library.valueSet.name [ fhir:value "Diabetic Retinal Screening With Eye Care Professional" ];
+     fhir:Library.valueSet.identifier [ fhir:value "2.16.840.1.113883.3.464.1004.1080" ]
+  ], [
+     fhir:index 7;
+     fhir:Library.valueSet.name [ fhir:value "Urine Macroalbumin Tests" ];
+     fhir:Library.valueSet.identifier [ fhir:value "2.16.840.1.113883.3.464.1004.1257" ]
+  ], [
+     fhir:index 8;
+     fhir:Library.valueSet.name [ fhir:value "Positive Urine Macroalbumin Tests" ];
+     fhir:Library.valueSet.identifier [ fhir:value "2.16.840.1.113883.3.464.1004.1216" ]
+  ], [
+     fhir:index 9;
+     fhir:Library.valueSet.name [ fhir:value "Urine Protein Test" ];
+     fhir:Library.valueSet.identifier [ fhir:value "Urine Protein Test" ]
+  ];
+  fhir:Library.dataRequirement [
+     fhir:index 0;
+     fhir:DataRequirement.type [ fhir:value "Patient" ]
+  ], [
+     fhir:index 1;
+     fhir:DataRequirement.type [ fhir:value "Observation" ];
+     fhir:DataRequirement.codeFilter [
+       fhir:index 0;
+       fhir:DataRequirement.codeFilter.path [ fhir:value "code" ];
+       fhir:DataRequirement.codeFilter.valueSetString [ fhir:value "HbA1c Tests" ]
+     ];
+     fhir:DataRequirement.dateFilter [
+       fhir:index 0;
+       fhir:DataRequirement.dateFilter.path [ fhir:value "effectiveDateTime.value" ];
+       fhir:DataRequirement.dateFilter.valuePeriod [
+         fhir:Period.start [ fhir:value "2015-01-01"^^xsd:date ]
+       ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:DataRequirement.type [ fhir:value "Observation" ];
+     fhir:DataRequirement.codeFilter [
+       fhir:index 0;
+       fhir:DataRequirement.codeFilter.path [ fhir:value "code" ];
+       fhir:DataRequirement.codeFilter.valueSetString [ fhir:value "HbA1c Level Less than 7.0" ]
+     ];
+     fhir:DataRequirement.dateFilter [
+       fhir:index 0;
+       fhir:DataRequirement.dateFilter.path [ fhir:value "effectiveDateTime.value" ];
+       fhir:DataRequirement.dateFilter.valuePeriod [
+         fhir:Period.start [ fhir:value "2015-01-01"^^xsd:date ]
+       ]
+     ]
+  ], [
+     fhir:index 3;
+     fhir:DataRequirement.type [ fhir:value "Observation" ];
+     fhir:DataRequirement.codeFilter [
+       fhir:index 0;
+       fhir:DataRequirement.codeFilter.path [ fhir:value "code" ];
+       fhir:DataRequirement.codeFilter.valueSetString [ fhir:value "HbA1c Level 7.0-9.0" ]
+     ];
+     fhir:DataRequirement.dateFilter [
+       fhir:index 0;
+       fhir:DataRequirement.dateFilter.path [ fhir:value "effectiveDateTime.value" ];
+       fhir:DataRequirement.dateFilter.valuePeriod [
+         fhir:Period.start [ fhir:value "2015-01-01"^^xsd:date ]
+       ]
+     ]
+  ], [
+     fhir:index 4;
+     fhir:DataRequirement.type [ fhir:value "Observation" ];
+     fhir:DataRequirement.codeFilter [
+       fhir:index 0;
+       fhir:DataRequirement.codeFilter.path [ fhir:value "code" ];
+       fhir:DataRequirement.codeFilter.valueSetString [ fhir:value "HbA1c Level Greater Than 9.0" ]
+     ];
+     fhir:DataRequirement.dateFilter [
+       fhir:index 0;
+       fhir:DataRequirement.dateFilter.path [ fhir:value "effectiveDateTime.value" ];
+       fhir:DataRequirement.dateFilter.valuePeriod [
+         fhir:Period.start [ fhir:value "2015-01-01"^^xsd:date ]
+       ]
+     ]
+  ], [
+     fhir:index 5;
+     fhir:DataRequirement.type [ fhir:value "MedicationOrder" ];
+     fhir:DataRequirement.codeFilter [
+       fhir:index 0;
+       fhir:DataRequirement.codeFilter.path [ fhir:value "code" ];
+       fhir:DataRequirement.codeFilter.valueSetString [ fhir:value "ARB" ]
+     ];
+     fhir:DataRequirement.dateFilter [
+       fhir:index 0;
+       fhir:DataRequirement.dateFilter.path [ fhir:value "dateWritten.value" ];
+       fhir:DataRequirement.dateFilter.valuePeriod [
+         fhir:Period.start [ fhir:value "2015-01-01"^^xsd:date ]
+       ]
+     ]
+  ], [
+     fhir:index 6;
+     fhir:DataRequirement.type [ fhir:value "MedicationOrder" ];
+     fhir:DataRequirement.codeFilter [
+       fhir:index 0;
+       fhir:DataRequirement.codeFilter.path [ fhir:value "code" ];
+       fhir:DataRequirement.codeFilter.valueSetString [ fhir:value "ACE" ]
+     ];
+     fhir:DataRequirement.dateFilter [
+       fhir:index 0;
+       fhir:DataRequirement.dateFilter.path [ fhir:value "dateWritten.value" ];
+       fhir:DataRequirement.dateFilter.valuePeriod [
+         fhir:Period.start [ fhir:value "2015-01-01"^^xsd:date ]
+       ]
+     ]
+  ], [
+     fhir:index 7;
+     fhir:DataRequirement.type [ fhir:value "Procedure" ];
+     fhir:DataRequirement.codeFilter [
+       fhir:index 0;
+       fhir:DataRequirement.codeFilter.path [ fhir:value "code" ];
+       fhir:DataRequirement.codeFilter.valueSetString [ fhir:value "Diabetic Retinal Screening" ]
+     ];
+     fhir:DataRequirement.dateFilter [
+       fhir:index 0;
+       fhir:DataRequirement.dateFilter.path [ fhir:value "performedDateTime.value" ];
+       fhir:DataRequirement.dateFilter.valuePeriod [
+         fhir:Period.start [ fhir:value "2014-01-01"^^xsd:date ]
+       ]
+     ]
+  ], [
+     fhir:index 8;
+     fhir:DataRequirement.type [ fhir:value "Procedure" ];
+     fhir:DataRequirement.codeFilter [
+       fhir:index 0;
+       fhir:DataRequirement.codeFilter.path [ fhir:value "code" ];
+       fhir:DataRequirement.codeFilter.valueSetString [ fhir:value "Diabetic Retinal Screening Negative" ]
+     ];
+     fhir:DataRequirement.dateFilter [
+       fhir:index 0;
+       fhir:DataRequirement.dateFilter.path [ fhir:value "performedDateTime.value" ];
+       fhir:DataRequirement.dateFilter.valuePeriod [
+         fhir:Period.start [ fhir:value "2014-01-01"^^xsd:date ]
+       ]
+     ]
+  ], [
+     fhir:index 9;
+     fhir:DataRequirement.type [ fhir:value "Procedure" ];
+     fhir:DataRequirement.codeFilter [
+       fhir:index 0;
+       fhir:DataRequirement.codeFilter.path [ fhir:value "code" ];
+       fhir:DataRequirement.codeFilter.valueSetString [ fhir:value "Diabetic Retinal Screening With Eye Care Professional" ]
+     ];
+     fhir:DataRequirement.dateFilter [
+       fhir:index 0;
+       fhir:DataRequirement.dateFilter.path [ fhir:value "performedDateTime.value" ];
+       fhir:DataRequirement.dateFilter.valuePeriod [
+         fhir:Period.start [ fhir:value "2014-01-01"^^xsd:date ]
+       ]
+     ]
+  ], [
+     fhir:index 10;
+     fhir:DataRequirement.type [ fhir:value "Observation" ];
+     fhir:DataRequirement.codeFilter [
+       fhir:index 0;
+       fhir:DataRequirement.codeFilter.path [ fhir:value "code" ];
+       fhir:DataRequirement.codeFilter.valueSetString [ fhir:value "Urine Macroalbumin Tests" ]
+     ];
+     fhir:DataRequirement.dateFilter [
+       fhir:index 0;
+       fhir:DataRequirement.dateFilter.path [ fhir:value "effectiveDateTime.value" ];
+       fhir:DataRequirement.dateFilter.valuePeriod [
+         fhir:Period.start [ fhir:value "2015-01-01"^^xsd:date ]
+       ]
+     ]
+  ], [
+     fhir:index 11;
+     fhir:DataRequirement.type [ fhir:value "Observation" ];
+     fhir:DataRequirement.codeFilter [
+       fhir:index 0;
+       fhir:DataRequirement.codeFilter.path [ fhir:value "code" ];
+       fhir:DataRequirement.codeFilter.valueSetString [ fhir:value "Positive Urine Macroalbumin Tests" ]
+     ];
+     fhir:DataRequirement.dateFilter [
+       fhir:index 0;
+       fhir:DataRequirement.dateFilter.path [ fhir:value "effectiveDateTime.value" ];
+       fhir:DataRequirement.dateFilter.valuePeriod [
+         fhir:Period.start [ fhir:value "2015-01-01"^^xsd:date ]
+       ]
+     ]
+  ], [
+     fhir:index 12;
+     fhir:DataRequirement.type [ fhir:value "Observation" ];
+     fhir:DataRequirement.codeFilter [
+       fhir:index 0;
+       fhir:DataRequirement.codeFilter.path [ fhir:value "code" ];
+       fhir:DataRequirement.codeFilter.valueSetString [ fhir:value "Diabetic Retinal Screening" ]
+     ];
+     fhir:DataRequirement.dateFilter [
+       fhir:index 0;
+       fhir:DataRequirement.dateFilter.path [ fhir:value "effectiveDateTime.value" ];
+       fhir:DataRequirement.dateFilter.valuePeriod [
+         fhir:Period.start [ fhir:value "2014-01-01"^^xsd:date ]
+       ]
+     ]
+  ];
+  fhir:Library.document [
+     fhir:Attachment.contentType [ fhir:value "application/xml+elm" ];
+     fhir:Attachment.url [ fhir:value "http://example.org/libraries/library-cdc.elm.xml" ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

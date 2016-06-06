@@ -1,0 +1,72 @@
+{
+  "resourceType": "Observation",
+  "id": "obs-uslab-example6",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: obs-uslab-example6</p><p><b>identifier</b>: lab test result ID = 8901 (OFFICIAL)</p><p><b>status</b>: final</p><p><b>code</b>: GC CT RNA Panel <span>(Details : {LOINC code '64017-7' = 'Chlamydia trachomatis and Neisseria gonorrhoeae rRNA panel - Unspecified specimen by Probe and target amplification method', given as 'Chlamydia trachomatis and Neisseria gonorrhoeae rRNA panel - Unspecified specimen by Probe and target amplification method'}; {urn:oid:2.16.840.1.113883.3.72.5.24 code 'GCCTPCR' = '??', given as 'GC CT PCR'})</span></p><p><b>subject</b>: <a>Todd Lerr</a></p><p><b>effective</b>: Dec 5, 2014</p><p><b>issued</b>: Dec 6, 2014 3:42:15 PM</p><p><b>performer</b>: <a>Dr Leonard T Bloodraw Jr</a></p><p><b>specimen</b>: <a>Urine First Void</a></p><blockquote><p><b>related</b></p><p><b>type</b>: has-member</p><p><b>target</b>: <a>CT RNA</a></p></blockquote><blockquote><p><b>related</b></p><p><b>type</b>: has-member</p><p><b>target</b>: <a>GC-RNA</a></p></blockquote></div>"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/uslab-observationkind",
+      "valueCode": "result"
+    }
+  ],
+  "identifier": [
+    {
+      "use": "official",
+      "type": {
+        "text": "lab test result ID"
+      },
+      "system": "http://lis.acmelabs.org/identifiers/labtestresult",
+      "value": "8901"
+    }
+  ],
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "64017-7",
+        "display": "Chlamydia trachomatis and Neisseria gonorrhoeae rRNA panel - Unspecified specimen by Probe and target amplification method"
+      },
+      {
+        "system": "urn:oid:2.16.840.1.113883.3.72.5.24",
+        "code": "GCCTPCR",
+        "display": "GC CT PCR"
+      }
+    ],
+    "text": "GC CT RNA Panel"
+  },
+  "subject": {
+    "reference": "Patient/patient-uslab-example1",
+    "display": "Todd Lerr"
+  },
+  "effectiveDateTime": "2014-12-05",
+  "issued": "2014-12-06T15:42:15-08:00",
+  "performer": [
+    {
+      "reference": "Practitioner/pract-uslab-example1",
+      "display": "Dr Leonard T Bloodraw Jr"
+    }
+  ],
+  "specimen": {
+    "reference": "Specimen/spec-uslab-example2",
+    "display": "Urine First Void"
+  },
+  "related": [
+    {
+      "type": "has-member",
+      "target": {
+        "reference": "Observation/obs-uslab-example7",
+        "display": "CT RNA"
+      }
+    },
+    {
+      "type": "has-member",
+      "target": {
+        "reference": "Observation/obs-uslab-example2",
+        "display": "GC-RNA"
+      }
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/MedicationStatement",
+  "resourceType": "MedicationStatement",
+  "Resource.id": {
+    "value": "example001"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>Tylenol No 1 tablet - Taking 1 tablet four times daily as needed for pain</p>\n    </div>"
+    }
+  },
+  "MedicationStatement.status": {
+    "value": "completed"
+  },
+  "MedicationStatement.medicationReference": {
+    "Reference.reference": {
+      "value": "Medication/MedicationExample7"
+    },
+    "reference": "http://hl7.org/fhir//Medication/MedicationExample7"
+  },
+  "MedicationStatement.patient": {
+    "Reference.reference": {
+      "value": "Patient/pat1"
+    },
+    "reference": "http://hl7.org/fhir//Patient/pat1"
+  },
+  "MedicationStatement.effectiveDateTime": {
+    "value": "2015-01-23"
+  },
+  "MedicationStatement.informationSource": {
+    "Reference.reference": {
+      "value": "Patient/pat2"
+    },
+    "reference": "http://hl7.org/fhir//Patient/pat2"
+  },
+  "MedicationStatement.dateAsserted": {
+    "value": "2015-02-22"
+  },
+  "MedicationStatement.wasNotTaken": {
+    "value": false
+  },
+  "MedicationStatement.reasonForUseCode": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "value": "http://snomed.info/sct"
+          },
+          "Coding.code": {
+            "value": "22253000"
+          },
+          "Coding.display": {
+            "value": "Pain"
+          }
+        }
+      ]
+    }
+  ],
+  "MedicationStatement.note": [
+    {
+      "Annotation.text": {
+        "value": "Patient indicates they miss the occasional dose"
+      }
+    }
+  ],
+  "MedicationStatement.dosage": [
+    {
+      "MedicationStatement.dosage.text": {
+        "value": "one tablet four times daily as needed for pain"
+      },
+      "MedicationStatement.dosage.timing": {
+        "Timing.repeat": {
+          "Timing.repeat.frequency": {
+            "value": 4
+          },
+          "Timing.repeat.period": {
+            "value": 1
+          },
+          "Timing.repeat.periodUnit": {
+            "value": "d"
+          }
+        }
+      },
+      "MedicationStatement.dosage.asNeededBoolean": {
+        "value": true
+      },
+      "MedicationStatement.dosage.route": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "value": "260548002"
+            },
+            "Coding.display": {
+              "value": "Oral"
+            }
+          }
+        ],
+        "concept": "http://snomed.info/sct#260548002"
+      },
+      "MedicationStatement.dosage.doseQuantity": {
+        "Quantity.value": {
+          "value": 1
+        }
+      },
+      "MedicationStatement.dosage.maxDosePerPeriod": {
+        "Ratio.numerator": {
+          "Quantity.value": {
+            "value": 4
+          },
+          "Quantity.unit": {
+            "value": "tablets"
+          },
+          "Quantity.system": {
+            "value": "http://snomed.info/sct"
+          },
+          "Quantity.code": {
+            "value": "385055001"
+          }
+        },
+        "Ratio.denominator": {
+          "Quantity.value": {
+            "value": 1
+          },
+          "Quantity.system": {
+            "value": "http://unitsofmeasure.org"
+          },
+          "Quantity.code": {
+            "value": "d"
+          }
+        }
+      }
+    }
+  ]
+}

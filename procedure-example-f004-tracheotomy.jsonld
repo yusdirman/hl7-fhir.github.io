@@ -1,0 +1,132 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Procedure",
+  "resourceType": "Procedure",
+  "Resource.id": {
+    "value": "f004"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f004</p><p><b>subject</b>: <a>P. van de Heuvel</a></p><p><b>status</b>: completed</p><p><b>code</b>: Tracheotomy <span>(Details : {SNOMED CT code '48387007' = 'Surgical tracheostomy', given as 'Tracheotomy'})</span></p><p><b>bodySite</b>: Retropharyngeal area <span>(Details : {SNOMED CT code '83030008' = 'Structure of retropharyngeal area (body structure)', given as 'Retropharyngeal area'})</span></p><p><b>reason</b>: ensure breathing during surgery <span>(Details )</span></p><h3>Performers</h3><table><tr><td>-</td><td><b>Actor</b></td><td><b>Role</b></td></tr><tr><td>*</td><td><a>A. Langeveld</a></td><td>Care role <span>(Details : {urn:oid:2.16.840.1.113883.2.4.15.111 code '01.000' = '??', given as 'Arts'})</span></td></tr></table><p><b>performed</b>: Mar 22, 2013 9:30:10 AM --&gt; Mar 22, 2013 10:30:10 AM</p><p><b>encounter</b>: <a>Encounter/f003</a></p><p><b>outcome</b>: removal of the retropharyngeal abscess <span>(Details )</span></p><p><b>report</b>: <a>???????????</a></p><p><b>followUp</b>: described in care plan <span>(Details )</span></p></div>"
+    }
+  },
+  "Procedure.subject": {
+    "Reference.reference": {
+      "value": "Patient/f001"
+    },
+    "Reference.display": {
+      "value": "P. van de Heuvel"
+    },
+    "reference": "http://hl7.org/fhir//Patient/f001"
+  },
+  "Procedure.status": {
+    "value": "completed"
+  },
+  "Procedure.code": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "value": "48387007"
+        },
+        "Coding.display": {
+          "value": "Tracheotomy"
+        }
+      }
+    ],
+    "concept": "http://snomed.info/sct#48387007"
+  },
+  "Procedure.bodySite": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "value": "http://snomed.info/sct"
+          },
+          "Coding.code": {
+            "value": "83030008"
+          },
+          "Coding.display": {
+            "value": "Retropharyngeal area"
+          }
+        }
+      ]
+    }
+  ],
+  "Procedure.reasonCodeableConcept": {
+    "CodeableConcept.text": {
+      "value": "ensure breathing during surgery"
+    }
+  },
+  "Procedure.performer": [
+    {
+      "Procedure.performer.actor": {
+        "Reference.reference": {
+          "value": "Practitioner/f005"
+        },
+        "Reference.display": {
+          "value": "A. Langeveld"
+        },
+        "reference": "http://hl7.org/fhir//Practitioner/f005"
+      },
+      "Procedure.performer.role": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "urn:oid:2.16.840.1.113883.2.4.15.111"
+            },
+            "Coding.code": {
+              "value": "01.000"
+            },
+            "Coding.display": {
+              "value": "Arts"
+            }
+          }
+        ],
+        "CodeableConcept.text": {
+          "value": "Care role"
+        }
+      }
+    }
+  ],
+  "Procedure.performedPeriod": {
+    "Period.start": {
+      "value": "2013-03-22T09:30:10+01:00"
+    },
+    "Period.end": {
+      "value": "2013-03-22T10:30:10+01:00"
+    }
+  },
+  "Procedure.encounter": {
+    "Reference.reference": {
+      "value": "Encounter/f003"
+    },
+    "reference": "http://hl7.org/fhir//Encounter/f003"
+  },
+  "Procedure.outcome": {
+    "CodeableConcept.text": {
+      "value": "removal of the retropharyngeal abscess"
+    }
+  },
+  "Procedure.report": [
+    {
+      "Reference.reference": {
+        "value": "DiagnosticReport/f001"
+      },
+      "Reference.display": {
+        "value": "???????????"
+      }
+    }
+  ],
+  "Procedure.followUp": [
+    {
+      "CodeableConcept.text": {
+        "value": "described in care plan"
+      }
+    }
+  ]
+}

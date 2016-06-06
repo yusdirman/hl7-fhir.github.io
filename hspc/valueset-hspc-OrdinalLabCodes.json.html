@@ -1,0 +1,1648 @@
+﻿<!DOCTYPE HTML>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Hspc/valueset-hspc-OrdinalLabCodes.json - FHIR v1.4.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="../fhir.css" rel="stylesheet"/>
+  <link rel="Prev" href="http://hl7.org/fhir/hspc/valueset-hspc-OrdinalLabCodes.json.html"/>
+
+  <!-- Bootstrap core CSS -->
+  <link href=".././dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href=".././assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href=".././assets/css/project.css" rel="stylesheet"/>
+  <link href=".././assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="../jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src=".././assets/js/html5shiv.js"></script>
+  <script src=".././assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href=".././assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href=".././assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href=".././assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href=".././assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href=".././assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment"><!-- segment-header -->	
+		<div class="container"><!-- container -->
+			<a id="logo" href="http://hl7.org/fhir" no-external="true"><img src=".././assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a id="hl7-logo" href="http://www.hl7.org" no-external="true">
+					<img src=".././assets/images/hl7-logo.png" width="42" height="50" alt="visit the hl7 website"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="./../assets/images/search.png"/></a></div> 
+		</div>
+		<div class="container"><!-- container -->
+	</div></div><!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment"><!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container"><!-- container -->
+ <!-- HEADER CONTENT -->
+ 	      		
+ 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="../index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../documentation.html">Documentation</a></li>
+              <li><a href="../implementation.html">Implementation</a></li>
+              <li><a href="../resourcelist.html">Resources</a></li>
+              <li><a href="../clinical.html">Clinical</a></li>
+              <li><a href="../administration.html">Administrative</a></li>
+              <li><a href="../infrastructure.html">Infrastructure</a></li>
+              <li><a href="../financial.html">Financial</a></li>
+
+						</ul>
+					</div><!-- /.nav-collapse -->
+				</div><!-- /.container -->
+			</nav><!-- /.navbar -->
+      		
+				
+<!-- /HEADER CONTENT -->				
+		</div><!-- /container -->
+	</div><!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment"><!-- segment-breadcrumb -->
+		<div class="container"><!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../documentation.html">Documentation</a></li>        <li><a href="../terminologies.html">Using Codes</a></li>        <li><a href="../terminologies-valuesets.html">Value Sets</a></li>        <li><a href="../hspc/valueset-hspc-OrdinalLabCodes.html">hspc/valueset-hspc-OrdinalLabCodes</a></li>        <li><b>Instance</b></li>        <!-- hspc/valueset-hspc-OrdinalLabCodes.json.html / valueset-instance / Value Set-->
+
+			</ul>	
+		</div><!-- /container -->
+	</div><!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment"><!-- segment-content -->
+	<div class="container"><!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+<!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<h1>Hspc/valueset-hspc-OrdinalLabCodes.json</h1>
+
+<p>
+<a href="valueset-hspc-OrdinalLabCodes.json">Raw JSON</a> (<a href="valueset-hspc-OrdinalLabCodes.canonical.json">canonical form</a>)
+</p>
+
+<div class="example">
+<p>Definition for Value SetHSPC Ordinal Labs</p>
+<pre class="json">
+{
+  &quot;resourceType&quot;: &quot;ValueSet&quot;,
+  &quot;id&quot;: &quot;hspc-OrdinalLabCodes&quot;,
+  &quot;meta&quot;: {
+    &quot;lastUpdated&quot;: &quot;2016-06-06T20:14:04.181+00:00&quot;,
+    &quot;profile&quot;: [
+      &quot;http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition&quot;
+    ]
+  },
+  &quot;text&quot;: {
+    &quot;status&quot;: &quot;generated&quot;,
+    &quot;div&quot;: &quot;&lt;div&gt;!-- Snipped for Brevity --&gt;&lt;/div&gt;&quot;
+  },
+  &quot;extension&quot;: [
+    {
+      &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/valueset-oid&quot;,
+      &quot;valueUri&quot;: &quot;urn:oid:2.16.840.1.113883.4.642.2.701&quot;
+    }
+  ],
+  &quot;url&quot;: &quot;http://hl7.org/fhir/ValueSet/hspc-OrdinalLabCodes&quot;,
+  &quot;version&quot;: &quot;1.4.0&quot;,
+  &quot;name&quot;: &quot;HSPC Ordinal Labs&quot;,
+  &quot;status&quot;: &quot;draft&quot;,
+  &quot;experimental&quot;: true,
+  &quot;publisher&quot;: &quot;HSPC&quot;,
+  &quot;contact&quot;: [
+    {
+      &quot;telecom&quot;: [
+        {
+          &quot;system&quot;: &quot;other&quot;,
+          &quot;value&quot;: &quot;http://healthcaresoa.org&quot;
+        }
+      ]
+    }
+  ],
+  &quot;date&quot;: &quot;2015-02-20T13:44:49+11:00&quot;,
+  &quot;description&quot;: &quot;Ordinal LOINC codes used in HSPC&quot;,
+  &quot;copyright&quot;: &quot;This content LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use&quot;,
+  &quot;compose&quot;: {
+    &quot;include&quot;: [
+      {
+        &quot;system&quot;: &quot;http://loinc.org&quot;,
+        &quot;concept&quot;: [
+          {
+            &quot;code&quot;: &quot;1004-1&quot;,
+            &quot;display&quot;: &quot;Direct antiglobulin test.complement specific reagent [Presence] on Red Blood Cells&quot;
+          },
+          {
+            &quot;code&quot;: &quot;1007-4&quot;,
+            &quot;display&quot;: &quot;Direct antiglobulin test.poly specific reagent [Presence] on Red Blood Cells&quot;
+          },
+          {
+            &quot;code&quot;: &quot;10374-7&quot;,
+            &quot;display&quot;: &quot;Helmet cells [Presence] in Blood by Light microscopy&quot;
+          },
+          {
+            &quot;code&quot;: &quot;10378-8&quot;,
+            &quot;display&quot;: &quot;Polychromasia [Presence] in Blood by Light microscopy&quot;
+          },
+          {
+            &quot;code&quot;: &quot;10380-4&quot;,
+            &quot;display&quot;: &quot;Stomatocytes [Presence] in Blood by Light microscopy&quot;
+          },
+          {
+            &quot;code&quot;: &quot;10381-2&quot;,
+            &quot;display&quot;: &quot;Target cells [Presence] in Blood by Light microscopy&quot;
+          },
+          {
+            &quot;code&quot;: &quot;10900-9&quot;,
+            &quot;display&quot;: &quot;Hepatitis B virus surface Ab [Presence] in Serum by Immunoassay&quot;
+          },
+          {
+            &quot;code&quot;: &quot;11060-1&quot;,
+            &quot;display&quot;: &quot;Reducing substances [Presence] in Stool&quot;
+          },
+          {
+            &quot;code&quot;: &quot;11259-9&quot;,
+            &quot;display&quot;: &quot;Hepatitis C virus RNA [Presence] in Serum or Plasma by Probe and target amplification method|Hepatitis C virus RNA [Presence] in Serum or Plasma by Probe and target amplification method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;11281-3&quot;,
+            &quot;display&quot;: &quot;Auer rods [Presence] in Blood by Light microscopy&quot;
+          },
+          {
+            &quot;code&quot;: &quot;11483-5&quot;,
+            &quot;display&quot;: &quot;Varicella zoster virus DNA [Presence] in Unspecified specimen by Probe and target amplification method|Varicella zoster virus DNA [Presence] in Unspecified specimen by Probe and target amplification method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;12239-0&quot;,
+            &quot;display&quot;: &quot;Oligosaccharides [Presence] in Urine&quot;
+          },
+          {
+            &quot;code&quot;: &quot;12454-5&quot;,
+            &quot;display&quot;: &quot;Urate crystals amorphous [Presence] in Urine sediment by Light microscopy&quot;
+          },
+          {
+            &quot;code&quot;: &quot;12598-9&quot;,
+            &quot;display&quot;: &quot;Fat.neutral [Presence] in Stool&quot;
+          },
+          {
+            &quot;code&quot;: &quot;12853-8&quot;,
+            &quot;display&quot;: &quot;Purkinje cells Ab [Presence] in Serum by Immunoblot (IB)&quot;
+          },
+          {
+            &quot;code&quot;: &quot;13248-0&quot;,
+            &quot;display&quot;: &quot;Hepatitis D virus Ab [Presence] in Serum&quot;
+          },
+          {
+            &quot;code&quot;: &quot;13532-7&quot;,
+            &quot;display&quot;: &quot;Xanthochromia [Presence] of Cerebral spinal fluid|Xanthochromia of Cerebral spinal fluid Qualitative&quot;
+          },
+          {
+            &quot;code&quot;: &quot;13533-5&quot;,
+            &quot;display&quot;: &quot;Acid hemolysis [Presence] of Blood&quot;
+          },
+          {
+            &quot;code&quot;: &quot;13578-0&quot;,
+            &quot;display&quot;: &quot;Promazine [Presence] in Serum or Plasma&quot;
+          },
+          {
+            &quot;code&quot;: &quot;13655-6&quot;,
+            &quot;display&quot;: &quot;Leukocytes [Presence] in Stool by Light microscopy&quot;
+          },
+          {
+            &quot;code&quot;: &quot;13931-1&quot;,
+            &quot;display&quot;: &quot;Striated muscle Ab [Presence] in Serum&quot;
+          },
+          {
+            &quot;code&quot;: &quot;13949-3&quot;,
+            &quot;display&quot;: &quot;Cytomegalovirus IgG Ab [Presence] in Serum by Immunoassay&quot;
+          },
+          {
+            &quot;code&quot;: &quot;13950-1&quot;,
+            &quot;display&quot;: &quot;Hepatitis A virus IgM Ab [Presence] in Serum by Immunoassay|Hepatitis A virus IgM Ab [Presence] in Serum or Plasma by Immunoassay&quot;
+          },
+          {
+            &quot;code&quot;: &quot;13951-9&quot;,
+            &quot;display&quot;: &quot;Hepatitis A virus Ab [Presence] in Serum by Immunoassay&quot;
+          },
+          {
+            &quot;code&quot;: &quot;13952-7&quot;,
+            &quot;display&quot;: &quot;Hepatitis B virus core Ab [Presence] in Serum by Immunoassay|Hepatitis B virus core Ab [Presence] in Serum or Plasma by Immunoassay&quot;
+          },
+          {
+            &quot;code&quot;: &quot;13953-5&quot;,
+            &quot;display&quot;: &quot;Hepatitis B virus e Ab [Presence] in Serum by Immunoassay&quot;
+          },
+          {
+            &quot;code&quot;: &quot;14249-7&quot;,
+            &quot;display&quot;: &quot;Purkinje cells Ab [Presence] in Serum by Immunofluorescence&quot;
+          },
+          {
+            &quot;code&quot;: &quot;14273-7&quot;,
+            &quot;display&quot;: &quot;Reticulin IgA Ab [Presence] in Serum&quot;
+          },
+          {
+            &quot;code&quot;: &quot;14564-9&quot;,
+            &quot;display&quot;: &quot;Hemoglobin.gastrointestinal [Presence] in Stool --2nd specimen&quot;
+          },
+          {
+            &quot;code&quot;: &quot;14565-6&quot;,
+            &quot;display&quot;: &quot;Hemoglobin.gastrointestinal [Presence] in Stool --3rd specimen&quot;
+          },
+          {
+            &quot;code&quot;: &quot;15151-4&quot;,
+            &quot;display&quot;: &quot;Aspergillus fumigatus 3 Ab [Presence] in Serum by Immune diffusion (ID)&quot;
+          },
+          {
+            &quot;code&quot;: &quot;15179-5&quot;,
+            &quot;display&quot;: &quot;Fibrin D-dimer [Presence] in Platelet poor plasma&quot;
+          },
+          {
+            &quot;code&quot;: &quot;16128-1&quot;,
+            &quot;display&quot;: &quot;Hepatitis C virus Ab [Presence] in Serum&quot;
+          },
+          {
+            &quot;code&quot;: &quot;16369-1&quot;,
+            &quot;display&quot;: &quot;Amphetamines [Presence] in Urine by Confirmatory method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;16933-4&quot;,
+            &quot;display&quot;: &quot;Hepatitis B virus core Ab [Presence] in Serum&quot;
+          },
+          {
+            &quot;code&quot;: &quot;16942-5&quot;,
+            &quot;display&quot;: &quot;Herpes simplex virus Ab [Presence] in Serum by Immunoblot (IB)&quot;
+          },
+          {
+            &quot;code&quot;: &quot;16955-7&quot;,
+            &quot;display&quot;: &quot;Herpes simplex virus 2 IgG Ab [Presence] in Serum by Immunoblot (IB)&quot;
+          },
+          {
+            &quot;code&quot;: &quot;17257-7&quot;,
+            &quot;display&quot;: &quot;Mesothelial cells [Presence] in Body fluid by Light microscopy&quot;
+          },
+          {
+            &quot;code&quot;: &quot;17726-1&quot;,
+            &quot;display&quot;: &quot;Treponema pallidum IgG Ab [Presence] in Serum by Immunofluorescence&quot;
+          },
+          {
+            &quot;code&quot;: &quot;17783-2&quot;,
+            &quot;display&quot;: &quot;Hemosiderin [Presence] in Urine by Light microscopy&quot;
+          },
+          {
+            &quot;code&quot;: &quot;17850-9&quot;,
+            &quot;display&quot;: &quot;Herpes simplex virus 1 IgG Ab [Presence] in Serum&quot;
+          },
+          {
+            &quot;code&quot;: &quot;18282-4&quot;,
+            &quot;display&quot;: &quot;Cannabinoids [Presence] in Urine by Screen method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;18311-1&quot;,
+            &quot;display&quot;: &quot;Pelger Huet cells [Presence] in Blood by Light microscopy&quot;
+          },
+          {
+            &quot;code&quot;: &quot;18312-9&quot;,
+            &quot;display&quot;: &quot;Platelet satellitism [Presence] in Blood by Light microscopy&quot;
+          },
+          {
+            &quot;code&quot;: &quot;18390-5&quot;,
+            &quot;display&quot;: &quot;Opiates [Presence] in Urine by Confirmatory method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;18481-2&quot;,
+            &quot;display&quot;: &quot;Streptococcus pyogenes Ag [Presence] in Throat&quot;
+          },
+          {
+            &quot;code&quot;: &quot;19162-7&quot;,
+            &quot;display&quot;: &quot;Varicella zoster virus IgG Ab [Presence] in Serum&quot;
+          },
+          {
+            &quot;code&quot;: &quot;19252-6&quot;,
+            &quot;display&quot;: &quot;Megakaryocytes/100 leukocytes in Blood&quot;
+          },
+          {
+            &quot;code&quot;: &quot;1928-1&quot;,
+            &quot;display&quot;: &quot;Immunoglobulin light chains [Presence] in Urine&quot;
+          },
+          {
+            &quot;code&quot;: &quot;19429-0&quot;,
+            &quot;display&quot;: &quot;Propoxyphene [Presence] in Urine by Screen method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;19554-5&quot;,
+            &quot;display&quot;: &quot;Methamphetamine [Presence] in Urine by Screen method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;1977-8&quot;,
+            &quot;display&quot;: &quot;Bilirubin [Presence] in Urine|Bilirubin.total [Presence] in Urine&quot;
+          },
+          {
+            &quot;code&quot;: &quot;20404-0&quot;,
+            &quot;display&quot;: &quot;Fibronectin.fetal [Presence] in Vaginal fluid&quot;
+          },
+          {
+            &quot;code&quot;: &quot;20411-5&quot;,
+            &quot;display&quot;: &quot;Barbiturates [Mass/volume] in Urine by Confirmatory method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;20421-4&quot;,
+            &quot;display&quot;: &quot;Barbiturates [Presence] in Serum or Plasma by Screen method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;20507-0&quot;,
+            &quot;display&quot;: &quot;Reagin Ab [Presence] in Serum by RPR&quot;
+          },
+          {
+            &quot;code&quot;: &quot;2106-3&quot;,
+            &quot;display&quot;: &quot;Choriogonadotropin (pregnancy test) [Presence] in Urine&quot;
+          },
+          {
+            &quot;code&quot;: &quot;2118-8&quot;,
+            &quot;display&quot;: &quot;Choriogonadotropin (pregnancy test) [Presence] in Serum or Plasma&quot;
+          },
+          {
+            &quot;code&quot;: &quot;21233-2&quot;,
+            &quot;display&quot;: &quot;Cryptosporidium sp Ag [Presence] in Stool&quot;
+          },
+          {
+            &quot;code&quot;: &quot;21348-8&quot;,
+            &quot;display&quot;: &quot;HTLV 1+2 IgG Ab [Presence] in Serum by Immunoassay&quot;
+          },
+          {
+            &quot;code&quot;: &quot;21518-6&quot;,
+            &quot;display&quot;: &quot;SCL-70 extractable nuclear IgG Ab [Presence] in Serum&quot;
+          },
+          {
+            &quot;code&quot;: &quot;21523-6&quot;,
+            &quot;display&quot;: &quot;Smith extractable nuclear IgG Ab [Presence] in Serum&quot;
+          },
+          {
+            &quot;code&quot;: &quot;21560-8&quot;,
+            &quot;display&quot;: &quot;Thermoactinomyces candidus Ab [Presence] in Serum&quot;
+          },
+          {
+            &quot;code&quot;: &quot;21561-6&quot;,
+            &quot;display&quot;: &quot;Thermoactinomyces sacchari Ab [Presence] in Serum&quot;
+          },
+          {
+            &quot;code&quot;: &quot;21695-2&quot;,
+            &quot;display&quot;: &quot;HFE gene p.C282Y [Presence] in Blood or Tissue by Molecular genetics method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;21696-0&quot;,
+            &quot;display&quot;: &quot;HFE gene p.H63D [Presence] in Blood or Tissue by Molecular genetics method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;21747-1&quot;,
+            &quot;display&quot;: &quot;HC gene rearrangements [Presence] in Blood or Tissue by Molecular genetics method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;21753-9&quot;,
+            &quot;display&quot;: &quot;TCRG gene rearrangements [Presence] in Blood or Tissue by Molecular genetics method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;22239-8&quot;,
+            &quot;display&quot;: &quot;Cytomegalovirus Ab [Presence] in Serum&quot;
+          },
+          {
+            &quot;code&quot;: &quot;22295-0&quot;,
+            &quot;display&quot;: &quot;Epstein Barr virus early IgG Ab [Presence] in Serum&quot;
+          },
+          {
+            &quot;code&quot;: &quot;22310-7&quot;,
+            &quot;display&quot;: &quot;Helicobacter pylori Ab [Presence] in Serum&quot;
+          },
+          {
+            &quot;code&quot;: &quot;22362-8&quot;,
+            &quot;display&quot;: &quot;HTLV 1+2 Ab [Presence] in Serum&quot;
+          },
+          {
+            &quot;code&quot;: &quot;22415-4&quot;,
+            &quot;display&quot;: &quot;Mumps virus IgG Ab [Presence] in Serum&quot;
+          },
+          {
+            &quot;code&quot;: &quot;22566-4&quot;,
+            &quot;display&quot;: &quot;Streptococcus pyogenes enzyme Ab [Presence] in Serum&quot;
+          },
+          {
+            &quot;code&quot;: &quot;22572-2&quot;,
+            &quot;display&quot;: &quot;Saccharomonospora viridis Ab [Presence] in Serum&quot;
+          },
+          {
+            &quot;code&quot;: &quot;2334-1&quot;,
+            &quot;display&quot;: &quot;Hemoglobin.gastrointestinal [Presence] in Gastric fluid&quot;
+          },
+          {
+            &quot;code&quot;: &quot;2335-8&quot;,
+            &quot;display&quot;: &quot;Hemoglobin.gastrointestinal [Presence] in Stool&quot;
+          },
+          {
+            &quot;code&quot;: &quot;2349-9&quot;,
+            &quot;display&quot;: &quot;Glucose [Presence] in Urine&quot;
+          },
+          {
+            &quot;code&quot;: &quot;2350-7&quot;,
+            &quot;display&quot;: &quot;Glucose [Mass/volume] in Urine&quot;
+          },
+          {
+            &quot;code&quot;: &quot;23785-9&quot;,
+            &quot;display&quot;: &quot;Trypanosoma cruzi Ab [Presence] in Serum&quot;
+          },
+          {
+            &quot;code&quot;: &quot;23820-4&quot;,
+            &quot;display&quot;: &quot;Aspergillus flavus Ab [Presence] in Serum by Immune diffusion (ID)&quot;
+          },
+          {
+            &quot;code&quot;: &quot;23826-1&quot;,
+            &quot;display&quot;: &quot;Bordetella pertussis DNA [Presence] in Unspecified specimen by Probe and target amplification method|Bordetella pertussis DNA [Presence] in Unspecified specimen by Probe and target amplification method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;23867-5&quot;,
+            &quot;display&quot;: &quot;Hantavirus sin nombre IgG Ab [Titer] in Serum&quot;
+          },
+          {
+            &quot;code&quot;: &quot;23868-3&quot;,
+            &quot;display&quot;: &quot;Hantavirus sin nombre IgM Ab [Titer] in Serum&quot;
+          },
+          {
+            &quot;code&quot;: &quot;23929-3&quot;,
+            &quot;display&quot;: &quot;Ribonucleoprotein extractable nuclear IgG Ab [Presence] in Serum&quot;
+          },
+          {
+            &quot;code&quot;: &quot;23980-6&quot;,
+            &quot;display&quot;: &quot;Borrelia burgdorferi IgG Ab [Presence] in Body fluid by Immunoblot (IB)&quot;
+          },
+          {
+            &quot;code&quot;: &quot;23982-2&quot;,
+            &quot;display&quot;: &quot;Borrelia burgdorferi IgM Ab [Presence] in Body fluid by Immunoblot (IB)&quot;
+          },
+          {
+            &quot;code&quot;: &quot;24015-0&quot;,
+            &quot;display&quot;: &quot;Influenza virus A+B Ag [Presence] in Unspecified specimen&quot;
+          },
+          {
+            &quot;code&quot;: &quot;24027-5&quot;,
+            &quot;display&quot;: &quot;Streptococcus pneumoniae Ag [Presence] in Urine&quot;
+          },
+          {
+            &quot;code&quot;: &quot;24111-7&quot;,
+            &quot;display&quot;: &quot;Neisseria gonorrhoeae DNA [Presence] in Unspecified specimen by Probe and target amplification method|Neisseria gonorrhoeae DNA [Presence] in Unspecified specimen by Probe and target amplification method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;24113-3&quot;,
+            &quot;display&quot;: &quot;Hepatitis B virus core IgM Ab [Presence] in Serum by Immunoassay|Hepatitis B virus core IgM Ab [Presence] in Serum or Plasma by Immunoassay&quot;
+          },
+          {
+            &quot;code&quot;: &quot;24114-1&quot;,
+            &quot;display&quot;: &quot;Epstein Barr virus capsid IgG Ab [Presence] in Serum by Immunoassay&quot;
+          },
+          {
+            &quot;code&quot;: &quot;24115-8&quot;,
+            &quot;display&quot;: &quot;Epstein Barr virus capsid IgM Ab [Presence] in Serum by Immunoassay&quot;
+          },
+          {
+            &quot;code&quot;: &quot;24119-0&quot;,
+            &quot;display&quot;: &quot;Cytomegalovirus IgM Ab [Presence] in Serum by Immunoassay&quot;
+          },
+          {
+            &quot;code&quot;: &quot;24312-1&quot;,
+            &quot;display&quot;: &quot;Treponema pallidum Ab [Presence] in Serum by Agglutination&quot;
+          },
+          {
+            &quot;code&quot;: &quot;2432-3&quot;,
+            &quot;display&quot;: &quot;Homogentisate [Presence] in Urine&quot;
+          },
+          {
+            &quot;code&quot;: &quot;2474-5&quot;,
+            &quot;display&quot;: &quot;Indicans [Presence] in Urine&quot;
+          },
+          {
+            &quot;code&quot;: &quot;2514-8&quot;,
+            &quot;display&quot;: &quot;Ketones [Presence] in Urine by Test strip&quot;
+          },
+          {
+            &quot;code&quot;: &quot;25514-1&quot;,
+            &quot;display&quot;: &quot;Rubella virus IgG Ab [Presence] in Serum&quot;
+          },
+          {
+            &quot;code&quot;: &quot;2606-2&quot;,
+            &quot;display&quot;: &quot;Melanin [Presence] in Urine&quot;
+          },
+          {
+            &quot;code&quot;: &quot;26620-5&quot;,
+            &quot;display&quot;: &quot;Hantavirus IgG Ab [Presence] in Serum&quot;
+          },
+          {
+            &quot;code&quot;: &quot;26960-5&quot;,
+            &quot;display&quot;: &quot;Trypsin [Presence] in Stool&quot;
+          },
+          {
+            &quot;code&quot;: &quot;27270-8&quot;,
+            &quot;display&quot;: &quot;4-Hydroxyphenylacetate [Presence] in Urine&quot;
+          },
+          {
+            &quot;code&quot;: &quot;27420-9&quot;,
+            &quot;display&quot;: &quot;Phosphatidylglycerol [Units/volume] in Amniotic fluid&quot;
+          },
+          {
+            &quot;code&quot;: &quot;2761-5&quot;,
+            &quot;display&quot;: &quot;Phenylketones [Presence] in Blood&quot;
+          },
+          {
+            &quot;code&quot;: &quot;28005-7&quot;,
+            &quot;display&quot;: &quot;MTHFR gene p.C677T [Presence] in Blood or Tissue by Molecular genetics method|MTHFR gene c.677C&gt;T [Presence] in Blood or Tissue by Molecular genetics method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;28060-2&quot;,
+            &quot;display&quot;: &quot;MTHFR gene p.A1298C [Presence] in Blood or Tissue by Molecular genetics method|MTHFR gene c.1298A&gt;C [Presence] in Blood or Tissue by Molecular genetics method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;28067-7&quot;,
+            &quot;display&quot;: &quot;Hemoglobin F [Presence] in Amniotic fluid&quot;
+          },
+          {
+            &quot;code&quot;: &quot;2887-8&quot;,
+            &quot;display&quot;: &quot;Protein [Presence] in Urine&quot;
+          },
+          {
+            &quot;code&quot;: &quot;29257-3&quot;,
+            &quot;display&quot;: &quot;Mycoplasma pneumoniae DNA [Presence] in Unspecified specimen by Probe and target amplification method|Mycoplasma pneumoniae DNA [Presence] in Unspecified specimen by Probe and target amplification method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;29495-9&quot;,
+            &quot;display&quot;: &quot;Herpes virus 6 DNA [Presence] in Unspecified specimen by Probe and target amplification method|Herpes virus 6 DNA [Presence] in Unspecified specimen by Probe and target amplification method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;29497-5&quot;,
+            &quot;display&quot;: &quot;Platelet associated IgG Ab [Presence] in Blood by Flow cytometry (FC)&quot;
+          },
+          {
+            &quot;code&quot;: &quot;29498-3&quot;,
+            &quot;display&quot;: &quot;Platelet associated IgM Ab [Presence] in Blood by Flow cytometry (FC)&quot;
+          },
+          {
+            &quot;code&quot;: &quot;29591-5&quot;,
+            &quot;display&quot;: &quot;Enterovirus RNA [Presence] in Unspecified specimen by Probe and target amplification method|Enterovirus RNA [Presence] in Unspecified specimen by Probe and target amplification method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;29610-3&quot;,
+            &quot;display&quot;: &quot;Hepatitis B virus DNA [Presence] in Serum or Plasma by Probe and target amplification method|Hepatitis B virus DNA [Presence] in Serum or Plasma by Probe and target amplification method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;29672-3&quot;,
+            &quot;display&quot;: &quot;Bordetella pertussis IgA Ab [Presence] in Serum&quot;
+          },
+          {
+            &quot;code&quot;: &quot;29673-1&quot;,
+            &quot;display&quot;: &quot;Bordetella pertussis IgM Ab [Presence] in Serum&quot;
+          },
+          {
+            &quot;code&quot;: &quot;29674-9&quot;,
+            &quot;display&quot;: &quot;Bordetella pertussis IgG Ab [Presence] in Serum&quot;
+          },
+          {
+            &quot;code&quot;: &quot;29723-4&quot;,
+            &quot;display&quot;: &quot;Bordetella parapertussis DNA [Presence] in Unspecified specimen by Probe and target amplification method|Bordetella parapertussis DNA [Presence] in Unspecified specimen by Probe and target amplification method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;29771-3&quot;,
+            &quot;display&quot;: &quot;Hemoglobin.gastrointestinal [Presence] in Stool by Immunologic method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;29778-8&quot;,
+            &quot;display&quot;: &quot;West Nile virus IgM Ab [Presence] in Unspecified specimen by Immunoassay&quot;
+          },
+          {
+            &quot;code&quot;: &quot;29891-9&quot;,
+            &quot;display&quot;: &quot;Helicobacter pylori [Presence] in Stomach by urea breath test&quot;
+          },
+          {
+            &quot;code&quot;: &quot;29899-2&quot;,
+            &quot;display&quot;: &quot;Gamma globulin [Presence] in 24 hour Urine&quot;
+          },
+          {
+            &quot;code&quot;: &quot;29901-6&quot;,
+            &quot;display&quot;: &quot;HTLV 1+2 Ab [Presence] in Serum by Immunoassay&quot;
+          },
+          {
+            &quot;code&quot;: &quot;29908-1&quot;,
+            &quot;display&quot;: &quot;Parainfluenza virus 1 RNA [Presence] in Unspecified specimen by Probe and target amplification method|Parainfluenza virus 1 RNA [Presence] in Unspecified specimen by Probe and target amplification method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;29909-9&quot;,
+            &quot;display&quot;: &quot;Parainfluenza virus 2 RNA [Presence] in Unspecified specimen by Probe and target amplification method|Parainfluenza virus 2 RNA [Presence] in Unspecified specimen by Probe and target amplification method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;29910-7&quot;,
+            &quot;display&quot;: &quot;Parainfluenza virus 3 RNA [Presence] in Unspecified specimen by Probe and target amplification method|Parainfluenza virus 3 RNA [Presence] in Unspecified specimen by Probe and target amplification method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;29945-3&quot;,
+            &quot;display&quot;: &quot;Alpha 1 globulin [Presence] in 24 hour Urine by Electrophoresis&quot;
+          },
+          {
+            &quot;code&quot;: &quot;29947-9&quot;,
+            &quot;display&quot;: &quot;Alpha 2 globulin [Presence] in 24 hour Urine by Electrophoresis&quot;
+          },
+          {
+            &quot;code&quot;: &quot;29950-3&quot;,
+            &quot;display&quot;: &quot;Nuclear IgG Ab [Presence] in Serum by Immunoassay&quot;
+          },
+          {
+            &quot;code&quot;: &quot;29951-1&quot;,
+            &quot;display&quot;: &quot;Beta globulin [Presence] in 24 hour Urine&quot;
+          },
+          {
+            &quot;code&quot;: &quot;29990-9&quot;,
+            &quot;display&quot;: &quot;Spermatozoa [Presence] in Semen by Light microscopy --post vasectomy&quot;
+          },
+          {
+            &quot;code&quot;: &quot;29994-1&quot;,
+            &quot;display&quot;: &quot;Basement membrane IgG Ab [Presence] in Serum by Immunofluorescence&quot;
+          },
+          {
+            &quot;code&quot;: &quot;29995-8&quot;,
+            &quot;display&quot;: &quot;Basement membrane IgA Ab [Presence] in Serum by Immunofluorescence&quot;
+          },
+          {
+            &quot;code&quot;: &quot;30036-8&quot;,
+            &quot;display&quot;: &quot;Aspergillus fumigatus 2 Ab [Presence] in Serum by Immune diffusion (ID)&quot;
+          },
+          {
+            &quot;code&quot;: &quot;30167-1&quot;,
+            &quot;display&quot;: &quot;Human papilloma virus 16+18+31+33+35+39+45+51+52+56+58+59+68 DNA [Presence] in Cervix by Probe and signal amplification method|Human papilloma virus 16+18+31+33+35+39+45+51+52+56+58+59+68 DNA [Presence] in Cervix by Probe and signal amplification method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;30219-0&quot;,
+            &quot;display&quot;: &quot;Coxsackievirus A9 Ab [Presence] in Serum&quot;
+          },
+          {
+            &quot;code&quot;: &quot;30246-3&quot;,
+            &quot;display&quot;: &quot;Cytomegalovirus DNA [Presence] in Serum or Plasma by Probe and target amplification method|Cytomegalovirus DNA [Presence] in Serum or Plasma by Probe and target amplification method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;30361-0&quot;,
+            &quot;display&quot;: &quot;HIV 2 Ab [Presence] in Serum by Immunoassay&quot;
+          },
+          {
+            &quot;code&quot;: &quot;30557-3&quot;,
+            &quot;display&quot;: &quot;Smooth muscle IgG Ab [Presence] in Serum&quot;
+          },
+          {
+            &quot;code&quot;: &quot;30577-1&quot;,
+            &quot;display&quot;: &quot;2-methyl,3-hydroxybutyrate (C5-OH) [Presence] in Urine&quot;
+          },
+          {
+            &quot;code&quot;: &quot;31153-0&quot;,
+            &quot;display&quot;: &quot;Coccidioides sp Ab [Presence] in Unspecified specimen by Immune diffusion (ID)&quot;
+          },
+          {
+            &quot;code&quot;: &quot;31201-7&quot;,
+            &quot;display&quot;: &quot;HIV 1+2 Ab [Presence] in Serum by Immunoassay|HIV 1+2 Ab [Presence] in Serum or Plasma by Immunoassay&quot;
+          },
+          {
+            &quot;code&quot;: &quot;31539-0&quot;,
+            &quot;display&quot;: &quot;Neuronal nuclear type 2 Ab [Presence] in Serum&quot;
+          },
+          {
+            &quot;code&quot;: &quot;31545-7&quot;,
+            &quot;display&quot;: &quot;Nuclear IgG Ab [Presence] in Serum&quot;
+          },
+          {
+            &quot;code&quot;: &quot;31588-7&quot;,
+            &quot;display&quot;: &quot;Ribonucleoprotein extractable nuclear IgG Ab [Units/volume] in Serum&quot;
+          },
+          {
+            &quot;code&quot;: &quot;31625-7&quot;,
+            &quot;display&quot;: &quot;Sjogrens syndrome-A extractable nuclear IgG Ab [Presence] in Serum&quot;
+          },
+          {
+            &quot;code&quot;: &quot;31626-5&quot;,
+            &quot;display&quot;: &quot;Sjogrens syndrome-B extractable nuclear IgG Ab [Presence] in Serum&quot;
+          },
+          {
+            &quot;code&quot;: &quot;31627-3&quot;,
+            &quot;display&quot;: &quot;Smith extractable nuclear Ab [Presence] in Serum&quot;
+          },
+          {
+            &quot;code&quot;: &quot;31788-3&quot;,
+            &quot;display&quot;: &quot;Cryptococcus sp Ag [Presence] in Cerebral spinal fluid&quot;
+          },
+          {
+            &quot;code&quot;: &quot;31843-6&quot;,
+            &quot;display&quot;: &quot;Helicobacter pylori Ag [Presence] in Stool&quot;
+          },
+          {
+            &quot;code&quot;: &quot;31859-2&quot;,
+            &quot;display&quot;: &quot;Influenza virus A Ag [Presence] in Unspecified specimen&quot;
+          },
+          {
+            &quot;code&quot;: &quot;31864-2&quot;,
+            &quot;display&quot;: &quot;Influenza virus B Ag [Presence] in Unspecified specimen&quot;
+          },
+          {
+            &quot;code&quot;: &quot;31969-9&quot;,
+            &quot;display&quot;: &quot;Streptococcus pneumoniae Ag [Presence] in Unspecified specimen&quot;
+          },
+          {
+            &quot;code&quot;: &quot;32131-5&quot;,
+            &quot;display&quot;: &quot;Hantavirus IgM Ab [Presence] in Serum&quot;
+          },
+          {
+            &quot;code&quot;: &quot;32356-8&quot;,
+            &quot;display&quot;: &quot;Yeast [Presence] in Urine sediment by Light microscopy&quot;
+          },
+          {
+            &quot;code&quot;: &quot;32358-4&quot;,
+            &quot;display&quot;: &quot;Protein fractions.oligoclonal bands [Presence] in Cerebral spinal fluid&quot;
+          },
+          {
+            &quot;code&quot;: &quot;3241-7&quot;,
+            &quot;display&quot;: &quot;Coagulation factor XIII coagulum dissolution at 24H [Presence] in Platelet poor plasma by Coagulation assay|Coagulation factor XIII coagulum dissolution at 24 hours [Presence] in Platelet poor plasma by Coagulation assay&quot;
+          },
+          {
+            &quot;code&quot;: &quot;32637-1&quot;,
+            &quot;display&quot;: &quot;Urease [Presence] in Tissue&quot;
+          },
+          {
+            &quot;code&quot;: &quot;32765-0&quot;,
+            &quot;display&quot;: &quot;Yeast [Presence] in Unspecified specimen by Wet preparation&quot;
+          },
+          {
+            &quot;code&quot;: &quot;32789-0&quot;,
+            &quot;display&quot;: &quot;Viscosity of Semen Qualitative&quot;
+          },
+          {
+            &quot;code&quot;: &quot;33031-6&quot;,
+            &quot;display&quot;: &quot;Sodium urate crystals [#/area] in Urine sediment by Microscopy low power field&quot;
+          },
+          {
+            &quot;code&quot;: &quot;33032-4&quot;,
+            &quot;display&quot;: &quot;Spermatozoa Progressive [Presence] in Semen&quot;
+          },
+          {
+            &quot;code&quot;: &quot;33291-6&quot;,
+            &quot;display&quot;: &quot;Herpes simplex virus 1 IgG Ab [Presence] in Serum by Immunoblot (IB)&quot;
+          },
+          {
+            &quot;code&quot;: &quot;33422-7&quot;,
+            &quot;display&quot;: &quot;Amphiphysin Ab [Presence] in Serum&quot;
+          },
+          {
+            &quot;code&quot;: &quot;3349-8&quot;,
+            &quot;display&quot;: &quot;Amphetamines [Presence] in Urine&quot;
+          },
+          {
+            &quot;code&quot;: &quot;33615-6&quot;,
+            &quot;display&quot;: &quot;Neuronal nuclear type 1 Ab [Presence] in Serum&quot;
+          },
+          {
+            &quot;code&quot;: &quot;3376-1&quot;,
+            &quot;display&quot;: &quot;Barbiturates [Presence] in Serum, Plasma or Blood&quot;
+          },
+          {
+            &quot;code&quot;: &quot;3377-9&quot;,
+            &quot;display&quot;: &quot;Barbiturates [Presence] in Urine&quot;
+          },
+          {
+            &quot;code&quot;: &quot;33861-6&quot;,
+            &quot;display&quot;: &quot;Starch granules [Presence] in Urine sediment by Light microscopy&quot;
+          },
+          {
+            &quot;code&quot;: &quot;3390-2&quot;,
+            &quot;display&quot;: &quot;Benzodiazepines [Presence] in Urine&quot;
+          },
+          {
+            &quot;code&quot;: &quot;33923-4&quot;,
+            &quot;display&quot;: &quot;Hemosiderin [Presence] in Unspecified specimen&quot;
+          },
+          {
+            &quot;code&quot;: &quot;33930-9&quot;,
+            &quot;display&quot;: &quot;Lupus anticoagulant neutralization hexagonal phase phospholipid [Presence] in Platelet poor plasma|aPTT W excess hexagonal phospholipid (StaClot LA confirm)&quot;
+          },
+          {
+            &quot;code&quot;: &quot;3414-0&quot;,
+            &quot;display&quot;: &quot;Buprenorphine [Presence] in Urine&quot;
+          },
+          {
+            &quot;code&quot;: &quot;34469-7&quot;,
+            &quot;display&quot;: &quot;Leukocytes [Presence] in Bile fluid by Light microscopy&quot;
+          },
+          {
+            &quot;code&quot;: &quot;34470-5&quot;,
+            &quot;display&quot;: &quot;Giardia lamblia Ag [Presence] in Bile fluid&quot;
+          },
+          {
+            &quot;code&quot;: &quot;34471-3&quot;,
+            &quot;display&quot;: &quot;Calcium bilirubinate crystals [Presence] in Bile fluid by Light microscopy&quot;
+          },
+          {
+            &quot;code&quot;: &quot;34472-1&quot;,
+            &quot;display&quot;: &quot;Cholesterol crystals [Presence] in Bile fluid by Light microscopy&quot;
+          },
+          {
+            &quot;code&quot;: &quot;34473-9&quot;,
+            &quot;display&quot;: &quot;Neutrophils.vacuolated+Segmented [Presence] in Blood&quot;
+          },
+          {
+            &quot;code&quot;: &quot;34487-9&quot;,
+            &quot;display&quot;: &quot;Influenza virus A RNA [Presence] in Unspecified specimen by Probe and target amplification method|Influenza virus A RNA [Presence] in Unspecified specimen by Probe and target amplification method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;34701-3&quot;,
+            &quot;display&quot;: &quot;Ab [Presence] in Serum|Platelet Ab.heparin induced [Presence] in Serum|Heparin induced platelet Ab [Presence] in Serum&quot;
+          },
+          {
+            &quot;code&quot;: &quot;34706-2&quot;,
+            &quot;display&quot;: &quot;CFTR gene p.3199 del6 [Presence] in Blood or Tissue by Molecular genetics method|CFTR gene c.3199del6 [Presence] in Blood or Tissue by Molecular genetics method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;34713-8&quot;,
+            &quot;display&quot;: &quot;Clostridium difficile toxin A+B [Presence] in Stool&quot;
+          },
+          {
+            &quot;code&quot;: &quot;34729-4&quot;,
+            &quot;display&quot;: &quot;CFTR gene p.R117H+5T variant [Presence] in Blood or Tissue by Molecular genetics method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;34892-0&quot;,
+            &quot;display&quot;: &quot;West Nile virus RNA [Presence] in Unspecified specimen by Probe and target amplification method|West Nile virus RNA [Presence] in Unspecified specimen by Probe and target amplification method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;35270-8&quot;,
+            &quot;display&quot;: &quot;Candida sp Ab [Presence] in Serum by Immune diffusion (ID)&quot;
+          },
+          {
+            &quot;code&quot;: &quot;35271-6&quot;,
+            &quot;display&quot;: &quot;Candida sp Ag [Presence] in Serum by Latex agglutination&quot;
+          },
+          {
+            &quot;code&quot;: &quot;35272-4&quot;,
+            &quot;display&quot;: &quot;Centromere IgG Ab [Presence] in Serum&quot;
+          },
+          {
+            &quot;code&quot;: &quot;35277-3&quot;,
+            &quot;display&quot;: &quot;Myocardium IgG Ab [Presence] in Serum&quot;
+          },
+          {
+            &quot;code&quot;: &quot;35284-9&quot;,
+            &quot;display&quot;: &quot;Histone IgG Ab [Presence] in Serum&quot;
+          },
+          {
+            &quot;code&quot;: &quot;35471-2&quot;,
+            &quot;display&quot;: &quot;HLA Ab [Presence]&quot;
+          },
+          {
+            &quot;code&quot;: &quot;35492-8&quot;,
+            &quot;display&quot;: &quot;Methicillin resistant Staphylococcus aureus (MRSA) DNA [Presence] by Probe and target amplification method|Methicillin resistant Staphylococcus aureus (MRSA) DNA [Presence] by Probe and target amplification method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;35503-2&quot;,
+            &quot;display&quot;: &quot;Arterial patency Wrist artery --pre arterial puncture&quot;
+          },
+          {
+            &quot;code&quot;: &quot;35729-3&quot;,
+            &quot;display&quot;: &quot;Chlamydia sp DNA [Presence] in Unspecified specimen by Probe and target amplification method|Chlamydia sp DNA [Presence] in Unspecified specimen by Probe and target amplification method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;3773-9&quot;,
+            &quot;display&quot;: &quot;Methadone [Presence] in Urine&quot;
+          },
+          {
+            &quot;code&quot;: &quot;38380-2&quot;,
+            &quot;display&quot;: &quot;HFE gene p.S65C [Presence] in Blood or Tissue by Molecular genetics method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;3879-4&quot;,
+            &quot;display&quot;: &quot;Opiates [Presence] in Urine&quot;
+          },
+          {
+            &quot;code&quot;: &quot;38917-1&quot;,
+            &quot;display&quot;: &quot;Human metapneumovirus RNA [Presence] in Unspecified specimen by Probe and target amplification method|Human metapneumovirus RNA [Presence] in Unspecified specimen by Probe and target amplification method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;3936-2&quot;,
+            &quot;display&quot;: &quot;Phencyclidine [Presence] in Urine&quot;
+          },
+          {
+            &quot;code&quot;: &quot;39528-5&quot;,
+            &quot;display&quot;: &quot;Adenovirus DNA [Presence] in Unspecified specimen by Probe and target amplification method|Adenovirus DNA [Presence] in Unspecified specimen by Probe and target amplification method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;4027-9&quot;,
+            &quot;display&quot;: &quot;Secobarbital [Presence] in Serum or Plasma&quot;
+          },
+          {
+            &quot;code&quot;: &quot;40473-1&quot;,
+            &quot;display&quot;: &quot;Thermoactinomyces vulgaris 1 Ab [Presence] in Serum&quot;
+          },
+          {
+            &quot;code&quot;: &quot;40703-1&quot;,
+            &quot;display&quot;: &quot;Lactoferrin [Presence] in Stool by Immunoassay&quot;
+          },
+          {
+            &quot;code&quot;: &quot;40729-6&quot;,
+            &quot;display&quot;: &quot;Herpes simplex virus IgM Ab [Presence] in Serum by Immunoassay&quot;
+          },
+          {
+            &quot;code&quot;: &quot;4073-3&quot;,
+            &quot;display&quot;: &quot;Tricyclic antidepressants [Presence] in Serum or Plasma&quot;
+          },
+          {
+            &quot;code&quot;: &quot;4093-1&quot;,
+            &quot;display&quot;: &quot;Verapamil [Presence] in Serum or Plasma&quot;
+          },
+          {
+            &quot;code&quot;: &quot;40982-1&quot;,
+            &quot;display&quot;: &quot;Influenza virus B RNA [Presence] in Unspecified specimen by Probe and target amplification method|Influenza virus B RNA [Presence] in Unspecified specimen by Probe and target amplification method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;40988-8&quot;,
+            &quot;display&quot;: &quot;Respiratory syncytial virus RNA [Presence] in Unspecified specimen by Probe and target amplification method|Respiratory syncytial virus RNA [Presence] in Unspecified specimen by Probe and target amplification method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;40991-2&quot;,
+            &quot;display&quot;: &quot;Rhinovirus+Enterovirus RNA [Presence] in Unspecified specimen by Probe and target amplification method|Rhinovirus+Enterovirus RNA [Presence] in Unspecified specimen by Probe and target amplification method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;41005-0&quot;,
+            &quot;display&quot;: &quot;Human coronavirus NL63 RNA [Presence] in Unspecified specimen by Probe and target amplification method|Human coronavirus NL63 RNA [Presence] in Unspecified specimen by Probe and target amplification method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;41010-0&quot;,
+            &quot;display&quot;: &quot;Parainfluenza virus 4 RNA [Presence] in Unspecified specimen by Probe and target amplification method|Parainfluenza virus 4 RNA [Presence] in Unspecified specimen by Probe and target amplification method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;41400-3&quot;,
+            &quot;display&quot;: &quot;Yersinia sp IgA Ab [Presence] in Serum by Immunoblot (IB)&quot;
+          },
+          {
+            &quot;code&quot;: &quot;41401-1&quot;,
+            &quot;display&quot;: &quot;Yersinia sp IgG Ab [Presence] in Serum by Immunoblot (IB)&quot;
+          },
+          {
+            &quot;code&quot;: &quot;42241-0&quot;,
+            &quot;display&quot;: &quot;Cocaine+Benzoylecgonine [Presence] in Urine by Screen method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;42481-2&quot;,
+            &quot;display&quot;: &quot;Human papilloma virus 6+11+42+43+44 DNA [Presence] in Cervix by Probe and signal amplification method|Human papilloma virus 6+11+42+43+44 DNA [Presence] in Cervix by Probe and signal amplification method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;42714-6&quot;,
+            &quot;display&quot;: &quot;t(9,22)(ABL1,BCR) p210 Translocation [Presence] in Blood or Tissue by Molecular genetics method|t(9;22)(q34.1;q11)(ABL1,BCR) b2a2+b3a2 fusion transcript [Presence] in Blood or Tissue by Molecular genetics method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;42938-1&quot;,
+            &quot;display&quot;: &quot;CFTR gene allele 1 [Presence] in Blood or Tissue by Molecular genetics method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;42939-9&quot;,
+            &quot;display&quot;: &quot;CFTR gene allele 2 [Presence] in Blood or Tissue by Molecular genetics method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;43249-2&quot;,
+            &quot;display&quot;: &quot;X ray dye crystals [Presence] in Urine sediment by Light microscopy&quot;
+          },
+          {
+            &quot;code&quot;: &quot;43399-5&quot;,
+            &quot;display&quot;: &quot;JAK2 gene p.V617F [Presence] in Blood or Tissue by Molecular genetics method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;43597-4&quot;,
+            &quot;display&quot;: &quot;Inner Ear 68kD Ab [Presence] in Serum or Plasma by Immunoblot (IB)&quot;
+          },
+          {
+            &quot;code&quot;: &quot;44099-0&quot;,
+            &quot;display&quot;: &quot;Galactomannan Ag [Presence] in Serum or Plasma by Immunoassay&quot;
+          },
+          {
+            &quot;code&quot;: &quot;44332-5&quot;,
+            &quot;display&quot;: &quot;Jo-1 extractable nuclear IgG Ab [Presence] in Serum&quot;
+          },
+          {
+            &quot;code&quot;: &quot;44754-0&quot;,
+            &quot;display&quot;: &quot;Hepatitis D virus Ag [Presence] in Serum by Immunoassay&quot;
+          },
+          {
+            &quot;code&quot;: &quot;44877-9&quot;,
+            &quot;display&quot;: &quot;Insulin dependent diabetes mellitus [Presence]&quot;
+          },
+          {
+            &quot;code&quot;: &quot;44938-9&quot;,
+            &quot;display&quot;: &quot;Hepatitis D virus IgM Ab [Presence] in Serum by Immunoassay&quot;
+          },
+          {
+            &quot;code&quot;: &quot;45153-4&quot;,
+            &quot;display&quot;: &quot;HLA Ab in Serum&quot;
+          },
+          {
+            &quot;code&quot;: &quot;4579-9&quot;,
+            &quot;display&quot;: &quot;Hemoglobin F [Presence] in Blood&quot;
+          },
+          {
+            &quot;code&quot;: &quot;4631-8&quot;,
+            &quot;display&quot;: &quot;Hemoglobin F [Presence] in Stool by Apt-Downey method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;4639-1&quot;,
+            &quot;display&quot;: &quot;Unstable Hemoglobin [Presence] in Red Blood Cells&quot;
+          },
+          {
+            &quot;code&quot;: &quot;46740-7&quot;,
+            &quot;display&quot;: &quot;Hemoglobin disorders newborn screen interpretation&quot;
+          },
+          {
+            &quot;code&quot;: &quot;46771-2&quot;,
+            &quot;display&quot;: &quot;Classical galactosemia newborn screen interpretation&quot;
+          },
+          {
+            &quot;code&quot;: &quot;47238-1&quot;,
+            &quot;display&quot;: &quot;Treponema pallidum IgG Ab [Presence] in Serum by Immunoassay&quot;
+          },
+          {
+            &quot;code&quot;: &quot;47251-4&quot;,
+            &quot;display&quot;: &quot;BK virus DNA [Presence] in Unspecified specimen by Probe and target amplification method|BK virus DNA [Presence] in Unspecified specimen by Probe and target amplification method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;49524-2&quot;,
+            &quot;display&quot;: &quot;Influenza virus A H3 RNA [Presence] in Unspecified specimen by Probe and target amplification method|Influenza virus A H3 RNA [Presence] in Unspecified specimen by Probe and target amplification method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;49541-6&quot;,
+            &quot;display&quot;: &quot;Fasting status [Presence] - Reported|Fasting status - Reported&quot;
+          },
+          {
+            &quot;code&quot;: &quot;49795-8&quot;,
+            &quot;display&quot;: &quot;t(9,22)(ABL1,BCR) p190 Translocation [Presence] in Blood or Tissue by Molecular genetics method|t(9;22)(q34.1;q11)(ABL1,BCR) e1a2 fusion transcript [Presence] in Blood or Tissue by Molecular genetics method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;5000-5&quot;,
+            &quot;display&quot;: &quot;Cytomegalovirus DNA [Presence] in Unspecified specimen by Probe and target amplification method|Cytomegalovirus DNA [Presence] in Unspecified specimen by Probe and target amplification method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;5005-4&quot;,
+            &quot;display&quot;: &quot;Epstein Barr virus DNA [Presence] in Unspecified specimen by Probe and target amplification method|Epstein Barr virus DNA [Presence] in Unspecified specimen by Probe and target amplification method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;5010-4&quot;,
+            &quot;display&quot;: &quot;Hepatitis C virus RNA [Presence] in Blood by Probe and target amplification method|Hepatitis C virus RNA [Presence] in Blood by Probe and target amplification method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;5014-6&quot;,
+            &quot;display&quot;: &quot;Herpes simplex virus DNA [Presence] in Unspecified specimen by Probe and target amplification method|Herpes simplex virus DNA [Presence] in Unspecified specimen by Probe and target amplification method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;5018-7&quot;,
+            &quot;display&quot;: &quot;HIV 1 RNA [Presence] in Unspecified specimen by Probe and target amplification method|HIV 1 RNA [Presence] in Unspecified specimen by Probe and target amplification method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;5020-3&quot;,
+            &quot;display&quot;: &quot;Legionella sp rRNA [Presence] in Unspecified specimen by DNA probe&quot;
+          },
+          {
+            &quot;code&quot;: &quot;5028-6&quot;,
+            &quot;display&quot;: &quot;Neisseria gonorrhoeae rRNA [Presence] in Unspecified specimen by DNA probe&quot;
+          },
+          {
+            &quot;code&quot;: &quot;50322-7&quot;,
+            &quot;display&quot;: &quot;MLH-1 Ag [Presence] in Tissue by Immune stain&quot;
+          },
+          {
+            &quot;code&quot;: &quot;50323-5&quot;,
+            &quot;display&quot;: &quot;MSH-2 Ag [Presence] in Tissue by Immune stain&quot;
+          },
+          {
+            &quot;code&quot;: &quot;50324-3&quot;,
+            &quot;display&quot;: &quot;MSH-6 Ag [Presence] in Tissue by Immune stain&quot;
+          },
+          {
+            &quot;code&quot;: &quot;50328-4&quot;,
+            &quot;display&quot;: &quot;PMS-2 Ag [Presence] in Tissue by Immune stain&quot;
+          },
+          {
+            &quot;code&quot;: &quot;50385-4&quot;,
+            &quot;display&quot;: &quot;Alpha-1-Microglobulin.placental [Presence] in Vaginal fluid&quot;
+          },
+          {
+            &quot;code&quot;: &quot;5052-6&quot;,
+            &quot;display&quot;: &quot;Aspergillus sp Ab [Presence] in Serum by Immune diffusion (ID)&quot;
+          },
+          {
+            &quot;code&quot;: &quot;5058-3&quot;,
+            &quot;display&quot;: &quot;Blastomyces dermatitidis Ab [Presence] in Serum by Immune diffusion (ID)&quot;
+          },
+          {
+            &quot;code&quot;: &quot;51006-5&quot;,
+            &quot;display&quot;: &quot;Direct antiglobulin test.unspecified reagent [Presence] on Red Blood Cells&quot;
+          },
+          {
+            &quot;code&quot;: &quot;5117-7&quot;,
+            &quot;display&quot;: &quot;Cryoglobulin [Presence] in Serum&quot;
+          },
+          {
+            &quot;code&quot;: &quot;5156-5&quot;,
+            &quot;display&quot;: &quot;Epstein Barr virus nuclear IgG Ab [Presence] in Serum by Immunoassay&quot;
+          },
+          {
+            &quot;code&quot;: &quot;5195-3&quot;,
+            &quot;display&quot;: &quot;Hepatitis B virus surface Ag [Presence] in Serum&quot;
+          },
+          {
+            &quot;code&quot;: &quot;5196-1&quot;,
+            &quot;display&quot;: &quot;Hepatitis B virus surface Ag [Presence] in Serum by Immunoassay|Hepatitis B virus surface Ag [Presence] in Serum or Plasma by Immunoassay&quot;
+          },
+          {
+            &quot;code&quot;: &quot;5199-5&quot;,
+            &quot;display&quot;: &quot;Hepatitis C virus Ab [Presence] in Serum by Immunoblot (IB)&quot;
+          },
+          {
+            &quot;code&quot;: &quot;5213-4&quot;,
+            &quot;display&quot;: &quot;Heterophile Ab [Presence] in Serum by Latex agglutination&quot;
+          },
+          {
+            &quot;code&quot;: &quot;5218-3&quot;,
+            &quot;display&quot;: &quot;Histoplasma capsulatum Ab [Presence] in Serum by Immune diffusion (ID)&quot;
+          },
+          {
+            &quot;code&quot;: &quot;5290-2&quot;,
+            &quot;display&quot;: &quot;Reagin Ab [Presence] in Cerebral spinal fluid by VDRL&quot;
+          },
+          {
+            &quot;code&quot;: &quot;5292-8&quot;,
+            &quot;display&quot;: &quot;Reagin Ab [Presence] in Serum by VDRL&quot;
+          },
+          {
+            &quot;code&quot;: &quot;5297-7&quot;,
+            &quot;display&quot;: &quot;Rheumatoid factor [Presence] in Serum by Latex agglutination&quot;
+          },
+          {
+            &quot;code&quot;: &quot;5358-7&quot;,
+            &quot;display&quot;: &quot;Smooth muscle Ab [Titer] in Serum by Immunofluorescence&quot;
+          },
+          {
+            &quot;code&quot;: &quot;5393-4&quot;,
+            &quot;display&quot;: &quot;Treponema pallidum Ab [Presence] in Serum by Immunofluorescence&quot;
+          },
+          {
+            &quot;code&quot;: &quot;54067-4&quot;,
+            &quot;display&quot;: &quot;Clostridium difficile toxin genes [Presence] in Stool by Probe and target amplification method|Clostridium difficile toxin genes [Presence] in Stool by Probe and target amplification method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;54142-5&quot;,
+            &quot;display&quot;: &quot;Candida sp DNA [Presence] in Vaginal fluid by Probe and signal amplification method|Candida sp DNA [Presence] in Vaginal fluid by Probe and signal amplification method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;54143-3&quot;,
+            &quot;display&quot;: &quot;Gardnerella vaginalis DNA [Presence] in Vaginal fluid by Probe and signal amplification method|Gardnerella vaginalis DNA [Presence] in Vaginal fluid by Probe and signal amplification method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;54144-1&quot;,
+            &quot;display&quot;: &quot;Trichomonas vaginalis DNA [Presence] in Vaginal fluid by Probe and signal amplification method|Trichomonas vaginalis DNA [Presence] in Vaginal fluid by Probe and signal amplification method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;54905-5&quot;,
+            &quot;display&quot;: &quot;Norovirus 1 RNA [Presence] in Stool by Probe and target amplification method|Norovirus 1 RNA [Presence] in Stool by Probe and target amplification method|Norovirus Genogroup I RNA [Presence] in Stool by Probe and target amplification method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;54906-3&quot;,
+            &quot;display&quot;: &quot;Norovirus 2 RNA [Presence] in Stool by Probe and target amplification method|Norovirus 2 RNA [Presence] in Stool by Probe and target amplification method|Norovirus Genogroup II RNA [Presence] in Stool by Probe and target amplification method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;550-4&quot;,
+            &quot;display&quot;: &quot;Bordetella pertussis Ag [Presence] in Unspecified specimen by Immunofluorescence&quot;
+          },
+          {
+            &quot;code&quot;: &quot;55464-2&quot;,
+            &quot;display&quot;: &quot;Influenza virus A swine origin RNA [Presence] in Unspecified specimen by Probe and target amplification method|Influenza virus A swine origin RNA [Presence] in Unspecified specimen by Probe and target amplification method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;55465-9&quot;,
+            &quot;display&quot;: &quot;Influenza virus A H1 2009 pandemic RNA [Presence] in Unspecified specimen by Probe and target amplification method|Influenza virus A H1 2009 pandemic RNA [Presence] in Unspecified specimen by Probe and target amplification method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;5766-1&quot;,
+            &quot;display&quot;: &quot;Ammonium urate crystals [Presence] in Urine sediment by Light microscopy&quot;
+          },
+          {
+            &quot;code&quot;: &quot;5770-3&quot;,
+            &quot;display&quot;: &quot;Bilirubin [Presence] in Urine by Test strip|Bilirubin.total [Presence] in Urine by Test strip&quot;
+          },
+          {
+            &quot;code&quot;: &quot;5771-1&quot;,
+            &quot;display&quot;: &quot;Bilirubin crystals [Presence] in Urine sediment by Light microscopy&quot;
+          },
+          {
+            &quot;code&quot;: &quot;5773-7&quot;,
+            &quot;display&quot;: &quot;Calcium carbonate crystals [Presence] in Urine sediment by Light microscopy&quot;
+          },
+          {
+            &quot;code&quot;: &quot;5774-5&quot;,
+            &quot;display&quot;: &quot;Calcium oxalate crystals [Presence] in Urine sediment by Light microscopy&quot;
+          },
+          {
+            &quot;code&quot;: &quot;5775-2&quot;,
+            &quot;display&quot;: &quot;Calcium phosphate crystals [Presence] in Urine sediment by Light microscopy&quot;
+          },
+          {
+            &quot;code&quot;: &quot;5777-8&quot;,
+            &quot;display&quot;: &quot;Cholesterol crystals [Presence] in Urine sediment by Light microscopy&quot;
+          },
+          {
+            &quot;code&quot;: &quot;5783-6&quot;,
+            &quot;display&quot;: &quot;Unidentified crystals [Presence] in Urine sediment by Light microscopy&quot;
+          },
+          {
+            &quot;code&quot;: &quot;5784-4&quot;,
+            &quot;display&quot;: &quot;Cystine crystals [Presence] in Urine sediment by Light microscopy&quot;
+          },
+          {
+            &quot;code&quot;: &quot;57901-1&quot;,
+            &quot;display&quot;: &quot;Clostridium difficile glutamate dehydrogenase [Presence] in Stool&quot;
+          },
+          {
+            &quot;code&quot;: &quot;5794-3&quot;,
+            &quot;display&quot;: &quot;Hemoglobin [Presence] in Urine by Test strip&quot;
+          },
+          {
+            &quot;code&quot;: &quot;5795-0&quot;,
+            &quot;display&quot;: &quot;Hippurate crystals [Presence] in Urine sediment by Light microscopy&quot;
+          },
+          {
+            &quot;code&quot;: &quot;5799-2&quot;,
+            &quot;display&quot;: &quot;Leukocyte esterase [Presence] in Urine by Test strip&quot;
+          },
+          {
+            &quot;code&quot;: &quot;58012-6&quot;,
+            &quot;display&quot;: &quot;Natalizumab Ab [Presence] in Serum&quot;
+          },
+          {
+            &quot;code&quot;: &quot;5802-4&quot;,
+            &quot;display&quot;: &quot;Nitrite [Presence] in Urine by Test strip&quot;
+          },
+          {
+            &quot;code&quot;: &quot;5809-9&quot;,
+            &quot;display&quot;: &quot;Reducing substances [Presence] in Urine&quot;
+          },
+          {
+            &quot;code&quot;: &quot;5813-1&quot;,
+            &quot;display&quot;: &quot;Trichomonas vaginalis [Presence] in Urine sediment by Light microscopy&quot;
+          },
+          {
+            &quot;code&quot;: &quot;5814-9&quot;,
+            &quot;display&quot;: &quot;Triple phosphate crystals [Presence] in Urine sediment by Light microscopy&quot;
+          },
+          {
+            &quot;code&quot;: &quot;5815-6&quot;,
+            &quot;display&quot;: &quot;Tyrosine crystals [Presence] in Urine sediment by Light microscopy&quot;
+          },
+          {
+            &quot;code&quot;: &quot;5817-2&quot;,
+            &quot;display&quot;: &quot;Urate crystals [Presence] in Urine sediment by Light microscopy&quot;
+          },
+          {
+            &quot;code&quot;: &quot;58415-1&quot;,
+            &quot;display&quot;: &quot;BRAF gene p.V600E [Presence] in Tissue by Molecular genetics method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;58416-9&quot;,
+            &quot;display&quot;: &quot;MLH1 gene methylation [Presence] in Tissue by Molecular genetics method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;5846-1&quot;,
+            &quot;display&quot;: &quot;Herpes simplex virus 1 Ag [Presence] in Unspecified specimen by Immunofluorescence&quot;
+          },
+          {
+            &quot;code&quot;: &quot;5849-5&quot;,
+            &quot;display&quot;: &quot;Herpes simplex virus 2 Ag [Presence] in Unspecified specimen by Immunofluorescence&quot;
+          },
+          {
+            &quot;code&quot;: &quot;5863-6&quot;,
+            &quot;display&quot;: &quot;Influenza virus A Ag [Presence] in Unspecified specimen by Immunofluorescence&quot;
+          },
+          {
+            &quot;code&quot;: &quot;5867-7&quot;,
+            &quot;display&quot;: &quot;Influenza virus B Ag [Presence] in Unspecified specimen by Immunofluorescence&quot;
+          },
+          {
+            &quot;code&quot;: &quot;58751-9&quot;,
+            &quot;display&quot;: &quot;Treponema pallidum IgG Ab [Presence] in Cerebral spinal fluid by Immunofluorescence&quot;
+          },
+          {
+            &quot;code&quot;: &quot;5876-8&quot;,
+            &quot;display&quot;: &quot;Respiratory syncytial virus Ag [Presence] in Unspecified specimen by Immunoassay&quot;
+          },
+          {
+            &quot;code&quot;: &quot;5880-0&quot;,
+            &quot;display&quot;: &quot;Rotavirus Ag [Presence] in Stool by Immunoassay&quot;
+          },
+          {
+            &quot;code&quot;: &quot;588-4&quot;,
+            &quot;display&quot;: &quot;Legionella pneumophila Ag [Presence] in Unspecified specimen by Immunofluorescence&quot;
+          },
+          {
+            &quot;code&quot;: &quot;59262-6&quot;,
+            &quot;display&quot;: &quot;Leukocyte esterase [Presence] in Cerebral spinal fluid by Test strip&quot;
+          },
+          {
+            &quot;code&quot;: &quot;59420-0&quot;,
+            &quot;display&quot;: &quot;Human papilloma virus16+18+31+33+35+39+45+51+52+56+58+59+66+68 DNA [Presence] in Cervix by Probe and signal amplification method|Human papilloma virus 16+18+31+33+35+39+45+51+52+56+58+59+66+68 DNA [Presence] in Cervix by Probe and signal amplification method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;59838-3&quot;,
+            &quot;display&quot;: &quot;Cytomegalovirus Ab [Presence] in Serum or Plasma by Latex agglutination&quot;
+          },
+          {
+            &quot;code&quot;: &quot;59839-1&quot;,
+            &quot;display&quot;: &quot;Urate crystals [Presence] in Tissue by Light microscopy&quot;
+          },
+          {
+            &quot;code&quot;: &quot;60340-7&quot;,
+            &quot;display&quot;: &quot;Crystals.amorphous [Presence] in Urine sediment by Light microscopy&quot;
+          },
+          {
+            &quot;code&quot;: &quot;61404-0&quot;,
+            &quot;display&quot;: &quot;Staphylococcus aureus DNA [Presence] in Unspecified specimen by Probe and target amplification method|Staphylococcus aureus DNA [Presence] in Unspecified specimen by Probe and target amplification method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;62423-9&quot;,
+            &quot;display&quot;: &quot;Human coronavirus HKU1 RNA [Presence] in Unspecified specimen by Probe and target amplification method|Human coronavirus HKU1 RNA [Presence] in Unspecified specimen by Probe and target amplification method&quot;
+          },
+          {
+            &quot;code&quot;: &quot;62862-8&quot;,
+            &quot;display&quot;: &quot;Microsatellite instability [Presence] in Tissue by Immune stain&quot;
+          },
+          {
+            &quot;code&quot;: &quot;6306-5&quot;,
+            &quot;display&quot;: &quot;Adenovirus C(40)+B(41) Ag [Presence] in Stool by Immunoassay|Adenovirus 40+41 Ag [Presence] in Stool by Immunoassay&quot;
+          },
+          {
+            &quot;code&quot;: &quot;6320-6&quot;,
+            &quot;display&quot;: &quot;Borrelia burgdorferi IgG Ab [Presence] in Serum by Immunoblot (IB)&quot;
+          },
+          {
+            &quot;code&quot;: &quot;6321-4&quot;,
+            &quot;display&quot;: &quot;Borrelia burgdorferi IgM Ab [Presence] in Serum by Immunoblot (IB)&quot;
+          },
+          {
+            &quot;code&quot;: &quot;63379-2&quot;,
+            &quot;display&quot;: &quot;DNA double strand IgG Ab [Presence] in Serum&quot;
+          },
+          {
+            &quot;code&quot;: &quot;6355-2&quot;,
+            &quot;display&quot;: &quot;Chlamydia trachomatis Ag [Presence] in Unspecified specimen by Immunofluorescence&quot;
+          },
+          {
+            &quot;code&quot;: &quot;63558-1&quot;,
+            &quot;display&quot;: &quot;HLA-DQB1*0602 [Presence]&quot;
+          },
+          {
+            &quot;code&quot;: &quot;6362-8&quot;,
+            &quot;display&quot;: &quot;Clostridium difficile toxin A+B [Presence] in Stool by Cytotoxin tissue culture assay&quot;
+          },
+          {
+            &quot;code&quot;: &quot;6443-6&quot;,
+            &quot;display&quot;: &quot;Lactoferrin [Presence] in Stool by Latex agglutination&quot;
+          },
+          {
+            &quot;code&quot;: &quot;6447-7&quot;,
+            &quot;display&quot;: &quot;Legionella pneumophila Ag [Presence] in Urine by Immunoassay&quot;
+          },
+          {
+            &quot;code&quot;: &quot;6733-0&quot;,
+            &quot;display&quot;: &quot;Pigeon serum Ab [Presence] in Serum by Immune diffusion (ID)&quot;
+          },
+          {
+            &quot;code&quot;: &quot;6808-0&quot;,
+            &quot;display&quot;: &quot;Aspergillus fumigatus 1 Ab [Presence] in Serum by Immune diffusion (ID)&quot;
+          },
+          {
+            &quot;code&quot;: &quot;6809-8&quot;,
+            &quot;display&quot;: &quot;Aspergillus fumigatus 6 Ab [Presence] in Serum by Immune diffusion (ID)&quot;
+          },
+          {
+            &quot;code&quot;: &quot;6810-6&quot;,
+            &quot;display&quot;: &quot;Aureobasidium pullulans Ab [Presence] in Serum by Immune diffusion (ID)&quot;
+          },
+          {
+            &quot;code&quot;: &quot;6818-9&quot;,
+            &quot;display&quot;: &quot;Saccharopolyspora rectivirgula Ab [Presence] in Serum by Immune diffusion (ID)&quot;
+          },
+          {
+            &quot;code&quot;: &quot;700-5&quot;,
+            &quot;display&quot;: &quot;Pneumocystis jiroveci Ag [Presence] in Unspecified specimen by Immunofluorescence&quot;
+          },
+          {
+            &quot;code&quot;: &quot;702-1&quot;,
+            &quot;display&quot;: &quot;Anisocytosis [Presence] in Blood by Light microscopy&quot;
+          },
+          {
+            &quot;code&quot;: &quot;703-9&quot;,
+            &quot;display&quot;: &quot;Basophilic stippling [Presence] in Blood by Light microscopy&quot;
+          },
+          {
+            &quot;code&quot;: &quot;716-1&quot;,
+            &quot;display&quot;: &quot;Heinz bodies [Presence] in Blood by Light microscopy&quot;
+          },
+          {
+            &quot;code&quot;: &quot;728-6&quot;,
+            &quot;display&quot;: &quot;Hypochromia [Presence] in Blood by Light microscopy&quot;
+          },
+          {
+            &quot;code&quot;: &quot;733-6&quot;,
+            &quot;display&quot;: &quot;Lymphocytes Variant [Presence] in Blood by Light microscopy&quot;
+          },
+          {
+            &quot;code&quot;: &quot;738-5&quot;,
+            &quot;display&quot;: &quot;Macrocytes [Presence] in Blood by Light microscopy&quot;
+          },
+          {
+            &quot;code&quot;: &quot;741-9&quot;,
+            &quot;display&quot;: &quot;Microcytes [Presence] in Blood by Light microscopy&quot;
+          },
+          {
+            &quot;code&quot;: &quot;765-8&quot;,
+            &quot;display&quot;: &quot;Neutrophils.hypersegmented [Presence] in Blood by Light microscopy&quot;
+          },
+          {
+            &quot;code&quot;: &quot;774-0&quot;,
+            &quot;display&quot;: &quot;Ovalocytes [Presence] in Blood by Light microscopy&quot;
+          },
+          {
+            &quot;code&quot;: &quot;7789-1&quot;,
+            &quot;display&quot;: &quot;Acanthocytes [Presence] in Blood by Light microscopy&quot;
+          },
+          {
+            &quot;code&quot;: &quot;7790-9&quot;,
+            &quot;display&quot;: &quot;Burr cells [Presence] in Blood by Light microscopy&quot;
+          },
+          {
+            &quot;code&quot;: &quot;7791-7&quot;,
+            &quot;display&quot;: &quot;Dacrocytes [Presence] in Blood by Light microscopy&quot;
+          },
+          {
+            &quot;code&quot;: &quot;7792-5&quot;,
+            &quot;display&quot;: &quot;Dohle body [Presence] in Blood by Light microscopy&quot;
+          },
+          {
+            &quot;code&quot;: &quot;7793-3&quot;,
+            &quot;display&quot;: &quot;Howell-Jolly bodies [Presence] in Blood by Light microscopy&quot;
+          },
+          {
+            &quot;code&quot;: &quot;7795-8&quot;,
+            &quot;display&quot;: &quot;Pappenheimer bodies [Presence] in Blood by Light microscopy&quot;
+          },
+          {
+            &quot;code&quot;: &quot;7796-6&quot;,
+            &quot;display&quot;: &quot;Platelet clump [Presence] in Blood by Light microscopy&quot;
+          },
+          {
+            &quot;code&quot;: &quot;7797-4&quot;,
+            &quot;display&quot;: &quot;Rouleaux [Presence] in Blood by Light microscopy&quot;
+          },
+          {
+            &quot;code&quot;: &quot;7798-2&quot;,
+            &quot;display&quot;: &quot;Smudge cells [Presence] in Blood by Light microscopy&quot;
+          },
+          {
+            &quot;code&quot;: &quot;779-9&quot;,
+            &quot;display&quot;: &quot;Poikilocytosis [Presence] in Blood by Light microscopy&quot;
+          },
+          {
+            &quot;code&quot;: &quot;7918-6&quot;,
+            &quot;display&quot;: &quot;HIV 1+2 Ab [Presence] in Serum&quot;
+          },
+          {
+            &quot;code&quot;: &quot;800-3&quot;,
+            &quot;display&quot;: &quot;Schistocytes [Presence] in Blood by Light microscopy&quot;
+          },
+          {
+            &quot;code&quot;: &quot;801-1&quot;,
+            &quot;display&quot;: &quot;Sickle cells [Presence] in Blood by Light microscopy&quot;
+          },
+          {
+            &quot;code&quot;: &quot;802-9&quot;,
+            &quot;display&quot;: &quot;Spherocytes [Presence] in Blood by Light microscopy&quot;
+          },
+          {
+            &quot;code&quot;: &quot;803-7&quot;,
+            &quot;display&quot;: &quot;Toxic granules [Presence] in Blood by Light microscopy&quot;
+          },
+          {
+            &quot;code&quot;: &quot;8041-6&quot;,
+            &quot;display&quot;: &quot;Treponema pallidum Ab [Presence] in Serum by Hemagglutination&quot;
+          },
+          {
+            &quot;code&quot;: &quot;8061-4&quot;,
+            &quot;display&quot;: &quot;Nuclear Ab [Presence] in Serum&quot;
+          },
+          {
+            &quot;code&quot;: &quot;8091-1&quot;,
+            &quot;display&quot;: &quot;Ribonucleoprotein extractable nuclear Ab [Presence] in Serum&quot;
+          },
+          {
+            &quot;code&quot;: &quot;8092-9&quot;,
+            &quot;display&quot;: &quot;SCL-70 extractable nuclear Ab [Presence] in Serum&quot;
+          }
+        ]
+      }
+    ]
+  }
+}
+</pre>
+</div>
+
+
+<p>
+Usage note: every effort has been made to ensure that the
+examples are correct and useful, but they are not a normative part 
+of the specification. 
+</p>
+
+</div>
+
+
+				</div><!-- /inner-wrapper -->
+            </div><!-- /row -->
+        </div><!-- /container -->
+        
+    </div><!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment"><!-- segment-footer -->
+		<div class="container"><!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        © HL7.org 2011+. FHIR STU3 Candidate (v1.4.0-8453) generated on Mon, Jun 6, 2016 20:18+0000. <a href="../qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search</a> | 
+               <a style="color: #81BEF7" href="../history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="../toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fhspc%2Fvalueset-hspc-OrdinalLabCodes.json.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fhspc%2Fvalueset-hspc-OrdinalLabCodes.json.html">Compare to DSTU2</a> |                
+               <a style="color: #81BEF7" rel="license" href="../license.html"><img src="../cc0.png" style="border-style: none;" alt="CC0"/></a> | 
+               <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>   
+        </span>
+        </p>
+			</div><!-- /inner-wrapper -->
+		</div><!-- /container -->
+	</div><!-- /segment-footer -->
+<!-- disqus thread -->
+<!--disqus-->
+<!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden"><!-- segment-post-footer -->
+		<div class="container"><!-- container -->
+		</div><!-- /container -->
+	</div><!-- /segment-post-footer -->
+    
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src=".././assets/js/jquery.js"> </script>   <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src=".././dist/js/bootstrap.min.js"> </script>
+<script src=".././assets/js/respond.min.js"> </script>
+
+<script src=".././assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

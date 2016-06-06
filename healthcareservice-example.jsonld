@@ -1,0 +1,297 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/HealthcareService",
+  "resourceType": "HealthcareService",
+  "Resource.id": {
+    "value": "example"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t\t\t25 Dec 2013 9:15am - 9:30am: <b>Busy</b> Physiotherapy\n\t\t</div>"
+    }
+  },
+  "Location": [
+    {
+      "Resource.id": {
+        "value": "DenBurg"
+      },
+      "Location.description": {
+        "value": "Greater Denburg area"
+      },
+      "Location.mode": {
+        "value": "instance"
+      },
+      "Location.physicalType": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.code": {
+              "value": "area"
+            },
+            "Coding.display": {
+              "value": "Area"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "HealthcareService.serviceType": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "value": "http://snomed.info/sct"
+          },
+          "Coding.code": {
+            "value": "394913002"
+          },
+          "Coding.display": {
+            "value": "Psychotherapy"
+          }
+        }
+      ]
+    },
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "value": "http://snomed.info/sct"
+          },
+          "Coding.code": {
+            "value": "394587001"
+          },
+          "Coding.display": {
+            "value": "Psychiatry"
+          }
+        }
+      ]
+    }
+  ],
+  "HealthcareService.specialty": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "value": "http://snomed.info/sct"
+          },
+          "Coding.code": {
+            "value": "47505003"
+          },
+          "Coding.display": {
+            "value": "Posttraumatic stress disorder"
+          }
+        }
+      ]
+    }
+  ],
+  "HealthcareService.location": [
+    {
+      "Reference.reference": {
+        "value": "Location/1"
+      }
+    }
+  ],
+  "HealthcareService.serviceName": {
+    "value": "Consulting psychologists and/or psychology services"
+  },
+  "HealthcareService.comment": {
+    "value": "Providing Specialist psychology services to the greater Den Burg area, many years of experience dealing with PTSD issues"
+  },
+  "HealthcareService.extraDetails": {
+    "value": "Several assessments are required for these specialist services, and the waiting times can be greater than 3 months at times. Existing patients are prioritized when requesting appointments on the schedule."
+  },
+  "HealthcareService.telecom": [
+    {
+      "ContactPoint.system": {
+        "value": "phone"
+      },
+      "ContactPoint.value": {
+        "value": "(555) silent"
+      },
+      "ContactPoint.use": {
+        "value": "work"
+      }
+    },
+    {
+      "ContactPoint.system": {
+        "value": "email"
+      },
+      "ContactPoint.value": {
+        "value": "directaddress@example.com"
+      },
+      "ContactPoint.use": {
+        "value": "work"
+      }
+    }
+  ],
+  "HealthcareService.coverageArea": [
+    {
+      "Reference.reference": {
+        "value": "#DenBurg"
+      },
+      "Reference.display": {
+        "value": "Greater Denburg area"
+      }
+    }
+  ],
+  "HealthcareService.eligibility": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.display": {
+          "value": "DVA Required"
+        }
+      }
+    ]
+  },
+  "HealthcareService.eligibilityNote": {
+    "value": "Evidence of application for DVA status may be sufficient for commencing assessment"
+  },
+  "HealthcareService.programName": [
+    {
+      "value": "PTSD outreach"
+    }
+  ],
+  "HealthcareService.characteristic": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.display": {
+            "value": "Wheelchair access"
+          }
+        }
+      ]
+    }
+  ],
+  "HealthcareService.referralMethod": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.code": {
+            "value": "phone"
+          },
+          "Coding.display": {
+            "value": "Phone"
+          }
+        }
+      ]
+    },
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.code": {
+            "value": "fax"
+          },
+          "Coding.display": {
+            "value": "Fax"
+          }
+        }
+      ]
+    },
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.code": {
+            "value": "elec"
+          },
+          "Coding.display": {
+            "value": "Secure Messaging"
+          }
+        }
+      ]
+    },
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.code": {
+            "value": "semail"
+          },
+          "Coding.display": {
+            "value": "Secure Email"
+          }
+        }
+      ]
+    }
+  ],
+  "HealthcareService.publicKey": {
+    "value": "*** Base64 public key goes here to be used for secure messaging ***"
+  },
+  "HealthcareService.appointmentRequired": {
+    "value": false
+  },
+  "HealthcareService.availableTime": [
+    {
+      "HealthcareService.availableTime.daysOfWeek": [
+        {
+          "value": "mon"
+        },
+        {
+          "value": "tue"
+        },
+        {
+          "value": "wed"
+        },
+        {
+          "value": "thu"
+        },
+        {
+          "value": "fri"
+        }
+      ],
+      "HealthcareService.availableTime.availableStartTime": {
+        "value": "08:30:00"
+      },
+      "HealthcareService.availableTime.availableEndTime": {
+        "value": "05:30:00"
+      }
+    },
+    {
+      "HealthcareService.availableTime.daysOfWeek": [
+        {
+          "value": "sat"
+        },
+        {
+          "value": "fri"
+        }
+      ],
+      "HealthcareService.availableTime.availableStartTime": {
+        "value": "09:30:00"
+      },
+      "HealthcareService.availableTime.availableEndTime": {
+        "value": "04:30:00"
+      }
+    }
+  ],
+  "HealthcareService.notAvailable": [
+    {
+      "HealthcareService.notAvailable.description": {
+        "value": "Christmas/Boxing Day"
+      },
+      "HealthcareService.notAvailable.during": {
+        "Period.start": {
+          "value": "2015-12-25"
+        },
+        "Period.end": {
+          "value": "2015-12-26"
+        }
+      }
+    },
+    {
+      "HealthcareService.notAvailable.description": {
+        "value": "New Years Day"
+      },
+      "HealthcareService.notAvailable.during": {
+        "Period.start": {
+          "value": "2016-01-01"
+        },
+        "Period.end": {
+          "value": "2016-01-01"
+        }
+      }
+    }
+  ],
+  "HealthcareService.availabilityExceptions": {
+    "value": "Reduced capacity is available during the Christmas period"
+  }
+}

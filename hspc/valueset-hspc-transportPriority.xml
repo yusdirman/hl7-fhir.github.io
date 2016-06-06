@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="hspc-transportPriority"/>
+  <meta>
+    <lastUpdated value="2016-06-06T20:14:04.181+00:00"/>
+    <profile value="http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"/>
+  </meta>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <h2>HSPC Transport Priority value set</h2>
+      <p>A set of codes that describe the kind of documentation used to validate a date of birth.</p>
+      <p>This value set includes codes from the following code systems:</p>
+      <ul>
+        <li>Include these codes as defined in 
+          <a href="../v3/ActPriority/cs.html">http://hl7.org/fhir/v3/ActPriority</a>
+          <table>
+            <tr>
+              <td>
+                <b>Code</b>
+              </td>
+              <td>
+                <b>Display</b>
+              </td>
+            </tr>
+            <tr>
+              <td>A</td>
+              <td>ASAP</td>
+              <td>As soon as possible, next highest priority after stat.</td>
+            </tr>
+            <tr>
+              <td>S</td>
+              <td>stat</td>
+              <td>With highest priority (e.g., emergency).</td>
+            </tr>
+            <tr>
+              <td>R</td>
+              <td>routine</td>
+              <td>Routine service, do at usual work hours.</td>
+            </tr>
+            <tr>
+              <td>UR</td>
+              <td>urgent</td>
+              <td>Calls for prompt action.</td>
+            </tr>
+          </table>
+        </li>
+      </ul>
+    </div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/valueset-oid">
+    <valueUri value="urn:oid:2.16.840.1.113883.4.642.2.766"/>
+  </extension>
+  <url value="http://hl7.org/fhir/ValueSet/hspc-transportPriority"/>
+  <version value="1.4.0"/>
+  <name value="HSPC Transport Priority value set"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <publisher value="HSPC"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="http://healthcaresoa.org"/>
+    </telecom>
+  </contact>
+  <date value="2016-06-06T20:14:04+00:00"/>
+  <description value="A set of codes that describe the kind of documentation used to validate a date of birth."/>
+  <compose>
+    <include>
+      <system value="http://hl7.org/fhir/v3/ActPriority"/>
+      <concept>
+        <code value="A"/>
+        <display value="ASAP"/>
+      </concept>
+      <concept>
+        <code value="S"/>
+        <display value="stat"/>
+      </concept>
+      <concept>
+        <code value="R"/>
+        <display value="routine"/>
+      </concept>
+      <concept>
+        <code value="UR"/>
+        <display value="urgent"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

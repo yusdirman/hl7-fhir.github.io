@@ -1,0 +1,114 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/NamingSystem",
+  "resourceType": "NamingSystem",
+  "Resource.id": {
+    "value": "example-id"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>\n        <b>Australian IHI Number</b>\n      </p>\n      \n      <p> oid: 1.2.36.1.2001.1003.0</p>\n      \n      <p> uri: http://ns.electronichealth.net.au/id/hi/ihi/1.0</p>\n    \n    </div>"
+    }
+  },
+  "NamingSystem.name": {
+    "value": "Austalian Healthcare Identifier - Individual"
+  },
+  "NamingSystem.status": {
+    "value": "active"
+  },
+  "NamingSystem.kind": {
+    "value": "identifier"
+  },
+  "NamingSystem.date": {
+    "value": "2015-08-31"
+  },
+  "NamingSystem.publisher": {
+    "value": "HL7 Australia on behalf of NEHTA"
+  },
+  "NamingSystem.contact": [
+    {
+      "NamingSystem.contact.name": {
+        "value": "HL7 Australia FHIR Team"
+      },
+      "NamingSystem.contact.telecom": [
+        {
+          "ContactPoint.system": {
+            "value": "other"
+          },
+          "ContactPoint.value": {
+            "value": "http://hl7-australia.wikispaces.com/FHIR+Australia"
+          }
+        }
+      ]
+    }
+  ],
+  "NamingSystem.responsible": {
+    "value": "HI Service Operator / NEHTA"
+  },
+  "NamingSystem.type": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/v2/0203"
+        },
+        "Coding.code": {
+          "value": "NI"
+        },
+        "Coding.display": {
+          "value": "National unique individual identifier"
+        }
+      }
+    ],
+    "CodeableConcept.text": {
+      "value": "IHI"
+    }
+  },
+  "NamingSystem.description": {
+    "value": "Australian HI Identifier as established by relevant regulations etc"
+  },
+  "NamingSystem.useContext": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "value": "urn:iso:std:iso:3166"
+          },
+          "Coding.code": {
+            "value": "AU"
+          }
+        }
+      ]
+    }
+  ],
+  "NamingSystem.usage": {
+    "value": "Used in Australia for identifying patients"
+  },
+  "NamingSystem.uniqueId": [
+    {
+      "NamingSystem.uniqueId.type": {
+        "value": "oid"
+      },
+      "NamingSystem.uniqueId.value": {
+        "value": "1.2.36.1.2001.1003.0"
+      }
+    },
+    {
+      "NamingSystem.uniqueId.type": {
+        "value": "uri"
+      },
+      "NamingSystem.uniqueId.value": {
+        "value": "http://ns.electronichealth.net.au/id/hi/ihi/1.0"
+      },
+      "NamingSystem.uniqueId.preferred": {
+        "value": true
+      },
+      "NamingSystem.uniqueId.period": {
+        "Period.start": {
+          "value": "2015-08-21"
+        }
+      }
+    }
+  ]
+}

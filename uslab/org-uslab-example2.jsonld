@@ -1,0 +1,105 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Organization",
+  "resourceType": "Organization",
+  "Resource.id": {
+    "value": "org-uslab-example2"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: org-uslab-example2</p><p><b>identifier</b>: 8235849085 (OFFICIAL)</p><p><b>name</b>: Children's Hospital</p><p><b>telecom</b>: ph: +1 617 555 1234, fax: +1 555 227 6622</p><p><b>address</b>: Massachusetts Avenue Building 1 Boston MA 25025 USA (WORK)</p><h3>Contacts</h3><table><tr><td>-</td><td><b>Name</b></td></tr><tr><td>*</td><td>Desk T Fran </td></tr></table></div>"
+    }
+  },
+  "Organization.identifier": [
+    {
+      "Identifier.use": {
+        "value": "official"
+      },
+      "Identifier.system": {
+        "value": "http://hl7.org/fhir/sid/us-npi"
+      },
+      "Identifier.value": {
+        "value": "8235849085"
+      }
+    }
+  ],
+  "Organization.name": {
+    "value": "Children's Hospital"
+  },
+  "Organization.telecom": [
+    {
+      "ContactPoint.system": {
+        "value": "phone"
+      },
+      "ContactPoint.value": {
+        "value": "+1 617 555 1234"
+      }
+    },
+    {
+      "ContactPoint.system": {
+        "value": "fax"
+      },
+      "ContactPoint.value": {
+        "value": "+1 555 227 6622"
+      }
+    }
+  ],
+  "Organization.address": [
+    {
+      "Address.use": {
+        "value": "work"
+      },
+      "Address.line": [
+        {
+          "value": "Massachusetts Avenue"
+        },
+        {
+          "value": "Building 1"
+        }
+      ],
+      "Address.city": {
+        "value": "Boston"
+      },
+      "Address.state": {
+        "value": "MA"
+      },
+      "Address.postalCode": {
+        "value": "25025"
+      },
+      "Address.country": {
+        "value": "USA"
+      }
+    }
+  ],
+  "Organization.contact": [
+    {
+      "Organization.contact.name": {
+        "HumanName.family": [
+          {
+            "value": "Fran"
+          }
+        ],
+        "HumanName.given": [
+          {
+            "value": "Desk"
+          },
+          {
+            "value": "T"
+          }
+        ],
+        "HumanName.prefix": [
+          {
+            "value": "Dr"
+          }
+        ],
+        "HumanName.suffix": [
+          {
+            "value": "Jr"
+          }
+        ]
+      }
+    }
+  ]
+}

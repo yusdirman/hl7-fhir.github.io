@@ -1,0 +1,53 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/BodySite",
+  "resourceType": "BodySite",
+  "Resource.id": {
+    "value": "fetus"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: fetus</p><p><b>patient</b>: <a>Patient/example</a></p><p><b>identifier</b>: 12345</p><p><b>code</b>: Fetus <span>(Details : {SNOMED CT code '83418008' = 'Entire fetus (body structure)', given as 'Entire fetus (body structure)'})</span></p><p><b>description</b>: EDD 1/1/2017 confirmation by LMP</p></div>"
+    }
+  },
+  "BodySite.patient": {
+    "Reference.reference": {
+      "value": "Patient/example"
+    },
+    "reference": "http://hl7.org/fhir//Patient/example"
+  },
+  "BodySite.identifier": [
+    {
+      "Identifier.system": {
+        "value": "http://goodhealth.org/bodysite/identifiers"
+      },
+      "Identifier.value": {
+        "value": "12345"
+      }
+    }
+  ],
+  "BodySite.code": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "value": "83418008"
+        },
+        "Coding.display": {
+          "value": "Entire fetus (body structure)"
+        }
+      }
+    ],
+    "CodeableConcept.text": {
+      "value": "Fetus"
+    },
+    "concept": "http://snomed.info/sct#83418008"
+  },
+  "BodySite.description": {
+    "value": "EDD 1/1/2017 confirmation by LMP"
+  }
+}

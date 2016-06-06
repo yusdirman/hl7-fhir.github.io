@@ -1,0 +1,94 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/MedicationOrder",
+  "resourceType": "MedicationOrder",
+  "Resource.id": {
+    "value": "medrx002"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: medrx002</p><p><b>identifier</b>: 12345 (OFFICIAL)</p><p><b>status</b>: active</p><p><b>medication</b>: <a>prescribed medication</a></p><p><b>patient</b>: <a>Eve Everywoman</a></p><p><b>encounter</b>: <a>encounter who leads to this prescription</a></p><p><b>dateWritten</b>: Mar 1, 2015</p><p><b>prescriber</b>: <a>Patricia Primary</a></p><p><b>reasonCode</b>: Osteoporosis <span>(Details : {SNOMED CT code '64859006' = 'Osteoporosis (disorder)', given as 'Osteoporosis'})</span></p><h3>DosageInstructions</h3><table><tr><td>-</td><td><b>Text</b></td></tr><tr><td>*</td><td>Take one tablet daily as directed</td></tr></table></div>"
+    }
+  },
+  "MedicationOrder.identifier": [
+    {
+      "Identifier.use": {
+        "value": "official"
+      },
+      "Identifier.system": {
+        "value": "http://www.bmc.nl/portal/prescriptions"
+      },
+      "Identifier.value": {
+        "value": "12345"
+      }
+    }
+  ],
+  "MedicationOrder.status": {
+    "value": "active"
+  },
+  "MedicationOrder.medicationReference": {
+    "Reference.reference": {
+      "value": "Medication/MedicationExample5"
+    },
+    "Reference.display": {
+      "value": "prescribed medication"
+    },
+    "reference": "http://hl7.org/fhir//Medication/MedicationExample5"
+  },
+  "MedicationOrder.patient": {
+    "Reference.reference": {
+      "value": "Patient/f001"
+    },
+    "Reference.display": {
+      "value": "Eve Everywoman"
+    },
+    "reference": "http://hl7.org/fhir//Patient/f001"
+  },
+  "MedicationOrder.encounter": {
+    "Reference.reference": {
+      "value": "Encounter/f002"
+    },
+    "Reference.display": {
+      "value": "encounter who leads to this prescription"
+    },
+    "reference": "http://hl7.org/fhir//Encounter/f002"
+  },
+  "MedicationOrder.dateWritten": {
+    "value": "2015-03-01"
+  },
+  "MedicationOrder.prescriber": {
+    "Reference.reference": {
+      "value": "Practitioner/f007"
+    },
+    "Reference.display": {
+      "value": "Patricia Primary"
+    },
+    "reference": "http://hl7.org/fhir//Practitioner/f007"
+  },
+  "MedicationOrder.reasonCode": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "value": "http://snomed.info/sct"
+          },
+          "Coding.code": {
+            "value": "64859006"
+          },
+          "Coding.display": {
+            "value": "Osteoporosis"
+          }
+        }
+      ]
+    }
+  ],
+  "MedicationOrder.dosageInstruction": [
+    {
+      "MedicationOrder.dosageInstruction.text": {
+        "value": "Take one tablet daily as directed"
+      }
+    }
+  ]
+}

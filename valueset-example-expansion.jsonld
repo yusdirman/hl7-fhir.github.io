@@ -1,0 +1,253 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/ValueSet",
+  "resourceType": "ValueSet",
+  "Resource.id": {
+    "value": "example-expansion"
+  },
+  "Resource.meta": {
+    "Meta.profile": [
+      {
+        "value": "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"
+      }
+    ]
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <table class=\"grid\">\n        <tr>\n          <td>http://loinc.org</td>\n          <td>14647-2</td>\n          <td>Cholesterol [Moles/volume] in Serum or Plasma</td>\n        </tr>\n        <tr>\n          <td colspan=\"3\">\n            <b>Additional Cholesterol codes</b>\n          </td>\n        </tr>\n        <tr>\n          <td>http://loinc.org</td>\n          <td>2093-3</td>\n          <td>Cholesterol [Mass/volume] in Serum or Plasma</td>\n        </tr>\n        <tr>\n          <td>http://loinc.org</td>\n          <td>48620-9</td>\n          <td>Cholesterol [Mass/volume] in Serum or Plasma ultracentrifugate</td>\n        </tr>\n        <tr>\n          <td>http://loinc.org</td>\n          <td>9342-7</td>\n          <td>Cholesterol [Percentile]</td>\n        </tr>\n        <tr>\n          <td colspan=\"3\">\n            <b>Cholesterol Ratios</b>\n          </td>\n        </tr>\n        <tr>\n          <td>http://loinc.org</td>\n          <td>2096-6</td>\n          <td>Cholesterol/Triglyceride [Mass Ratio] in Serum or Plasma</td>\n        </tr>\n        <tr>\n          <td>http://loinc.org</td>\n          <td>35200-5</td>\n          <td>Cholesterol/Triglyceride [Mass Ratio] in Serum or Plasma</td>\n        </tr>\n        <tr>\n          <td>http://loinc.org</td>\n          <td>48089-7</td>\n          <td>Cholesterol/Apolipoprotein B [Molar ratio] in Serum or Plasma</td>\n        </tr>\n        <tr>\n          <td>http://loinc.org</td>\n          <td>55838-7</td>\n          <td>Cholesterol/Phospholipid [Molar ratio] in Serum or Plasma</td>\n        </tr>\n      </table>\n    </div>"
+    }
+  },
+  "ValueSet.url": {
+    "value": "http://hl7.org/fhir/ValueSet/example-expansion"
+  },
+  "ValueSet.version": {
+    "value": "20150622"
+  },
+  "ValueSet.name": {
+    "value": "LOINC Codes for Cholesterol in Serum/Plasma"
+  },
+  "ValueSet.status": {
+    "value": "draft"
+  },
+  "ValueSet.experimental": {
+    "value": true
+  },
+  "ValueSet.publisher": {
+    "value": "FHIR Project team"
+  },
+  "ValueSet.contact": [
+    {
+      "ValueSet.contact.telecom": [
+        {
+          "ContactPoint.system": {
+            "value": "other"
+          },
+          "ContactPoint.value": {
+            "value": "http://hl7.org/fhir"
+          }
+        }
+      ]
+    }
+  ],
+  "ValueSet.date": {
+    "value": "2015-06-22"
+  },
+  "ValueSet.description": {
+    "value": "This is an example value set that includes all the LOINC codes for serum/plasma cholesterol from v2.36."
+  },
+  "ValueSet.copyright": {
+    "value": "This content from LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use."
+  },
+  "ValueSet.compose": {
+    "ValueSet.compose.include": [
+      {
+        "ValueSet.compose.include.system": {
+          "value": "http://loinc.org"
+        },
+        "ValueSet.compose.include.filter": [
+          {
+            "ValueSet.compose.include.filter.property": {
+              "value": "parent"
+            },
+            "ValueSet.compose.include.filter.op": {
+              "value": "="
+            },
+            "ValueSet.compose.include.filter.value": {
+              "value": "LP43571-6"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "ValueSet.expansion": {
+    "Element.extension": [
+      {
+        "Extension.url": {
+          "value": "http://hl7.org/fhir/StructureDefinition/valueset-expansionSource"
+        },
+        "Extension.valueUri": {
+          "value": "http://hl7.org/fhir/ValueSet/example-extensional"
+        }
+      }
+    ],
+    "ValueSet.expansion.identifier": {
+      "value": "urn:uuid:42316ff8-2714-4680-9980-f37a6d1a71bc"
+    },
+    "ValueSet.expansion.timestamp": {
+      "value": "2015-06-22T13:56:07Z"
+    },
+    "ValueSet.expansion.total": {
+      "value": 8
+    },
+    "ValueSet.expansion.offset": {
+      "value": 0
+    },
+    "ValueSet.expansion.parameter": [
+      {
+        "ValueSet.expansion.parameter.name": {
+          "value": "version"
+        },
+        "ValueSet.expansion.parameter.valueString": {
+          "value": "2.50"
+        }
+      }
+    ],
+    "ValueSet.expansion.contains": [
+      {
+        "ValueSet.expansion.contains.system": {
+          "value": "http://loinc.org"
+        },
+        "ValueSet.expansion.contains.version": {
+          "value": "2.50"
+        },
+        "ValueSet.expansion.contains.code": {
+          "value": "14647-2"
+        },
+        "ValueSet.expansion.contains.display": {
+          "value": "Cholesterol [Moles/volume] in Serum or Plasma"
+        }
+      },
+      {
+        "ValueSet.expansion.contains.abstract": {
+          "value": true
+        },
+        "ValueSet.expansion.contains.display": {
+          "value": "Cholesterol codes"
+        },
+        "ValueSet.expansion.contains.contains": [
+          {
+            "ValueSet.expansion.contains.system": {
+              "value": "http://loinc.org"
+            },
+            "ValueSet.expansion.contains.version": {
+              "value": "2.50"
+            },
+            "ValueSet.expansion.contains.code": {
+              "value": "2093-3"
+            },
+            "ValueSet.expansion.contains.display": {
+              "value": "Cholesterol [Mass/volume] in Serum or Plasma"
+            }
+          },
+          {
+            "ValueSet.expansion.contains.system": {
+              "value": "http://loinc.org"
+            },
+            "ValueSet.expansion.contains.version": {
+              "value": "2.50"
+            },
+            "ValueSet.expansion.contains.code": {
+              "value": "48620-9"
+            },
+            "ValueSet.expansion.contains.display": {
+              "value": "Cholesterol [Mass/volume] in Serum or Plasma ultracentrifugate"
+            }
+          },
+          {
+            "ValueSet.expansion.contains.system": {
+              "value": "http://loinc.org"
+            },
+            "ValueSet.expansion.contains.version": {
+              "value": "2.50"
+            },
+            "ValueSet.expansion.contains.code": {
+              "value": "9342-7"
+            },
+            "ValueSet.expansion.contains.display": {
+              "value": "Cholesterol [Percentile]"
+            }
+          }
+        ]
+      },
+      {
+        "ValueSet.expansion.contains.abstract": {
+          "value": true
+        },
+        "ValueSet.expansion.contains.display": {
+          "value": "Cholesterol Ratios"
+        },
+        "ValueSet.expansion.contains.contains": [
+          {
+            "ValueSet.expansion.contains.system": {
+              "value": "http://loinc.org"
+            },
+            "ValueSet.expansion.contains.version": {
+              "value": "2.50"
+            },
+            "ValueSet.expansion.contains.code": {
+              "value": "2096-6"
+            },
+            "ValueSet.expansion.contains.display": {
+              "value": "Cholesterol/Triglyceride [Mass Ratio] in Serum or Plasma"
+            }
+          },
+          {
+            "ValueSet.expansion.contains.system": {
+              "value": "http://loinc.org"
+            },
+            "ValueSet.expansion.contains.version": {
+              "value": "2.50"
+            },
+            "ValueSet.expansion.contains.code": {
+              "value": "35200-5"
+            },
+            "ValueSet.expansion.contains.display": {
+              "value": "Cholesterol/Triglyceride [Mass Ratio] in Serum or Plasma"
+            }
+          },
+          {
+            "ValueSet.expansion.contains.system": {
+              "value": "http://loinc.org"
+            },
+            "ValueSet.expansion.contains.version": {
+              "value": "2.50"
+            },
+            "ValueSet.expansion.contains.code": {
+              "value": "48089-7"
+            },
+            "ValueSet.expansion.contains.display": {
+              "value": "Cholesterol/Apolipoprotein B [Molar ratio] in Serum or Plasma"
+            }
+          },
+          {
+            "ValueSet.expansion.contains.system": {
+              "value": "http://loinc.org"
+            },
+            "ValueSet.expansion.contains.version": {
+              "value": "2.50"
+            },
+            "ValueSet.expansion.contains.code": {
+              "value": "55838-7"
+            },
+            "ValueSet.expansion.contains.display": {
+              "value": "Cholesterol/Phospholipid [Molar ratio] in Serum or Plasma"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

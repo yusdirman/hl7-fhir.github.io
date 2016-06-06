@@ -1,0 +1,250 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "EN",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+      "valueUri": "urn:hl7-org:v3"
+    }
+  ],
+  "url": "http://hl7.org/fhir/StructureDefinition/EN",
+  "name": "V3 Data type EN (EntityName)",
+  "display": "V3 Data type EN (EntityName)",
+  "status": "active",
+  "experimental": false,
+  "publisher": "HL7",
+  "description": "A name for a person, organization, place or thing. A sequence of name parts, such as given name or family name, prefix, suffix, etc. Examples for entity name values are \"Jim Bob Walton, Jr.\", \"Health Level Seven, Inc.\", \"Lake Tahoe\", etc. An entity name may be as simple as a character string or may consist of several entity name parts, such as, \"Jim\", \"Bob\", \"Walton\", and \"Jr.\", \"Health Level Seven\" and \"Inc.\", \"Lake\" and \"Tahoe\".",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/ANY",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "path": "EN",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "EN.nullFlavor",
+        "representation": [
+          "xmlAttr"
+        ],
+        "label": "Exceptional Value Detail",
+        "definition": "If a value is an exceptional value (NULL-value), this specifies in what way and why proper information is missing.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/v3-NullFlavor"
+          }
+        }
+      },
+      {
+        "path": "EN.delimiter",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "EN.family",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "EN.given",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "EN.prefix",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "EN.suffix",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "EN.other",
+        "representation": [
+          "xmlText"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "EN.use",
+        "representation": [
+          "xmlAttr"
+        ],
+        "label": "Use Code",
+        "definition": "A set of codes advising a system or user which name in a set of names to select for a given purpose.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "path": "EN.validTime",
+        "label": "Valid Time",
+        "definition": "An interval of time specifying the time during which the name is or was used for the entity. This accomodates the fact that people change names for people, places and things.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "IVL_TS"
+          }
+        ]
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "path": "EN",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "EN.delimiter",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "EN.family",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "EN.given",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "EN.prefix",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "EN.suffix",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "EN.other",
+        "representation": [
+          "xmlText"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "EN.use",
+        "representation": [
+          "xmlAttr"
+        ],
+        "label": "Use Code",
+        "definition": "A set of codes advising a system or user which name in a set of names to select for a given purpose.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "path": "EN.validTime",
+        "label": "Valid Time",
+        "definition": "An interval of time specifying the time during which the name is or was used for the entity. This accomodates the fact that people change names for people, places and things.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "IVL_TS"
+          }
+        ]
+      }
+    ]
+  }
+}

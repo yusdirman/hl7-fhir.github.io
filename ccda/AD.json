@@ -1,0 +1,756 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "AD",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+      "valueUri": "urn:hl7-org:v3"
+    }
+  ],
+  "url": "http://hl7.org/fhir/StructureDefinition/AD",
+  "name": "V3 Data type AD (PostalAddress)",
+  "display": "V3 Data type AD (PostalAddress)",
+  "status": "active",
+  "experimental": false,
+  "publisher": "HL7",
+  "description": "Mailing and home or office addresses. A sequence of address parts, such as street or post office Box, city, postal code, country, etc.",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/ANY",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "path": "AD",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "AD.nullFlavor",
+        "representation": [
+          "xmlAttr"
+        ],
+        "label": "Exceptional Value Detail",
+        "definition": "If a value is an exceptional value (NULL-value), this specifies in what way and why proper information is missing.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/v3-NullFlavor"
+          }
+        }
+      },
+      {
+        "path": "AD.delimiter",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "AD.country",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "AD.state",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "AD.county",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "AD.city",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "AD.postalCode",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "AD.streetAddressLine",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "AD.houseNumber",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "AD.houseNumberNumeric",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "AD.direction",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "AD.streetName",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "AD.streetNameBase",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "AD.streetNameType",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "AD.additionalLocator",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "AD.unitID",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "AD.unitType",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "AD.careOf",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "AD.censusTract",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "AD.deliveryAddressLine",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "AD.deliveryInstallationType",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "AD.deliveryInstallationArea",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "AD.deliveryInstallationQualifier",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "AD.deliveryMode",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "AD.deliveryModeIdentifier",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "AD.buildingNumberSuffix",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "AD.postBox",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "AD.precinct",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "AD.other",
+        "representation": [
+          "xmlText"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "AD.use",
+        "representation": [
+          "xmlAttr"
+        ],
+        "label": "Use Code",
+        "definition": "A set of codes advising a system or user which address in a set of like addresses to select for a given purpose.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-defaulttype",
+            "valueString": "SXPR_TS"
+          }
+        ],
+        "path": "AD.useablePeriod",
+        "representation": [
+          "typeAttr"
+        ],
+        "label": "Useable Period",
+        "definition": "A General Timing Specification (GTS) specifying the periods of time during which the address can be used. This is used to specify different addresses for different times of the week or year.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "IVL_TS"
+          },
+          {
+            "code": "EIVL_TS"
+          },
+          {
+            "code": "PIVL_TS"
+          },
+          {
+            "code": "SXPR_TS"
+          }
+        ]
+      },
+      {
+        "path": "AD.isNotOrdered",
+        "representation": [
+          "xmlAttr"
+        ],
+        "label": "Is Not Ordered",
+        "definition": "A boolean value specifying whether the order of the address parts is known or not. While the address parts are always a Sequence, the order in which they are presented may or may not be known. Where this matters, the isNotOrdered property can be used to convey this information.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "path": "AD",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "AD.delimiter",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "AD.country",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "AD.state",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "AD.county",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "AD.city",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "AD.postalCode",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "AD.streetAddressLine",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "AD.houseNumber",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "AD.houseNumberNumeric",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "AD.direction",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "AD.streetName",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "AD.streetNameBase",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "AD.streetNameType",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "AD.additionalLocator",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "AD.unitID",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "AD.unitType",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "AD.careOf",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "AD.censusTract",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "AD.deliveryAddressLine",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "AD.deliveryInstallationType",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "AD.deliveryInstallationArea",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "AD.deliveryInstallationQualifier",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "AD.deliveryMode",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "AD.deliveryModeIdentifier",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "AD.buildingNumberSuffix",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "AD.postBox",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "AD.precinct",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ST"
+          }
+        ]
+      },
+      {
+        "path": "AD.other",
+        "representation": [
+          "xmlText"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "AD.use",
+        "representation": [
+          "xmlAttr"
+        ],
+        "label": "Use Code",
+        "definition": "A set of codes advising a system or user which address in a set of like addresses to select for a given purpose.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-defaulttype",
+            "valueString": "SXPR_TS"
+          }
+        ],
+        "path": "AD.useablePeriod",
+        "representation": [
+          "typeAttr"
+        ],
+        "label": "Useable Period",
+        "definition": "A General Timing Specification (GTS) specifying the periods of time during which the address can be used. This is used to specify different addresses for different times of the week or year.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "IVL_TS"
+          },
+          {
+            "code": "EIVL_TS"
+          },
+          {
+            "code": "PIVL_TS"
+          },
+          {
+            "code": "SXPR_TS"
+          }
+        ]
+      },
+      {
+        "path": "AD.isNotOrdered",
+        "representation": [
+          "xmlAttr"
+        ],
+        "label": "Is Not Ordered",
+        "definition": "A boolean value specifying whether the order of the address parts is known or not. While the address parts are always a Sequence, the order in which they are presented may or may not be known. Where this matters, the isNotOrdered property can be used to convey this information.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      }
+    ]
+  }
+}

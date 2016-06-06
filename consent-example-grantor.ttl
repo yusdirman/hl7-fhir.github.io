@@ -1,0 +1,57 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Consentconsent-example-grantor> a fhir:Consent;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "consent-example-grantor"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">The following scenario is based on a question asked on John Moehrke's blog in the \n	<a href=\"http://healthcaresecprivacy.blogspot.com/2016/04/consent-given-to-authorized.html\">Consent given to authorized representative</a>\n    <p>\nThis is a case where a Patient is giving a limited (read-only) access to an individual.\n	</p><p>\n    Patient &quot;P. van de Heuvel&quot; wishes to provide XXX with read-only access to the data at Good Health Psychiatric Hospital \n   available for patient requested access use.\n   </p>\n   </div>"
+  ];
+  fhir:Consent.status [ fhir:value "active"];
+  fhir:Consent.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/consenttypecodes" ];
+       fhir:Coding.code [ fhir:value "Opt-In" ];
+       fhir:Coding.display [ fhir:value "Authorization with exceptions." ]
+     ]
+  ];
+  fhir:Consent.issued [ fhir:value "2016-05-11"^^xsd:date];
+  fhir:Consent.patient [
+     fhir:link <http://hl7.org/fhir/Patient/f001>;
+     fhir:Reference.reference [ fhir:value "Patient/f001" ];
+     fhir:Reference.display [ fhir:value "P. van de Heuvel" ]
+  ];
+  fhir:Consent.recipient [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/Practitioner/f204>;
+     fhir:Reference.reference [ fhir:value "Practitioner/f204" ];
+     fhir:Reference.display [ fhir:value "Fictive Nurse" ]
+  ];
+  fhir:Consent.action [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v3/ActReason" ];
+       fhir:Coding.code [ fhir:value "PATRQT" ];
+       fhir:Coding.display [ fhir:value "patient requested" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/restful-interaction" ];
+       fhir:Coding.code [ fhir:value "read" ]
+     ]
+  ];
+  fhir:Consent.contentAttachment [
+     fhir:Attachment.title [ fhir:value "The terms of the consent in lawyer speak." ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

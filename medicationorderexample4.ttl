@@ -1,0 +1,84 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/MedicationOrdermedrx004> a fhir:MedicationOrder;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "medrx004"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: medrx004</p><p><b>identifier</b>: 12345 (OFFICIAL)</p><p><b>status</b>: active</p><p><b>medication</b>: <a>prescribed medication</a></p><p><b>patient</b>: <a>Eve Everywoman</a></p><p><b>encounter</b>: <a>encounter who leads to this priscription</a></p><p><b>dateWritten</b>: Jan 15, 2015</p><p><b>prescriber</b>: <a>Patrick Pump</a></p><p><b>reasonCode</b>: Asthma <span>(Details : {SNOMED CT code '195967001' = 'Asthma (disorder)', given as 'Asthma'})</span></p><h3>DosageInstructions</h3><table><tr><td>-</td><td><b>Text</b></td><td><b>Timing</b></td><td><b>AsNeeded[x]</b></td><td><b>Route</b></td><td><b>Dose[x]</b></td></tr><tr><td>*</td><td>Use 2 puffs twice daily as needed</td><td>Duration 3days, Do 2 per 1 days</td><td>true</td><td>Inhalation <span>(Details : {SNOMED CT code '422237004' = 'Inhalation - unit of product usage (qualifier value)', given as 'Inhalation'})</span></td><td>2 415215001<span> (Details: SNOMED CT code 415215001 = 'Puffs')</span></td></tr></table></div>"
+  ];
+  fhir:MedicationOrder.identifier [
+     fhir:index 0;
+     fhir:Identifier.use [ fhir:value "official" ];
+     fhir:Identifier.system [ fhir:value "http://www.bmc.nl/portal/prescriptions" ];
+     fhir:Identifier.value [ fhir:value "12345" ]
+  ];
+  fhir:MedicationOrder.status [ fhir:value "active"];
+  fhir:MedicationOrder.medicationReference [
+     fhir:link <http://hl7.org/fhir/Medication/MedicationExample12>;
+     fhir:Reference.reference [ fhir:value "Medication/MedicationExample12" ];
+     fhir:Reference.display [ fhir:value "prescribed medication" ]
+  ];
+  fhir:MedicationOrder.patient [
+     fhir:link <http://hl7.org/fhir/Patient/f001>;
+     fhir:Reference.reference [ fhir:value "Patient/f001" ];
+     fhir:Reference.display [ fhir:value "Eve Everywoman" ]
+  ];
+  fhir:MedicationOrder.encounter [
+     fhir:link <http://hl7.org/fhir/Encounter/f002>;
+     fhir:Reference.reference [ fhir:value "Encounter/f002" ];
+     fhir:Reference.display [ fhir:value "encounter who leads to this priscription" ]
+  ];
+  fhir:MedicationOrder.dateWritten [ fhir:value "2015-01-15"^^xsd:date];
+  fhir:MedicationOrder.prescriber [
+     fhir:link <http://hl7.org/fhir/Practitioner/f007>;
+     fhir:Reference.reference [ fhir:value "Practitioner/f007" ];
+     fhir:Reference.display [ fhir:value "Patrick Pump" ]
+  ];
+  fhir:MedicationOrder.reasonCode [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:concept sct:195967001;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "195967001" ];
+       fhir:Coding.display [ fhir:value "Asthma" ]
+     ]
+  ];
+  fhir:MedicationOrder.dosageInstruction [
+     fhir:index 0;
+     fhir:MedicationOrder.dosageInstruction.text [ fhir:value "Use 2 puffs twice daily as needed" ];
+     fhir:MedicationOrder.dosageInstruction.timing [
+       fhir:Timing.repeat [
+         fhir:Timing.repeat.duration [ fhir:value "3"^^xsd:decimal ];
+         fhir:Timing.repeat.durationUnit [ fhir:value "d" ];
+         fhir:Timing.repeat.frequency [ fhir:value "2"^^xsd:int ];
+         fhir:Timing.repeat.period [ fhir:value "1"^^xsd:decimal ];
+         fhir:Timing.repeat.periodUnit [ fhir:value "d" ]
+       ]
+     ];
+     fhir:MedicationOrder.dosageInstruction.asNeededBoolean [ fhir:value "true"^^xsd:boolean ];
+     fhir:MedicationOrder.dosageInstruction.route [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept sct:422237004;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "422237004" ];
+         fhir:Coding.display [ fhir:value "Inhalation" ]
+       ]
+     ];
+     fhir:MedicationOrder.dosageInstruction.doseQuantity [
+       fhir:Quantity.value [ fhir:value "2"^^xsd:decimal ];
+       fhir:Quantity.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Quantity.code [ fhir:value "415215001" ]
+     ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,66 @@
+{
+  "resourceType": "ValueSet",
+  "id": "hspc-heartratebodyposition",
+  "meta": {
+    "lastUpdated": "2016-06-06T20:14:04.181+00:00",
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>HSPC Heart Rate Measurement Body Position</h2><p>SELECT SNOMED CT code system values.</p><p><b>Copyright Statement:</b> TBD</p><p>This value set includes codes from the following code systems:</p><ul><li>Include these codes as defined in http://snomed.info/sct<table><tr><td><b>Code</b></td><td><b>Display</b></td></tr><tr><td>40199007</td><td>Supine body position</td><td/></tr><tr><td>33586001</td><td>Sitting position</td><td/></tr><tr><td>10904000</td><td>Orthostatic body position</td><td/></tr></table></li></ul></div>"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/valueset-oid",
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.712"
+    }
+  ],
+  "url": "http://hl7.org/fhir/ValueSet/hspc-heartratebodyposition",
+  "version": "0.01",
+  "name": "HSPC Heart Rate Measurement Body Position",
+  "status": "draft",
+  "experimental": true,
+  "publisher": "Health Services Platform Consortium (HSPC)",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "other",
+          "value": "http://hl7.org/fhir"
+        },
+        {
+          "system": "email",
+          "value": "fhir@lists.hl7.org"
+        }
+      ]
+    }
+  ],
+  "date": "2015-06-11",
+  "description": "SELECT SNOMED CT code system values.",
+  "immutable": true,
+  "copyright": "TBD",
+  "extensible": true,
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "40199007",
+            "display": "Supine body position"
+          },
+          {
+            "code": "33586001",
+            "display": "Sitting position"
+          },
+          {
+            "code": "10904000",
+            "display": "Orthostatic body position"
+          }
+        ]
+      }
+    ]
+  }
+}

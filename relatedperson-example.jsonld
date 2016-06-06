@@ -1,0 +1,125 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/RelatedPerson",
+  "resourceType": "RelatedPerson",
+  "Resource.id": {
+    "value": "benedicte"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <table>\n        <tbody>\n          <tr>\n            <td>Name</td>\n            <td>Bénédicte du Marché</td>\n          </tr>\n          <tr>\n            <td>Address</td>\n            <td>43, Place du Marché Sainte Catherine, 75004 Paris, France</td>\n          </tr>\n          <tr>\n            <td>Contacts</td>\n            <td>Phone: +33 (237) 998327</td>\n          </tr>\n        </tbody>\n      </table>\n    </div>"
+    }
+  },
+  "RelatedPerson.identifier": [
+    {
+      "Identifier.use": {
+        "value": "usual"
+      },
+      "Identifier.type": {
+        "CodeableConcept.text": {
+          "value": "INSEE"
+        }
+      },
+      "Identifier.system": {
+        "value": "urn:oid:1.2.250.1.61"
+      },
+      "Identifier.value": {
+        "value": "272117510400399"
+      }
+    }
+  ],
+  "RelatedPerson.patient": {
+    "Reference.reference": {
+      "value": "Patient/example"
+    },
+    "reference": "http://hl7.org/fhir//Patient/example"
+  },
+  "RelatedPerson.relationship": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/patient-contact-relationship"
+        },
+        "Coding.code": {
+          "value": "partner"
+        }
+      },
+      {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/v3/RoleCode"
+        },
+        "Coding.code": {
+          "value": "WIFE"
+        }
+      }
+    ]
+  },
+  "RelatedPerson.name": {
+    "HumanName.family": [
+      {
+        "value": "du",
+        "string.extension": [
+          {
+            "Extension.url": {
+              "value": "http://hl7.org/fhir/StructureDefinitioniso-21090#qualifier"
+            },
+            "Extension.valueCode": {
+              "value": "VV"
+            }
+          }
+        ]
+      },
+      {
+        "value": "Marché"
+      }
+    ],
+    "HumanName.given": [
+      {
+        "value": "Bénédicte"
+      }
+    ]
+  },
+  "RelatedPerson.telecom": [
+    {
+      "ContactPoint.system": {
+        "value": "phone"
+      },
+      "ContactPoint.value": {
+        "value": "+33 (237) 998327"
+      }
+    }
+  ],
+  "RelatedPerson.gender": {
+    "value": "female"
+  },
+  "RelatedPerson.address": [
+    {
+      "Address.line": [
+        {
+          "value": "43, Place du Marché Sainte Catherine"
+        }
+      ],
+      "Address.city": {
+        "value": "Paris"
+      },
+      "Address.postalCode": {
+        "value": "75004"
+      },
+      "Address.country": {
+        "value": "FRA"
+      }
+    }
+  ],
+  "RelatedPerson.photo": [
+    {
+      "Attachment.contentType": {
+        "value": "image/jpeg"
+      },
+      "Attachment.url": {
+        "value": "Binary/f016"
+      }
+    }
+  ]
+}

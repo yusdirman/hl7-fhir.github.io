@@ -1,0 +1,87 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Goalgoal-example-qicore> a fhir:Goal;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "goal-example-qicore"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "additional" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n			<p> A simple care goal for a patient to lose weight due to obesity.</p>\n		</div>"
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/goal-target" ];
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "measure" ];
+       fhir:Extension.valueCodeableConcept [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:concept loinc:3141-9;
+           fhir:Coding.system [ fhir:value "http://loinc.org" ];
+           fhir:Coding.code [ fhir:value "3141-9" ];
+           fhir:Coding.display [ fhir:value "Weight Measured" ]
+         ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:Extension.url [ fhir:value "detail" ];
+       fhir:Extension.valueRange [
+         fhir:Range.low [
+           fhir:Quantity.value [ fhir:value "160"^^xsd:decimal ];
+           fhir:Quantity.unit [ fhir:value "lbs" ];
+           fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+           fhir:Quantity.code [ fhir:value "[lb_av]" ]
+         ];
+         fhir:Range.high [
+           fhir:Quantity.value [ fhir:value "180"^^xsd:decimal ];
+           fhir:Quantity.unit [ fhir:value "lbs" ];
+           fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+           fhir:Quantity.code [ fhir:value "[lb_av]" ]
+         ]
+       ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/goal-reasonRejected" ];
+     fhir:Extension.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v3/ActReason" ];
+         fhir:Coding.code [ fhir:value "PREFUS" ];
+         fhir:Coding.display [ fhir:value "patient refuse" ]
+       ]
+     ]
+  ];
+  fhir:Goal.subject [
+     fhir:link <http://hl7.org/fhir/Patient/example>;
+     fhir:Reference.reference [ fhir:value "Patient/example" ];
+     fhir:Reference.display [ fhir:value "Peter James Chalmers" ]
+  ];
+  fhir:Goal.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:concept sct:289169006;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "289169006" ];
+       fhir:Coding.display [ fhir:value "weight loss" ]
+     ]
+  ];
+  fhir:Goal.description [ fhir:value "Target weight is 160 to 180 lbs."];
+  fhir:Goal.status [ fhir:value "rejected"];
+  fhir:Goal.addresses [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/Condition/12345>;
+     fhir:Reference.reference [ fhir:value "Condition/12345" ];
+     fhir:Reference.display [ fhir:value "obesity" ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

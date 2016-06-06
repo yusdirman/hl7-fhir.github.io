@@ -1,0 +1,160 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Appointment",
+  "resourceType": "Appointment",
+  "Resource.id": {
+    "value": "2docs"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Brian MRI results discussion</div>"
+    }
+  },
+  "Appointment.status": {
+    "value": "booked"
+  },
+  "Appointment.serviceCategory": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://example.org/service-category"
+        },
+        "Coding.code": {
+          "value": "gp"
+        },
+        "Coding.display": {
+          "value": "General Practice"
+        }
+      }
+    ]
+  },
+  "Appointment.serviceType": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.code": {
+            "value": "52"
+          },
+          "Coding.display": {
+            "value": "General Discussion"
+          }
+        }
+      ]
+    }
+  ],
+  "Appointment.specialty": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "value": "http://example.org/specialty"
+          },
+          "Coding.code": {
+            "value": "gp"
+          },
+          "Coding.display": {
+            "value": "General Practice"
+          }
+        }
+      ]
+    }
+  ],
+  "Appointment.appointmentType": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://example.org/appointment-type"
+        },
+        "Coding.code": {
+          "value": "wi"
+        },
+        "Coding.display": {
+          "value": "Walk in"
+        }
+      }
+    ]
+  },
+  "Appointment.priority": {
+    "value": 5
+  },
+  "Appointment.description": {
+    "value": "Discussion about Peter Chalmers MRI results"
+  },
+  "Appointment.start": {
+    "value": "2013-12-09T09:00:00Z"
+  },
+  "Appointment.end": {
+    "value": "2013-12-09T11:00:00Z"
+  },
+  "Appointment.comment": {
+    "value": "Clarify the results of the MRI to ensure context of test was correct"
+  },
+  "Appointment.participant": [
+    {
+      "Appointment.participant.actor": {
+        "Reference.reference": {
+          "value": "Patient/example"
+        },
+        "Reference.display": {
+          "value": "Peter James Chalmers"
+        },
+        "reference": "http://hl7.org/fhir//Patient/example"
+      },
+      "Appointment.participant.required": {
+        "value": "information-only"
+      },
+      "Appointment.participant.status": {
+        "value": "accepted"
+      }
+    },
+    {
+      "Appointment.participant.actor": {
+        "Reference.reference": {
+          "value": "Practitioner/example"
+        },
+        "Reference.display": {
+          "value": "Dr Adam Careful"
+        },
+        "reference": "http://hl7.org/fhir//Practitioner/example"
+      },
+      "Appointment.participant.required": {
+        "value": "required"
+      },
+      "Appointment.participant.status": {
+        "value": "accepted"
+      }
+    },
+    {
+      "Appointment.participant.actor": {
+        "Reference.reference": {
+          "value": "Practitioner/f202"
+        },
+        "Reference.display": {
+          "value": "Luigi Maas"
+        },
+        "reference": "http://hl7.org/fhir//Practitioner/f202"
+      },
+      "Appointment.participant.required": {
+        "value": "required"
+      },
+      "Appointment.participant.status": {
+        "value": "accepted"
+      }
+    },
+    {
+      "Appointment.participant.actor": {
+        "Reference.display": {
+          "value": "Phone Call"
+        }
+      },
+      "Appointment.participant.required": {
+        "value": "information-only"
+      },
+      "Appointment.participant.status": {
+        "value": "accepted"
+      }
+    }
+  ]
+}

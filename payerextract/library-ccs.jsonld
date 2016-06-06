@@ -1,0 +1,300 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Library",
+  "resourceType": "Library",
+  "Resource.id": {
+    "value": "library-ccs"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Cohort Definition for Cervical Cancer Screening Measure</div>"
+    }
+  },
+  "Library.moduleMetadata": {
+    "ModuleMetadata.identifier": [
+      {
+        "Identifier.use": {
+          "value": "official"
+        },
+        "Identifier.value": {
+          "value": "CCS"
+        }
+      }
+    ],
+    "ModuleMetadata.version": {
+      "value": "1.0.0"
+    },
+    "ModuleMetadata.title": {
+      "value": "Cohort Definition for Cervical Cancer Screening Measure"
+    },
+    "ModuleMetadata.type": {
+      "value": "library"
+    },
+    "ModuleMetadata.status": {
+      "value": "active"
+    },
+    "ModuleMetadata.experimental": {
+      "value": true
+    },
+    "ModuleMetadata.publicationDate": {
+      "value": "2016-04-19"
+    },
+    "ModuleMetadata.topic": [
+      {
+        "CodeableConcept.text": {
+          "value": "something"
+        }
+      }
+    ]
+  },
+  "Library.model": [
+    {
+      "Library.model.identifier": {
+        "value": "FHIR"
+      }
+    }
+  ],
+  "Library.valueSet": [
+    {
+      "Library.valueSet.name": {
+        "value": "HPVTests"
+      },
+      "Library.valueSet.identifier": {
+        "value": "HPV Tests"
+      }
+    },
+    {
+      "Library.valueSet.name": {
+        "value": "Cervical Cytology"
+      },
+      "Library.valueSet.identifier": {
+        "value": "2.16.840.1.113883.3.464.1004.1208"
+      }
+    },
+    {
+      "Library.valueSet.name": {
+        "value": "Hysterectomy"
+      },
+      "Library.valueSet.identifier": {
+        "value": "Hysterectomy"
+      }
+    },
+    {
+      "Library.valueSet.name": {
+        "value": "Absence of Cervix"
+      },
+      "Library.valueSet.identifier": {
+        "value": "Absence of Cervix"
+      }
+    }
+  ],
+  "Library.dataRequirement": [
+    {
+      "DataRequirement.type": {
+        "value": "Patient"
+      }
+    },
+    {
+      "DataRequirement.type": {
+        "value": "Procedure"
+      },
+      "DataRequirement.codeFilter": [
+        {
+          "DataRequirement.codeFilter.path": {
+            "value": "code"
+          },
+          "DataRequirement.codeFilter.valueSetString": {
+            "value": "Cervical Cytology"
+          }
+        }
+      ],
+      "DataRequirement.dateFilter": [
+        {
+          "DataRequirement.dateFilter.path": {
+            "value": "performedDateTime.value"
+          },
+          "DataRequirement.dateFilter.valuePeriod": {
+            "Period.start": {
+              "value": "2011-01-01"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "DataRequirement.type": {
+        "value": "DiagnosticReport"
+      },
+      "DataRequirement.codeFilter": [
+        {
+          "DataRequirement.codeFilter.path": {
+            "value": "code"
+          },
+          "DataRequirement.codeFilter.valueSetString": {
+            "value": "Cervical Cytology"
+          }
+        }
+      ],
+      "DataRequirement.dateFilter": [
+        {
+          "DataRequirement.dateFilter.path": {
+            "value": "effectiveDateTime.value"
+          },
+          "DataRequirement.dateFilter.valuePeriod": {
+            "Period.start": {
+              "value": "2011-01-01"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "DataRequirement.type": {
+        "value": "Observation"
+      },
+      "DataRequirement.codeFilter": [
+        {
+          "DataRequirement.codeFilter.path": {
+            "value": "code"
+          },
+          "DataRequirement.codeFilter.valueSetString": {
+            "value": "Cervical Cytology"
+          }
+        }
+      ],
+      "DataRequirement.dateFilter": [
+        {
+          "DataRequirement.dateFilter.path": {
+            "value": "effectiveDateTime.value"
+          },
+          "DataRequirement.dateFilter.valuePeriod": {
+            "Period.start": {
+              "value": "2011-01-01"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "DataRequirement.type": {
+        "value": "Procedure"
+      },
+      "DataRequirement.codeFilter": [
+        {
+          "DataRequirement.codeFilter.path": {
+            "value": "code"
+          },
+          "DataRequirement.codeFilter.valueSetString": {
+            "value": "HPV Tests"
+          }
+        }
+      ],
+      "DataRequirement.dateFilter": [
+        {
+          "DataRequirement.dateFilter.path": {
+            "value": "performedDateTime.value"
+          },
+          "DataRequirement.dateFilter.valuePeriod": {
+            "Period.start": {
+              "value": "2011-01-01"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "DataRequirement.type": {
+        "value": "DiagnosticReport"
+      },
+      "DataRequirement.codeFilter": [
+        {
+          "DataRequirement.codeFilter.path": {
+            "value": "code"
+          },
+          "DataRequirement.codeFilter.valueSetString": {
+            "value": "HPV Tests"
+          }
+        }
+      ],
+      "DataRequirement.dateFilter": [
+        {
+          "DataRequirement.dateFilter.path": {
+            "value": "effectiveDateTime.value"
+          },
+          "DataRequirement.dateFilter.valuePeriod": {
+            "Period.start": {
+              "value": "2011-01-01"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "DataRequirement.type": {
+        "value": "Observation"
+      },
+      "DataRequirement.codeFilter": [
+        {
+          "DataRequirement.codeFilter.path": {
+            "value": "code"
+          },
+          "DataRequirement.codeFilter.valueSetString": {
+            "value": "HPV Tests"
+          }
+        }
+      ],
+      "DataRequirement.dateFilter": [
+        {
+          "DataRequirement.dateFilter.path": {
+            "value": "effectiveDateTime.value"
+          },
+          "DataRequirement.dateFilter.valuePeriod": {
+            "Period.start": {
+              "value": "2011-01-01"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "DataRequirement.type": {
+        "value": "Procedure"
+      },
+      "DataRequirement.codeFilter": [
+        {
+          "DataRequirement.codeFilter.path": {
+            "value": "code"
+          },
+          "DataRequirement.codeFilter.valueSetString": {
+            "value": "Hysterectomy"
+          }
+        }
+      ]
+    },
+    {
+      "DataRequirement.type": {
+        "value": "Procedure"
+      },
+      "DataRequirement.codeFilter": [
+        {
+          "DataRequirement.codeFilter.path": {
+            "value": "code"
+          },
+          "DataRequirement.codeFilter.valueSetString": {
+            "value": "Absence of Cervix"
+          }
+        }
+      ]
+    }
+  ],
+  "Library.document": {
+    "Attachment.contentType": {
+      "value": "application/xml+elm"
+    },
+    "Attachment.url": {
+      "value": "http://example.org/libraries/library-ccs.elm.xml"
+    }
+  }
+}

@@ -1,0 +1,2179 @@
+﻿<!DOCTYPE HTML>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Conformance-daf-query-responder.ttl - FHIR v1.4.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+  <link rel="Prev" href="http://hl7.org/fhir/conformance-daf-query-responder.ttl.html"/>
+
+  <!-- Bootstrap core CSS -->
+  <link href="./dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="./assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="./assets/css/project.css" rel="stylesheet"/>
+  <link href="./assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment"><!-- segment-header -->	
+		<div class="container"><!-- container -->
+			<a id="logo" href="http://hl7.org/fhir" no-external="true"><img src="./assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a id="hl7-logo" href="http://www.hl7.org" no-external="true">
+					<img src="./assets/images/hl7-logo.png" width="42" height="50" alt="visit the hl7 website"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="./assets/images/search.png"/></a></div> 
+		</div>
+		<div class="container"><!-- container -->
+	</div></div><!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment"><!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container"><!-- container -->
+ <!-- HEADER CONTENT -->
+ 	      		
+ 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="documentation.html">Documentation</a></li>
+              <li><a href="implementation.html">Implementation</a></li>
+              <li><a href="resourcelist.html">Resources</a></li>
+              <li><a href="clinical.html">Clinical</a></li>
+              <li><a href="administration.html">Administrative</a></li>
+              <li><a href="infrastructure.html">Infrastructure</a></li>
+              <li><a href="financial.html">Financial</a></li>
+
+						</ul>
+					</div><!-- /.nav-collapse -->
+				</div><!-- /.container -->
+			</nav><!-- /.navbar -->
+      		
+				
+<!-- /HEADER CONTENT -->				
+		</div><!-- /container -->
+	</div><!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment"><!-- segment-breadcrumb -->
+		<div class="container"><!-- container -->	
+			<ul class="breadcrumb">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="infrastructure.html">Infrastructure</a></li>        <li><a href="conformance.html">Conformance</a></li>        <li><b>Example Instance</b></li>        <!-- conformance-daf-query-responder.ttl.html / resource-instance:Conformance / Example-->
+
+			</ul>	
+		</div><!-- /container -->
+	</div><!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment"><!-- segment-content -->
+	<div class="container"><!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+<!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<h1>Conformance-daf-query-responder.ttl</h1>
+
+<p>
+<a href="conformance-daf-query-responder.ttl">Raw Turtle</a>, 
+<a href="conformance-daf-query-responder.jsonld">JSON-LD</a> 
+</p>
+
+<div class="example">
+<p></p>
+<pre class="json">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+# - resource -------------------------------------------------------------------
+
+&lt;http://hl7.org/fhir/Conformanceconformance-daf-query-responder&gt; a fhir:Conformance;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value &quot;conformance-daf-query-responder&quot;];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value &quot;generated&quot; ];
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n      \n      &lt;h2&gt;DAF Responder&lt;/h2&gt;\n      \n      &lt;p&gt;(Requirements Definition)&lt;/p&gt;\n      \n      &lt;p&gt;Published: 2015-04-02&lt;/p&gt;\n      \n      &lt;p&gt;Published by: \n        &lt;b&gt;\n          \n          &lt;a href=\&quot;http://www.healthit.gov/\&quot;&gt;U.S. Office of the National Coordinator (ONC)&lt;/a&gt;\n        \n        &lt;/b&gt;\n      \n      &lt;/p&gt;\n      \n      &lt;p&gt;This profile defines the expected capabilities of the \n        &lt;i&gt;DAF Responder&lt;/i&gt; actor when conforming to the \n        &lt;a href=\&quot;daf.html\&quot;&gt;DAF FHIR IG&lt;/a&gt;. The profile includes the complete list of actual profiles, RESTful operations, search parameters supported by DAF Responders. DAF Requestors have the option of choosing from this list to access necessary data based on their local use cases and other contextual requirements.\n      &lt;/p&gt;\n      \n      &lt;h2&gt;General&lt;/h2&gt;\n      \n      &lt;table&gt;\n        \n        &lt;tbody&gt;\n          \n          &lt;tr&gt;\n            \n            &lt;th&gt;FHIR Version:&lt;/th&gt;\n            \n            &lt;td&gt;DSTU2&lt;/td&gt;\n          \n          &lt;/tr&gt;\n          \n          &lt;tr&gt;\n            \n            &lt;th&gt;Supported formats:&lt;/th&gt;\n            \n            &lt;td&gt;json and xml&lt;/td&gt;\n          \n          &lt;/tr&gt;\n        \n        &lt;/tbody&gt;\n      \n      &lt;/table&gt;\n	  \n      \n      &lt;h2&gt;REST  behavior&lt;/h2&gt;\n      \n      &lt;p&gt;The DAF Responder SHALL support the \n        &lt;a href=\&quot;patient-daf.html\&quot;&gt;DAF-Patient&lt;/a&gt; resource profile. In addition to the DAFPatient, the DAF Responder SHALL support at least one additional resource profile from the list of \n        &lt;a href=\&quot;daf.html\&quot;&gt;DAF profiles&lt;/a&gt;. \n	  The DAF Responder SHALL implement REST behavior according to the \n        &lt;a href=\&quot;../http.html\&quot;&gt;FHIR&lt;/a&gt; specification.\n	  The DAF Responder SHALL support both json and xml resource formats for all DAF interactions. The DAF Responder SHALL identify the DAF profile(s) supported as part of the FHIR BaseResource.Meta.profile attribute for each instance.\n      &lt;/p&gt;\n      \n      &lt;p&gt;\n        \n        &lt;b&gt;Security:&lt;/b&gt;\n      \n      &lt;/p&gt;\n      \n      &lt;p&gt;DAF Responders SHALL meet the security requirements documented in the \n        &lt;a href=\&quot;daf-security.html\&quot;&gt;DAF FHIR IG&lt;/a&gt;.\n      &lt;/p&gt;\n      \n      &lt;h3&gt;RESTful Operations Summary&lt;/h3&gt;\n      \n      &lt;table class=\&quot;grid\&quot;&gt;\n        \n        &lt;thead&gt;\n          \n          &lt;tr&gt;\n            \n            &lt;th&gt;Resource(Profile Name)&lt;/th&gt;\n            \n            &lt;th&gt;\n              &lt;a href=\&quot;../type-restful-interaction.html\&quot;&gt;Search&lt;/a&gt;\n            &lt;/th&gt;\n            \n            &lt;th&gt;\n              &lt;a href=\&quot;../type-restful-interaction.html\&quot;&gt;Read&lt;/a&gt;\n            &lt;/th&gt;\n            \n            &lt;th&gt;\n              &lt;a href=\&quot;../type-restful-interaction.html\&quot;&gt;Read Version&lt;/a&gt;\n            &lt;/th&gt;\n            \n            &lt;th&gt;\n              &lt;a href=\&quot;../type-restful-interaction.html\&quot;&gt;Instance History&lt;/a&gt;\n            &lt;/th&gt;\n          \n          &lt;/tr&gt;\n        \n        &lt;/thead&gt;\n        \n        &lt;tbody&gt;\n          \n          &lt;tr&gt;\n            \n            &lt;th&gt;\n              &lt;a href=\&quot;patient-daf.html\&quot;&gt;DAF-Patient&lt;/a&gt;\n            &lt;/th&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFPatientSearch\&quot; title=\&quot;Allows discovery of DAF-Patient resources based on different search criteria\&quot;&gt;SHALL&lt;/a&gt;\n            \n            &lt;/td&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFPatientSearch\&quot; title=\&quot;Allows retrieval of a specific DAF-Patients by resource id\&quot;&gt;SHALL&lt;/a&gt;\n            \n            &lt;/td&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFPatientSearch\&quot; title=\&quot;Allows retrieval of a historical version of a DAF-Patient\&quot;&gt;SHOULD&lt;/a&gt;\n            \n            &lt;/td&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFPatientSearch\&quot; title=\&quot;Allows review of changes to DAF-Patient over time\&quot;&gt;SHOULD&lt;/a&gt;\n            \n            &lt;/td&gt;\n          \n          &lt;/tr&gt;\n		  \n          &lt;tr&gt;\n            \n            &lt;th&gt;\n              &lt;a href=\&quot;allergyintolerance-daf.html\&quot;&gt;DAF-AllergyIntolerance&lt;/a&gt;\n            &lt;/th&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFAllergyIntoleranceSearch\&quot; title=\&quot;Allows discovery of DAF-AllergyIntolerance resources based on different search criteria\&quot;&gt;SHALL&lt;/a&gt;\n            \n            &lt;/td&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFAllergyIntoleranceSearch\&quot; title=\&quot;Allows retrieval of a specific DAF-AllergyIntolerance by id\&quot;&gt;SHALL&lt;/a&gt;\n            \n            &lt;/td&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFAllergyIntoleranceSearch\&quot; title=\&quot;Allows retrieval of a historical version of a DAF-AllergyIntolerance\&quot;&gt;SHOULD&lt;/a&gt;\n            \n            &lt;/td&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFAllergyIntoleranceSearch\&quot; title=\&quot;Allows review of changes to DAF-AllergyIntolerance over time\&quot;&gt;SHOULD&lt;/a&gt;\n            \n            &lt;/td&gt;\n          \n          &lt;/tr&gt;\n		  \n          &lt;tr&gt;\n            \n            &lt;th&gt;\n              &lt;a href=\&quot;diagnosticorder-daf.html\&quot;&gt;DAF-DiagnosticOrder&lt;/a&gt;\n            &lt;/th&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFDiagnosticOrderSearch\&quot; title=\&quot;Allows discovery of DAF-DiagnosticOrder resources based on different search criteria\&quot;&gt;SHALL&lt;/a&gt;\n            \n            &lt;/td&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFDiagnosticOrderSearch\&quot; title=\&quot;Allows retrieval of a specific DAF-DiagnosticOrder by id\&quot;&gt;SHALL&lt;/a&gt;\n            \n            &lt;/td&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFDiagnosticOrderSearch\&quot; title=\&quot;Allows retrieval of a historical version of a DAF-DiagnosticOrder\&quot;&gt;SHOULD&lt;/a&gt;\n            \n            &lt;/td&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFDiagnosticOrderSearch\&quot; title=\&quot;Allows review of changes to DAF-DiagnosticOrder over time\&quot;&gt;SHOULD&lt;/a&gt;\n            \n            &lt;/td&gt;\n          \n          &lt;/tr&gt;\n		  \n          &lt;tr&gt;\n            \n            &lt;th&gt;\n              &lt;a href=\&quot;diagnosticreport-daf.html\&quot;&gt;DAF-DiagnosticReport&lt;/a&gt;\n            &lt;/th&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFDiagnosticReportSearch\&quot; title=\&quot;Allows discovery of DAF-DiagnosticReport resources based on different search criteria\&quot;&gt;SHALL&lt;/a&gt;\n            \n            &lt;/td&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFDiagnosticReportSearch\&quot; title=\&quot;Allows retrieval of a specific DAF-DiagnosticReport by id\&quot;&gt;SHALL&lt;/a&gt;\n            \n            &lt;/td&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFDiagnosticReportSearch\&quot; title=\&quot;Allows retrieval of a historical version of a DAF-DiagnosticReport\&quot;&gt;SHOULD&lt;/a&gt;\n            \n            &lt;/td&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFDiagnosticReportSearch\&quot; title=\&quot;Allows review of changes to DAF-DiagnosticReport over time\&quot;&gt;SHOULD&lt;/a&gt;\n            \n            &lt;/td&gt;\n          \n          &lt;/tr&gt;\n		  \n          &lt;tr&gt;\n            \n            &lt;th&gt;\n              &lt;a href=\&quot;encounter-daf.html\&quot;&gt;DAF-Encounter&lt;/a&gt;\n            &lt;/th&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFEncounterSearch\&quot; title=\&quot;Allows discovery of DAF-Encounter resources based on different search criteria\&quot;&gt;SHALL&lt;/a&gt;\n            \n            &lt;/td&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFEncounterSearch\&quot; title=\&quot;Allows retrieval of a specific DAF-Encounter by id\&quot;&gt;SHALL&lt;/a&gt;\n            \n            &lt;/td&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFEncounterSearch\&quot; title=\&quot;Allows retrieval of a historical version of a DAF-Encounter\&quot;&gt;SHOULD&lt;/a&gt;\n            \n            &lt;/td&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFEncounterSearch\&quot; title=\&quot;Allows review of changes to DAF-Encounter over time\&quot;&gt;SHOULD&lt;/a&gt;\n            \n            &lt;/td&gt;\n          \n          &lt;/tr&gt;\n		  \n          &lt;tr&gt;\n            \n            &lt;th&gt;\n              &lt;a href=\&quot;familymemberhistory-daf.html\&quot;&gt;DAF-FamilyMemberHistory&lt;/a&gt;\n            &lt;/th&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFFamilyMemberHistorySearch\&quot; title=\&quot;Allows discovery of DAF-FamilyMemberHistory resources based on different search criteria\&quot;&gt;SHALL&lt;/a&gt;\n            \n            &lt;/td&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFFamilyMemberHistorySearch\&quot; title=\&quot;Allows retrieval of a specific DAF-FamilyMemberHistory by id\&quot;&gt;SHALL&lt;/a&gt;\n            \n            &lt;/td&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFFamilyMemberHistorySearch\&quot; title=\&quot;Allows retrieval of a historical version of a DAF-FamilyMemberHistory\&quot;&gt;SHOULD&lt;/a&gt;\n            \n            &lt;/td&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFFamilyMemberHistorySearch\&quot; title=\&quot;Allows review of changes to DAF-FamilyMemberHistory over time\&quot;&gt;SHOULD&lt;/a&gt;\n            \n            &lt;/td&gt;\n          \n          &lt;/tr&gt;\n		  \n          &lt;tr&gt;\n            \n            &lt;th&gt;\n              &lt;a href=\&quot;immunization-daf.html\&quot;&gt;DAF-Immunization&lt;/a&gt;\n            &lt;/th&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFImmunizationSearch\&quot; title=\&quot;Allows discovery of DAF-Immunization resources based on different search criteria\&quot;&gt;SHALL&lt;/a&gt;\n            \n            &lt;/td&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFImmunizationSearch\&quot; title=\&quot;Allows retrieval of a specific DAF-Immunization by id\&quot;&gt;SHALL&lt;/a&gt;\n            \n            &lt;/td&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFImmunizationSearch\&quot; title=\&quot;Allows retrieval of a historical version of a DAF-Immunization\&quot;&gt;SHOULD&lt;/a&gt;\n            \n            &lt;/td&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFImmunizationSearch\&quot; title=\&quot;Allows review of changes to DAF-Immunization over time\&quot;&gt;SHOULD&lt;/a&gt;\n            \n            &lt;/td&gt;\n          \n          &lt;/tr&gt;\n		  \n          &lt;tr&gt;\n            \n            &lt;th&gt;\n              &lt;a href=\&quot;observation-daf-results.html\&quot;&gt;DAF-Results&lt;/a&gt;\n            &lt;/th&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFResultsSearch\&quot; title=\&quot;Allows discovery of DAF-Results resources based on different search criteria\&quot;&gt;SHALL&lt;/a&gt;\n            \n            &lt;/td&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFResultsSearch\&quot; title=\&quot;Allows retrieval of a specific DAF-Results by id\&quot;&gt;SHALL&lt;/a&gt;\n            \n            &lt;/td&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFResultsSearch\&quot; title=\&quot;Allows retrieval of a historical version of a DAF-Results\&quot;&gt;SHOULD&lt;/a&gt;\n            \n            &lt;/td&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFResultsSearch\&quot; title=\&quot;Allows review of changes to DAF-Results over time\&quot;&gt;SHOULD&lt;/a&gt;\n            \n            &lt;/td&gt;\n          \n          &lt;/tr&gt;\n		  \n          &lt;tr&gt;\n            \n            &lt;th&gt;\n              &lt;a href=\&quot;medication-daf.html\&quot;&gt;DAF-Medication&lt;/a&gt;\n            &lt;/th&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFMedicationSearch\&quot; title=\&quot;Allows discovery of DAF-Medication resources based on different search criteria\&quot;&gt;SHALL&lt;/a&gt;\n            \n            &lt;/td&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFMedicationSearch\&quot; title=\&quot;Allows retrieval of a specific DAF-Medication by id\&quot;&gt;SHALL&lt;/a&gt;\n            \n            &lt;/td&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFMedicationSearch\&quot; title=\&quot;Allows retrieval of a historical version of a DAF-Medication\&quot;&gt;SHOULD&lt;/a&gt;\n            \n            &lt;/td&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFMedicationSearch\&quot; title=\&quot;Allows review of changes to DAF-Medication over time\&quot;&gt;SHOULD&lt;/a&gt;\n            \n            &lt;/td&gt;\n          \n          &lt;/tr&gt;\n		  \n          &lt;tr&gt;\n            \n            &lt;th&gt;\n              &lt;a href=\&quot;medicationstatement-daf.html\&quot;&gt;DAF-MedicationStatement&lt;/a&gt;\n            &lt;/th&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFMedicationStatementSearch\&quot; title=\&quot;Allows discovery of DAF-MedicationStatement resources based on different search criteria\&quot;&gt;SHALL&lt;/a&gt;\n            \n            &lt;/td&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFMedicationStatementSearch\&quot; title=\&quot;Allows retrieval of a specific DAF-MedicationStatement by id\&quot;&gt;SHALL&lt;/a&gt;\n            \n            &lt;/td&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFMedicationStatementSearch\&quot; title=\&quot;Allows retrieval of a historical version of a DAF-MedicationStatement\&quot;&gt;SHOULD&lt;/a&gt;\n            \n            &lt;/td&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFMedicationStatementSearch\&quot; title=\&quot;Allows review of changes to DAF-MedicationStatement over time\&quot;&gt;SHOULD&lt;/a&gt;\n            \n            &lt;/td&gt;\n          \n          &lt;/tr&gt;\n		  \n          &lt;tr&gt;\n            \n            &lt;th&gt;\n              &lt;a href=\&quot;medicationadministration-daf.html\&quot;&gt;DAF-MedicationAdministration&lt;/a&gt;\n            &lt;/th&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFMedicationAdministrationSearch\&quot; title=\&quot;Allows discovery of DAF-MedicationAdministration resources based on different search criteria\&quot;&gt;SHALL&lt;/a&gt;\n            \n            &lt;/td&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFMedicationAdministrationSearch\&quot; title=\&quot;Allows retrieval of a specific DAF-MedicationAdministration by id\&quot;&gt;SHALL&lt;/a&gt;\n            \n            &lt;/td&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFMedicationAdministrationSearch\&quot; title=\&quot;Allows retrieval of a historical version of a DAF-MedicationAdministration\&quot;&gt;SHOULD&lt;/a&gt;\n            \n            &lt;/td&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFMedicationAdministrationSearch\&quot; title=\&quot;Allows review of changes to DAF-MedicationAdministration over time\&quot;&gt;SHOULD&lt;/a&gt;\n            \n            &lt;/td&gt;\n          \n          &lt;/tr&gt;\n		  \n		  &lt;tr&gt;\n            \n            &lt;th&gt;\n              &lt;a href=\&quot;medicationorder-daf.html\&quot;&gt;DAF-MedicationOrder&lt;/a&gt;\n            &lt;/th&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFMedicationOrderSearch\&quot; title=\&quot;Allows discovery of DAF-MedicationOrder resources based on different search criteria\&quot;&gt;SHALL&lt;/a&gt;\n            \n            &lt;/td&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFMedicationOrderSearch\&quot; title=\&quot;Allows retrieval of a specific DAF-MedicationOrder by id\&quot;&gt;SHALL&lt;/a&gt;\n            \n            &lt;/td&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFMedicationOrderSearch\&quot; title=\&quot;Allows retrieval of a historical version of a DAF-MedicationOrder\&quot;&gt;SHOULD&lt;/a&gt;\n            \n            &lt;/td&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFMedicationOrderSearch\&quot; title=\&quot;Allows review of changes to DAF-MedicationOrder over time\&quot;&gt;SHOULD&lt;/a&gt;\n            \n            &lt;/td&gt;\n          \n          &lt;/tr&gt;\n		  \n		  &lt;tr&gt;\n            \n            &lt;th&gt;\n              &lt;a href=\&quot;medicationdispense-daf.html\&quot;&gt;DAF-MedicationDispense&lt;/a&gt;\n            &lt;/th&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFMedicationDispenseSearch\&quot; title=\&quot;Allows discovery of DAF-MedicationDispense resources based on different search criteria\&quot;&gt;SHALL&lt;/a&gt;\n            \n            &lt;/td&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFMedicationDispenseSearch\&quot; title=\&quot;Allows retrieval of a specific DAF-MedicationDispense by id\&quot;&gt;SHALL&lt;/a&gt;\n            \n            &lt;/td&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFMedicationDispenseSearch\&quot; title=\&quot;Allows retrieval of a historical version of a DAF-MedicationDispense\&quot;&gt;SHOULD&lt;/a&gt;\n            \n            &lt;/td&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFMedicationDispenseSearch\&quot; title=\&quot;Allows review of changes to DAF-MedicationDispense over time\&quot;&gt;SHOULD&lt;/a&gt;\n            \n            &lt;/td&gt;\n          \n          &lt;/tr&gt;\n		  \n		  \n          &lt;tr&gt;\n            \n            &lt;th&gt;\n              &lt;a href=\&quot;condition-daf.html\&quot;&gt;DAF-Condition&lt;/a&gt;\n            &lt;/th&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFConditionSearch\&quot; title=\&quot;Allows discovery of DAF-Condition resources based on different search criteria\&quot;&gt;SHALL&lt;/a&gt;\n            \n            &lt;/td&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFConditionSearch\&quot; title=\&quot;Allows retrieval of a specific DAF-Condition by id\&quot;&gt;SHALL&lt;/a&gt;\n            \n            &lt;/td&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFConditionSearch\&quot; title=\&quot;Allows retrieval of a historical version of a DAF-Condition\&quot;&gt;SHOULD&lt;/a&gt;\n            \n            &lt;/td&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFConditionSearch\&quot; title=\&quot;Allows review of changes to DAF-Condition over time\&quot;&gt;SHOULD&lt;/a&gt;\n            \n            &lt;/td&gt;\n          \n          &lt;/tr&gt;\n		  \n          &lt;tr&gt;\n            \n            &lt;th&gt;\n              &lt;a href=\&quot;procedure-daf.html\&quot;&gt;DAF-Procedure&lt;/a&gt;\n            &lt;/th&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFProcedureSearch\&quot; title=\&quot;Allows discovery of DAF-Procedure resources based on different search criteria\&quot;&gt;SHALL&lt;/a&gt;\n            \n            &lt;/td&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFProcedureSearch\&quot; title=\&quot;Allows retrieval of a specific DAF-Procedure by id\&quot;&gt;SHALL&lt;/a&gt;\n            \n            &lt;/td&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFProcedureSearch\&quot; title=\&quot;Allows retrieval of a historical version of a DAF-Procedure\&quot;&gt;SHOULD&lt;/a&gt;\n            \n            &lt;/td&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFProcedureSearch\&quot; title=\&quot;Allows review of changes to DAF-Procedure over time\&quot;&gt;SHOULD&lt;/a&gt;\n            \n            &lt;/td&gt;\n          \n          &lt;/tr&gt;\n		  \n          &lt;tr&gt;\n            \n            &lt;th&gt;\n              &lt;a href=\&quot;observation-daf-smokingstatus.html\&quot;&gt;DAF-SmokingStatus&lt;/a&gt;\n            &lt;/th&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFSmokingStatusSearch\&quot; title=\&quot;Allows discovery of DAF-SmokingStatus resources based on different search criteria\&quot;&gt;SHALL&lt;/a&gt;\n            \n            &lt;/td&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFSmokingStatusSearch\&quot; title=\&quot;Allows retrieval of a specific DAF-SmokingStatus by id\&quot;&gt;SHALL&lt;/a&gt;\n            \n            &lt;/td&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFSmokingStatusSearch\&quot; title=\&quot;Allows retrieval of a historical version of a DAF-SmokingStatus\&quot;&gt;SHOULD&lt;/a&gt;\n            \n            &lt;/td&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFSmokingStatusSearch\&quot; title=\&quot;Allows review of changes to DAF-SmokingStatus over time\&quot;&gt;SHOULD&lt;/a&gt;\n            \n            &lt;/td&gt;\n          \n          &lt;/tr&gt;\n		  \n          &lt;tr&gt;\n            \n            &lt;th&gt;\n              &lt;a href=\&quot;observation-daf-vitalsigns.html\&quot;&gt;DAF-VitalSigns&lt;/a&gt;\n            &lt;/th&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFVitalSignsSearch\&quot; title=\&quot;Allows discovery of DAF-VitalSigns resources based on different search criteria\&quot;&gt;SHALL&lt;/a&gt;\n            \n            &lt;/td&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFVitalSignsSearch\&quot; title=\&quot;Allows retrieval of a specific DAF-VitalSigns by id\&quot;&gt;SHALL&lt;/a&gt;\n            \n            &lt;/td&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFVitalSignsSearch\&quot; title=\&quot;Allows retrieval of a historical version of a DAF-VitalSigns\&quot;&gt;SHOULD&lt;/a&gt;\n            \n            &lt;/td&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFVitalSignsSearch\&quot; title=\&quot;Allows review of changes to DAF-VitalSigns over time\&quot;&gt;SHOULD&lt;/a&gt;\n            \n            &lt;/td&gt;\n          \n          &lt;/tr&gt;\n		  \n          &lt;tr&gt;\n            \n            &lt;th&gt;\n              &lt;a href=\&quot;list-daf.html\&quot;&gt;DAF List&lt;/a&gt;\n            &lt;/th&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFListSearch\&quot; title=\&quot;Allows discovery of DAF List resources based on different search criteria\&quot;&gt;SHALL&lt;/a&gt;\n            \n            &lt;/td&gt;\n			\n            &lt;td&gt;\n			  \n              &lt;a href=\&quot;#DAFListSearch\&quot; title=\&quot;Allows retrieval of a specific DAF List by id\&quot;&gt;SHALL&lt;/a&gt;\n            \n            &lt;/td&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFListSearch\&quot; title=\&quot;Allows retrieval of a historical version of a DAF List\&quot;&gt;SHOULD&lt;/a&gt;\n            \n            &lt;/td&gt;\n            \n            &lt;td&gt;\n              \n              &lt;a href=\&quot;#DAFListSearch\&quot; title=\&quot;Allows review of changes to DAF List over time\&quot;&gt;SHOULD&lt;/a&gt;\n            \n            &lt;/td&gt;\n          \n          &lt;/tr&gt;\n        \n        &lt;/tbody&gt;\n      \n      &lt;/table&gt;\n      \n      &lt;br/&gt;\n      \n      &lt;br/&gt;\n\n	  \n      &lt;h3&gt;Supported profiles&lt;/h3&gt;\n	  \n      &lt;p&gt;DAF Responders SHALL support the \n        &lt;a href=\&quot;patient-daf.html\&quot;&gt;DAFPatient&lt;/a&gt; profile. In addition to the DAFPatient profile, DAF Responders SHALL support at least one more profile (for e.g DAFCondition, DAFMedicationAdministration, DAFResults) from the DAF profiles listed in the DAF implementation guide.\n      &lt;/p&gt;\n	  	  \n	  \n      &lt;h3&gt;Search Operations Summary&lt;/h3&gt;\n	  \n      &lt;p&gt;DAF Responders SHALL support the following common parameters as part of queries related to DAF profiles:&lt;/p&gt;\n	  \n      &lt;ul&gt;\n	     \n        &lt;li&gt;\n          &lt;a href=\&quot;../search.html#id\&quot;&gt;_id&lt;/a&gt;\n        &lt;/li&gt;\n		 \n        &lt;li&gt;\n          &lt;a href=\&quot;../search.html#lastUpdated\&quot;&gt;_lastUpdated&lt;/a&gt;\n        &lt;/li&gt;\n		 \n        &lt;li&gt;\n          &lt;a href=\&quot;../search.html#profile\&quot;&gt;_profile&lt;/a&gt;\n        &lt;/li&gt;\n		 \n        &lt;li&gt;\n          &lt;a href=\&quot;../search.html#security\&quot;&gt;_security&lt;/a&gt;\n        &lt;/li&gt;\n		 \n        &lt;li&gt;\n          &lt;a href=\&quot;../search.html#tag\&quot;&gt;_tag&lt;/a&gt;\n        &lt;/li&gt;\n		 \n        &lt;li&gt;\n          &lt;a href=\&quot;../search.html#text\&quot;&gt;_text&lt;/a&gt;\n        &lt;/li&gt;\n		 \n        &lt;li&gt;\n          &lt;a href=\&quot;../search.html#count\&quot;&gt;_count&lt;/a&gt;\n        &lt;/li&gt;\n		 \n        &lt;li&gt;\n          &lt;a href=\&quot;../search.html#include\&quot;&gt;_include&lt;/a&gt;\n        &lt;/li&gt;\n		 \n        &lt;li&gt;\n          &lt;a href=\&quot;../search.html#summary\&quot;&gt;_summary&lt;/a&gt;\n        &lt;/li&gt;\n		 \n        &lt;li&gt;\n          &lt;a href=\&quot;../search.html#contained\&quot;&gt;_contained&lt;/a&gt;\n        &lt;/li&gt;\n		 \n        &lt;li&gt;\n          &lt;a href=\&quot;../search.html#containedType\&quot;&gt;_containedType&lt;/a&gt;\n        &lt;/li&gt;\n	  \n      &lt;/ul&gt;\n	 \n	\n      &lt;p&gt;DAF Responders SHALL support the following search contexts defined within the \n        &lt;a href=\&quot;../search.html#Introduction\&quot;&gt;FHIR&lt;/a&gt;specification.\n      &lt;/p&gt; \n	\n      &lt;ul&gt;\n		\n        &lt;li&gt;Search context by specifying a particular resource type&lt;/li&gt;\n		\n        &lt;li&gt;Search context which specifies a compartment&lt;/li&gt;\n	\n      &lt;/ul&gt;\n	\n      &lt;p&gt;DAF Responders SHALL support \n        &lt;a href=\&quot;../search.html#Modifiers\&quot;&gt;Modifiers&lt;/a&gt; as applicable to the data types of the search parameters. DAF Responders SHALL also support \n        &lt;a href=\&quot;../search.html#Composite Search Parameters\&quot;&gt;Composite Search Parameters&lt;/a&gt; as defined in the FHIR specification.\n      &lt;/p&gt;\n	  \n      &lt;table class=\&quot;grid\&quot;&gt;\n        \n        &lt;thead&gt;\n          \n          &lt;tr&gt;\n            \n            &lt;th&gt;Resource Name&lt;/th&gt;\n            \n            &lt;th&gt;Search and Include Parameters&lt;/th&gt;\n          \n          &lt;/tr&gt;\n        \n        &lt;/thead&gt;\n        \n        &lt;tbody&gt;\n          \n          &lt;tr&gt;\n			\n            &lt;td id=\&quot;DAFPatientSearch\&quot;&gt;DAF-Patient&lt;/td&gt;\n			\n            &lt;td&gt;\n				\n              &lt;ul&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../patient.html#search\&quot;&gt;name&lt;/a&gt; - Search based on given name or family name or text name (\n                  &lt;a href=\&quot;../search.html#string\&quot;&gt;string&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../patient.html#search\&quot;&gt;family&lt;/a&gt; - Search based on family name (\n                  &lt;a href=\&quot;../search.html#string\&quot;&gt;string&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../patient.html#search\&quot;&gt;given&lt;/a&gt; - Search based on given name (\n                  &lt;a href=\&quot;../search.html#string\&quot;&gt;string&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../patient.html#search\&quot;&gt;identifier&lt;/a&gt; - Search based on patient identifier (\n                  &lt;a href=\&quot;../search.html#token\&quot;&gt;token&lt;/a&gt;)\n                &lt;/li&gt;\n                \n                &lt;li&gt;\n                  &lt;a href=\&quot;../patient.html#search\&quot;&gt;gender&lt;/a&gt; - Search based on gender  (\n                  &lt;a href=\&quot;../search.html#token\&quot;&gt;token&lt;/a&gt;)\n                &lt;/li&gt;\n                \n                &lt;li&gt;\n                  &lt;a href=\&quot;../patient.html#search\&quot;&gt;birthdate&lt;/a&gt; - Search based on birthDate (\n                  &lt;a href=\&quot;../search.html#date\&quot;&gt;date&lt;/a&gt;)\n                &lt;/li&gt;\n					  &lt;!-- &lt;li&gt;\n                  &lt;a href=\&quot;../patient.html#search\&quot;&gt;language&lt;/a&gt; - Search based on preferred language (\n                  &lt;a href=\&quot;../search.html#token\&quot;&gt;token&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../patient.html#search\&quot;&gt;telecom&lt;/a&gt; - Search based on telecom (\n                  &lt;a href=\&quot;../search.html#token\&quot;&gt;token&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                \n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../patient-extensions.html#search\&quot;&gt;address-city&lt;/a&gt; - Search based on City (\n                  &lt;a href=\&quot;../search.html#string\&quot;&gt;string&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../patient-extensions.html#search\&quot;&gt;address-postalCode&lt;/a&gt; - Search based on postal code (\n                  &lt;a href=\&quot;../search.html#string\&quot;&gt;string&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../patient-extensions.html#search\&quot;&gt;address-state&lt;/a&gt; - Search based on state (\n                  &lt;a href=\&quot;../search.html#string\&quot;&gt;string&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../patient-extensions.html#search\&quot;&gt;mothersMaidenName&lt;/a&gt; - Search based on Patient mother&amp;#39;s Maiden Name (\n                  &lt;a href=\&quot;../search.html#string\&quot;&gt;string&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../patient-extensions.html#search\&quot;&gt;age&lt;/a&gt; - Search based on Patient&amp;#39;s age (\n                  &lt;a href=\&quot;../search.html#number\&quot;&gt;number&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../us-core.html#search\&quot;&gt;race&lt;/a&gt; - Search based on patient&amp;#39;s race (\n                  &lt;a href=\&quot;../search.html#token\&quot;&gt;token&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../us-core.html#search\&quot;&gt;ethnicity&lt;/a&gt; - Search based on patient&amp;#39;s ethnicity (\n                  &lt;a href=\&quot;../search.html#token\&quot;&gt;token&lt;/a&gt;)\n                &lt;/li&gt; --&gt;\n				&lt;li&gt;\n				  &lt;a href=\&quot;../patient-operations.html#everything\&quot;&gt;$everything&lt;/a&gt; - Return the entire patient record for a single patient.\n				&lt;/li&gt;\n				\n              &lt;/ul&gt;\n			\n            &lt;/td&gt;\n		  \n          &lt;/tr&gt;\n		  \n          &lt;tr&gt;\n		    \n            &lt;td id=\&quot;DAFAllergyIntoleranceSearch\&quot;&gt;DAF-AllergyIntolerance&lt;/td&gt;\n			\n            &lt;td&gt;\n				\n              &lt;ul&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../allergyintolerance.html#search\&quot;&gt;identifier&lt;/a&gt; - Search AllergyIntolerances by identifiers(\n                  &lt;a href=\&quot;../search.html#token\&quot;&gt;token&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../allergyintolerance.html#search\&quot;&gt;patient&lt;/a&gt; - Search allergies for a patient(\n                  &lt;a href=\&quot;../search.html#reference\&quot;&gt;reference&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;Chained parameter - patient.identifier&lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../allergyintolerance.html#search\&quot;&gt;category&lt;/a&gt; - Search based on category(\n                  &lt;a href=\&quot;../search.html#token\&quot;&gt;token&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../allergyintolerance.html#search\&quot;&gt;status&lt;/a&gt; - Search based on allergy status(\n                  &lt;a href=\&quot;../search.html#token\&quot;&gt;token&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../allergyintolerance.html#search\&quot;&gt;substance&lt;/a&gt; - Search based on allergy substance(\n                  &lt;a href=\&quot;../search.html#token\&quot;&gt;token&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../allergyintolerance.html#search\&quot;&gt;manifestation&lt;/a&gt; - Search based on allergy reaction(\n                  &lt;a href=\&quot;../search.html#token\&quot;&gt;token&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../allergyintolerance.html#search\&quot;&gt;severity&lt;/a&gt; - Search based on allergy severity(\n                  &lt;a href=\&quot;../search.html#token\&quot;&gt;token&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../allergyintolerance.html#search\&quot;&gt;onset&lt;/a&gt; - Search based on when allergies manifested(\n                  &lt;a href=\&quot;../search.html#date\&quot;&gt;date&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;Include parameter - AllergyIntolerance.patient&lt;/li&gt;\n				\n              &lt;/ul&gt;\n			\n            &lt;/td&gt;\n		  \n          &lt;/tr&gt;\n		  \n          &lt;tr&gt;\n		    \n            &lt;td id=\&quot;DAFDiagnosticOrderSearch\&quot;&gt;DAF-DiagnosticOrder&lt;/td&gt;\n			\n            &lt;td&gt;\n				\n              &lt;ul&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../diagnosticorder.html#search\&quot;&gt;identifier&lt;/a&gt; - Search for DiagnosticOrder by identifiers (\n                  &lt;a href=\&quot;../search.html#token\&quot;&gt;token&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../diagnosticorder.html#search\&quot;&gt;patient&lt;/a&gt; - Search for DiagnosticOrders for a patient (\n                  &lt;a href=\&quot;../search.html#reference\&quot;&gt;reference&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;Chained parameter - patient.identifier&lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../diagnosticorder.html#search\&quot;&gt;orderer&lt;/a&gt; - Search based on ordering provider (\n                  &lt;a href=\&quot;../search.html#reference\&quot;&gt;reference&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;Chained parameter - orderer.identifier&lt;/li&gt;\n				\n                &lt;li&gt;\n                  &lt;a href=\&quot;../diagnosticorder.html#search\&quot;&gt;code&lt;/a&gt; - Search based on type of the test ordered (\n                  &lt;a href=\&quot;../search.html#token\&quot;&gt;token&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../diagnosticorder.html#search\&quot;&gt;encounter&lt;/a&gt; - Search based on encounter resulting in the order (\n                  &lt;a href=\&quot;../search.html#reference\&quot;&gt;reference&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;Chained parameter - encounter.identifier&lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../diagnosticorder.html#search\&quot;&gt;item-date&lt;/a&gt; - Search based on order date (\n                  &lt;a href=\&quot;../search.html#date\&quot;&gt;date&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;Include parameter - DiagnosticOrder.subject&lt;/li&gt;\n					\n                &lt;li&gt;Include parameter - DiagnosticOrder.orderer&lt;/li&gt;\n					\n                &lt;li&gt;Include parameter - DiagnosticOrder.encounter&lt;/li&gt;\n\n				\n              &lt;/ul&gt;\n			\n            &lt;/td&gt;\n		  \n          &lt;/tr&gt;\n		  \n          &lt;tr&gt;\n		    \n            &lt;td id=\&quot;DAFDiagnosticReportSearch\&quot;&gt;DAF-DiagnosticReport&lt;/td&gt;\n			\n            &lt;td&gt;\n				\n              &lt;ul&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../diagnosticreport.html#search\&quot;&gt;identifier&lt;/a&gt; - Search for DiagnosticReport by identifiers (\n                  &lt;a href=\&quot;../search.html#token\&quot;&gt;token&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../diagnosticreport.html#search\&quot;&gt;patient&lt;/a&gt; - Search for DiagnosticReport for a patient (\n                  &lt;a href=\&quot;../search.html#reference\&quot;&gt;reference&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;Chained parameter - patient.identifier&lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../diagnosticreport.html#search\&quot;&gt;date&lt;/a&gt; - Search based on DiagnosticReport date (\n                  &lt;a href=\&quot;../search.html#date\&quot;&gt;date&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../diagnosticreport.html#search\&quot;&gt;encounter&lt;/a&gt; - Search based on encounter resulting in the diagnostic report (\n                  &lt;a href=\&quot;../search.html#reference\&quot;&gt;reference&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;Chained parameter - encounter.identifier&lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../diagnosticreport.html#search\&quot;&gt;performer&lt;/a&gt; - Search based on diagnostic report performer (\n                  &lt;a href=\&quot;../search.html#reference\&quot;&gt;reference&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;Chained parameter - performer.identifier&lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../diagnosticreport.html#search\&quot;&gt;result&lt;/a&gt; - Search based on results included in the diagnostic report (\n                  &lt;a href=\&quot;../search.html#reference\&quot;&gt;reference&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;Chained parameter - result.code&lt;/li&gt;\n					\n                &lt;li&gt;Include parameter - DiagnosticReport.subject&lt;/li&gt;\n					\n                &lt;li&gt;Include parameter - DiagnosticReport.performer&lt;/li&gt;\n					\n                &lt;li&gt;Include parameter - DiagnosticReport.encounter&lt;/li&gt;\n					\n                &lt;li&gt;Include parameter - DiagnosticReport.result&lt;/li&gt;\n				\n              &lt;/ul&gt;\n			\n            &lt;/td&gt;\n		  \n          &lt;/tr&gt;\n		  \n          &lt;tr&gt;\n		    \n            &lt;td id=\&quot;DAFEncounterSearch\&quot;&gt;DAF-Encounter&lt;/td&gt;\n			\n            &lt;td&gt;\n				\n              &lt;ul&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../encounter.html#search\&quot;&gt;identifier&lt;/a&gt; - Search for Encounter by identifiers (\n                  &lt;a href=\&quot;../search.html#token\&quot;&gt;token&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../encounter.html#search\&quot;&gt;patient&lt;/a&gt; - Search for Encounter for a patient (\n                  &lt;a href=\&quot;../search.html#reference\&quot;&gt;reference&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;Chained parameter - patient.identifier&lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../encounter.html#search\&quot;&gt;location&lt;/a&gt; - Search based on Encounter location (\n                  &lt;a href=\&quot;../search.html#reference\&quot;&gt;reference&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;Chained parameter - location.identifier&lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../encounter.html#search\&quot;&gt;type&lt;/a&gt; - Search based on type of the Encounter (\n                  &lt;a href=\&quot;../search.html#token\&quot;&gt;token&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../encounter.html#search\&quot;&gt;date&lt;/a&gt; - Search based on encounter start and end date (\n                  &lt;a href=\&quot;../search.html#date\&quot;&gt;date&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../encounter.html#search\&quot;&gt;location-period&lt;/a&gt; - Search based on time period during which the patient was at the location (\n                  &lt;a href=\&quot;../search.html#date\&quot;&gt;date&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;Include parameter - Encounter.patient&lt;/li&gt;\n					\n                &lt;li&gt;Include parameter - Encounter.location&lt;/li&gt;\n				\n				&lt;li&gt;\n				  &lt;a href=\&quot;../encounter-operations.html#everything\&quot;&gt;$everything&lt;/a&gt; - Return all the data recorded as part of the encounter.\n				&lt;/li&gt;\n				\n              &lt;/ul&gt;\n			\n            &lt;/td&gt;\n		  \n          &lt;/tr&gt;\n		  \n          &lt;tr&gt;\n		    \n            &lt;td id=\&quot;DAFFamilyMemberHistorySearch\&quot;&gt;DAF-FamilyMemberHistory&lt;/td&gt;\n			\n            &lt;td&gt;\n				\n              &lt;ul&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../familymemberhistory.html#search\&quot;&gt;identifier&lt;/a&gt; - Search for FamilyMemberHistory by identifiers (\n                  &lt;a href=\&quot;../search.html#token\&quot;&gt;token&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../familymemberhistory.html#search\&quot;&gt;patient&lt;/a&gt; - Search for FamilyMemberHistory for a patient (\n                  &lt;a href=\&quot;../search.html#reference\&quot;&gt;reference&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;Chained parameter - patient.identifier&lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../familymemberhistory.html#search\&quot;&gt;relationship&lt;/a&gt; - Search based on FamilyMemberHistory Relationship type (\n                  &lt;a href=\&quot;../search.html#token\&quot;&gt;token&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../familymemberhistory.html#search\&quot;&gt;code&lt;/a&gt; - Search based on the clinical condition of the related person (\n                  &lt;a href=\&quot;../search.html#token\&quot;&gt;token&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;Include parameter - FamilyMemberHistory.patient&lt;/li&gt;\n				\n              &lt;/ul&gt;\n			\n            &lt;/td&gt;\n		  \n          &lt;/tr&gt;\n		  \n          &lt;tr&gt;\n		    \n            &lt;td id=\&quot;DAFImmunizationSearch\&quot;&gt;DAF-Immunization&lt;/td&gt;\n			\n            &lt;td&gt;\n				\n              &lt;ul&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../immunization.html#search\&quot;&gt;identifier&lt;/a&gt; - Search for Immunization by identifiers (\n                  &lt;a href=\&quot;../search.html#token\&quot;&gt;token&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../immunization.html#search\&quot;&gt;patient&lt;/a&gt; - Search for Immunization for a patient (\n                  &lt;a href=\&quot;../search.html#reference\&quot;&gt;reference&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;Chained parameter - patient.identifier&lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../immunization.html#search\&quot;&gt;date&lt;/a&gt; - Search based on Immunization date (\n                  &lt;a href=\&quot;../search.html#date\&quot;&gt;date&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../immunization.html#search\&quot;&gt;vaccine-code&lt;/a&gt; - Search based on vaccine product administered (\n                  &lt;a href=\&quot;../search.html#token\&quot;&gt;token&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../immunization.html#search\&quot;&gt;notgiven&lt;/a&gt; - Search based on whether immunization was notgiven (\n                  &lt;a href=\&quot;../search.html#token\&quot;&gt;token&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../immunization.html#search\&quot;&gt;lot-number&lt;/a&gt; - Search based on vaccine lot number (\n                  &lt;a href=\&quot;../search.html#string\&quot;&gt;string&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../immunization.html#search\&quot;&gt;requester&lt;/a&gt; - Search based on ordering provider (\n                  &lt;a href=\&quot;../search.html#reference\&quot;&gt;reference&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;Chained parameter - requester.identifier&lt;/li&gt;\n					\n                &lt;li&gt;Include parameter - Immunization.patient&lt;/li&gt;\n					\n                &lt;li&gt;Include parameter - Immunization.performer&lt;/li&gt;\n					\n                &lt;li&gt;Include parameter - Immunization.requester&lt;/li&gt;\n					\n                &lt;li&gt;Include parameter - Immunization.manufacturer&lt;/li&gt;\n					\n                &lt;li&gt;Include parameter - Immunization.reaction.detail&lt;/li&gt;\n				\n              &lt;/ul&gt;\n			\n            &lt;/td&gt;\n		  \n          &lt;/tr&gt;\n		  \n          &lt;tr&gt;\n		    \n            &lt;td id=\&quot;DAFResultsSearch\&quot;&gt;DAF-Results&lt;/td&gt;\n			\n            &lt;td&gt;\n				\n              &lt;ul&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../observation.html#search\&quot;&gt;identifier&lt;/a&gt; - Search for test by identifiers (\n                  &lt;a href=\&quot;../search.html#token\&quot;&gt;token&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../observation.html#search\&quot;&gt;patient&lt;/a&gt; - Search for test for a patient (\n                  &lt;a href=\&quot;../search.html#reference\&quot;&gt;reference&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;Chained parameter - patient.identifier&lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../observation.html#search\&quot;&gt;code&lt;/a&gt; - Search based on test code (\n                  &lt;a href=\&quot;../search.html#token\&quot;&gt;token&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../observation.html#search\&quot;&gt;value-concept&lt;/a&gt; - Search for a test with a specific value which is a code (\n                  &lt;a href=\&quot;../search.html#token\&quot;&gt;token&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../observation.html#search\&quot;&gt;value-quantity&lt;/a&gt; - Search for a test with a value which is a quantity (\n                  &lt;a href=\&quot;../search.html#quantity\&quot;&gt;quantity&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../observation.html#search\&quot;&gt;code-value[x]&lt;/a&gt; - Search for a test with a test name and value (\n                  &lt;a href=\&quot;../search.html#composite\&quot;&gt;composite&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../observation.html#search\&quot;&gt;date&lt;/a&gt; - Search based on test obtained date (\n                  &lt;a href=\&quot;../search.html#date\&quot;&gt;date&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../observation.html#search\&quot;&gt;encounter&lt;/a&gt; - Search based on encounter resulting in the result (\n                  &lt;a href=\&quot;../search.html#reference\&quot;&gt;reference&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;Chained parameter - encounter.identifier&lt;/li&gt;\n					\n                &lt;li&gt;Include parameter - Observation.subject&lt;/li&gt;\n					\n                &lt;li&gt;Include parameter - Observation.encounter&lt;/li&gt;\n				\n				&lt;li&gt;Include parameter - Observation.related&lt;/li&gt;\n				\n				&lt;li&gt;Reverse Include parameter - Observation.component&lt;/li&gt;\n				\n              &lt;/ul&gt;\n			\n            &lt;/td&gt;\n		  \n          &lt;/tr&gt;\n		  \n          &lt;tr&gt;\n		    \n            &lt;td id=\&quot;DAFMedicationSearch\&quot;&gt;DAF-Medication&lt;/td&gt;\n			\n            &lt;td&gt;\n				\n              &lt;ul&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../medication.html#search\&quot;&gt;code&lt;/a&gt; - Search by drug code (\n                  &lt;a href=\&quot;../search.html#token\&quot;&gt;token&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../medication.html#search\&quot;&gt;form&lt;/a&gt; - Search by drug form (\n                  &lt;a href=\&quot;../search.html#token\&quot;&gt;token&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../medication.html#search\&quot;&gt;ingredient&lt;/a&gt; - Search by drug ingredient (\n                  &lt;a href=\&quot;../search.html#reference\&quot;&gt;reference&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;Include parameter - Medication.manufacturer&lt;/li&gt;\n				\n              &lt;/ul&gt;\n			\n            &lt;/td&gt;\n		  \n          &lt;/tr&gt;\n		  \n          &lt;tr&gt;\n		    \n            &lt;td id=\&quot;DAFMedicationStatementSearch\&quot;&gt;DAF-MedicationStatement&lt;/td&gt;\n			\n            &lt;td&gt;\n				\n              &lt;ul&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../medicationstatement.html#search\&quot;&gt;identifier&lt;/a&gt; - Search by identifiers (\n                  &lt;a href=\&quot;../search.html#token\&quot;&gt;token&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../medicationstatement.html#search\&quot;&gt;patient&lt;/a&gt; - Search for medications for a patient (\n                  &lt;a href=\&quot;../search.html#reference\&quot;&gt;reference&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;Chained parameter - patient.identifier&lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../medicationstatement.html#search\&quot;&gt;effectivedate&lt;/a&gt; - Search for medications by date of administration (\n                  &lt;a href=\&quot;../search.html#date\&quot;&gt;date&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../medicationstatement.html#search\&quot;&gt;medication&lt;/a&gt; - Search by medication (\n                  &lt;a href=\&quot;../search.html#reference\&quot;&gt;reference&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;Chained parameter - medication.code&lt;/li&gt;\n					\n                &lt;li&gt;Include parameter - MedicationStatement.patient&lt;/li&gt;\n					\n                &lt;li&gt;Include parameter - MedicationStatement.medication&lt;/li&gt;\n				\n              &lt;/ul&gt;\n			\n            &lt;/td&gt;\n		  \n          &lt;/tr&gt;\n		  \n          &lt;tr&gt;\n		    \n            &lt;td id=\&quot;DAFMedicationAdministrationSearch\&quot;&gt;DAF-MedicationAdministration&lt;/td&gt;\n			\n            &lt;td&gt;\n				\n              &lt;ul&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../medicationadministration.html#search\&quot;&gt;identifier&lt;/a&gt; - Search by identifiers (\n                  &lt;a href=\&quot;../search.html#token\&quot;&gt;token&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../medicationadministration.html#search\&quot;&gt;patient&lt;/a&gt; - Search for medications for a patient (\n                  &lt;a href=\&quot;../search.html#reference\&quot;&gt;reference&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;Chained parameter - patient.identifier&lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../medicationadministration.html#search\&quot;&gt;effectivetime&lt;/a&gt; - Search for medications by date of administration (\n                  &lt;a href=\&quot;../search.html#date\&quot;&gt;date&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../medicationadministration.html#search\&quot;&gt;encounter&lt;/a&gt; - Search for medications by encounter (\n                  &lt;a href=\&quot;../search.html#reference\&quot;&gt;reference&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;Chained parameter - encounter.identifier&lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../medicationadministration.html#search\&quot;&gt;practitioner&lt;/a&gt; - Search based on practitioner (\n                  &lt;a href=\&quot;../search.html#reference\&quot;&gt;reference&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;Chained parameter - practitioner.identifier&lt;/li&gt;\n\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../medicationadministration.html#search\&quot;&gt;prescription&lt;/a&gt; - Search based on prescription (\n                  &lt;a href=\&quot;../search.html#reference\&quot;&gt;reference&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;Chained parameter - prescription.identifier&lt;/li&gt;\n					\n                &lt;li&gt;Include parameter - MedicationAdministration.patient&lt;/li&gt;\n					\n                &lt;li&gt;Include parameter - MedicationAdministration.practitioner&lt;/li&gt;\n					\n                &lt;li&gt;Include parameter - MedicationAdministration.encounter&lt;/li&gt;\n					\n                &lt;li&gt;Include parameter - MedicationAdministration.prescription&lt;/li&gt;\n				\n              &lt;/ul&gt;\n			\n            &lt;/td&gt;\n		  \n          &lt;/tr&gt;\n		  \n		  &lt;tr&gt;\n		    \n            &lt;td id=\&quot;DAFMedicationDispenseSearch\&quot;&gt;DAF-MedicationDispense&lt;/td&gt;\n			\n            &lt;td&gt;\n				\n              &lt;ul&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../medicationdispense.html#search\&quot;&gt;identifier&lt;/a&gt; - Search by identifiers (\n                  &lt;a href=\&quot;../search.html#token\&quot;&gt;token&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../medicationdispense.html#search\&quot;&gt;patient&lt;/a&gt; - Search for medications for a patient (\n                  &lt;a href=\&quot;../search.html#reference\&quot;&gt;reference&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;Chained parameter - patient.identifier&lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../medicationdispense.html#search\&quot;&gt;code&lt;/a&gt; - Search for medications by based on code (\n                  &lt;a href=\&quot;../search.html#token\&quot;&gt;token&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../medicationdispense.html#search\&quot;&gt;medication&lt;/a&gt; - Search for medications dispensed by medication (\n                  &lt;a href=\&quot;../search.html#reference\&quot;&gt;reference&lt;/a&gt;)\n                &lt;/li&gt;\n						\n                &lt;li&gt;Include parameter - MedicationDispense.patient&lt;/li&gt;\n					\n                &lt;li&gt;Include parameter - MedicationDispense.medicationReference&lt;/li&gt;\n				\n              &lt;/ul&gt;\n			\n            &lt;/td&gt;\n		  \n          &lt;/tr&gt;\n		  \n		  &lt;tr&gt;\n		    \n            &lt;td id=\&quot;DAFMedicationOrderSearch\&quot;&gt;DAF-MedicationOrder&lt;/td&gt;\n			\n            &lt;td&gt;\n				\n              &lt;ul&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../medicationorder.html#search\&quot;&gt;identifier&lt;/a&gt; - Search by identifiers (\n                  &lt;a href=\&quot;../search.html#token\&quot;&gt;token&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../medicationorder.html#search\&quot;&gt;patient&lt;/a&gt; - Search for medication orders for a patient (\n                  &lt;a href=\&quot;../search.html#reference\&quot;&gt;reference&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;Chained parameter - patient.identifier&lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../medicationorder.html#search\&quot;&gt;code&lt;/a&gt; - Search for medication orders by based on code (\n                  &lt;a href=\&quot;../search.html#token\&quot;&gt;token&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../medicationorder.html#search\&quot;&gt;medication&lt;/a&gt; - Search for medication orders by medication (\n                  &lt;a href=\&quot;../search.html#reference\&quot;&gt;reference&lt;/a&gt;)\n                &lt;/li&gt;\n						\n                &lt;li&gt;Include parameter - MedicationOrder.patient&lt;/li&gt;\n					\n                &lt;li&gt;Include parameter - MedicationOrder.medicationReference&lt;/li&gt;\n				\n				&lt;li&gt;Include parameter - MedicationOrder.encounter&lt;/li&gt;\n				\n				&lt;li&gt;Include parameter - MedicationOrder.prescriber&lt;/li&gt;\n				\n              &lt;/ul&gt;\n			\n            &lt;/td&gt;\n		  \n          &lt;/tr&gt;\n		  \n		  \n          &lt;tr&gt;\n		    \n            &lt;td id=\&quot;DAFConditionSearch\&quot;&gt;DAF-Condition&lt;/td&gt;\n			\n            &lt;td&gt;\n				\n              &lt;ul&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../condition.html#search\&quot;&gt;identifier&lt;/a&gt; - Search for Condition by identifiers (\n                  &lt;a href=\&quot;../search.html#token\&quot;&gt;token&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../condition.html#search\&quot;&gt;code&lt;/a&gt; - Search by Condition code (\n                  &lt;a href=\&quot;../search.html#token\&quot;&gt;token&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../condition.html#search\&quot;&gt;encounter&lt;/a&gt; - Search by encounter (\n                  &lt;a href=\&quot;../search.html#reference\&quot;&gt;reference&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;Chained parameter - encounter.identifier&lt;/li&gt;\n		\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../condition.html#search\&quot;&gt;onset&lt;/a&gt; - Search by onset Age of the condition (\n                  &lt;a href=\&quot;../search.html#date\&quot;&gt;date&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../condition.html#search\&quot;&gt;patient&lt;/a&gt; - Search for conditions for a patient (\n                  &lt;a href=\&quot;../search.html#reference\&quot;&gt;reference&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;Chained parameter - patient.identifier&lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../condition.html#search\&quot;&gt;severity&lt;/a&gt; - Search for conditions by severity (\n                  &lt;a href=\&quot;../search.html#token\&quot;&gt;token&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;Include parameter - Condition.patient&lt;/li&gt;\n					\n                &lt;li&gt;Include parameter - Condition.encounter&lt;/li&gt;\n					\n                &lt;li&gt;Include parameter - Condition.asserter&lt;/li&gt;\n				\n              &lt;/ul&gt;\n			\n            &lt;/td&gt;\n		  \n          &lt;/tr&gt;\n		  \n          &lt;tr&gt;\n		    \n            &lt;td id=\&quot;DAFProcedureSearch\&quot;&gt;DAF-Procedure&lt;/td&gt;\n			\n            &lt;td&gt;\n				\n              &lt;ul&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../procedure.html#search\&quot;&gt;identifier&lt;/a&gt; - Search for Procedure by identifiers (\n                  &lt;a href=\&quot;../search.html#token\&quot;&gt;token&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../procedure.html#search\&quot;&gt;code&lt;/a&gt; - Search by Procedure type (\n                  &lt;a href=\&quot;../search.html#token\&quot;&gt;token&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../procedure.html#search\&quot;&gt;date&lt;/a&gt; - Search by date when procedure was performed (\n                  &lt;a href=\&quot;../search.html#date\&quot;&gt;date&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../procedure.html#search\&quot;&gt;patient&lt;/a&gt; - Search for conditions for a patient (\n                  &lt;a href=\&quot;../search.html#reference\&quot;&gt;reference&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;Chained parameter - patient.identifier&lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../procedure.html#search\&quot;&gt;encounter&lt;/a&gt; - Search by encounter (\n                  &lt;a href=\&quot;../search.html#reference\&quot;&gt;reference&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;Chained parameter - encounter.identifier&lt;/li&gt;\n					\n                &lt;li&gt;Include parameter - Procedure.patient&lt;/li&gt;\n					\n                &lt;li&gt;Include parameter - Procedure.encounter&lt;/li&gt;\n					\n                &lt;li&gt;Include parameter - Procedure.performer&lt;/li&gt;\n				\n              &lt;/ul&gt;\n			\n            &lt;/td&gt;\n		  \n          &lt;/tr&gt;\n		  \n          &lt;tr&gt;\n		    \n            &lt;td id=\&quot;DAFSmokingStatusSearch\&quot;&gt;DAF-SmokingStatus&lt;/td&gt;\n			\n            &lt;td&gt;\n				\n              &lt;ul&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../observation.html#search\&quot;&gt;identifier&lt;/a&gt; - Search for SmokingStatus observation by identifiers (\n                  &lt;a href=\&quot;../search.html#token\&quot;&gt;token&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../observation.html#search\&quot;&gt;date&lt;/a&gt; - Search by period that applies to the smoking status (\n                  &lt;a href=\&quot;../search.html#date\&quot;&gt;date&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../observation.html#search\&quot;&gt;value-concept&lt;/a&gt; - Search by a specific value which is a Code (\n                  &lt;a href=\&quot;../search.html#token\&quot;&gt;token&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../observation.html#search\&quot;&gt;patient&lt;/a&gt; - Search for conditions for a patient (\n                  &lt;a href=\&quot;../search.html#reference\&quot;&gt;reference&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;Chained parameter - patient.identifier&lt;/li&gt;\n					\n                &lt;li&gt;Include parameter - Observation.subject&lt;/li&gt;\n					\n                &lt;li&gt;Include parameter - Observation.encounter&lt;/li&gt;\n				\n              &lt;/ul&gt;\n			\n            &lt;/td&gt;\n		  \n          &lt;/tr&gt;\n		  \n          &lt;tr&gt;\n		    \n            &lt;td id=\&quot;DAFVitalSignsSearch\&quot;&gt;DAF-VitalSigns&lt;/td&gt;\n			\n            &lt;td&gt;\n				\n              &lt;ul&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../observation.html#search\&quot;&gt;identifier&lt;/a&gt; - Search for Vital Signs by identifiers (\n                  &lt;a href=\&quot;../search.html#token\&quot;&gt;token&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../observation.html#search\&quot;&gt;date&lt;/a&gt; - Search by measurement date (\n                  &lt;a href=\&quot;../search.html#date\&quot;&gt;date&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../observation.html#search\&quot;&gt;value-quantity&lt;/a&gt; - Search for Vital Signs with a value which is a quantity (\n                  &lt;a href=\&quot;../search.html#quantity\&quot;&gt;quantity&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../observation.html#search\&quot;&gt;code&lt;/a&gt; - Search based on Vital Signs code (\n                  &lt;a href=\&quot;../search.html#token\&quot;&gt;token&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../observation.html#search\&quot;&gt;code-value[x]&lt;/a&gt; - Search for a Vital Signs with a code and value (\n                  &lt;a href=\&quot;../search.html#token\&quot;&gt;token&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../observation.html#search\&quot;&gt;patient&lt;/a&gt; - Search for Vital Signs for a patient (\n                  &lt;a href=\&quot;../search.html#reference\&quot;&gt;reference&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;Chained parameter - patient.identifier&lt;/li&gt;\n				\n					\n                &lt;li&gt;Include parameter - Observation.subject&lt;/li&gt;\n					\n                &lt;li&gt;Include parameter - Observation.encounter&lt;/li&gt;\n				\n              &lt;/ul&gt;\n			\n            &lt;/td&gt;\n		  \n          &lt;/tr&gt;\n		  \n		  \n          &lt;tr&gt;\n		    \n            &lt;td id=\&quot;DAFListSearch\&quot;&gt;DAF List&lt;/td&gt;\n			\n            &lt;td&gt;\n				\n              &lt;ul&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../list.html#search\&quot;&gt;identifier&lt;/a&gt; - Search for List by identifiers (\n                  &lt;a href=\&quot;../search.html#token\&quot;&gt;token&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../list.html#search\&quot;&gt;code&lt;/a&gt; - Search by type of list (\n                  &lt;a href=\&quot;../search.html#token\&quot;&gt;token&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../list.html#search\&quot;&gt;date&lt;/a&gt; - Search by list preparation date (\n                  &lt;a href=\&quot;../search.html#date\&quot;&gt;date&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../list.html#search\&quot;&gt;empty-reason&lt;/a&gt; - Search by empty reason code (\n                  &lt;a href=\&quot;../search.html#token\&quot;&gt;token&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;\n                  &lt;a href=\&quot;../list.html#search\&quot;&gt;patient&lt;/a&gt; - Search for list by patient (\n                  &lt;a href=\&quot;../search.html#reference\&quot;&gt;reference&lt;/a&gt;)\n                &lt;/li&gt;\n					\n                &lt;li&gt;Chained parameter - patient.identifier&lt;/li&gt;\n					\n                &lt;li&gt;Include parameter - List.subject&lt;/li&gt;\n					\n                &lt;li&gt;Include parameter - List.item&lt;/li&gt;\n				\n              &lt;/ul&gt;\n			\n            &lt;/td&gt;\n		  \n          &lt;/tr&gt;\n		  \n		\n        &lt;/tbody&gt;\n	  \n      &lt;/table&gt;\n      \n      &lt;br/&gt;\n      \n      &lt;br/&gt;\n    \n    &lt;/div&gt;&quot;
+  ];
+  fhir:Conformance.name [ fhir:value &quot;DAF Responder&quot;];
+  fhir:Conformance.status [ fhir:value &quot;draft&quot;];
+  fhir:Conformance.date [ fhir:value &quot;2015-04-02&quot;^^xsd:date];
+  fhir:Conformance.publisher [ fhir:value &quot;U.S. Office of the National Coordinator (ONC)&quot;];
+  fhir:Conformance.contact [
+     fhir:index 0;
+     fhir:Conformance.contact.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value &quot;other&quot; ];
+       fhir:ContactPoint.value [ fhir:value &quot;http://www.healthit.gov/&quot; ]
+     ]
+  ];
+  fhir:Conformance.description [ fhir:value &quot;This profile defines the expected capabilities of the DAF Responder actor when conforming to the DAF FHIR implementation guide.&quot;];
+  fhir:Conformance.kind [ fhir:value &quot;requirements&quot;];
+  fhir:Conformance.fhirVersion [ fhir:value &quot;1.0.0&quot;];
+  fhir:Conformance.acceptUnknown [ fhir:value &quot;extensions&quot;];
+  fhir:Conformance.format [
+     fhir:value &quot;xml&quot;;
+     fhir:index 0
+  ], [
+     fhir:value &quot;json&quot;;
+     fhir:index 1
+  ];
+  fhir:Conformance.profile [
+     fhir:index 0;
+     fhir:link &lt;http://hl7.org/fhir/StructureDefinition/daf-patient&gt;;
+     fhir:Reference.reference [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/daf-patient&quot; ]
+  ], [
+     fhir:index 1;
+     fhir:link &lt;http://hl7.org/fhir/StructureDefinition/daf-allergyintolerance&gt;;
+     fhir:Reference.reference [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/daf-allergyintolerance&quot; ]
+  ], [
+     fhir:index 2;
+     fhir:link &lt;http://hl7.org/fhir/StructureDefinition/daf-diagnosticorder&gt;;
+     fhir:Reference.reference [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/daf-diagnosticorder&quot; ]
+  ], [
+     fhir:index 3;
+     fhir:link &lt;http://hl7.org/fhir/StructureDefinition/daf-diagnosticreport&gt;;
+     fhir:Reference.reference [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/daf-diagnosticreport&quot; ]
+  ], [
+     fhir:index 4;
+     fhir:link &lt;http://hl7.org/fhir/StructureDefinition/daf-encounter&gt;;
+     fhir:Reference.reference [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/daf-encounter&quot; ]
+  ], [
+     fhir:index 5;
+     fhir:link &lt;http://hl7.org/fhir/StructureDefinition/daf-familymemberhistory&gt;;
+     fhir:Reference.reference [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/daf-familymemberhistory&quot; ]
+  ], [
+     fhir:index 6;
+     fhir:link &lt;http://hl7.org/fhir/StructureDefinition/daf-immunization&gt;;
+     fhir:Reference.reference [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/daf-immunization&quot; ]
+  ], [
+     fhir:index 7;
+     fhir:link &lt;http://hl7.org/fhir/StructureDefinition/daf-resultobscode&gt;;
+     fhir:Reference.reference [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/daf-resultobscode&quot; ]
+  ], [
+     fhir:index 8;
+     fhir:link &lt;http://hl7.org/fhir/StructureDefinition/daf-medication&gt;;
+     fhir:Reference.reference [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/daf-medication&quot; ]
+  ], [
+     fhir:index 9;
+     fhir:link &lt;http://hl7.org/fhir/StructureDefinition/daf-medicationstatement&gt;;
+     fhir:Reference.reference [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/daf-medicationstatement&quot; ]
+  ], [
+     fhir:index 10;
+     fhir:link &lt;http://hl7.org/fhir/StructureDefinition/daf-medicationadministration&gt;;
+     fhir:Reference.reference [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/daf-medicationadministration&quot; ]
+  ], [
+     fhir:index 11;
+     fhir:link &lt;http://hl7.org/fhir/StructureDefinition/daf-medicationorder&gt;;
+     fhir:Reference.reference [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/daf-medicationorder&quot; ]
+  ], [
+     fhir:index 12;
+     fhir:link &lt;http://hl7.org/fhir/StructureDefinition/daf-medicationdispense&gt;;
+     fhir:Reference.reference [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/daf-medicationdispense&quot; ]
+  ], [
+     fhir:index 13;
+     fhir:link &lt;http://hl7.org/fhir/StructureDefinition/daf-condition&gt;;
+     fhir:Reference.reference [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/daf-condition&quot; ]
+  ], [
+     fhir:index 14;
+     fhir:link &lt;http://hl7.org/fhir/StructureDefinition/daf-procedure&gt;;
+     fhir:Reference.reference [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/daf-procedure&quot; ]
+  ], [
+     fhir:index 15;
+     fhir:link &lt;http://hl7.org/fhir/StructureDefinition/observation-daf-smokingstatus-dafsmokingstatus&gt;;
+     fhir:Reference.reference [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/observation-daf-smokingstatus-dafsmokingstatus&quot; ]
+  ], [
+     fhir:index 16;
+     fhir:link &lt;http://hl7.org/fhir/StructureDefinition/daf-vitalsigns&gt;;
+     fhir:Reference.reference [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/daf-vitalsigns&quot; ]
+  ], [
+     fhir:index 17;
+     fhir:link &lt;http://hl7.org/fhir/StructureDefinition/daf-problemlist&gt;;
+     fhir:Reference.reference [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/daf-problemlist&quot; ]
+  ];
+  fhir:Conformance.rest [
+     fhir:index 0;
+     fhir:Conformance.rest.mode [ fhir:value &quot;server&quot; ];
+     fhir:Conformance.rest.documentation [ fhir:value &quot;The DAF Responder SHALL support the DAFPatient resource profile. In addition to the DAF-Patient, the DAF Responder SHALL support at least one additional resource profile from the list of DAF profiles. The DAF Responder SHALL implement REST behavior according to the FHIR specification. The DAF Responder SHALL support both json and xml resource formats for all DAF interactions.&quot; ];
+     fhir:Conformance.rest.security [
+       fhir:Conformance.rest.security.description [ fhir:value &quot;DAF Responders SHALL implement the security requirements documented in the [[daf-security|DAF FHIR IG]].&quot; ]
+     ];
+     fhir:Conformance.rest.resource [
+       fhir:index 0;
+       fhir:Conformance.rest.resource.type [ fhir:value &quot;Patient&quot; ];
+       fhir:Conformance.rest.resource.profile [
+         fhir:link &lt;http://hl7.org/fhir/StructureDefinition/daf-patient&gt;;
+         fhir:Reference.reference [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/daf-patient&quot; ]
+       ];
+       fhir:Conformance.rest.resource.interaction [
+         fhir:index 0;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;search-type&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows discovery of existing DAF-Patient resources using different search criteria&quot; ]
+       ], [
+         fhir:index 1;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;read&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows retrieval of a specific DAF-Patients by id&quot; ]
+       ], [
+         fhir:index 2;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHOULD&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;history-instance&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows review of changes to DAF-Patient instance over time&quot; ]
+       ], [
+         fhir:index 3;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHOULD&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;vread&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows retrieval of a historical version of a DAF-Patient instance&quot; ]
+       ];
+       fhir:Conformance.rest.resource.searchParam [
+         fhir:index 0;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;name&quot; ];
+         fhir:Conformance.rest.resource.searchParam.definition [ fhir:value &quot;http://hl7.org/fhir/SearchParameter/Patient-name&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;string&quot; ]
+       ], [
+         fhir:index 1;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;family&quot; ];
+         fhir:Conformance.rest.resource.searchParam.definition [ fhir:value &quot;http://hl7.org/fhir/SearchParameter/Patient-family&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;string&quot; ]
+       ], [
+         fhir:index 2;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;given&quot; ];
+         fhir:Conformance.rest.resource.searchParam.definition [ fhir:value &quot;http://hl7.org/fhir/SearchParameter/Patient-given&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;string&quot; ]
+       ], [
+         fhir:index 3;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;identifier&quot; ];
+         fhir:Conformance.rest.resource.searchParam.definition [ fhir:value &quot;http://hl7.org/fhir/SearchParameter/Patient-identifier&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;token&quot; ]
+       ], [
+         fhir:index 4;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;language&quot; ];
+         fhir:Conformance.rest.resource.searchParam.definition [ fhir:value &quot;http://hl7.org/fhir/SearchParameter/Patient-language&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;token&quot; ]
+       ], [
+         fhir:index 5;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;telecom&quot; ];
+         fhir:Conformance.rest.resource.searchParam.definition [ fhir:value &quot;http://hl7.org/fhir/SearchParameter/Patient-telecom&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;string&quot; ]
+       ], [
+         fhir:index 6;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;gender&quot; ];
+         fhir:Conformance.rest.resource.searchParam.definition [ fhir:value &quot;http://hl7.org/fhir/SearchParameter/Patient-gender&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;token&quot; ]
+       ], [
+         fhir:index 7;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;birthdate&quot; ];
+         fhir:Conformance.rest.resource.searchParam.definition [ fhir:value &quot;http://hl7.org/fhir/SearchParameter/Patient-birthdate&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;date&quot; ]
+       ], [
+         fhir:index 8;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;address-city&quot; ];
+         fhir:Conformance.rest.resource.searchParam.definition [ fhir:value &quot;http://hl7.org/fhir/SearchParameter/patient-extensions-Patient-city&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;string&quot; ]
+       ], [
+         fhir:index 9;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;address-postalCode&quot; ];
+         fhir:Conformance.rest.resource.searchParam.definition [ fhir:value &quot;http://hl7.org/fhir/SearchParameter/patient-extensions-Patient-postalCode&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;string&quot; ]
+       ], [
+         fhir:index 10;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;address-state&quot; ];
+         fhir:Conformance.rest.resource.searchParam.definition [ fhir:value &quot;http://hl7.org/fhir/SearchParameter/patient-extensions-Patient-state&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;string&quot; ]
+       ], [
+         fhir:index 11;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;mothersMaidenName&quot; ];
+         fhir:Conformance.rest.resource.searchParam.definition [ fhir:value &quot;http://hl7.org/fhir/SearchParameter/patient-extensions-Patient-mothersMaidenName&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;string&quot; ]
+       ], [
+         fhir:index 12;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;age&quot; ];
+         fhir:Conformance.rest.resource.searchParam.definition [ fhir:value &quot;http://hl7.org/fhir/SearchParameter/patient-extensions-Patient-age&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;number&quot; ]
+       ], [
+         fhir:index 13;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;race&quot; ];
+         fhir:Conformance.rest.resource.searchParam.definition [ fhir:value &quot;http://hl7.org/fhir/SearchParameter/us-core-Patient-race&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;token&quot; ]
+       ], [
+         fhir:index 14;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;ethnicity&quot; ];
+         fhir:Conformance.rest.resource.searchParam.definition [ fhir:value &quot;http://hl7.org/fhir/SearchParameter/us-core-Patient-ethnicity&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;token&quot; ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:Conformance.rest.resource.type [ fhir:value &quot;AllergyIntolerance&quot; ];
+       fhir:Conformance.rest.resource.profile [
+         fhir:link &lt;http://hl7.org/fhir/StructureDefinition/daf-allergyintolerance&gt;;
+         fhir:Reference.reference [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/daf-allergyintolerance&quot; ]
+       ];
+       fhir:Conformance.rest.resource.interaction [
+         fhir:index 0;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;search-type&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows discovery of existing DAF-AllergyIntolerance resources using different search criteria&quot; ]
+       ], [
+         fhir:index 1;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;read&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows retrieval of a specific DAF-AllergyIntolerance by id&quot; ]
+       ], [
+         fhir:index 2;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHOULD&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;history-instance&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows review of changes to DAF-AllergyIntolerance instance over time&quot; ]
+       ], [
+         fhir:index 3;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHOULD&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;vread&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows retrieval of a historical version of a DAF-AllergyIntolerance instance&quot; ]
+       ];
+       fhir:Conformance.rest.resource.searchInclude [
+         fhir:value &quot;AllergyIntolerance.patient&quot;;
+         fhir:index 0
+       ];
+       fhir:Conformance.rest.resource.searchParam [
+         fhir:index 0;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;identifier&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;token&quot; ]
+       ], [
+         fhir:index 1;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;patient&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;reference&quot; ];
+         fhir:Conformance.rest.resource.searchParam.chain [
+           fhir:value &quot;patient.identifier&quot;;
+           fhir:index 0
+         ]
+       ], [
+         fhir:index 2;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;category&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;token&quot; ]
+       ], [
+         fhir:index 3;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;status&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;token&quot; ]
+       ], [
+         fhir:index 4;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;substance&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;token&quot; ]
+       ], [
+         fhir:index 5;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;manifestation&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;token&quot; ]
+       ], [
+         fhir:index 6;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;severity&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;token&quot; ]
+       ], [
+         fhir:index 7;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;onset&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;date&quot; ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:Conformance.rest.resource.type [ fhir:value &quot;DiagnosticOrder&quot; ];
+       fhir:Conformance.rest.resource.profile [
+         fhir:link &lt;http://hl7.org/fhir/StructureDefinition/daf-diagnosticorder&gt;;
+         fhir:Reference.reference [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/daf-diagnosticorder&quot; ]
+       ];
+       fhir:Conformance.rest.resource.interaction [
+         fhir:index 0;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;search-type&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows discovery of existing DAF-DiagnosticOrder resources using different search criteria&quot; ]
+       ], [
+         fhir:index 1;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;read&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows retrieval of a specific DAF-DiagnosticOrder by id&quot; ]
+       ], [
+         fhir:index 2;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHOULD&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;history-instance&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows review of changes to DAF-DiagnosticOrder instance over time&quot; ]
+       ], [
+         fhir:index 3;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHOULD&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;vread&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows retrieval of a historical version of a DAF-DiagnosticOrder instance&quot; ]
+       ];
+       fhir:Conformance.rest.resource.searchInclude [
+         fhir:value &quot;DiagnosticOrder.subject&quot;;
+         fhir:index 0
+       ], [
+         fhir:value &quot;DiagnosticOrder.orderer&quot;;
+         fhir:index 1
+       ], [
+         fhir:value &quot;DiagnosticOrder.encounter&quot;;
+         fhir:index 2
+       ];
+       fhir:Conformance.rest.resource.searchParam [
+         fhir:index 0;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;identifier&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;token&quot; ]
+       ], [
+         fhir:index 1;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;patient&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;reference&quot; ];
+         fhir:Conformance.rest.resource.searchParam.chain [
+           fhir:value &quot;patient.identifier&quot;;
+           fhir:index 0
+         ]
+       ], [
+         fhir:index 2;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;orderer&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;reference&quot; ];
+         fhir:Conformance.rest.resource.searchParam.chain [
+           fhir:value &quot;orderer.identifier&quot;;
+           fhir:index 0
+         ]
+       ], [
+         fhir:index 3;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;code&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;token&quot; ]
+       ], [
+         fhir:index 4;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;encounter&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;reference&quot; ];
+         fhir:Conformance.rest.resource.searchParam.chain [
+           fhir:value &quot;encounter.identifier&quot;;
+           fhir:index 0
+         ]
+       ], [
+         fhir:index 5;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;item-date&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;date&quot; ]
+       ]
+     ], [
+       fhir:index 3;
+       fhir:Conformance.rest.resource.type [ fhir:value &quot;DiagnosticReport&quot; ];
+       fhir:Conformance.rest.resource.profile [
+         fhir:link &lt;http://hl7.org/fhir/StructureDefinition/daf-diagnosticreport&gt;;
+         fhir:Reference.reference [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/daf-diagnosticreport&quot; ]
+       ];
+       fhir:Conformance.rest.resource.interaction [
+         fhir:index 0;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;search-type&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows discovery of existing DAF-DiagnosticReport resources using different search criteria&quot; ]
+       ], [
+         fhir:index 1;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;read&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows retrieval of a specific DAF-DiagnosticReport by id&quot; ]
+       ], [
+         fhir:index 2;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHOULD&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;history-instance&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows review of changes to DAF-DiagnosticReport instance over time&quot; ]
+       ], [
+         fhir:index 3;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHOULD&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;vread&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows retrieval of a historical version of a DAF-DiagnosticReport instance&quot; ]
+       ];
+       fhir:Conformance.rest.resource.searchInclude [
+         fhir:value &quot;DiagnosticReport.subject&quot;;
+         fhir:index 0
+       ], [
+         fhir:value &quot;DiagnosticReport.performer&quot;;
+         fhir:index 1
+       ], [
+         fhir:value &quot;DiagnosticReport.encounter&quot;;
+         fhir:index 2
+       ], [
+         fhir:value &quot;DiagnosticReport.result&quot;;
+         fhir:index 3
+       ];
+       fhir:Conformance.rest.resource.searchParam [
+         fhir:index 0;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;identifier&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;token&quot; ]
+       ], [
+         fhir:index 1;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;patient&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;reference&quot; ];
+         fhir:Conformance.rest.resource.searchParam.chain [
+           fhir:value &quot;patient.identifier&quot;;
+           fhir:index 0
+         ]
+       ], [
+         fhir:index 2;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;date&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;date&quot; ]
+       ], [
+         fhir:index 3;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;encounter&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;reference&quot; ];
+         fhir:Conformance.rest.resource.searchParam.chain [
+           fhir:value &quot;encounter.identifier&quot;;
+           fhir:index 0
+         ]
+       ], [
+         fhir:index 4;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;performer&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;reference&quot; ];
+         fhir:Conformance.rest.resource.searchParam.chain [
+           fhir:value &quot;performer.identifier&quot;;
+           fhir:index 0
+         ]
+       ], [
+         fhir:index 5;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;result&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;reference&quot; ];
+         fhir:Conformance.rest.resource.searchParam.chain [
+           fhir:value &quot;result.code&quot;;
+           fhir:index 0
+         ]
+       ]
+     ], [
+       fhir:index 4;
+       fhir:Conformance.rest.resource.type [ fhir:value &quot;Encounter&quot; ];
+       fhir:Conformance.rest.resource.profile [
+         fhir:link &lt;http://hl7.org/fhir/StructureDefinition/daf-encounter&gt;;
+         fhir:Reference.reference [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/daf-encounter&quot; ]
+       ];
+       fhir:Conformance.rest.resource.interaction [
+         fhir:index 0;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;search-type&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows discovery of existing DAF-Encounter resources using different search criteria&quot; ]
+       ], [
+         fhir:index 1;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;read&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows retrieval of a specific DAF-Encounter by id&quot; ]
+       ], [
+         fhir:index 2;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHOULD&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;history-instance&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows review of changes to DAF-Encounter instance over time&quot; ]
+       ], [
+         fhir:index 3;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHOULD&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;vread&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows retrieval of a historical version of a DAF-Encounter instance&quot; ]
+       ];
+       fhir:Conformance.rest.resource.searchInclude [
+         fhir:value &quot;Encounter.patient&quot;;
+         fhir:index 0
+       ], [
+         fhir:value &quot;Encounter.location&quot;;
+         fhir:index 1
+       ];
+       fhir:Conformance.rest.resource.searchParam [
+         fhir:index 0;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;identifier&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;token&quot; ]
+       ], [
+         fhir:index 1;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;patient&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;reference&quot; ];
+         fhir:Conformance.rest.resource.searchParam.chain [
+           fhir:value &quot;patient.identifier&quot;;
+           fhir:index 0
+         ]
+       ], [
+         fhir:index 2;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;location&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;reference&quot; ];
+         fhir:Conformance.rest.resource.searchParam.chain [
+           fhir:value &quot;location.identifier&quot;;
+           fhir:index 0
+         ]
+       ], [
+         fhir:index 3;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;type&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;token&quot; ]
+       ], [
+         fhir:index 4;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;date&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;date&quot; ]
+       ], [
+         fhir:index 5;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;location-period&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;date&quot; ]
+       ]
+     ], [
+       fhir:index 5;
+       fhir:Conformance.rest.resource.type [ fhir:value &quot;FamilyMemberHistory&quot; ];
+       fhir:Conformance.rest.resource.profile [
+         fhir:link &lt;http://hl7.org/fhir/StructureDefinition/daf-familymemberhistory&gt;;
+         fhir:Reference.reference [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/daf-familymemberhistory&quot; ]
+       ];
+       fhir:Conformance.rest.resource.interaction [
+         fhir:index 0;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;search-type&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows discovery of existing DAF-FamilyMemberHistory resources using different search criteria&quot; ]
+       ], [
+         fhir:index 1;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;read&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows retrieval of a specific DAF-FamilyMemberHistory by id&quot; ]
+       ], [
+         fhir:index 2;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHOULD&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;history-instance&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows review of changes to DAF-FamilyMemberHistory instance over time&quot; ]
+       ], [
+         fhir:index 3;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHOULD&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;vread&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows retrieval of a historical version of a DAF-FamilyMemberHistory instance&quot; ]
+       ];
+       fhir:Conformance.rest.resource.searchInclude [
+         fhir:value &quot;FamilyMemberHistory.patient&quot;;
+         fhir:index 0
+       ];
+       fhir:Conformance.rest.resource.searchParam [
+         fhir:index 0;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;identifier&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;token&quot; ]
+       ], [
+         fhir:index 1;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;patient&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;reference&quot; ];
+         fhir:Conformance.rest.resource.searchParam.chain [
+           fhir:value &quot;patient.identifier&quot;;
+           fhir:index 0
+         ]
+       ], [
+         fhir:index 2;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;relationship&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;token&quot; ]
+       ], [
+         fhir:index 3;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;code&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;token&quot; ]
+       ]
+     ], [
+       fhir:index 6;
+       fhir:Conformance.rest.resource.type [ fhir:value &quot;Immunization&quot; ];
+       fhir:Conformance.rest.resource.profile [
+         fhir:link &lt;http://hl7.org/fhir/StructureDefinition/daf-immunization&gt;;
+         fhir:Reference.reference [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/daf-immunization&quot; ]
+       ];
+       fhir:Conformance.rest.resource.interaction [
+         fhir:index 0;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;search-type&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows discovery of existing DAF-Immunization resources using different search criteria&quot; ]
+       ], [
+         fhir:index 1;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;read&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows retrieval of a specific DAF-Immunization by id&quot; ]
+       ], [
+         fhir:index 2;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHOULD&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;history-instance&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows review of changes to DAF-Immunization instance over time&quot; ]
+       ], [
+         fhir:index 3;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHOULD&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;vread&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows retrieval of a historical version of a DAF-Immunization instance&quot; ]
+       ];
+       fhir:Conformance.rest.resource.searchInclude [
+         fhir:value &quot;Immunization.patient&quot;;
+         fhir:index 0
+       ], [
+         fhir:value &quot;Immunization.performer&quot;;
+         fhir:index 1
+       ], [
+         fhir:value &quot;Immunization.requester&quot;;
+         fhir:index 2
+       ], [
+         fhir:value &quot;Immunization.manufacturer&quot;;
+         fhir:index 3
+       ], [
+         fhir:value &quot;Immunization.reaction.detail&quot;;
+         fhir:index 4
+       ];
+       fhir:Conformance.rest.resource.searchParam [
+         fhir:index 0;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;identifier&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;token&quot; ]
+       ], [
+         fhir:index 1;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;patient&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;reference&quot; ];
+         fhir:Conformance.rest.resource.searchParam.chain [
+           fhir:value &quot;patient.identifier&quot;;
+           fhir:index 0
+         ]
+       ], [
+         fhir:index 2;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;date&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;date&quot; ]
+       ], [
+         fhir:index 3;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;vaccine-code&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;token&quot; ]
+       ], [
+         fhir:index 4;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;notgiven&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;token&quot; ]
+       ], [
+         fhir:index 5;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;lot-number&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;string&quot; ]
+       ], [
+         fhir:index 6;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;requester&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;reference&quot; ];
+         fhir:Conformance.rest.resource.searchParam.chain [
+           fhir:value &quot;requester.identifier&quot;;
+           fhir:index 0
+         ]
+       ]
+     ], [
+       fhir:index 7;
+       fhir:Conformance.rest.resource.type [ fhir:value &quot;Observation&quot; ];
+       fhir:Conformance.rest.resource.profile [
+         fhir:link &lt;http://hl7.org/fhir/StructureDefinition/daf-resultobs&gt;;
+         fhir:Reference.reference [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/daf-resultobs&quot; ]
+       ];
+       fhir:Conformance.rest.resource.interaction [
+         fhir:index 0;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;search-type&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows discovery of existing DAF-Results resources using different search criteria&quot; ]
+       ], [
+         fhir:index 1;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;read&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows retrieval of a specific DAF-Results by id&quot; ]
+       ], [
+         fhir:index 2;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHOULD&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;history-instance&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows review of changes to DAF-Results instance over time&quot; ]
+       ], [
+         fhir:index 3;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHOULD&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;vread&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows retrieval of a historical version of a DAF-Results instance&quot; ]
+       ];
+       fhir:Conformance.rest.resource.searchInclude [
+         fhir:value &quot;Observation.encounter&quot;;
+         fhir:index 0
+       ], [
+         fhir:value &quot;Observation.subject&quot;;
+         fhir:index 1
+       ], [
+         fhir:value &quot;Observation.related&quot;;
+         fhir:index 2
+       ];
+       fhir:Conformance.rest.resource.searchRevInclude [
+         fhir:value &quot;Observation.component&quot;;
+         fhir:index 0
+       ];
+       fhir:Conformance.rest.resource.searchParam [
+         fhir:index 0;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;identifier&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;token&quot; ]
+       ], [
+         fhir:index 1;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;patient&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;reference&quot; ];
+         fhir:Conformance.rest.resource.searchParam.chain [
+           fhir:value &quot;patient.identifier&quot;;
+           fhir:index 0
+         ]
+       ], [
+         fhir:index 2;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;code&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;token&quot; ]
+       ], [
+         fhir:index 3;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;value-concept&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;token&quot; ]
+       ], [
+         fhir:index 4;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;value-quantity&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;quantity&quot; ]
+       ], [
+         fhir:index 5;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;code-value[x]&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;composite&quot; ]
+       ], [
+         fhir:index 6;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;date&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;date&quot; ]
+       ], [
+         fhir:index 7;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;encounter&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;reference&quot; ];
+         fhir:Conformance.rest.resource.searchParam.chain [
+           fhir:value &quot;encounter.identifier&quot;;
+           fhir:index 0
+         ]
+       ]
+     ], [
+       fhir:index 8;
+       fhir:Conformance.rest.resource.type [ fhir:value &quot;Medication&quot; ];
+       fhir:Conformance.rest.resource.profile [
+         fhir:link &lt;http://hl7.org/fhir/StructureDefinition/daf-medication&gt;;
+         fhir:Reference.reference [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/daf-medication&quot; ]
+       ];
+       fhir:Conformance.rest.resource.interaction [
+         fhir:index 0;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;search-type&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows discovery of existing DAF-Medication resources using different search criteria&quot; ]
+       ], [
+         fhir:index 1;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;read&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows retrieval of a specific DAF-Medication by id&quot; ]
+       ], [
+         fhir:index 2;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHOULD&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;history-instance&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows review of changes to DAF-Medication instance over time&quot; ]
+       ], [
+         fhir:index 3;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHOULD&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;vread&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows retrieval of a historical version of a DAF-Medication instance&quot; ]
+       ];
+       fhir:Conformance.rest.resource.searchInclude [
+         fhir:value &quot;Medication.manufacturer&quot;;
+         fhir:index 0
+       ];
+       fhir:Conformance.rest.resource.searchParam [
+         fhir:index 0;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;code&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;token&quot; ]
+       ], [
+         fhir:index 1;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;form&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;token&quot; ]
+       ], [
+         fhir:index 2;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;ingredient&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;reference&quot; ]
+       ]
+     ], [
+       fhir:index 9;
+       fhir:Conformance.rest.resource.type [ fhir:value &quot;MedicationStatement&quot; ];
+       fhir:Conformance.rest.resource.profile [
+         fhir:link &lt;http://hl7.org/fhir/StructureDefinition/daf-medicationstatement&gt;;
+         fhir:Reference.reference [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/daf-medicationstatement&quot; ]
+       ];
+       fhir:Conformance.rest.resource.interaction [
+         fhir:index 0;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;search-type&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows discovery of existing DAF-MedicationStatement resources using different search criteria&quot; ]
+       ], [
+         fhir:index 1;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;read&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows retrieval of a specific DAF-MedicationStatement by id&quot; ]
+       ], [
+         fhir:index 2;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHOULD&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;history-instance&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows review of changes to DAF-MedicationStatement instance over time&quot; ]
+       ], [
+         fhir:index 3;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHOULD&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;vread&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows retrieval of a historical version of a DAF-MedicationStatement instance&quot; ]
+       ];
+       fhir:Conformance.rest.resource.searchInclude [
+         fhir:value &quot;MedicationStatement.patient&quot;;
+         fhir:index 0
+       ], [
+         fhir:value &quot;MedicationStatement.medication&quot;;
+         fhir:index 1
+       ];
+       fhir:Conformance.rest.resource.searchParam [
+         fhir:index 0;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;identifier&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;token&quot; ]
+       ], [
+         fhir:index 1;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;patient&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;reference&quot; ];
+         fhir:Conformance.rest.resource.searchParam.chain [
+           fhir:value &quot;patient.identifier&quot;;
+           fhir:index 0
+         ]
+       ], [
+         fhir:index 2;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;effectivedate&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;date&quot; ]
+       ], [
+         fhir:index 3;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;medication&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;reference&quot; ];
+         fhir:Conformance.rest.resource.searchParam.chain [
+           fhir:value &quot;medication.code&quot;;
+           fhir:index 0
+         ]
+       ]
+     ], [
+       fhir:index 10;
+       fhir:Conformance.rest.resource.type [ fhir:value &quot;MedicationAdministration&quot; ];
+       fhir:Conformance.rest.resource.profile [
+         fhir:link &lt;http://hl7.org/fhir/StructureDefinition/daf-medicationadministration&gt;;
+         fhir:Reference.reference [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/daf-medicationadministration&quot; ]
+       ];
+       fhir:Conformance.rest.resource.interaction [
+         fhir:index 0;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;search-type&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows discovery of existing DAF-MedicationAdministration resources using different search criteria&quot; ]
+       ], [
+         fhir:index 1;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;read&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows retrieval of a specific DAF-MedicationAdministration by id&quot; ]
+       ], [
+         fhir:index 2;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHOULD&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;history-instance&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows review of changes to DAF-MedicationAdministration instance over time&quot; ]
+       ], [
+         fhir:index 3;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHOULD&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;vread&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows retrieval of a historical version of a DAF-MedicationAdministration instance&quot; ]
+       ];
+       fhir:Conformance.rest.resource.searchInclude [
+         fhir:value &quot;MedicationAdministration.patient&quot;;
+         fhir:index 0
+       ], [
+         fhir:value &quot;MedicationAdministration.practitioner&quot;;
+         fhir:index 1
+       ], [
+         fhir:value &quot;MedicationAdministration.encounter&quot;;
+         fhir:index 2
+       ], [
+         fhir:value &quot;MedicationAdministration.prescription&quot;;
+         fhir:index 3
+       ];
+       fhir:Conformance.rest.resource.searchParam [
+         fhir:index 0;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;identifier&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;token&quot; ]
+       ], [
+         fhir:index 1;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;patient&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;reference&quot; ];
+         fhir:Conformance.rest.resource.searchParam.chain [
+           fhir:value &quot;patient.identifier&quot;;
+           fhir:index 0
+         ]
+       ], [
+         fhir:index 2;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;effectivetime&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;date&quot; ]
+       ], [
+         fhir:index 3;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;encounter&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;reference&quot; ];
+         fhir:Conformance.rest.resource.searchParam.chain [
+           fhir:value &quot;encounter.identifier&quot;;
+           fhir:index 0
+         ]
+       ], [
+         fhir:index 4;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;practitioner&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;reference&quot; ];
+         fhir:Conformance.rest.resource.searchParam.chain [
+           fhir:value &quot;practitioner.identifier&quot;;
+           fhir:index 0
+         ]
+       ], [
+         fhir:index 5;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;prescription&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;reference&quot; ];
+         fhir:Conformance.rest.resource.searchParam.chain [
+           fhir:value &quot;prescription.identifier&quot;;
+           fhir:index 0
+         ]
+       ]
+     ], [
+       fhir:index 11;
+       fhir:Conformance.rest.resource.type [ fhir:value &quot;MedicationDispense&quot; ];
+       fhir:Conformance.rest.resource.profile [
+         fhir:link &lt;http://hl7.org/fhir/StructureDefinition/daf-medicationdispense&gt;;
+         fhir:Reference.reference [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/daf-medicationdispense&quot; ]
+       ];
+       fhir:Conformance.rest.resource.interaction [
+         fhir:index 0;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;search-type&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows discovery of existing DAF-MedicationDispense resources using different search criteria&quot; ]
+       ], [
+         fhir:index 1;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;read&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows retrieval of a specific DAF-MedicationDispense by id&quot; ]
+       ], [
+         fhir:index 2;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHOULD&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;history-instance&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows review of changes to DAF-MedicationDispense instance over time&quot; ]
+       ], [
+         fhir:index 3;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHOULD&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;vread&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows retrieval of a historical version of a DAF-MedicationDispenseinstance&quot; ]
+       ];
+       fhir:Conformance.rest.resource.searchInclude [
+         fhir:value &quot;MedicationDispense.patient&quot;;
+         fhir:index 0
+       ], [
+         fhir:value &quot;MedicationDispense.medication&quot;;
+         fhir:index 1
+       ];
+       fhir:Conformance.rest.resource.searchParam [
+         fhir:index 0;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;identifier&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;token&quot; ]
+       ], [
+         fhir:index 1;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;patient&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;reference&quot; ];
+         fhir:Conformance.rest.resource.searchParam.chain [
+           fhir:value &quot;patient.identifier&quot;;
+           fhir:index 0
+         ]
+       ], [
+         fhir:index 2;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;code&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;token&quot; ]
+       ], [
+         fhir:index 3;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;medication&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;reference&quot; ]
+       ]
+     ], [
+       fhir:index 12;
+       fhir:Conformance.rest.resource.type [ fhir:value &quot;MedicationOrder&quot; ];
+       fhir:Conformance.rest.resource.profile [
+         fhir:link &lt;http://hl7.org/fhir/StructureDefinition/daf-medicationdispense&gt;;
+         fhir:Reference.reference [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/daf-medicationdispense&quot; ]
+       ];
+       fhir:Conformance.rest.resource.interaction [
+         fhir:index 0;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;search-type&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows discovery of existing DAF-MedicationOrder resources using different search criteria&quot; ]
+       ], [
+         fhir:index 1;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;read&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows retrieval of a specific DAF-MedicationOrder by id&quot; ]
+       ], [
+         fhir:index 2;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHOULD&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;history-instance&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows review of changes to DAF-MedicationOrder instance over time&quot; ]
+       ], [
+         fhir:index 3;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHOULD&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;vread&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows retrieval of a historical version of a DAF-MedicationOrder instances&quot; ]
+       ];
+       fhir:Conformance.rest.resource.searchInclude [
+         fhir:value &quot;MedicationOrder.patient&quot;;
+         fhir:index 0
+       ], [
+         fhir:value &quot;MedicationOrder.medication&quot;;
+         fhir:index 1
+       ], [
+         fhir:value &quot;MedicationOrder.encounter&quot;;
+         fhir:index 2
+       ];
+       fhir:Conformance.rest.resource.searchParam [
+         fhir:index 0;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;identifier&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;token&quot; ]
+       ], [
+         fhir:index 1;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;patient&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;reference&quot; ];
+         fhir:Conformance.rest.resource.searchParam.chain [
+           fhir:value &quot;patient.identifier&quot;;
+           fhir:index 0
+         ]
+       ], [
+         fhir:index 2;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;code&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;token&quot; ]
+       ], [
+         fhir:index 3;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;medication&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;reference&quot; ]
+       ], [
+         fhir:index 4;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;encounter&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;reference&quot; ]
+       ]
+     ], [
+       fhir:index 13;
+       fhir:Conformance.rest.resource.type [ fhir:value &quot;Condition&quot; ];
+       fhir:Conformance.rest.resource.profile [
+         fhir:link &lt;http://hl7.org/fhir/StructureDefinition/daf-condition&gt;;
+         fhir:Reference.reference [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/daf-condition&quot; ]
+       ];
+       fhir:Conformance.rest.resource.interaction [
+         fhir:index 0;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;search-type&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows discovery of existing DAF-Condition resources using different search criteria&quot; ]
+       ], [
+         fhir:index 1;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;read&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows retrieval of a specific DAF-Condition by id&quot; ]
+       ], [
+         fhir:index 2;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHOULD&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;history-instance&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows review of changes to DAF-Condition instance over time&quot; ]
+       ], [
+         fhir:index 3;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHOULD&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;vread&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows retrieval of a historical version of a DAF-Condition instance&quot; ]
+       ];
+       fhir:Conformance.rest.resource.searchInclude [
+         fhir:value &quot;Condition.patient&quot;;
+         fhir:index 0
+       ], [
+         fhir:value &quot;Condition.encounter&quot;;
+         fhir:index 1
+       ], [
+         fhir:value &quot;Condition.asserter&quot;;
+         fhir:index 2
+       ];
+       fhir:Conformance.rest.resource.searchParam [
+         fhir:index 0;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;identifier&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;token&quot; ]
+       ], [
+         fhir:index 1;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;patient&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;reference&quot; ];
+         fhir:Conformance.rest.resource.searchParam.chain [
+           fhir:value &quot;patient.identifier&quot;;
+           fhir:index 0
+         ]
+       ], [
+         fhir:index 2;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;code&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;token&quot; ]
+       ], [
+         fhir:index 3;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;encounter&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;reference&quot; ];
+         fhir:Conformance.rest.resource.searchParam.chain [
+           fhir:value &quot;encounter.identifier&quot;;
+           fhir:index 0
+         ]
+       ], [
+         fhir:index 4;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;onset&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;date&quot; ]
+       ], [
+         fhir:index 5;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;severity&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;token&quot; ]
+       ]
+     ], [
+       fhir:index 14;
+       fhir:Conformance.rest.resource.type [ fhir:value &quot;Procedure&quot; ];
+       fhir:Conformance.rest.resource.profile [
+         fhir:link &lt;http://hl7.org/fhir/StructureDefinition/daf-procedure&gt;;
+         fhir:Reference.reference [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/daf-procedure&quot; ]
+       ];
+       fhir:Conformance.rest.resource.interaction [
+         fhir:index 0;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;search-type&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows discovery of existing DAF-Procedure resources using different search criteria&quot; ]
+       ], [
+         fhir:index 1;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;read&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows retrieval of a specific DAF-Procedure by id&quot; ]
+       ], [
+         fhir:index 2;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHOULD&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;history-instance&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows review of changes to DAF-Procedure instance over time&quot; ]
+       ], [
+         fhir:index 3;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHOULD&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;vread&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows retrieval of a historical version of a DAF-Procedure instance&quot; ]
+       ];
+       fhir:Conformance.rest.resource.searchInclude [
+         fhir:value &quot;Procedure.patient&quot;;
+         fhir:index 0
+       ], [
+         fhir:value &quot;Procedure.encounter&quot;;
+         fhir:index 1
+       ], [
+         fhir:value &quot;Procedure.performer&quot;;
+         fhir:index 2
+       ];
+       fhir:Conformance.rest.resource.searchParam [
+         fhir:index 0;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;identifier&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;token&quot; ]
+       ], [
+         fhir:index 1;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;code&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;token&quot; ]
+       ], [
+         fhir:index 2;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;date&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;date&quot; ]
+       ], [
+         fhir:index 3;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;patient&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;reference&quot; ];
+         fhir:Conformance.rest.resource.searchParam.chain [
+           fhir:value &quot;patient.identifier&quot;;
+           fhir:index 0
+         ]
+       ], [
+         fhir:index 4;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;encounter&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;reference&quot; ];
+         fhir:Conformance.rest.resource.searchParam.chain [
+           fhir:value &quot;encounter.identifier&quot;;
+           fhir:index 0
+         ]
+       ]
+     ], [
+       fhir:index 15;
+       fhir:Conformance.rest.resource.type [ fhir:value &quot;List&quot; ];
+       fhir:Conformance.rest.resource.profile [
+         fhir:link &lt;http://hl7.org/fhir/StructureDefinition/daf-problemlist&gt;;
+         fhir:Reference.reference [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/daf-problemlist&quot; ]
+       ];
+       fhir:Conformance.rest.resource.interaction [
+         fhir:index 0;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;search-type&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows discovery of existing DAF List resources using different search criteria&quot; ]
+       ], [
+         fhir:index 1;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;read&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows retrieval of a specific DAF List by id&quot; ]
+       ], [
+         fhir:index 2;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHOULD&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;history-instance&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows review of changes to DAF List instance over time&quot; ]
+       ], [
+         fhir:index 3;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHOULD&quot; ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value &quot;vread&quot; ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value &quot;Allows retrieval of a historical version of a DAF List instance&quot; ]
+       ];
+       fhir:Conformance.rest.resource.searchInclude [
+         fhir:value &quot;List.subject&quot;;
+         fhir:index 0
+       ], [
+         fhir:value &quot;List.item&quot;;
+         fhir:index 1
+       ];
+       fhir:Conformance.rest.resource.searchParam [
+         fhir:index 0;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;patient&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;reference&quot; ];
+         fhir:Conformance.rest.resource.searchParam.chain [
+           fhir:value &quot;patient.identifier&quot;;
+           fhir:index 0
+         ]
+       ], [
+         fhir:index 1;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;code&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;token&quot; ]
+       ], [
+         fhir:index 2;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;empty-reason&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;token&quot; ]
+       ], [
+         fhir:index 3;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value &quot;http://hl7.org/fhir/StructureDefinition/conformance-expectation&quot; ];
+           fhir:Extension.valueCode [ fhir:value &quot;SHALL&quot; ]
+         ];
+         fhir:Conformance.rest.resource.searchParam.name [ fhir:value &quot;date&quot; ];
+         fhir:Conformance.rest.resource.searchParam.type [ fhir:value &quot;date&quot; ]
+       ]
+     ];
+     fhir:Conformance.rest.operation [
+       fhir:index 0;
+       fhir:Conformance.rest.operation.name [ fhir:value &quot;encounter-everything&quot; ];
+       fhir:Conformance.rest.operation.definition [
+         fhir:link &lt;http://hl7.org/fhir/OperationDefinition/encounter-everything&gt;;
+         fhir:Reference.reference [ fhir:value &quot;http://hl7.org/fhir/OperationDefinition/encounter-everything&quot; ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:Conformance.rest.operation.name [ fhir:value &quot;patient-everything&quot; ];
+       fhir:Conformance.rest.operation.definition [
+         fhir:link &lt;http://hl7.org/fhir/OperationDefinition/patient-everything&gt;;
+         fhir:Reference.reference [ fhir:value &quot;http://hl7.org/fhir/OperationDefinition/patient-everything&quot; ]
+       ]
+     ]
+  ].
+
+# -------------------------------------------------------------------------------------
+
+
+</pre>
+</div>
+
+
+<p>
+Usage note: every effort has been made to ensure that the
+examples are correct and useful, but they are not a normative part 
+of the specification. 
+</p>
+
+</div>
+
+
+				</div><!-- /inner-wrapper -->
+            </div><!-- /row -->
+        </div><!-- /container -->
+        
+    </div><!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment"><!-- segment-footer -->
+		<div class="container"><!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        © HL7.org 2011+. FHIR STU3 Candidate (v1.4.0-8453) generated on Mon, Jun 6, 2016 20:20+0000. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search</a> | 
+               <a style="color: #81BEF7" href="history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fconformance-daf-query-responder.ttl.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fconformance-daf-query-responder.ttl.html">Compare to DSTU2</a> |                
+               <a style="color: #81BEF7" rel="license" href="license.html"><img src="cc0.png" style="border-style: none;" alt="CC0"/></a> | 
+               <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>   
+        </span>
+        </p>
+			</div><!-- /inner-wrapper -->
+		</div><!-- /container -->
+	</div><!-- /segment-footer -->
+<!-- disqus thread -->
+<!--disqus-->
+<!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden"><!-- segment-post-footer -->
+		<div class="container"><!-- container -->
+		</div><!-- /container -->
+	</div><!-- /segment-post-footer -->
+    
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>   <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

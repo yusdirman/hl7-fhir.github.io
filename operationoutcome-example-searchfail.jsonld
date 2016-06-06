@@ -1,0 +1,35 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/OperationOutcome",
+  "resourceType": "OperationOutcome",
+  "Resource.id": {
+    "value": "searchfail"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>The &quot;name&quot; parameter has the modifier &quot;exact&quot; which is not supported by this server</p>\n    </div>"
+    }
+  },
+  "OperationOutcome.issue": [
+    {
+      "OperationOutcome.issue.severity": {
+        "value": "fatal"
+      },
+      "OperationOutcome.issue.code": {
+        "value": "code-invalid"
+      },
+      "OperationOutcome.issue.details": {
+        "CodeableConcept.text": {
+          "value": "The \"name\" parameter has the modifier \"exact\" which is not supported by this server"
+        }
+      },
+      "OperationOutcome.issue.location": [
+        {
+          "value": "http.name:exact"
+        }
+      ]
+    }
+  ]
+}

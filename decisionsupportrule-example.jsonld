@@ -1,0 +1,79 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/DecisionSupportRule",
+  "resourceType": "DecisionSupportRule",
+  "Resource.id": {
+    "value": "example"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Chalmydia Screening CDS Example Using Common</div>"
+    }
+  },
+  "DecisionSupportRule.moduleMetadata": {
+    "ModuleMetadata.identifier": [
+      {
+        "Identifier.use": {
+          "value": "official"
+        },
+        "Identifier.value": {
+          "value": "ChlamydiaScreening_CDS_UsingCommon"
+        }
+      }
+    ],
+    "ModuleMetadata.version": {
+      "value": "2.0.0"
+    },
+    "ModuleMetadata.title": {
+      "value": "Chalmydia Screening CDS Example Using Common"
+    },
+    "ModuleMetadata.type": {
+      "value": "module"
+    },
+    "ModuleMetadata.status": {
+      "value": "draft"
+    },
+    "ModuleMetadata.description": {
+      "value": "Chlamydia Screening CDS Example Using Common"
+    },
+    "ModuleMetadata.publicationDate": {
+      "value": "2015-07-22"
+    },
+    "ModuleMetadata.topic": [
+      {
+        "CodeableConcept.text": {
+          "value": "Chlamydia Screeening"
+        }
+      }
+    ]
+  },
+  "DecisionSupportRule.library": [
+    {
+      "Reference.reference": {
+        "value": "Library/ChlamydiaScreening_CDS_UsingCommon"
+      }
+    }
+  ],
+  "DecisionSupportRule.condition": {
+    "value": "NoScreening"
+  },
+  "DecisionSupportRule.action": [
+    {
+      "ActionDefinition.title": {
+        "value": "Patient has not had chlamydia screening within the recommended timeframe..."
+      },
+      "ActionDefinition.customization": [
+        {
+          "ActionDefinition.customization.path": {
+            "value": "~"
+          },
+          "ActionDefinition.customization.expression": {
+            "value": "ChlamydiaScreeningRequest"
+          }
+        }
+      ]
+    }
+  ]
+}

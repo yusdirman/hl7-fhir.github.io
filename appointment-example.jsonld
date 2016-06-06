@@ -1,0 +1,164 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Appointment",
+  "resourceType": "Appointment",
+  "Resource.id": {
+    "value": "example"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Brian MRI results discussion</div>"
+    }
+  },
+  "Appointment.status": {
+    "value": "booked"
+  },
+  "Appointment.serviceCategory": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://example.org/service-category"
+        },
+        "Coding.code": {
+          "value": "gp"
+        },
+        "Coding.display": {
+          "value": "General Practice"
+        }
+      }
+    ]
+  },
+  "Appointment.serviceType": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.code": {
+            "value": "52"
+          },
+          "Coding.display": {
+            "value": "General Discussion"
+          }
+        }
+      ]
+    }
+  ],
+  "Appointment.specialty": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "value": "http://example.org/specialty"
+          },
+          "Coding.code": {
+            "value": "gp"
+          },
+          "Coding.display": {
+            "value": "General Practice"
+          }
+        }
+      ]
+    }
+  ],
+  "Appointment.appointmentType": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://example.org/appointment-type"
+        },
+        "Coding.code": {
+          "value": "follow"
+        },
+        "Coding.display": {
+          "value": "Followup"
+        }
+      }
+    ]
+  },
+  "Appointment.priority": {
+    "value": 5
+  },
+  "Appointment.description": {
+    "value": "Discussion on the results of your recent MRI"
+  },
+  "Appointment.start": {
+    "value": "2013-12-10T09:00:00Z"
+  },
+  "Appointment.end": {
+    "value": "2013-12-10T11:00:00Z"
+  },
+  "Appointment.created": {
+    "value": "2013-10-10"
+  },
+  "Appointment.comment": {
+    "value": "Further expand on the results of the MRI and determine the next actions that may be appropriate."
+  },
+  "Appointment.participant": [
+    {
+      "Appointment.participant.actor": {
+        "Reference.reference": {
+          "value": "Patient/example"
+        },
+        "Reference.display": {
+          "value": "Peter James Chalmers"
+        },
+        "reference": "http://hl7.org/fhir//Patient/example"
+      },
+      "Appointment.participant.required": {
+        "value": "required"
+      },
+      "Appointment.participant.status": {
+        "value": "accepted"
+      }
+    },
+    {
+      "Appointment.participant.type": [
+        {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "value": "http://hl7.org/fhir/v3/ParticipationType"
+              },
+              "Coding.code": {
+                "value": "ATND"
+              }
+            }
+          ]
+        }
+      ],
+      "Appointment.participant.actor": {
+        "Reference.reference": {
+          "value": "Practitioner/example"
+        },
+        "Reference.display": {
+          "value": "Dr Adam Careful"
+        },
+        "reference": "http://hl7.org/fhir//Practitioner/example"
+      },
+      "Appointment.participant.required": {
+        "value": "required"
+      },
+      "Appointment.participant.status": {
+        "value": "accepted"
+      }
+    },
+    {
+      "Appointment.participant.actor": {
+        "Reference.reference": {
+          "value": "Location/1"
+        },
+        "Reference.display": {
+          "value": "South Wing, second floor"
+        },
+        "reference": "http://hl7.org/fhir//Location/1"
+      },
+      "Appointment.participant.required": {
+        "value": "required"
+      },
+      "Appointment.participant.status": {
+        "value": "accepted"
+      }
+    }
+  ]
+}

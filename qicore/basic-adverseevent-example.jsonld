@@ -1,0 +1,113 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Basic",
+  "resourceType": "Basic",
+  "Resource.id": {
+    "value": "basic-adverseevent-example"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: basic-adverseevent-example</p><p><b>code</b>: Adverse Event <span>(Details : {http://hl7.org/fhir/basic-resource-type code 'advevent' = 'Adverse Event)</span></p><p><b>subject</b>: <a>Patient/example</a></p><p><b>created</b>: Sep 16, 2015</p><p><b>author</b>: <a>Practitioner/example</a></p></div>"
+    }
+  },
+  "DomainResource.extension": [
+    {
+      "Extension.url": {
+        "value": "http://hl7.org/fhir/StructureDefinition/qicore-adverseevent-cause"
+      },
+      "Element.extension": [
+        {
+          "Extension.url": {
+            "value": "http://hl7.org/fhir/StructureDefinition/qicore-adverseevent-cause#item"
+          },
+          "Extension.valueReference": {
+            "Reference.reference": {
+              "value": "Medication/qicore"
+            },
+            "reference": "http://hl7.org/fhir//Medication/qicore"
+          }
+        },
+        {
+          "Extension.url": {
+            "value": "http://hl7.org/fhir/StructureDefinition/qicore-adverseevent-cause#certainty"
+          },
+          "Extension.valueCodeableConcept": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://snomed.info/sct"
+                },
+                "Coding.code": {
+                  "value": "410605003"
+                }
+              }
+            ],
+            "concept": "http://snomed.info/sct#410605003"
+          }
+        }
+      ]
+    },
+    {
+      "Extension.url": {
+        "value": "http://hl7.org/fhir/StructureDefinition/qicore-adverseevent-type"
+      },
+      "Extension.valueCodeableConcept": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://hl7.org/fhir/qicore-adverseevent-type"
+            },
+            "Coding.code": {
+              "value": "unsafe"
+            },
+            "Coding.display": {
+              "value": "Eruption due to drug (disorder)"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "Extension.url": {
+        "value": "http://hl7.org/fhir/StructureDefinition/qicore-adverseevent-period"
+      },
+      "Extension.valuePeriod": {
+        "Period.start": {
+          "value": "2014-01-14"
+        },
+        "Period.end": {
+          "value": "2014-01-15"
+        }
+      }
+    }
+  ],
+  "Basic.code": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/basic-resource-type"
+        },
+        "Coding.code": {
+          "value": "advevent"
+        }
+      }
+    ]
+  },
+  "Basic.subject": {
+    "Reference.reference": {
+      "value": "Patient/example"
+    },
+    "reference": "http://hl7.org/fhir//Patient/example"
+  },
+  "Basic.created": {
+    "value": "2015-09-16"
+  },
+  "Basic.author": {
+    "Reference.reference": {
+      "value": "Practitioner/example"
+    },
+    "reference": "http://hl7.org/fhir//Practitioner/example"
+  }
+}

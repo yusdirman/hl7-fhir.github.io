@@ -1,0 +1,153 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/MedicationDispense",
+  "resourceType": "MedicationDispense",
+  "Resource.id": {
+    "value": "meddisp006"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: meddisp006</p><p><b>status</b>: in-progress</p><p><b>medication</b>: <a>prescribed medication</a></p><p><b>patient</b>: <a>Patient/example</a></p><p><b>dispenser</b>: <a>Practitioner/example</a></p><p><b>authorizingPrescription</b>: <a>MedicationOrder/medrx004</a></p><p><b>type</b>: First Fill - Part Fill <span>(Details : {http:hl7.org/fhir code 'FFP' = '??', given as 'First Fill - Part Fill'})</span></p><p><b>quantity</b>: 15 mL<span> (Details: http://unitsofmeasure.org code mL = 'mL')</span></p><p><b>daysSupply</b>: 30 Day<span> (Details: http://unitsofmeasure.org code D = 'D')</span></p><p><b>whenPrepared</b>: Mar 1, 2015 10:48:00 AM</p><p><b>whenHandedOver</b>: Mar 1, 2015 10:59:00 AM</p><h3>DosageInstructions</h3><table><tr><td>-</td><td><b>Timing</b></td><td><b>AsNeeded[x]</b></td><td><b>Route</b></td><td><b>Dose[x]</b></td></tr><tr><td>*</td><td>Events: Mar 1, 2015, Duration 3days, Do 2 per 1 days</td><td>true</td><td>Inhalation <span>(Details : {SNOMED CT code '422237004' = 'Inhalation - unit of product usage (qualifier value)', given as 'Inhalation'})</span></td><td>2 415215001<span> (Details: SNOMED CT code 415215001 = 'Puffs')</span></td></tr></table></div>"
+    }
+  },
+  "MedicationDispense.status": {
+    "value": "in-progress"
+  },
+  "MedicationDispense.medicationReference": {
+    "Reference.reference": {
+      "value": "Medication/medexample012"
+    },
+    "Reference.display": {
+      "value": "prescribed medication"
+    },
+    "reference": "http://hl7.org/fhir//Medication/medexample012"
+  },
+  "MedicationDispense.patient": {
+    "Reference.reference": {
+      "value": "Patient/example"
+    },
+    "reference": "http://hl7.org/fhir//Patient/example"
+  },
+  "MedicationDispense.dispenser": {
+    "Reference.reference": {
+      "value": "Practitioner/example"
+    },
+    "reference": "http://hl7.org/fhir//Practitioner/example"
+  },
+  "MedicationDispense.authorizingPrescription": [
+    {
+      "Reference.reference": {
+        "value": "MedicationOrder/medrx004"
+      }
+    }
+  ],
+  "MedicationDispense.type": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http:hl7.org/fhir"
+        },
+        "Coding.code": {
+          "value": "FFP"
+        },
+        "Coding.display": {
+          "value": "First Fill - Part Fill"
+        }
+      }
+    ]
+  },
+  "MedicationDispense.quantity": {
+    "Quantity.value": {
+      "value": 15
+    },
+    "Quantity.unit": {
+      "value": "mL"
+    },
+    "Quantity.system": {
+      "value": "http://unitsofmeasure.org"
+    },
+    "Quantity.code": {
+      "value": "mL"
+    }
+  },
+  "MedicationDispense.daysSupply": {
+    "Quantity.value": {
+      "value": 30
+    },
+    "Quantity.unit": {
+      "value": "Day"
+    },
+    "Quantity.system": {
+      "value": "http://unitsofmeasure.org"
+    },
+    "Quantity.code": {
+      "value": "D"
+    }
+  },
+  "MedicationDispense.whenPrepared": {
+    "value": "2015-03-01T10:48:00Z"
+  },
+  "MedicationDispense.whenHandedOver": {
+    "value": "2015-03-01T10:59:00Z"
+  },
+  "MedicationDispense.dosageInstruction": [
+    {
+      "MedicationDispense.dosageInstruction.timing": {
+        "Timing.event": [
+          {
+            "value": "2015-03-01"
+          }
+        ],
+        "Timing.repeat": {
+          "Timing.repeat.duration": {
+            "value": 3
+          },
+          "Timing.repeat.durationUnit": {
+            "value": "d"
+          },
+          "Timing.repeat.frequency": {
+            "value": 2
+          },
+          "Timing.repeat.period": {
+            "value": 1
+          },
+          "Timing.repeat.periodUnit": {
+            "value": "d"
+          }
+        }
+      },
+      "MedicationDispense.dosageInstruction.asNeededBoolean": {
+        "value": true
+      },
+      "MedicationDispense.dosageInstruction.route": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "value": "422237004"
+            },
+            "Coding.display": {
+              "value": "Inhalation"
+            }
+          }
+        ],
+        "concept": "http://snomed.info/sct#422237004"
+      },
+      "MedicationDispense.dosageInstruction.doseQuantity": {
+        "Quantity.value": {
+          "value": 2
+        },
+        "Quantity.system": {
+          "value": "http://snomed.info/sct"
+        },
+        "Quantity.code": {
+          "value": "415215001"
+        }
+      }
+    }
+  ]
+}

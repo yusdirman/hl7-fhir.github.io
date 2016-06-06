@@ -1,0 +1,91 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/DiagnosticOrderdo-uslab-example1> a fhir:DiagnosticOrder;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "do-uslab-example1"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: do-uslab-example1</p><p><b>identifier</b>: ORD000123A (OFFICIAL)</p><p><b>status</b>: requested</p><p><b>priority</b>: routine</p><p><b>subject</b>: <a>Todd Lerr</a></p><p><b>orderer</b>: <a>Dr Leonard T Bloodraw Jr</a></p><p><b>reason</b>: Abnormal lead level in blood <span>(Details : {http://www.icd10data.com/icd10pcs code 'R78.71' = '??', given as 'Abnormal lead level in blood'})</span></p><p><b>supportingInformation</b>: <a>Prior Results Observation</a>, <a>Lead Exposure</a></p><h3>Events</h3><table><tr><td>-</td><td><b>Status</b></td><td><b>Description</b></td><td><b>DateTime</b></td></tr><tr><td>*</td><td>requested</td><td>new-request <span>(Details : {[not stated] code 'new-request' = '??)</span></td><td>Dec 4, 2014 3:42:15 PM</td></tr></table><h3>Items</h3><table><tr><td>-</td><td><b>Code</b></td><td><b>Status</b></td></tr><tr><td>*</td><td>Blood Lead <span>(Details : {LOINC code '5671-3' = 'Lead [Mass/volume] in Blood', given as 'Lead [Mass/volume] in Blood'}; {urn:oid:2.16.840.1.113883.3.72.5.24 code 'BLDLD' = '??', given as 'Blood Lead'})</span></td><td>requested</td></tr></table><p><b>note</b>: patient is afraid of needles</p></div>"
+  ];
+  fhir:DiagnosticOrder.identifier [
+     fhir:index 0;
+     fhir:Identifier.use [ fhir:value "official" ];
+     fhir:Identifier.system [ fhir:value "urn:oid:2.16.840.1.113883.3.72.5.24" ];
+     fhir:Identifier.value [ fhir:value "ORD000123A" ]
+  ];
+  fhir:DiagnosticOrder.status [ fhir:value "requested"];
+  fhir:DiagnosticOrder.priority [ fhir:value "routine"];
+  fhir:DiagnosticOrder.subject [
+     fhir:link <http://hl7.org/fhir/Patient/patient-uslab-example1>;
+     fhir:Reference.reference [ fhir:value "Patient/patient-uslab-example1" ];
+     fhir:Reference.display [ fhir:value "Todd Lerr" ]
+  ];
+  fhir:DiagnosticOrder.orderer [
+     fhir:link <http://hl7.org/fhir/Practitioner/pract-uslab-example1>;
+     fhir:Reference.reference [ fhir:value "Practitioner/pract-uslab-example1" ];
+     fhir:Reference.display [ fhir:value "Dr Leonard T Bloodraw Jr" ]
+  ];
+  fhir:DiagnosticOrder.reason [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://www.icd10data.com/icd10pcs" ];
+       fhir:Coding.code [ fhir:value "R78.71" ];
+       fhir:Coding.display [ fhir:value "Abnormal lead level in blood" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "Abnormal lead level in blood" ]
+  ];
+  fhir:DiagnosticOrder.supportingInformation [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/Observation/obs-uslab-example1>;
+     fhir:Reference.reference [ fhir:value "Observation/obs-uslab-example1" ];
+     fhir:Reference.display [ fhir:value "Prior Results Observation" ]
+  ], [
+     fhir:index 1;
+     fhir:link <http://hl7.org/fhir/Condition/cond-uslab-example1>;
+     fhir:Reference.reference [ fhir:value "Condition/cond-uslab-example1" ];
+     fhir:Reference.display [ fhir:value "Lead Exposure" ]
+  ];
+  fhir:DiagnosticOrder.event [
+     fhir:index 0;
+     fhir:DiagnosticOrder.event.status [ fhir:value "requested" ];
+     fhir:DiagnosticOrder.event.description [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.code [ fhir:value "new-request" ]
+       ]
+     ];
+     fhir:DiagnosticOrder.event.dateTime [ fhir:value "2014-12-04T15:42:15-08:00"^^xsd:dateTime ]
+  ];
+  fhir:DiagnosticOrder.item [
+     fhir:index 0;
+     fhir:DiagnosticOrder.item.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept loinc:5671-3;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "5671-3" ];
+         fhir:Coding.display [ fhir:value "Lead [Mass/volume] in Blood" ]
+       ], [
+         fhir:index 1;
+         fhir:Coding.system [ fhir:value "urn:oid:2.16.840.1.113883.3.72.5.24" ];
+         fhir:Coding.code [ fhir:value "BLDLD" ];
+         fhir:Coding.display [ fhir:value "Blood Lead" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "Blood Lead" ]
+     ];
+     fhir:DiagnosticOrder.item.status [ fhir:value "requested" ]
+  ];
+  fhir:DiagnosticOrder.note [
+     fhir:index 0;
+     fhir:Annotation.text [ fhir:value "patient is afraid of needles" ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

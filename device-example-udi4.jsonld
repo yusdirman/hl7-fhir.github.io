@@ -1,0 +1,65 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Device",
+  "resourceType": "Device",
+  "Resource.id": {
+    "value": "example-udi4"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: example-udi4</p><p><b>udiCarrier</b>: Universal Device Identifier = =)1TE123456A&amp;)RZ12345678</p><p><b>status</b>: not-available</p><p><b>type</b>: DI = 1TE123456A <span>(Details : {http://hl7.org/fhir/NamingSystem/iccbba-blood-di code '1TE123456A' = '??)</span></p><p><b>lotNumber</b>: RZ12345678</p><p><b>manufacturer</b>: GlobalMed, Inc</p><p><b>patient</b>: <a>Patient/example</a></p></div>"
+    }
+  },
+  "Device.udiCarrier": {
+    "Identifier.type": {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "value": "http://hl7.org/fhir/identifier-type"
+          },
+          "Coding.code": {
+            "value": "UDI"
+          }
+        }
+      ]
+    },
+    "Identifier.system": {
+      "value": "http://hl7.org/fhir/NamingSystem/fda-udi"
+    },
+    "Identifier.value": {
+      "value": "=)1TE123456A&)RZ12345678"
+    }
+  },
+  "Device.status": {
+    "value": "not-available"
+  },
+  "Device.type": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/NamingSystem/iccbba-blood-di"
+        },
+        "Coding.code": {
+          "value": "1TE123456A"
+        }
+      }
+    ],
+    "CodeableConcept.text": {
+      "value": "DI = 1TE123456A"
+    }
+  },
+  "Device.lotNumber": {
+    "value": "RZ12345678"
+  },
+  "Device.manufacturer": {
+    "value": "GlobalMed, Inc"
+  },
+  "Device.patient": {
+    "Reference.reference": {
+      "value": "Patient/example"
+    },
+    "reference": "http://hl7.org/fhir//Patient/example"
+  }
+}

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="qicore-patient-military-service"/>
+  <meta>
+    <lastUpdated value="2016-06-06T20:14:04.181+00:00"/>
+    <profile value="http://hl7.org/fhir/StructureDefinition/codesystem-shareable-definition"/>
+  </meta>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <h2>Military Service Codes</h2>
+      <p>Value Set for Military Service (Example)</p>
+      <p>This code system http://hl7.org/fhir/qicore-military-service defines the following codes:</p>
+      <table class="codes">
+        <tr>
+          <td>
+            <b>Code</b>
+          </td>
+          <td>
+            <b>Display</b>
+          </td>
+          <td>
+            <b>Definition</b>
+          </td>
+        </tr>
+        <tr>
+          <td>not-indicated
+            <a name="not-indicated"> </a>
+          </td>
+          <td>Not Indicated</td>
+          <td>The military status is not indicated</td>
+        </tr>
+        <tr>
+          <td>no-military-service
+            <a name="no-military-service"> </a>
+          </td>
+          <td>No Military Service</td>
+          <td>The subject has no history of military service</td>
+        </tr>
+        <tr>
+          <td>veteran
+            <a name="veteran"> </a>
+          </td>
+          <td>Veteran</td>
+          <td>The subject is has served in the military but is no longer active</td>
+        </tr>
+        <tr>
+          <td>active-duty
+            <a name="active-duty"> </a>
+          </td>
+          <td>Active Duty</td>
+          <td>The subject is not a reserve member and is currently engaged in full-time military activity</td>
+        </tr>
+        <tr>
+          <td>active-reserve
+            <a name="active-reserve"> </a>
+          </td>
+          <td>Active Reserve</td>
+          <td>The subject is a reserve member and is currently engaged in full-time military activity</td>
+        </tr>
+        <tr>
+          <td>inactive-reserve
+            <a name="inactive-reserve"> </a>
+          </td>
+          <td>Inactive Reserve</td>
+          <td>The subject is a reserve member and is not currently engaged in full-time military activity</td>
+        </tr>
+      </table>
+    </div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/valueset-oid">
+    <valueUri value="urn:oid:2.16.840.1.113883.4.642.1.648"/>
+  </extension>
+  <url value="http://hl7.org/fhir/qicore-military-service"/>
+  <version value="1.4.0"/>
+  <name value="Military Service Codes"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <publisher value="HL7 Clinical Quality Information (CQI) Work Group"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="http://www.hl7.org/Special/committees/cqi"/>
+    </telecom>
+  </contact>
+  <description value="Value Set for Military Service (Example)"/>
+  <caseSensitive value="true"/>
+  <valueSet value="http://hl7.org/fhir/ValueSet/qicore-patient-military-service"/>
+  <content value="complete"/>
+  <concept>
+    <code value="not-indicated"/>
+    <display value="Not Indicated"/>
+    <definition value="The military status is not indicated"/>
+  </concept>
+  <concept>
+    <code value="no-military-service"/>
+    <display value="No Military Service"/>
+    <definition value="The subject has no history of military service"/>
+  </concept>
+  <concept>
+    <code value="veteran"/>
+    <display value="Veteran"/>
+    <definition value="The subject is has served in the military but is no longer active"/>
+  </concept>
+  <concept>
+    <code value="active-duty"/>
+    <display value="Active Duty"/>
+    <definition value="The subject is not a reserve member and is currently engaged in full-time military activity"/>
+  </concept>
+  <concept>
+    <code value="active-reserve"/>
+    <display value="Active Reserve"/>
+    <definition value="The subject is a reserve member and is currently engaged in full-time military activity"/>
+  </concept>
+  <concept>
+    <code value="inactive-reserve"/>
+    <display value="Inactive Reserve"/>
+    <definition value="The subject is a reserve member and is not currently engaged in full-time military activity"/>
+  </concept>
+</CodeSystem>

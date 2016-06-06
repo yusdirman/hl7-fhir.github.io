@@ -1,0 +1,85 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Communication",
+  "resourceType": "Communication",
+  "Resource.id": {
+    "value": "example"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Patient has very high serum potassium</div>"
+    }
+  },
+  "Communication.identifier": [
+    {
+      "Identifier.type": {
+        "CodeableConcept.text": {
+          "value": "Paging System"
+        }
+      },
+      "Identifier.system": {
+        "value": "urn:oid:1.3.4.5.6.7"
+      },
+      "Identifier.value": {
+        "value": "2345678901"
+      }
+    }
+  ],
+  "Communication.category": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://acme.org/messagetypes"
+        },
+        "Coding.code": {
+          "value": "Alert"
+        }
+      }
+    ],
+    "CodeableConcept.text": {
+      "value": "Alert"
+    }
+  },
+  "Communication.sender": {
+    "Reference.reference": {
+      "value": "Device/f001"
+    },
+    "reference": "http://hl7.org/fhir//Device/f001"
+  },
+  "Communication.recipient": [
+    {
+      "Reference.reference": {
+        "value": "Practitioner/21"
+      }
+    }
+  ],
+  "Communication.payload": [
+    {
+      "Communication.payload.contentString": {
+        "value": "Patient 1 has a very high serum potassium value (7.2 mmol/L on 2014-Dec-12 at 5:55 pm)"
+      }
+    },
+    {
+      "Communication.payload.contentReference": {
+        "Reference.reference": {
+          "value": "Observation/643666aa12f"
+        },
+        "reference": "http://hl7.org/fhir//Observation/643666aa12f"
+      }
+    }
+  ],
+  "Communication.status": {
+    "value": "completed"
+  },
+  "Communication.sent": {
+    "value": "2014-12-12T18:01:10-08:00"
+  },
+  "Communication.subject": {
+    "Reference.reference": {
+      "value": "Patient/1"
+    },
+    "reference": "http://hl7.org/fhir//Patient/1"
+  }
+}

@@ -1,0 +1,371 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Observation",
+  "resourceType": "Observation",
+  "Resource.id": {
+    "value": "2minute-apgar-score"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 2minute-apgar-score</p><p><b>status</b>: final</p><p><b>category</b>: Survey <span>(Details : {http://hl7.org/fhir/observation-category code 'survey' = 'Survey', given as 'Survey'})</span></p><p><b>code</b>: 2 minute Apgar Score <span>(Details : {LOINC code '9273-4' = '2 minute Apgar Score', given as '2 minute Apgar Score'})</span></p><p><b>subject</b>: <a>Patient/infant</a></p><p><b>effective</b>: May 18, 2016 10:33:22 PM</p><p><b>performer</b>: <a>Practitioner/example</a></p><p><b>value</b>: 5 {score}<span> (Details: http://unitsofmeasure.org code {score} = '{score}')</span></p><blockquote><p><b>component</b></p><p><b>code</b>: Apgar color score <span>(Details : {SNOMED CT code '249227004' = 'Apgar color score (observable entity)', given as 'Apgar color score'})</span></p><p><b>value</b>: 1. Good color in body with bluish hands or feet <span>(Details : {http://loinc.org/la code 'LA6723-6' = '??', given as 'Good color in body with bluish hands or feet'}; {http:/acme.ped/apgarcolor code '1' = '??)</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Apgar respiratory effort score <span>(Details : {SNOMED CT code '249223000' = 'Apgar heart rate score (observable entity)', given as 'Apgar heart rate score'})</span></p><p><b>value</b>: 1. Fewer than 100 beats per minute <span>(Details : {http://loinc.org/la code 'LA6720-2' = '??', given as 'Fewer than 100 beats per minute'}; {http:/acme.ped/apgarheartrate code '1' = '??)</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Apgar response to stimulus score <span>(Details : {SNOMED CT code '249226008' = 'Apgar response to stimulus score (observable entity)', given as 'Apgar response to stimulus score'})</span></p><p><b>value</b>: 1. Grimace during suctioning <span>(Details : {http://loinc.org/la code 'LA6721-0' = '??', given as 'Grimace during suctioning'}; {http:/acme.ped/apgarreflexirritability code '1' = '??)</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Apgar muscle tone score <span>(Details : {SNOMED CT code '249225007' = 'Apgar muscle tone score (observable entity)', given as 'Apgar muscle tone score'})</span></p><p><b>value</b>: 1. Some flexion of arms and legs <span>(Details : {http://loinc.org/la code 'LA6714-5' = '??', given as 'Some flexion of arms and legs'}; {http:/acme.ped/apgarmuscletone code '1' = '??)</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Apgar respiratory effort score <span>(Details : {SNOMED CT code '249224006' = 'Apgar respiratory effort score (observable entity)', given as 'Apgar respiratory effort score'})</span></p><p><b>value</b>: 1. Weak cry; may sound like whimpering, slow or irregular breathing <span>(Details : {http://loinc.org/la code 'LA6726-9' = '??', given as 'Weak cry; may sound like whimpering, slow or irregular breathing'}; {http:/acme.ped/apgarrespiratoryeffort code '1' = '??)</span></p></blockquote></div>"
+    }
+  },
+  "Observation.status": {
+    "value": "final"
+  },
+  "Observation.category": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "value": "http://hl7.org/fhir/observation-category"
+          },
+          "Coding.code": {
+            "value": "survey"
+          },
+          "Coding.display": {
+            "value": "Survey"
+          }
+        }
+      ],
+      "CodeableConcept.text": {
+        "value": "Survey"
+      }
+    }
+  ],
+  "Observation.code": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://loinc.org"
+        },
+        "Coding.code": {
+          "value": "9273-4"
+        },
+        "Coding.display": {
+          "value": "2 minute Apgar Score"
+        }
+      }
+    ],
+    "CodeableConcept.text": {
+      "value": "2 minute Apgar Score"
+    },
+    "concept": "http://loinc.org/owl#9273-4"
+  },
+  "Observation.subject": {
+    "Reference.reference": {
+      "value": "Patient/infant"
+    },
+    "reference": "http://hl7.org/fhir//Patient/infant"
+  },
+  "Observation.effectiveDateTime": {
+    "value": "2016-05-18T22:33:22Z"
+  },
+  "Observation.performer": [
+    {
+      "Reference.reference": {
+        "value": "Practitioner/example"
+      }
+    }
+  ],
+  "Observation.valueQuantity": {
+    "Quantity.value": {
+      "value": 5
+    },
+    "Quantity.system": {
+      "value": "http://unitsofmeasure.org"
+    },
+    "Quantity.code": {
+      "value": "{score}"
+    }
+  },
+  "Observation.component": [
+    {
+      "Observation.component.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "value": "249227004"
+            },
+            "Coding.display": {
+              "value": "Apgar color score"
+            }
+          }
+        ],
+        "CodeableConcept.text": {
+          "value": "Apgar color score"
+        },
+        "concept": "http://snomed.info/sct#249227004"
+      },
+      "Observation.component.valueCodeableConcept": {
+        "CodeableConcept.coding": [
+          {
+            "Element.extension": [
+              {
+                "Extension.url": {
+                  "value": "http://hl7.org/fhir/StructureDefinition/iso21090-CO-value"
+                },
+                "Extension.valueDecimal": {
+                  "value": 1
+                }
+              }
+            ],
+            "Coding.system": {
+              "value": "http://loinc.org/la"
+            },
+            "Coding.code": {
+              "value": "LA6723-6"
+            },
+            "Coding.display": {
+              "value": "Good color in body with bluish hands or feet"
+            }
+          },
+          {
+            "Coding.system": {
+              "value": "http:/acme.ped/apgarcolor"
+            },
+            "Coding.code": {
+              "value": "1"
+            }
+          }
+        ],
+        "CodeableConcept.text": {
+          "value": "1. Good color in body with bluish hands or feet"
+        }
+      }
+    },
+    {
+      "Observation.component.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "value": "249223000"
+            },
+            "Coding.display": {
+              "value": "Apgar heart rate score"
+            }
+          }
+        ],
+        "CodeableConcept.text": {
+          "value": "Apgar respiratory effort score"
+        },
+        "concept": "http://snomed.info/sct#249223000"
+      },
+      "Observation.component.valueCodeableConcept": {
+        "CodeableConcept.coding": [
+          {
+            "Element.extension": [
+              {
+                "Extension.url": {
+                  "value": "http://hl7.org/fhir/StructureDefinition/iso21090-CO-value"
+                },
+                "Extension.valueDecimal": {
+                  "value": 1
+                }
+              }
+            ],
+            "Coding.system": {
+              "value": "http://loinc.org/la"
+            },
+            "Coding.code": {
+              "value": "LA6720-2"
+            },
+            "Coding.display": {
+              "value": "Fewer than 100 beats per minute"
+            }
+          },
+          {
+            "Coding.system": {
+              "value": "http:/acme.ped/apgarheartrate"
+            },
+            "Coding.code": {
+              "value": "1"
+            }
+          }
+        ],
+        "CodeableConcept.text": {
+          "value": "1. Fewer than 100 beats per minute"
+        }
+      }
+    },
+    {
+      "Observation.component.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "value": "249226008"
+            },
+            "Coding.display": {
+              "value": "Apgar response to stimulus score"
+            }
+          }
+        ],
+        "CodeableConcept.text": {
+          "value": "Apgar response to stimulus score"
+        },
+        "concept": "http://snomed.info/sct#249226008"
+      },
+      "Observation.component.valueCodeableConcept": {
+        "CodeableConcept.coding": [
+          {
+            "Element.extension": [
+              {
+                "Extension.url": {
+                  "value": "http://hl7.org/fhir/StructureDefinition/iso21090-CO-value"
+                },
+                "Extension.valueDecimal": {
+                  "value": 1
+                }
+              }
+            ],
+            "Coding.system": {
+              "value": "http://loinc.org/la"
+            },
+            "Coding.code": {
+              "value": "LA6721-0"
+            },
+            "Coding.display": {
+              "value": "Grimace during suctioning"
+            }
+          },
+          {
+            "Coding.system": {
+              "value": "http:/acme.ped/apgarreflexirritability"
+            },
+            "Coding.code": {
+              "value": "1"
+            }
+          }
+        ],
+        "CodeableConcept.text": {
+          "value": "1. Grimace during suctioning"
+        }
+      }
+    },
+    {
+      "Observation.component.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "value": "249225007"
+            },
+            "Coding.display": {
+              "value": "Apgar muscle tone score"
+            }
+          }
+        ],
+        "CodeableConcept.text": {
+          "value": "Apgar muscle tone score"
+        },
+        "concept": "http://snomed.info/sct#249225007"
+      },
+      "Observation.component.valueCodeableConcept": {
+        "CodeableConcept.coding": [
+          {
+            "Element.extension": [
+              {
+                "Extension.url": {
+                  "value": "http://hl7.org/fhir/StructureDefinition/iso21090-CO-value"
+                },
+                "Extension.valueDecimal": {
+                  "value": 1
+                }
+              }
+            ],
+            "Coding.system": {
+              "value": "http://loinc.org/la"
+            },
+            "Coding.code": {
+              "value": "LA6714-5"
+            },
+            "Coding.display": {
+              "value": "Some flexion of arms and legs"
+            }
+          },
+          {
+            "Coding.system": {
+              "value": "http:/acme.ped/apgarmuscletone"
+            },
+            "Coding.code": {
+              "value": "1"
+            }
+          }
+        ],
+        "CodeableConcept.text": {
+          "value": "1. Some flexion of arms and legs"
+        }
+      }
+    },
+    {
+      "Observation.component.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "value": "249224006"
+            },
+            "Coding.display": {
+              "value": "Apgar respiratory effort score"
+            }
+          }
+        ],
+        "CodeableConcept.text": {
+          "value": "Apgar respiratory effort score"
+        },
+        "concept": "http://snomed.info/sct#249224006"
+      },
+      "Observation.component.valueCodeableConcept": {
+        "CodeableConcept.coding": [
+          {
+            "Element.extension": [
+              {
+                "Extension.url": {
+                  "value": "http://hl7.org/fhir/StructureDefinition/iso21090-CO-value"
+                },
+                "Extension.valueDecimal": {
+                  "value": 1
+                }
+              }
+            ],
+            "Coding.system": {
+              "value": "http://loinc.org/la"
+            },
+            "Coding.code": {
+              "value": "LA6726-9"
+            },
+            "Coding.display": {
+              "value": "Weak cry; may sound like whimpering, slow or irregular breathing"
+            }
+          },
+          {
+            "Coding.system": {
+              "value": "http:/acme.ped/apgarrespiratoryeffort"
+            },
+            "Coding.code": {
+              "value": "1"
+            }
+          }
+        ],
+        "CodeableConcept.text": {
+          "value": "1. Weak cry; may sound like whimpering, slow or irregular breathing"
+        }
+      }
+    }
+  ]
+}

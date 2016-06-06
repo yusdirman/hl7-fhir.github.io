@@ -1,0 +1,61 @@
+{
+  "resourceType": "Practitioner",
+  "id": "pract-uslab-example2",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: pract-uslab-example2</p><p><b>identifier</b>: 121121121 (OFFICIAL)</p><p><b>name</b>: Bill T Lookafter </p><p><b>telecom</b>: ph: (617)5551234 ext.12, docbill@healthedatainc.com</p><p><b>address</b>: 100 Medical Drive Suite 6 Boston MA 01236 USA (WORK)</p><h3>PractitionerRoles</h3><table><tr><td>-</td><td><b>Organization</b></td></tr><tr><td>*</td><td><a>Children's Hospital</a></td></tr></table></div>"
+  },
+  "identifier": [
+    {
+      "use": "official",
+      "system": "http://hl7.org/fhir/sid/us-npi",
+      "value": "121121121"
+    }
+  ],
+  "name": [
+    {
+      "family": [
+        "Lookafter"
+      ],
+      "given": [
+        "Bill",
+        "T"
+      ],
+      "suffix": [
+        "Jr"
+      ]
+    }
+  ],
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "(617)5551234 ext.12"
+    },
+    {
+      "system": "email",
+      "value": "docbill@healthedatainc.com"
+    }
+  ],
+  "address": [
+    {
+      "use": "work",
+      "line": [
+        "100 Medical Drive",
+        "Suite 6"
+      ],
+      "city": "Boston",
+      "district": "42043",
+      "state": "MA",
+      "postalCode": "01236",
+      "country": "USA"
+    }
+  ],
+  "practitionerRole": [
+    {
+      "organization": {
+        "reference": "Organization/org-uslab-example1",
+        "display": "Children's Hospital"
+      }
+    }
+  ]
+}

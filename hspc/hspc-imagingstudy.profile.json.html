@@ -1,0 +1,1934 @@
+﻿<!DOCTYPE HTML>
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>StructureDefinition: hspc-imagingstudy - FHIR v1.4.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="../fhir.css" rel="stylesheet"/>
+  <link rel="Prev" href="http://hl7.org/fhir/hspc-imagingstudy.profile.json.html"/>
+
+  <!-- Bootstrap core CSS -->
+  <link href=".././dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href=".././assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href=".././assets/css/project.css" rel="stylesheet"/>
+  <link href=".././assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="../jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src=".././assets/js/html5shiv.js"></script>
+  <script src=".././assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href=".././assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href=".././assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href=".././assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href=".././assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href=".././assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment"><!-- segment-header -->	
+		<div class="container"><!-- container -->
+			<a id="logo" href="http://hl7.org/fhir" no-external="true"><img src=".././assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a id="hl7-logo" href="http://www.hl7.org" no-external="true">
+					<img src=".././assets/images/hl7-logo.png" width="42" height="50" alt="visit the hl7 website"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="./../assets/images/search.png"/></a></div> 
+		</div>
+		<div class="container"><!-- container -->
+	</div></div><!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment"><!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container"><!-- container -->
+ <!-- HEADER CONTENT -->
+ 	      		
+ 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="../index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../documentation.html">Documentation</a></li>
+              <li><a href="../implementation.html">Implementation</a></li>
+              <li><a href="../resourcelist.html">Resources</a></li>
+              <li><a href="../clinical.html">Clinical</a></li>
+              <li><a href="../administration.html">Administrative</a></li>
+              <li><a href="../infrastructure.html">Infrastructure</a></li>
+              <li><a href="../financial.html">Financial</a></li>
+
+						</ul>
+					</div><!-- /.nav-collapse -->
+				</div><!-- /.container -->
+			</nav><!-- /.navbar -->
+      		
+				
+<!-- /HEADER CONTENT -->				
+		</div><!-- /container -->
+	</div><!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment"><!-- segment-breadcrumb -->
+		<div class="container"><!-- container -->	
+			<ul class="breadcrumb">
+        <!-- hspc-imagingstudy.profile.json.html / profile:ImagingStudy/imagingstudy-hspc-imagingstudy/hspc-imagingstudy / HSPC-Imaging Study -->
+        <li title="HSPC Implementation Guide"><a href="hspc.html"><b>HSPC</b></a></li>
+        <li><a href="registry.html"><b>Registry</b></a></li>
+        <li><b>Profile</b></li>
+
+			</ul>	
+		</div><!-- /container -->
+	</div><!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment"><!-- segment-content -->
+	<div class="container"><!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+<!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<ul class="nav nav-tabs"><li><a href="hspc-imagingstudy.html">Content</a></li><li><a href="hspc-imagingstudy-definitions.html">Detailed Descriptions</a></li><li><a href="hspc-imagingstudy-mappings.html">Mappings</a></li><li><a href="hspc-imagingstudy.profile.xml.html">XML</a></li><li class="active"><a href="#">JSON</a></li></ul>
+
+<h1>StructureDefinition: hspc-imagingstudy - JSON</h1>
+
+<div class="example">
+<p>StructureDefinition for The HSPC Imaging Study profile</p>
+<p><a href="hspc-imagingstudy.profile.json">Raw JSON</a></p>
+<pre class="json">
+{
+  &quot;resourceType&quot;: &quot;StructureDefinition&quot;,
+  &quot;id&quot;: &quot;hspc-imagingstudy&quot;,
+  &quot;text&quot;: {
+    &quot;status&quot;: &quot;generated&quot;,
+    &quot;div&quot;: &quot;&lt;div&gt;!-- Snipped for Brevity --&gt;&lt;/div&gt;&quot;
+  },
+  &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/hspc-imagingstudy&quot;,
+  &quot;name&quot;: &quot;HSPC-Imaging Study&quot;,
+  &quot;status&quot;: &quot;draft&quot;,
+  &quot;publisher&quot;: &quot;HSPC&quot;,
+  &quot;contact&quot;: [
+    {
+      &quot;telecom&quot;: [
+        {
+          &quot;system&quot;: &quot;other&quot;,
+          &quot;value&quot;: &quot;http://healthcaresoa.org&quot;
+        }
+      ]
+    }
+  ],
+  &quot;date&quot;: &quot;2016-02-03&quot;,
+  &quot;description&quot;: &quot;The HSPC Imaging Study profile&quot;,
+  &quot;fhirVersion&quot;: &quot;1.4.0&quot;,
+  &quot;mapping&quot;: [
+    {
+      &quot;identity&quot;: &quot;qdm&quot;,
+      &quot;uri&quot;: &quot;http://www.healthit.gov/quality-data-model&quot;,
+      &quot;name&quot;: &quot;Quality Data Model&quot;
+    }
+  ],
+  &quot;kind&quot;: &quot;resource&quot;,
+  &quot;abstract&quot;: false,
+  &quot;baseType&quot;: &quot;ImagingStudy&quot;,
+  &quot;baseDefinition&quot;: &quot;http://hl7.org/fhir/StructureDefinition/qicore-imagingstudy&quot;,
+  &quot;derivation&quot;: &quot;constraint&quot;,
+  &quot;snapshot&quot;: {
+    &quot;element&quot;: [
+      {
+        &quot;path&quot;: &quot;ImagingStudy&quot;,
+        &quot;name&quot;: &quot;hspc-imagingstudy&quot;,
+        &quot;short&quot;: &quot;A set of images produced in single study (one or more series of references images)&quot;,
+        &quot;definition&quot;: &quot;Representation of the content produced in a DICOM imaging study. A study comprises a set of series, each of which includes a set of Service-Object Pair Instances (SOP Instances - images or other data) acquired or produced in a common context.  A series is of only one modality (e.g. X-ray, CT, MR, ultrasound), but a study may have multiple series of different modalities.&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;*&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;ImagingStudy&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;*&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;ImagingStudy&quot;
+          }
+        ],
+        &quot;isSummary&quot;: true,
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;Act[classCode=COMPOSITION, moodCode=EVN]&quot;
+          },
+          {
+            &quot;identity&quot;: &quot;dicom&quot;,
+            &quot;map&quot;: &quot;Reference IHE radiology TF vol 2 table 4.14-1&quot;
+          },
+          {
+            &quot;identity&quot;: &quot;w5&quot;,
+            &quot;map&quot;: &quot;clinical.diagnostics&quot;
+          },
+          {
+            &quot;identity&quot;: &quot;qdm&quot;,
+            &quot;map&quot;: &quot;Patient Characteristic&quot;
+          }
+        ]
+      },
+      {
+        &quot;path&quot;: &quot;ImagingStudy.id&quot;,
+        &quot;short&quot;: &quot;Logical id of this artifact&quot;,
+        &quot;definition&quot;: &quot;The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.&quot;,
+        &quot;comments&quot;: &quot;The only time that a resource does not have an id is when it is being submitted to the server using a create operation. Bundles always have an id, though it is usually a generated UUID.&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;Resource.id&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;*&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;id&quot;
+          }
+        ],
+        &quot;isSummary&quot;: true
+      },
+      {
+        &quot;path&quot;: &quot;ImagingStudy.meta&quot;,
+        &quot;short&quot;: &quot;Metadata about the resource&quot;,
+        &quot;definition&quot;: &quot;The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource.&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;Resource.meta&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;*&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Meta&quot;
+          }
+        ],
+        &quot;isSummary&quot;: true
+      },
+      {
+        &quot;path&quot;: &quot;ImagingStudy.implicitRules&quot;,
+        &quot;short&quot;: &quot;A set of rules under which this content was created&quot;,
+        &quot;definition&quot;: &quot;A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content.&quot;,
+        &quot;comments&quot;: &quot;Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However, the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible.&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;Resource.implicitRules&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;*&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;uri&quot;
+          }
+        ],
+        &quot;isModifier&quot;: true,
+        &quot;isSummary&quot;: true
+      },
+      {
+        &quot;path&quot;: &quot;ImagingStudy.language&quot;,
+        &quot;short&quot;: &quot;Language of the resource content&quot;,
+        &quot;definition&quot;: &quot;The base language in which the resource is written.&quot;,
+        &quot;comments&quot;: &quot;Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource  Not all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute).&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;Resource.language&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;*&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;code&quot;
+          }
+        ],
+        &quot;binding&quot;: {
+          &quot;strength&quot;: &quot;required&quot;,
+          &quot;description&quot;: &quot;A human language.&quot;,
+          &quot;valueSetUri&quot;: &quot;http://tools.ietf.org/html/bcp47&quot;
+        }
+      },
+      {
+        &quot;path&quot;: &quot;ImagingStudy.text&quot;,
+        &quot;short&quot;: &quot;Text summary of the resource, for human interpretation&quot;,
+        &quot;definition&quot;: &quot;A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \&quot;clinically safe\&quot; for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.&quot;,
+        &quot;comments&quot;: &quot;Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative.&quot;,
+        &quot;alias&quot;: [
+          &quot;narrative&quot;,
+          &quot;html&quot;,
+          &quot;xhtml&quot;,
+          &quot;display&quot;
+        ],
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;DomainResource.text&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;*&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Narrative&quot;
+          }
+        ],
+        &quot;condition&quot;: [
+          &quot;dom-1&quot;
+        ],
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;Act.text?&quot;
+          }
+        ]
+      },
+      {
+        &quot;path&quot;: &quot;ImagingStudy.contained&quot;,
+        &quot;short&quot;: &quot;Contained, inline Resources&quot;,
+        &quot;definition&quot;: &quot;These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.&quot;,
+        &quot;comments&quot;: &quot;This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again.&quot;,
+        &quot;alias&quot;: [
+          &quot;inline resources&quot;,
+          &quot;anonymous resources&quot;,
+          &quot;contained resources&quot;
+        ],
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;*&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;DomainResource.contained&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;*&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Resource&quot;
+          }
+        ],
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;N/A&quot;
+          }
+        ]
+      },
+      {
+        &quot;path&quot;: &quot;ImagingStudy.extension&quot;,
+        &quot;slicing&quot;: {
+          &quot;discriminator&quot;: [
+            &quot;url&quot;
+          ],
+          &quot;ordered&quot;: false,
+          &quot;rules&quot;: &quot;open&quot;
+        },
+        &quot;short&quot;: &quot;Extension&quot;,
+        &quot;definition&quot;: &quot;An Extension&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;*&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;DomainResource.extension&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;*&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Extension&quot;
+          }
+        ]
+      },
+      {
+        &quot;path&quot;: &quot;ImagingStudy.extension&quot;,
+        &quot;name&quot;: &quot;ImagingStudy.radiationDose&quot;,
+        &quot;short&quot;: &quot;Extension&quot;,
+        &quot;definition&quot;: &quot;An Extension&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;DomainResource.extension&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;*&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Extension&quot;,
+            &quot;profile&quot;: [
+              &quot;http://hl7.org/fhir/StructureDefinition/imagingstudy-radiationDose&quot;
+            ]
+          }
+        ],
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;qdm&quot;,
+            &quot;map&quot;: &quot;radiation dosage from \&quot;Diagnostic Study, Adverse Event\&quot; and \&quot;Diagnostic Study, Performed\&quot;&quot;
+          }
+        ]
+      },
+      {
+        &quot;path&quot;: &quot;ImagingStudy.extension&quot;,
+        &quot;name&quot;: &quot;ImagingStudy.radiationDuration&quot;,
+        &quot;short&quot;: &quot;Extension&quot;,
+        &quot;definition&quot;: &quot;An Extension&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;DomainResource.extension&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;*&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Extension&quot;,
+            &quot;profile&quot;: [
+              &quot;http://hl7.org/fhir/StructureDefinition/imagingstudy-radiationDuration&quot;
+            ]
+          }
+        ],
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;qdm&quot;,
+            &quot;map&quot;: &quot;radiation duration from \&quot;Diagnostic Study, Adverse Event\&quot; and \&quot;Diagnostic Study, Performed\&quot;&quot;
+          }
+        ]
+      },
+      {
+        &quot;path&quot;: &quot;ImagingStudy.extension&quot;,
+        &quot;short&quot;: &quot;Extension&quot;,
+        &quot;definition&quot;: &quot;An Extension&quot;,
+        &quot;min&quot;: 1,
+        &quot;max&quot;: &quot;*&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;DomainResource.extension&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;*&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Extension&quot;,
+            &quot;profile&quot;: [
+              &quot;http://hl7.org/fhir/StructureDefinition/hspc-imagingstudy-RadiologyText&quot;
+            ]
+          }
+        ]
+      },
+      {
+        &quot;path&quot;: &quot;ImagingStudy.extension&quot;,
+        &quot;short&quot;: &quot;Extension&quot;,
+        &quot;definition&quot;: &quot;An Extension&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;*&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;DomainResource.extension&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;*&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Extension&quot;,
+            &quot;profile&quot;: [
+              &quot;http://hl7.org/fhir/StructureDefinition/hspc-extensionsassociatedPrecondition&quot;
+            ]
+          }
+        ],
+        &quot;binding&quot;: {
+          &quot;strength&quot;: &quot;example&quot;,
+          &quot;description&quot;: &quot;Conditions that exist that may effect the imaging study&quot;,
+          &quot;valueSetReference&quot;: {
+            &quot;reference&quot;: &quot;http://hl7.org/fhir/ValueSet/hspc-radiologyAssociatedPrecondition&quot;
+          }
+        }
+      },
+      {
+        &quot;path&quot;: &quot;ImagingStudy.modifierExtension&quot;,
+        &quot;short&quot;: &quot;Extensions that cannot be ignored&quot;,
+        &quot;definition&quot;: &quot;May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.&quot;,
+        &quot;comments&quot;: &quot;There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.&quot;,
+        &quot;alias&quot;: [
+          &quot;extensions&quot;,
+          &quot;user content&quot;
+        ],
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;*&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;DomainResource.modifierExtension&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;*&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Extension&quot;
+          }
+        ],
+        &quot;isModifier&quot;: true,
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;N/A&quot;
+          }
+        ]
+      },
+      {
+        &quot;extension&quot;: [
+          {
+            &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint&quot;,
+            &quot;valueString&quot;: &quot;dicom=&quot;
+          }
+        ],
+        &quot;path&quot;: &quot;ImagingStudy.uid&quot;,
+        &quot;short&quot;: &quot;Formal identifier for the study&quot;,
+        &quot;definition&quot;: &quot;Formal identifier for the study.&quot;,
+        &quot;alias&quot;: [
+          &quot;StudyInstanceUID&quot;
+        ],
+        &quot;min&quot;: 1,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;ImagingStudy.uid&quot;,
+          &quot;min&quot;: 1,
+          &quot;max&quot;: &quot;1&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;oid&quot;
+          }
+        ],
+        &quot;exampleOid&quot;: &quot;urn:oid:2.16.124.113543.6003.1154777499.30246.19789.3503430045&quot;,
+        &quot;isSummary&quot;: true,
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;.id&quot;
+          },
+          {
+            &quot;identity&quot;: &quot;dicom&quot;,
+            &quot;map&quot;: &quot;(0020,000D)&quot;
+          },
+          {
+            &quot;identity&quot;: &quot;w5&quot;,
+            &quot;map&quot;: &quot;id&quot;
+          }
+        ]
+      },
+      {
+        &quot;path&quot;: &quot;ImagingStudy.accession&quot;,
+        &quot;short&quot;: &quot;Related workflow identifier (\&quot;Accession Number\&quot;)&quot;,
+        &quot;definition&quot;: &quot;Accession Number is an identifier related to some aspect of imaging workflow and data management. Usage may vary across different institutions.  See for instance [IHE Radiology Technical Framework Volume 1 Appendix A](http://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Rev13.0_Vol1_FT_2014-07-30.pdf).&quot;,
+        &quot;alias&quot;: [
+          &quot;AccessionNumber&quot;
+        ],
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;ImagingStudy.accession&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;1&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Identifier&quot;
+          }
+        ],
+        &quot;isSummary&quot;: true,
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;.inboundRelationship[typeCode=COMP].source[classCode=ACSN, moodCode=EVN].id&quot;
+          },
+          {
+            &quot;identity&quot;: &quot;dicom&quot;,
+            &quot;map&quot;: &quot;(0008,0050)&quot;
+          },
+          {
+            &quot;identity&quot;: &quot;w5&quot;,
+            &quot;map&quot;: &quot;id&quot;
+          }
+        ]
+      },
+      {
+        &quot;path&quot;: &quot;ImagingStudy.identifier&quot;,
+        &quot;short&quot;: &quot;Other identifiers for the study&quot;,
+        &quot;definition&quot;: &quot;Other identifiers for the study.&quot;,
+        &quot;alias&quot;: [
+          &quot;StudyID&quot;
+        ],
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;*&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;ImagingStudy.identifier&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;*&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Identifier&quot;
+          }
+        ],
+        &quot;isSummary&quot;: true,
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;.id (no means to distinguish from uid)&quot;
+          },
+          {
+            &quot;identity&quot;: &quot;dicom&quot;,
+            &quot;map&quot;: &quot;(0020,0010)&quot;
+          },
+          {
+            &quot;identity&quot;: &quot;w5&quot;,
+            &quot;map&quot;: &quot;id&quot;
+          }
+        ]
+      },
+      {
+        &quot;path&quot;: &quot;ImagingStudy.availability&quot;,
+        &quot;short&quot;: &quot;ONLINE | OFFLINE | NEARLINE | UNAVAILABLE (0008,0056)&quot;,
+        &quot;definition&quot;: &quot;Availability of study (online, offline or nearline).&quot;,
+        &quot;alias&quot;: [
+          &quot;InstanceAvailability&quot;
+        ],
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;ImagingStudy.availability&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;1&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;code&quot;
+          }
+        ],
+        &quot;isSummary&quot;: true,
+        &quot;binding&quot;: {
+          &quot;strength&quot;: &quot;required&quot;,
+          &quot;description&quot;: &quot;Availability of the resource&quot;,
+          &quot;valueSetReference&quot;: {
+            &quot;reference&quot;: &quot;http://hl7.org/fhir/ValueSet/instance-availability&quot;
+          }
+        },
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;Not supported&quot;
+          },
+          {
+            &quot;identity&quot;: &quot;dicom&quot;,
+            &quot;map&quot;: &quot;(0008,0056)&quot;
+          },
+          {
+            &quot;identity&quot;: &quot;w5&quot;,
+            &quot;map&quot;: &quot;status&quot;
+          }
+        ]
+      },
+      {
+        &quot;path&quot;: &quot;ImagingStudy.modalityList&quot;,
+        &quot;short&quot;: &quot;All series modality if actual acquisition modalities&quot;,
+        &quot;definition&quot;: &quot;A list of all the Series.ImageModality values that are actual acquisition modalities, i.e. those in the DICOM Context Group 29 (value set OID 1.2.840.10008.6.1.19).&quot;,
+        &quot;alias&quot;: [
+          &quot;ModalitiesInStudy&quot;
+        ],
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;*&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;ImagingStudy.modalityList&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;*&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Coding&quot;
+          }
+        ],
+        &quot;mustSupport&quot;: true,
+        &quot;isSummary&quot;: true,
+        &quot;binding&quot;: {
+          &quot;strength&quot;: &quot;extensible&quot;,
+          &quot;description&quot;: &quot;Type of acquired data in the instance&quot;,
+          &quot;valueSetReference&quot;: {
+            &quot;reference&quot;: &quot;http://hl7.org/fhir/ValueSet/dicom-cid29&quot;
+          }
+        },
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;.code&quot;
+          },
+          {
+            &quot;identity&quot;: &quot;dicom&quot;,
+            &quot;map&quot;: &quot;(0008,0061)&quot;
+          },
+          {
+            &quot;identity&quot;: &quot;w5&quot;,
+            &quot;map&quot;: &quot;class&quot;
+          }
+        ]
+      },
+      {
+        &quot;extension&quot;: [
+          {
+            &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint&quot;,
+            &quot;valueString&quot;: &quot;dicom=http://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_C.2.2.html&quot;
+          }
+        ],
+        &quot;path&quot;: &quot;ImagingStudy.patient&quot;,
+        &quot;short&quot;: &quot;Who the images are of&quot;,
+        &quot;definition&quot;: &quot;The patient imaged in the study.&quot;,
+        &quot;min&quot;: 1,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;ImagingStudy.patient&quot;,
+          &quot;min&quot;: 1,
+          &quot;max&quot;: &quot;1&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Reference&quot;,
+            &quot;profile&quot;: [
+              &quot;http://hl7.org/fhir/StructureDefinition/qicore-patient&quot;
+            ]
+          }
+        ],
+        &quot;mustSupport&quot;: true,
+        &quot;isSummary&quot;: true,
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;.participation[typeCode=SBJ].role&quot;
+          },
+          {
+            &quot;identity&quot;: &quot;dicom&quot;,
+            &quot;map&quot;: &quot;(0010/*)&quot;
+          },
+          {
+            &quot;identity&quot;: &quot;w5&quot;,
+            &quot;map&quot;: &quot;who.focus&quot;
+          }
+        ]
+      },
+      {
+        &quot;extension&quot;: [
+          {
+            &quot;url&quot;: &quot;http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint&quot;,
+            &quot;valueString&quot;: &quot;dicom=http://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_C.7.2.html#sect_C.7.2.1&quot;
+          }
+        ],
+        &quot;path&quot;: &quot;ImagingStudy.started&quot;,
+        &quot;short&quot;: &quot;When the study was started&quot;,
+        &quot;definition&quot;: &quot;Date and Time the study started.&quot;,
+        &quot;alias&quot;: [
+          &quot;StudyDate&quot;,
+          &quot;StudyTime&quot;
+        ],
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;ImagingStudy.started&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;1&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;dateTime&quot;
+          }
+        ],
+        &quot;exampleDateTime&quot;: &quot;2011-01-01T11:01:20+03:00&quot;,
+        &quot;mustSupport&quot;: true,
+        &quot;isSummary&quot;: true,
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;.effectiveTime&quot;
+          },
+          {
+            &quot;identity&quot;: &quot;dicom&quot;,
+            &quot;map&quot;: &quot;(0008,0020)+(0008,0030)&quot;
+          },
+          {
+            &quot;identity&quot;: &quot;w5&quot;,
+            &quot;map&quot;: &quot;when.init&quot;
+          }
+        ]
+      },
+      {
+        &quot;path&quot;: &quot;ImagingStudy.order&quot;,
+        &quot;short&quot;: &quot;Order(s) that caused this study to be performed&quot;,
+        &quot;definition&quot;: &quot;A list of the diagnostic orders that resulted in this imaging study being performed.&quot;,
+        &quot;requirements&quot;: &quot;To support grouped procedures (one imaging study supporting multiple ordered procedures, e.g. chest/abdomen/pelvis CT).&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;*&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;ImagingStudy.order&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;*&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Reference&quot;,
+            &quot;profile&quot;: [
+              &quot;http://hl7.org/fhir/StructureDefinition/qicore-diagnosticorder&quot;
+            ]
+          }
+        ],
+        &quot;mustSupport&quot;: true,
+        &quot;isSummary&quot;: true,
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;.outboundRelationship[typeCode=FLFS].target[classCode=DGIMG, moodCode=RQO]&quot;
+          },
+          {
+            &quot;identity&quot;: &quot;w5&quot;,
+            &quot;map&quot;: &quot;who.cause&quot;
+          }
+        ]
+      },
+      {
+        &quot;path&quot;: &quot;ImagingStudy.referrer&quot;,
+        &quot;short&quot;: &quot;Referring physician (0008,0090)&quot;,
+        &quot;definition&quot;: &quot;The requesting/referring physician.&quot;,
+        &quot;alias&quot;: [
+          &quot;ReferringPhysiciansName&quot;
+        ],
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;ImagingStudy.referrer&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;1&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Reference&quot;,
+            &quot;profile&quot;: [
+              &quot;http://hl7.org/fhir/StructureDefinition/qicore-practitioner&quot;
+            ]
+          }
+        ],
+        &quot;isSummary&quot;: true,
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;.outboundRelationship[typeCode=FLFS].target[classCode=DGIMG, moodCode=RQO].participation[typeCode=AUT].role&quot;
+          },
+          {
+            &quot;identity&quot;: &quot;dicom&quot;,
+            &quot;map&quot;: &quot;(0008,0090)&quot;
+          },
+          {
+            &quot;identity&quot;: &quot;w5&quot;,
+            &quot;map&quot;: &quot;who.cause&quot;
+          }
+        ]
+      },
+      {
+        &quot;path&quot;: &quot;ImagingStudy.interpreter&quot;,
+        &quot;short&quot;: &quot;Who interpreted images&quot;,
+        &quot;definition&quot;: &quot;Who read the study and interpreted the images or other content.&quot;,
+        &quot;alias&quot;: [
+          &quot;Name of Physician(s) Reading Study&quot;
+        ],
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;ImagingStudy.interpreter&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;1&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Reference&quot;,
+            &quot;profile&quot;: [
+              &quot;http://hl7.org/fhir/StructureDefinition/hspc-provpract&quot;
+            ]
+          }
+        ],
+        &quot;isSummary&quot;: true,
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;.participation[typeCode=PRF].role&quot;
+          },
+          {
+            &quot;identity&quot;: &quot;dicom&quot;,
+            &quot;map&quot;: &quot;(0008,1060)&quot;
+          },
+          {
+            &quot;identity&quot;: &quot;w5&quot;,
+            &quot;map&quot;: &quot;who.witness&quot;
+          }
+        ]
+      },
+      {
+        &quot;path&quot;: &quot;ImagingStudy.url&quot;,
+        &quot;short&quot;: &quot;Retrieve URI&quot;,
+        &quot;definition&quot;: &quot;WADO-RS resource where Study is available.&quot;,
+        &quot;alias&quot;: [
+          &quot;RetrieveURI&quot;
+        ],
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;ImagingStudy.url&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;1&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;uri&quot;
+          }
+        ],
+        &quot;isSummary&quot;: true,
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;.text.reference&quot;
+          },
+          {
+            &quot;identity&quot;: &quot;dicom&quot;,
+            &quot;map&quot;: &quot;(0008,1190)&quot;
+          }
+        ]
+      },
+      {
+        &quot;path&quot;: &quot;ImagingStudy.numberOfSeries&quot;,
+        &quot;short&quot;: &quot;Number of Study Related Series&quot;,
+        &quot;definition&quot;: &quot;Number of Series in Study.&quot;,
+        &quot;alias&quot;: [
+          &quot;NumberOfStudyRelatedSeries&quot;
+        ],
+        &quot;min&quot;: 1,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;ImagingStudy.numberOfSeries&quot;,
+          &quot;min&quot;: 1,
+          &quot;max&quot;: &quot;1&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;unsignedInt&quot;
+          }
+        ],
+        &quot;isSummary&quot;: true,
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;.outboundRelationship[typeCode=COMP, subsetCode=SUMM].target[classCode=OBSSER, moodCode=EVN].repeatNumber&quot;
+          },
+          {
+            &quot;identity&quot;: &quot;dicom&quot;,
+            &quot;map&quot;: &quot;(0020,1206)&quot;
+          }
+        ]
+      },
+      {
+        &quot;path&quot;: &quot;ImagingStudy.numberOfInstances&quot;,
+        &quot;short&quot;: &quot;Number of Study Related Instances&quot;,
+        &quot;definition&quot;: &quot;Number of SOP Instances in Study.&quot;,
+        &quot;alias&quot;: [
+          &quot;NumberOfStudyRelatedInstances&quot;
+        ],
+        &quot;min&quot;: 1,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;ImagingStudy.numberOfInstances&quot;,
+          &quot;min&quot;: 1,
+          &quot;max&quot;: &quot;1&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;unsignedInt&quot;
+          }
+        ],
+        &quot;isSummary&quot;: true,
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;.outboundRelationship[typeCode=COMP, subsetCode=SUMM].target[classCode=DGIMG, moodCode=EVN].repeatNumber&quot;
+          },
+          {
+            &quot;identity&quot;: &quot;dicom&quot;,
+            &quot;map&quot;: &quot;(0020,1208)&quot;
+          }
+        ]
+      },
+      {
+        &quot;path&quot;: &quot;ImagingStudy.procedure&quot;,
+        &quot;short&quot;: &quot;Type of procedure performed&quot;,
+        &quot;definition&quot;: &quot;Type of procedure performed.&quot;,
+        &quot;comments&quot;: &quot;For the Procedure.code, LOINC radiology orderables would be a good value set to use.&quot;,
+        &quot;alias&quot;: [
+          &quot;ProcedureCodeSequence&quot;
+        ],
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;*&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;ImagingStudy.procedure&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;*&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Reference&quot;,
+            &quot;profile&quot;: [
+              &quot;http://hl7.org/fhir/StructureDefinition/Procedure&quot;
+            ]
+          }
+        ],
+        &quot;mustSupport&quot;: true,
+        &quot;isSummary&quot;: true,
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;.outboundRelationship[typeCode=COMP].target[classCode=PROC, moodCode=EVN]&quot;
+          },
+          {
+            &quot;identity&quot;: &quot;dicom&quot;,
+            &quot;map&quot;: &quot;(0008,1032)&quot;
+          }
+        ]
+      },
+      {
+        &quot;path&quot;: &quot;ImagingStudy.description&quot;,
+        &quot;short&quot;: &quot;Institution-generated description&quot;,
+        &quot;definition&quot;: &quot;Institution-generated description or classification of the Study performed.&quot;,
+        &quot;alias&quot;: [
+          &quot;StudyDescription&quot;
+        ],
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;ImagingStudy.description&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;1&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;string&quot;
+          }
+        ],
+        &quot;isSummary&quot;: true,
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;.text&quot;
+          },
+          {
+            &quot;identity&quot;: &quot;dicom&quot;,
+            &quot;map&quot;: &quot;(0008,1030)&quot;
+          }
+        ]
+      },
+      {
+        &quot;path&quot;: &quot;ImagingStudy.series&quot;,
+        &quot;short&quot;: &quot;Each study has one or more series of instances&quot;,
+        &quot;definition&quot;: &quot;Each study has one or more series of images or other content.&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;*&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;ImagingStudy.series&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;*&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;BackboneElement&quot;
+          }
+        ],
+        &quot;isSummary&quot;: true,
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;.outboundRelationship[typeCode=COMP].target[classCode=OBSSER, moodCode=EVN]&quot;
+          }
+        ]
+      },
+      {
+        &quot;path&quot;: &quot;ImagingStudy.series.id&quot;,
+        &quot;representation&quot;: [
+          &quot;xmlAttr&quot;
+        ],
+        &quot;short&quot;: &quot;xml:id (or equivalent in JSON)&quot;,
+        &quot;definition&quot;: &quot;unique id for the element within a resource (for internal references).&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;Element.id&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;*&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;id&quot;
+          }
+        ],
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;n/a&quot;
+          }
+        ]
+      },
+      {
+        &quot;path&quot;: &quot;ImagingStudy.series.extension&quot;,
+        &quot;short&quot;: &quot;Additional Content defined by implementations&quot;,
+        &quot;definition&quot;: &quot;May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.&quot;,
+        &quot;comments&quot;: &quot;There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.&quot;,
+        &quot;alias&quot;: [
+          &quot;extensions&quot;,
+          &quot;user content&quot;
+        ],
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;*&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;Element.extension&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;*&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Extension&quot;
+          }
+        ],
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;n/a&quot;
+          }
+        ]
+      },
+      {
+        &quot;path&quot;: &quot;ImagingStudy.series.modifierExtension&quot;,
+        &quot;short&quot;: &quot;Extensions that cannot be ignored&quot;,
+        &quot;definition&quot;: &quot;May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.&quot;,
+        &quot;comments&quot;: &quot;There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.&quot;,
+        &quot;alias&quot;: [
+          &quot;extensions&quot;,
+          &quot;user content&quot;,
+          &quot;modifiers&quot;
+        ],
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;*&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;BackboneElement.modifierExtension&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;*&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Extension&quot;
+          }
+        ],
+        &quot;isModifier&quot;: true,
+        &quot;isSummary&quot;: true,
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;N/A&quot;
+          }
+        ]
+      },
+      {
+        &quot;path&quot;: &quot;ImagingStudy.series.uid&quot;,
+        &quot;short&quot;: &quot;Formal identifier for this series&quot;,
+        &quot;definition&quot;: &quot;Formal identifier for this series.&quot;,
+        &quot;alias&quot;: [
+          &quot;SeriesInstanceUID&quot;
+        ],
+        &quot;min&quot;: 1,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;ImagingStudy.series.uid&quot;,
+          &quot;min&quot;: 1,
+          &quot;max&quot;: &quot;1&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;oid&quot;
+          }
+        ],
+        &quot;exampleOid&quot;: &quot;urn:oid:2.16.124.113543.6003.2588828330.45298.17418.2723805630&quot;,
+        &quot;isSummary&quot;: true,
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;.id&quot;
+          },
+          {
+            &quot;identity&quot;: &quot;dicom&quot;,
+            &quot;map&quot;: &quot;(0020,000E)&quot;
+          }
+        ]
+      },
+      {
+        &quot;path&quot;: &quot;ImagingStudy.series.number&quot;,
+        &quot;short&quot;: &quot;Numeric identifier of this series&quot;,
+        &quot;definition&quot;: &quot;The Numeric identifier of this series in the study.&quot;,
+        &quot;alias&quot;: [
+          &quot;SeriesNumber&quot;
+        ],
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;ImagingStudy.series.number&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;1&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;unsignedInt&quot;
+          }
+        ],
+        &quot;exampleUnsignedInt&quot;: 3,
+        &quot;isSummary&quot;: true,
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;.inboundRelationship[type=COMP, source[classCode=COMPOSITION, moodCode=EVN]].sequenceNumber&quot;
+          },
+          {
+            &quot;identity&quot;: &quot;dicom&quot;,
+            &quot;map&quot;: &quot;(0020,0011)&quot;
+          }
+        ]
+      },
+      {
+        &quot;path&quot;: &quot;ImagingStudy.series.modality&quot;,
+        &quot;short&quot;: &quot;The modality of the instances in the series&quot;,
+        &quot;definition&quot;: &quot;The modality of this series sequence.&quot;,
+        &quot;alias&quot;: [
+          &quot;Modality&quot;
+        ],
+        &quot;min&quot;: 1,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;ImagingStudy.series.modality&quot;,
+          &quot;min&quot;: 1,
+          &quot;max&quot;: &quot;1&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Coding&quot;
+          }
+        ],
+        &quot;isSummary&quot;: true,
+        &quot;binding&quot;: {
+          &quot;strength&quot;: &quot;extensible&quot;,
+          &quot;description&quot;: &quot;Type of acquired data in the instance&quot;,
+          &quot;valueSetReference&quot;: {
+            &quot;reference&quot;: &quot;http://hl7.org/fhir/ValueSet/dicom-cid29&quot;
+          }
+        },
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;.code&quot;
+          },
+          {
+            &quot;identity&quot;: &quot;dicom&quot;,
+            &quot;map&quot;: &quot;(0008,0060)&quot;
+          }
+        ]
+      },
+      {
+        &quot;path&quot;: &quot;ImagingStudy.series.description&quot;,
+        &quot;short&quot;: &quot;A short human readable summary of the series&quot;,
+        &quot;definition&quot;: &quot;A description of the series.&quot;,
+        &quot;alias&quot;: [
+          &quot;SeriesDescription&quot;
+        ],
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;ImagingStudy.series.description&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;1&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;string&quot;
+          }
+        ],
+        &quot;exampleString&quot;: &quot;CT Surview 180&quot;,
+        &quot;isSummary&quot;: true,
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;.text&quot;
+          },
+          {
+            &quot;identity&quot;: &quot;dicom&quot;,
+            &quot;map&quot;: &quot;(0008,103E)&quot;
+          }
+        ]
+      },
+      {
+        &quot;path&quot;: &quot;ImagingStudy.series.numberOfInstances&quot;,
+        &quot;short&quot;: &quot;Number of Series Related Instances&quot;,
+        &quot;definition&quot;: &quot;Number of SOP Instances in Series.&quot;,
+        &quot;alias&quot;: [
+          &quot;NumberOfSeriesRelatedInstances&quot;
+        ],
+        &quot;min&quot;: 1,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;ImagingStudy.series.numberOfInstances&quot;,
+          &quot;min&quot;: 1,
+          &quot;max&quot;: &quot;1&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;unsignedInt&quot;
+          }
+        ],
+        &quot;isSummary&quot;: true,
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;.outboundRelationship[typeCode=COMP, subsetCode=SUMM].target[classCode=DGIMG, moodCode=EVN].repeatNumber&quot;
+          },
+          {
+            &quot;identity&quot;: &quot;dicom&quot;,
+            &quot;map&quot;: &quot;(0020,1209)&quot;
+          }
+        ]
+      },
+      {
+        &quot;path&quot;: &quot;ImagingStudy.series.availability&quot;,
+        &quot;short&quot;: &quot;ONLINE | OFFLINE | NEARLINE | UNAVAILABLE&quot;,
+        &quot;definition&quot;: &quot;Availability of series (online, offline or nearline).&quot;,
+        &quot;alias&quot;: [
+          &quot;InstanceAvailability&quot;
+        ],
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;ImagingStudy.series.availability&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;1&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;code&quot;
+          }
+        ],
+        &quot;isSummary&quot;: true,
+        &quot;binding&quot;: {
+          &quot;strength&quot;: &quot;required&quot;,
+          &quot;description&quot;: &quot;Availability of the resource&quot;,
+          &quot;valueSetReference&quot;: {
+            &quot;reference&quot;: &quot;http://hl7.org/fhir/ValueSet/instance-availability&quot;
+          }
+        },
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;.inboundRelationship[typeCode=COMP]. source[classCode=OBS, moodCode=EVN, code=\&quot;availability\&quot;].value&quot;
+          },
+          {
+            &quot;identity&quot;: &quot;dicom&quot;,
+            &quot;map&quot;: &quot;(0008,0056)&quot;
+          }
+        ]
+      },
+      {
+        &quot;path&quot;: &quot;ImagingStudy.series.url&quot;,
+        &quot;short&quot;: &quot;Location of the referenced instance(s)&quot;,
+        &quot;definition&quot;: &quot;URI/URL specifying the location of the referenced series using WADO-RS.&quot;,
+        &quot;alias&quot;: [
+          &quot;RetrieveURI&quot;
+        ],
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;ImagingStudy.series.url&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;1&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;uri&quot;
+          }
+        ],
+        &quot;isSummary&quot;: true,
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;.text.reference&quot;
+          },
+          {
+            &quot;identity&quot;: &quot;dicom&quot;,
+            &quot;map&quot;: &quot;(0008,1115) &gt; (0008,1190)&quot;
+          }
+        ]
+      },
+      {
+        &quot;path&quot;: &quot;ImagingStudy.series.bodySite&quot;,
+        &quot;short&quot;: &quot;Body part examined&quot;,
+        &quot;definition&quot;: &quot;Body part examined. See  DICOM Part 16 Annex L for the mapping from DICOM to Snomed CT.&quot;,
+        &quot;alias&quot;: [
+          &quot;BodyPartExamined&quot;
+        ],
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;ImagingStudy.series.bodySite&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;1&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Coding&quot;
+          }
+        ],
+        &quot;isSummary&quot;: true,
+        &quot;binding&quot;: {
+          &quot;strength&quot;: &quot;example&quot;,
+          &quot;description&quot;: &quot;Codes describing anatomical locations. May include laterality.&quot;,
+          &quot;valueSetReference&quot;: {
+            &quot;reference&quot;: &quot;http://hl7.org/fhir/ValueSet/body-site&quot;
+          }
+        },
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;.targetSiteCode&quot;
+          },
+          {
+            &quot;identity&quot;: &quot;dicom&quot;,
+            &quot;map&quot;: &quot;(0018,0015)&quot;
+          }
+        ]
+      },
+      {
+        &quot;path&quot;: &quot;ImagingStudy.series.laterality&quot;,
+        &quot;short&quot;: &quot;Body part laterality&quot;,
+        &quot;definition&quot;: &quot;Laterality if body site is paired anatomic structure and laterality is not pre-coordinated in body site code.&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;ImagingStudy.series.laterality&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;1&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Coding&quot;
+          }
+        ],
+        &quot;isSummary&quot;: true,
+        &quot;binding&quot;: {
+          &quot;strength&quot;: &quot;example&quot;,
+          &quot;description&quot;: &quot;Codes describing body site laterality (left, right, etc.).&quot;,
+          &quot;valueSetReference&quot;: {
+            &quot;reference&quot;: &quot;http://hl7.org/fhir/ValueSet/bodysite-laterality&quot;
+          }
+        },
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;.targetSiteCode&quot;
+          },
+          {
+            &quot;identity&quot;: &quot;dicom&quot;,
+            &quot;map&quot;: &quot;(0020,0060)&quot;
+          }
+        ]
+      },
+      {
+        &quot;path&quot;: &quot;ImagingStudy.series.started&quot;,
+        &quot;short&quot;: &quot;When the series started&quot;,
+        &quot;definition&quot;: &quot;The date and time the series was started.&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;ImagingStudy.series.started&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;1&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;dateTime&quot;
+          }
+        ],
+        &quot;isSummary&quot;: true,
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;.effectiveTime&quot;
+          },
+          {
+            &quot;identity&quot;: &quot;dicom&quot;,
+            &quot;map&quot;: &quot;(0008,0021) + (0008,0031)&quot;
+          }
+        ]
+      },
+      {
+        &quot;path&quot;: &quot;ImagingStudy.series.instance&quot;,
+        &quot;short&quot;: &quot;A single SOP instance from the series&quot;,
+        &quot;definition&quot;: &quot;A single SOP Instance within the series, e.g. an image, or presentation state.&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;*&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;ImagingStudy.series.instance&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;*&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;BackboneElement&quot;
+          }
+        ],
+        &quot;isSummary&quot;: true,
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;.outboundRelationship[typeCode=COMP].target[classCode=DGIMG, moodCode=EVN]&quot;
+          }
+        ]
+      },
+      {
+        &quot;path&quot;: &quot;ImagingStudy.series.instance.id&quot;,
+        &quot;representation&quot;: [
+          &quot;xmlAttr&quot;
+        ],
+        &quot;short&quot;: &quot;xml:id (or equivalent in JSON)&quot;,
+        &quot;definition&quot;: &quot;unique id for the element within a resource (for internal references).&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;Element.id&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;*&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;id&quot;
+          }
+        ],
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;n/a&quot;
+          }
+        ]
+      },
+      {
+        &quot;path&quot;: &quot;ImagingStudy.series.instance.extension&quot;,
+        &quot;short&quot;: &quot;Additional Content defined by implementations&quot;,
+        &quot;definition&quot;: &quot;May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.&quot;,
+        &quot;comments&quot;: &quot;There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.&quot;,
+        &quot;alias&quot;: [
+          &quot;extensions&quot;,
+          &quot;user content&quot;
+        ],
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;*&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;Element.extension&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;*&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Extension&quot;
+          }
+        ],
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;n/a&quot;
+          }
+        ]
+      },
+      {
+        &quot;path&quot;: &quot;ImagingStudy.series.instance.modifierExtension&quot;,
+        &quot;short&quot;: &quot;Extensions that cannot be ignored&quot;,
+        &quot;definition&quot;: &quot;May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.&quot;,
+        &quot;comments&quot;: &quot;There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.&quot;,
+        &quot;alias&quot;: [
+          &quot;extensions&quot;,
+          &quot;user content&quot;,
+          &quot;modifiers&quot;
+        ],
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;*&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;BackboneElement.modifierExtension&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;*&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Extension&quot;
+          }
+        ],
+        &quot;isModifier&quot;: true,
+        &quot;isSummary&quot;: true,
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;N/A&quot;
+          }
+        ]
+      },
+      {
+        &quot;path&quot;: &quot;ImagingStudy.series.instance.uid&quot;,
+        &quot;short&quot;: &quot;Formal identifier for this instance&quot;,
+        &quot;definition&quot;: &quot;Formal identifier for this image or other content.&quot;,
+        &quot;alias&quot;: [
+          &quot;SOPInstanceUID&quot;
+        ],
+        &quot;min&quot;: 1,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;ImagingStudy.series.instance.uid&quot;,
+          &quot;min&quot;: 1,
+          &quot;max&quot;: &quot;1&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;oid&quot;
+          }
+        ],
+        &quot;exampleOid&quot;: &quot;urn:oid:2.16.124.113543.6003.189642796.63084.16748.2599092903&quot;,
+        &quot;isSummary&quot;: true,
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;.id&quot;
+          },
+          {
+            &quot;identity&quot;: &quot;dicom&quot;,
+            &quot;map&quot;: &quot;(0008,0018)&quot;
+          }
+        ]
+      },
+      {
+        &quot;path&quot;: &quot;ImagingStudy.series.instance.number&quot;,
+        &quot;short&quot;: &quot;The number of this instance in the series&quot;,
+        &quot;definition&quot;: &quot;The number of instance in the series.&quot;,
+        &quot;alias&quot;: [
+          &quot;InstanceNumber&quot;
+        ],
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;ImagingStudy.series.instance.number&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;1&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;unsignedInt&quot;
+          }
+        ],
+        &quot;exampleUnsignedInt&quot;: 1,
+        &quot;isSummary&quot;: true,
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;.inboundRelationship[typeCode=COMP, source[classCode=OBSSER, moodCode=EVN]].sequenceNumber&quot;
+          },
+          {
+            &quot;identity&quot;: &quot;dicom&quot;,
+            &quot;map&quot;: &quot;(0020,0013)&quot;
+          }
+        ]
+      },
+      {
+        &quot;path&quot;: &quot;ImagingStudy.series.instance.sopClass&quot;,
+        &quot;short&quot;: &quot;DICOM class type&quot;,
+        &quot;definition&quot;: &quot;DICOM instance  type.&quot;,
+        &quot;alias&quot;: [
+          &quot;SOPClassUID&quot;
+        ],
+        &quot;min&quot;: 1,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;ImagingStudy.series.instance.sopClass&quot;,
+          &quot;min&quot;: 1,
+          &quot;max&quot;: &quot;1&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;oid&quot;
+          }
+        ],
+        &quot;exampleOid&quot;: &quot;urn:oid:1.2.840.10008.5.1.4.1.1.2&quot;,
+        &quot;isSummary&quot;: true,
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;.inboundRelationship[typeCode=COMP]. source[classCode=OBS, moodCode=EVN, code=\&quot;sop class\&quot;].value&quot;
+          },
+          {
+            &quot;identity&quot;: &quot;dicom&quot;,
+            &quot;map&quot;: &quot;(0008,0016)&quot;
+          }
+        ]
+      },
+      {
+        &quot;path&quot;: &quot;ImagingStudy.series.instance.type&quot;,
+        &quot;short&quot;: &quot;Type of instance (image etc.)&quot;,
+        &quot;definition&quot;: &quot;A human-friendly SOP Class name.&quot;,
+        &quot;comments&quot;: &quot;E.g. 'CT image', 'MR multi-frame', 'blending presentation'.&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;ImagingStudy.series.instance.type&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;1&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;string&quot;
+          }
+        ],
+        &quot;isSummary&quot;: true,
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;.code&quot;
+          },
+          {
+            &quot;identity&quot;: &quot;dicom&quot;,
+            &quot;map&quot;: &quot;(0004,1430)&quot;
+          }
+        ]
+      },
+      {
+        &quot;path&quot;: &quot;ImagingStudy.series.instance.title&quot;,
+        &quot;short&quot;: &quot;Description of instance&quot;,
+        &quot;definition&quot;: &quot;The description of the instance.&quot;,
+        &quot;comments&quot;: &quot;Particularly for post-acquisition analytic objects, such as SR, presentation states, value mapping, etc.&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;ImagingStudy.series.instance.title&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;1&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;string&quot;
+          }
+        ],
+        &quot;isSummary&quot;: true,
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;.title&quot;
+          },
+          {
+            &quot;identity&quot;: &quot;dicom&quot;,
+            &quot;map&quot;: &quot;(0070,0080) | (0040,A043) &gt; (0008,0104) | (0042,0010) | (0008,0008)&quot;
+          }
+        ]
+      },
+      {
+        &quot;path&quot;: &quot;ImagingStudy.series.instance.content&quot;,
+        &quot;short&quot;: &quot;The instance payload, such as the image binary data or URL to it&quot;,
+        &quot;definition&quot;: &quot;Content of the instance or a rendering thereof (e.g. a JPEG of an image, or an XML of a structured report). May be represented for example by inline encoding; by a URL reference to a WADO-RS service that makes the instance available; or to a FHIR Resource (e.g. Media, Document, etc.). Multiple content attachments may be used for alternate representations of the instance.&quot;,
+        &quot;comments&quot;: &quot;Use of Attachment.data is discouraged.&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;*&quot;,
+        &quot;base&quot;: {
+          &quot;path&quot;: &quot;ImagingStudy.series.instance.content&quot;,
+          &quot;min&quot;: 0,
+          &quot;max&quot;: &quot;*&quot;
+        },
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Attachment&quot;
+          }
+        ],
+        &quot;isSummary&quot;: true,
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;rim&quot;,
+            &quot;map&quot;: &quot;.text.binary&quot;
+          }
+        ]
+      }
+    ]
+  },
+  &quot;differential&quot;: {
+    &quot;element&quot;: [
+      {
+        &quot;path&quot;: &quot;ImagingStudy&quot;,
+        &quot;name&quot;: &quot;hspc-imagingstudy&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;*&quot;,
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;ImagingStudy&quot;
+          }
+        ],
+        &quot;mapping&quot;: [
+          {
+            &quot;identity&quot;: &quot;qdm&quot;,
+            &quot;map&quot;: &quot;Patient Characteristic&quot;
+          }
+        ]
+      },
+      {
+        &quot;path&quot;: &quot;ImagingStudy.extension&quot;,
+        &quot;name&quot;: &quot;RadiologyText&quot;,
+        &quot;min&quot;: 1,
+        &quot;max&quot;: &quot;*&quot;,
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Extension&quot;,
+            &quot;profile&quot;: [
+              &quot;http://hl7.org/fhir/StructureDefinition/hspc-imagingstudy-RadiologyText&quot;
+            ]
+          }
+        ]
+      },
+      {
+        &quot;path&quot;: &quot;ImagingStudy.extension.extension&quot;,
+        &quot;name&quot;: &quot;RadiologyText.TextSection&quot;,
+        &quot;min&quot;: 1,
+        &quot;max&quot;: &quot;*&quot;,
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Extension&quot;,
+            &quot;profile&quot;: [
+              &quot;http://hl7.org/fhir/StructureDefinition/hspc-imagingstudy-RadiologyText#TextSection&quot;
+            ]
+          }
+        ]
+      },
+      {
+        &quot;path&quot;: &quot;ImagingStudy.extension.extension&quot;,
+        &quot;name&quot;: &quot;RadiologyText.SequenceNumber&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;1&quot;,
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Extension&quot;,
+            &quot;profile&quot;: [
+              &quot;http://hl7.org/fhir/StructureDefinition/hspc-imagingstudy-RadiologyText#SequenceNumber&quot;
+            ]
+          }
+        ]
+      },
+      {
+        &quot;path&quot;: &quot;ImagingStudy.extension&quot;,
+        &quot;name&quot;: &quot;AssociatedPrecondition&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: &quot;*&quot;,
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Extension&quot;,
+            &quot;profile&quot;: [
+              &quot;http://hl7.org/fhir/StructureDefinition/hspc-extensionsassociatedPrecondition&quot;
+            ]
+          }
+        ],
+        &quot;binding&quot;: {
+          &quot;strength&quot;: &quot;example&quot;,
+          &quot;description&quot;: &quot;Conditions that exist that may effect the imaging study&quot;,
+          &quot;valueSetReference&quot;: {
+            &quot;reference&quot;: &quot;http://hl7.org/fhir/ValueSet/hspc-radiologyAssociatedPrecondition&quot;
+          }
+        }
+      },
+      {
+        &quot;path&quot;: &quot;ImagingStudy.interpreter&quot;,
+        &quot;type&quot;: [
+          {
+            &quot;code&quot;: &quot;Reference&quot;,
+            &quot;profile&quot;: [
+              &quot;http://hl7.org/fhir/StructureDefinition/hspc-provpract&quot;
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
+</pre>
+</div>
+
+
+
+</div>
+
+
+				</div><!-- /inner-wrapper -->
+            </div><!-- /row -->
+        </div><!-- /container -->
+        
+    </div><!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment"><!-- segment-footer -->
+		<div class="container"><!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        © HL7.org 2011+. FHIR STU3 Candidate (v1.4.0-8453) generated on Mon, Jun 6, 2016 20:25+0000. <a href="../qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search</a> | 
+               <a style="color: #81BEF7" href="../history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="../toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fhspc-imagingstudy.profile.json.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fhspc-imagingstudy.profile.json.html">Compare to DSTU2</a> |                
+               <a style="color: #81BEF7" rel="license" href="../license.html"><img src="../cc0.png" style="border-style: none;" alt="CC0"/></a> | 
+               <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>   
+        </span>
+        </p>
+			</div><!-- /inner-wrapper -->
+		</div><!-- /container -->
+	</div><!-- /segment-footer -->
+<!-- disqus thread -->
+<!--disqus-->
+<!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden"><!-- segment-post-footer -->
+		<div class="container"><!-- container -->
+		</div><!-- /container -->
+	</div><!-- /segment-post-footer -->
+    
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src=".././assets/js/jquery.js"> </script>   <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src=".././dist/js/bootstrap.min.js"> </script>
+<script src=".././assets/js/respond.min.js"> </script>
+
+<script src=".././assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

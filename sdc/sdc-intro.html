@@ -1,0 +1,255 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Sdc/sdc-intro - FHIR v1.4.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link rel="stylesheet" href="../fhir.css"/>
+  <link rel="Prev" href="http://hl7.org/fhir/sdc/sdc-intro.html"/>
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href=".././dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href=".././assets/css/bootstrap-fhir.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href=".././assets/css/project.css"/>
+  <link rel="stylesheet" href=".././assets/css/pygments-manni.css"/>
+	<link rel="stylesheet" href="../jquery-ui.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src=".././assets/js/html5shiv.js"></script>
+  <script src=".././assets/js/respond.min.js"></script>
+  <![endif] -->
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href=".././assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href=".././assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href=".././assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href=".././assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href=".././assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment">  <!-- segment-header -->	
+		<div class="container">  <!-- container -->
+			<a no-external="true" id="logo" href="http://hl7.org/fhir"><img src=".././assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a no-external="true" id="hl7-logo" href="http://www.hl7.org">
+					<img src=".././assets/images/hl7-logo.png" width="42" alt="visit the hl7 website" height="50"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a no-external="true" id="hl7-logo" href="http://hl7.org/fhir/search.cfm"><img src="./../assets/images/search.png" alt="Search FHIR"/></a></div> 
+		</div>
+		<div class="container">  <!-- container -->
+	</div></div>  <!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+ 	      		
+ 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="../index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../documentation.html">Documentation</a></li>
+              <li><a href="../implementation.html">Implementation</a></li>
+              <li><a href="../resourcelist.html">Resources</a></li>
+              <li><a href="../clinical.html">Clinical</a></li>
+              <li><a href="../administration.html">Administrative</a></li>
+              <li><a href="../infrastructure.html">Infrastructure</a></li>
+              <li><a href="../financial.html">Financial</a></li>
+
+						</ul>
+					</div>  <!-- /.nav-collapse -->
+				</div>  <!-- /.container -->
+			</nav>  <!-- /.navbar -->
+      		
+				
+  <!-- /HEADER CONTENT -->				
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+		<div class="container">  <!-- container -->	
+			<ul class="breadcrumb">
+          <!-- sdc/sdc-intro / page / sdc-intro -->
+        <li title="Structured Data Capture"><a href="sdc.html"><b>SDC</b></a></li>
+        <li title="Work in Progress yet"><b>unsorted</b></li>
+
+			</ul>	
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment">  <!-- segment-content -->
+	<div class="container">  <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<a name="sdc-intro"> </a> 
+
+<h1><span class="sectioncount">B.1</span> Introduction <a href="sdc-intro.html#sdc-intro" title="link to here" class="self-link"><img src="../target.png"/></a></h1>
+<p>
+The Structured Data Capture (SDC) Initiative seeks to link clinical data, captured within the Electronic Health Record (EHR) 
+system during clinical encounters, to supplemental systems that collect structured patient data within forms. For example, consider 
+a clinician treating a patient who is participating in a clinical trial or patient-centered outcomes research (PCOR) study. First, the EHR 
+displays the electronic case report form (eCRF) to the clinician through the EHR user interface.  Some information in the eCRF would be 
+automatically populated with current data derived from the EHR, and the remainder of the form's data would be entered in response 
+to standardized questions posed by the eCRF.  The eCRF data will be captured in a structured form, and ultimately aggregated and 
+transferred to end users as required for the use case.
+</p>
+<p>
+SDC requires that the question/answer (data element) structure of EHR forms be specified in a standardized, interoperable and 
+reproducible way.   As a consequence, SDC requires the definition of metadata for forms and data elements, in a manner relevant 
+to EHRs and entities using EHR data. Therefore SDC aims to leverage synergistic government and health care industry efforts underway 
+related to standards definition, and representation to facilitate capture, reporting, and analysis.  The standards and guidance 
+incorporated into this implementation guide are based on the requirements defined in the 
+<a href="http://wiki.siframework.org/Structured+Data+Capture+Use+Case">Structured Data Capture Initiative Standards and 
+Interoperability Framework Use Case <img src="../external.png" style="text-align: baseline"/></a> document.  Users of this implementation guide will benefit greatly from review 
+of the SDC Use Case document.
+</p>
+<h2><span class="sectioncount">B.1.1<a name="B.1.1"> </a></span> Initiative Overview <a href="sdc-intro.html#B.1.1" title="link to here" class="self-link"><img src="../target.png"/></a></h2>
+
+<p>
+The Structured Data Capture (SDC) Initiative identifies and recommends standards for the interoperable representation and 
+transmission of the following:
+</p>
+<ul>
+  <li>Standard form designs;</li>
+  <li>Minimum data element attributes for the purpose of using them in form designs;</li>
+  <li>Query for form;</li>
+  <li>Return a form;</li>
+  <li>Submit completed form data to an external data repository.</li>
+</ul>
+
+<p>
+The use cases for SDC interaction specifications are:
+</p>
+<ul>
+  <li>Retrieve data elements from a Data Element (DE) repository</li>
+  <li>Retrieve a form from a form repository with or without pre-populated data</li>
+  <li>Provide patient data (CCD or its FHIR equivalent) as part of the query to the form repository. The retrieved form should 
+  be a fully/partially filled form instance</li>
+  <li>Submit a completed form to an intended recipient</li>
+</ul>
+<p>
+Where applicable, this implementation guide addresses data transmission security, limitation of access to appropriate personnel, 
+data integrity, accountability, and adherence to suitable well-accepted informatics and networking standards.
+</p>
+
+<p>
+This implementation guide provides guidance on the use of Fast Healthcare Interoperability Resources (FHIR) Profile(s) for SDC 
+using the new DataElement resource and on the existing Questionnaire and QuestionnaireResponse resources. The profiles in this 
+implementation guide will be used to meet SDC project objectives of:
+</p>
+<ul>
+  <li>encouraging consistency around how common data elements are captured and used in healthcare systems</li>
+  <li>allowing data elements to be clearly identified in forms for the purpose of auto-population and data-extraction</li>
+</ul>
+
+<h2><span class="sectioncount">B.1.2<a name="B.1.2"> </a></span> Purpose <a href="sdc-intro.html#B.1.2" title="link to here" class="self-link"><img src="../target.png"/></a></h2>
+<p>
+This implementation guide provides implementers with guidance on how to achieve conformance with the standards recommended 
+by the Office of the National Coordinator for Health Information Technology (ONC) Standards &amp; Interoperability Framework 
+(S&amp;I), SDC Initiative.
+</p>
+<p>
+The implementation guide will explain how the 4 resources (using the defined profiles) can be used to support auto-population 
+of forms and data extraction.  It will also describe secure interaction specifications using Representational State 
+Transfer (REST) services to allow access, display, populate and saving of the resources.
+</p>
+<p>
+For this project, Data Element (DE) is defined as a named (identified) definition for a single piece of data (e.g. systolic 
+blood pressure).
+The new <a href="../dataelement.html">DataElement</a> resource defines a common syntax based on ISO/IEC 11179-3 to allow unambiguous 
+interpretation of DEs. The syntax is bound to controlled terminologies such as SNOMED CT, LOINC and RxNorm where appropriate.
+</p>
+<p>
+The SDC profiles on the resources will identify the resource elements and extensions that must be supported to meet SDC use 
+cases as well as constraints on their use.
+</p>
+
+<p>
+<b>Out of scope for this implementation guide:</b>
+</p>
+<ul>
+  <li>Defining DEs (semantics and their associated value sets)</li>
+</ul>
+
+
+</div>
+
+
+				</div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+        
+    </div>  <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">  <!-- segment-footer -->
+		<div class="container">  <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.4.0-8453) generated on Mon, Jun 6, 2016 20:22+0000. <a href="../qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img src="../external.png" style="text-align: baseline"/></a> | 
+               <a style="color: #81BEF7" href="../history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="../toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fsdc%2Fsdc-intro.html&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fsdc%2Fsdc-intro.html">Compare to DSTU2 <img src="../external.png" style="text-align: baseline"/></a> |                
+               <a rel="license" style="color: #81BEF7" href="../license.html"><img src="../cc0.png" alt="CC0" style="border-style: none;"/></a> | 
+               <a style="color: #81BEF7" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank">Propose a change <img src="../external.png" style="text-align: baseline"/></a>   
+        </span>
+        </p>
+			</div>  <!-- /inner-wrapper -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+    
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src=".././assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src=".././dist/js/bootstrap.min.js"> </script>
+<script src=".././assets/js/respond.min.js"> </script>
+
+<script src=".././assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+
+</body>
+</html>

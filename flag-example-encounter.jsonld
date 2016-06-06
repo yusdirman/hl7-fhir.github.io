@@ -1,0 +1,63 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Flag",
+  "resourceType": "Flag",
+  "Resource.id": {
+    "value": "example-encounter"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Follow Infection Control Level 3 Protocol</div>"
+    }
+  },
+  "Flag.category": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://example.org/local"
+        },
+        "Coding.code": {
+          "value": "infection"
+        },
+        "Coding.display": {
+          "value": "Infection Control Level"
+        }
+      }
+    ]
+  },
+  "Flag.status": {
+    "value": "active"
+  },
+  "Flag.subject": {
+    "Reference.reference": {
+      "value": "Patient/example"
+    },
+    "Reference.display": {
+      "value": "Peter Patient"
+    },
+    "reference": "http://hl7.org/fhir//Patient/example"
+  },
+  "Flag.encounter": {
+    "Reference.reference": {
+      "value": "Encounter/example"
+    },
+    "reference": "http://hl7.org/fhir//Encounter/example"
+  },
+  "Flag.code": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://example.org/local/if1"
+        },
+        "Coding.code": {
+          "value": "l3"
+        },
+        "Coding.display": {
+          "value": "Follow Level 3 Protocol"
+        }
+      }
+    ]
+  }
+}

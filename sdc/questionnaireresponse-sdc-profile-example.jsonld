@@ -1,0 +1,195 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/QuestionnaireResponse",
+  "resourceType": "QuestionnaireResponse",
+  "Resource.id": {
+    "value": "questionnaireresponse-sdc-profile-example"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <h1>Diagnosis NCI Standard Template</h1>\n      <h2>Mandatory Diagnosis Questions</h2>\n      <pre>These items must be included when this data is collected for reporting.\n\n  <b>Date of Current Pathologic Diagnosis</b>: 02/18/2003\n  <b>Diagnosis Type</b>                      : Primary Diagnosis__\n  <b>Primary Site</b>                        : Left Ovary\n</pre>\n<h2>Conditional Diagnosis Questions</h2>\n<pre>There are business rules to indicate situations under which these elements should be used on a case report form.\n\n  <b>Diagnosis Time Point</b>: Restaging\n</pre>\n<h2>Optional Diagnosis Conditions</h2>\n<pre>There is no requirement for inclusion of these elements on the case report form. If the design and scientific questions posed in the study dictate the need to collect this type of data, these elements should be included.\n\n  <b>Reviewing Pathologist</b>: Harold Ornada\n  <b>MedDRA Source Code</b>   : __________\n  <b>Assessment Method</b>    : Histological Procedure\n  <b>Tumor Grade</b>          : Moderately Differentiated</pre>\n    </div>"
+    }
+  },
+  "QuestionnaireResponse.status": {
+    "value": "completed"
+  },
+  "QuestionnaireResponse.authored": {
+    "value": "2014-01-21"
+  },
+  "QuestionnaireResponse.item": [
+    {
+      "QuestionnaireResponse.item.linkId": {
+        "value": "3921053v1.0"
+      },
+      "QuestionnaireResponse.item.text": {
+        "value": "Mandatory Diagnosis Questions"
+      },
+      "QuestionnaireResponse.item.item": [
+        {
+          "QuestionnaireResponse.item.linkId": {
+            "value": "3921059v1.0"
+          },
+          "QuestionnaireResponse.item.text": {
+            "value": "Date of Current Pathologic Diagnosis"
+          },
+          "QuestionnaireResponse.item.answer": [
+            {
+              "QuestionnaireResponse.item.answer.valueDate": {
+                "value": "2003-02-18"
+              }
+            }
+          ]
+        },
+        {
+          "QuestionnaireResponse.item.linkId": {
+            "value": "3921060v1.0"
+          },
+          "QuestionnaireResponse.item.text": {
+            "value": "Diagnosis Type"
+          },
+          "QuestionnaireResponse.item.answer": [
+            {
+              "QuestionnaireResponse.item.answer.valueCoding": {
+                "Coding.system": {
+                  "value": "http://nci.nih.gov/xml/owl/cadsr/data_element_scoped_identifier#3921060v1.0-cs"
+                },
+                "Coding.code": {
+                  "value": "1"
+                },
+                "Coding.display": {
+                  "value": "Primary Diagnosis"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "QuestionnaireResponse.item.linkId": {
+            "value": "3921053v1.0"
+          },
+          "QuestionnaireResponse.item.text": {
+            "value": "Primary Site"
+          },
+          "QuestionnaireResponse.item.answer": [
+            {
+              "QuestionnaireResponse.item.answer.valueString": {
+                "value": "Left Ovary"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "QuestionnaireResponse.item.linkId": {
+        "value": "3921066v1.0"
+      },
+      "QuestionnaireResponse.item.text": {
+        "value": "Conditional Diagnosis Questions"
+      },
+      "QuestionnaireResponse.item.item": [
+        {
+          "QuestionnaireResponse.item.text": {
+            "value": "Diagnosis Time Point"
+          },
+          "QuestionnaireResponse.item.answer": [
+            {
+              "QuestionnaireResponse.item.answer.valueCoding": {
+                "Coding.system": {
+                  "value": "http://nci.nih.gov/xml/owl/cadsr/data_element_scoped_identifier#3921066v1.0-cs"
+                },
+                "Coding.code": {
+                  "value": "3"
+                },
+                "Coding.display": {
+                  "value": "Restaging"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "QuestionnaireResponse.item.linkId": {
+        "value": "3921077v1.0"
+      },
+      "QuestionnaireResponse.item.text": {
+        "value": "Optional Diagnosis Questions"
+      },
+      "QuestionnaireResponse.item.item": [
+        {
+          "QuestionnaireResponse.item.linkId": {
+            "value": "3921079v1.0"
+          },
+          "QuestionnaireResponse.item.text": {
+            "value": "Reviewing Pathologist"
+          },
+          "QuestionnaireResponse.item.answer": [
+            {
+              "QuestionnaireResponse.item.answer.valueString": {
+                "value": "Harold Ornada"
+              }
+            }
+          ]
+        },
+        {
+          "QuestionnaireResponse.item.linkId": {
+            "value": "3921080v1.0"
+          },
+          "QuestionnaireResponse.item.text": {
+            "value": "MedDRA disease code"
+          }
+        },
+        {
+          "QuestionnaireResponse.item.linkId": {
+            "value": "3921081v1.0"
+          },
+          "QuestionnaireResponse.item.text": {
+            "value": "Assessment Method"
+          },
+          "QuestionnaireResponse.item.answer": [
+            {
+              "QuestionnaireResponse.item.answer.valueCoding": {
+                "Coding.system": {
+                  "value": "http://nci.nih.gov/xml/owl/cadsr/data_element_scoped_identifier#3921081v1.0-cs"
+                },
+                "Coding.code": {
+                  "value": "2"
+                },
+                "Coding.display": {
+                  "value": "Histological Procedure"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "QuestionnaireResponse.item.linkId": {
+            "value": "3921085v1.0"
+          },
+          "QuestionnaireResponse.item.text": {
+            "value": "Tumor grade"
+          },
+          "QuestionnaireResponse.item.answer": [
+            {
+              "QuestionnaireResponse.item.answer.valueCoding": {
+                "Coding.system": {
+                  "value": "http://nci.nih.gov/xml/owl/cadsr/data_element_scoped_identifier#3921085v1.0-cs"
+                },
+                "Coding.code": {
+                  "value": "2"
+                },
+                "Coding.display": {
+                  "value": "Moderately Differentiated"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

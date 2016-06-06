@@ -1,0 +1,267 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "AustralianOrganDonorRegister",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">to do</div>"
+  },
+  "url": "http://hl7.org/fhir/StructureDefinition/AustralianOrganDonorRegister",
+  "name": "AustralianOrganDonorRegister",
+  "display": "nehta-australian-organ-donor-register",
+  "status": "draft",
+  "publisher": "Health Level Seven International fhir",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "other",
+          "value": "http://hl7.org/fhir"
+        }
+      ]
+    }
+  ],
+  "date": "2016-06-06T20:14:04+00:00",
+  "description": "Logical Model: Information about an individual's organ and tissue donation decisions held on the Australian Organ Donor Register.",
+  "fhirVersion": "1.4.0",
+  "kind": "logical",
+  "abstract": false,
+  "snapshot": {
+    "element": [
+      {
+        "path": "AustralianOrganDonorRegister",
+        "short": "Australian Organ Donor Register",
+        "definition": "Information about an individual's organ and tissue donation decisions held on the Australian Organ Donor Register.",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "path": "AustralianOrganDonorRegister.subjectofCare",
+        "short": "Subject of Care",
+        "definition": "Person about whom the information contained in this document was captured.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
+          }
+        ]
+      },
+      {
+        "path": "AustralianOrganDonorRegister.documentAuthor",
+        "short": "Document Author",
+        "definition": "Composer of the document.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
+          },
+          {
+            "code": "Reference",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/Practitioner"
+            ]
+          },
+          {
+            "code": "Reference",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
+            ]
+          },
+          {
+            "code": "Reference",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/Device"
+            ]
+          }
+        ]
+      },
+      {
+        "path": "AustralianOrganDonorRegister.documentType",
+        "short": "Document Type",
+        "definition": "Type of document.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ]
+      },
+      {
+        "path": "AustralianOrganDonorRegister.details",
+        "short": "Australian Organ Donor Register Details",
+        "definition": "Information about an individual's organ and tissue donation decisions held on the Australian Organ Donor Register.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "AustralianOrganDonorRegister.details.australianOrganDonorRegisterEntry",
+        "short": "Australian Organ Donor Register Entry",
+        "definition": "Information about an individual's organ and tissue donation decisions, for use within the Australian Organ Donor Register.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "AustralianOrganDonorRegister.details.australianOrganDonorRegisterEntry.dateofInitialRegistration",
+        "short": "Date of Initial Registration",
+        "definition": "The date that the individual first registered their organ or tissue donation decision in the Australian Organ Donation Register.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "path": "AustralianOrganDonorRegister.details.australianOrganDonorRegisterEntry.donationDecision",
+        "short": "Donation Decision",
+        "definition": "The individual's decision about donation.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      },
+      {
+        "path": "AustralianOrganDonorRegister.details.australianOrganDonorRegisterEntry.organandTissueDonationDetails",
+        "short": "Organ and Tissue Donation Details",
+        "definition": "A list of organs and/or tissues for transplantation that the individual has consented to donate.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "AustralianOrganDonorRegister.details.australianOrganDonorRegisterEntry.organandTissueDonationDetails.boneTissueIndicator",
+        "short": "Bone Tissue Indicator",
+        "definition": "Whether or not the individual has decided to be a bone tissue donor.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      },
+      {
+        "path": "AustralianOrganDonorRegister.details.australianOrganDonorRegisterEntry.organandTissueDonationDetails.eyeTissueIndicator",
+        "short": "Eye Tissue Indicator",
+        "definition": "Whether or not the individual has decided to be an eye tissue (cornea) donor.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      },
+      {
+        "path": "AustralianOrganDonorRegister.details.australianOrganDonorRegisterEntry.organandTissueDonationDetails.heartIndicator",
+        "short": "Heart Indicator",
+        "definition": "Whether or not the individual has decided to be a heart organ donor.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      },
+      {
+        "path": "AustralianOrganDonorRegister.details.australianOrganDonorRegisterEntry.organandTissueDonationDetails.heartValveIndicator",
+        "short": "Heart Valve Indicator",
+        "definition": "Whether or not the individual has decided to be a heart valve donor.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      },
+      {
+        "path": "AustralianOrganDonorRegister.details.australianOrganDonorRegisterEntry.organandTissueDonationDetails.kidneyIndicator",
+        "short": "Kidney Indicator",
+        "definition": "Whether or not the individual has decided to be a kidney organ donor.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      },
+      {
+        "path": "AustralianOrganDonorRegister.details.australianOrganDonorRegisterEntry.organandTissueDonationDetails.liverIndicator",
+        "short": "Liver Indicator",
+        "definition": "Whether or not the individual has decided to be a liver organ donor.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      },
+      {
+        "path": "AustralianOrganDonorRegister.details.australianOrganDonorRegisterEntry.organandTissueDonationDetails.lungsIndicator",
+        "short": "Lungs Indicator",
+        "definition": "Whether or not the individual has decided to be a lung organ donor.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      },
+      {
+        "path": "AustralianOrganDonorRegister.details.australianOrganDonorRegisterEntry.organandTissueDonationDetails.pancreasIndicator",
+        "short": "Pancreas Indicator",
+        "definition": "Whether or not the individual has decided to be a pancreas organ donor.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      },
+      {
+        "path": "AustralianOrganDonorRegister.details.australianOrganDonorRegisterEntry.organandTissueDonationDetails.skinTissueIndicator",
+        "short": "Skin Tissue Indicator",
+        "definition": "Whether or not the individual has decided to be a skin tissue donor.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      }
+    ]
+  }
+}

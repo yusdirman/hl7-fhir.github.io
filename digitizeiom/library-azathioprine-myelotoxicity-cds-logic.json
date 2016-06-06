@@ -1,0 +1,54 @@
+{
+  "resourceType": "Library",
+  "id": "library-azathioprine-myelotoxicity-cds-logic",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Azathioprine Myelotoxicity CDS Logic</div>"
+  },
+  "moduleMetadata": {
+    "identifier": [
+      {
+        "use": "official",
+        "value": "Azathioprine_Myelotoxicity_CDS_Logic"
+      }
+    ],
+    "version": "1.0.0",
+    "title": "Azathioprine Myelotoxicity CDS Logic",
+    "type": "library",
+    "status": "active",
+    "experimental": true,
+    "description": "Decision support logic for improving the dosage accuracy of Azathioprine based on a Patient's TPMT metabolizer",
+    "publicationDate": "2016-03-14",
+    "topic": [
+      {
+        "text": "Azathioprine Myelotoxicity"
+      }
+    ]
+  },
+  "model": [
+    {
+      "identifier": "QUICK"
+    }
+  ],
+  "valueSet": [
+    {
+      "name": "snomed-CT",
+      "identifier": "2.16.840.1.113883.6.96"
+    }
+  ],
+  "dataRequirement": [
+    {
+      "type": "Observation",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSetString": "TPMT Results"
+        }
+      ]
+    }
+  ],
+  "document": {
+    "contentType": "application/cql+text",
+    "url": "http://cqlrepository.org/"
+  }
+}

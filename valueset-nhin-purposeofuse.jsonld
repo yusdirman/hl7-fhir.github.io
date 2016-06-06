@@ -1,0 +1,527 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/ValueSet",
+  "resourceType": "ValueSet",
+  "Resource.id": {
+    "value": "nhin-purposeofuse"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <h2>NHIN PurposeOfUse</h2>\n      <p>This value set is suitable for use with the provenance resource. It is derived from, but not compatible with, the HL7 v3 Purpose of use Code system.</p>\n      <p>This value set includes codes from the following code systems:</p>\n      <ul>\n        <li>Include all codes defined in \n          <a href=\"codesystem-nhin-purposeofuse.html\">http://healthit.gov/nhin/purposeofuse</a>\n        </li>\n      </ul>\n    </div>"
+    }
+  },
+  "ConceptMap": [
+    {
+      "Resource.id": {
+        "value": "map"
+      },
+      "ConceptMap.name": {
+        "value": "NHIN / V3 Mapping"
+      },
+      "ConceptMap.status": {
+        "value": "draft"
+      },
+      "ConceptMap.sourceReference": {
+        "Reference.reference": {
+          "value": "http://hl7.org/fhir/ValueSet/nhin-purposeofuse"
+        },
+        "reference": "http://hl7.org/fhir/ValueSet/nhin-purposeofuse"
+      },
+      "ConceptMap.targetReference": {
+        "Reference.reference": {
+          "value": "http://hl7.org/fhir/ValueSet/v3-PurposeOfUse"
+        },
+        "reference": "http://hl7.org/fhir/ValueSet/v3-PurposeOfUse"
+      },
+      "ConceptMap.element": [
+        {
+          "ConceptMap.element.system": {
+            "value": "http://healthit.gov/nhin/purposeofuse"
+          },
+          "ConceptMap.element.code": {
+            "value": "TREATMENT"
+          },
+          "ConceptMap.element.target": [
+            {
+              "ConceptMap.element.target.system": {
+                "value": "http://hl7.org/fhir/v3/ActReason"
+              },
+              "ConceptMap.element.target.code": {
+                "value": "TREAT"
+              },
+              "ConceptMap.element.target.equivalence": {
+                "value": "equivalent"
+              }
+            }
+          ]
+        },
+        {
+          "ConceptMap.element.system": {
+            "value": "http://healthit.gov/nhin/purposeofuse"
+          },
+          "ConceptMap.element.code": {
+            "value": "PAYMENT"
+          },
+          "ConceptMap.element.target": [
+            {
+              "ConceptMap.element.target.system": {
+                "value": "http://hl7.org/fhir/v3/ActReason"
+              },
+              "ConceptMap.element.target.code": {
+                "value": "HPAYMT"
+              },
+              "ConceptMap.element.target.equivalence": {
+                "value": "equivalent"
+              }
+            }
+          ]
+        },
+        {
+          "ConceptMap.element.system": {
+            "value": "http://healthit.gov/nhin/purposeofuse"
+          },
+          "ConceptMap.element.code": {
+            "value": "OPERATIONS"
+          },
+          "ConceptMap.element.target": [
+            {
+              "ConceptMap.element.target.system": {
+                "value": "http://hl7.org/fhir/v3/ActReason"
+              },
+              "ConceptMap.element.target.code": {
+                "value": "HOPERAT"
+              },
+              "ConceptMap.element.target.equivalence": {
+                "value": "equivalent"
+              }
+            }
+          ]
+        },
+        {
+          "ConceptMap.element.system": {
+            "value": "http://healthit.gov/nhin/purposeofuse"
+          },
+          "ConceptMap.element.code": {
+            "value": "SYSADMIN"
+          },
+          "ConceptMap.element.target": [
+            {
+              "ConceptMap.element.target.system": {
+                "value": "http://hl7.org/fhir/v3/ActReason"
+              },
+              "ConceptMap.element.target.code": {
+                "value": "SYSADMIN"
+              },
+              "ConceptMap.element.target.equivalence": {
+                "value": "equivalent"
+              }
+            }
+          ]
+        },
+        {
+          "ConceptMap.element.system": {
+            "value": "http://healthit.gov/nhin/purposeofuse"
+          },
+          "ConceptMap.element.code": {
+            "value": "FRAUD"
+          },
+          "ConceptMap.element.target": [
+            {
+              "ConceptMap.element.target.system": {
+                "value": "http://hl7.org/fhir/v3/ActReason"
+              },
+              "ConceptMap.element.target.code": {
+                "value": "FRAUD"
+              },
+              "ConceptMap.element.target.equivalence": {
+                "value": "equivalent"
+              }
+            }
+          ]
+        },
+        {
+          "ConceptMap.element.system": {
+            "value": "http://healthit.gov/nhin/purposeofuse"
+          },
+          "ConceptMap.element.code": {
+            "value": "PSYCHOTHERAPY"
+          },
+          "ConceptMap.element.target": [
+            {
+              "ConceptMap.element.target.system": {
+                "value": "http://hl7.org/fhir/v3/ActReason"
+              },
+              "ConceptMap.element.target.code": {
+                "value": "PSYCHOTHERAPY"
+              },
+              "ConceptMap.element.target.equivalence": {
+                "value": "equivalent"
+              }
+            }
+          ]
+        },
+        {
+          "ConceptMap.element.system": {
+            "value": "http://healthit.gov/nhin/purposeofuse"
+          },
+          "ConceptMap.element.code": {
+            "value": "TRAINING"
+          },
+          "ConceptMap.element.target": [
+            {
+              "ConceptMap.element.target.system": {
+                "value": "http://hl7.org/fhir/v3/ActReason"
+              },
+              "ConceptMap.element.target.code": {
+                "value": "TRAINING"
+              },
+              "ConceptMap.element.target.equivalence": {
+                "value": "equivalent"
+              }
+            }
+          ]
+        },
+        {
+          "ConceptMap.element.system": {
+            "value": "http://healthit.gov/nhin/purposeofuse"
+          },
+          "ConceptMap.element.code": {
+            "value": "LEGAL"
+          },
+          "ConceptMap.element.target": [
+            {
+              "ConceptMap.element.target.system": {
+                "value": "http://hl7.org/fhir/v3/ActReason"
+              },
+              "ConceptMap.element.target.code": {
+                "value": "HLEGAL"
+              },
+              "ConceptMap.element.target.equivalence": {
+                "value": "equivalent"
+              }
+            }
+          ]
+        },
+        {
+          "ConceptMap.element.system": {
+            "value": "http://healthit.gov/nhin/purposeofuse"
+          },
+          "ConceptMap.element.code": {
+            "value": "MARKETING"
+          },
+          "ConceptMap.element.target": [
+            {
+              "ConceptMap.element.target.system": {
+                "value": "http://hl7.org/fhir/v3/ActReason"
+              },
+              "ConceptMap.element.target.code": {
+                "value": "HMARKT"
+              },
+              "ConceptMap.element.target.equivalence": {
+                "value": "narrower"
+              },
+              "ConceptMap.element.target.comments": {
+                "value": "Not clear how much difference there is between 'marketing' and 'healthcare marketing'"
+              }
+            }
+          ]
+        },
+        {
+          "ConceptMap.element.system": {
+            "value": "http://healthit.gov/nhin/purposeofuse"
+          },
+          "ConceptMap.element.code": {
+            "value": "DIRECTORY"
+          },
+          "ConceptMap.element.target": [
+            {
+              "ConceptMap.element.target.system": {
+                "value": "http://hl7.org/fhir/v3/ActReason"
+              },
+              "ConceptMap.element.target.code": {
+                "value": "HDIRECT"
+              },
+              "ConceptMap.element.target.equivalence": {
+                "value": "equivalent"
+              }
+            }
+          ]
+        },
+        {
+          "ConceptMap.element.system": {
+            "value": "http://healthit.gov/nhin/purposeofuse"
+          },
+          "ConceptMap.element.code": {
+            "value": "DISASTER"
+          },
+          "ConceptMap.element.target": [
+            {
+              "ConceptMap.element.target.system": {
+                "value": "http://hl7.org/fhir/v3/ActReason"
+              },
+              "ConceptMap.element.target.code": {
+                "value": "DISASTER"
+              },
+              "ConceptMap.element.target.equivalence": {
+                "value": "equivalent"
+              }
+            }
+          ]
+        },
+        {
+          "ConceptMap.element.system": {
+            "value": "http://healthit.gov/nhin/purposeofuse"
+          },
+          "ConceptMap.element.code": {
+            "value": "PUBLICHEALTH"
+          },
+          "ConceptMap.element.target": [
+            {
+              "ConceptMap.element.target.system": {
+                "value": "http://hl7.org/fhir/v3/ActReason"
+              },
+              "ConceptMap.element.target.code": {
+                "value": "PUBHLTH"
+              },
+              "ConceptMap.element.target.equivalence": {
+                "value": "equivalent"
+              }
+            }
+          ]
+        },
+        {
+          "ConceptMap.element.system": {
+            "value": "http://healthit.gov/nhin/purposeofuse"
+          },
+          "ConceptMap.element.code": {
+            "value": "JUDICIAL"
+          },
+          "ConceptMap.element.target": [
+            {
+              "ConceptMap.element.target.system": {
+                "value": "http://hl7.org/fhir/v3/ActReason"
+              },
+              "ConceptMap.element.target.code": {
+                "value": "HLEGAL"
+              },
+              "ConceptMap.element.target.equivalence": {
+                "value": "wider"
+              }
+            }
+          ]
+        },
+        {
+          "ConceptMap.element.system": {
+            "value": "http://healthit.gov/nhin/purposeofuse"
+          },
+          "ConceptMap.element.code": {
+            "value": "LAW"
+          },
+          "ConceptMap.element.target": [
+            {
+              "ConceptMap.element.target.system": {
+                "value": "http://hl7.org/fhir/v3/ActReason"
+              },
+              "ConceptMap.element.target.code": {
+                "value": "HLEGAL"
+              },
+              "ConceptMap.element.target.equivalence": {
+                "value": "wider"
+              }
+            }
+          ]
+        },
+        {
+          "ConceptMap.element.system": {
+            "value": "http://healthit.gov/nhin/purposeofuse"
+          },
+          "ConceptMap.element.code": {
+            "value": "DONATION"
+          },
+          "ConceptMap.element.target": [
+            {
+              "ConceptMap.element.target.system": {
+                "value": "http://hl7.org/fhir/v3/ActReason"
+              },
+              "ConceptMap.element.target.code": {
+                "value": "DONAT"
+              },
+              "ConceptMap.element.target.equivalence": {
+                "value": "equivalent"
+              }
+            }
+          ]
+        },
+        {
+          "ConceptMap.element.system": {
+            "value": "http://healthit.gov/nhin/purposeofuse"
+          },
+          "ConceptMap.element.code": {
+            "value": "RESEARCH"
+          },
+          "ConceptMap.element.target": [
+            {
+              "ConceptMap.element.target.system": {
+                "value": "http://hl7.org/fhir/v3/ActReason"
+              },
+              "ConceptMap.element.target.code": {
+                "value": "HRESCH"
+              },
+              "ConceptMap.element.target.equivalence": {
+                "value": "narrower"
+              },
+              "ConceptMap.element.target.comments": {
+                "value": "Not clear how much difference there is between 'research' and 'healthcare research'"
+              }
+            }
+          ]
+        },
+        {
+          "ConceptMap.element.system": {
+            "value": "http://healthit.gov/nhin/purposeofuse"
+          },
+          "ConceptMap.element.code": {
+            "value": "THREAT"
+          },
+          "ConceptMap.element.target": [
+            {
+              "ConceptMap.element.target.system": {
+                "value": "http://hl7.org/fhir/v3/ActReason"
+              },
+              "ConceptMap.element.target.code": {
+                "value": "THREAT"
+              },
+              "ConceptMap.element.target.equivalence": {
+                "value": "equivalent"
+              }
+            }
+          ]
+        },
+        {
+          "ConceptMap.element.system": {
+            "value": "http://healthit.gov/nhin/purposeofuse"
+          },
+          "ConceptMap.element.code": {
+            "value": "GOVERNMENT"
+          },
+          "ConceptMap.element.target": [
+            {
+              "ConceptMap.element.target.system": {
+                "value": "http://hl7.org/fhir/v3/ActReason"
+              },
+              "ConceptMap.element.target.code": {
+                "value": "GOV"
+              },
+              "ConceptMap.element.target.equivalence": {
+                "value": "equivalent"
+              }
+            }
+          ]
+        },
+        {
+          "ConceptMap.element.system": {
+            "value": "http://healthit.gov/nhin/purposeofuse"
+          },
+          "ConceptMap.element.code": {
+            "value": "COVERAGE"
+          },
+          "ConceptMap.element.target": [
+            {
+              "ConceptMap.element.target.system": {
+                "value": "http://hl7.org/fhir/v3/ActReason"
+              },
+              "ConceptMap.element.target.code": {
+                "value": "OVAUTH"
+              },
+              "ConceptMap.element.target.equivalence": {
+                "value": "equivalent"
+              }
+            }
+          ]
+        },
+        {
+          "ConceptMap.element.system": {
+            "value": "http://healthit.gov/nhin/purposeofuse"
+          },
+          "ConceptMap.element.code": {
+            "value": "REQUEST"
+          },
+          "ConceptMap.element.target": [
+            {
+              "ConceptMap.element.target.system": {
+                "value": "http://hl7.org/fhir/v3/ActReason"
+              },
+              "ConceptMap.element.target.code": {
+                "value": "PATRQT"
+              },
+              "ConceptMap.element.target.equivalence": {
+                "value": "equivalent"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "DomainResource.extension": [
+    {
+      "Extension.url": {
+        "value": "http://hl7.org/fhir/StructureDefinition/valueset-map"
+      },
+      "Extension.valueReference": {
+        "Reference.reference": {
+          "value": "#map"
+        }
+      }
+    }
+  ],
+  "ValueSet.url": {
+    "value": "http://hl7.org/fhir/ValueSet/nhin-purposeofuse"
+  },
+  "ValueSet.version": {
+    "value": "2.0"
+  },
+  "ValueSet.name": {
+    "value": "NHIN PurposeOfUse"
+  },
+  "ValueSet.status": {
+    "value": "active"
+  },
+  "ValueSet.experimental": {
+    "value": false
+  },
+  "ValueSet.publisher": {
+    "value": "Nationwide Health Information Network (NHIN)"
+  },
+  "ValueSet.contact": [
+    {
+      "ValueSet.contact.telecom": [
+        {
+          "ContactPoint.system": {
+            "value": "other"
+          },
+          "ContactPoint.value": {
+            "value": "https://www.healthit.gov/sites/default/files/nhin-authorization-framework-production-specification-v2.0-1.pdf"
+          }
+        }
+      ]
+    }
+  ],
+  "ValueSet.date": {
+    "value": "2010-01-29"
+  },
+  "ValueSet.description": {
+    "value": "This value set is suitable for use with the provenance resource. It is derived from, but not compatible with, the HL7 v3 Purpose of use Code system."
+  },
+  "ValueSet.compose": {
+    "ValueSet.compose.include": [
+      {
+        "ValueSet.compose.include.system": {
+          "value": "http://healthit.gov/nhin/purposeofuse"
+        }
+      }
+    ]
+  }
+}

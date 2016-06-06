@@ -1,0 +1,70 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/MedicationAdministrationmedadminexample02> a fhir:MedicationAdministration;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "medadminexample02"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: medadminexample02</p><p><b>status</b>: completed</p><p><b>medication</b>: <a>Medication/medicationexample17</a></p><p><b>patient</b>: <a>Patient/example</a></p><p><b>effectiveTime</b>: Jan 15, 2015 2:30:00 PM --&gt; Jan 15, 2015 2:30:00 PM</p><p><b>performer</b>: <a>Practitioner/example</a></p><p><b>prescription</b>: <a>MedicationOrder/medrx008</a></p><h3>Dosages</h3><table><tr><td>-</td><td><b>Route</b></td><td><b>Dose</b></td><td><b>Rate[x]</b></td></tr><tr><td>*</td><td>Intravenous route <span>(Details : {SNOMED CT code '47625008' = 'Intravenous route (qualifier value)', given as 'Intravenous route'})</span></td><td>80 mg<span> (Details: http://unitsofmeasure.org code mg = 'mg')</span></td><td>80 mg<span> (Details: http://unitsofmeasure.org code mg = 'mg')</span>/60 minutes<span> (Details: SNOMED CT code 258702006 = 'hour (qualifier value)')</span></td></tr></table></div>"
+  ];
+  fhir:MedicationAdministration.status [ fhir:value "completed"];
+  fhir:MedicationAdministration.medicationReference [
+     fhir:link <http://hl7.org/fhir/Medication/medicationexample17>;
+     fhir:Reference.reference [ fhir:value "Medication/medicationexample17" ]
+  ];
+  fhir:MedicationAdministration.patient [
+     fhir:link <http://hl7.org/fhir/Patient/example>;
+     fhir:Reference.reference [ fhir:value "Patient/example" ]
+  ];
+  fhir:MedicationAdministration.effectiveTimePeriod [
+     fhir:Period.start [ fhir:value "2015-01-15T14:30:00+01:00"^^xsd:dateTime ];
+     fhir:Period.end [ fhir:value "2015-01-15T14:30:00+01:00"^^xsd:dateTime ]
+  ];
+  fhir:MedicationAdministration.performer [
+     fhir:link <http://hl7.org/fhir/Practitioner/example>;
+     fhir:Reference.reference [ fhir:value "Practitioner/example" ]
+  ];
+  fhir:MedicationAdministration.prescription [
+     fhir:link <http://hl7.org/fhir/MedicationOrder/medrx008>;
+     fhir:Reference.reference [ fhir:value "MedicationOrder/medrx008" ]
+  ];
+  fhir:MedicationAdministration.dosage [
+     fhir:MedicationAdministration.dosage.route [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept sct:47625008;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "47625008" ];
+         fhir:Coding.display [ fhir:value "Intravenous route" ]
+       ]
+     ];
+     fhir:MedicationAdministration.dosage.dose [
+       fhir:Quantity.value [ fhir:value "80"^^xsd:decimal ];
+       fhir:Quantity.unit [ fhir:value "mg" ];
+       fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+       fhir:Quantity.code [ fhir:value "mg" ]
+     ];
+     fhir:MedicationAdministration.dosage.rateRatio [
+       fhir:Ratio.numerator [
+         fhir:Quantity.value [ fhir:value "80"^^xsd:decimal ];
+         fhir:Quantity.unit [ fhir:value "mg" ];
+         fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+         fhir:Quantity.code [ fhir:value "mg" ]
+       ];
+       fhir:Ratio.denominator [
+         fhir:Quantity.value [ fhir:value "60"^^xsd:decimal ];
+         fhir:Quantity.unit [ fhir:value "minutes" ];
+         fhir:Quantity.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Quantity.code [ fhir:value "258702006" ]
+       ]
+     ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

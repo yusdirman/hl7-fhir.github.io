@@ -1,0 +1,76 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/FamilyMemberHistory",
+  "resourceType": "FamilyMemberHistory",
+  "Resource.id": {
+    "value": "mother"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother died of a stroke aged 56</div>"
+    }
+  },
+  "FamilyMemberHistory.patient": {
+    "Reference.reference": {
+      "value": "Patient/100"
+    },
+    "Reference.display": {
+      "value": "Peter Patient"
+    },
+    "reference": "http://hl7.org/fhir//Patient/100"
+  },
+  "FamilyMemberHistory.status": {
+    "value": "completed"
+  },
+  "FamilyMemberHistory.relationship": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/familial-relationship"
+        },
+        "Coding.code": {
+          "value": "mother"
+        }
+      }
+    ]
+  },
+  "FamilyMemberHistory.condition": [
+    {
+      "FamilyMemberHistory.condition.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "value": "371041009"
+            },
+            "Coding.display": {
+              "value": "Embolic Stroke"
+            }
+          }
+        ],
+        "CodeableConcept.text": {
+          "value": "Stroke"
+        },
+        "concept": "http://snomed.info/sct#371041009"
+      },
+      "FamilyMemberHistory.condition.onsetAge": {
+        "Quantity.value": {
+          "value": 56
+        },
+        "Quantity.unit": {
+          "value": "yr"
+        },
+        "Quantity.system": {
+          "value": "http://unitsofmeasure.org"
+        },
+        "Quantity.code": {
+          "value": "a"
+        }
+      }
+    }
+  ]
+}

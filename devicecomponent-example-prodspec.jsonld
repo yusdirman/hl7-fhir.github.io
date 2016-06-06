@@ -1,0 +1,210 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/DeviceComponent",
+  "resourceType": "DeviceComponent",
+  "Resource.id": {
+    "value": "example-prodspec"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t\t\t<p>Example of a simple MDS from a pulse oximeter containment tree</p>\n\t\t</div>"
+    }
+  },
+  "Device": [
+    {
+      "Resource.id": {
+        "value": "d1"
+      },
+      "Device.identifier": [
+        {
+          "Identifier.type": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://hl7.org/fhir/identifier-type"
+                },
+                "Coding.code": {
+                  "value": "SNO"
+                }
+              }
+            ],
+            "CodeableConcept.text": {
+              "value": "Serial Number"
+            }
+          },
+          "Identifier.value": {
+            "value": "ID 13.1"
+          }
+        },
+        {
+          "Identifier.type": {
+            "CodeableConcept.text": {
+              "value": "Global Medical Device Nomenclature"
+            }
+          },
+          "Identifier.system": {
+            "value": "urn:iso:std:iso:11073:10101"
+          },
+          "Identifier.value": {
+            "value": "2000"
+          }
+        }
+      ],
+      "Device.type": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "urn:iso:std:iso:11073:10101"
+            },
+            "Coding.code": {
+              "value": "2000"
+            },
+            "Coding.display": {
+              "value": "MDC_DEV_ANALY_SAT_O2_MDS"
+            }
+          }
+        ]
+      },
+      "Device.manufacturer": {
+        "value": "Center4MI"
+      },
+      "Device.model": {
+        "value": "2-0-14"
+      }
+    }
+  ],
+  "DeviceComponent.type": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "urn:iso:std:iso:11073:10101"
+        },
+        "Coding.code": {
+          "value": "2000"
+        },
+        "Coding.display": {
+          "value": "MDC_DEV_ANALY_SAT_O2_MDS"
+        }
+      }
+    ]
+  },
+  "DeviceComponent.identifier": {
+    "Identifier.type": {
+      "CodeableConcept.text": {
+        "value": "Handle ID"
+      }
+    },
+    "Identifier.value": {
+      "value": "0"
+    }
+  },
+  "DeviceComponent.lastSystemChange": {
+    "value": "2014-10-07T14:45:00Z"
+  },
+  "DeviceComponent.source": {
+    "Reference.reference": {
+      "value": "#d1"
+    }
+  },
+  "DeviceComponent.operationalStatus": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "value": "urn:iso:std:iso:11073:10101"
+          },
+          "Coding.code": {
+            "value": "0"
+          },
+          "Coding.display": {
+            "value": "disconnected"
+          }
+        }
+      ]
+    }
+  ],
+  "DeviceComponent.productionSpecification": [
+    {
+      "DeviceComponent.productionSpecification.specType": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.code": {
+              "value": "1"
+            },
+            "Coding.display": {
+              "value": "Serial number"
+            }
+          }
+        ]
+      },
+      "DeviceComponent.productionSpecification.productionSpec": {
+        "value": "xa-12324-b"
+      }
+    },
+    {
+      "DeviceComponent.productionSpecification.specType": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.code": {
+              "value": "3"
+            },
+            "Coding.display": {
+              "value": "Hardware version"
+            }
+          }
+        ]
+      },
+      "DeviceComponent.productionSpecification.productionSpec": {
+        "value": "1.1"
+      }
+    },
+    {
+      "DeviceComponent.productionSpecification.specType": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.code": {
+              "value": "4"
+            },
+            "Coding.display": {
+              "value": "Software version"
+            }
+          }
+        ]
+      },
+      "DeviceComponent.productionSpecification.productionSpec": {
+        "value": "1.12"
+      }
+    },
+    {
+      "DeviceComponent.productionSpecification.specType": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.code": {
+              "value": "5"
+            },
+            "Coding.display": {
+              "value": "Firmware version"
+            }
+          }
+        ]
+      },
+      "DeviceComponent.productionSpecification.productionSpec": {
+        "value": "1.0.23"
+      }
+    }
+  ],
+  "DeviceComponent.languageCode": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://tools.ietf.org/html/bcp47"
+        },
+        "Coding.code": {
+          "value": "en-US"
+        }
+      }
+    ]
+  }
+}

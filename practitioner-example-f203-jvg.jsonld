@@ -1,0 +1,148 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Practitioner",
+  "resourceType": "Practitioner",
+  "Resource.id": {
+    "value": "f203"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f203</p><p><b>identifier</b>: UZI-nummer = 12345678903 (OFFICIAL), BIG-nummer = 12345678903 (OFFICIAL)</p><p><b>active</b>: true</p><p><b>name</b>: Juri van Gelder(OFFICIAL)</p><p><b>telecom</b>: ph: +31715269111(WORK)</p><p><b>address</b>: Walvisbaai 3 Den helder 2333ZA NLD (WORK)</p><p><b>gender</b>: male</p><p><b>birthDate</b>: Apr 20, 1983</p><h3>PractitionerRoles</h3><table><tr><td>-</td><td><b>Organization</b></td><td><b>Role</b></td><td><b>Specialty</b></td></tr><tr><td>*</td><td><a>AUMC</a></td><td>Physical therapist <span>(Details : {SNOMED CT code '36682004' = 'Physiotherapist (occupation)', given as 'Physical therapist'})</span></td><td>Assess physical therapist service <span>(Details : {SNOMED CT code '410158009' = 'Physical therapy assessment (procedure)', given as 'Assess physical therapist service'})</span></td></tr></table></div>"
+    }
+  },
+  "Practitioner.identifier": [
+    {
+      "Identifier.use": {
+        "value": "official"
+      },
+      "Identifier.type": {
+        "CodeableConcept.text": {
+          "value": "UZI-nummer"
+        }
+      },
+      "Identifier.system": {
+        "value": "urn:oid:2.16.528.1.1007.3.1"
+      },
+      "Identifier.value": {
+        "value": "12345678903"
+      }
+    },
+    {
+      "Identifier.use": {
+        "value": "official"
+      },
+      "Identifier.type": {
+        "CodeableConcept.text": {
+          "value": "BIG-nummer"
+        }
+      },
+      "Identifier.system": {
+        "value": "https://www.bigregister.nl/"
+      },
+      "Identifier.value": {
+        "value": "12345678903"
+      }
+    }
+  ],
+  "Practitioner.active": {
+    "value": true
+  },
+  "Practitioner.name": [
+    {
+      "HumanName.use": {
+        "value": "official"
+      },
+      "HumanName.text": {
+        "value": "Juri van Gelder"
+      }
+    }
+  ],
+  "Practitioner.telecom": [
+    {
+      "ContactPoint.system": {
+        "value": "phone"
+      },
+      "ContactPoint.value": {
+        "value": "+31715269111"
+      },
+      "ContactPoint.use": {
+        "value": "work"
+      }
+    }
+  ],
+  "Practitioner.address": [
+    {
+      "Address.use": {
+        "value": "work"
+      },
+      "Address.line": [
+        {
+          "value": "Walvisbaai 3"
+        }
+      ],
+      "Address.city": {
+        "value": "Den helder"
+      },
+      "Address.postalCode": {
+        "value": "2333ZA"
+      },
+      "Address.country": {
+        "value": "NLD"
+      }
+    }
+  ],
+  "Practitioner.gender": {
+    "value": "male"
+  },
+  "Practitioner.birthDate": {
+    "value": "1983-04-20"
+  },
+  "Practitioner.practitionerRole": [
+    {
+      "Practitioner.practitionerRole.organization": {
+        "Reference.reference": {
+          "value": "Organization/f201"
+        },
+        "Reference.display": {
+          "value": "AUMC"
+        },
+        "reference": "http://hl7.org/fhir//Organization/f201"
+      },
+      "Practitioner.practitionerRole.role": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "value": "36682004"
+            },
+            "Coding.display": {
+              "value": "Physical therapist"
+            }
+          }
+        ],
+        "concept": "http://snomed.info/sct#36682004"
+      },
+      "Practitioner.practitionerRole.specialty": [
+        {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "value": "http://snomed.info/sct"
+              },
+              "Coding.code": {
+                "value": "410158009"
+              },
+              "Coding.display": {
+                "value": "Assess physical therapist service"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

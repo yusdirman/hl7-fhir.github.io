@@ -1,0 +1,139 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Observation",
+  "resourceType": "Observation",
+  "Resource.id": {
+    "value": "example-observation-genetics-1"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: example-observation-genetics-1</p><p><b>status</b>: final</p><p><b>code</b>: Genetic analysis master panel <span>(Details : {LOINC code '55233-1' = 'Genetic analysis master panel - Blood or Tissue by Molecular genetics method', given as 'Genetic analysis master panel'})</span></p><p><b>subject</b>: <a>Molecular Lab Patient ID: HOSP-23456</a></p><p><b>issued</b>: Apr 3, 2013 3:30:10 PM</p><p><b>performer</b>: <a>Molecular Diagnostics Laboratory</a></p><p><b>value</b>: Positive <span>(Details : {SNOMED CT code '10828004' = 'Positive (qualifier value)', given as 'Positive'})</span></p><p><b>specimen</b>: <a>Molecular Specimen ID: MLD45-Z4-1234</a></p></div>"
+    }
+  },
+  "DomainResource.extension": [
+    {
+      "Extension.url": {
+        "value": "http://hl7.org/fhir/StructureDefinition/observation-geneticsDNASequenceVariant"
+      },
+      "Extension.valueString": {
+        "value": "NG_007726.3:g.146252T>G"
+      }
+    },
+    {
+      "Extension.url": {
+        "value": "http://hl7.org/fhir/StructureDefinition/observation-geneticsGene"
+      },
+      "Extension.valueCodeableConcept": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://www.genenames.org"
+            },
+            "Coding.code": {
+              "value": "3236"
+            },
+            "Coding.display": {
+              "value": "EGFR"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "Extension.url": {
+        "value": "http://hl7.org/fhir/StructureDefinition/observation-geneticsDNARegionName"
+      },
+      "Extension.valueString": {
+        "value": "Exon 21"
+      }
+    },
+    {
+      "Extension.url": {
+        "value": "http://hl7.org/fhir/StructureDefinition/observation-geneticsGenomicSourceClass"
+      },
+      "Extension.valueCodeableConcept": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://hl7.org/fhir/LOINC-48002-0-answerlist"
+            },
+            "Coding.code": {
+              "value": "LA6684-0"
+            },
+            "Coding.display": {
+              "value": "somatic"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "Observation.status": {
+    "value": "final"
+  },
+  "Observation.code": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://loinc.org"
+        },
+        "Coding.code": {
+          "value": "55233-1"
+        },
+        "Coding.display": {
+          "value": "Genetic analysis master panel"
+        }
+      }
+    ],
+    "concept": "http://loinc.org/owl#55233-1"
+  },
+  "Observation.subject": {
+    "Reference.reference": {
+      "value": "Patient/example-genetics-somatic"
+    },
+    "Reference.display": {
+      "value": "Molecular Lab Patient ID: HOSP-23456"
+    },
+    "reference": "http://hl7.org/fhir//Patient/example-genetics-somatic"
+  },
+  "Observation.issued": {
+    "value": "2013-04-03T15:30:10+01:00"
+  },
+  "Observation.performer": [
+    {
+      "Reference.reference": {
+        "value": "Practitioner/example-genetics-somatic"
+      },
+      "Reference.display": {
+        "value": "Molecular Diagnostics Laboratory"
+      }
+    }
+  ],
+  "Observation.valueCodeableConcept": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "value": "10828004"
+        },
+        "Coding.display": {
+          "value": "Positive"
+        }
+      }
+    ],
+    "concept": "http://snomed.info/sct#10828004"
+  },
+  "Observation.specimen": {
+    "Reference.reference": {
+      "value": "Specimen/genetics-example1-somatic"
+    },
+    "Reference.display": {
+      "value": "Molecular Specimen ID: MLD45-Z4-1234"
+    },
+    "reference": "http://hl7.org/fhir//Specimen/genetics-example1-somatic"
+  }
+}

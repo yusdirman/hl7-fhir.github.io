@@ -1,0 +1,789 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Composition",
+  "resourceType": "Composition",
+  "Resource.id": {
+    "value": "operative-note-example"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: operative-note-example</p><p><b>identifier</b>: 1</p><p><b>date</b>: Mar 22, 2016 9:10:14 AM</p><p><b>type</b>: Provider-unspecified Operation Note <span>(Details : {LOINC code '11504-8' = 'Provider-unspecified Operation note', given as 'Provider-unspecified Operation Note'})</span></p><p><b>title</b>: Operative Note</p><p><b>status</b>: preliminary</p><p><b>confidentiality</b>: N</p><p><b>author</b>: <a>Adam Everyman, MD</a></p><h3>Attesters</h3><table><tr><td>-</td><td><b>Mode</b></td><td><b>Time</b></td><td><b>Party</b></td></tr><tr><td>*</td><td>legal</td><td>Jan 4, 2012 9:10:14 AM</td><td><a>Adam Everyman, MD</a></td></tr></table><p><b>custodian</b>: <a>Community Health and Hospitals</a></p><h3>Events</h3><table><tr><td>-</td><td><b>Code</b></td><td><b>Period</b></td></tr><tr><td>*</td><td>Colonoscopy <span>(Details : {SNOMED CT code '73761001' = 'Colonoscopy', given as 'Colonoscopy'})</span></td><td>Nov 18, 2015 --&gt; Dec 12, 2015</td></tr></table><p><b>encounter</b>: <a>http://fhir3.healthintersections.com.au/open/Encounter2ae55203-ff47-46ff-9877-c5249b191c/_history/1</a></p></div>"
+    }
+  },
+  "DomainResource.extension": [
+    {
+      "Extension.url": {
+        "value": "http://hl7.org/fhir/StructureDefinition/ccda-data-enterer-extension"
+      },
+      "Extension.valueUri": {
+        "value": "http://fhir3.healthintersections.com.au/open/Practitioner/d2c66c52-5a31-4158-b5a5-a6534c0f9c/_history/1"
+      }
+    },
+    {
+      "Extension.url": {
+        "value": "http://hl7.org/fhir/StructureDefinition/ccda-informant-extension"
+      },
+      "Extension.valueUri": {
+        "value": "http://fhir3.healthintersections.com.au/open/Practitioner/d2c66c52-5a31-4158-b5a5-a6534c0f9c/_history/1"
+      }
+    },
+    {
+      "Extension.url": {
+        "value": "http://hl7.org/fhir/StructureDefinition/ccda-information-recipient-extension"
+      },
+      "Extension.valueUri": {
+        "value": "http://fhir3.healthintersections.com.au/open/Practitioner/d2c66c52-5a31-4158-b5a5-a6534c0f9c/_history/1"
+      }
+    },
+    {
+      "Extension.url": {
+        "value": "http://hl7.org/fhir/StructureDefinition/ccda-participant-extension"
+      },
+      "Extension.valueUri": {
+        "value": "http://fhir3.healthintersections.com.au/open/RelatedPerson/ab019e53-9c1d-4158-b2fd-1a022acdb1/_history/1"
+      }
+    },
+    {
+      "Extension.url": {
+        "value": "http://hl7.org/fhir/StructureDefinition/ccda-performer-extension"
+      },
+      "Extension.valueUri": {
+        "value": "http://fhir3.healthintersections.com.au/open/Practitioner/d2c66c52-5a31-4158-b5a5-a6534c0f9c/_history/1"
+      }
+    },
+    {
+      "Extension.url": {
+        "value": "http://hl7.org/fhir/StructureDefinition/ccda-authorization-extension"
+      },
+      "Extension.valueUri": {
+        "value": "http://hl7.org/fhir/StructureDefinition/ccda-consent"
+      }
+    }
+  ],
+  "Composition.identifier": {
+    "Identifier.system": {
+      "value": "http://hl7.org/fhir/StructureDefinition/ccda-operative-note-composition"
+    },
+    "Identifier.value": {
+      "value": "1"
+    }
+  },
+  "Composition.date": {
+    "value": "2016-03-22T09:10:14Z"
+  },
+  "Composition.type": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://loinc.org"
+        },
+        "Coding.code": {
+          "value": "11504-8"
+        },
+        "Coding.display": {
+          "value": "Provider-unspecified Operation Note"
+        }
+      }
+    ],
+    "concept": "http://loinc.org/owl#11504-8"
+  },
+  "Composition.title": {
+    "value": "Operative Note"
+  },
+  "Composition.status": {
+    "value": "preliminary"
+  },
+  "Composition.confidentiality": {
+    "value": "N"
+  },
+  "Composition.subject": {
+    "Reference.reference": {
+      "value": "http://fhir3.healthintersections.com.au/open/Patient/c30b3fdb-1e9b-4add-bbfe-4e0fbd959a/_history/1"
+    },
+    "Reference.display": {
+      "value": "Henry Jones"
+    },
+    "reference": "http://fhir3.healthintersections.com.au/open/Patient/c30b3fdb-1e9b-4add-bbfe-4e0fbd959a/_history/1"
+  },
+  "Composition.author": [
+    {
+      "Reference.reference": {
+        "value": "http://fhir3.healthintersections.com.au/open/Practitioner/d2c66c52-5a31-4158-b5a5-a6534c0f9c/_history/1"
+      },
+      "Reference.display": {
+        "value": "Adam Everyman, MD"
+      }
+    }
+  ],
+  "Composition.attester": [
+    {
+      "Composition.attester.mode": [
+        {
+          "value": "legal"
+        }
+      ],
+      "Composition.attester.time": {
+        "value": "2012-01-04T09:10:14Z"
+      },
+      "Composition.attester.party": {
+        "Reference.reference": {
+          "value": "http://fhir3.healthintersections.com.au/open/Practitioner/d2c66c52-5a31-4158-b5a5-a6534c0f9c/_history/1"
+        },
+        "Reference.display": {
+          "value": "Adam Everyman, MD"
+        },
+        "reference": "http://fhir3.healthintersections.com.au/open/Practitioner/d2c66c52-5a31-4158-b5a5-a6534c0f9c/_history/1"
+      }
+    }
+  ],
+  "Composition.custodian": {
+    "Reference.reference": {
+      "value": "http://fhir3.healthintersections.com.au/open/Organization/2c9c2215-23b5-4936-983a-9cd1bf3b8f/_history/1"
+    },
+    "Reference.display": {
+      "value": "Community Health and Hospitals"
+    },
+    "reference": "http://fhir3.healthintersections.com.au/open/Organization/2c9c2215-23b5-4936-983a-9cd1bf3b8f/_history/1"
+  },
+  "Composition.event": [
+    {
+      "Composition.event.code": [
+        {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "value": "http://snomed.info/sct"
+              },
+              "Coding.code": {
+                "value": "73761001"
+              },
+              "Coding.display": {
+                "value": "Colonoscopy"
+              }
+            }
+          ]
+        }
+      ],
+      "Composition.event.period": {
+        "Period.start": {
+          "value": "2015-11-18"
+        },
+        "Period.end": {
+          "value": "2015-12-12"
+        }
+      }
+    }
+  ],
+  "Composition.encounter": {
+    "Reference.reference": {
+      "value": "http://fhir3.healthintersections.com.au/open/Encounter2ae55203-ff47-46ff-9877-c5249b191c/_history/1"
+    },
+    "reference": "http://fhir3.healthintersections.com.au/open/Encounter2ae55203-ff47-46ff-9877-c5249b191c/_history/1"
+  },
+  "Composition.section": [
+    {
+      "Composition.section.title": {
+        "value": "Allergies and Intolerances Section"
+      },
+      "Composition.section.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://loinc.org"
+            },
+            "Coding.code": {
+              "value": "48765-2"
+            },
+            "Coding.display": {
+              "value": "Allergies and adverse reactions"
+            }
+          }
+        ],
+        "concept": "http://loinc.org/owl#48765-2"
+      },
+      "Composition.section.text": {
+        "Narrative.status": {
+          "value": "generated"
+        },
+        "Narrative.div": {
+          "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                <table>\n                    <tr>\n                        <td>\n                            <b>Substance</b>\n                        </td>\n                        <td>\n                            <b>Overall Severity</b>\n                        </td>\n                        <td>\n                            <b>Reaction</b>\n                        </td>\n                        <td>\n                            <b>Reaction Severity</b>\n                        </td>\n                        <td>\n                            <b>Status</b>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td>Cashew Nut</td>\n                        <td>Severe</td>\n                        <td>Anaphylactic reaction</td>\n                        <td>Mild</td>\n                        <td>Active</td>\n                    </tr>\n                </table>\n            </div>"
+        }
+      },
+      "Composition.section.mode": {
+        "value": "snapshot"
+      },
+      "Composition.section.orderedBy": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://hl7.org/fhir/list-order"
+            },
+            "Coding.code": {
+              "value": "event-date"
+            },
+            "Coding.display": {
+              "value": "Sorted by Event Date"
+            }
+          }
+        ]
+      },
+      "Composition.section.entry": [
+        {
+          "Reference.reference": {
+            "value": "http://fhir3.healthintersections.com.au/open/AllergyIntolerance/9ef4fe0f-44bb-4c4e-9c1d-9926efda91/_history/1"
+          }
+        }
+      ]
+    },
+    {
+      "Composition.section.title": {
+        "value": "Anesthesia Section"
+      },
+      "Composition.section.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://loinc.org"
+            },
+            "Coding.code": {
+              "value": "59774-0"
+            },
+            "Coding.display": {
+              "value": "Anesthesia"
+            }
+          }
+        ],
+        "concept": "http://loinc.org/owl#59774-0"
+      },
+      "Composition.section.text": {
+        "Narrative.status": {
+          "value": "generated"
+        },
+        "Narrative.div": {
+          "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                <p>Conscious sedation with propofol 200 mg IV</p>\n            </div>"
+        }
+      },
+      "Composition.section.entry": [
+        {
+          "Reference.reference": {
+            "value": "http://fhir3.healthintersections.com.au/open/Procedure/e1092c01-8f65-4e21-a790-7ede873177/_history/1"
+          }
+        },
+        {
+          "Reference.reference": {
+            "value": "http://fhir3.healthintersections.com.au/open/Medication/c1227151-4a79-415c-b582-e11e78068c/_history/1"
+          }
+        }
+      ]
+    },
+    {
+      "Composition.section.title": {
+        "value": " Assessment Section"
+      },
+      "Composition.section.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://loinc.org"
+            },
+            "Coding.code": {
+              "value": "51848-0"
+            },
+            "Coding.display": {
+              "value": "Assessment (evaluation)"
+            }
+          }
+        ],
+        "concept": "http://loinc.org/owl#51848-0"
+      },
+      "Composition.section.text": {
+        "Narrative.status": {
+          "value": "generated"
+        },
+        "Narrative.div": {
+          "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                <p>Obesity.</p>\n                <p>Uncontrolled brittle Type II diabetic.</p>\n                <p>Shortness of breath, mild wheezing.</p>\n                <p>Pressure ulder on left knee.</p>\n            </div>"
+        }
+      }
+    },
+    {
+      "Composition.section.title": {
+        "value": "Assessment and Plan Section"
+      },
+      "Composition.section.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://loinc.org"
+            },
+            "Coding.code": {
+              "value": "51847-2"
+            },
+            "Coding.display": {
+              "value": "Assessment (evaluation) and plan"
+            }
+          }
+        ],
+        "concept": "http://loinc.org/owl#51847-2"
+      },
+      "Composition.section.text": {
+        "Narrative.status": {
+          "value": "generated"
+        },
+        "Narrative.div": {
+          "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                <p>Recurrent GI bleed of unknown etiology; hypotension perhaps\n                    secondary to this but as likely secondary to polypharmacy</p>\n                <p>Acute on chronic anemia secondary to #1.</p>\n                <p>Azotemia, acute renal failure with volume loss secondary tom#1.</p>\n                <p>Hyperkalemia secondary to #3 and on ACE and K+ supplement.</p>\n                <p>Other chronic diagnoses as noted above, currently stable.</p>\n            </div>"
+        }
+      }
+    },
+    {
+      "Composition.section.title": {
+        "value": "Complications Section"
+      },
+      "Composition.section.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://loinc.org"
+            },
+            "Coding.code": {
+              "value": "55109-3"
+            },
+            "Coding.display": {
+              "value": "Complications"
+            }
+          }
+        ],
+        "concept": "http://loinc.org/owl#55109-3"
+      },
+      "Composition.section.text": {
+        "Narrative.status": {
+          "value": "generated"
+        },
+        "Narrative.div": {
+          "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                <p>Asthmatic symptoms while under general anesthesia.</p>\n            </div>"
+        }
+      },
+      "Composition.section.entry": [
+        {
+          "Reference.reference": {
+            "value": "http://fhir3.healthintersections.com.au/open/Condition/7688fe5b-7ccc-4a60-83f5-e87ccda6af/_history/1"
+          }
+        }
+      ]
+    },
+    {
+      "Composition.section.title": {
+        "value": "Preoperative Diagnosis Section"
+      },
+      "Composition.section.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://loinc.org"
+            },
+            "Coding.code": {
+              "value": "10219-4"
+            },
+            "Coding.display": {
+              "value": "Preoperative Diagnosis"
+            }
+          }
+        ],
+        "concept": "http://loinc.org/owl#10219-4"
+      },
+      "Composition.section.text": {
+        "Narrative.status": {
+          "value": "generated"
+        },
+        "Narrative.div": {
+          "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                <p>Appendicitis</p>\n            </div>"
+        }
+      }
+    },
+    {
+      "Composition.section.title": {
+        "value": "Operative Note Surgical Procedure Section"
+      },
+      "Composition.section.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://loinc.org"
+            },
+            "Coding.code": {
+              "value": "10223-6"
+            },
+            "Coding.display": {
+              "value": "Operative Note Surgical Procedure"
+            }
+          }
+        ],
+        "concept": "http://loinc.org/owl#10223-6"
+      },
+      "Composition.section.text": {
+        "Narrative.status": {
+          "value": "generated"
+        },
+        "Narrative.div": {
+          "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                <p>Laparoscopic Appendectomy</p>\n            </div>"
+        }
+      }
+    },
+    {
+      "Composition.section.title": {
+        "value": "Planned Procedure Section"
+      },
+      "Composition.section.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://loinc.org"
+            },
+            "Coding.code": {
+              "value": "59772-4"
+            },
+            "Coding.display": {
+              "value": "Planned procedure"
+            }
+          }
+        ],
+        "concept": "http://loinc.org/owl#59772-4"
+      },
+      "Composition.section.text": {
+        "Narrative.status": {
+          "value": "generated"
+        },
+        "Narrative.div": {
+          "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                <p>Colonoscopy</p>\n            </div>"
+        }
+      }
+    },
+    {
+      "Composition.section.title": {
+        "value": "Procedure Indications Section"
+      },
+      "Composition.section.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://loinc.org"
+            },
+            "Coding.code": {
+              "value": "59768-2"
+            },
+            "Coding.display": {
+              "value": "Procedure indications"
+            }
+          }
+        ],
+        "concept": "http://loinc.org/owl#59768-2"
+      },
+      "Composition.section.text": {
+        "Narrative.status": {
+          "value": "generated"
+        },
+        "Narrative.div": {
+          "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                <p>The procedure is performed for screening in a low risk individual.</p>\n            </div>"
+        }
+      }
+    },
+    {
+      "Composition.section.title": {
+        "value": "Procedure Description Section"
+      },
+      "Composition.section.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://loinc.org"
+            },
+            "Coding.code": {
+              "value": "29554-3"
+            },
+            "Coding.display": {
+              "value": "Procedure description"
+            }
+          }
+        ],
+        "concept": "http://loinc.org/owl#29554-3"
+      },
+      "Composition.section.text": {
+        "Narrative.status": {
+          "value": "generated"
+        },
+        "Narrative.div": {
+          "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                <p>The patient was brought to the operating room, placed in the supine position, and\n                    general anesthesia was induced. A detailed technical narrative of a laparoscopic\n                    appendectomy from initial incision to placement of any dressings follows.  </p>      \n            </div>"
+        }
+      }
+    },
+    {
+      "Composition.section.title": {
+        "value": "Procedure Estimated Blood Loss Section"
+      },
+      "Composition.section.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://loinc.org"
+            },
+            "Coding.code": {
+              "value": "59770-8"
+            },
+            "Coding.display": {
+              "value": "Procedure Estimated Blood Loss"
+            }
+          }
+        ],
+        "concept": "http://loinc.org/owl#59770-8"
+      },
+      "Composition.section.text": {
+        "Narrative.status": {
+          "value": "generated"
+        },
+        "Narrative.div": {
+          "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                <p>Minimal</p>\n            </div>"
+        }
+      }
+    },
+    {
+      "Composition.section.title": {
+        "value": "Procedure Findings Section"
+      },
+      "Composition.section.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://loinc.org"
+            },
+            "Coding.code": {
+              "value": "59776-5"
+            },
+            "Coding.display": {
+              "value": "Procedure findings"
+            }
+          }
+        ],
+        "concept": "http://loinc.org/owl#59776-5"
+      },
+      "Composition.section.text": {
+        "Narrative.status": {
+          "value": "generated"
+        },
+        "Narrative.div": {
+          "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                <p>A 6 mm sessile polyp was found in the ascending colon and \n                    removed by snare, no cautery. Bleeding was controlled. \n                    Moderate diverticulosis and hemorrhoids were incidentally noted.</p>\n            </div>"
+        }
+      },
+      "Composition.section.entry": [
+        {
+          "Reference.reference": {
+            "value": "http://fhir3.healthintersections.com.au/open/Condition/7688fe5b-7ccc-4a60-83f5-e87ccda6af/_history/1"
+          }
+        }
+      ]
+    },
+    {
+      "Composition.section.title": {
+        "value": "Procedure Specimens Taken Section"
+      },
+      "Composition.section.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://loinc.org"
+            },
+            "Coding.code": {
+              "value": "59773-2"
+            },
+            "Coding.display": {
+              "value": "Procedure specimens taken"
+            }
+          }
+        ],
+        "concept": "http://loinc.org/owl#59773-2"
+      },
+      "Composition.section.text": {
+        "Narrative.status": {
+          "value": "generated"
+        },
+        "Narrative.div": {
+          "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                <p>Ascending colon polyp</p>\n            </div>"
+        }
+      }
+    },
+    {
+      "Composition.section.title": {
+        "value": "Operative Note Fluids Section"
+      },
+      "Composition.section.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://loinc.org"
+            },
+            "Coding.code": {
+              "value": "10216-0"
+            },
+            "Coding.display": {
+              "value": "Operative Note Fluids"
+            }
+          }
+        ],
+        "concept": "http://loinc.org/owl#10216-0"
+      },
+      "Composition.section.text": {
+        "Narrative.status": {
+          "value": "generated"
+        },
+        "Narrative.div": {
+          "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                <p>250 ML Ringers Lactate</p>\n            </div>"
+        }
+      }
+    },
+    {
+      "Composition.section.title": {
+        "value": "Surgical Drains Section"
+      },
+      "Composition.section.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://loinc.org"
+            },
+            "Coding.code": {
+              "value": "11537-8"
+            },
+            "Coding.display": {
+              "value": "Surgical Drains"
+            }
+          }
+        ],
+        "concept": "http://loinc.org/owl#11537-8"
+      },
+      "Composition.section.text": {
+        "Narrative.status": {
+          "value": "generated"
+        },
+        "Narrative.div": {
+          "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                <p>Penrose drain placed</p>\n            </div>"
+        }
+      }
+    },
+    {
+      "Composition.section.title": {
+        "value": "Procedure Implants Section"
+      },
+      "Composition.section.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://loinc.org"
+            },
+            "Coding.code": {
+              "value": "59771-6"
+            },
+            "Coding.display": {
+              "value": "Procedure implants"
+            }
+          }
+        ],
+        "concept": "http://loinc.org/owl#59771-6"
+      },
+      "Composition.section.text": {
+        "Narrative.status": {
+          "value": "generated"
+        },
+        "Narrative.div": {
+          "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                <p>No implants were placed.</p>\n            </div>"
+        }
+      }
+    },
+    {
+      "Composition.section.title": {
+        "value": "Procedure Disposition Section"
+      },
+      "Composition.section.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://loinc.org"
+            },
+            "Coding.code": {
+              "value": "59775-7"
+            },
+            "Coding.display": {
+              "value": "Procedure disposition"
+            }
+          }
+        ],
+        "concept": "http://loinc.org/owl#59775-7"
+      },
+      "Composition.section.text": {
+        "Narrative.status": {
+          "value": "generated"
+        },
+        "Narrative.div": {
+          "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                <p>The patient was taken to the Endoscopy Recovery Unit in stable condition.</p>\n            </div>"
+        }
+      }
+    },
+    {
+      "Composition.section.title": {
+        "value": "Postoperative Diagnosis Section"
+      },
+      "Composition.section.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://loinc.org"
+            },
+            "Coding.code": {
+              "value": "10218-6"
+            },
+            "Coding.display": {
+              "value": "Postoperative Diagnosis"
+            }
+          }
+        ],
+        "concept": "http://loinc.org/owl#10218-6"
+      },
+      "Composition.section.text": {
+        "Narrative.status": {
+          "value": "generated"
+        },
+        "Narrative.div": {
+          "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                <p>Appendicitis with periappendiceal abscess</p>\n            </div>"
+        }
+      }
+    },
+    {
+      "Composition.section.title": {
+        "value": "Plan of Treatment Section"
+      },
+      "Composition.section.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://loinc.org"
+            },
+            "Coding.code": {
+              "value": "18776-5"
+            },
+            "Coding.display": {
+              "value": "Plan of treatment"
+            }
+          }
+        ],
+        "concept": "http://loinc.org/owl#18776-5"
+      },
+      "Composition.section.text": {
+        "Narrative.status": {
+          "value": "generated"
+        },
+        "Narrative.div": {
+          "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                <table>\n                    <tr>\n                        <td>\n                            <b>Planned Activity</b>\n                        </td>\n                        <td>\n                            <b>Period</b>\n                        </td>\n                        <td>\n                            <b>Status</b>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td>Colonoscopy</td>\n                        <td>2010/08/16 - 2010/08/16</td>\n                        <td>Completed</td>\n                    </tr>\n                    <tr>\n                        <td>Recommendation to Exercise</td>\n                        <td>2015/10/29</td>\n                        <td>Ongoing</td>\n                    </tr>\n                </table>\n            </div>"
+        }
+      }
+    }
+  ]
+}

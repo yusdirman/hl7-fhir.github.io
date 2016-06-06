@@ -1,0 +1,45 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Linkage",
+  "resourceType": "Linkage",
+  "Resource.id": {
+    "value": "example"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p><b>Source:</b> Condition/example - <i>Severe burn of left ear (Date: 24-May 2012)</i></p>\n      <p><b>Alternate:</b> Condition/condition-example - <i>Severe burn of left ear (Date: 24-May 2012)</i></p>\n    </div>"
+    }
+  },
+  "Linkage.item": [
+    {
+      "Linkage.item.type": {
+        "value": "source"
+      },
+      "Linkage.item.resource": {
+        "Reference.reference": {
+          "value": "Condition/example"
+        },
+        "Reference.display": {
+          "value": "Severe burn of left ear (Date: 24-May 2012)"
+        },
+        "reference": "http://hl7.org/fhir//Condition/example"
+      }
+    },
+    {
+      "Linkage.item.type": {
+        "value": "alternate"
+      },
+      "Linkage.item.resource": {
+        "Reference.reference": {
+          "value": "Condition/condition-example"
+        },
+        "Reference.display": {
+          "value": "Severe burn of left ear (Date: 24-May 2012)"
+        },
+        "reference": "http://hl7.org/fhir//Condition/condition-example"
+      }
+    }
+  ]
+}

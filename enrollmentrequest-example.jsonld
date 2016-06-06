@@ -1,0 +1,51 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/EnrollmentRequest",
+  "resourceType": "EnrollmentRequest",
+  "Resource.id": {
+    "value": "22345"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">A human-readable rendering of the EnrollmentRequest.</div>"
+    }
+  },
+  "EnrollmentRequest.identifier": [
+    {
+      "Identifier.system": {
+        "value": "http://happyvalley.com/enrollmentrequest"
+      },
+      "Identifier.value": {
+        "value": "EN22345"
+      }
+    }
+  ],
+  "EnrollmentRequest.created": {
+    "value": "2014-08-16"
+  },
+  "EnrollmentRequest.organization": {
+    "Reference.reference": {
+      "value": "Organization/1"
+    },
+    "reference": "http://hl7.org/fhir//Organization/1"
+  },
+  "EnrollmentRequest.subject": {
+    "Reference.reference": {
+      "value": "Patient/1"
+    },
+    "reference": "http://hl7.org/fhir//Patient/1"
+  },
+  "EnrollmentRequest.coverage": {
+    "Reference.reference": {
+      "value": "Coverage/9876B1"
+    },
+    "reference": "http://hl7.org/fhir//Coverage/9876B1"
+  },
+  "EnrollmentRequest.relationship": {
+    "Coding.code": {
+      "value": "spouse"
+    }
+  }
+}

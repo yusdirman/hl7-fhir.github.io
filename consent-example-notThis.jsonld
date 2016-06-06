@@ -1,0 +1,96 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Consent",
+  "resourceType": "Consent",
+  "Resource.id": {
+    "value": "consent-example-notThis"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">The following scenario is based on existing jurisdictional policy and are realized in existing systems in Canada. \n\tThe default policy is one of implied consent for the provision of care, so these scenarios all deal with withdrawal or withholding consent for that purpose. \n\tIn other jurisdictions, where an express consent model is used (Opt-In), these would examples would contain the phrase &quot;consent to&quot; rather \n\tthan &quot;withhold&quot; or &quot;withdraw&quot; consent for.\n    <p>\n\tspecific to use-case 2. Withhold or withdraw consent for disclosure of a specific record (e.g. Lab Order/Result) \n\t</p><p>\n    Patient &quot;P. van de Heuvel&quot; Primary Care Provider, Dr. Philip Primary, has ordered a set of lab test which Adam \n   wishes to keep as private as possible.  At the sample collection facility, he indicates that he would \n   like withhold consent to disclose the order and all results associated with that specific order from \n   all other providers  \n   </p>\n   </div>"
+    }
+  },
+  "Consent.status": {
+    "value": "active"
+  },
+  "Consent.type": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/consenttypecodes"
+        },
+        "Coding.code": {
+          "value": "Opt-In"
+        },
+        "Coding.display": {
+          "value": "Authorization with exceptions."
+        }
+      }
+    ]
+  },
+  "Consent.issued": {
+    "value": "2015-11-18"
+  },
+  "Consent.patient": {
+    "Reference.reference": {
+      "value": "Patient/f001"
+    },
+    "Reference.display": {
+      "value": "P. van de Heuvel"
+    },
+    "reference": "http://hl7.org/fhir//Patient/f001"
+  },
+  "Consent.authority": [
+    {
+      "Reference.reference": {
+        "value": "Organization/Infoway"
+      },
+      "Reference.display": {
+        "value": "Canada Infoway"
+      }
+    }
+  ],
+  "Consent.domain": [
+    {
+      "Reference.reference": {
+        "value": "Location/Infoway"
+      },
+      "Reference.display": {
+        "value": "Canada Infoway"
+      }
+    }
+  ],
+  "Consent.except": [
+    {
+      "Consent.except.type": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://hl7.org/fhir/consentexcepttypecodes"
+            },
+            "Coding.code": {
+              "value": "withhold-identified-object-and-related"
+            },
+            "Coding.display": {
+              "value": "Withhold the identified object and any other resources that are related to this object."
+            }
+          }
+        ]
+      },
+      "Consent.except.data": [
+        {
+          "Reference.reference": {
+            "value": "Order/f201"
+          }
+        }
+      ]
+    }
+  ],
+  "Consent.contentAttachment": {
+    "Attachment.title": {
+      "value": "The terms of the consent in lawyer speak."
+    }
+  }
+}

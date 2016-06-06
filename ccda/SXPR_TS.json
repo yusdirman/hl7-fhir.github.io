@@ -1,0 +1,159 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "SXPR_TS",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+      "valueUri": "urn:hl7-org:v3"
+    }
+  ],
+  "url": "http://hl7.org/fhir/StructureDefinition/SXPR_TS",
+  "name": "V3 Data type SXPR_TS (A set-component that is itself made up of set-components that are evaluated as one value)",
+  "display": "SXPR_TS - Component part of GTS",
+  "status": "active",
+  "experimental": false,
+  "publisher": "HL7",
+  "description": "A set-component that is itself made up of set-components that are evaluated as one value",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/SXCM_TS",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "path": "SXPR_TS",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "SXPR_TS.nullFlavor",
+        "representation": [
+          "xmlAttr"
+        ],
+        "label": "Exceptional Value Detail",
+        "definition": "If a value is an exceptional value (NULL-value), this specifies in what way and why proper information is missing.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/v3-NullFlavor"
+          }
+        }
+      },
+      {
+        "extension": [
+          {
+            "url": "http://www.healthintersections.com.au/fhir/StructureDefinition/elementdefinition-dateformat",
+            "valueString": "v3"
+          }
+        ],
+        "path": "SXPR_TS.value",
+        "representation": [
+          "xmlAttr"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "path": "SXPR_TS.inclusive",
+        "representation": [
+          "xmlAttr"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      },
+      {
+        "path": "SXPR_TS.operator",
+        "representation": [
+          "xmlAttr"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "path": "SXPR_TS.comp",
+        "representation": [
+          "typeAttr"
+        ],
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "IVL_TS"
+          },
+          {
+            "code": "EIVL_TS"
+          },
+          {
+            "code": "PIVL_TS"
+          },
+          {
+            "code": "SXPR_TS"
+          }
+        ]
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "path": "SXPR_TS",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "SXPR_TS.comp",
+        "representation": [
+          "typeAttr"
+        ],
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "IVL_TS"
+          },
+          {
+            "code": "EIVL_TS"
+          },
+          {
+            "code": "PIVL_TS"
+          },
+          {
+            "code": "SXPR_TS"
+          }
+        ]
+      }
+    ]
+  }
+}

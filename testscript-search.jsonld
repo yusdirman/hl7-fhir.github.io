@@ -1,0 +1,444 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/TestScript",
+  "resourceType": "TestScript",
+  "Resource.id": {
+    "value": "search"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: search</p><p><b>name</b>: Read, Search and Conditional Create and Delete</p><p><b>description</b>: Test Script for testing search, read, and conditional create and delete</p><h3>Fixtures</h3><table><tr><td>-</td><td><b>Resource</b></td></tr><tr><td>*</td><td><a>Patient/patient-example.xml</a></td></tr></table><blockquote><p><b>variable</b></p><p><b>name</b>: V1</p><p><b>sourceId</b>: R1</p><p><b>headerField</b>: Location</p></blockquote><blockquote><p><b>variable</b></p><p><b>name</b>: V2</p><p><b>sourceId</b>: R3</p><p><b>path</b>: fhir:Patient/fhir:name/fhir:given/@value</p></blockquote><blockquote><p><b>setup</b></p><blockquote><p><b>action</b></p><h3>Operations</h3><table><tr><td>-</td><td><b>Type</b></td><td><b>Resource</b></td><td><b>Params</b></td></tr><tr><td>*</td><td>delete</td><td>Patient</td><td>given=John&amp;family=Doe</td></tr></table></blockquote></blockquote><blockquote><p><b>test</b></p><p><b>name</b>: Create</p><p><b>description</b>: Create, read, search, conditional create, conditional delete.</p><blockquote><p><b>metadata</b></p><h3>Links</h3><table><tr><td>-</td><td><b>Url</b></td><td><b>Description</b></td></tr><tr><td>*</td><td><a>http://hl7.org/implement/standards/FHIR-Develop/patient.html</a></td><td>FHIR Patient</td></tr></table><blockquote><p><b>operation</b></p><p><b>type</b>: create</p><p><b>resource</b>: Patient</p><p><b>description</b>: Conditional Create Operation</p><p><b>link</b>: <a>http://hl7-fhir.github.io/http.html#2.1.0.13.1</a></p><p><b>required</b>: true</p><p><b>validated</b>: true</p></blockquote><blockquote><p><b>operation</b></p><p><b>type</b>: delete</p><p><b>resource</b>: Patient</p><p><b>description</b>: Conditional Delete Operation</p><p><b>link</b>: <a>http://hl7-fhir.github.io/http.html#2.1.0.12.1</a></p><p><b>required</b>: true</p><p><b>validated</b>: true</p></blockquote><blockquote><p><b>operation</b></p><p><b>type</b>: read</p><p><b>resource</b>: Patient</p><p><b>description</b>: Patient Read Operation</p><p><b>link</b>: <a>http://hl7.org/implement/standards/FHIR-Develop/http.html#read</a></p><p><b>validated</b>: true</p></blockquote><blockquote><p><b>operation</b></p><p><b>type</b>: search</p><p><b>resource</b>: Patient</p><p><b>description</b>: Patient Search Operation</p><p><b>link</b>: <a>http://hl7-fhir.github.io/http.html#2.1.0.14</a></p><p><b>validated</b>: true</p></blockquote></blockquote><blockquote><p><b>action</b></p><h3>Operations</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Operations</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Operations</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Operations</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Operations</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Operations</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Operations</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table><tr><td>-</td></tr><tr><td>*</td></tr></table></blockquote></blockquote></div>"
+    }
+  },
+  "TestScript.url": {
+    "value": "http://hl7.org/fhir/TestScript/search"
+  },
+  "TestScript.name": {
+    "value": "Read, Search and Conditional Create and Delete"
+  },
+  "TestScript.status": {
+    "value": "draft"
+  },
+  "TestScript.description": {
+    "value": "Test Script for testing search, read, and conditional create and delete"
+  },
+  "TestScript.metadata": {
+    "TestScript.metadata.capability": [
+      {
+        "TestScript.metadata.capability.required": {
+          "value": true
+        },
+        "TestScript.metadata.capability.description": {
+          "value": "Patient Create and Read Operations"
+        },
+        "TestScript.metadata.capability.link": [
+          {
+            "value": "http://hl7.org/implement/standards/FHIR-Develop/http.html#create"
+          },
+          {
+            "value": "http://hl7.org/implement/standards/FHIR-Develop/http.html#read"
+          }
+        ],
+        "TestScript.metadata.capability.conformance": {
+          "Reference.reference": {
+            "value": "Conformance/example"
+          },
+          "reference": "http://hl7.org/fhir//Conformance/example"
+        }
+      },
+      {
+        "TestScript.metadata.capability.required": {
+          "value": true
+        },
+        "TestScript.metadata.capability.description": {
+          "value": "Patient Conditional Delete Operation"
+        },
+        "TestScript.metadata.capability.link": [
+          {
+            "value": "http://hl7-fhir.github.io/http.html#2.1.0.12.1"
+          }
+        ],
+        "TestScript.metadata.capability.conformance": {
+          "Reference.reference": {
+            "value": "Conformance/example"
+          },
+          "reference": "http://hl7.org/fhir//Conformance/example"
+        }
+      },
+      {
+        "TestScript.metadata.capability.required": {
+          "value": true
+        },
+        "TestScript.metadata.capability.description": {
+          "value": "Patient Conditional Create Operation"
+        },
+        "TestScript.metadata.capability.link": [
+          {
+            "value": "http://hl7-fhir.github.io/http.html#2.1.0.13.1"
+          }
+        ],
+        "TestScript.metadata.capability.conformance": {
+          "Reference.reference": {
+            "value": "Conformance/example"
+          },
+          "reference": "http://hl7.org/fhir//Conformance/example"
+        }
+      }
+    ]
+  },
+  "TestScript.fixture": [
+    {
+      "Element.id": {
+        "value": "example-patient"
+      },
+      "TestScript.fixture.resource": {
+        "Reference.reference": {
+          "value": "Patient/example"
+        },
+        "reference": "http://hl7.org/fhir//Patient/example"
+      }
+    }
+  ],
+  "TestScript.variable": [
+    {
+      "TestScript.variable.name": {
+        "value": "V1"
+      },
+      "TestScript.variable.headerField": {
+        "value": "Location"
+      },
+      "TestScript.variable.sourceId": {
+        "value": "R1"
+      }
+    },
+    {
+      "TestScript.variable.name": {
+        "value": "V2"
+      },
+      "TestScript.variable.path": {
+        "value": "fhir:Patient/fhir:name/fhir:given/@value"
+      },
+      "TestScript.variable.sourceId": {
+        "value": "R3"
+      }
+    },
+    {
+      "TestScript.variable.name": {
+        "value": "DefaultValue"
+      },
+      "TestScript.variable.defaultValue": {
+        "value": "Replace at Runtime"
+      }
+    }
+  ],
+  "TestScript.setup": {
+    "TestScript.setup.action": [
+      {
+        "TestScript.setup.action.operation": {
+          "TestScript.setup.action.operation.type": {
+            "Coding.code": {
+              "value": "delete"
+            }
+          },
+          "TestScript.setup.action.operation.resource": {
+            "value": "Patient"
+          },
+          "TestScript.setup.action.operation.params": {
+            "value": "given=John&family=Doe"
+          }
+        }
+      }
+    ]
+  },
+  "TestScript.test": [
+    {
+      "Element.id": {
+        "value": "Test1"
+      },
+      "TestScript.test.name": {
+        "value": "Create"
+      },
+      "TestScript.test.description": {
+        "value": "Create, read, search, conditional create, conditional delete."
+      },
+      "TestScript.test.metadata": {
+        "TestScript.metadata.link": [
+          {
+            "TestScript.metadata.link.url": {
+              "value": "http://hl7.org/implement/standards/FHIR-Develop/patient.html"
+            },
+            "TestScript.metadata.link.description": {
+              "value": "FHIR Patient"
+            }
+          }
+        ],
+        "TestScript.metadata.capability": [
+          {
+            "TestScript.metadata.capability.validated": {
+              "value": true
+            },
+            "TestScript.metadata.capability.description": {
+              "value": "Patient Search Operation"
+            },
+            "TestScript.metadata.capability.link": [
+              {
+                "value": "http://hl7.org/implement/standards/FHIR-Develop/http.html#search"
+              }
+            ],
+            "TestScript.metadata.capability.conformance": {
+              "Reference.reference": {
+                "value": "Conformance/example"
+              },
+              "reference": "http://hl7.org/fhir//Conformance/example"
+            }
+          }
+        ]
+      },
+      "TestScript.test.action": [
+        {
+          "TestScript.test.action.operation": {
+            "TestScript.setup.action.operation.type": {
+              "Coding.code": {
+                "value": "create"
+              }
+            },
+            "TestScript.setup.action.operation.sourceId": {
+              "value": "example-patient"
+            }
+          }
+        },
+        {
+          "TestScript.test.action.assert": {
+            "TestScript.setup.action.assert.responseCode": {
+              "value": "201"
+            }
+          }
+        },
+        {
+          "TestScript.test.action.operation": {
+            "TestScript.setup.action.operation.type": {
+              "Coding.code": {
+                "value": "search"
+              }
+            },
+            "TestScript.setup.action.operation.resource": {
+              "value": "Patient"
+            },
+            "TestScript.setup.action.operation.contentType": {
+              "value": "json"
+            },
+            "TestScript.setup.action.operation.params": {
+              "value": "?given=John&family=Doe"
+            },
+            "TestScript.setup.action.operation.responseId": {
+              "value": "R1"
+            }
+          }
+        },
+        {
+          "TestScript.test.action.assert": {
+            "TestScript.setup.action.assert.headerField": {
+              "value": "Location"
+            },
+            "TestScript.setup.action.assert.operator": {
+              "value": "notEmpty"
+            },
+            "TestScript.setup.action.assert.warningOnly": {
+              "value": true
+            }
+          }
+        },
+        {
+          "TestScript.test.action.assert": {
+            "TestScript.setup.action.assert.operator": {
+              "value": "equals"
+            },
+            "TestScript.setup.action.assert.path": {
+              "value": "fhir:Patient/fhir:birthDate/@value"
+            },
+            "TestScript.setup.action.assert.sourceId": {
+              "value": "R1"
+            },
+            "TestScript.setup.action.assert.value": {
+              "value": "1974-12-31"
+            }
+          }
+        },
+        {
+          "TestScript.test.action.assert": {
+            "TestScript.setup.action.assert.navigationLinks": {
+              "value": true
+            },
+            "TestScript.setup.action.assert.warningOnly": {
+              "value": true
+            }
+          }
+        },
+        {
+          "TestScript.test.action.operation": {
+            "TestScript.setup.action.operation.type": {
+              "Coding.code": {
+                "value": "search"
+              }
+            },
+            "TestScript.setup.action.operation.accept": {
+              "value": "json"
+            },
+            "TestScript.setup.action.operation.responseId": {
+              "value": "R2"
+            },
+            "TestScript.setup.action.operation.url": {
+              "value": "${V1}"
+            }
+          }
+        },
+        {
+          "TestScript.test.action.assert": {
+            "TestScript.setup.action.assert.contentType": {
+              "value": "json"
+            }
+          }
+        },
+        {
+          "TestScript.test.action.assert": {
+            "TestScript.setup.action.assert.response": {
+              "value": "okay"
+            }
+          }
+        },
+        {
+          "TestScript.test.action.operation": {
+            "TestScript.setup.action.operation.type": {
+              "Coding.code": {
+                "value": "search"
+              }
+            },
+            "TestScript.setup.action.operation.resource": {
+              "value": "Patient"
+            },
+            "TestScript.setup.action.operation.accept": {
+              "value": "json"
+            },
+            "TestScript.setup.action.operation.params": {
+              "value": "?given=John&family=Doe&birthdate=1974-12-31"
+            },
+            "TestScript.setup.action.operation.responseId": {
+              "value": "R3"
+            }
+          }
+        },
+        {
+          "TestScript.test.action.assert": {
+            "TestScript.setup.action.assert.contentType": {
+              "value": "json"
+            }
+          }
+        },
+        {
+          "TestScript.test.action.assert": {
+            "TestScript.setup.action.assert.response": {
+              "value": "okay"
+            }
+          }
+        },
+        {
+          "TestScript.test.action.assert": {
+            "TestScript.setup.action.assert.compareToSourceId": {
+              "value": "R2"
+            },
+            "TestScript.setup.action.assert.compareToSourcePath": {
+              "value": "fhir:Patient/fhir:birthDate/@value"
+            },
+            "TestScript.setup.action.assert.path": {
+              "value": "fhir:Patient/fhir:birthDate/@value"
+            },
+            "TestScript.setup.action.assert.sourceId": {
+              "value": "R3"
+            }
+          }
+        },
+        {
+          "TestScript.test.action.assert": {
+            "TestScript.setup.action.assert.path": {
+              "value": "fhir:Patient/fhir:name/fhir:given/@value"
+            },
+            "TestScript.setup.action.assert.sourceId": {
+              "value": "R3"
+            },
+            "TestScript.setup.action.assert.value": {
+              "value": "John"
+            }
+          }
+        },
+        {
+          "TestScript.test.action.operation": {
+            "TestScript.setup.action.operation.type": {
+              "Coding.code": {
+                "value": "create"
+              }
+            },
+            "TestScript.setup.action.operation.requestHeader": [
+              {
+                "TestScript.setup.action.operation.requestHeader.field": {
+                  "value": "If-None-Exist"
+                },
+                "TestScript.setup.action.operation.requestHeader.value": {
+                  "value": "Patient?given=John&Doe&birthdate=1974-12-31"
+                }
+              }
+            ],
+            "TestScript.setup.action.operation.sourceId": {
+              "value": "F1"
+            }
+          }
+        },
+        {
+          "TestScript.test.action.assert": {
+            "TestScript.setup.action.assert.responseCode": {
+              "value": "200"
+            }
+          }
+        },
+        {
+          "TestScript.test.action.operation": {
+            "TestScript.setup.action.operation.type": {
+              "Coding.code": {
+                "value": "delete"
+              }
+            },
+            "TestScript.setup.action.operation.resource": {
+              "value": "Patient"
+            },
+            "TestScript.setup.action.operation.params": {
+              "value": "?given=John&family=Doe&birthdate=1974-12-31"
+            }
+          }
+        },
+        {
+          "TestScript.test.action.operation": {
+            "TestScript.setup.action.operation.type": {
+              "Coding.code": {
+                "value": "read"
+              }
+            },
+            "TestScript.setup.action.operation.resource": {
+              "value": "Patient"
+            },
+            "TestScript.setup.action.operation.params": {
+              "value": "/${V2}"
+            }
+          }
+        },
+        {
+          "TestScript.test.action.assert": {
+            "TestScript.setup.action.assert.responseCode": {
+              "value": "410"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

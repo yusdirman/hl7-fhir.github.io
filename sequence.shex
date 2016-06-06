@@ -1,0 +1,585 @@
+﻿PREFIX fhir: <http://hl7.org/fhir/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+BASE <http://hl7.org/fhir/shape/>
+
+start=<Sequence>
+
+<Sequence> CLOSED {	a [fhir:Sequence];
+	fhir:nodeRole [fhir:treeRoot];
+	fhir:Resource.id @<id>?;
+	fhir:Resource.meta @<Meta>?;
+	fhir:Resource.implicitRules @<uri>?;
+	fhir:Resource.language @<code>?;
+	fhir:DomainResource.text @<Narrative>?;
+	fhir:DomainResource.contained @<Resource>*;
+	fhir:DomainResource.extension @<Extension>*;
+	fhir:DomainResource.modifierExtension @<Extension>*;
+	fhir:Sequence.identifier @<Identifier>*;
+	fhir:Sequence.type @<code>;
+	fhir:Sequence.coordinateSystem @<integer>;
+	fhir:Sequence.patient @<PatientReference>?;
+	fhir:Sequence.specimen @<SpecimenReference>?;
+	fhir:Sequence.device @<DeviceReference>?;
+	fhir:Sequence.quantity @<Quantity>?;
+	fhir:Sequence.referenceSeq @<Sequence.referenceSeq>?;
+	fhir:Sequence.variant @<Sequence.variant>*;
+	fhir:Sequence.observedSeq @<string>?;
+	fhir:Sequence.quality @<Sequence.quality>*;
+	fhir:Sequence.readCoverage @<integer>?;
+	fhir:Sequence.repository @<Sequence.repository>*;
+	fhir:Sequence.pointer @<SequenceReference>*;
+	fhir:Sequence.structureVariant @<Sequence.structureVariant>?;
+	fhir:index xsd:integer?
+}
+
+<Sequence.repository> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:BackboneElement.modifierExtension @<Extension>*;
+	fhir:Sequence.repository.url @<uri>?;
+	fhir:Sequence.repository.name @<string>?;
+	fhir:Sequence.repository.variantId @<string>?;
+	fhir:Sequence.repository.readId @<string>?;
+	fhir:index xsd:integer?
+}
+
+<Sequence.structureVariant> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:BackboneElement.modifierExtension @<Extension>*;
+	fhir:Sequence.structureVariant.precisionOfBoundaries @<string>?;
+	fhir:Sequence.structureVariant.reportedaCGHRatio @<decimal>?;
+	fhir:Sequence.structureVariant.length @<integer>?;
+	fhir:Sequence.structureVariant.outer @<Sequence.structureVariant.outer>?;
+	fhir:Sequence.structureVariant.inner @<Sequence.structureVariant.inner>?;
+	fhir:index xsd:integer?
+}
+
+<Sequence.quality> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:BackboneElement.modifierExtension @<Extension>*;
+	fhir:Sequence.quality.start @<integer>?;
+	fhir:Sequence.quality.end @<integer>?;
+	fhir:Sequence.quality.score @<Quantity>?;
+	fhir:Sequence.quality.method @<string>?;
+	fhir:Sequence.quality.truePositives @<decimal>?;
+	fhir:Sequence.quality.falsePositives @<decimal>?;
+	fhir:Sequence.quality.falseNegatives @<decimal>?;
+	fhir:Sequence.quality.precision @<decimal>?;
+	fhir:Sequence.quality.recall @<decimal>?;
+	fhir:Sequence.quality.fMeasure @<decimal>?;
+	fhir:index xsd:integer?
+}
+
+<Sequence.variant> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:BackboneElement.modifierExtension @<Extension>*;
+	fhir:Sequence.variant.start @<integer>?;
+	fhir:Sequence.variant.end @<integer>?;
+	fhir:Sequence.variant.observedAllele @<string>?;
+	fhir:Sequence.variant.referenceAllele @<string>?;
+	fhir:Sequence.variant.cigar @<string>?;
+	fhir:index xsd:integer?
+}
+
+<Sequence.referenceSeq> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:BackboneElement.modifierExtension @<Extension>*;
+	fhir:Sequence.referenceSeq.chromosome @<CodeableConcept>?;
+	fhir:Sequence.referenceSeq.genomeBuild @<string>?;
+	fhir:Sequence.referenceSeq.referenceSeqId @<CodeableConcept>;
+	fhir:Sequence.referenceSeq.referenceSeqPointer @<SequenceReference>?;
+	fhir:Sequence.referenceSeq.referenceSeqString @<string>?;
+	fhir:Sequence.referenceSeq.strand @<integer>;
+	fhir:Sequence.referenceSeq.windowStart @<integer>;
+	fhir:Sequence.referenceSeq.windowEnd @<integer>;
+	fhir:index xsd:integer?
+}
+
+<Sequence.structureVariant.inner> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:BackboneElement.modifierExtension @<Extension>*;
+	fhir:Sequence.structureVariant.inner.start @<integer>?;
+	fhir:Sequence.structureVariant.inner.end @<integer>?;
+	fhir:index xsd:integer?
+}
+
+<Sequence.structureVariant.outer> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:BackboneElement.modifierExtension @<Extension>*;
+	fhir:Sequence.structureVariant.outer.start @<integer>?;
+	fhir:Sequence.structureVariant.outer.end @<integer>?;
+	fhir:index xsd:integer?
+}
+
+#---------------------- Data Types -------------------
+
+<Meta> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:Meta.versionId @<id>?;
+	fhir:Meta.lastUpdated @<instant>?;
+	fhir:Meta.profile @<uri>*;
+	fhir:Meta.security @<Coding>*;
+	fhir:Meta.tag @<Coding>*;
+	fhir:index xsd:integer?
+}
+
+<code> CLOSED {fhir:extension @<Extension>*;
+	fhir:value xsd:string?;
+	fhir:index xsd:integer?
+}
+
+<string> CLOSED {fhir:id @<id>?;
+	fhir:extension @<Extension>*;
+	fhir:value xsd:string?;
+	fhir:index xsd:integer?
+}
+
+<Resource> {a .+;
+	fhir:Resource.id @<id>?;
+		fhir:Resource.meta @<Meta>?;
+		fhir:Resource.implicitRules @<uri>?;
+		fhir:Resource.language @<code>?;
+	fhir:index xsd:integer?
+}
+
+<Quantity> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:Quantity.value @<decimal>?;
+	fhir:Quantity.comparator @<code>?;
+	fhir:Quantity.unit @<string>?;
+	fhir:Quantity.system @<uri>?;
+	fhir:Quantity.code @<code>?;
+	fhir:index xsd:integer?
+}
+
+<integer> CLOSED {fhir:id @<id>?;
+	fhir:extension @<Extension>*;
+	fhir:value xsd:int?;
+	fhir:index xsd:integer?
+}
+
+<uri> CLOSED {fhir:id @<id>?;
+	fhir:extension @<Extension>*;
+	fhir:value xsd:string?;
+	fhir:index xsd:integer?
+}
+
+<Extension> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:Extension.url @<uri>;
+	(	fhir:Extension.valueBoolean @<boolean> |
+		fhir:Extension.valueInteger @<integer> |
+		fhir:Extension.valueDecimal @<decimal> |
+		fhir:Extension.valueBase64Binary @<base64Binary> |
+		fhir:Extension.valueInstant @<instant> |
+		fhir:Extension.valueString @<string> |
+		fhir:Extension.valueUri @<uri> |
+		fhir:Extension.valueDate @<date> |
+		fhir:Extension.valueDateTime @<dateTime> |
+		fhir:Extension.valueTime @<time> |
+		fhir:Extension.valueCode @<code> |
+		fhir:Extension.valueOid @<oid> |
+		fhir:Extension.valueId @<id> |
+		fhir:Extension.valueUnsignedInt @<unsignedInt> |
+		fhir:Extension.valuePositiveInt @<positiveInt> |
+		fhir:Extension.valueMarkdown @<markdown> |
+		fhir:Extension.valueAnnotation @<Annotation> |
+		fhir:Extension.valueAttachment @<Attachment> |
+		fhir:Extension.valueIdentifier @<Identifier> |
+		fhir:Extension.valueCodeableConcept @<CodeableConcept> |
+		fhir:Extension.valueCoding @<Coding> |
+		fhir:Extension.valueQuantity @<Quantity> |
+		fhir:Extension.valueCount @<Count> |
+		fhir:Extension.valueAge @<Age> |
+		fhir:Extension.valueDuration @<Duration> |
+		fhir:Extension.valueDistance @<Distance> |
+		fhir:Extension.valueMoney @<Money> |
+		fhir:Extension.valueRange @<Range> |
+		fhir:Extension.valuePeriod @<Period> |
+		fhir:Extension.valueRatio @<Ratio> |
+		fhir:Extension.valueSampledData @<SampledData> |
+		fhir:Extension.valueSignature @<Signature> |
+		fhir:Extension.valueHumanName @<HumanName> |
+		fhir:Extension.valueAddress @<Address> |
+		fhir:Extension.valueContactPoint @<ContactPoint> |
+		fhir:Extension.valueTiming @<Timing> |
+		fhir:Extension.valueReference @<Reference> |
+		fhir:Extension.valueMeta @<Meta>
+	)?;
+	fhir:index xsd:integer?
+}
+
+<Identifier> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:Identifier.use @<code>?;
+	fhir:Identifier.type @<CodeableConcept>?;
+	fhir:Identifier.system @<uri>?;
+	fhir:Identifier.value @<string>?;
+	fhir:Identifier.period @<Period>?;
+	fhir:Identifier.assigner @<OrganizationReference>?;
+	fhir:index xsd:integer?
+}
+
+<Narrative> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:Narrative.status @<code>;
+	fhir:Narrative.div xsd:string;
+	fhir:index xsd:integer?
+}
+
+<id> CLOSED {fhir:extension @<Extension>*;
+	fhir:value xsd:string?;
+	fhir:index xsd:integer?
+}
+
+<decimal> CLOSED {fhir:id @<id>?;
+	fhir:extension @<Extension>*;
+	fhir:value xsd:decimal?;
+	fhir:index xsd:integer?
+}
+
+<CodeableConcept> CLOSED {fhir:concept IRI*;
+	fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:CodeableConcept.coding @<Coding>*;
+	fhir:CodeableConcept.text @<string>?;
+	fhir:index xsd:integer?
+}
+
+<date> CLOSED {fhir:id @<id>?;
+	fhir:extension @<Extension>*;
+	fhir:value xsd:gYear OR xsd:gYearMonth OR xsd:date?;
+	fhir:index xsd:integer?
+}
+
+<dateTime> CLOSED {fhir:id @<id>?;
+	fhir:extension @<Extension>*;
+	fhir:value xsd:gYear OR xsd:gYearMonth OR xsd:date OR xsd:dateTime?;
+	fhir:index xsd:integer?
+}
+
+<Address> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:Address.use @<code>?;
+	fhir:Address.type @<code>?;
+	fhir:Address.text @<string>?;
+	fhir:Address.line @<string>*;
+	fhir:Address.city @<string>?;
+	fhir:Address.district @<string>?;
+	fhir:Address.state @<string>?;
+	fhir:Address.postalCode @<string>?;
+	fhir:Address.country @<string>?;
+	fhir:Address.period @<Period>?;
+	fhir:index xsd:integer?
+}
+
+<Attachment> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:Attachment.contentType @<code>?;
+	fhir:Attachment.language @<code>?;
+	fhir:Attachment.data @<base64Binary>?;
+	fhir:Attachment.url @<uri>?;
+	fhir:Attachment.size @<unsignedInt>?;
+	fhir:Attachment.hash @<base64Binary>?;
+	fhir:Attachment.title @<string>?;
+	fhir:Attachment.creation @<dateTime>?;
+	fhir:index xsd:integer?
+}
+
+<oid> CLOSED {fhir:extension @<Extension>*;
+	fhir:value xsd:string?;
+	fhir:index xsd:integer?
+}
+
+<Count> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:Quantity.value @<decimal>?;
+	fhir:Quantity.comparator @<code>?;
+	fhir:Quantity.unit @<string>?;
+	fhir:Quantity.system @<uri>?;
+	fhir:Quantity.code @<code>?;
+	fhir:index xsd:integer?
+}
+
+<instant> CLOSED {fhir:id @<id>?;
+	fhir:extension @<Extension>*;
+	fhir:value xsd:dateTime?;
+	fhir:index xsd:integer?
+}
+
+<Money> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:Quantity.value @<decimal>?;
+	fhir:Quantity.comparator @<code>?;
+	fhir:Quantity.unit @<string>?;
+	fhir:Quantity.system @<uri>?;
+	fhir:Quantity.code @<code>?;
+	fhir:index xsd:integer?
+}
+
+<HumanName> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:HumanName.use @<code>?;
+	fhir:HumanName.text @<string>?;
+	fhir:HumanName.family @<string>*;
+	fhir:HumanName.given @<string>*;
+	fhir:HumanName.prefix @<string>*;
+	fhir:HumanName.suffix @<string>*;
+	fhir:HumanName.period @<Period>?;
+	fhir:index xsd:integer?
+}
+
+<ContactPoint> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:ContactPoint.system @<code>?;
+	fhir:ContactPoint.value @<string>?;
+	fhir:ContactPoint.use @<code>?;
+	fhir:ContactPoint.rank @<positiveInt>?;
+	fhir:ContactPoint.period @<Period>?;
+	fhir:index xsd:integer?
+}
+
+<Coding> CLOSED {fhir:concept IRI?;
+	fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:Coding.system @<uri>?;
+	fhir:Coding.version @<string>?;
+	fhir:Coding.code @<code>?;
+	fhir:Coding.display @<string>?;
+	fhir:Coding.userSelected @<boolean>?;
+	fhir:index xsd:integer?
+}
+
+<markdown> CLOSED {fhir:extension @<Extension>*;
+	fhir:value xsd:string?;
+	fhir:index xsd:integer?
+}
+
+<SampledData> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:SampledData.origin @<SimpleQuantity>;
+	fhir:SampledData.period @<decimal>;
+	fhir:SampledData.factor @<decimal>?;
+	fhir:SampledData.lowerLimit @<decimal>?;
+	fhir:SampledData.upperLimit @<decimal>?;
+	fhir:SampledData.dimensions @<positiveInt>;
+	fhir:SampledData.data @<string>;
+	fhir:index xsd:integer?
+}
+
+<Ratio> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:Ratio.numerator @<Quantity>?;
+	fhir:Ratio.denominator @<Quantity>?;
+	fhir:index xsd:integer?
+}
+
+<positiveInt> CLOSED {fhir:extension @<Extension>*;
+	fhir:value xsd:positiveInteger?;
+	fhir:index xsd:integer?
+}
+
+<Age> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:Quantity.value @<decimal>?;
+	fhir:Quantity.comparator @<code>?;
+	fhir:Quantity.unit @<string>?;
+	fhir:Quantity.system @<uri>?;
+	fhir:Quantity.code @<code>?;
+	fhir:index xsd:integer?
+}
+
+<Distance> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:Quantity.value @<decimal>?;
+	fhir:Quantity.comparator @<code>?;
+	fhir:Quantity.unit @<string>?;
+	fhir:Quantity.system @<uri>?;
+	fhir:Quantity.code @<code>?;
+	fhir:index xsd:integer?
+}
+
+<Reference> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:Reference.reference @<string>?;
+	fhir:Reference.display @<string>?;
+	fhir:index xsd:integer?
+}
+
+<Period> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:Period.start @<dateTime>?;
+	fhir:Period.end @<dateTime>?;
+	fhir:index xsd:integer?
+}
+
+<Duration> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:Quantity.value @<decimal>?;
+	fhir:Quantity.comparator @<code>?;
+	fhir:Quantity.unit @<string>?;
+	fhir:Quantity.system @<uri>?;
+	fhir:Quantity.code @<code>?;
+	fhir:index xsd:integer?
+}
+
+<Range> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:Range.low @<SimpleQuantity>?;
+	fhir:Range.high @<SimpleQuantity>?;
+	fhir:index xsd:integer?
+}
+
+<Annotation> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	(	fhir:Annotation.authorReference @<PractitionerReference> |
+		fhir:Annotation.authorReference @<PatientReference> |
+		fhir:Annotation.authorReference @<RelatedPersonReference> |
+		fhir:Annotation.authorString @<string>
+	)?;
+	fhir:Annotation.time @<dateTime>?;
+	fhir:Annotation.text @<string>;
+	fhir:index xsd:integer?
+}
+
+<boolean> CLOSED {fhir:id @<id>?;
+	fhir:extension @<Extension>*;
+	fhir:value xsd:boolean?;
+	fhir:index xsd:integer?
+}
+
+<base64Binary> CLOSED {fhir:id @<id>?;
+	fhir:extension @<Extension>*;
+	fhir:value xsd:base64Binary?;
+	fhir:index xsd:integer?
+}
+
+<Signature> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:Signature.type @<Coding>+;
+	fhir:Signature.when @<instant>;
+	(	fhir:Signature.whoUri @<uri> |
+		fhir:Signature.whoReference @<PractitionerReference> |
+		fhir:Signature.whoReference @<RelatedPersonReference> |
+		fhir:Signature.whoReference @<PatientReference> |
+		fhir:Signature.whoReference @<DeviceReference> |
+		fhir:Signature.whoReference @<OrganizationReference>
+	);
+	fhir:Signature.contentType @<code>?;
+	fhir:Signature.blob @<base64Binary>?;
+	fhir:index xsd:integer?
+}
+
+<unsignedInt> CLOSED {fhir:extension @<Extension>*;
+	fhir:value xsd:nonNegativeInteger?;
+	fhir:index xsd:integer?
+}
+
+<time> CLOSED {fhir:id @<id>?;
+	fhir:extension @<Extension>*;
+	fhir:value xsd:time?;
+	fhir:index xsd:integer?
+}
+
+<Timing> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:Timing.event @<dateTime>*;
+	fhir:Timing.repeat @<Timing.repeat>?;
+	fhir:Timing.code @<CodeableConcept>?;
+	fhir:index xsd:integer?
+}
+
+<SimpleQuantity> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:Quantity.value @<decimal>?;
+	fhir:Quantity.comparator @<code>?;
+	fhir:Quantity.unit @<string>?;
+	fhir:Quantity.system @<uri>?;
+	fhir:Quantity.code @<code>?;
+	fhir:index xsd:integer?
+}
+
+<Timing.repeat> CLOSED {fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	(	fhir:Timing.repeat.boundsDuration @<Duration> |
+		fhir:Timing.repeat.boundsRange @<Range> |
+		fhir:Timing.repeat.boundsPeriod @<Period>
+	)?;
+	fhir:Timing.repeat.count @<integer>?;
+	fhir:Timing.repeat.countMax @<integer>?;
+	fhir:Timing.repeat.duration @<decimal>?;
+	fhir:Timing.repeat.durationMax @<decimal>?;
+	fhir:Timing.repeat.durationUnit @<code>?;
+	fhir:Timing.repeat.frequency @<integer>?;
+	fhir:Timing.repeat.frequencyMax @<integer>?;
+	fhir:Timing.repeat.period @<decimal>?;
+	fhir:Timing.repeat.periodMax @<decimal>?;
+	fhir:Timing.repeat.periodUnit @<code>?;
+	fhir:Timing.repeat.when @<code>?;
+	fhir:Timing.repeat.offset @<unsignedInt>?;
+	fhir:index xsd:integer?
+}
+
+#---------------------- Reference Types -------------------
+
+<PractitionerReference> CLOSED {
+	fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:link IRI?;
+	fhir:Reference.reference @<string>?;
+	fhir:Reference.display @<string>?;
+	fhir:index xsd:integer?
+}
+
+<SpecimenReference> CLOSED {
+	fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:link IRI?;
+	fhir:Reference.reference @<string>?;
+	fhir:Reference.display @<string>?;
+	fhir:index xsd:integer?
+}
+
+<OrganizationReference> CLOSED {
+	fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:link IRI?;
+	fhir:Reference.reference @<string>?;
+	fhir:Reference.display @<string>?;
+	fhir:index xsd:integer?
+}
+
+<DeviceReference> CLOSED {
+	fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:link IRI?;
+	fhir:Reference.reference @<string>?;
+	fhir:Reference.display @<string>?;
+	fhir:index xsd:integer?
+}
+
+<PatientReference> CLOSED {
+	fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:link IRI?;
+	fhir:Reference.reference @<string>?;
+	fhir:Reference.display @<string>?;
+	fhir:index xsd:integer?
+}
+
+<SequenceReference> CLOSED {
+	fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:link IRI?;
+	fhir:Reference.reference @<string>?;
+	fhir:Reference.display @<string>?;
+	fhir:index xsd:integer?
+}
+
+<RelatedPersonReference> CLOSED {
+	fhir:Element.id @<id>?;
+	fhir:Element.extension @<Extension>*;
+	fhir:link IRI?;
+	fhir:Reference.reference @<string>?;
+	fhir:Reference.display @<string>?;
+	fhir:index xsd:integer?
+}

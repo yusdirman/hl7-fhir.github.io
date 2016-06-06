@@ -1,0 +1,67 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/MedicationStatement",
+  "resourceType": "MedicationStatement",
+  "Resource.id": {
+    "value": "medicationstatement-example-qicore"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>Penicillin VK 10ml suspension administered by oral route at 14:30 on 1 June 2012</p>\n      <p>to patient ref: a23</p>\n    </div>"
+    }
+  },
+  "MedicationStatement.status": {
+    "value": "completed"
+  },
+  "MedicationStatement.medicationReference": {
+    "Reference.reference": {
+      "value": "Medication/example"
+    },
+    "reference": "http://hl7.org/fhir//Medication/example"
+  },
+  "MedicationStatement.patient": {
+    "Reference.reference": {
+      "value": "Patient/example"
+    },
+    "reference": "http://hl7.org/fhir//Patient/example"
+  },
+  "MedicationStatement.effectiveDateTime": {
+    "value": "2012-06-01T14:30:00+14:00"
+  },
+  "MedicationStatement.dosage": [
+    {
+      "MedicationStatement.dosage.route": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "value": "394899003"
+            },
+            "Coding.display": {
+              "value": "oral administration of treatment"
+            }
+          }
+        ],
+        "concept": "http://snomed.info/sct#394899003"
+      },
+      "MedicationStatement.dosage.doseQuantity": {
+        "Quantity.value": {
+          "value": 10
+        },
+        "Quantity.unit": {
+          "value": "ml"
+        },
+        "Quantity.system": {
+          "value": "http://unitsofmeasure.org"
+        },
+        "Quantity.code": {
+          "value": "ml"
+        }
+      }
+    }
+  ]
+}

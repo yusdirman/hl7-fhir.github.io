@@ -1,0 +1,123 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/ValueSet",
+  "resourceType": "ValueSet",
+  "Resource.id": {
+    "value": "example-extensional"
+  },
+  "Resource.meta": {
+    "Meta.profile": [
+      {
+        "value": "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"
+      }
+    ]
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>Value set &quot;LOINC Codes for Cholesterol&quot;: This is an example value set that includes \n        all the  codes for serum cholesterol from LOINC v2.36.</p>\n      <p>Developed by: FHIR project team (example)</p>\n      <p>Published for testing on 13-June 2012</p>\n      <p>This value set includes the following LOINC codes:</p>\n      <ul>\n        <li>14647-2: Cholesterol [Moles/Volume]</li>\n        <li>2093-3: Cholesterol [Mass/Volume]</li>\n        <li>35200-5: Cholesterol [Mass Or Moles/Volume] </li>\n        <li>9342-7: Cholesterol [Percentile]</li>\n      </ul>\n      <p>This content from LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use.</p>\n    </div>"
+    }
+  },
+  "ValueSet.url": {
+    "value": "http://hl7.org/fhir/ValueSet/example-extensional"
+  },
+  "ValueSet.identifier": {
+    "Identifier.system": {
+      "value": "http://acme.com/identifiers/valuesets"
+    },
+    "Identifier.value": {
+      "value": "loinc-cholesterol-int"
+    }
+  },
+  "ValueSet.version": {
+    "value": "20150622"
+  },
+  "ValueSet.name": {
+    "value": "LOINC Codes for Cholesterol in Serum/Plasma"
+  },
+  "ValueSet.status": {
+    "value": "draft"
+  },
+  "ValueSet.experimental": {
+    "value": true
+  },
+  "ValueSet.publisher": {
+    "value": "HL7 International"
+  },
+  "ValueSet.contact": [
+    {
+      "ValueSet.contact.name": {
+        "value": "FHIR project team"
+      },
+      "ValueSet.contact.telecom": [
+        {
+          "ContactPoint.system": {
+            "value": "other"
+          },
+          "ContactPoint.value": {
+            "value": "http://hl7.org/fhir"
+          }
+        }
+      ]
+    }
+  ],
+  "ValueSet.date": {
+    "value": "2015-06-22"
+  },
+  "ValueSet.lockedDate": {
+    "value": "2012-06-13"
+  },
+  "ValueSet.description": {
+    "value": "This is an example value set that includes all the LOINC codes for serum/plasma cholesterol from v2.36."
+  },
+  "ValueSet.copyright": {
+    "value": "This content from LOINCÂ® is copyright Â© 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use."
+  },
+  "ValueSet.compose": {
+    "ValueSet.compose.include": [
+      {
+        "ValueSet.compose.include.system": {
+          "value": "http://loinc.org"
+        },
+        "ValueSet.compose.include.version": {
+          "value": "2.36"
+        },
+        "ValueSet.compose.include.concept": [
+          {
+            "ValueSet.compose.include.concept.code": {
+              "value": "14647-2"
+            },
+            "ValueSet.compose.include.concept.display": {
+              "value": "Cholesterol [Moles/Volume]"
+            }
+          },
+          {
+            "ValueSet.compose.include.concept.code": {
+              "value": "2093-3"
+            },
+            "ValueSet.compose.include.concept.display": {
+              "value": "Cholesterol [Mass/Volume]"
+            }
+          },
+          {
+            "ValueSet.compose.include.concept.code": {
+              "value": "35200-5"
+            },
+            "ValueSet.compose.include.concept.display": {
+              "value": "Cholesterol [Mass Or Moles/Volume]"
+            }
+          },
+          {
+            "ValueSet.compose.include.concept.code": {
+              "value": "9342-7"
+            },
+            "ValueSet.compose.include.concept.display": {
+              "value": "Cholesterol [Percentile]"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

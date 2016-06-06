@@ -1,0 +1,93 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/DecisionSupportRuledecisionsupportrule-azathioprine-need-test> a fhir:DecisionSupportRule;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "decisionsupportrule-azathioprine-need-test"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Azathioprine Myelotoxicity Intervention - Need Test</div>"
+  ];
+  fhir:DecisionSupportRule.moduleMetadata [
+     fhir:ModuleMetadata.identifier [
+       fhir:index 0;
+       fhir:Identifier.use [ fhir:value "official" ];
+       fhir:Identifier.value [ fhir:value "azathioprine-myelotoxicity-need-test" ]
+     ];
+     fhir:ModuleMetadata.version [ fhir:value "1.0.0" ];
+     fhir:ModuleMetadata.title [ fhir:value "Azathioprine Myelotoxicity Need Test" ];
+     fhir:ModuleMetadata.type [ fhir:value "decision-support-rule" ];
+     fhir:ModuleMetadata.status [ fhir:value "active" ];
+     fhir:ModuleMetadata.description [ fhir:value "Azathioprine myelotoxicity intervention to alert the user that a TPMT genotype test should be administered." ];
+     fhir:ModuleMetadata.publicationDate [ fhir:value "2016-04-01"^^xsd:date ];
+     fhir:ModuleMetadata.topic [
+       fhir:index 0;
+       fhir:CodeableConcept.text [ fhir:value "Azathioprine Myelotoxicity - Need Test" ]
+     ]
+  ];
+  fhir:DecisionSupportRule.library [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/Library/library-azathioprine-myelotoxicity-cds-logic>;
+     fhir:Reference.reference [ fhir:value "Library/library-azathioprine-myelotoxicity-cds-logic" ]
+  ];
+  fhir:DecisionSupportRule.trigger [
+     fhir:index 0;
+     fhir:TriggerDefinition.type [ fhir:value "data-added" ];
+     fhir:TriggerDefinition.eventData [
+       fhir:DataRequirement.type [ fhir:value "MedicationOrder" ];
+       fhir:DataRequirement.codeFilter [
+         fhir:index 0;
+         fhir:DataRequirement.codeFilter.path [ fhir:value "code" ];
+         fhir:DataRequirement.codeFilter.valueCodeableConcept [
+           fhir:index 0;
+           fhir:CodeableConcept.coding [
+             fhir:index 0;
+             fhir:Coding.system [ fhir:value "http://snomed.org/sct" ];
+             fhir:Coding.code [ fhir:value "372574004" ]
+           ];
+           fhir:CodeableConcept.text [ fhir:value "Azathioprine (substance)" ]
+         ]
+       ]
+     ]
+  ];
+  fhir:DecisionSupportRule.condition [ fhir:value "Needs TPMT Test"];
+  fhir:DecisionSupportRule.action [
+     fhir:index 0;
+     fhir:ActionDefinition.title [ fhir:value "Patient should be administered a TPMT Genotype Test." ];
+     fhir:ActionDefinition.action [
+       fhir:index 0;
+       fhir:ActionDefinition.title [ fhir:value "Create the TPMT Genotype Test." ];
+       fhir:ActionDefinition.textEquivalent [ fhir:value "Administer a TPMT Genotype Test." ];
+       fhir:ActionDefinition.participantType [
+         fhir:value "practitioner";
+         fhir:index 0
+       ];
+       fhir:ActionDefinition.type [ fhir:value "create" ];
+       fhir:ActionDefinition.customization [
+         fhir:index 0;
+         fhir:ActionDefinition.customization.path [ fhir:value "/" ];
+         fhir:ActionDefinition.customization.expression [ fhir:value "Create Diagnostic Order for TPMT Genotype Test" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:ActionDefinition.title [ fhir:value "Notify the provider to sign the order." ];
+       fhir:ActionDefinition.textEquivalent [ fhir:value "A TPMT Genotype Test is recommended, please authorize or reject the order." ];
+       fhir:ActionDefinition.participantType [
+         fhir:value "practitioner";
+         fhir:index 0
+       ];
+       fhir:ActionDefinition.type [ fhir:value "create" ];
+       fhir:ActionDefinition.customization [
+         fhir:index 0;
+         fhir:ActionDefinition.customization.path [ fhir:value "/" ];
+         fhir:ActionDefinition.customization.expression [ fhir:value "Missing TPMT Test Alert" ]
+       ]
+     ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

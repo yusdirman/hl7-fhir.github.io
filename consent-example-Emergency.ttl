@@ -1,0 +1,67 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Consentconsent-example-Emergency> a fhir:Consent;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "consent-example-Emergency"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n	<p>\n	Withhold Authorization for Treatment except for Emegency Treatment\n	</p><p>\n    Patient &quot;P. van de Heuvel&quot; wishes to have no data at the Good Health Psychiatric Hospital \n   available except for Emegency treatment use.\n   </p>\n   </div>"
+  ];
+  fhir:Consent.status [ fhir:value "active"];
+  fhir:Consent.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/consenttypecodes" ];
+       fhir:Coding.code [ fhir:value "Opt-Out" ];
+       fhir:Coding.display [ fhir:value "Authorization refused with explicit exceptions." ]
+     ]
+  ];
+  fhir:Consent.issued [ fhir:value "2016-05-11"^^xsd:date];
+  fhir:Consent.patient [
+     fhir:link <http://hl7.org/fhir/Patient/f001>;
+     fhir:Reference.reference [ fhir:value "Patient/f001" ];
+     fhir:Reference.display [ fhir:value "P. van de Heuvel" ]
+  ];
+  fhir:Consent.authority [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/Organization/Infoway>;
+     fhir:Reference.reference [ fhir:value "Organization/Infoway" ];
+     fhir:Reference.display [ fhir:value "Canada Infoway" ]
+  ];
+  fhir:Consent.domain [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/Location/Infoway>;
+     fhir:Reference.reference [ fhir:value "Location/Infoway" ];
+     fhir:Reference.display [ fhir:value "Canada Infoway" ]
+  ];
+  fhir:Consent.except [
+     fhir:index 0;
+     fhir:Consent.except.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/consentexcepttypecodes" ];
+         fhir:Coding.code [ fhir:value "authorized-action" ];
+         fhir:Coding.display [ fhir:value "Authorize a specified action." ]
+       ]
+     ];
+     fhir:Consent.except.action [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v3/ActReason" ];
+         fhir:Coding.code [ fhir:value "ETREAT" ];
+         fhir:Coding.display [ fhir:value "Emergency Treatment" ]
+       ]
+     ]
+  ];
+  fhir:Consent.contentAttachment [
+     fhir:Attachment.title [ fhir:value "The terms of the consent in lawyer speak." ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

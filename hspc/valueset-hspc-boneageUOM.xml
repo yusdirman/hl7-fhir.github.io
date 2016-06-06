@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="hspc-boneageUOM"/>
+  <meta>
+    <lastUpdated value="2016-06-06T20:14:04.181+00:00"/>
+    <profile value="http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"/>
+  </meta>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <h2>HSPC Bone Age Units of Measure Value Set</h2>
+      <p>The list of codes used as units of measure for bone age.</p>
+      <p>
+        <b>Copyright Statement:</b> This value set includes content from UCUM. Implementer use of UCUM is not covered by this agreement
+      </p>
+      <p>This value set includes codes from the following code systems:</p>
+      <ul>
+        <li>Include these codes as defined in http://unitsofmeasure.org
+          <table>
+            <tr>
+              <td>
+                <b>Code</b>
+              </td>
+              <td>
+                <b>Display</b>
+              </td>
+            </tr>
+            <tr>
+              <td>mo</td>
+              <td>Month [time]</td>
+              <td/>
+            </tr>
+            <tr>
+              <td>a</td>
+              <td>Year [time]</td>
+              <td/>
+            </tr>
+          </table>
+        </li>
+      </ul>
+    </div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/valueset-oid">
+    <valueUri value="urn:oid:2.16.840.1.113883.4.642.2.717"/>
+  </extension>
+  <url value="http://hl7.org/fhir/ValueSet/hspc-boneageUOM"/>
+  <version value="1.4.0"/>
+  <name value="HSPC Bone Age Units of Measure Value Set"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <publisher value="HSPC"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="http://healthcaresoa.org"/>
+    </telecom>
+  </contact>
+  <date value="2016-06-06T20:14:04+00:00"/>
+  <description value="The list of codes used as units of measure for bone age."/>
+  <copyright value="This value set includes content from UCUM. Implementer use of UCUM is not covered by this agreement"/>
+  <compose>
+    <include>
+      <system value="http://unitsofmeasure.org"/>
+      <concept>
+        <code value="mo"/>
+        <display value="Month [time]"/>
+      </concept>
+      <concept>
+        <code value="a"/>
+        <display value="Year [time]"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

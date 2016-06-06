@@ -1,0 +1,806 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>StructureDefinition: SDC-Questionnaire - FHIR v1.4.0</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link rel="stylesheet" href="../fhir.css"/>
+  <link rel="Prev" href="http://hl7.org/fhir/sdc-questionnaire"/>
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href=".././dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href=".././assets/css/bootstrap-fhir.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href=".././assets/css/project.css"/>
+  <link rel="stylesheet" href=".././assets/css/pygments-manni.css"/>
+	<link rel="stylesheet" href="../jquery-ui.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src=".././assets/js/html5shiv.js"></script>
+  <script src=".././assets/js/respond.min.js"></script>
+  <![endif] -->
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href=".././assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href=".././assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href=".././assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href=".././assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href=".././assets/ico/favicon.png"/>
+
+</head>
+<body>
+	<div id="segment-header" class="segment">  <!-- segment-header -->	
+		<div class="container">  <!-- container -->
+			<a no-external="true" id="logo" href="http://hl7.org/fhir"><img src=".././assets/images/fhir-logo-www.png" alt="logo fhir"/> </a>
+			<div id="hl7-status">
+				<b>Current Build</b>
+			</div>       	
+			
+			<div id="hl7-nav">
+				 <a no-external="true" id="hl7-logo" href="http://www.hl7.org">
+					<img src=".././assets/images/hl7-logo.png" width="42" alt="visit the hl7 website" height="50"/>
+				</a> 
+			</div>       	
+			<div id="hl7-nav"><a no-external="true" id="hl7-logo" href="http://hl7.org/fhir/search.cfm"><img src="./../assets/images/search.png" alt="Search FHIR"/></a></div> 
+		</div>
+		<div class="container">  <!-- container -->
+	</div></div>  <!-- /segment-header -->	
+
+
+	<div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+ 	      		
+ 	      		      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+					<a href="../index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav navbar-nav">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../documentation.html">Documentation</a></li>
+              <li><a href="../implementation.html">Implementation</a></li>
+              <li><a href="../resourcelist.html">Resources</a></li>
+              <li><a href="../clinical.html">Clinical</a></li>
+              <li><a href="../administration.html">Administrative</a></li>
+              <li><a href="../infrastructure.html">Infrastructure</a></li>
+              <li><a href="../financial.html">Financial</a></li>
+
+						</ul>
+					</div>  <!-- /.nav-collapse -->
+				</div>  <!-- /.container -->
+			</nav>  <!-- /.navbar -->
+      		
+				
+  <!-- /HEADER CONTENT -->				
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-navbar -->
+	
+
+	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+		<div class="container">  <!-- container -->	
+			<ul class="breadcrumb">
+          <!-- sdc-questionnaire / profile:Questionnaire/questionnaire-sdc/sdc-questionnaire / Structured Data Capture Questionnaire Design -->
+        <li title="Structured Data Capture"><a href="sdc.html"><b>SDC</b></a></li>
+        <li><a href="questionnaire-sdc.html"><b>Questionnaire</b></a></li>
+        <li><b>Questionnaire Details</b></li>
+
+			</ul>	
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-breadcrumb -->
+	
+
+	<div id="segment-content" class="segment">  <!-- segment-content -->
+	<div class="container">  <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+
+<div class="col-9">
+
+<ul class="nav nav-tabs"><li><a href="sdc-questionnaire.html">Content</a></li><li><a href="sdc-questionnaire-examples.html">Examples</a></li><li class="active"><a href="#">Detailed Descriptions</a></li><li><a href="sdc-questionnaire-mappings.html">Mappings</a></li><li><a href="sdc-questionnaire.profile.xml.html">XML</a></li><li><a href="sdc-questionnaire.profile.json.html">JSON</a></li></ul>
+
+<h4><span class="sectioncount">B.4.1.4<a name="B.4.1.4"> </a></span> StructureDefinition: SDC-Questionnaire - Detailed Descriptions <a href="sdc-questionnaire-definitions.html#B.4.1.4" title="link to here" class="self-link"><img src="../target.png"/></a></h4>
+
+<p>Definitions for the sdc-questionnaire Profile.</p>
+
+<table class="dict">
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.SDC-Questionnaire"> </a><b>Questionnaire(SDC-Questionnaire)</b></td></tr>
+  <tr><td>Definition</td><td><p>Sets minimum expectations for questionnaire support for SDC-conformant systems, including a number of extensions around display and behavior.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../questionnaire.html#Questionnaire">Questionnaire</a></td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>Form, CRF, Survey</td></tr>
+  <tr><td>Invariants</td><td><b>Defined on this element</b><br/>
+<b title="Formal Invariant Identifier">que-2</b>: The link ids for groups and questions must be unique within the questionnaire (xpath: count(descendant::f:linkId/@value)=count(distinct-values(descendant::f:linkId/@value)))</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.id"> </a><b>Questionnaire.id</b></td></tr>
+  <tr><td>Definition</td><td><p>The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#id">id</a></td></tr>
+  <tr><td>Comments</td><td><p>The only time that a resource does not have an id is when it is being submitted to the server using a create operation. Bundles always have an id, though it is usually a generated UUID.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.meta"> </a><b>Questionnaire.meta</b></td></tr>
+  <tr><td>Definition</td><td><p>The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../resource.html#Meta">Meta</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.implicitRules"> </a><b>Questionnaire.implicitRules</b></td></tr>
+  <tr><td>Definition</td><td><p>A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#uri">uri</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However, the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.language"> </a><b>Questionnaire.language</b></td></tr>
+  <tr><td>Definition</td><td><p>The base language in which the resource is written.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td>A human language.<br/>The codes SHALL be taken from  <a href="http://tools.ietf.org/html/bcp47">http://tools.ietf.org/html/bcp47 <img src="../external.png" style="text-align: baseline"/></a></td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#code">code</a></td></tr>
+  <tr><td>Comments</td><td><p>Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource  Not all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute).</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.text"> </a><b>Questionnaire.text</b></td></tr>
+  <tr><td>Definition</td><td><p>A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it &quot;clinically safe&quot; for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1 This element is affected by the following invariants: dom-1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../narrative.html#Narrative">Narrative</a></td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>narrative, html, xhtml, display</td></tr>
+  <tr><td>Comments</td><td><p>Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.contained"> </a><b>Questionnaire.contained</b></td></tr>
+  <tr><td>Definition</td><td><p>These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../resource.html#Resource">Resource</a></td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>inline resources, anonymous resources, contained resources</td></tr>
+  <tr><td>Comments</td><td><p>This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.extension"> </a><b>Questionnaire.extension</b></td></tr>
+  <tr><td>Definition</td><td><p>An Extension</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a></td></tr>
+  <tr><td><a href="../profiling.html#slicing">Slicing</a></td><td>This element introduces a set of slices. The slicing rules are: <ul> <li>unordered</li><li>Open</li><li>discriminators: url</li></ul></td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.submissionEndpoint"> </a><b>Questionnaire.extension (<a href="../sdc/extension-sdc-questionnaire-endpoint.html">http://hl7.org/fhir/StructureDefinition/sdc-questionnaire-endpoint</a>)</b></td></tr>
+  <tr><td>Definition</td><td><p>The base URL for the server to which questionnaire response associated with this questionnaire should be submitted.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a>  (Extension Type: <a href="../datatypes.html#uri">uri</a>)</td></tr>
+  <tr><td>Comments</td><td><p>Indicates that the form has been designed with an expectation that it will be submitted to the specified URI.  If multiple endpoints are specified, expectation is that answers are submitted to all endpoints.</p>
+<p>If no end-point is specified, then the form is not exclusively designed to be submitted to a specific site.  If and where the form needs to be submitted or how the form should be internally processed must be inferred from external context or system business rules.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.provenanceSignatureRequired"> </a><b>Questionnaire.extension (<a href="../sdc/extension-sdc-questionnaire-provenancesignaturerequred.html">http://hl7.org/fhir/StructureDefinition/sdc-questionnaire-provenanceSignatureRequred</a>)</b></td></tr>
+  <tr><td>Definition</td><td><p>If true, indicates that QuestionnaireResponse instances created against this questionnaire must have an associated Provenance record.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a>  (Extension Type: <a href="../datatypes.html#boolean">boolean</a>)</td></tr>
+  <tr><td>Comments</td><td><p>Systems may choose to require that the QuestionnaireResponse and referencing Provenance instance be submitted together as a single transaction using Bundle.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.styleSensitive"> </a><b>Questionnaire.extension (<a href="../extension-stylesensitive.html">http://hl7.org/fhir/StructureDefinition/styleSensitive</a>)</b></td></tr>
+  <tr><td>Definition</td><td><p>Indicates that the style extensions in this resource are essential to the interpretation of the styled text and that it cannot be rendered without the style without losing essential information.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a>  (Extension Type: <a href="../datatypes.html#boolean">boolean</a>)</td></tr>
+  <tr><td>Comments</td><td><p>If set to true, all systems that claim to support this extension and which render elements of the resource containing this extension SHALL either render the content as required by the style extensions defined by this profile that are present in the resource or shall (if safe to do so based on their own rules), omit entirely the styled content they cannot render in accordance with the extensions.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.deMap"> </a><b>Questionnaire.extension (<a href="../extension-questionnaire-demap.html">http://hl7.org/fhir/StructureDefinition/questionnaire-deMap</a>)</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies a map that links the questionnaire (source) to a DataElement server and identifies which questions correspond to which data elements (by linkId and local identifier, respectively).</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a>  (Extension Type: <a href="../references.html#Reference">Reference</a>(<a href="../conceptmap.html" title="http://hl7.org/fhir/StructureDefinition/ConceptMap">ConceptMap</a>))</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.modifierExtension"> </a><b>Questionnaire.modifierExtension</b></td></tr>
+  <tr><td>Definition</td><td><p>May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>extensions, user content</td></tr>
+  <tr><td>Comments</td><td><p>There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.url"> </a><b>Questionnaire.url</b></td></tr>
+  <tr><td>Definition</td><td><p>An absolute URL that is used to identify this questionnaire when it is referenced in a specification, model, design or an instance. This SHALL be a URL, SHOULD be globally unique, and SHOULD be an address at which this questionnaire is (or will be) published.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#uri">uri</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.identifier"> </a><b>Questionnaire.identifier</b></td></tr>
+  <tr><td>Definition</td><td><p>This records identifiers associated with this question set that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate (e.g. in CDA documents, or in written / printed documentation).</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#Identifier">Identifier</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Requirements</td><td><p>Need to allow connection to a wider workflow.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.version"> </a><b>Questionnaire.version</b></td></tr>
+  <tr><td>Definition</td><td><p>The version number assigned by the publisher for business reasons.  It may remain the same when the resource is updated.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Requirements</td><td><p>In some cases, separate resource instances might be created for each version (if an older version can be maintained once a new version exists).</p>
+</td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>N/A - MIF rather than RIM level</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.status"> </a><b>Questionnaire.status</b></td></tr>
+  <tr><td>Definition</td><td><p>The lifecycle status of the questionnaire as a whole.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td>Lifecycle status of the questionnaire.<br/>The codes SHALL be taken from <a href="../valueset-questionnaire-status.html">QuestionnaireStatus</a></td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#code">code</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.date"> </a><b>Questionnaire.date</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies when this version of the form was created.  Changes whenever the form is updated.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#dateTime">dateTime</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>Date created, Date published, Date issued, Date updated</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.publisher"> </a><b>Questionnaire.publisher</b></td></tr>
+  <tr><td>Definition</td><td><p>Organization or person responsible for developing and maintaining the questionnaire.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Requirements</td><td><p>Conveys responsibility for the questions and their organization and also helps evaluate the questionnaire's &quot;authority&quot;.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.telecom"> </a><b>Questionnaire.telecom</b></td></tr>
+  <tr><td>Definition</td><td><p>Contact details to assist a user in finding and communicating with the publisher.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#ContactPoint">ContactPoint</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.useContext"> </a><b>Questionnaire.useContext</b></td></tr>
+  <tr><td>Definition</td><td><p>A code that identifies the questionnaire as falling into a particular group of like questionnaires; e.g. &quot;Pediatric&quot;, &quot;Admissions&quot;, &quot;Research&quot;, &quot;Demographic&quot;, &quot;Opinion Survey&quot;, etc.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td>Indicates the countries, regions, disciplines and other aspects of use within which this artifact is targeted for use.<br/>The codes SHALL be taken from <a href="../valueset-use-context.html">Context of Use ValueSet</a>; other codes may be used where these codes are not suitable</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Requirements</td><td><p>Allows discovery of questionnaires.  Also allows organization of lists of questionnaires into groups for presentation.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.title"> </a><b>Questionnaire.title</b></td></tr>
+  <tr><td>Definition</td><td><p>The name or label associated with this questionnaire.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Requirements</td><td><p>Used for display, searching.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.title.id"> </a><b>Questionnaire.title.id</b></td></tr>
+  <tr><td>Definition</td><td><p>unique id for the element within a resource (for internal references)</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#id">id</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.title.extension"> </a><b>Questionnaire.title.extension</b></td></tr>
+  <tr><td>Definition</td><td><p>An Extension</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a></td></tr>
+  <tr><td><a href="../profiling.html#slicing">Slicing</a></td><td>This element introduces a set of slices. The slicing rules are: <ul> <li>unordered</li><li>Open</li><li>discriminators: url</li></ul></td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.title.title.renderingStyle"> </a><b>Questionnaire.title.extension (<a href="../extension-style.html">http://hl7.org/fhir/StructureDefinition/style</a>)</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies how the specified element should be rendered when displayed.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a>  (Extension Type: <a href="../datatypes.html#string">string</a>)</td></tr>
+  <tr><td>Comments</td><td><p>This extension would be equivalent to setting the HTML &quot;style&quot; attribute on the root element for the element containing the extension.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.title.title.markup"> </a><b>Questionnaire.title.extension (<a href="../extension-markup.html">http://hl7.org/fhir/StructureDefinition/markup</a>)</b></td></tr>
+  <tr><td>Definition</td><td><p>This is an equivalent of the string on which the extension is sent, but includes additional XHTML markup, such as bold, italics, styles, tables, etc.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a>  (Extension Type: <a href="../datatypes.html#string">string</a>)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.title.value"> </a><b>Questionnaire.title.value</b></td></tr>
+  <tr><td>Definition</td><td><p>The actual value</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td>Max Length</td><td>1048576</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.concept"> </a><b>Questionnaire.concept</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies a how this question or group of questions is known in a particular terminology such as LOINC.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td>Codes for questionnaires, groups and individual questions<br/>For example codes, see <a href="../valueset-questionnaire-questions.html">Questionnaire Question Codes</a></td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#Coding">Coding</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Requirements</td><td><p>Allows linking of the complete Questionnaire resources to formal terminologies.  It's common for &quot;pannels&quot; of questions to be identified by a code.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.subjectType"> </a><b>Questionnaire.subjectType</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies the types of subjects that can be the subject of the questionnaire.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td>One of the resource types defined as part of FHIR.<br/>The codes SHALL be taken from <a href="../valueset-resource-types.html">ResourceType</a></td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#code">code</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>If none are specified, then the subject is unlimited.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.item"> </a><b>Questionnaire.item</b></td></tr>
+  <tr><td>Definition</td><td><p>The questions and groupings of questions that make up the questionnaire.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..* This element is affected by the following invariants: que-3</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#BackboneElement">BackboneElement</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Invariants</td><td><b>Defined on this element</b><br/>
+<b title="Formal Invariant Identifier">que-1</b>: Group items must have nested items, display items cannot have nested items (xpath: not((f:type/@value='group' and not(f:item)) or (f:type/@value='display' and f:item)))<br/><b title="Formal Invariant Identifier">que-10</b>: Maximum length can only be declared for simple question types (xpath: f:type/@value=('boolean', 'decimal', 'integer', 'open-choice', 'string', 'text', 'url') or not(f:maxLength))<br/><b title="Formal Invariant Identifier">que-3</b>: Display items cannot have a &quot;concept&quot; asserted (xpath: not(f:type/@value='display' and f:concept))<br/><b title="Formal Invariant Identifier">que-4</b>: A question cannot have both option and options (xpath: not(f:options and f:option))<br/><b title="Formal Invariant Identifier">que-5</b>: Only 'choice' items can have options (xpath: f:type/@value=('choice','open-choice') or not(f:option or f:options))<br/><b title="Formal Invariant Identifier">que-6</b>: Required and repeat aren't permitted for display items (xpath: not(f:type/@value='display' and (f:required or f:repeats)))<br/><b title="Formal Invariant Identifier">que-8</b>: Default values can't be specified for groups or display items (xpath: not(f:type/@value=('group', 'display') and f:*[starts-with(local-name(.), 'initial')]))<br/><b title="Formal Invariant Identifier">que-9</b>: Read-only can't be specified for &quot;display&quot; items (xpath: not(f:type/@value='display' and f:readOnly))</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.item.id"> </a><b>Questionnaire.item.id</b></td></tr>
+  <tr><td>Definition</td><td><p>unique id for the element within a resource (for internal references).</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#id">id</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.item.extension"> </a><b>Questionnaire.item.extension</b></td></tr>
+  <tr><td>Definition</td><td><p>An Extension</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a></td></tr>
+  <tr><td><a href="../profiling.html#slicing">Slicing</a></td><td>This element introduces a set of slices. The slicing rules are: <ul> <li>unordered</li><li>Open</li><li>discriminators: url</li></ul></td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.item.itemMinOccurs"> </a><b>Questionnaire.item.extension (<a href="../extension-questionnaire-minoccurs.html">http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs</a>)</b></td></tr>
+  <tr><td>Definition</td><td><p>The minimum number of times the group must appear or the minimum number of answers for a question - when greater than 1.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a>  (Extension Type: <a href="../datatypes.html#integer">integer</a>)</td></tr>
+  <tr><td>Comments</td><td><p>Default assumption for &quot;required&quot; elements is minOccurs=1.</p>
+</td></tr>
+  <tr><td>Invariants</td><td><b>Defined on this element</b><br/>
+<b title="Formal Invariant Identifier">inv-1</b>: minOccurs can't be more than one if required is false (xpath: f:valueInteger/@value=0 or parent::*/f:required/@value=true())<br/><b title="Formal Invariant Identifier">inv-3</b>: minOccurs can't exist for display items (xpath: not(parent::*/f:type/@value='display'))</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.item.itemMaxOccurs"> </a><b>Questionnaire.item.extension (<a href="../extension-questionnaire-maxoccurs.html">http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs</a>)</b></td></tr>
+  <tr><td>Definition</td><td><p>The maximum number of times the group must appear or the minimum number of answers for a question - when greater than 1 and not unlimited.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a>  (Extension Type: <a href="../datatypes.html#integer">integer</a>)</td></tr>
+  <tr><td>Comments</td><td><p>Only relevant if the element has repeats=true and there's a need to constrain the number of allowed repetitions.</p>
+</td></tr>
+  <tr><td>Invariants</td><td><b>Defined on this element</b><br/>
+<b title="Formal Invariant Identifier">inv-2</b>: maxOccurs can't be more than one if repeats is false (xpath: f:valueInteger/@value&lt;=1 or parent::*/f:repeats/@value=true())<br/><b title="Formal Invariant Identifier">inv-4</b>: maxOccurs can't exist for display items (xpath: not(parent::*/f:type/@value='display'))</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.item.itemOptionalDisplay"> </a><b>Questionnaire.item.extension (<a href="../sdc/extension-sdc-questionnaire-optionaldisplay.html">http://hl7.org/fhir/StructureDefinition/sdc-questionnaire-optionalDisplay</a>)</b></td></tr>
+  <tr><td>Definition</td><td><p>If set to true, it means that the system displaying the form (or the individual encoding the form for data capture) can choose to omit the item from display to the user.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a>  (Extension Type: <a href="../datatypes.html#boolean">boolean</a>)</td></tr>
+  <tr><td>Comments</td><td><p>If a group or question that contains other groups or questions is marked as &quot;optional&quot;, all of its contents are automatically also treated as optional.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.item.itemHidden"> </a><b>Questionnaire.item.extension (<a href="../extension-questionnaire-hidden.html">http://hl7.org/fhir/StructureDefinition/questionnaire-hidden</a>)</b></td></tr>
+  <tr><td>Definition</td><td><p>If true, indicates that the extended item should not be displayed to the user.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a>  (Extension Type: <a href="../datatypes.html#boolean">boolean</a>)</td></tr>
+  <tr><td>Comments</td><td><p>If an item is hidden, all descendant items are hidden as well.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.item.itemControl"> </a><b>Questionnaire.item.extension (<a href="../extension-questionnaire-itemcontrol.html">http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl</a>)</b></td></tr>
+  <tr><td>Definition</td><td><p>The type of data entry control or structure that should be used to render the item.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a>  (Extension Type: <a href="../datatypes.html#CodeableConcept">CodeableConcept</a>)</td></tr>
+  <tr><td>Comments</td><td><p>Different controls may be appropriate for different item types.  It is up to the system rendering a questionnaire as to what controls it will support and for which data types.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.item.choiceOrientation"> </a><b>Questionnaire.item.extension (<a href="../extension-questionnaire-choiceorientation.html">http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation</a>)</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies the desired orientation when rendering a list of choices (typically radio-box or check-box lists).</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a>  (Extension Type: <a href="../datatypes.html#code">code</a>)</td></tr>
+  <tr><td>Comments</td><td><p>Systems may choose to wrap answers rather than attempting to display them all in one row or column.  Language conventions may determine the order in which the choices are listed (left-to-right or right-to-left, etc.).</p>
+</td></tr>
+  <tr><td>Invariants</td><td><b>Defined on this element</b><br/>
+<b title="Formal Invariant Identifier">inv-6</b>: choiceOrientation can only be present on elements of type &quot;choice&quot; or &quot;open-choice&quot; (xpath: parent::*/f:type/@value=('choice', 'open-choice'))</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.item.minLength"> </a><b>Questionnaire.item.extension (<a href="../extension-minlength.html">http://hl7.org/fhir/StructureDefinition/minLength</a>)</b></td></tr>
+  <tr><td>Definition</td><td><p>The minimum number of characters that must be present in the simple data type to be considered a &quot;valid&quot; instance.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a>  (Extension Type: <a href="../datatypes.html#integer">integer</a>)</td></tr>
+  <tr><td>Comments</td><td><p>For base64binary, reflects the number of characters representing the encoded data, not the number of bytes of the binary data.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.item.regex"> </a><b>Questionnaire.item.extension (<a href="../extension-regex.html">http://hl7.org/fhir/StructureDefinition/regex</a>)</b></td></tr>
+  <tr><td>Definition</td><td><p>A regular expression that defines the syntax for the data element to be considered valid.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a>  (Extension Type: <a href="../datatypes.html#string">string</a>)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.item.entryFormat"> </a><b>Questionnaire.item.extension (<a href="../extension-entryformat.html">http://hl7.org/fhir/StructureDefinition/entryFormat</a>)</b></td></tr>
+  <tr><td>Definition</td><td><p>A syntax intended for display to the user to guide their input (i.e. a human readable version of a regular expression).  For example &quot;nnn-nnn-nnn&quot;.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a>  (Extension Type: <a href="../datatypes.html#string">string</a>)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.item.minValue"> </a><b>Questionnaire.item.extension (<a href="../extension-minvalue.html">http://hl7.org/fhir/StructureDefinition/minValue</a>)</b></td></tr>
+  <tr><td>Definition</td><td><p>The inclusive lower bound on the range of allowed values for the data element.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a>  (Extension Type: Choice of: <a href="../datatypes.html#date">date</a>, <a href="../datatypes.html#dateTime">dateTime</a>, <a href="../datatypes.html#time">time</a>, <a href="../datatypes.html#instant">instant</a>, <a href="../datatypes.html#decimal">decimal</a>, <a href="../datatypes.html#integer">integer</a>)</td></tr>
+  <tr><td>Comments</td><td><p>Data type specified must be the same as the data type for the data element.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.item.maxValue"> </a><b>Questionnaire.item.extension (<a href="../extension-maxvalue.html">http://hl7.org/fhir/StructureDefinition/maxValue</a>)</b></td></tr>
+  <tr><td>Definition</td><td><p>The inclusive upper bound on the range of allowed values for the data element.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a>  (Extension Type: Choice of: <a href="../datatypes.html#date">date</a>, <a href="../datatypes.html#dateTime">dateTime</a>, <a href="../datatypes.html#time">time</a>, <a href="../datatypes.html#instant">instant</a>, <a href="../datatypes.html#decimal">decimal</a>, <a href="../datatypes.html#integer">integer</a>)</td></tr>
+  <tr><td>Comments</td><td><p>Data type specified must be the same as the data type for the data element.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.item.maxDecimalPlaces"> </a><b>Questionnaire.item.extension (<a href="../extension-maxdecimalplaces.html">http://hl7.org/fhir/StructureDefinition/maxDecimalPlaces</a>)</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies the maximum number of decimal places that may be specified for the data element.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a>  (Extension Type: <a href="../datatypes.html#integer">integer</a>)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.item.mimeType"> </a><b>Questionnaire.item.extension (<a href="../extension-mimetype.html">http://hl7.org/fhir/StructureDefinition/mimeType</a>)</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies the kind(s) of attachmemt allowed to be sent for an element.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a>  (Extension Type: <a href="../datatypes.html#code">code</a>)</td></tr>
+  <tr><td>Comments</td><td><p>This extension only has meaning if the element has a type of Attachment.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.item.maxSize"> </a><b>Questionnaire.item.extension (<a href="../extension-maxsize.html">http://hl7.org/fhir/StructureDefinition/maxSize</a>)</b></td></tr>
+  <tr><td>Definition</td><td><p>For attachment answers, indicates the maximum size an attachment can be.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a>  (Extension Type: <a href="../datatypes.html#decimal">decimal</a>)</td></tr>
+  <tr><td>Comments</td><td><p>This extension only has meaning if the element has a type of Attachment.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.item.unit"> </a><b>Questionnaire.item.extension (<a href="../extension-questionnaire-unit.html">http://hl7.org/fhir/StructureDefinition/questionnaire-unit</a>)</b></td></tr>
+  <tr><td>Definition</td><td><p>Provides a computable unit of measure associated with numeric questions to support subsequent computation on responses.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a>  (Extension Type: <a href="../datatypes.html#Coding">Coding</a>)</td></tr>
+  <tr><td>Comments</td><td><p>The human-readable unit is conveyed as a display element.  This element is for computation purposes.</p>
+</td></tr>
+  <tr><td>Invariants</td><td><b>Defined on this element</b><br/>
+<b title="Formal Invariant Identifier">inv-16</b>: Lookup Questionnaire can only be specified for questions with a type of &quot;integer&quot; or &quot;decimal&quot; (xpath: parent::*/f:type/@value=('integer', 'decimal'))</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.item.deReference"> </a><b>Questionnaire.item.extension (<a href="../extension-questionnaire-dereference.html">http://hl7.org/fhir/StructureDefinition/questionnaire-deReference</a>)</b></td></tr>
+  <tr><td>Definition</td><td><p>A reference to the Data Element that corresponds to the question text and answer constraints for this question.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a>  (Extension Type: <a href="../references.html#Reference">Reference</a>(<a href="../dataelement.html" title="http://hl7.org/fhir/StructureDefinition/DataElement">DataElement</a>))</td></tr>
+  <tr><td>Comments</td><td><p>If a code applies to a question, that code should still be conveyed on the question, even if the same code is also referenced as a DataElement.code in the referenced data element.  This extension must not be used in place of specifying the Questionnaire.item.concept element.</p>
+</td></tr>
+  <tr><td>Invariants</td><td><b>Defined on this element</b><br/>
+<b title="Formal Invariant Identifier">inv-9</b>: Data Element references can't be specified for &quot;display&quot; items (xpath: not(parent::*/f:type/@value='display'))</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.item.allowedResource"> </a><b>Questionnaire.item.extension (<a href="../extension-questionnaire-allowedresource.html">http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource</a>)</b></td></tr>
+  <tr><td>Definition</td><td><p>Where the type for a question is &quot;Reference&quot;, indicates a type of resource that is permitted.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a>  (Extension Type: <a href="../datatypes.html#code">code</a>)</td></tr>
+  <tr><td>Comments</td><td><p>This extension only has meaning if the question.type = Reference.  If no allowedResource extensions are present, the presumption is that any type of resource is permitted.  If multiple are present, then any of the specified types are permitted.</p>
+</td></tr>
+  <tr><td>Invariants</td><td><b>Defined on this element</b><br/>
+<b title="Formal Invariant Identifier">inv-10</b>: Allowed resource can only be specified for items of type 'reference' (xpath: parent::*/f:type/@value='reference')</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.item.displayCategory"> </a><b>Questionnaire.item.extension (<a href="../extension-questionnaire-displaycategory.html">http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory</a>)</b></td></tr>
+  <tr><td>Definition</td><td><p>Describes the intended purpose of the rendered text.  For example - instructions, guidance on access control, maintenance information, etc.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a>  (Extension Type: <a href="../datatypes.html#CodeableConcept">CodeableConcept</a>)</td></tr>
+  <tr><td>Invariants</td><td><b>Defined on this element</b><br/>
+<b title="Formal Invariant Identifier">inv-11</b>: Display category can only be specified for items of type display (xpath: parent::*/f:type/@value='display')</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.item.modifierExtension"> </a><b>Questionnaire.item.modifierExtension</b></td></tr>
+  <tr><td>Definition</td><td><p>May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>extensions, user content, modifiers</td></tr>
+  <tr><td>Comments</td><td><p>There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.item.linkId"> </a><b>Questionnaire.item.linkId</b></td></tr>
+  <tr><td>Definition</td><td><p>An identifier that is unique within the Questionnaire allowing linkage to the equivalent item in a QuestionnaireResponse resource.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Requirements</td><td><p><a href="../questionnaireresponse.html">QuestionnaireResponse</a> does not require omitted items to be included and may have some items that repeat, so linkage based on position alone is not sufficient.</p>
+</td></tr>
+  <tr><td>Comments</td><td><p>May be omitted if there is no expectation to link answers back to a Questionnaire.  This ''can'' be a meaningful identifier (e.g. a LOINC code) but is not intended to have any meaning.  GUIDs or sequential numbers are appropriate here.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.item.concept"> </a><b>Questionnaire.item.concept</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies a how this group of questions is known in a particular terminology such as LOINC.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1 This element is affected by the following invariants: que-3</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td>Codes for questionnaires, groups and individual questions<br/>For example codes, see <a href="../valueset-questionnaire-questions.html">Questionnaire Question Codes</a></td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#Coding">Coding</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Requirements</td><td><p>Allows linking of groups of questions (and complete Questionnaire resources) to formal terminologies.</p>
+</td></tr>
+  <tr><td>Comments</td><td><p>The code(s) for the &quot;root&quot; group apply to the questionnaire as a whole.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.item.prefix"> </a><b>Questionnaire.item.prefix</b></td></tr>
+  <tr><td>Definition</td><td><p>A short label for a particular group, question or set of display text within the questionnaire.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Requirements</td><td><p>Separating the label from the question text allows improved rendering.  Also, instructions will often refer to specific prefixes, so there's a need for the questionnaire design to have control over what labels are used.</p>
+</td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>label</td></tr>
+  <tr><td>Comments</td><td><p>These are generally unique within a questionnaire, though this is not guaranteed. Some questionnaires may have multiple questions with the same label with logic to control which gets exposed.</p>
+<p>Typically these won't be used for &quot;text&quot; items, though such use is not prohibited.</p>
+<p>Systems SHOULD NOT generate their own prefixes if prefixes are defined for any items within a Questionnaire.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.item.prefix.id"> </a><b>Questionnaire.item.prefix.id</b></td></tr>
+  <tr><td>Definition</td><td><p>unique id for the element within a resource (for internal references)</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#id">id</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.item.prefix.extension"> </a><b>Questionnaire.item.prefix.extension</b></td></tr>
+  <tr><td>Definition</td><td><p>An Extension</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a></td></tr>
+  <tr><td><a href="../profiling.html#slicing">Slicing</a></td><td>This element introduces a set of slices. The slicing rules are: <ul> <li>unordered</li><li>Open</li><li>discriminators: url</li></ul></td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.item.prefix.itemLabel.renderingStyle"> </a><b>Questionnaire.item.prefix.extension (<a href="../extension-style.html">http://hl7.org/fhir/StructureDefinition/style</a>)</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies how the specified element should be rendered when displayed.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a>  (Extension Type: <a href="../datatypes.html#string">string</a>)</td></tr>
+  <tr><td>Comments</td><td><p>This extension would be equivalent to setting the HTML &quot;style&quot; attribute on the root element for the element containing the extension.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.item.prefix.itemLabel.markup"> </a><b>Questionnaire.item.prefix.extension (<a href="../extension-markup.html">http://hl7.org/fhir/StructureDefinition/markup</a>)</b></td></tr>
+  <tr><td>Definition</td><td><p>This is an equivalent of the string on which the extension is sent, but includes additional XHTML markup, such as bold, italics, styles, tables, etc.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a>  (Extension Type: <a href="../datatypes.html#string">string</a>)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.item.prefix.value"> </a><b>Questionnaire.item.prefix.value</b></td></tr>
+  <tr><td>Definition</td><td><p>The actual value</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td>Max Length</td><td>1048576</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.item.text"> </a><b>Questionnaire.item.text</b></td></tr>
+  <tr><td>Definition</td><td><p>The name of a section, the text of a question or text content for a text item.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.item.text.id"> </a><b>Questionnaire.item.text.id</b></td></tr>
+  <tr><td>Definition</td><td><p>unique id for the element within a resource (for internal references)</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#id">id</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.item.text.extension"> </a><b>Questionnaire.item.text.extension</b></td></tr>
+  <tr><td>Definition</td><td><p>An Extension</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a></td></tr>
+  <tr><td><a href="../profiling.html#slicing">Slicing</a></td><td>This element introduces a set of slices. The slicing rules are: <ul> <li>unordered</li><li>Open</li><li>discriminators: url</li></ul></td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.item.text.groupText.renderingStyle"> </a><b>Questionnaire.item.text.extension (<a href="../extension-style.html">http://hl7.org/fhir/StructureDefinition/style</a>)</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies how the specified element should be rendered when displayed.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a>  (Extension Type: <a href="../datatypes.html#string">string</a>)</td></tr>
+  <tr><td>Comments</td><td><p>This extension would be equivalent to setting the HTML &quot;style&quot; attribute on the root element for the element containing the extension.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.item.text.groupText.markup"> </a><b>Questionnaire.item.text.extension (<a href="../extension-markup.html">http://hl7.org/fhir/StructureDefinition/markup</a>)</b></td></tr>
+  <tr><td>Definition</td><td><p>This is an equivalent of the string on which the extension is sent, but includes additional XHTML markup, such as bold, italics, styles, tables, etc.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a>  (Extension Type: <a href="../datatypes.html#string">string</a>)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.item.text.value"> </a><b>Questionnaire.item.text.value</b></td></tr>
+  <tr><td>Definition</td><td><p>The actual value</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td>Max Length</td><td>1048576</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.item.type"> </a><b>Questionnaire.item.type</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies the type of questionnaire item this is - whether text for display, a grouping of other items or a particular type of data to be captured (string, integer, coded choice, etc.).</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td>Distinguishes groups from questions and display text and indicates data type for questions<br/>The codes SHALL be taken from <a href="../valueset-item-type.html">QuestionnaireItemType</a></td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#code">code</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Requirements</td><td><p>Defines the format in which the user is to be prompted for the answer.</p>
+</td></tr>
+  <tr><td>Comments</td><td><p>Time is handled using &quot;string&quot;.  File is handled using Attachment.  (Content can be sent as a contained binary).</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.item.enableWhen"> </a><b>Questionnaire.item.enableWhen</b></td></tr>
+  <tr><td>Definition</td><td><p>If present, indicates that this item should only be enabled (displayed/allow answers to be captured) when the specified condition is true.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#BackboneElement">BackboneElement</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Requirements</td><td><p>Allows questionnaires to adapt based on answers to other questions; e.g. If physical gender is specified as a male, no need to capture pregnancy history.  Also allows conditional display of instructions or groups of questions.</p>
+</td></tr>
+  <tr><td>Comments</td><td><p>If multiple repetitions of this extension are present, the item should be enabled when the condition for <em>any</em> of the repetitions is true.  I.e. Treat &quot;enableWhen&quot;s as being joined by an &quot;or&quot; clause.</p>
+<p>If enableWhen is present for an item, &quot;required&quot; is ignored unless one of the enableWhen conditions is met.</p>
+</td></tr>
+  <tr><td>Invariants</td><td><b>Defined on this element</b><br/>
+<b title="Formal Invariant Identifier">que-7</b>: enableWhen must contain either an 'answer' or an 'answered' element (xpath: count(*[starts-with(local-name(.), 'answer')]|answered) = 1)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.item.enableWhen.id"> </a><b>Questionnaire.item.enableWhen.id</b></td></tr>
+  <tr><td>Definition</td><td><p>unique id for the element within a resource (for internal references).</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#id">id</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.item.enableWhen.extension"> </a><b>Questionnaire.item.enableWhen.extension</b></td></tr>
+  <tr><td>Definition</td><td><p>May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a></td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>extensions, user content</td></tr>
+  <tr><td>Comments</td><td><p>There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.item.enableWhen.modifierExtension"> </a><b>Questionnaire.item.enableWhen.modifierExtension</b></td></tr>
+  <tr><td>Definition</td><td><p>May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>extensions, user content, modifiers</td></tr>
+  <tr><td>Comments</td><td><p>There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.item.enableWhen.question"> </a><b>Questionnaire.item.enableWhen.question</b></td></tr>
+  <tr><td>Definition</td><td><p>The linkId for the question whose answer (or lack of answer) governs whether this item is enabled.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#string">string</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>If multiple question occurrences are present for the same question (same linkId), then this refers to the nearest question occurrence reachable by tracing first the &quot;ancestor&quot; axis and then the &quot;preceding&quot; axis and then the &quot;following&quot; axis.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.item.enableWhen.hasAnswer"> </a><b>Questionnaire.item.enableWhen.hasAnswer</b></td></tr>
+  <tr><td>Definition</td><td><p>If present, indicates that this item should be enabled only if the specified question is answered or not answered.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1 This element is affected by the following invariants: que-7</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#boolean">boolean</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>If answered=false and answer values are also provided, then they are treated as &quot;or&quot;.  I.e. &quot;Enable if the question is unanswered or the answer is one of the specified values&quot;.  If answered=true and answers are present, one of the specified answers must be met. (So there's little reason to specify answered=true if answers are present.).</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.item.enableWhen.answer[x]"> </a><b>Questionnaire.item.enableWhen.answer[x]</b></td></tr>
+  <tr><td>Definition</td><td><p>If present, then the answer for the referenced question must match this answer for all components present in the enableWhen.answer.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1 This element is affected by the following invariants: que-7</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td>Choice of: <a href="../datatypes.html#boolean">boolean</a>, <a href="../datatypes.html#decimal">decimal</a>, <a href="../datatypes.html#integer">integer</a>, <a href="../datatypes.html#date">date</a>, <a href="../datatypes.html#dateTime">dateTime</a>, <a href="../datatypes.html#instant">instant</a>, <a href="../datatypes.html#time">time</a>, <a href="../datatypes.html#string">string</a>, <a href="../datatypes.html#uri">uri</a>, <a href="../datatypes.html#Attachment">Attachment</a>, <a href="../datatypes.html#Coding">Coding</a>, <a href="../datatypes.html#Quantity">Quantity</a>, <a href="../references.html#Reference">Reference</a>(<a href="../resource.html">Resource</a>)</td></tr>
+  <tr><td>[x] Note</td><td>See <a href="../formats.html#choice">Choice of Data Types</a> for further information about how to use [x]</td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>Components not specified in the answer do not need to match.  For example, if enableWhen specifies code + system for a Coding, it's ok if the answer has a &quot;display&quot; element.</p>
+<p>The dataType of this element must be the same as the data type of the question being referenced.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.item.required"> </a><b>Questionnaire.item.required</b></td></tr>
+  <tr><td>Definition</td><td><p>If true, indicates that the item must be present in a &quot;completed&quot; QuestionnaireResponse.  If false, the item may be skipped when answering the questionnaire.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1 This element is affected by the following invariants: que-6</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#boolean">boolean</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>If an item that contains other items is marked as required, that does not automatically make the contained elements required (though required groups must contain at least one child element).</p>
+</td></tr>
+  <tr><td>Default Value</td><td>false</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.item.repeats"> </a><b>Questionnaire.item.repeats</b></td></tr>
+  <tr><td>Definition</td><td><p>Whether the item may occur multiple times in the instance, containing multiple sets of answers.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1 This element is affected by the following invariants: que-6</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#boolean">boolean</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Requirements</td><td><p>Items may be used to create set of (related) questions that can be repeated to give multiple answers to such a set.</p>
+</td></tr>
+  <tr><td>Default Value</td><td>false</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.item.readOnly"> </a><b>Questionnaire.item.readOnly</b></td></tr>
+  <tr><td>Definition</td><td><p>If true, the value cannot be changed by a human respondent to the Questionnaire.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1 This element is affected by the following invariants: que-9</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#boolean">boolean</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Requirements</td><td><p>Allows certain information to be phrased (and rendered) as a question and an answer, while keeping users from changing it.  May also be useful for preventing changes to pre-populated portions of a questionnaire, for calculated values, etc.</p>
+</td></tr>
+  <tr><td>Comments</td><td><p>The value of readOnly elements can be established by asserting  extensions for defaultValues, linkages that support pre-population and/or extensions that support calculation based on other answers.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.item.maxLength"> </a><b>Questionnaire.item.maxLength</b></td></tr>
+  <tr><td>Definition</td><td><p>The maximum number of characters that are permitted in the answer to be considered a &quot;valid&quot; QuestionnaireResponse.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1 This element is affected by the following invariants: que-10</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#integer">integer</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>For base64binary, reflects the number of characters representing the encoded data, not the number of bytes of the binary data.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.item.options"> </a><b>Questionnaire.item.options</b></td></tr>
+  <tr><td>Definition</td><td><p>Reference to a value set containing a list of codes representing permitted answers for the question.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1 This element is affected by the following invariants: que-4, que-5</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../references.html#Reference">Reference</a>(<a href="../valueset.html" title="http://hl7.org/fhir/StructureDefinition/ValueSet">ValueSet</a>)</td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>LOINC defines many useful value sets for questionnaire response. See <a href="../loinc.html#alist">LOINC Answer Lists</a>.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.item.option"> </a><b>Questionnaire.item.option</b></td></tr>
+  <tr><td>Definition</td><td><p>For a &quot;choice&quot; question, identifies one of the permitted answers for the question.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..* This element is affected by the following invariants: que-4, que-5</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#BackboneElement">BackboneElement</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.item.option.id"> </a><b>Questionnaire.item.option.id</b></td></tr>
+  <tr><td>Definition</td><td><p>unique id for the element within a resource (for internal references).</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../datatypes.html#id">id</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.item.option.OptionPrefix"> </a><b>Questionnaire.item.option.extension (<a href="../extension-questionnaire-optionprefix.html">http://hl7.org/fhir/StructureDefinition/questionnaire-optionPrefix</a>)</b></td></tr>
+  <tr><td>Definition</td><td><p>The label to list in front of a code when presenting a list of possible values in a questionnaire-like fashion.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a>  (Extension Type: <a href="../datatypes.html#string">string</a>)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.item.option.modifierExtension"> </a><b>Questionnaire.item.option.modifierExtension</b></td></tr>
+  <tr><td>Definition</td><td><p>May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td><a href="../extensibility.html#Extension">Extension</a></td></tr>
+  <tr><td><a href="../conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>extensions, user content, modifiers</td></tr>
+  <tr><td>Comments</td><td><p>There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.item.option.value[x]"> </a><b>Questionnaire.item.option.value[x]</b></td></tr>
+  <tr><td>Definition</td><td><p>Identifies a specific answer that's allowed as the answer to a question.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="../terminologies.html">Binding</a></td><td>Allowed values to answer questions.<br/>For example codes, see <a href="../valueset-questionnaire-answers.html">Questionnaire Answer Codes</a></td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td>Choice of: <a href="../datatypes.html#integer">integer</a>, <a href="../datatypes.html#date">date</a>, <a href="../datatypes.html#time">time</a>, <a href="../datatypes.html#string">string</a>, <a href="../datatypes.html#Coding">Coding</a></td></tr>
+  <tr><td>[x] Note</td><td>See <a href="../formats.html#choice">Choice of Data Types</a> for further information about how to use [x]</td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.item.initial[x]"> </a><b>Questionnaire.item.initial[x]</b></td></tr>
+  <tr><td>Definition</td><td><p>The value that should be pre-populated when rendering the questionnaire for user input.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..1 This element is affected by the following invariants: que-8</td></tr>
+  <tr><td><a href="../datatypes.html">Type</a></td><td>Choice of: <a href="../datatypes.html#boolean">boolean</a>, <a href="../datatypes.html#decimal">decimal</a>, <a href="../datatypes.html#integer">integer</a>, <a href="../datatypes.html#date">date</a>, <a href="../datatypes.html#dateTime">dateTime</a>, <a href="../datatypes.html#instant">instant</a>, <a href="../datatypes.html#time">time</a>, <a href="../datatypes.html#string">string</a>, <a href="../datatypes.html#uri">uri</a>, <a href="../datatypes.html#Attachment">Attachment</a>, <a href="../datatypes.html#Coding">Coding</a>, <a href="../datatypes.html#Quantity">Quantity</a>, <a href="../references.html#Reference">Reference</a>(<a href="../resource.html">Resource</a>)</td></tr>
+  <tr><td>[x] Note</td><td>See <a href="../formats.html#choice">Choice of Data Types</a> for further information about how to use [x]</td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Requirements</td><td><p>In some workflows, having defaults saves time.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="sdc-questionnaire.Questionnaire.item.item"> </a><b>Questionnaire.item.item</b></td></tr>
+  <tr><td>Definition</td><td><p>Allows text, questions and other groups to be nested beneath a question or group.</p>
+</td></tr>
+  <tr><td><a href="../conformance-rules.html#conformance">Control</a></td><td>0..* This element is affected by the following invariants: que-1</td></tr>
+  <tr><td>Type</td><td>See item</td></tr>
+  <tr><td><a href="../conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Requirements</td><td><p>Reports can consist of complex nested groups.</p>
+</td></tr>
+</table>
+
+
+</div>
+
+
+				</div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+        
+    </div>  <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">  <!-- segment-footer -->
+		<div class="container">  <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+        &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.4.0-8453) generated on Mon, Jun 6, 2016 20:24+0000. <a href="../qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img src="../external.png" style="text-align: baseline"/></a> | 
+               <a style="color: #81BEF7" href="../history.html">Version History</a> | 
+               <a style="color: #81BEF7" href="../toc.html">Table of Contents</a> | 
+               <a style="color: #81BEF7" href="http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhir%2FDSTU2%2Fsdc-questionnaire&amp;doc2=http%3A%2F%2Fhl7-fhir.github.io%2F%2Fsdc-questionnaire">Compare to DSTU2 <img src="../external.png" style="text-align: baseline"/></a> |                
+               <a rel="license" style="color: #81BEF7" href="../license.html"><img src="../cc0.png" alt="CC0" style="border-style: none;"/></a> | 
+               <a style="color: #81BEF7" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677" target="_blank">Propose a change <img src="../external.png" style="text-align: baseline"/></a>   
+        </span>
+        </p>
+			</div>  <!-- /inner-wrapper -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+    
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src=".././assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src=".././dist/js/bootstrap.min.js"> </script>
+<script src=".././assets/js/respond.min.js"> </script>
+
+<script src=".././assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+    
+</body>
+</html>

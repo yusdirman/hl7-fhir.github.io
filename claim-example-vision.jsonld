@@ -1,0 +1,147 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Claim",
+  "resourceType": "Claim",
+  "Resource.id": {
+    "value": "660150"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">A human-readable rendering of the Vision Claim</div>"
+    }
+  },
+  "Claim.type": {
+    "value": "vision"
+  },
+  "Claim.identifier": [
+    {
+      "Identifier.system": {
+        "value": "http://happysight.com/claim"
+      },
+      "Identifier.value": {
+        "value": "6612345"
+      }
+    }
+  ],
+  "Claim.created": {
+    "value": "2014-08-16"
+  },
+  "Claim.targetReference": {
+    "Reference.reference": {
+      "value": "Organization/2"
+    },
+    "reference": "http://hl7.org/fhir//Organization/2"
+  },
+  "Claim.organizationReference": {
+    "Reference.reference": {
+      "value": "Organization/1"
+    },
+    "reference": "http://hl7.org/fhir//Organization/1"
+  },
+  "Claim.use": {
+    "value": "complete"
+  },
+  "Claim.priority": {
+    "Coding.code": {
+      "value": "normal"
+    }
+  },
+  "Claim.payee": {
+    "Claim.payee.type": {
+      "Coding.code": {
+        "value": "provider"
+      }
+    }
+  },
+  "Claim.diagnosis": [
+    {
+      "Claim.diagnosis.sequence": {
+        "value": 1
+      },
+      "Claim.diagnosis.diagnosis": {
+        "Coding.code": {
+          "value": "654321"
+        }
+      }
+    }
+  ],
+  "Claim.patientReference": {
+    "Reference.reference": {
+      "value": "Patient/1"
+    },
+    "reference": "http://hl7.org/fhir//Patient/1"
+  },
+  "Claim.coverage": [
+    {
+      "Claim.coverage.sequence": {
+        "value": 1
+      },
+      "Claim.coverage.focal": {
+        "value": true
+      },
+      "Claim.coverage.coverageReference": {
+        "Reference.reference": {
+          "value": "Coverage/9876B1"
+        },
+        "reference": "http://hl7.org/fhir//Coverage/9876B1"
+      }
+    }
+  ],
+  "Claim.item": [
+    {
+      "Claim.item.sequence": {
+        "value": 1
+      },
+      "Claim.item.type": {
+        "Coding.code": {
+          "value": "service"
+        }
+      },
+      "Claim.item.careTeam": [
+        {
+          "Claim.item.careTeam.providerReference": {
+            "Reference.reference": {
+              "value": "Practitioner/example"
+            },
+            "reference": "http://hl7.org/fhir//Practitioner/example"
+          }
+        }
+      ],
+      "Claim.item.service": {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/ex-visionservice"
+        },
+        "Coding.code": {
+          "value": "exam"
+        }
+      },
+      "Claim.item.servicedDate": {
+        "value": "2014-08-16"
+      },
+      "Claim.item.unitPrice": {
+        "Quantity.value": {
+          "value": 80.00
+        },
+        "Quantity.system": {
+          "value": "urn:iso:std:iso:4217"
+        },
+        "Quantity.code": {
+          "value": "USD"
+        }
+      },
+      "Claim.item.net": {
+        "Quantity.value": {
+          "value": 80.00
+        },
+        "Quantity.system": {
+          "value": "urn:iso:std:iso:4217"
+        },
+        "Quantity.code": {
+          "value": "USD"
+        }
+      }
+    }
+  ]
+}

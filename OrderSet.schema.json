@@ -1,0 +1,48 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://hl7.org/fhir/json-schema/OrderSet",
+  "$ref": "#/definitions/OrderSet",
+  "description": "see http://hl7.org/fhir/json.html#schema for information about the FHIR Json Schemas",
+  "definitions": {
+    "OrderSet": {
+      "allOf": [
+        {
+          "$ref": "DomainResource.schema.json/definitions/DomainResource"
+        },
+        {
+          "description": "This resource allows for the definition of an order set as a sharable, consumable, and executable artifact in support of clinical decision support.",
+          "properties": {
+            "resourceType": {
+              "description": "This is a OrderSet resource",
+              "type": "string",
+              "enum": [
+                "OrderSet"
+              ]
+            },
+            "moduleMetadata": {
+              "description": "A reference to a ModuleMetadata resource containing metadata for the orderset.",
+              "$ref": "ModuleMetadata.schema.json/definitions/ModuleMetadata"
+            },
+            "library": {
+              "description": "A reference to a Library resource containing any formal logic used by the orderset.",
+              "type": "array",
+              "items": {
+                "$ref": "Reference.schema.json/definitions/Reference"
+              }
+            },
+            "action": {
+              "description": "The definition of the actions that make up the order set. Order set groups and sections are represented as actions which contain sub-actions.",
+              "type": "array",
+              "items": {
+                "$ref": "ActionDefinition.schema.json/definitions/ActionDefinition"
+              }
+            }
+          },
+          "required": [
+            "resourceType"
+          ]
+        }
+      ]
+    }
+  }
+}

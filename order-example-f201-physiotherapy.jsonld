@@ -1,0 +1,72 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Order",
+  "resourceType": "Order",
+  "Resource.id": {
+    "value": "f201"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f201</p><p><b>date</b>: Mar 5, 2013 12:00:00 PM</p><p><b>subject</b>: <a>Roel</a></p><p><b>source</b>: <a>Practitioner/f201</a></p><p><b>target</b>: <a>Juri van Gelder</a></p><p><b>reason</b>: It concerns a one-off order for consultation in order to evaluate the stairs walking ability of Roel. <span>(Details )</span></p><h3>Whens</h3><table><tr><td>-</td><td><b>Code</b></td></tr><tr><td>*</td><td>Normal priority <span>(Details : {SNOMED CT code '394848005' = 'Normal priority (qualifier value)', given as 'Normal priority'})</span></td></tr></table><p><b>detail</b>: Consultation, not yet developed</p></div>"
+    }
+  },
+  "Order.date": {
+    "value": "2013-03-05T12:00:00+01:00"
+  },
+  "Order.subject": {
+    "Reference.reference": {
+      "value": "Patient/f201"
+    },
+    "Reference.display": {
+      "value": "Roel"
+    },
+    "reference": "http://hl7.org/fhir//Patient/f201"
+  },
+  "Order.source": {
+    "Reference.reference": {
+      "value": "Practitioner/f201"
+    },
+    "reference": "http://hl7.org/fhir//Practitioner/f201"
+  },
+  "Order.target": {
+    "Reference.reference": {
+      "value": "Practitioner/f203"
+    },
+    "Reference.display": {
+      "value": "Juri van Gelder"
+    },
+    "reference": "http://hl7.org/fhir//Practitioner/f203"
+  },
+  "Order.reasonCodeableConcept": {
+    "CodeableConcept.text": {
+      "value": "It concerns a one-off order for consultation in order to evaluate the stairs walking ability of Roel."
+    }
+  },
+  "Order.when": {
+    "Order.when.code": {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "value": "http://snomed.info/sct"
+          },
+          "Coding.code": {
+            "value": "394848005"
+          },
+          "Coding.display": {
+            "value": "Normal priority"
+          }
+        }
+      ],
+      "concept": "http://snomed.info/sct#394848005"
+    }
+  },
+  "Order.detail": [
+    {
+      "Reference.display": {
+        "value": "Consultation, not yet developed"
+      }
+    }
+  ]
+}

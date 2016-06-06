@@ -1,0 +1,78 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Patient",
+  "resourceType": "Patient",
+  "Resource.id": {
+    "value": "pat4"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      \n      <p>Patient Sandy Notsowell @ Acme Healthcare, Inc. MR = 123458, DECEASED</p>\n    \n    </div>"
+    }
+  },
+  "Patient.identifier": [
+    {
+      "Identifier.use": {
+        "value": "usual"
+      },
+      "Identifier.type": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://hl7.org/fhir/v2/0203"
+            },
+            "Coding.code": {
+              "value": "MR"
+            }
+          }
+        ]
+      },
+      "Identifier.system": {
+        "value": "urn:oid:0.1.2.3.4.5.6.7"
+      },
+      "Identifier.value": {
+        "value": "123458"
+      }
+    }
+  ],
+  "Patient.active": {
+    "value": true
+  },
+  "Patient.name": [
+    {
+      "HumanName.use": {
+        "value": "official"
+      },
+      "HumanName.family": [
+        {
+          "value": "Notsowell"
+        }
+      ],
+      "HumanName.given": [
+        {
+          "value": "Sandy"
+        }
+      ]
+    }
+  ],
+  "Patient.gender": {
+    "value": "female"
+  },
+  "Patient.birthDate": {
+    "value": "1982-08-02"
+  },
+  "Patient.deceasedBoolean": {
+    "value": true
+  },
+  "Patient.managingOrganization": {
+    "Reference.reference": {
+      "value": "Organization/1"
+    },
+    "Reference.display": {
+      "value": "ACME Healthcare, Inc"
+    },
+    "reference": "http://hl7.org/fhir//Organization/1"
+  }
+}

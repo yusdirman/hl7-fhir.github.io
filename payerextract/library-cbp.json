@@ -1,0 +1,85 @@
+{
+  "resourceType": "Library",
+  "id": "library-cbp",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Cohort Definition for Controlling Blood Pressure Measure</div>"
+  },
+  "moduleMetadata": {
+    "identifier": [
+      {
+        "use": "official",
+        "value": "CBP"
+      }
+    ],
+    "version": "1.0.0",
+    "title": "Cohort Definition for Controlling Blood Pressure Measure",
+    "type": "library",
+    "status": "active",
+    "experimental": true,
+    "publicationDate": "2016-04-19",
+    "topic": [
+      {
+        "text": "something"
+      }
+    ]
+  },
+  "model": [
+    {
+      "identifier": "FHIR"
+    }
+  ],
+  "valueSet": [
+    {
+      "name": "Systolic Blood Pressure",
+      "identifier": "Systolic Blood Pressure"
+    },
+    {
+      "name": "Diastolic Blood Pressure",
+      "identifier": "Diastolic Blood Pressure"
+    }
+  ],
+  "dataRequirement": [
+    {
+      "type": "Patient"
+    },
+    {
+      "type": "Observation",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSetString": "Systolic Blood Pressure"
+        }
+      ],
+      "dateFilter": [
+        {
+          "path": "effectiveDateTime.value",
+          "valuePeriod": {
+            "start": "2015-01-01"
+          }
+        }
+      ]
+    },
+    {
+      "type": "Observation",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSetString": "Diastolic Blood Pressure"
+        }
+      ],
+      "dateFilter": [
+        {
+          "path": "effectiveDateTime.value",
+          "valuePeriod": {
+            "start": "2015-01-01"
+          }
+        }
+      ]
+    }
+  ],
+  "document": {
+    "contentType": "application/xml+elm",
+    "url": "http://example.org/libraries/library-cpb.elm.xml"
+  }
+}

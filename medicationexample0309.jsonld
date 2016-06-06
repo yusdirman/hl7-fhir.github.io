@@ -1,0 +1,160 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Medication",
+  "resourceType": "Medication",
+  "Resource.id": {
+    "value": "med0309"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: med0309</p><p><b>contained</b>: </p><p><b>code</b>: Tylenol PM <span>(Details : {http://hl7.org/fhir/sid/ndc code '50580-506-02' = '??', given as 'Tylenol PM'})</span></p><p><b>isBrand</b>: true</p><p><b>manufacturer</b>: id: org2; name: Johnson and Johnson Consume Inc, McNeil Consumer Healthcare Division</p><blockquote><p><b>product</b></p><p><b>form</b>: Film-coated tablet (qualifier value) <span>(Details : {SNOMED CT code '385057009' = 'Film-coated tablet', given as 'Film-coated tablet (qualifier value)'})</span></p><blockquote><p><b>ingredient</b></p><p><b>item</b>: Acetaminophen 500 MG <span>(Details : {RxNorm code '315266' = '??', given as 'Acetaminophen 500 MG'})</span></p><p><b>amount</b>: 500 mg<span> (Details: http://unitsofmeasure.org code mg = 'mg')</span>/1 Tab<span> (Details: http://hl7.org/fhir/v3/orderableDrugForm code Tab = '??')</span></p></blockquote><blockquote><p><b>ingredient</b></p><p><b>item</b>: Diphenhydramine Hydrochloride 25 mg <span>(Details : {RxNorm code '901813' = '??', given as 'Diphenhydramine Hydrochloride 25 mg'})</span></p><p><b>amount</b>: 25 mg<span> (Details: http://unitsofmeasure.org code mg = 'mg')</span>/1 Tab<span> (Details: http://hl7.org/fhir/v3/orderableDrugForm code Tab = '??')</span></p></blockquote><h3>Batches</h3><table><tr><td>-</td><td><b>LotNumber</b></td><td><b>ExpirationDate</b></td></tr><tr><td>*</td><td>9494788</td><td>May 22, 2017</td></tr></table></blockquote></div>"
+    }
+  },
+  "Organization": [
+    {
+      "Resource.id": {
+        "value": "org2"
+      },
+      "Organization.name": {
+        "value": "Johnson and Johnson Consume Inc, McNeil Consumer Healthcare Division"
+      }
+    }
+  ],
+  "Medication.code": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/sid/ndc"
+        },
+        "Coding.code": {
+          "value": "50580-506-02"
+        },
+        "Coding.display": {
+          "value": "Tylenol PM"
+        }
+      }
+    ]
+  },
+  "Medication.isBrand": {
+    "value": true
+  },
+  "Medication.manufacturer": {
+    "Reference.reference": {
+      "value": "#org2"
+    }
+  },
+  "Medication.product": {
+    "Medication.product.form": {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "value": "http://snomed.info/sct"
+          },
+          "Coding.code": {
+            "value": "385057009"
+          },
+          "Coding.display": {
+            "value": "Film-coated tablet (qualifier value)"
+          }
+        }
+      ],
+      "concept": "http://snomed.info/sct#385057009"
+    },
+    "Medication.product.ingredient": [
+      {
+        "Medication.product.ingredient.itemCodeableConcept": {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "value": "http://www.nlm.nih.gov/research/umls/rxnorm"
+              },
+              "Coding.code": {
+                "value": "315266"
+              },
+              "Coding.display": {
+                "value": "Acetaminophen 500 MG"
+              }
+            }
+          ]
+        },
+        "Medication.product.ingredient.amount": {
+          "Ratio.numerator": {
+            "Quantity.value": {
+              "value": 500
+            },
+            "Quantity.system": {
+              "value": "http://unitsofmeasure.org"
+            },
+            "Quantity.code": {
+              "value": "mg"
+            }
+          },
+          "Ratio.denominator": {
+            "Quantity.value": {
+              "value": 1
+            },
+            "Quantity.system": {
+              "value": "http://hl7.org/fhir/v3/orderableDrugForm"
+            },
+            "Quantity.code": {
+              "value": "Tab"
+            }
+          }
+        }
+      },
+      {
+        "Medication.product.ingredient.itemCodeableConcept": {
+          "CodeableConcept.coding": [
+            {
+              "Coding.system": {
+                "value": "http://www.nlm.nih.gov/research/umls/rxnorm"
+              },
+              "Coding.code": {
+                "value": "901813"
+              },
+              "Coding.display": {
+                "value": "Diphenhydramine Hydrochloride 25 mg"
+              }
+            }
+          ]
+        },
+        "Medication.product.ingredient.amount": {
+          "Ratio.numerator": {
+            "Quantity.value": {
+              "value": 25
+            },
+            "Quantity.system": {
+              "value": "http://unitsofmeasure.org"
+            },
+            "Quantity.code": {
+              "value": "mg"
+            }
+          },
+          "Ratio.denominator": {
+            "Quantity.value": {
+              "value": 1
+            },
+            "Quantity.system": {
+              "value": "http://hl7.org/fhir/v3/orderableDrugForm"
+            },
+            "Quantity.code": {
+              "value": "Tab"
+            }
+          }
+        }
+      }
+    ],
+    "Medication.product.batch": [
+      {
+        "Medication.product.batch.lotNumber": {
+          "value": "9494788"
+        },
+        "Medication.product.batch.expirationDate": {
+          "value": "2017-05-22"
+        }
+      }
+    ]
+  }
+}

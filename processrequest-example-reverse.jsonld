@@ -1,0 +1,46 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/ProcessRequest",
+  "resourceType": "ProcessRequest",
+  "Resource.id": {
+    "value": "87654"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">A human-readable rendering of the Reversal ProcessRequest</div>"
+    }
+  },
+  "ProcessRequest.action": {
+    "value": "cancel"
+  },
+  "ProcessRequest.identifier": [
+    {
+      "Identifier.system": {
+        "value": "http://happyvalley.com/processrequest"
+      },
+      "Identifier.value": {
+        "value": "76543"
+      }
+    }
+  ],
+  "ProcessRequest.created": {
+    "value": "2014-08-16"
+  },
+  "ProcessRequest.organizationReference": {
+    "Reference.reference": {
+      "value": "Organization/1"
+    },
+    "reference": "http://hl7.org/fhir//Organization/1"
+  },
+  "ProcessRequest.requestReference": {
+    "Reference.reference": {
+      "value": "http://BenefitsInc.com/fhir/oralhealthclaim/12345"
+    },
+    "reference": "http://BenefitsInc.com/fhir/oralhealthclaim/12345"
+  },
+  "ProcessRequest.nullify": {
+    "value": false
+  }
+}

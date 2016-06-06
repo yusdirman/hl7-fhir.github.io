@@ -1,0 +1,52 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/DeviceUseRequest",
+  "resourceType": "DeviceUseRequest",
+  "Resource.id": {
+    "value": "deviceuserequest-example-qicore"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">To be filled out at a later time</div>"
+    }
+  },
+  "DomainResource.extension": [
+    {
+      "Extension.url": {
+        "value": "http://hl7.org/fhir/StructureDefinition/deviceuserequest-reasonRejected"
+      },
+      "Extension.valueCodeableConcept": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://hl7.org/fhir/v3/ActReason"
+            },
+            "Coding.code": {
+              "value": "MEDPREC"
+            },
+            "Coding.display": {
+              "value": "medical precaution"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "DeviceUseRequest.status": {
+    "value": "rejected"
+  },
+  "DeviceUseRequest.device": {
+    "Reference.reference": {
+      "value": "Device/example"
+    },
+    "reference": "http://hl7.org/fhir//Device/example"
+  },
+  "DeviceUseRequest.subject": {
+    "Reference.reference": {
+      "value": "Patient/example"
+    },
+    "reference": "http://hl7.org/fhir//Patient/example"
+  }
+}

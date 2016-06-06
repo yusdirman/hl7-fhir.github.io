@@ -1,0 +1,83 @@
+{
+  "resourceType": "ValueSet",
+  "id": "hspc-hspc-viplevel",
+  "meta": {
+    "lastUpdated": "2016-06-06T20:14:04.181+00:00",
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>HSPC VIP Level</h2><p>A set of codes that describe the kind of documentation used to validate a date of birth.</p><p>This value set includes codes from the following code systems:</p><ul><li>Include these codes as defined in <a href=\"../v3/PatientImportance/cs.html\">http://hl7.org/fhir/v3/PatientImportance</a><table><tr><td><b>Code</b></td><td><b>Display</b></td></tr><tr><td>BM</td><td>Board member</td><td>Board member of health care organization</td></tr><tr><td>FD</td><td>Financial donor</td><td>Financial donor to the health care organization</td></tr><tr><td>FOR</td><td>Foreign dignitary</td><td>Foreign citizen dignitary of interest to the health care organization</td></tr><tr><td>GOVT</td><td>Government dignitary</td><td>Government dignitary of interest to the organization</td></tr><tr><td>DFM</td><td>Physician family member</td><td>Family member of staff physician</td></tr><tr><td>SFM</td><td>Staff family member</td><td>Family member of staff member</td></tr><tr><td>STF</td><td>Staff memeber</td><td>Staff member of the health care organization</td></tr><tr><td>DR</td><td>Staff physician</td><td>Member of the health care organization physician staff</td></tr><tr><td>VIP</td><td>Very important person</td><td>Very important person of interest to the health care organization</td></tr></table></li></ul></div>"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/valueset-oid",
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.760"
+    }
+  ],
+  "url": "http://hl7.org/fhir/ValueSet/hspc-hspc-viplevel",
+  "version": "1.4.0",
+  "name": "HSPC VIP Level",
+  "status": "draft",
+  "experimental": true,
+  "publisher": "HSPC",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "other",
+          "value": "http://healthcaresoa.org"
+        }
+      ]
+    }
+  ],
+  "date": "2016-06-06T20:14:04+00:00",
+  "description": "A set of codes that describe the kind of documentation used to validate a date of birth.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/v3/PatientImportance",
+        "concept": [
+          {
+            "code": "BM",
+            "display": "Board member"
+          },
+          {
+            "code": "FD",
+            "display": "Financial donor"
+          },
+          {
+            "code": "FOR",
+            "display": "Foreign dignitary"
+          },
+          {
+            "code": "GOVT",
+            "display": "Government dignitary"
+          },
+          {
+            "code": "DFM",
+            "display": "Physician family member"
+          },
+          {
+            "code": "SFM",
+            "display": "Staff family member"
+          },
+          {
+            "code": "STF",
+            "display": "Staff memeber"
+          },
+          {
+            "code": "DR",
+            "display": "Staff physician"
+          },
+          {
+            "code": "VIP",
+            "display": "Very important person"
+          }
+        ]
+      }
+    ]
+  }
+}

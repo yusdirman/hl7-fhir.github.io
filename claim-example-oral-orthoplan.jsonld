@@ -1,0 +1,582 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Claim",
+  "resourceType": "Claim",
+  "Resource.id": {
+    "value": "100153"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">A human-readable rendering of the Oral Health Claim</div>"
+    }
+  },
+  "Claim.type": {
+    "value": "oral"
+  },
+  "Claim.identifier": [
+    {
+      "Identifier.system": {
+        "value": "http://happyvalley.com/claim"
+      },
+      "Identifier.value": {
+        "value": "12355"
+      }
+    }
+  ],
+  "Claim.created": {
+    "value": "2015-03-16"
+  },
+  "Claim.targetReference": {
+    "Reference.reference": {
+      "value": "Organization/2"
+    },
+    "reference": "http://hl7.org/fhir//Organization/2"
+  },
+  "Claim.organizationReference": {
+    "Reference.reference": {
+      "value": "Organization/1"
+    },
+    "reference": "http://hl7.org/fhir//Organization/1"
+  },
+  "Claim.use": {
+    "value": "proposed"
+  },
+  "Claim.priority": {
+    "Coding.code": {
+      "value": "normal"
+    }
+  },
+  "Claim.fundsReserve": {
+    "Coding.code": {
+      "value": "provider"
+    }
+  },
+  "Claim.payee": {
+    "Claim.payee.type": {
+      "Coding.code": {
+        "value": "provider"
+      }
+    }
+  },
+  "Claim.diagnosis": [
+    {
+      "Claim.diagnosis.sequence": {
+        "value": 1
+      },
+      "Claim.diagnosis.diagnosis": {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/sid/icd-10"
+        },
+        "Coding.code": {
+          "value": "123457"
+        }
+      }
+    }
+  ],
+  "Claim.patientReference": {
+    "Reference.reference": {
+      "value": "Patient/1"
+    },
+    "reference": "http://hl7.org/fhir//Patient/1"
+  },
+  "Claim.coverage": [
+    {
+      "Claim.coverage.sequence": {
+        "value": 1
+      },
+      "Claim.coverage.focal": {
+        "value": true
+      },
+      "Claim.coverage.coverageReference": {
+        "Reference.reference": {
+          "value": "Coverage/9876B1"
+        },
+        "reference": "http://hl7.org/fhir//Coverage/9876B1"
+      }
+    }
+  ],
+  "Claim.item": [
+    {
+      "Claim.item.sequence": {
+        "value": 1
+      },
+      "Claim.item.type": {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/v3/ActCode"
+        },
+        "Coding.code": {
+          "value": "FRAMEING"
+        }
+      },
+      "Claim.item.careTeam": [
+        {
+          "Claim.item.careTeam.providerReference": {
+            "Reference.reference": {
+              "value": "Practitioner/example"
+            },
+            "reference": "http://hl7.org/fhir//Practitioner/example"
+          }
+        }
+      ],
+      "Claim.item.diagnosisLinkId": [
+        {
+          "value": 1
+        }
+      ],
+      "Claim.item.service": {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/oralservicecodes"
+        },
+        "Coding.code": {
+          "value": "ORTHPLAN"
+        }
+      },
+      "Claim.item.servicedDate": {
+        "value": "2015-05-16"
+      },
+      "Claim.item.unitPrice": {
+        "Quantity.value": {
+          "value": 9000.00
+        },
+        "Quantity.system": {
+          "value": "urn:iso:std:iso:4217"
+        },
+        "Quantity.code": {
+          "value": "USD"
+        }
+      },
+      "Claim.item.net": {
+        "Quantity.value": {
+          "value": 9000.00
+        },
+        "Quantity.system": {
+          "value": "urn:iso:std:iso:4217"
+        },
+        "Quantity.code": {
+          "value": "USD"
+        }
+      },
+      "Claim.item.detail": [
+        {
+          "Claim.item.detail.sequence": {
+            "value": 1
+          },
+          "Claim.item.detail.type": {
+            "Coding.system": {
+              "value": "http://hl7.org/fhir/v3/ActCode"
+            },
+            "Coding.code": {
+              "value": "CSINV"
+            }
+          },
+          "Claim.item.detail.service": {
+            "Coding.system": {
+              "value": "http://hl7.org/fhir/oralservicecodes"
+            },
+            "Coding.code": {
+              "value": "ORTHOEXAM"
+            }
+          },
+          "Claim.item.detail.unitPrice": {
+            "Quantity.value": {
+              "value": 1000.00
+            },
+            "Quantity.system": {
+              "value": "urn:iso:std:iso:4217"
+            },
+            "Quantity.code": {
+              "value": "USD"
+            }
+          },
+          "Claim.item.detail.net": {
+            "Quantity.value": {
+              "value": 1000.00
+            },
+            "Quantity.system": {
+              "value": "urn:iso:std:iso:4217"
+            },
+            "Quantity.code": {
+              "value": "USD"
+            }
+          }
+        },
+        {
+          "Claim.item.detail.sequence": {
+            "value": 2
+          },
+          "Claim.item.detail.type": {
+            "Coding.system": {
+              "value": "http://hl7.org/fhir/v3/ActCode"
+            },
+            "Coding.code": {
+              "value": "CSINV"
+            }
+          },
+          "Claim.item.detail.service": {
+            "Coding.system": {
+              "value": "http://hl7.org/fhir/oralservicecodes"
+            },
+            "Coding.code": {
+              "value": "ORTHODIAG"
+            }
+          },
+          "Claim.item.detail.unitPrice": {
+            "Quantity.value": {
+              "value": 1500.00
+            },
+            "Quantity.system": {
+              "value": "urn:iso:std:iso:4217"
+            },
+            "Quantity.code": {
+              "value": "USD"
+            }
+          },
+          "Claim.item.detail.net": {
+            "Quantity.value": {
+              "value": 1500.00
+            },
+            "Quantity.system": {
+              "value": "urn:iso:std:iso:4217"
+            },
+            "Quantity.code": {
+              "value": "USD"
+            }
+          }
+        },
+        {
+          "Claim.item.detail.sequence": {
+            "value": 3
+          },
+          "Claim.item.detail.type": {
+            "Coding.system": {
+              "value": "http://hl7.org/fhir/v3/ActCode"
+            },
+            "Coding.code": {
+              "value": "CSINV"
+            }
+          },
+          "Claim.item.detail.service": {
+            "Coding.system": {
+              "value": "http://hl7.org/fhir/oralservicecodes"
+            },
+            "Coding.code": {
+              "value": "ORTHOINITIAL"
+            }
+          },
+          "Claim.item.detail.unitPrice": {
+            "Quantity.value": {
+              "value": 500.00
+            },
+            "Quantity.system": {
+              "value": "urn:iso:std:iso:4217"
+            },
+            "Quantity.code": {
+              "value": "USD"
+            }
+          },
+          "Claim.item.detail.net": {
+            "Quantity.value": {
+              "value": 500.00
+            },
+            "Quantity.system": {
+              "value": "urn:iso:std:iso:4217"
+            },
+            "Quantity.code": {
+              "value": "USD"
+            }
+          }
+        },
+        {
+          "Claim.item.detail.sequence": {
+            "value": 4
+          },
+          "Claim.item.detail.type": {
+            "Coding.system": {
+              "value": "http://hl7.org/fhir/v3/ActCode"
+            },
+            "Coding.code": {
+              "value": "CSINV"
+            }
+          },
+          "Claim.item.detail.service": {
+            "Coding.system": {
+              "value": "http://hl7.org/fhir/oralservicecodes"
+            },
+            "Coding.code": {
+              "value": "ORTHOMONTHS"
+            }
+          },
+          "Claim.item.detail.quantity": {
+            "Quantity.value": {
+              "value": 24
+            }
+          }
+        },
+        {
+          "Claim.item.detail.sequence": {
+            "value": 5
+          },
+          "Claim.item.detail.type": {
+            "Coding.system": {
+              "value": "http://hl7.org/fhir/v3/ActCode"
+            },
+            "Coding.code": {
+              "value": "CSINV"
+            }
+          },
+          "Claim.item.detail.service": {
+            "Coding.system": {
+              "value": "http://hl7.org/fhir/oralservicecodes"
+            },
+            "Coding.code": {
+              "value": "ORTHOPERIODIC"
+            }
+          },
+          "Claim.item.detail.quantity": {
+            "Quantity.value": {
+              "value": 24
+            }
+          },
+          "Claim.item.detail.unitPrice": {
+            "Quantity.value": {
+              "value": 250.00
+            },
+            "Quantity.system": {
+              "value": "urn:iso:std:iso:4217"
+            },
+            "Quantity.code": {
+              "value": "USD"
+            }
+          },
+          "Claim.item.detail.net": {
+            "Quantity.value": {
+              "value": 250.00
+            },
+            "Quantity.system": {
+              "value": "urn:iso:std:iso:4217"
+            },
+            "Quantity.code": {
+              "value": "USD"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Claim.item.sequence": {
+        "value": 2
+      },
+      "Claim.item.type": {
+        "Coding.code": {
+          "value": "service"
+        }
+      },
+      "Claim.item.careTeam": [
+        {
+          "Claim.item.careTeam.providerReference": {
+            "Reference.reference": {
+              "value": "Practitioner/example"
+            },
+            "reference": "http://hl7.org/fhir//Practitioner/example"
+          }
+        }
+      ],
+      "Claim.item.service": {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/oralservicecodes"
+        },
+        "Coding.code": {
+          "value": "21211"
+        }
+      },
+      "Claim.item.servicedDate": {
+        "value": "2014-08-16"
+      },
+      "Claim.item.unitPrice": {
+        "Quantity.value": {
+          "value": 105.00
+        },
+        "Quantity.system": {
+          "value": "urn:iso:std:iso:4217"
+        },
+        "Quantity.code": {
+          "value": "USD"
+        }
+      },
+      "Claim.item.net": {
+        "Quantity.value": {
+          "value": 105.00
+        },
+        "Quantity.system": {
+          "value": "urn:iso:std:iso:4217"
+        },
+        "Quantity.code": {
+          "value": "USD"
+        }
+      },
+      "Claim.item.bodySite": {
+        "Coding.system": {
+          "value": "http://fdi.org/fhir/oraltoothcodes"
+        },
+        "Coding.code": {
+          "value": "21"
+        }
+      },
+      "Claim.item.subSite": [
+        {
+          "Coding.system": {
+            "value": "http://fdi.org/fhir/oralsurfacecodes"
+          },
+          "Coding.code": {
+            "value": "L"
+          }
+        }
+      ]
+    },
+    {
+      "Claim.item.sequence": {
+        "value": 3
+      },
+      "Claim.item.type": {
+        "Coding.code": {
+          "value": "group"
+        }
+      },
+      "Claim.item.careTeam": [
+        {
+          "Claim.item.careTeam.providerReference": {
+            "Reference.reference": {
+              "value": "Practitioner/example"
+            },
+            "reference": "http://hl7.org/fhir//Practitioner/example"
+          }
+        }
+      ],
+      "Claim.item.service": {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/oralservicecodes"
+        },
+        "Coding.code": {
+          "value": "27211"
+        }
+      },
+      "Claim.item.servicedDate": {
+        "value": "2014-08-16"
+      },
+      "Claim.item.unitPrice": {
+        "Quantity.value": {
+          "value": 1100.00
+        },
+        "Quantity.system": {
+          "value": "urn:iso:std:iso:4217"
+        },
+        "Quantity.code": {
+          "value": "USD"
+        }
+      },
+      "Claim.item.net": {
+        "Quantity.value": {
+          "value": 1100.00
+        },
+        "Quantity.system": {
+          "value": "urn:iso:std:iso:4217"
+        },
+        "Quantity.code": {
+          "value": "USD"
+        }
+      },
+      "Claim.item.bodySite": {
+        "Coding.system": {
+          "value": "http://fdi.org/fhir/oraltoothcodes"
+        },
+        "Coding.code": {
+          "value": "36"
+        }
+      },
+      "Claim.item.detail": [
+        {
+          "Claim.item.detail.sequence": {
+            "value": 1
+          },
+          "Claim.item.detail.type": {
+            "Coding.code": {
+              "value": "service"
+            }
+          },
+          "Claim.item.detail.service": {
+            "Coding.system": {
+              "value": "http://hl7.org/fhir/oralservicecodes"
+            },
+            "Coding.code": {
+              "value": "27211"
+            }
+          },
+          "Claim.item.detail.unitPrice": {
+            "Quantity.value": {
+              "value": 750.00
+            },
+            "Quantity.system": {
+              "value": "urn:iso:std:iso:4217"
+            },
+            "Quantity.code": {
+              "value": "USD"
+            }
+          },
+          "Claim.item.detail.net": {
+            "Quantity.value": {
+              "value": 750.00
+            },
+            "Quantity.system": {
+              "value": "urn:iso:std:iso:4217"
+            },
+            "Quantity.code": {
+              "value": "USD"
+            }
+          }
+        },
+        {
+          "Claim.item.detail.sequence": {
+            "value": 2
+          },
+          "Claim.item.detail.type": {
+            "Coding.code": {
+              "value": "service"
+            }
+          },
+          "Claim.item.detail.service": {
+            "Coding.system": {
+              "value": "http://hl7.org/fhir/oralservicecodes"
+            },
+            "Coding.code": {
+              "value": "lab"
+            }
+          },
+          "Claim.item.detail.unitPrice": {
+            "Quantity.value": {
+              "value": 350.00
+            },
+            "Quantity.system": {
+              "value": "urn:iso:std:iso:4217"
+            },
+            "Quantity.code": {
+              "value": "USD"
+            }
+          },
+          "Claim.item.detail.net": {
+            "Quantity.value": {
+              "value": 350.00
+            },
+            "Quantity.system": {
+              "value": "urn:iso:std:iso:4217"
+            },
+            "Quantity.code": {
+              "value": "USD"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

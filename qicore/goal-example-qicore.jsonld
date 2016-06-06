@@ -1,0 +1,142 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Goal",
+  "resourceType": "Goal",
+  "Resource.id": {
+    "value": "goal-example-qicore"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "additional"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t\t\t<p> A simple care goal for a patient to lose weight due to obesity.</p>\n\t\t</div>"
+    }
+  },
+  "DomainResource.extension": [
+    {
+      "Extension.url": {
+        "value": "http://hl7.org/fhir/StructureDefinition/goal-target"
+      },
+      "Element.extension": [
+        {
+          "Extension.url": {
+            "value": "measure"
+          },
+          "Extension.valueCodeableConcept": {
+            "CodeableConcept.coding": [
+              {
+                "Coding.system": {
+                  "value": "http://loinc.org"
+                },
+                "Coding.code": {
+                  "value": "3141-9"
+                },
+                "Coding.display": {
+                  "value": "Weight Measured"
+                }
+              }
+            ],
+            "concept": "http://loinc.org/owl#3141-9"
+          }
+        },
+        {
+          "Extension.url": {
+            "value": "detail"
+          },
+          "Extension.valueRange": {
+            "Range.low": {
+              "Quantity.value": {
+                "value": 160
+              },
+              "Quantity.unit": {
+                "value": "lbs"
+              },
+              "Quantity.system": {
+                "value": "http://unitsofmeasure.org"
+              },
+              "Quantity.code": {
+                "value": "[lb_av]"
+              }
+            },
+            "Range.high": {
+              "Quantity.value": {
+                "value": 180
+              },
+              "Quantity.unit": {
+                "value": "lbs"
+              },
+              "Quantity.system": {
+                "value": "http://unitsofmeasure.org"
+              },
+              "Quantity.code": {
+                "value": "[lb_av]"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Extension.url": {
+        "value": "http://hl7.org/fhir/StructureDefinition/goal-reasonRejected"
+      },
+      "Extension.valueCodeableConcept": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://hl7.org/fhir/v3/ActReason"
+            },
+            "Coding.code": {
+              "value": "PREFUS"
+            },
+            "Coding.display": {
+              "value": "patient refuse"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "Goal.subject": {
+    "Reference.reference": {
+      "value": "Patient/example"
+    },
+    "Reference.display": {
+      "value": "Peter James Chalmers"
+    },
+    "reference": "http://hl7.org/fhir//Patient/example"
+  },
+  "Goal.category": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "value": "http://snomed.info/sct"
+          },
+          "Coding.code": {
+            "value": "289169006"
+          },
+          "Coding.display": {
+            "value": "weight loss"
+          }
+        }
+      ]
+    }
+  ],
+  "Goal.description": {
+    "value": "Target weight is 160 to 180 lbs."
+  },
+  "Goal.status": {
+    "value": "rejected"
+  },
+  "Goal.addresses": [
+    {
+      "Reference.reference": {
+        "value": "Condition/12345"
+      },
+      "Reference.display": {
+        "value": "obesity"
+      }
+    }
+  ]
+}

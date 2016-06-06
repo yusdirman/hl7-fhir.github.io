@@ -1,0 +1,854 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Protocol",
+  "resourceType": "Protocol",
+  "Resource.id": {
+    "value": "study"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t\t\t<p>\n\t\t\t\t<b>id: </b>study, </p>\n\t\t\t<p>\n\t\t\t\t<b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#arm arm-dose1, </p>\n\t\t\t<p>\n\t\t\t\t<b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#arm arm-dose2, </p>\n\t\t\t<p>\n\t\t\t\t<b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#epoch epoch-screening, </p>\n\t\t\t<p>\n\t\t\t\t<b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#epoch epoch-single-blind-run-in, </p>\n\t\t\t<p>\n\t\t\t\t<b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#epoch epoch-treatment-phase, </p>\n\t\t\t<p>\n\t\t\t\t<b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#epoch epoch-follow-up, </p>\n\t\t\t<p>\n\t\t\t\t<b>status: </b>active, </p>\n\t\t\t<p>\n\t\t\t\t<b>type: </b>study, </p>\n\t\t\t<p>\n\t\t\t\t<b>purpose: </b>Defines the execution of study AD-4833PNFP-341, </p>\n\t\t\t<p>\n\t\t\t\t<b>step: </b>, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.arm, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.epoch, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence, <b>name: </b>SCRN, <b>description: </b>Screen, <b>precondition: </b>, <b>description: </b>Informed Consent, <b>exit: </b>, <b>description: </b>Screening assessments complete, </p>\n\t\t\t<p>\n\t\t\t\t<b>step: </b>, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.arm, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.epoch, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.armAssignment, <b>name: </b>SBRI, <b>description: </b>Single Blind Run-In, <b>duration: </b>, <b>value: </b>1, <b>system: </b>http://unitsofmeasure.org, <b>code: </b>wk, <b>precondition: </b>, <b>description: </b>Initial Single Blind Placebo dose, <b>exit: </b>, <b>description: </b>1 week after start of Element, </p>\n\t\t\t<p>\n\t\t\t\t<b>step: </b>, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.arm, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.epoch, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence, <b>name: </b>DOSE 1, <b>description: </b>Administer 0.5mg [Drug A] QD, <b>duration: </b>, <b>value: </b>30, <b>system: </b>http://unitsofmeasure.org, <b>code: </b>wk, <b>precondition: </b>, <b>description: </b>First dose of treatment where total drug dose of [Drug A] per day is 0.5 mg., <b>exit: </b>, <b>description: </b>30 weeks after start of Element, </p>\n\t\t\t<p>\n\t\t\t\t<b>step: </b>, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.arm, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.epoch, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence, <b>name: </b>FLWUP, <b>description: </b>Follow-Up, <b>precondition: </b>, <b>description: </b>Last dose of treatment, <b>exit: </b>, <b>description: </b>2 weeks after start of Element, </p>\n\t\t\t<p>\n\t\t\t\t<b>step: </b>, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.arm, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.epoch, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence, <b>name: </b>SCRN, <b>description: </b>Screen, <b>precondition: </b>, <b>description: </b>Informed Consent, <b>exit: </b>, <b>description: </b>Screening assessments complete, </p>\n\t\t\t<p>\n\t\t\t\t<b>step: </b>, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.arm, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.epoch, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.armAssignment, <b>name: </b>SBRI, <b>description: </b>Single Blind Run-In, <b>duration: </b>, <b>value: </b>1, <b>system: </b>http://unitsofmeasure.org, <b>code: </b>wk, <b>precondition: </b>, <b>description: </b>First dose of Single Blind Placebo, <b>exit: </b>, <b>description: </b>1 week after start of Element, </p>\n\t\t\t<p>\n\t\t\t\t<b>step: </b>, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.arm, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.epoch, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence, <b>name: </b>1.0 mg Dose, <b>description: </b>Administer 1.0 mg [Drug A] QD, <b>duration: </b>, <b>value: </b>30, <b>system: </b>http://unitsofmeasure.org, <b>code: </b>wk, <b>precondition: </b>, <b>description: </b>Intial dose of treatment where total drug dose of [Drug A] per day is 1.0 mg., <b>exit: </b>, <b>description: </b>30 weeks after start of Element, </p>\n\t\t\t<p>\n\t\t\t\t<b>step: </b>, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.arm, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.epoch, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence, <b>name: </b>FLWUP, <b>description: </b>Follow-Up, <b>precondition: </b>, <b>description: </b>Last dose of treatment, <b>exit: </b>, <b>description: </b>2 weeks after start of Element, </p>\n\t\t\t<p>\n\t\t\t\t<b>step: </b>, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence, <b>name: </b>VISIT 1, <b>precondition: </b>, <b>description: </b>Screening, <b>activity: </b>, <b>detail: </b>, <b>category: </b>encounter, </p>\n\t\t\t<p>\n\t\t\t\t<b>step: </b>, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence, <b>name: </b>VISIT 2, <b>precondition: </b>, <b>description: </b>single-blind placebo start, <b>activity: </b>, <b>detail: </b>, <b>category: </b>encounter, </p>\n\t\t\t<p>\n\t\t\t\t<b>step: </b>, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence, <b>name: </b>VISIT 3, <b>precondition: </b>, <b>description: </b>Treatment start, <b>activity: </b>, <b>detail: </b>, <b>category: </b>encounter, </p>\n\t\t\t<p>\n\t\t\t\t<b>step: </b>, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence, <b>name: </b>VISIT 4, <b>precondition: </b>, <b>description: </b>5 weeks after treatment start, <b>activity: </b>, <b>detail: </b>, <b>category: </b>encounter, </p>\n\t\t\t<p>\n\t\t\t\t<b>step: </b>, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence, <b>name: </b>VISIT 5, <b>precondition: </b>, <b>description: </b>10 weeks after treatment start, <b>activity: </b>, <b>detail: </b>, <b>category: </b>encounter, </p>\n\t\t\t<p>\n\t\t\t\t<b>step: </b>, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence, <b>name: </b>VISIT 6, <b>precondition: </b>, <b>description: </b>15 weeks after treatment start, <b>activity: </b>, <b>detail: </b>, <b>category: </b>encounter, </p>\n\t\t\t<p>\n\t\t\t\t<b>step: </b>, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence, <b>name: </b>VISIT 7, <b>precondition: </b>, <b>description: </b>20 weeks after treatment start, <b>activity: </b>, <b>detail: </b>, <b>category: </b>encounter, </p>\n\t\t\t<p>\n\t\t\t\t<b>step: </b>, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence, <b>name: </b>VISIT 8, <b>precondition: </b>, <b>description: </b>25 weeks after treatment start, <b>activity: </b>, <b>detail: </b>, <b>category: </b>encounter, </p>\n\t\t\t<p>\n\t\t\t\t<b>step: </b>, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence, <b>name: </b>VISIT 9, <b>precondition: </b>, <b>description: </b>30 weeks after treatment start, <b>activity: </b>, <b>detail: </b>, <b>category: </b>encounter, </p>\n\t\t\t<p>\n\t\t\t\t<b>step: </b>, <b>extension: </b>http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence, <b>name: </b>VISIT 10, <b>precondition: </b>, <b>description: </b>start of follow-up, <b>activity: </b>, <b>detail: </b>, <b>category: </b>encounter, </p>\n\t\t</div>"
+    }
+  },
+  "DomainResource.extension": [
+    {
+      "Element.id": {
+        "value": "arm-dose1"
+      },
+      "Extension.url": {
+        "value": "http://example.org/example-do-not-use/Profilestudyprotocol#arm"
+      },
+      "Element.extension": [
+        {
+          "Extension.url": {
+            "value": "http://example.org/example-do-not-use/Profilestudyprotocol#arm.name"
+          },
+          "Extension.valueString": {
+            "value": "0.5 mg Dose"
+          }
+        },
+        {
+          "Extension.url": {
+            "value": "http://example.org/example-do-not-use/Profilestudyprotocol#arm.description"
+          },
+          "Extension.valueString": {
+            "value": "Administering 0.5mg of [Drug A]"
+          }
+        }
+      ]
+    },
+    {
+      "Element.id": {
+        "value": "arm-dose2"
+      },
+      "Extension.url": {
+        "value": "http://example.org/example-do-not-use/Profilestudyprotocol#arm"
+      },
+      "Element.extension": [
+        {
+          "Extension.url": {
+            "value": "http://example.org/example-do-not-use/Profilestudyprotocol#arm.name"
+          },
+          "Extension.valueString": {
+            "value": "dose2"
+          }
+        },
+        {
+          "Extension.url": {
+            "value": "http://example.org/example-do-not-use/Profilestudyprotocol#arm.description"
+          },
+          "Extension.valueString": {
+            "value": "Administering 1.0mg of [Drug A]"
+          }
+        }
+      ]
+    },
+    {
+      "Element.id": {
+        "value": "epoch-screening"
+      },
+      "Extension.url": {
+        "value": "http://example.org/example-do-not-use/Profilestudyprotocol#epoch"
+      },
+      "Element.extension": [
+        {
+          "Extension.url": {
+            "value": "http://example.org/example-do-not-use/Profilestudyprotocol#epoch.name"
+          },
+          "Extension.valueString": {
+            "value": "Screening"
+          }
+        }
+      ]
+    },
+    {
+      "Element.id": {
+        "value": "epoch-single-blind-run-in"
+      },
+      "Extension.url": {
+        "value": "http://example.org/example-do-not-use/Profilestudyprotocol#epoch"
+      },
+      "Element.extension": [
+        {
+          "Extension.url": {
+            "value": "http://example.org/example-do-not-use/Profilestudyprotocol#epoch.name"
+          },
+          "Extension.valueString": {
+            "value": "Single blind run-in"
+          }
+        }
+      ]
+    },
+    {
+      "Element.id": {
+        "value": "epoch-treatment-phase"
+      },
+      "Extension.url": {
+        "value": "http://example.org/example-do-not-use/Profilestudyprotocol#epoch"
+      },
+      "Element.extension": [
+        {
+          "Extension.url": {
+            "value": "http://example.org/example-do-not-use/Profilestudyprotocol#epoch.name"
+          },
+          "Extension.valueString": {
+            "value": "Treatment"
+          }
+        }
+      ]
+    },
+    {
+      "Element.id": {
+        "value": "epoch-follow-up"
+      },
+      "Extension.url": {
+        "value": "http://example.org/example-do-not-use/Profilestudyprotocol#epoch"
+      },
+      "Element.extension": [
+        {
+          "Extension.url": {
+            "value": "http://example.org/example-do-not-use/Profilestudyprotocol#epoch.name"
+          },
+          "Extension.valueString": {
+            "value": "Follow up"
+          }
+        }
+      ]
+    }
+  ],
+  "Protocol.status": {
+    "value": "active"
+  },
+  "Protocol.type": {
+    "value": "study"
+  },
+  "Protocol.purpose": {
+    "value": "Defines the execution of study AD-4833PNFP-341"
+  },
+  "Protocol.step": [
+    {
+      "Element.extension": [
+        {
+          "Extension.url": {
+            "value": "http://example.org/example-do-not-use/Profilestudyprotocol#step.arm"
+          },
+          "Extension.valueUri": {
+            "value": "#arm-dose1"
+          }
+        },
+        {
+          "Extension.url": {
+            "value": "http://example.org/example-do-not-use/Profilestudyprotocol#step.epoch"
+          },
+          "Extension.valueUri": {
+            "value": "#epoch-screening"
+          }
+        },
+        {
+          "Extension.url": {
+            "value": "http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence"
+          },
+          "Extension.valueInteger": {
+            "value": 1
+          }
+        }
+      ],
+      "Protocol.step.name": {
+        "value": "SCRN"
+      },
+      "Protocol.step.description": {
+        "value": "Screen"
+      },
+      "Protocol.step.precondition": {
+        "Protocol.step.precondition.description": {
+          "value": "Informed Consent"
+        }
+      },
+      "Protocol.step.exit": {
+        "Protocol.step.precondition.description": {
+          "value": "Screening assessments complete"
+        }
+      }
+    },
+    {
+      "Element.extension": [
+        {
+          "Extension.url": {
+            "value": "http://example.org/example-do-not-use/Profilestudyprotocol#step.arm"
+          },
+          "Extension.valueUri": {
+            "value": "#arm-dose1"
+          }
+        },
+        {
+          "Extension.url": {
+            "value": "http://example.org/example-do-not-use/Profilestudyprotocol#step.epoch"
+          },
+          "Extension.valueUri": {
+            "value": "#epoch-single-blind-run-in"
+          }
+        },
+        {
+          "Extension.url": {
+            "value": "http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence"
+          },
+          "Extension.valueInteger": {
+            "value": 2
+          }
+        },
+        {
+          "Extension.url": {
+            "value": "http://example.org/example-do-not-use/Profilestudyprotocol#step.armAssignment"
+          },
+          "Extension.valueString": {
+            "value": "Randomized to Dose 1"
+          }
+        }
+      ],
+      "Protocol.step.name": {
+        "value": "SBRI"
+      },
+      "Protocol.step.description": {
+        "value": "Single Blind Run-In"
+      },
+      "Protocol.step.duration": {
+        "Quantity.value": {
+          "value": 1
+        },
+        "Quantity.system": {
+          "value": "http://unitsofmeasure.org"
+        },
+        "Quantity.code": {
+          "value": "wk"
+        }
+      },
+      "Protocol.step.precondition": {
+        "Protocol.step.precondition.description": {
+          "value": "Initial Single Blind Placebo dose"
+        }
+      },
+      "Protocol.step.exit": {
+        "Protocol.step.precondition.description": {
+          "value": "1 week after start of Element"
+        }
+      }
+    },
+    {
+      "Element.extension": [
+        {
+          "Extension.url": {
+            "value": "http://example.org/example-do-not-use/Profilestudyprotocol#step.arm"
+          },
+          "Extension.valueUri": {
+            "value": "#arm-dose1"
+          }
+        },
+        {
+          "Extension.url": {
+            "value": "http://example.org/example-do-not-use/Profilestudyprotocol#step.epoch"
+          },
+          "Extension.valueUri": {
+            "value": "#epoch-treatment-phase"
+          }
+        },
+        {
+          "Extension.url": {
+            "value": "http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence"
+          },
+          "Extension.valueInteger": {
+            "value": 3
+          }
+        }
+      ],
+      "Protocol.step.name": {
+        "value": "DOSE 1"
+      },
+      "Protocol.step.description": {
+        "value": "Administer 0.5mg [Drug A] QD"
+      },
+      "Protocol.step.duration": {
+        "Quantity.value": {
+          "value": 30
+        },
+        "Quantity.system": {
+          "value": "http://unitsofmeasure.org"
+        },
+        "Quantity.code": {
+          "value": "wk"
+        }
+      },
+      "Protocol.step.precondition": {
+        "Protocol.step.precondition.description": {
+          "value": "First dose of treatment where total drug dose of [Drug A] per day is 0.5 mg."
+        }
+      },
+      "Protocol.step.exit": {
+        "Protocol.step.precondition.description": {
+          "value": "30 weeks after start of Element"
+        }
+      }
+    },
+    {
+      "Element.extension": [
+        {
+          "Extension.url": {
+            "value": "http://example.org/example-do-not-use/Profilestudyprotocol#step.arm"
+          },
+          "Extension.valueUri": {
+            "value": "#arm-dose1"
+          }
+        },
+        {
+          "Extension.url": {
+            "value": "http://example.org/example-do-not-use/Profilestudyprotocol#step.epoch"
+          },
+          "Extension.valueUri": {
+            "value": "#epoch-follow-up"
+          }
+        },
+        {
+          "Extension.url": {
+            "value": "http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence"
+          },
+          "Extension.valueInteger": {
+            "value": 4
+          }
+        }
+      ],
+      "Protocol.step.name": {
+        "value": "FLWUP"
+      },
+      "Protocol.step.description": {
+        "value": "Follow-Up"
+      },
+      "Protocol.step.precondition": {
+        "Protocol.step.precondition.description": {
+          "value": "Last dose of treatment"
+        }
+      },
+      "Protocol.step.exit": {
+        "Protocol.step.precondition.description": {
+          "value": "2 weeks after start of Element"
+        }
+      }
+    },
+    {
+      "Element.extension": [
+        {
+          "Extension.url": {
+            "value": "http://example.org/example-do-not-use/Profilestudyprotocol#step.arm"
+          },
+          "Extension.valueUri": {
+            "value": "#arm-dose2"
+          }
+        },
+        {
+          "Extension.url": {
+            "value": "http://example.org/example-do-not-use/Profilestudyprotocol#step.epoch"
+          },
+          "Extension.valueUri": {
+            "value": "#epoch-screening"
+          }
+        },
+        {
+          "Extension.url": {
+            "value": "http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence"
+          },
+          "Extension.valueInteger": {
+            "value": 1
+          }
+        }
+      ],
+      "Protocol.step.name": {
+        "value": "SCRN"
+      },
+      "Protocol.step.description": {
+        "value": "Screen"
+      },
+      "Protocol.step.precondition": {
+        "Protocol.step.precondition.description": {
+          "value": "Informed Consent"
+        }
+      },
+      "Protocol.step.exit": {
+        "Protocol.step.precondition.description": {
+          "value": "Screening assessments complete"
+        }
+      }
+    },
+    {
+      "Element.extension": [
+        {
+          "Extension.url": {
+            "value": "http://example.org/example-do-not-use/Profilestudyprotocol#step.arm"
+          },
+          "Extension.valueUri": {
+            "value": "#arm-dose2"
+          }
+        },
+        {
+          "Extension.url": {
+            "value": "http://example.org/example-do-not-use/Profilestudyprotocol#step.epoch"
+          },
+          "Extension.valueUri": {
+            "value": "#epoch-single-blind-run-in"
+          }
+        },
+        {
+          "Extension.url": {
+            "value": "http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence"
+          },
+          "Extension.valueInteger": {
+            "value": 2
+          }
+        },
+        {
+          "Extension.url": {
+            "value": "http://example.org/example-do-not-use/Profilestudyprotocol#step.armAssignment"
+          },
+          "Extension.valueString": {
+            "value": "Randomized to 1.0 mg"
+          }
+        }
+      ],
+      "Protocol.step.name": {
+        "value": "SBRI"
+      },
+      "Protocol.step.description": {
+        "value": "Single Blind Run-In"
+      },
+      "Protocol.step.duration": {
+        "Quantity.value": {
+          "value": 1
+        },
+        "Quantity.system": {
+          "value": "http://unitsofmeasure.org"
+        },
+        "Quantity.code": {
+          "value": "wk"
+        }
+      },
+      "Protocol.step.precondition": {
+        "Protocol.step.precondition.description": {
+          "value": "First dose of Single Blind Placebo"
+        }
+      },
+      "Protocol.step.exit": {
+        "Protocol.step.precondition.description": {
+          "value": "1 week after start of Element"
+        }
+      }
+    },
+    {
+      "Element.extension": [
+        {
+          "Extension.url": {
+            "value": "http://example.org/example-do-not-use/Profilestudyprotocol#step.arm"
+          },
+          "Extension.valueUri": {
+            "value": "#arm-dose2"
+          }
+        },
+        {
+          "Extension.url": {
+            "value": "http://example.org/example-do-not-use/Profilestudyprotocol#step.epoch"
+          },
+          "Extension.valueUri": {
+            "value": "#epoch-treatment-phase"
+          }
+        },
+        {
+          "Extension.url": {
+            "value": "http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence"
+          },
+          "Extension.valueInteger": {
+            "value": 3
+          }
+        }
+      ],
+      "Protocol.step.name": {
+        "value": "1.0 mg Dose"
+      },
+      "Protocol.step.description": {
+        "value": "Administer 1.0 mg [Drug A] QD"
+      },
+      "Protocol.step.duration": {
+        "Quantity.value": {
+          "value": 30
+        },
+        "Quantity.system": {
+          "value": "http://unitsofmeasure.org"
+        },
+        "Quantity.code": {
+          "value": "wk"
+        }
+      },
+      "Protocol.step.precondition": {
+        "Protocol.step.precondition.description": {
+          "value": "Intial dose of treatment where total drug dose of [Drug A] per day is 1.0 mg."
+        }
+      },
+      "Protocol.step.exit": {
+        "Protocol.step.precondition.description": {
+          "value": "30 weeks after start of Element"
+        }
+      }
+    },
+    {
+      "Element.extension": [
+        {
+          "Extension.url": {
+            "value": "http://example.org/example-do-not-use/Profilestudyprotocol#step.arm"
+          },
+          "Extension.valueUri": {
+            "value": "#arm-pio45mgs"
+          }
+        },
+        {
+          "Extension.url": {
+            "value": "http://example.org/example-do-not-use/Profilestudyprotocol#step.epoch"
+          },
+          "Extension.valueUri": {
+            "value": "#epoch-follow-up"
+          }
+        },
+        {
+          "Extension.url": {
+            "value": "http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence"
+          },
+          "Extension.valueInteger": {
+            "value": 4
+          }
+        }
+      ],
+      "Protocol.step.name": {
+        "value": "FLWUP"
+      },
+      "Protocol.step.description": {
+        "value": "Follow-Up"
+      },
+      "Protocol.step.precondition": {
+        "Protocol.step.precondition.description": {
+          "value": "Last dose of treatment"
+        }
+      },
+      "Protocol.step.exit": {
+        "Protocol.step.precondition.description": {
+          "value": "2 weeks after start of Element"
+        }
+      }
+    },
+    {
+      "Element.extension": [
+        {
+          "Extension.url": {
+            "value": "http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence"
+          },
+          "Extension.valueInteger": {
+            "value": 1
+          }
+        }
+      ],
+      "Protocol.step.name": {
+        "value": "VISIT 1"
+      },
+      "Protocol.step.precondition": {
+        "Protocol.step.precondition.description": {
+          "value": "Screening"
+        }
+      },
+      "Protocol.step.activity": [
+        {
+          "Protocol.step.activity.detail": {
+            "Protocol.step.activity.detail.category": {
+              "value": "encounter"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Element.extension": [
+        {
+          "Extension.url": {
+            "value": "http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence"
+          },
+          "Extension.valueInteger": {
+            "value": 2
+          }
+        }
+      ],
+      "Protocol.step.name": {
+        "value": "VISIT 2"
+      },
+      "Protocol.step.precondition": {
+        "Protocol.step.precondition.description": {
+          "value": "single-blind placebo start"
+        }
+      },
+      "Protocol.step.activity": [
+        {
+          "Protocol.step.activity.detail": {
+            "Protocol.step.activity.detail.category": {
+              "value": "encounter"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Element.extension": [
+        {
+          "Extension.url": {
+            "value": "http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence"
+          },
+          "Extension.valueInteger": {
+            "value": 3
+          }
+        }
+      ],
+      "Protocol.step.name": {
+        "value": "VISIT 3"
+      },
+      "Protocol.step.precondition": {
+        "Protocol.step.precondition.description": {
+          "value": "Treatment start"
+        }
+      },
+      "Protocol.step.activity": [
+        {
+          "Protocol.step.activity.detail": {
+            "Protocol.step.activity.detail.category": {
+              "value": "encounter"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Element.extension": [
+        {
+          "Extension.url": {
+            "value": "http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence"
+          },
+          "Extension.valueInteger": {
+            "value": 4
+          }
+        }
+      ],
+      "Protocol.step.name": {
+        "value": "VISIT 4"
+      },
+      "Protocol.step.precondition": {
+        "Protocol.step.precondition.description": {
+          "value": "5 weeks after treatment start"
+        }
+      },
+      "Protocol.step.activity": [
+        {
+          "Protocol.step.activity.detail": {
+            "Protocol.step.activity.detail.category": {
+              "value": "encounter"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Element.extension": [
+        {
+          "Extension.url": {
+            "value": "http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence"
+          },
+          "Extension.valueInteger": {
+            "value": 5
+          }
+        }
+      ],
+      "Protocol.step.name": {
+        "value": "VISIT 5"
+      },
+      "Protocol.step.precondition": {
+        "Protocol.step.precondition.description": {
+          "value": "10 weeks after treatment start"
+        }
+      },
+      "Protocol.step.activity": [
+        {
+          "Protocol.step.activity.detail": {
+            "Protocol.step.activity.detail.category": {
+              "value": "encounter"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Element.extension": [
+        {
+          "Extension.url": {
+            "value": "http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence"
+          },
+          "Extension.valueInteger": {
+            "value": 6
+          }
+        }
+      ],
+      "Protocol.step.name": {
+        "value": "VISIT 6"
+      },
+      "Protocol.step.precondition": {
+        "Protocol.step.precondition.description": {
+          "value": "15 weeks after treatment start"
+        }
+      },
+      "Protocol.step.activity": [
+        {
+          "Protocol.step.activity.detail": {
+            "Protocol.step.activity.detail.category": {
+              "value": "encounter"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Element.extension": [
+        {
+          "Extension.url": {
+            "value": "http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence"
+          },
+          "Extension.valueInteger": {
+            "value": 7
+          }
+        }
+      ],
+      "Protocol.step.name": {
+        "value": "VISIT 7"
+      },
+      "Protocol.step.precondition": {
+        "Protocol.step.precondition.description": {
+          "value": "20 weeks after treatment start"
+        }
+      },
+      "Protocol.step.activity": [
+        {
+          "Protocol.step.activity.detail": {
+            "Protocol.step.activity.detail.category": {
+              "value": "encounter"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Element.extension": [
+        {
+          "Extension.url": {
+            "value": "http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence"
+          },
+          "Extension.valueInteger": {
+            "value": 8
+          }
+        }
+      ],
+      "Protocol.step.name": {
+        "value": "VISIT 8"
+      },
+      "Protocol.step.precondition": {
+        "Protocol.step.precondition.description": {
+          "value": "25 weeks after treatment start"
+        }
+      },
+      "Protocol.step.activity": [
+        {
+          "Protocol.step.activity.detail": {
+            "Protocol.step.activity.detail.category": {
+              "value": "encounter"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Element.extension": [
+        {
+          "Extension.url": {
+            "value": "http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence"
+          },
+          "Extension.valueInteger": {
+            "value": 9
+          }
+        }
+      ],
+      "Protocol.step.name": {
+        "value": "VISIT 9"
+      },
+      "Protocol.step.precondition": {
+        "Protocol.step.precondition.description": {
+          "value": "30 weeks after treatment start"
+        }
+      },
+      "Protocol.step.activity": [
+        {
+          "Protocol.step.activity.detail": {
+            "Protocol.step.activity.detail.category": {
+              "value": "encounter"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Element.extension": [
+        {
+          "Extension.url": {
+            "value": "http://example.org/example-do-not-use/Profilestudyprotocol#step.armSequence"
+          },
+          "Extension.valueInteger": {
+            "value": 10
+          }
+        }
+      ],
+      "Protocol.step.name": {
+        "value": "VISIT 10"
+      },
+      "Protocol.step.precondition": {
+        "Protocol.step.precondition.description": {
+          "value": "start of follow-up"
+        }
+      },
+      "Protocol.step.activity": [
+        {
+          "Protocol.step.activity.detail": {
+            "Protocol.step.activity.detail.category": {
+              "value": "encounter"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

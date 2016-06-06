@@ -1,0 +1,815 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "gao-alternate",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <h2>GAO Alternate</h2>\n      <p>The alternate resource provides the results of an evaluation for alternative treatements\n        that may be suggested by the decision support service.</p>\n      <h3>Requirements</h3>\n      <p>Similar to the result resource, the alternate resource enables the results of an evaluation\n        to be returned. However, because the alternate is suggested by the decision support service,\n        the constraints on what may appear are slightly different.</p>\n    </div>"
+  },
+  "url": "http://hl7.org/fhir/StructureDefinition/gao-alternate",
+  "name": "GAO Alternate",
+  "status": "draft",
+  "date": "2015-09-22T20:02:49+10:00",
+  "description": "The alternate resource provides the results of an evaluation for alternative treatements that may be suggested by the decision support service.",
+  "requirements": "Similar to the result resource, the alternate resource enables the results of an evaluation to be returned.  However, because the alternate is suggested by the decision support service, the constraints on what may appear are slightly different.",
+  "fhirVersion": "1.4.0",
+  "kind": "resource",
+  "abstract": false,
+  "baseType": "Basic",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Basic",
+  "derivation": "constraint",
+  "snapshot": {
+    "element": [
+      {
+        "path": "Basic",
+        "short": "Resource for non-supported content",
+        "definition": "Basic is used for handling concepts not yet defined in FHIR, narrative-only resources that don't map to an existing resource, and custom resources not appropriate for inclusion in the FHIR specification.",
+        "alias": [
+          "Z-resource",
+          "Extension-resource",
+          "Custom-resource",
+          "Z-resource",
+          "Extension-resource",
+          "Custom-resource"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Basic",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Basic"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "Act, Entity or Role"
+          },
+          {
+            "identity": "w5",
+            "map": "infrastructure.structure"
+          }
+        ]
+      },
+      {
+        "path": "Basic.id",
+        "short": "Logical id of this artifact",
+        "definition": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
+        "comments": "The only time that a resource does not have an id is when it is being submitted to the server using a create operation. Bundles always have an id, though it is usually a generated UUID.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Resource.id",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "path": "Basic.meta",
+        "short": "Metadata about the resource",
+        "definition": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Resource.meta",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Meta"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "path": "Basic.implicitRules",
+        "short": "A set of rules under which this content was created",
+        "definition": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content.",
+        "comments": "Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However, the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Resource.implicitRules",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "isModifier": true,
+        "isSummary": true
+      },
+      {
+        "path": "Basic.language",
+        "short": "Language of the resource content",
+        "definition": "The base language in which the resource is written.",
+        "comments": "Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource  Not all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Resource.language",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "A human language.",
+          "valueSetUri": "http://tools.ietf.org/html/bcp47"
+        }
+      },
+      {
+        "path": "Basic.text",
+        "short": "Text summary of the resource, for human interpretation",
+        "definition": "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
+        "comments": "Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative.",
+        "alias": [
+          "narrative",
+          "html",
+          "xhtml",
+          "display"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.text",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Narrative"
+          }
+        ],
+        "condition": [
+          "dom-1"
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "Act.text?"
+          }
+        ]
+      },
+      {
+        "path": "Basic.contained",
+        "short": "Contained, inline Resources",
+        "definition": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
+        "comments": "This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again.",
+        "alias": [
+          "inline resources",
+          "anonymous resources",
+          "contained resources"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.contained",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Resource"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "path": "Basic.extension",
+        "slicing": {
+          "discriminator": [
+            "url"
+          ],
+          "rules": "openAtEnd"
+        },
+        "short": "Extension",
+        "definition": "An Extension",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ]
+      },
+      {
+        "path": "Basic.extension",
+        "name": "score",
+        "label": "score",
+        "short": "Extension",
+        "definition": "An optional value which can be used to record a score associated with the evaluation process. ",
+        "comments": "The interpretation of this value may vary depending upon guidelines and Decision Support Service actors used. ",
+        "requirements": "This may be present to enable quality improvement efforts related to ordering.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/gao-extension-score"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "path": "Basic.extension",
+        "name": "period",
+        "label": "period",
+        "short": "Extension",
+        "definition": "Indicates the period over which the evaluation is valid.",
+        "comments": "Not required when manually issued, required otherwise.",
+        "requirements": "This field SHALL be provided unless the evaluation was issued manually, in which case it is optional.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/gao-extension-period"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "path": "Basic.extension",
+        "name": "item",
+        "label": "item",
+        "short": "Extension",
+        "definition": "Describes the services ordered.",
+        "requirements": "The services that are to be ordered SHALL be provided.",
+        "min": 1,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/gao-extension-item"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "path": "Basic.extension",
+        "name": "guideline",
+        "label": "guideline",
+        "short": "Extension",
+        "definition": "A reference to the guidelines or policies under which the evaluation was created.",
+        "requirements": "This field SHALL be provided unless the evaluation was issued manually, in which case it is optional",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/gao-extension-guideline"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "path": "Basic.extension",
+        "name": "device",
+        "label": "device",
+        "short": "Extension",
+        "definition": "A reference to the Device resource describing the Decision Support Service Actor.",
+        "requirements": "This field SHALL be provided unless the evaluation was issued manually, in which case it is optional.  This SHALL be a reference to one of the Devices specified in the dss parameter.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/gao-extension-device"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "path": "Basic.extension",
+        "name": "practitioner",
+        "label": "practitioner",
+        "short": "Extension",
+        "definition": "An identifier representing the ordering practitioner.",
+        "requirements": "This SHALL be provided unless the evaluation was issued manually, in which case it is optional.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/gao-extension-practitioner"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "path": "Basic.extension",
+        "name": "signature",
+        "label": "signature",
+        "short": "Extension",
+        "definition": "A digital signature over this resource",
+        "requirements": "This MAY be provided.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/gao-extension-signature"
+            ]
+          }
+        ]
+      },
+      {
+        "path": "Basic.modifierExtension",
+        "short": "Extensions that cannot be ignored",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.modifierExtension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isModifier": true,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "path": "Basic.identifier",
+        "short": "Business identifier",
+        "definition": "Identifier assigned to the resource for business purposes, outside the context of FHIR.",
+        "requirements": "This is a business identifier associated with the evaluation for the order. It is a unique identifier issued by the evaluator associated with this transaction. An identifier SHALL be provided unless the code is “incomplete”, “cannot be evaluated” or “not covered”. Note that this identifier may be associated with multiple evaluations. ",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Basic.identifier",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "./identifier"
+          },
+          {
+            "identity": "w5",
+            "map": "id"
+          }
+        ]
+      },
+      {
+        "path": "Basic.code",
+        "short": "Kind of Resource",
+        "definition": "Identifies the 'type' of resource - equivalent to the resource name for other resources.",
+        "comments": "Because resource references will only be able to indicate 'Basic', the type of reference will need to be specified in a Profile identified as part of the resource.  Refer to the resource notes section for information on appropriate terminologies for this code.",
+        "requirements": "Must be able to distinguish different types of \"basic\" resources.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Basic.code",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "isModifier": true,
+        "isSummary": true,
+        "binding": {
+          "strength": "example",
+          "description": "Codes for identifying types of resources not yet defined by FHIR",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/gao-result"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "./code"
+          },
+          {
+            "identity": "w5",
+            "map": "what"
+          }
+        ]
+      },
+      {
+        "path": "Basic.subject",
+        "short": "Identifies the focus of this resource",
+        "definition": "Identifies the patient, practitioner, device or any other resource that is the \"focus\" of this resource.",
+        "comments": "Optional as not all resources potential resources will have subjects.  Resources associated with multiple subjects can handle this via extension.",
+        "requirements": "Needed for partitioning the resource by Patient.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Basic.subject",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/gao-order"
+            ],
+            "aggregation": [
+              "contained"
+            ]
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "./participation[typeCode='SBJ'] (possibly through a ControlAct and Role)"
+          },
+          {
+            "identity": "w5",
+            "map": "who.focus"
+          }
+        ]
+      },
+      {
+        "path": "Basic.created",
+        "short": "When created",
+        "definition": "Identifies when the resource was first created.",
+        "requirements": "Allows ordering resource instances by time.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Basic.created",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "date"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "./participation[typeCode='AUT']/time (possibly through a ControlAct and Role)"
+          },
+          {
+            "identity": "w5",
+            "map": "when.recorded"
+          }
+        ]
+      },
+      {
+        "path": "Basic.author",
+        "short": "Who created",
+        "definition": "Indicates who was responsible for creating the resource instance.",
+        "requirements": "Needed for partitioning the resource.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Basic.author",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/Practitioner"
+            ]
+          },
+          {
+            "code": "Reference",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
+          },
+          {
+            "code": "Reference",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
+            ]
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "./participation[typeCode='SUB'] (possibly through a ControlAct and Role)"
+          },
+          {
+            "identity": "w5",
+            "map": "who.author"
+          }
+        ]
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "path": "Basic",
+        "short": "Resource for non-supported content",
+        "definition": "Basic is used for handling concepts not yet defined in FHIR, narrative-only resources that don't map to an existing resource, and custom resources not appropriate for inclusion in the FHIR specification.",
+        "alias": [
+          "Z-resource",
+          "Extension-resource",
+          "Custom-resource"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Basic"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "path": "Basic.extension",
+        "slicing": {
+          "discriminator": [
+            "url"
+          ],
+          "rules": "openAtEnd"
+        }
+      },
+      {
+        "path": "Basic.extension",
+        "name": "score",
+        "label": "score",
+        "definition": "An optional value which can be used to record a score associated with the evaluation process. ",
+        "comments": "The interpretation of this value may vary depending upon guidelines and Decision Support Service actors used. ",
+        "requirements": "This may be present to enable quality improvement efforts related to ordering.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/gao-extension-score"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "path": "Basic.extension",
+        "name": "period",
+        "label": "period",
+        "definition": "Indicates the period over which the evaluation is valid.",
+        "comments": "Not required when manually issued, required otherwise.",
+        "requirements": "This field SHALL be provided unless the evaluation was issued manually, in which case it is optional.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/gao-extension-period"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "path": "Basic.extension",
+        "name": "item",
+        "label": "item",
+        "definition": "Describes the services ordered.",
+        "requirements": "The services that are to be ordered SHALL be provided.",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/gao-extension-item"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "path": "Basic.extension",
+        "name": "guideline",
+        "label": "guideline",
+        "definition": "A reference to the guidelines or policies under which the evaluation was created.",
+        "requirements": "This field SHALL be provided unless the evaluation was issued manually, in which case it is optional",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/gao-extension-guideline"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "path": "Basic.extension",
+        "name": "device",
+        "label": "device",
+        "definition": "A reference to the Device resource describing the Decision Support Service Actor.",
+        "requirements": "This field SHALL be provided unless the evaluation was issued manually, in which case it is optional.  This SHALL be a reference to one of the Devices specified in the dss parameter.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/gao-extension-device"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "path": "Basic.extension",
+        "name": "practitioner",
+        "label": "practitioner",
+        "definition": "An identifier representing the ordering practitioner.",
+        "requirements": "This SHALL be provided unless the evaluation was issued manually, in which case it is optional.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/gao-extension-practitioner"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "path": "Basic.extension",
+        "name": "signature",
+        "label": "signature",
+        "definition": "A digital signature over this resource",
+        "requirements": "This MAY be provided.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/gao-extension-signature"
+            ]
+          }
+        ]
+      },
+      {
+        "path": "Basic.identifier",
+        "short": "Business identifier",
+        "definition": "Identifier assigned to the resource for business purposes, outside the context of FHIR.",
+        "requirements": "This is a business identifier associated with the evaluation for the order. It is a unique identifier issued by the evaluator associated with this transaction. An identifier SHALL be provided unless the code is “incomplete”, “cannot be evaluated” or “not covered”. Note that this identifier may be associated with multiple evaluations. ",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "path": "Basic.code",
+        "short": "Kind of Resource",
+        "definition": "Identifies the 'type' of resource - equivalent to the resource name for other resources.",
+        "comments": "Because resource references will only be able to indicate 'Basic', the type of reference will need to be specified in a Profile identified as part of the resource.  Refer to the resource notes section for information on appropriate terminologies for this code.",
+        "requirements": "Must be able to distinguish different types of \"basic\" resources.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "isModifier": true,
+        "isSummary": true,
+        "binding": {
+          "strength": "example",
+          "description": "Codes for identifying types of resources not yet defined by FHIR",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/gao-result"
+          }
+        }
+      },
+      {
+        "path": "Basic.subject",
+        "short": "Identifies the focus of this resource",
+        "definition": "Identifies the patient, practitioner, device or any other resource that is the \"focus\" of this resource.",
+        "comments": "Optional as not all resources potential resources will have subjects.  Resources associated with multiple subjects can handle this via extension.",
+        "requirements": "Needed for partitioning the resource by Patient.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/gao-order"
+            ],
+            "aggregation": [
+              "contained"
+            ]
+          }
+        ],
+        "isSummary": true
+      }
+    ]
+  }
+}

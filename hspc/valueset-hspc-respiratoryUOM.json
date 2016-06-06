@@ -1,0 +1,56 @@
+{
+  "resourceType": "ValueSet",
+  "id": "hspc-respiratoryUOM",
+  "meta": {
+    "lastUpdated": "2016-06-06T20:14:04.181+00:00",
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>HSPC Respiratory Rate Units of Measure Value Set</h2><p>The list of codes that describe the units of measure used for respiratory rate.</p><p><b>Copyright Statement:</b> This value set includes content from UCUM. Implementer use of UCUM is not covered by this agreement</p><p>This value set includes codes from the following code systems:</p><ul><li>Include these codes as defined in http://unitsofmeasure.org<table><tr><td><b>Code</b></td><td><b>Display</b></td></tr><tr><td>Hz</td><td>Hertz</td><td/></tr><tr><td>{Breaths}/min</td><td>Breaths / minute</td><td/></tr></table></li></ul></div>"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/valueset-oid",
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.720"
+    }
+  ],
+  "url": "http://hl7.org/fhir/ValueSet/hspc-respiratoryUOM",
+  "version": "1.4.0",
+  "name": "HSPC Respiratory Rate Units of Measure Value Set",
+  "status": "draft",
+  "experimental": true,
+  "publisher": "HSPC",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "other",
+          "value": "http://healthcaresoa.org"
+        }
+      ]
+    }
+  ],
+  "date": "2016-06-06T20:14:04+00:00",
+  "description": "The list of codes that describe the units of measure used for respiratory rate.",
+  "copyright": "This value set includes content from UCUM. Implementer use of UCUM is not covered by this agreement",
+  "compose": {
+    "include": [
+      {
+        "system": "http://unitsofmeasure.org",
+        "concept": [
+          {
+            "code": "Hz",
+            "display": "Hertz"
+          },
+          {
+            "code": "{Breaths}/min",
+            "display": "Breaths / minute"
+          }
+        ]
+      }
+    ]
+  }
+}

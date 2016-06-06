@@ -1,0 +1,85 @@
+{
+  "resourceType": "DiagnosticOrder",
+  "id": "do-uslab-example1",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: do-uslab-example1</p><p><b>identifier</b>: ORD000123A (OFFICIAL)</p><p><b>status</b>: requested</p><p><b>priority</b>: routine</p><p><b>subject</b>: <a>Todd Lerr</a></p><p><b>orderer</b>: <a>Dr Leonard T Bloodraw Jr</a></p><p><b>reason</b>: Abnormal lead level in blood <span>(Details : {http://www.icd10data.com/icd10pcs code 'R78.71' = '??', given as 'Abnormal lead level in blood'})</span></p><p><b>supportingInformation</b>: <a>Prior Results Observation</a>, <a>Lead Exposure</a></p><h3>Events</h3><table><tr><td>-</td><td><b>Status</b></td><td><b>Description</b></td><td><b>DateTime</b></td></tr><tr><td>*</td><td>requested</td><td>new-request <span>(Details : {[not stated] code 'new-request' = '??)</span></td><td>Dec 4, 2014 3:42:15 PM</td></tr></table><h3>Items</h3><table><tr><td>-</td><td><b>Code</b></td><td><b>Status</b></td></tr><tr><td>*</td><td>Blood Lead <span>(Details : {LOINC code '5671-3' = 'Lead [Mass/volume] in Blood', given as 'Lead [Mass/volume] in Blood'}; {urn:oid:2.16.840.1.113883.3.72.5.24 code 'BLDLD' = '??', given as 'Blood Lead'})</span></td><td>requested</td></tr></table><p><b>note</b>: patient is afraid of needles</p></div>"
+  },
+  "identifier": [
+    {
+      "use": "official",
+      "system": "urn:oid:2.16.840.1.113883.3.72.5.24",
+      "value": "ORD000123A"
+    }
+  ],
+  "status": "requested",
+  "priority": "routine",
+  "subject": {
+    "reference": "Patient/patient-uslab-example1",
+    "display": "Todd Lerr"
+  },
+  "orderer": {
+    "reference": "Practitioner/pract-uslab-example1",
+    "display": "Dr Leonard T Bloodraw Jr"
+  },
+  "reason": [
+    {
+      "coding": [
+        {
+          "system": "http://www.icd10data.com/icd10pcs",
+          "code": "R78.71",
+          "display": "Abnormal lead level in blood"
+        }
+      ],
+      "text": "Abnormal lead level in blood"
+    }
+  ],
+  "supportingInformation": [
+    {
+      "reference": "Observation/obs-uslab-example1",
+      "display": "Prior Results Observation"
+    },
+    {
+      "reference": "Condition/cond-uslab-example1",
+      "display": "Lead Exposure"
+    }
+  ],
+  "event": [
+    {
+      "status": "requested",
+      "description": {
+        "coding": [
+          {
+            "code": "new-request"
+          }
+        ]
+      },
+      "dateTime": "2014-12-04T15:42:15-08:00"
+    }
+  ],
+  "item": [
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "5671-3",
+            "display": "Lead [Mass/volume] in Blood"
+          },
+          {
+            "system": "urn:oid:2.16.840.1.113883.3.72.5.24",
+            "code": "BLDLD",
+            "display": "Blood Lead"
+          }
+        ],
+        "text": "Blood Lead"
+      },
+      "status": "requested"
+    }
+  ],
+  "note": [
+    {
+      "text": "patient is afraid of needles"
+    }
+  ]
+}

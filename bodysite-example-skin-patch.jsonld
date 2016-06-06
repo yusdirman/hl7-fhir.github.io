@@ -1,0 +1,53 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/BodySite",
+  "resourceType": "BodySite",
+  "Resource.id": {
+    "value": "skin-patch"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: skin-patch</p><p><b>patient</b>: <a>Patient/example</a></p><p><b>identifier</b>: 12345</p><p><b>code</b>: Skin patch <span>(Details : {SNOMED CT code '39937001' = 'Skin structure (body structure)', given as 'Skin structure (body structure)'})</span></p><p><b>description</b>: inner surface (volar) of the left forearm</p></div>"
+    }
+  },
+  "BodySite.patient": {
+    "Reference.reference": {
+      "value": "Patient/example"
+    },
+    "reference": "http://hl7.org/fhir//Patient/example"
+  },
+  "BodySite.identifier": [
+    {
+      "Identifier.system": {
+        "value": "http://goodhealth.org/bodysite/identifiers"
+      },
+      "Identifier.value": {
+        "value": "12345"
+      }
+    }
+  ],
+  "BodySite.code": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "value": "39937001"
+        },
+        "Coding.display": {
+          "value": "Skin structure (body structure)"
+        }
+      }
+    ],
+    "CodeableConcept.text": {
+      "value": "Skin patch"
+    },
+    "concept": "http://snomed.info/sct#39937001"
+  },
+  "BodySite.description": {
+    "value": "inner surface (volar) of the left forearm"
+  }
+}

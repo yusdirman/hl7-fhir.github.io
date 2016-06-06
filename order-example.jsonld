@@ -1,0 +1,56 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Order",
+  "resourceType": "Order",
+  "Resource.id": {
+    "value": "example"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Request for Prescription (on patient Donald DUCK @ Acme Healthcare, Inc. MR = 654321)</div>"
+    }
+  },
+  "Order.date": {
+    "value": "2012-12-28T09:03:04+11:00"
+  },
+  "Order.subject": {
+    "Reference.reference": {
+      "value": "Patient/pat2"
+    },
+    "reference": "http://hl7.org/fhir//Patient/pat2"
+  },
+  "Order.source": {
+    "Reference.reference": {
+      "value": "Practitioner/example"
+    },
+    "reference": "http://hl7.org/fhir//Practitioner/example"
+  },
+  "Order.reasonCodeableConcept": {
+    "CodeableConcept.text": {
+      "value": "Standard admission testing"
+    }
+  },
+  "Order.when": {
+    "Order.when.code": {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "value": "http://acme.com/codes/request-priority"
+          },
+          "Coding.code": {
+            "value": "today"
+          }
+        }
+      ]
+    }
+  },
+  "Order.detail": [
+    {
+      "Reference.reference": {
+        "value": "MedicationOrder/example"
+      }
+    }
+  ]
+}

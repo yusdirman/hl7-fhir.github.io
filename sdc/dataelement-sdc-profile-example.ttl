@@ -1,0 +1,62 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/DataElementdataelement-sdc-profile-example> a fhir:DataElement;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "dataelement-sdc-profile-example"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">TODO</div>"
+  ];
+  fhir:DataElement.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "http://nlm.nih.gov/some_other_text/data_element_identifier" ];
+     fhir:Identifier.value [ fhir:value "DE42AHRQ" ]
+  ];
+  fhir:DataElement.status [ fhir:value "draft"];
+  fhir:DataElement.publisher [ fhir:value "Health Level Seven, International"];
+  fhir:DataElement.date [ fhir:value "2015-02-04"^^xsd:date];
+  fhir:DataElement.name [ fhir:value "Patient Gender"];
+  fhir:DataElement.contact [
+     fhir:index 0;
+     fhir:DataElement.contact.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "other" ];
+       fhir:ContactPoint.value [ fhir:value "http://hl7.org" ]
+     ]
+  ];
+  fhir:DataElement.mapping [
+     fhir:index 0;
+     fhir:DataElement.mapping.identity [ fhir:value "c-cda" ];
+     fhir:DataElement.mapping.uri [ fhir:value "http://hl7.org/C-CDA-not-a-real-url" ];
+     fhir:DataElement.mapping.name [ fhir:value "Consolidated CDA R2" ]
+  ];
+  fhir:DataElement.element [
+     fhir:index 0;
+     fhir:ElementDefinition.path [ fhir:value "administrativeGender" ];
+     fhir:ElementDefinition.definition [ fhir:value "The gender (i.e., the behavioral, cultural, or psychological traits typically associated with one sex) of a living subject as defined for administrative purposes." ];
+     fhir:ElementDefinition.type [
+       fhir:index 0;
+       fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
+     ];
+     fhir:ElementDefinition.binding [
+       fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
+       fhir:ElementDefinition.binding.valueSetReference [
+         fhir:link <http://hl7.org/fhir/ValueSet/AdministrativeGender>;
+         fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/AdministrativeGender" ]
+       ]
+     ];
+     fhir:ElementDefinition.mapping [
+       fhir:index 0;
+       fhir:ElementDefinition.mapping.identity [ fhir:value "c-cda" ];
+       fhir:ElementDefinition.mapping.language [ fhir:value "xpath" ];
+       fhir:ElementDefinition.mapping.map [ fhir:value "/ClinicalDocument/recordTarget/patientRole/patient/administrativeGender" ]
+     ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

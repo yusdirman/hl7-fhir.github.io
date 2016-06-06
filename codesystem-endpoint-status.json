@@ -1,0 +1,64 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "endpoint-status",
+  "meta": {
+    "lastUpdated": "2016-06-06T20:14:04.181+00:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>EndpointStatus</h2><p>The status of the encounter.</p><p>This code system http://hl7.org/fhir/endpoint-status defines the following codes:</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>active<a name=\"active\"> </a></td><td>Active</td><td>This endpoint is expected to be active and can be used</td></tr><tr><td>suspended<a name=\"suspended\"> </a></td><td>Suspended</td><td>This endpoint is temporarily unavailable</td></tr><tr><td>error<a name=\"error\"> </a></td><td>Error</td><td>This endpoint has exceeded connectivity thresholds and is considered in an error state and should no longer be attempted to connect to until corrective action is taken</td></tr><tr><td>off<a name=\"off\"> </a></td><td>Off</td><td>This endpoint is no longer to be used</td></tr></table></div>"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/valueset-oid",
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.1.883"
+    }
+  ],
+  "url": "http://hl7.org/fhir/endpoint-status",
+  "version": "1.4.0",
+  "name": "EndpointStatus",
+  "status": "draft",
+  "experimental": false,
+  "publisher": "HL7 (FHIR Project)",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "other",
+          "value": "http://hl7.org/fhir"
+        },
+        {
+          "system": "email",
+          "value": "fhir@lists.hl7.org"
+        }
+      ]
+    }
+  ],
+  "date": "2016-06-06T20:14:04+00:00",
+  "description": "The status of the encounter.",
+  "caseSensitive": true,
+  "valueSet": "http://hl7.org/fhir/ValueSet/endpoint-status",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "active",
+      "display": "Active",
+      "definition": "This endpoint is expected to be active and can be used"
+    },
+    {
+      "code": "suspended",
+      "display": "Suspended",
+      "definition": "This endpoint is temporarily unavailable"
+    },
+    {
+      "code": "error",
+      "display": "Error",
+      "definition": "This endpoint has exceeded connectivity thresholds and is considered in an error state and should no longer be attempted to connect to until corrective action is taken"
+    },
+    {
+      "code": "off",
+      "display": "Off",
+      "definition": "This endpoint is no longer to be used"
+    }
+  ]
+}

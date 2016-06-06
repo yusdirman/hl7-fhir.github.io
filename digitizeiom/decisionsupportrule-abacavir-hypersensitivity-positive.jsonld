@@ -1,0 +1,126 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/DecisionSupportRule",
+  "resourceType": "DecisionSupportRule",
+  "Resource.id": {
+    "value": "decisionsupportrule-abacavir-hypersensitivity-positive"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Abacavir Hypersensitivity Intervention - Positive</div>"
+    }
+  },
+  "DecisionSupportRule.moduleMetadata": {
+    "ModuleMetadata.identifier": [
+      {
+        "Identifier.use": {
+          "value": "official"
+        },
+        "Identifier.value": {
+          "value": "abacavir-hypersensitivity-positive"
+        }
+      }
+    ],
+    "ModuleMetadata.version": {
+      "value": "1.0.0"
+    },
+    "ModuleMetadata.title": {
+      "value": "Abacavir Hypersensitivity Positive"
+    },
+    "ModuleMetadata.type": {
+      "value": "decision-support-rule"
+    },
+    "ModuleMetadata.status": {
+      "value": "active"
+    },
+    "ModuleMetadata.description": {
+      "value": "Abacavir hypersensitivity intervention to alert the user that the patient's genotype test results indicate a hypersensitivity to Abacavir."
+    },
+    "ModuleMetadata.publicationDate": {
+      "value": "2016-04-01"
+    },
+    "ModuleMetadata.topic": [
+      {
+        "CodeableConcept.text": {
+          "value": "Abacavir Hypersensitivity - Positive Finding"
+        }
+      }
+    ]
+  },
+  "DecisionSupportRule.library": [
+    {
+      "Reference.reference": {
+        "value": "Library/library-abacavir-hypersensitivity-cds-logic"
+      }
+    }
+  ],
+  "DecisionSupportRule.trigger": [
+    {
+      "TriggerDefinition.type": {
+        "value": "data-added"
+      },
+      "TriggerDefinition.eventData": {
+        "DataRequirement.type": {
+          "value": "MedicationOrder"
+        },
+        "DataRequirement.codeFilter": [
+          {
+            "DataRequirement.codeFilter.path": {
+              "value": "code"
+            },
+            "DataRequirement.codeFilter.valueCodeableConcept": [
+              {
+                "CodeableConcept.coding": [
+                  {
+                    "Coding.system": {
+                      "value": "http://snomed.org/sct"
+                    },
+                    "Coding.code": {
+                      "value": "387005008"
+                    }
+                  }
+                ],
+                "CodeableConcept.text": {
+                  "value": "Abacavir (substance)"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "DecisionSupportRule.condition": {
+    "value": "Should Notify User of Patient's Hypersensitivity"
+  },
+  "DecisionSupportRule.action": [
+    {
+      "ActionDefinition.title": {
+        "value": "Patient Shows Hypersensitivity to Abacavir in Genotype Test Results."
+      },
+      "ActionDefinition.textEquivalent": {
+        "value": "The HLA-B*57:01 allele is present in the Patient's Genotype Test results."
+      },
+      "ActionDefinition.participantType": [
+        {
+          "value": "practitioner"
+        }
+      ],
+      "ActionDefinition.type": {
+        "value": "create"
+      },
+      "ActionDefinition.customization": [
+        {
+          "ActionDefinition.customization.path": {
+            "value": "/"
+          },
+          "ActionDefinition.customization.expression": {
+            "value": "Hypersensitivity To Abacavir Alert"
+          }
+        }
+      ]
+    }
+  ]
+}

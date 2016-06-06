@@ -1,0 +1,57 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/CommunicationRequest",
+  "resourceType": "CommunicationRequest",
+  "Resource.id": {
+    "value": "communicationrequest-example-qicore"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">To be filled out at a later time</div>"
+    }
+  },
+  "DomainResource.extension": [
+    {
+      "Extension.url": {
+        "value": "http://hl7.org/fhir/StructureDefinition/communicationrequest-orderedBy"
+      },
+      "Extension.valueReference": {
+        "Reference.reference": {
+          "value": "Practitioner/example"
+        },
+        "reference": "http://hl7.org/fhir//Practitioner/example"
+      }
+    },
+    {
+      "Extension.url": {
+        "value": "http://hl7.org/fhir/StructureDefinition/communicationrequest-reasonRejected"
+      },
+      "Extension.valueCodeableConcept": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://hl7.org/fhir/v3/ActReason"
+            },
+            "Coding.code": {
+              "value": "NON-AVAIL"
+            },
+            "Coding.display": {
+              "value": "patient not-available"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "CommunicationRequest.status": {
+    "value": "rejected"
+  },
+  "CommunicationRequest.subject": {
+    "Reference.reference": {
+      "value": "Patient/example"
+    },
+    "reference": "http://hl7.org/fhir//Patient/example"
+  }
+}

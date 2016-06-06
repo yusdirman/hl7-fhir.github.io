@@ -1,0 +1,34 @@
+{
+  "resourceType": "Endpoint",
+  "id": "example",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t\t\tHACC Program for Peter James Chalmers at HL7 Healthcare 15 Sept 2014 - current<br/>\n\t\t\twas on leave from 22 Sept - 24 Sept while in respite care\n\t\t</div>"
+  },
+  "status": "active",
+  "managingOrganization": {
+    "reference": "Organization/hl7"
+  },
+  "connectionType": "rest-hook",
+  "method": [
+    {
+      "system": "http://hl7.org/fhir/ValueSet/http-verb",
+      "code": "PUT"
+    }
+  ],
+  "period": {
+    "start": "2014-09-01"
+  },
+  "addressString": "http://fhir3.healthintersections.com.au/open/CarePlan",
+  "payloadFormat": "application/xml+fhir",
+  "payloadType": [
+    {
+      "coding": [
+        {
+          "system": "http://hl7.org/fhir/resource-types",
+          "code": "CarePlan"
+        }
+      ]
+    }
+  ]
+}

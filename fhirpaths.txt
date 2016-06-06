@@ -1,0 +1,1234 @@
+﻿DomainResource (Element): children()
+DomainResource (Narrative.div): n/a
+DomainResource (Narrative.div): n/a
+DomainResource (Narrative.div): n/a
+DomainResource (Attachment): data.empty() or contentType.exists()
+DomainResource (Quantity): code.empty() or system.exists()
+DomainResource (Duration): (code or value.empty()) and (system.empty() or system = %ucum)
+DomainResource (Distance): (code or value.empty()) and (system.empty() or system = %ucum)
+DomainResource (Count): (code or value.empty()) and (system.empty() or system = %ucum) and (code.empty() or code = '1') and (value.empty() or value.toString().contains('.').not())
+DomainResource (Money): (code or value.empty()) and (system.empty() or system = 'urn:iso:std:iso:4217')
+DomainResource (Age): (code or value.empty()) and (system.empty() or system = %ucum) and (value.empty() or value.toString().contains('.').not())
+DomainResource (Range): low.empty() or high.empty() or (low <= high)
+DomainResource (Period): start.empty() or end.empty() or (start <= end)
+DomainResource (Ratio): (numerator.exists() and denominator.exists()) or extension.exists()
+DomainResource (Reference): reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))
+DomainResource (ContactPoint): value.empty() or system.exists()
+DomainResource (Timing.repeat): duration.empty() or durationUnit.exists()
+DomainResource (Timing.repeat): period.empty() or periodUnit.exists()
+DomainResource (Timing.repeat): ((period or frequency) and when).not()
+DomainResource (Timing.repeat): duration.exists() implies duration >= 0
+DomainResource (Timing.repeat): period.exists() implies period >= 0
+DomainResource (Timing.repeat): periodMax.empty() or period.exists()
+DomainResource (Timing.repeat): durationMax.empty() or duration.exists()
+DomainResource (Timing.repeat): countMax.empty() or count.exists()
+DomainResource (Timing.repeat): offset.empty() or when.exists()
+DomainResource (ElementDefinition): binding.empty() or type.code.empty() or type.select((code = 'code') or (code = 'Coding') or (code='CodeableConcept') or (code = 'Quantity') or (code = 'Extension') or (code = 'string') or (code = 'uri')).exists()
+DomainResource (ElementDefinition.binding.valueSetUri): startsWith('http:') or startsWith('https') or startsWith('urn:')
+DomainResource (ElementDefinition): type.select(code&profile).isDistinct()
+DomainResource (ElementDefinition): constraint.select(key).isDistinct()
+DomainResource (ElementDefinition): defaultValue.empty() or meaningWhenMissing.empty()
+DomainResource (ElementDefinition.slicing): discriminator.exists() or description.exists()
+DomainResource (ElementDefinition): min.empty() or max.empty() or (max = '*') or (min <= max.toInteger())
+DomainResource (ElementDefinition.max): empty() or ($this = '*') or (toInteger() >= 0)
+DomainResource (ElementDefinition.type): aggregation.empty() or (code = 'Reference')
+DomainResource (ElementDefinition): contentReference.empty() or (type.empty() and defaultValue.empty() and fixed.empty() and pattern.empty() and example.empty() and minValue.empty() and maxValue.empty() and maxLength.empty() and binding.empty())
+DomainResource (ElementDefinition): fixed.empty() or (type.count() = 1)
+DomainResource (ElementDefinition): pattern.empty() or (type.count() = 1)
+DomainResource (ElementDefinition): pattern.empty() or fixed.empty()
+DomainResource (ElementDefinition.binding): valueSet.exists() or description.exists()
+DomainResource (DomainResource): contained.text.empty()
+DomainResource (DomainResource): contained.contained.empty()
+DomainResource (DomainResource): contained.select(('#'+id in %resource.descendents().reference).not()).empty()
+DomainResource (DomainResource): contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()
+Parameters (Parameters.parameter): (part.exists() and value.empty() and resource.empty()) or (part.empty() and (value.exists() xor resource.exists()))
+CarePlan (CarePlan.activity): detail.empty() or reference.empty()
+Condition (Condition.stage): summary.exists() or assessment.exists()
+Condition (Condition.evidence): code.exists() or detail.exists()
+Conformance (Conformance): rest.exists() or messaging.exists() or document.exists()
+Conformance (Conformance.rest.resource): searchParam.select(name).isDistinct()
+Conformance (Conformance): (description.count() + software.count() + implementation.count()) > 0
+Conformance (Conformance.rest.resource.searchParam): chain.empty() or type = 'reference'
+Conformance (Conformance): messaging.endpoint.empty() or kind = 'instance'
+Conformance (Conformance): (software.empty() and implementation.empty()) or kind != 'requirements'
+Conformance (Conformance): implementation.empty() or kind != 'capability'
+Conformance (Conformance): document.select(profile&mode).isDistinct()
+Conformance (Conformance): rest.select(mode).isDistinct()
+Conformance (Conformance.rest): resource.select(type).isDistinct()
+Composition (Composition.section): text.exists() or entry.exists() or section.exists()
+Composition (Composition.section): emptyReason.empty() or entry.empty()
+ExpansionProfile (ExpansionProfile.codeSystem): include.empty() or exclude.empty()
+ExpansionProfile (ExpansionProfile.designation): include.empty() or exclude.empty()
+ExpansionProfile (ExpansionProfile.designation.include.designation): language.empty().not() or use.empty().not()
+ExpansionProfile (ExpansionProfile.designation.exclude.designation): language.empty().not() or use.empty().not()
+FamilyMemberHistory (FamilyMemberHistory): age.empty() or born.empty()
+Group (Group): member.empty() or (actual = true)
+Immunization (Immunization): (wasNotGiven = true).not() or (reaction.empty() and explanation.reason.empty())
+Immunization (Immunization): (wasNotGiven = true) or explanation.reasonNotGiven.empty()
+List (List): emptyReason.empty() or entry.empty()
+List (List): mode = 'changes' or entry.deleted.empty()
+Media (Media): height.empty() or type != 'audio'
+Media (Media): width.empty() or type != 'audio'
+Media (Media): frames.empty() or type = 'photo'
+Media (Media): duration.empty() or type != 'photo'
+MedicationAdministration (MedicationAdministration.dosage): dose.exists() or rate.exists()
+MedicationAdministration (MedicationAdministration): reasonNotGiven.empty() or wasNotGiven = true
+MedicationAdministration (MedicationAdministration): reasonGiven.empty() or wasNotGiven = 'false'
+MedicationDispense (MedicationDispense): whenHandedOver.empty() or whenPrepared.empty() or whenHandedOver >= whenPrepared
+MedicationStatement (MedicationStatement): reasonNotTaken.empty() or wasNotTaken = true
+MedicationStatement (MedicationStatement): reasonForUseCode.empty() or wasNotTaken = false
+MedicationStatement (MedicationStatement): reasonForUseReference.empty() or wasNotTaken = false
+NutritionOrder (NutritionOrder): oralDiet.exists() or supplement.exists() or enteralFormula.exists()
+Observation (Observation.referenceRange): low.exists() or high.exists() or text.exists()
+Observation (Observation): dataAbsentReason.empty() or value.empty()
+Observation (Observation): value.empty() or code!=component.code
+Order (Order.when): code.empty() or schedule.empty()
+Organization (Organization): (identifier.count() + name.count()) > 0
+Organization (Organization.address): select(use = 'home').empty()
+Organization (Organization.telecom): select(use = 'home').empty()
+Patient (Patient.contact): name.exists() or telecom.exists() or address.exists() or organization.exists()
+Procedure (Procedure): reasonNotPerformed.empty() or notPerformed = true
+DataElement (DataElement.element): base.empty()
+DataElement (DataElement.element): slicing.empty()
+Questionnaire (Questionnaire.item): (type='group' implies item.empty().not()) and (type.trace('type')='display' implies item.trace('item').empty())
+Questionnaire (Questionnaire): descendents().linkId.isDistinct()
+Questionnaire (Questionnaire.item): type!='display' or concept.empty()
+Questionnaire (Questionnaire.item): option.empty() or options.empty()
+Questionnaire (Questionnaire.item): (type ='choice' or type = 'open-choice') or (options.empty() and option.empty())
+Questionnaire (Questionnaire.item): type!='display' or (required.empty() and repeats.empty())
+Questionnaire (Questionnaire.item.enableWhen): hasAnswer.exists() xor answer.exists()
+Questionnaire (Questionnaire.item): (type!='group' and type!='display') or initial.empty()
+Questionnaire (Questionnaire.item): type!='display' or readOnly.empty()
+Questionnaire (Questionnaire.item): (type in ('boolean' | 'decimal' | 'integer' | 'string' | 'text' | 'url')) or maxLength.empty()
+RiskAssessment (RiskAssessment.prediction.probabilityRange): (low.empty() or ((low.code = '%') and (low.system = %ucum))) and (high.empty() or ((high.code = '%') and (high.system = %ucum)))
+RiskAssessment (RiskAssessment.prediction): probability is decimal implies probability.as(decimal) <= 100
+AuditEvent (AuditEvent.entity): name.empty() or query.empty()
+ValueSet (ValueSet.compose.include): concept.empty() or filter.empty()
+ValueSet (ValueSet.compose): include.exists() or import.exists()
+ValueSet (ValueSet): compose.import.count() != 1 or compose.include.exists() or compose.exclude.exists()
+ValueSet (ValueSet): compose.exists() or expansion.exists()
+ValueSet (ValueSet.expansion.contains): code.exists() or display.exists()
+ValueSet (ValueSet.expansion.contains): code.exists() or abstract = true
+ValueSet (ValueSet.expansion.contains): code.empty() or system.exists()
+ConceptMap (ConceptMap.element.target): comments.exists() or ((equivalence != 'narrower') and (equivalence != 'inexact'))
+Appointment (Appointment.participant): type.exists() or actor.exists()
+Appointment (Appointment): start.empty() xor end.exists()
+Appointment (Appointment): (start.exists() and end.exists()) or (status in ('proposed' | 'cancelled'))
+AppointmentResponse (AppointmentResponse): participantType.exists() or actor.exists()
+NamingSystem (NamingSystem): kind != 'root' or uniqueId.type = 'uuid'
+NamingSystem (NamingSystem): uniqueId.where(preferred = true).select(type).isDistinct()
+NamingSystem (NamingSystem): replacedBy.empty() or status = 'retired'
+OperationDefinition (OperationDefinition.parameter): type.exists() or part.exists()
+OperationDefinition (OperationDefinition.parameter): searchType implies type = 'string'
+Bundle (Bundle): total.empty() or (type = 'searchset') or (type = 'history')
+Bundle (Bundle): entry.search.empty() or (type = 'searchset')
+Bundle (Bundle): entry.request.empty() or type = 'batch' or type = 'transaction' or type = 'history'
+Bundle (Bundle): entry.response.empty() or type = 'batch-response' or type = 'transaction-response'
+Bundle (Bundle.entry): resource.exists() or request.exists() or response.exists()
+Bundle (Bundle.entry): fullUrl.empty() xor resource.exists()
+Bundle (Bundle): entry.where(fullUrl).select(fullUrl&resource.meta.versionId).isDistinct()
+SearchParameter (SearchParameter): xpath.empty() or xpathUsage.exists()
+StructureDefinition (StructureDefinition): derivation = 'constraint' implies baseType and (snapshot.empty() or snapshot.element.first().path = baseType)
+StructureDefinition (StructureDefinition): derivation = 'constraint' or snapshot.element.select(path).distinct()
+StructureDefinition (StructureDefinition): snapshot.element.base implies baseType
+StructureDefinition (StructureDefinition.mapping): name.exists() or uri.exists()
+StructureDefinition (StructureDefinition): baseType implies derivation
+StructureDefinition (StructureDefinition.snapshot): element.all(definition and min and max)
+StructureDefinition (StructureDefinition): abstract = true or (baseType.exists() and baseDefinition.exists())
+StructureDefinition (StructureDefinition): baseType != 'Extension' or (context.exists() and contextType.exists())
+StructureDefinition (StructureDefinition): snapshot.exists() or differential.exists()
+StructureDefinition (StructureDefinition): (derivation = 'constraint') or (url = 'http://hl7.org/fhir/StructureDefinition/'+id)
+StructureDefinition (StructureDefinition): snapshot.element.tail().all(path.startsWith(%resource.snapshot.element.first().path&'.')) and differential.element.tail().all(path.startsWith(%resource.differential.element.first().path+'.'))
+StructureDefinition (StructureDefinition): children().element.first().label.empty() and children().element.first().code.empty() and children().element.first().requirements.empty()
+TestScript (TestScript.test.action.operation): sourceId.exists() or (targetId.count() + url.count() + params.count() = 1) or (type.code in ('conformance' | 'search' | 'transaction' | 'history'))
+TestScript (TestScript.teardown.action.operation): sourceId.exists() or (targetId.count() + url.count() + params.count() = 1) or (type.code in ('conformance' | 'search' | 'transaction' | 'history'))
+TestScript (TestScript.setup.action.assert): compareToSourceId.empty() xor compareToSourcePath.exists()
+TestScript (TestScript.test.action.assert): compareToSourceId.empty() xor compareToSourcePath.exists()
+TestScript (TestScript.setup.action): operation.exists() xor assert.exists()
+TestScript (TestScript.test.action): operation.exists() xor assert.exists()
+TestScript (TestScript.teardown.action): operation.exists()
+TestScript (TestScript.variable): headerField.empty() or path.empty()
+TestScript (TestScript.metadata): capability.required.exists() or capability.validated.exists()
+TestScript (TestScript.setup.metadata): capability.required.exists() or capability.validated.exists()
+TestScript (TestScript.test.metadata): capability.required.exists() or capability.validated.exists()
+TestScript (TestScript.setup.action.assert): contentType.count() + headerField.count() + minimumId.count() + navigationLinks.count() + path.count() + resource.count() + responseCode.count() + response.count() + rule.count() + ruleset.count() + validateProfileId.count() <=1
+TestScript (TestScript.test.action.assert): contentType.count() + headerField.count() + minimumId.count() + navigationLinks.count() + path.count() + resource.count() + responseCode.count() + response.count() + rule.count() + ruleset.count() + validateProfileId.count() <=1
+TestScript (TestScript.setup.action.operation): sourceId.exists() or (targetId.count() + url.count() + params.count() = 1) or (type.code in ('conformance' |'search' | 'transaction' | 'history'))
+Protocol (Protocol.step.precondition): (condition.count() + intersection[0].count() + union[0].count() + exclude[0].count()) <= 1
+CodeSystem (CodeSystem): descendents().code.isDistinct()
+Task (Task): lastModified >= created
+Account (Account): Account.owner
+Account (Account): Account.identifier
+Account (Account): Account.coveragePeriod
+Account (Account): Account.balance
+Account (Account): Account.subject
+Account (Account): Account.subject
+Account (Account): Account.name
+Account (Account): Account.type
+Account (Account): Account.status
+AllergyIntolerance (AllergyIntolerance): AllergyIntolerance.reaction.severity
+AllergyIntolerance (AllergyIntolerance): AllergyIntolerance.recordedDate
+AllergyIntolerance (AllergyIntolerance): AllergyIntolerance.identifier
+AllergyIntolerance (AllergyIntolerance): AllergyIntolerance.reaction.manifestation
+AllergyIntolerance (AllergyIntolerance): AllergyIntolerance.recorder
+AllergyIntolerance (AllergyIntolerance): AllergyIntolerance.substance | AllergyIntolerance.reaction.substance
+AllergyIntolerance (AllergyIntolerance): AllergyIntolerance.criticality
+AllergyIntolerance (AllergyIntolerance): AllergyIntolerance.reporter
+AllergyIntolerance (AllergyIntolerance): AllergyIntolerance.type
+AllergyIntolerance (AllergyIntolerance): AllergyIntolerance.reaction.onset
+AllergyIntolerance (AllergyIntolerance): AllergyIntolerance.reaction.exposureRoute
+AllergyIntolerance (AllergyIntolerance): AllergyIntolerance.patient
+AllergyIntolerance (AllergyIntolerance): AllergyIntolerance.category
+AllergyIntolerance (AllergyIntolerance): AllergyIntolerance.lastOccurence
+AllergyIntolerance (AllergyIntolerance): AllergyIntolerance.status
+Appointment (Appointment): Appointment.start
+Appointment (Appointment): Appointment.participant.actor
+Appointment (Appointment): Appointment.identifier
+Appointment (Appointment): Appointment.participant.actor
+Appointment (Appointment): Appointment.participant.status
+Appointment (Appointment): Appointment.participant.actor
+Appointment (Appointment): Appointment.appointmentType
+Appointment (Appointment): Appointment.serviceType
+Appointment (Appointment): Appointment.participant.actor
+Appointment (Appointment): Appointment.status
+AppointmentResponse (AppointmentResponse): AppointmentResponse.actor
+AppointmentResponse (AppointmentResponse): AppointmentResponse.identifier
+AppointmentResponse (AppointmentResponse): AppointmentResponse.actor
+AppointmentResponse (AppointmentResponse): AppointmentResponse.participantStatus
+AppointmentResponse (AppointmentResponse): AppointmentResponse.actor
+AppointmentResponse (AppointmentResponse): AppointmentResponse.appointment
+AppointmentResponse (AppointmentResponse): AppointmentResponse.actor
+AuditEvent (AuditEvent): AuditEvent.recorded
+AuditEvent (AuditEvent): AuditEvent.entity.type
+AuditEvent (AuditEvent): AuditEvent.agent.reference
+AuditEvent (AuditEvent): AuditEvent.agent.network.address
+AuditEvent (AuditEvent): AuditEvent.source.identifier
+AuditEvent (AuditEvent): AuditEvent.type
+AuditEvent (AuditEvent): AuditEvent.agent.altId
+AuditEvent (AuditEvent): AuditEvent.source.site
+AuditEvent (AuditEvent): AuditEvent.agent.name
+AuditEvent (AuditEvent): AuditEvent.entity.name
+AuditEvent (AuditEvent): AuditEvent.subtype
+AuditEvent (AuditEvent): AuditEvent.agent.reference | AuditEvent.entity.reference
+AuditEvent (AuditEvent): AuditEvent.action
+AuditEvent (AuditEvent): AuditEvent.agent.userId
+AuditEvent (AuditEvent): AuditEvent.entity.reference
+AuditEvent (AuditEvent): AuditEvent.entity.identifier
+AuditEvent (AuditEvent): AuditEvent.agent.policy
+Basic (Basic): Basic.identifier
+Basic (Basic): Basic.code
+Basic (Basic): Basic.subject
+Basic (Basic): Basic.created
+Basic (Basic): Basic.subject
+Basic (Basic): Basic.author
+Binary (Binary): Binary.contentType
+BodySite (BodySite): BodySite.identifier
+BodySite (BodySite): BodySite.code
+BodySite (BodySite): BodySite.patient
+Bundle (Bundle): Bundle.entry.resource[0]
+Bundle (Bundle): Bundle.type
+Bundle (Bundle): Bundle.entry.resource[0]
+CarePlan (CarePlan): CarePlan.period
+CarePlan (CarePlan): CarePlan.activity.detail.code
+CarePlan (CarePlan): CarePlan.activity.detail.scheduled
+CarePlan (CarePlan): CarePlan.activity.reference
+CarePlan (CarePlan): CarePlan.activity.detail.performer
+CarePlan (CarePlan): CarePlan.goal
+CarePlan (CarePlan): CarePlan.subject
+CarePlan (CarePlan): CarePlan.relatedPlan.code
+CarePlan (CarePlan): CarePlan.careTeam
+CarePlan (CarePlan): CarePlan.relatedPlan.plan
+CarePlan (CarePlan): CarePlan.addresses
+CarePlan (CarePlan): CarePlan.subject
+CarePlan (CarePlan): CarePlan.category
+CareTeam (CareTeam): CareTeam.period
+CareTeam (CareTeam): CareTeam.identifier
+CareTeam (CareTeam): CareTeam.subject
+CareTeam (CareTeam): CareTeam.subject
+CareTeam (CareTeam): CareTeam.type
+CareTeam (CareTeam): CareTeam.participant.member
+CareTeam (CareTeam): CareTeam.status
+Claim (Claim): Claim.identifier
+Claim (Claim): Claim.patient.as(Identifier)
+Claim (Claim): Claim.organization.as(Identifier)
+Claim (Claim): Claim.use
+Claim (Claim): Claim.created
+Claim (Claim): Claim.patient.as(Reference)
+Claim (Claim): Claim.provider.as(Reference)
+Claim (Claim): Claim.organization.as(Reference)
+Claim (Claim): Claim.priority
+Claim (Claim): Claim.provider.as(Identifier)
+Claim (Claim): Claim.target.as(Identifier)
+Claim (Claim): Claim.facility.as(Reference)
+Claim (Claim): Claim.target.as(Reference)
+Claim (Claim): Claim.facility.as(Identifier)
+ClaimResponse (ClaimResponse): ClaimResponse.identifier
+ClaimResponse (ClaimResponse): ClaimResponse.disposition
+ClaimResponse (ClaimResponse): ClaimResponse.paymentDate
+ClaimResponse (ClaimResponse): ClaimResponse.organization.as(Identifier)
+ClaimResponse (ClaimResponse): ClaimResponse.created
+ClaimResponse (ClaimResponse): ClaimResponse.request.as(Identifier)
+ClaimResponse (ClaimResponse): ClaimResponse.organization.as(Reference)
+ClaimResponse (ClaimResponse): ClaimResponse.request.as(Reference)
+ClaimResponse (ClaimResponse): ClaimResponse.outcome
+ClinicalImpression (ClinicalImpression): ClinicalImpression.date
+ClinicalImpression (ClinicalImpression): ClinicalImpression.previous
+ClinicalImpression (ClinicalImpression): ClinicalImpression.assessor
+ClinicalImpression (ClinicalImpression): ClinicalImpression.trigger.as(Reference)
+ClinicalImpression (ClinicalImpression): ClinicalImpression.finding.item
+ClinicalImpression (ClinicalImpression): ClinicalImpression.ruledOut.item
+ClinicalImpression (ClinicalImpression): ClinicalImpression.problem
+ClinicalImpression (ClinicalImpression): ClinicalImpression.patient
+ClinicalImpression (ClinicalImpression): ClinicalImpression.investigations.item
+ClinicalImpression (ClinicalImpression): ClinicalImpression.action
+ClinicalImpression (ClinicalImpression): ClinicalImpression.trigger.as(CodeableConcept)
+ClinicalImpression (ClinicalImpression): ClinicalImpression.plan
+ClinicalImpression (ClinicalImpression): ClinicalImpression.resolved
+ClinicalImpression (ClinicalImpression): ClinicalImpression.status
+CodeSystem (CodeSystem): CodeSystem.date
+CodeSystem (CodeSystem): CodeSystem.identifier
+CodeSystem (CodeSystem): CodeSystem.concept.code
+CodeSystem (CodeSystem): CodeSystem.description
+CodeSystem (CodeSystem): CodeSystem.concept.designation.language
+CodeSystem (CodeSystem): CodeSystem.version
+CodeSystem (CodeSystem): CodeSystem.url
+CodeSystem (CodeSystem): CodeSystem.content
+CodeSystem (CodeSystem): CodeSystem.url
+CodeSystem (CodeSystem): CodeSystem.name
+CodeSystem (CodeSystem): CodeSystem.useContext
+CodeSystem (CodeSystem): CodeSystem.publisher
+CodeSystem (CodeSystem): CodeSystem.status
+Communication (Communication): Communication.identifier
+Communication (Communication): Communication.requestDetail
+Communication (Communication): Communication.sender
+Communication (Communication): Communication.subject
+Communication (Communication): Communication.subject
+Communication (Communication): Communication.recipient
+Communication (Communication): Communication.received
+Communication (Communication): Communication.medium
+Communication (Communication): Communication.encounter
+Communication (Communication): Communication.category
+Communication (Communication): Communication.sent
+Communication (Communication): Communication.status
+CommunicationRequest (CommunicationRequest): CommunicationRequest.requester
+CommunicationRequest (CommunicationRequest): CommunicationRequest.identifier
+CommunicationRequest (CommunicationRequest): CommunicationRequest.subject
+CommunicationRequest (CommunicationRequest): CommunicationRequest.medium
+CommunicationRequest (CommunicationRequest): CommunicationRequest.encounter
+CommunicationRequest (CommunicationRequest): CommunicationRequest.priority
+CommunicationRequest (CommunicationRequest): CommunicationRequest.requestedOn
+CommunicationRequest (CommunicationRequest): CommunicationRequest.sender
+CommunicationRequest (CommunicationRequest): CommunicationRequest.subject
+CommunicationRequest (CommunicationRequest): CommunicationRequest.recipient
+CommunicationRequest (CommunicationRequest): CommunicationRequest.scheduled.as(DateTime)
+CommunicationRequest (CommunicationRequest): CommunicationRequest.category
+CommunicationRequest (CommunicationRequest): CommunicationRequest.status
+CompartmentDefinition (CompartmentDefinition): CompartmentDefinition.date
+CompartmentDefinition (CompartmentDefinition): CompartmentDefinition.code
+CompartmentDefinition (CompartmentDefinition): CompartmentDefinition.resource.code
+CompartmentDefinition (CompartmentDefinition): CompartmentDefinition.name
+CompartmentDefinition (CompartmentDefinition): CompartmentDefinition.url
+CompartmentDefinition (CompartmentDefinition): CompartmentDefinition.status
+Composition (Composition): Composition.date
+Composition (Composition): Composition.identifier
+Composition (Composition): Composition.event.period
+Composition (Composition): Composition.subject
+Composition (Composition): Composition.author
+Composition (Composition): Composition.confidentiality
+Composition (Composition): Composition.section.code
+Composition (Composition): Composition.encounter
+Composition (Composition): Composition.type
+Composition (Composition): Composition.title
+Composition (Composition): Composition.attester.party
+Composition (Composition): Composition.section.entry
+Composition (Composition): Composition.subject
+Composition (Composition): Composition.event.code
+Composition (Composition): Composition.class
+Composition (Composition): Composition.status
+ConceptMap (ConceptMap): ConceptMap.date
+ConceptMap (ConceptMap): ConceptMap.identifier
+ConceptMap (ConceptMap): ConceptMap.element.target.product.element
+ConceptMap (ConceptMap): ConceptMap.element.target.system
+ConceptMap (ConceptMap): ConceptMap.element.target.dependsOn.element
+ConceptMap (ConceptMap): ConceptMap.description
+ConceptMap (ConceptMap): ConceptMap.source.as(Reference)
+ConceptMap (ConceptMap): ConceptMap.version
+ConceptMap (ConceptMap): ConceptMap.url
+ConceptMap (ConceptMap): ConceptMap.target
+ConceptMap (ConceptMap): ConceptMap.element.code
+ConceptMap (ConceptMap): ConceptMap.source.as(Uri)
+ConceptMap (ConceptMap): ConceptMap.name
+ConceptMap (ConceptMap): ConceptMap.useContext
+ConceptMap (ConceptMap): ConceptMap.publisher
+ConceptMap (ConceptMap): ConceptMap.element.system
+ConceptMap (ConceptMap): ConceptMap.element.target.code
+ConceptMap (ConceptMap): ConceptMap.status
+Condition (Condition): Condition.severity
+Condition (Condition): Condition.identifier
+Condition (Condition): Condition.clinicalStatus
+Condition (Condition): Condition.onset.as(boolean) | Condition.onset.as(Quantity) | Condition.onset.as(Range) | Condition.onset.as(string)
+Condition (Condition): Condition.code
+Condition (Condition): Condition.evidence.code
+Condition (Condition): Condition.encounter
+Condition (Condition): Condition.onset.as(dateTime) | Condition.onset.as(Period)
+Condition (Condition): Condition.asserter
+Condition (Condition): Condition.dateRecorded
+Condition (Condition): Condition.stage.summary
+Condition (Condition): Condition.patient
+Condition (Condition): Condition.category
+Condition (Condition): Condition.bodySite
+Conformance (Conformance): Conformance.date
+Conformance (Conformance): Conformance.software.name
+Conformance (Conformance): Conformance.rest.resource.type
+Conformance (Conformance): Conformance.format
+Conformance (Conformance): Conformance.description
+Conformance (Conformance): Conformance.version
+Conformance (Conformance): Conformance.version
+Conformance (Conformance): Conformance.rest.security.service
+Conformance (Conformance): Conformance.url
+Conformance (Conformance): Conformance.profile
+Conformance (Conformance): Conformance.rest.mode
+Conformance (Conformance): Conformance.rest.resource.profile
+Conformance (Conformance): Conformance.name
+Conformance (Conformance): Conformance.useContext
+Conformance (Conformance): Conformance.publisher
+Conformance (Conformance): Conformance.messaging.event.code
+Conformance (Conformance): Conformance.status
+Consent (Consent): Consent.identifier
+Consent (Consent): Consent.data
+Consent (Consent): Consent.applies
+Consent (Consent): Consent.patient
+Consent (Consent): Consent.authority
+Consent (Consent): Consent.domain
+Consent (Consent): Consent.recipient
+Consent (Consent): Consent.issued
+Consent (Consent): Consent.type
+Consent (Consent): Consent.status
+Contract (Contract): Contract.identifier
+Contract (Contract): Contract.agent.actor
+Contract (Contract): Contract.term.topic
+Contract (Contract): Contract.subject
+Contract (Contract): Contract.subject
+Contract (Contract): Contract.authority
+Contract (Contract): Contract.domain
+Contract (Contract): Contract.topic
+Contract (Contract): Contract.issued
+Contract (Contract): Contract.signer.party
+Coverage (Coverage): Coverage.identifier
+Coverage (Coverage): Coverage.issuer.as(Reference)
+Coverage (Coverage): Coverage.subPlan
+Coverage (Coverage): Coverage.type
+Coverage (Coverage): Coverage.beneficiary.as(Identifier)
+Coverage (Coverage): Coverage.planholder.as(Identifier)
+Coverage (Coverage): Coverage.sequence
+Coverage (Coverage): Coverage.planholder.as(Reference)
+Coverage (Coverage): Coverage.issuer.as(Identifier)
+Coverage (Coverage): Coverage.plan
+Coverage (Coverage): Coverage.dependent
+Coverage (Coverage): Coverage.beneficiary.as(Reference)
+Coverage (Coverage): Coverage.group
+DataElement (DataElement): DataElement.date
+DataElement (DataElement): DataElement.identifier
+DataElement (DataElement): DataElement.element.code
+DataElement (DataElement): DataElement.stringency
+DataElement (DataElement): DataElement.name
+DataElement (DataElement): DataElement.useContext
+DataElement (DataElement): DataElement.publisher
+DataElement (DataElement): DataElement.element.definition
+DataElement (DataElement): DataElement.version
+DataElement (DataElement): DataElement.url
+DataElement (DataElement): DataElement.status
+DecisionSupportRule (DecisionSupportRule): DecisionSupportRule.moduleMetadata.identifier
+DecisionSupportRule (DecisionSupportRule): DecisionSupportRule.moduleMetadata.topic
+DecisionSupportRule (DecisionSupportRule): DecisionSupportRule.moduleMetadata.description
+DecisionSupportRule (DecisionSupportRule): DecisionSupportRule.moduleMetadata.title
+DecisionSupportRule (DecisionSupportRule): DecisionSupportRule.moduleMetadata.version
+DecisionSupportRule (DecisionSupportRule): DecisionSupportRule.moduleMetadata.status
+DecisionSupportServiceModule (DecisionSupportServiceModule): DecisionSupportServiceModule.moduleMetadata.identifier
+DecisionSupportServiceModule (DecisionSupportServiceModule): DecisionSupportServiceModule.moduleMetadata.topic
+DecisionSupportServiceModule (DecisionSupportServiceModule): DecisionSupportServiceModule.moduleMetadata.description
+DecisionSupportServiceModule (DecisionSupportServiceModule): DecisionSupportServiceModule.moduleMetadata.title
+DecisionSupportServiceModule (DecisionSupportServiceModule): DecisionSupportServiceModule.moduleMetadata.version
+DecisionSupportServiceModule (DecisionSupportServiceModule): DecisionSupportServiceModule.moduleMetadata.status
+DetectedIssue (DetectedIssue): DetectedIssue.date
+DetectedIssue (DetectedIssue): DetectedIssue.identifier
+DetectedIssue (DetectedIssue): DetectedIssue.patient
+DetectedIssue (DetectedIssue): DetectedIssue.author
+DetectedIssue (DetectedIssue): DetectedIssue.implicated
+DetectedIssue (DetectedIssue): DetectedIssue.category
+Device (Device): Device.identifier
+Device (Device): Device.patient
+Device (Device): Device.owner
+Device (Device): Device.model
+Device (Device): Device.location
+Device (Device): Device.type
+Device (Device): Device.udiCarrier
+Device (Device): Device.url
+Device (Device): Device.manufacturer
+DeviceComponent (DeviceComponent): DeviceComponent.parent
+DeviceComponent (DeviceComponent): DeviceComponent.source
+DeviceComponent (DeviceComponent): DeviceComponent.type
+DeviceMetric (DeviceMetric): DeviceMetric.parent
+DeviceMetric (DeviceMetric): DeviceMetric.identifier
+DeviceMetric (DeviceMetric): DeviceMetric.source
+DeviceMetric (DeviceMetric): DeviceMetric.type
+DeviceMetric (DeviceMetric): DeviceMetric.category
+DeviceUseRequest (DeviceUseRequest): DeviceUseRequest.subject
+DeviceUseRequest (DeviceUseRequest): DeviceUseRequest.subject
+DeviceUseRequest (DeviceUseRequest): DeviceUseRequest.device
+DeviceUseStatement (DeviceUseStatement): DeviceUseStatement.subject
+DeviceUseStatement (DeviceUseStatement): DeviceUseStatement.subject
+DeviceUseStatement (DeviceUseStatement): DeviceUseStatement.device
+DiagnosticOrder (DiagnosticOrder): DiagnosticOrder.item.event.status
+DiagnosticOrder (DiagnosticOrder): DiagnosticOrder.identifier
+DiagnosticOrder (DiagnosticOrder): DiagnosticOrder.item.bodySite
+DiagnosticOrder (DiagnosticOrder): DiagnosticOrder.item.code
+DiagnosticOrder (DiagnosticOrder): DiagnosticOrder.event.dateTime
+DiagnosticOrder (DiagnosticOrder): DiagnosticOrder.subject
+DiagnosticOrder (DiagnosticOrder): DiagnosticOrder.encounter
+DiagnosticOrder (DiagnosticOrder): DiagnosticOrder.event.actor | DiagnosticOrder.item.event.actor
+DiagnosticOrder (DiagnosticOrder): DiagnosticOrder.item.event.dateTime
+DiagnosticOrder (DiagnosticOrder): DiagnosticOrder.event.status
+DiagnosticOrder (DiagnosticOrder): DiagnosticOrder.item.status
+DiagnosticOrder (DiagnosticOrder): DiagnosticOrder.subject
+DiagnosticOrder (DiagnosticOrder): DiagnosticOrder.orderer
+DiagnosticOrder (DiagnosticOrder): DiagnosticOrder.status
+DiagnosticReport (DiagnosticReport): DiagnosticReport.effective
+DiagnosticReport (DiagnosticReport): DiagnosticReport.identifier
+DiagnosticReport (DiagnosticReport): DiagnosticReport.image.link
+DiagnosticReport (DiagnosticReport): DiagnosticReport.request
+DiagnosticReport (DiagnosticReport): DiagnosticReport.performer
+DiagnosticReport (DiagnosticReport): DiagnosticReport.code
+DiagnosticReport (DiagnosticReport): DiagnosticReport.subject
+DiagnosticReport (DiagnosticReport): DiagnosticReport.codedDiagnosis
+DiagnosticReport (DiagnosticReport): DiagnosticReport.encounter
+DiagnosticReport (DiagnosticReport): DiagnosticReport.result
+DiagnosticReport (DiagnosticReport): DiagnosticReport.subject
+DiagnosticReport (DiagnosticReport): DiagnosticReport.specimen
+DiagnosticReport (DiagnosticReport): DiagnosticReport.issued
+DiagnosticReport (DiagnosticReport): DiagnosticReport.category
+DiagnosticReport (DiagnosticReport): DiagnosticReport.status
+DocumentManifest (DocumentManifest): DocumentManifest.masterIdentifier | DocumentManifest.identifier
+DocumentManifest (DocumentManifest): DocumentManifest.related.identifier
+DocumentManifest (DocumentManifest): DocumentManifest.content.p.as(Reference)
+DocumentManifest (DocumentManifest): DocumentManifest.subject
+DocumentManifest (DocumentManifest): DocumentManifest.author
+DocumentManifest (DocumentManifest): DocumentManifest.created
+DocumentManifest (DocumentManifest): DocumentManifest.description
+DocumentManifest (DocumentManifest): DocumentManifest.source
+DocumentManifest (DocumentManifest): DocumentManifest.type
+DocumentManifest (DocumentManifest): DocumentManifest.related.ref
+DocumentManifest (DocumentManifest): DocumentManifest.subject
+DocumentManifest (DocumentManifest): DocumentManifest.recipient
+DocumentManifest (DocumentManifest): DocumentManifest.status
+DocumentReference (DocumentReference): DocumentReference.securityLabel
+DocumentReference (DocumentReference): DocumentReference.subject
+DocumentReference (DocumentReference): DocumentReference.description
+DocumentReference (DocumentReference): DocumentReference.content.attachment.language
+DocumentReference (DocumentReference): DocumentReference.type
+DocumentReference (DocumentReference): DocumentReference.relatesTo.code
+DocumentReference (DocumentReference): DocumentReference.context.practiceSetting
+DocumentReference (DocumentReference): DocumentReference.subject
+DocumentReference (DocumentReference): DocumentReference.context.event
+DocumentReference (DocumentReference): DocumentReference.class
+DocumentReference (DocumentReference): DocumentReference.authenticator
+DocumentReference (DocumentReference): DocumentReference.masterIdentifier | DocumentReference.identifier
+DocumentReference (DocumentReference): DocumentReference.context.period
+DocumentReference (DocumentReference): DocumentReference.context.related.identifier
+DocumentReference (DocumentReference): DocumentReference.custodian
+DocumentReference (DocumentReference): DocumentReference.indexed
+DocumentReference (DocumentReference): DocumentReference.author
+DocumentReference (DocumentReference): DocumentReference.created
+DocumentReference (DocumentReference): DocumentReference.content.format
+DocumentReference (DocumentReference): DocumentReference.context.encounter
+DocumentReference (DocumentReference): DocumentReference.context.related.ref
+DocumentReference (DocumentReference): DocumentReference.content.attachment.url
+DocumentReference (DocumentReference): DocumentReference.relatesTo.target
+DocumentReference (DocumentReference): DocumentReference.context.facilityType
+DocumentReference (DocumentReference): DocumentReference.status
+EligibilityRequest (EligibilityRequest): EligibilityRequest.identifier
+EligibilityRequest (EligibilityRequest): EligibilityRequest.facility.as(Reference)
+EligibilityRequest (EligibilityRequest): EligibilityRequest.patient.as(Identifier)
+EligibilityRequest (EligibilityRequest): EligibilityRequest.organization.as(identifier)
+EligibilityRequest (EligibilityRequest): EligibilityRequest.created
+EligibilityRequest (EligibilityRequest): EligibilityRequest.patient.as(Reference)
+EligibilityRequest (EligibilityRequest): EligibilityRequest.provider.as(Reference)
+EligibilityRequest (EligibilityRequest): EligibilityRequest.organization.as(Reference)
+EligibilityRequest (EligibilityRequest): EligibilityRequest.provider.as(identifier)
+EligibilityRequest (EligibilityRequest): EligibilityRequest.facility.as(identifier)
+EligibilityResponse (EligibilityResponse): EligibilityResponse.requestProvider.as(Identifier)
+EligibilityResponse (EligibilityResponse): EligibilityResponse.requestOrganization.as(Identifier)
+EligibilityResponse (EligibilityResponse): EligibilityResponse.identifier
+EligibilityResponse (EligibilityResponse): EligibilityResponse.disposition
+EligibilityResponse (EligibilityResponse): EligibilityResponse.organization.as(Identifier)
+EligibilityResponse (EligibilityResponse): EligibilityResponse.created
+EligibilityResponse (EligibilityResponse): EligibilityResponse.request.as(Identifier)
+EligibilityResponse (EligibilityResponse): EligibilityResponse.organization.as(Reference)
+EligibilityResponse (EligibilityResponse): EligibilityResponse.requestProvider.as(Reference)
+EligibilityResponse (EligibilityResponse): EligibilityResponse.requestOrganization.as(Reference)
+EligibilityResponse (EligibilityResponse): EligibilityResponse.request.as(Reference)
+EligibilityResponse (EligibilityResponse): EligibilityResponse.outcome
+Encounter (Encounter): Encounter.period
+Encounter (Encounter): Encounter.identifier
+Encounter (Encounter): Encounter.reason
+Encounter (Encounter): Encounter.episodeOfCare
+Encounter (Encounter): Encounter.participant.type
+Encounter (Encounter): Encounter.incomingReferral
+Encounter (Encounter): Encounter.participant.individual
+Encounter (Encounter): Encounter.length
+Encounter (Encounter): Encounter.appointment
+Encounter (Encounter): Encounter.partOf
+Encounter (Encounter): Encounter.indication
+Encounter (Encounter): Encounter.type
+Encounter (Encounter): Encounter.participant.individual
+Encounter (Encounter): Encounter.indication
+Encounter (Encounter): Encounter.patient
+Encounter (Encounter): Encounter.location.period
+Encounter (Encounter): Encounter.location.location
+Encounter (Encounter): Encounter.indication
+Encounter (Encounter): Encounter.hospitalization.specialArrangement
+Encounter (Encounter): Encounter.status
+Endpoint (Endpoint): Endpoint.payloadType
+Endpoint (Endpoint): Endpoint.managingOrganization
+Endpoint (Endpoint): Endpoint.status
+EnrollmentRequest (EnrollmentRequest): EnrollmentRequest.identifier
+EnrollmentRequest (EnrollmentRequest): EnrollmentRequest.subject
+EnrollmentRequest (EnrollmentRequest): EnrollmentRequest.subject
+EnrollmentResponse (EnrollmentResponse): EnrollmentResponse.identifier
+EpisodeOfCare (EpisodeOfCare): EpisodeOfCare.period
+EpisodeOfCare (EpisodeOfCare): EpisodeOfCare.identifier
+EpisodeOfCare (EpisodeOfCare): EpisodeOfCare.condition
+EpisodeOfCare (EpisodeOfCare): EpisodeOfCare.referralRequest
+EpisodeOfCare (EpisodeOfCare): EpisodeOfCare.patient
+EpisodeOfCare (EpisodeOfCare): EpisodeOfCare.managingOrganization
+EpisodeOfCare (EpisodeOfCare): EpisodeOfCare.type
+EpisodeOfCare (EpisodeOfCare): EpisodeOfCare.careManager
+EpisodeOfCare (EpisodeOfCare): EpisodeOfCare.status
+ExpansionProfile (ExpansionProfile): ExpansionProfile.date
+ExpansionProfile (ExpansionProfile): ExpansionProfile.identifier
+ExpansionProfile (ExpansionProfile): ExpansionProfile.name
+ExpansionProfile (ExpansionProfile): ExpansionProfile.publisher
+ExpansionProfile (ExpansionProfile): ExpansionProfile.description
+ExpansionProfile (ExpansionProfile): ExpansionProfile.version
+ExpansionProfile (ExpansionProfile): ExpansionProfile.url
+ExpansionProfile (ExpansionProfile): ExpansionProfile.status
+ExplanationOfBenefit (ExplanationOfBenefit): ExplanationOfBenefit.identifier
+ExplanationOfBenefit (ExplanationOfBenefit): ExplanationOfBenefit.patient.as(Identifier)
+ExplanationOfBenefit (ExplanationOfBenefit): ExplanationOfBenefit.organization.as(Identifier)
+ExplanationOfBenefit (ExplanationOfBenefit): ExplanationOfBenefit.claim.as(Reference)
+ExplanationOfBenefit (ExplanationOfBenefit): ExplanationOfBenefit.created
+ExplanationOfBenefit (ExplanationOfBenefit): ExplanationOfBenefit.patient.as(Reference)
+ExplanationOfBenefit (ExplanationOfBenefit): ExplanationOfBenefit.provider.as(Reference)
+ExplanationOfBenefit (ExplanationOfBenefit): ExplanationOfBenefit.organization.as(Reference)
+ExplanationOfBenefit (ExplanationOfBenefit): ExplanationOfBenefit.provider.as(Identifier)
+ExplanationOfBenefit (ExplanationOfBenefit): ExplanationOfBenefit.disposition
+ExplanationOfBenefit (ExplanationOfBenefit): ExplanationOfBenefit.facility.as(Reference)
+ExplanationOfBenefit (ExplanationOfBenefit): ExplanationOfBenefit.claim.as(Identifier)
+ExplanationOfBenefit (ExplanationOfBenefit): ExplanationOfBenefit.facility.as(Identifier)
+FamilyMemberHistory (FamilyMemberHistory): FamilyMemberHistory.date
+FamilyMemberHistory (FamilyMemberHistory): FamilyMemberHistory.identifier
+FamilyMemberHistory (FamilyMemberHistory): FamilyMemberHistory.condition.code
+FamilyMemberHistory (FamilyMemberHistory): FamilyMemberHistory.gender
+FamilyMemberHistory (FamilyMemberHistory): FamilyMemberHistory.patient
+FamilyMemberHistory (FamilyMemberHistory): FamilyMemberHistory.relationship
+Flag (Flag): Flag.period
+Flag (Flag): Flag.subject
+Flag (Flag): Flag.subject
+Flag (Flag): Flag.author
+Flag (Flag): Flag.encounter
+Goal (Goal): Goal.identifier
+Goal (Goal): Goal.subject
+Goal (Goal): Goal.subject
+Goal (Goal): Goal.target.as(Date)
+Goal (Goal): Goal.category
+Goal (Goal): Goal.status
+Group (Group): Group.actual
+Group (Group): Group.identifier
+Group (Group): Group.code
+Group (Group): Group.member.entity
+Group (Group): Group.characteristic.exclude
+Group (Group): Group.type
+Group (Group): Group.characteristic.value
+Group (Group): Group.characteristic.code
+HealthcareService (HealthcareService): HealthcareService.identifier
+HealthcareService (HealthcareService): HealthcareService.serviceCategory
+HealthcareService (HealthcareService): HealthcareService.serviceType
+HealthcareService (HealthcareService): HealthcareService.providedBy
+HealthcareService (HealthcareService): HealthcareService.serviceName
+HealthcareService (HealthcareService): HealthcareService.programName
+HealthcareService (HealthcareService): HealthcareService.location
+HealthcareService (HealthcareService): HealthcareService.characteristic
+ImagingManifest (ImagingManifest): ImagingManifest.uid
+ImagingManifest (ImagingManifest): ImagingManifest.authoringTime
+ImagingManifest (ImagingManifest): ImagingManifest.study.uid
+ImagingManifest (ImagingManifest): ImagingManifest.author
+ImagingManifest (ImagingManifest): ImagingManifest.patient
+ImagingManifest (ImagingManifest): ImagingManifest.title
+ImagingStudy (ImagingStudy): ImagingStudy.identifier
+ImagingStudy (ImagingStudy): ImagingStudy.series.instance.uid
+ImagingStudy (ImagingStudy): ImagingStudy.uid
+ImagingStudy (ImagingStudy): ImagingStudy.series.instance.sopClass
+ImagingStudy (ImagingStudy): ImagingStudy.series.modality
+ImagingStudy (ImagingStudy): ImagingStudy.series.bodySite
+ImagingStudy (ImagingStudy): ImagingStudy.patient
+ImagingStudy (ImagingStudy): ImagingStudy.series.uid
+ImagingStudy (ImagingStudy): ImagingStudy.started
+ImagingStudy (ImagingStudy): ImagingStudy.accession
+ImagingStudy (ImagingStudy): ImagingStudy.order
+Immunization (Immunization): Immunization.date
+Immunization (Immunization): Immunization.requester
+Immunization (Immunization): Immunization.identifier
+Immunization (Immunization): Immunization.explanation.reason
+Immunization (Immunization): Immunization.performer
+Immunization (Immunization): Immunization.reaction.detail
+Immunization (Immunization): Immunization.lotNumber
+Immunization (Immunization): Immunization.wasNotGiven
+Immunization (Immunization): Immunization.manufacturer
+Immunization (Immunization): Immunization.vaccinationProtocol.doseSequence
+Immunization (Immunization): Immunization.patient
+Immunization (Immunization): Immunization.vaccineCode
+Immunization (Immunization): Immunization.explanation.reasonNotGiven
+Immunization (Immunization): Immunization.location
+Immunization (Immunization): Immunization.reaction.date
+Immunization (Immunization): Immunization.status
+ImmunizationRecommendation (ImmunizationRecommendation): ImmunizationRecommendation.recommendation.date
+ImmunizationRecommendation (ImmunizationRecommendation): ImmunizationRecommendation.identifier
+ImmunizationRecommendation (ImmunizationRecommendation): ImmunizationRecommendation.recommendation.protocol.doseSequence
+ImmunizationRecommendation (ImmunizationRecommendation): ImmunizationRecommendation.patient
+ImmunizationRecommendation (ImmunizationRecommendation): ImmunizationRecommendation.recommendation.vaccineCode
+ImmunizationRecommendation (ImmunizationRecommendation): ImmunizationRecommendation.recommendation.doseNumber
+ImmunizationRecommendation (ImmunizationRecommendation): ImmunizationRecommendation.recommendation.supportingPatientInformation
+ImmunizationRecommendation (ImmunizationRecommendation): ImmunizationRecommendation.recommendation.supportingImmunization
+ImmunizationRecommendation (ImmunizationRecommendation): ImmunizationRecommendation.recommendation.forecastStatus
+ImplementationGuide (ImplementationGuide): ImplementationGuide.date
+ImplementationGuide (ImplementationGuide): ImplementationGuide.dependency.uri
+ImplementationGuide (ImplementationGuide): ImplementationGuide.package.resource.source
+ImplementationGuide (ImplementationGuide): ImplementationGuide.name
+ImplementationGuide (ImplementationGuide): ImplementationGuide.useContext
+ImplementationGuide (ImplementationGuide): ImplementationGuide.publisher
+ImplementationGuide (ImplementationGuide): ImplementationGuide.description
+ImplementationGuide (ImplementationGuide): ImplementationGuide.experimental
+ImplementationGuide (ImplementationGuide): ImplementationGuide.version
+ImplementationGuide (ImplementationGuide): ImplementationGuide.url
+ImplementationGuide (ImplementationGuide): ImplementationGuide.status
+Library (Library): Library.moduleMetadata.identifier
+Library (Library): Library.moduleMetadata.topic
+Library (Library): Library.moduleMetadata.description
+Library (Library): Library.moduleMetadata.title
+Library (Library): Library.moduleMetadata.version
+Library (Library): Library.moduleMetadata.status
+Linkage (Linkage): Linkage.item.resource
+Linkage (Linkage): Linkage.author
+Linkage (Linkage): Linkage.item.resource
+List (List): List.date
+List (List): List.identifier
+List (List): List.entry.item
+List (List): List.emptyReason
+List (List): List.code
+List (List): List.note.text
+List (List): List.subject
+List (List): List.subject
+List (List): List.source
+List (List): List.encounter
+List (List): List.title
+List (List): List.status
+Location (Location): Location.identifier
+Location (Location): Location.partOf
+Location (Location): Location.position
+Location (Location): Location.address
+Location (Location): Location.address.state
+Location (Location): Location.type
+Location (Location): Location.address.postalCode
+Location (Location): Location.address.country
+Location (Location): Location.managingOrganization
+Location (Location): Location.name
+Location (Location): Location.address.use
+Location (Location): Location.position
+Location (Location): Location.address.city
+Location (Location): Location.status
+Measure (Measure): Measure.moduleMetadata.identifier
+Measure (Measure): Measure.moduleMetadata.topic
+Measure (Measure): Measure.moduleMetadata.description
+Measure (Measure): Measure.moduleMetadata.title
+Measure (Measure): Measure.moduleMetadata.version
+Measure (Measure): Measure.moduleMetadata.status
+MeasureReport (MeasureReport): MeasureReport.patient
+Media (Media): Media.identifier
+Media (Media): Media.view
+Media (Media): Media.subtype
+Media (Media): Media.content.creation
+Media (Media): Media.subject
+Media (Media): Media.subject
+Media (Media): Media.type
+Media (Media): Media.operator
+Medication (Medication): Medication.product.ingredient.item.as(CodeableConcept)
+Medication (Medication): Medication.package.container
+Medication (Medication): Medication.package.content.item.as(Reference)
+Medication (Medication): Medication.code
+Medication (Medication): Medication.product.ingredient.item.as(Reference)
+Medication (Medication): Medication.product.form
+Medication (Medication): Medication.package.content.item.as(CodeableConcept)
+Medication (Medication): Medication.manufacturer
+MedicationAdministration (MedicationAdministration): MedicationAdministration.identifier
+MedicationAdministration (MedicationAdministration): MedicationAdministration.medication.as(CodeableConcept)
+MedicationAdministration (MedicationAdministration): MedicationAdministration.performer
+MedicationAdministration (MedicationAdministration): MedicationAdministration.prescription
+MedicationAdministration (MedicationAdministration): MedicationAdministration.effectiveTime
+MedicationAdministration (MedicationAdministration): MedicationAdministration.patient
+MedicationAdministration (MedicationAdministration): MedicationAdministration.wasNotGiven
+MedicationAdministration (MedicationAdministration): MedicationAdministration.medication.as(Reference)
+MedicationAdministration (MedicationAdministration): MedicationAdministration.encounter
+MedicationAdministration (MedicationAdministration): MedicationAdministration.device
+MedicationAdministration (MedicationAdministration): MedicationAdministration.status
+MedicationDispense (MedicationDispense): MedicationDispense.identifier
+MedicationDispense (MedicationDispense): MedicationDispense.medication.as(CodeableConcept)
+MedicationDispense (MedicationDispense): MedicationDispense.receiver
+MedicationDispense (MedicationDispense): MedicationDispense.destination
+MedicationDispense (MedicationDispense): MedicationDispense.medication.as(Reference)
+MedicationDispense (MedicationDispense): MedicationDispense.substitution.responsibleParty
+MedicationDispense (MedicationDispense): MedicationDispense.type
+MedicationDispense (MedicationDispense): MedicationDispense.whenHandedOver
+MedicationDispense (MedicationDispense): MedicationDispense.whenPrepared
+MedicationDispense (MedicationDispense): MedicationDispense.dispenser
+MedicationDispense (MedicationDispense): MedicationDispense.authorizingPrescription
+MedicationDispense (MedicationDispense): MedicationDispense.patient
+MedicationDispense (MedicationDispense): MedicationDispense.status
+MedicationOrder (MedicationOrder): MedicationOrder.prescriber
+MedicationOrder (MedicationOrder): MedicationOrder.identifier
+MedicationOrder (MedicationOrder): MedicationOrder.medication.as(CodeableConcept)
+MedicationOrder (MedicationOrder): MedicationOrder.patient
+MedicationOrder (MedicationOrder): MedicationOrder.dateWritten
+MedicationOrder (MedicationOrder): MedicationOrder.medication.as(Reference)
+MedicationOrder (MedicationOrder): MedicationOrder.encounter
+MedicationOrder (MedicationOrder): MedicationOrder.status
+MedicationStatement (MedicationStatement): MedicationStatement.identifier
+MedicationStatement (MedicationStatement): MedicationStatement.effective
+MedicationStatement (MedicationStatement): MedicationStatement.medication.as(CodeableConcept)
+MedicationStatement (MedicationStatement): MedicationStatement.patient
+MedicationStatement (MedicationStatement): MedicationStatement.medication.as(Reference)
+MedicationStatement (MedicationStatement): MedicationStatement.informationSource
+MedicationStatement (MedicationStatement): MedicationStatement.status
+MessageHeader (MessageHeader): MessageHeader.response.code
+MessageHeader (MessageHeader): MessageHeader.data
+MessageHeader (MessageHeader): MessageHeader.receiver
+MessageHeader (MessageHeader): MessageHeader.author
+MessageHeader (MessageHeader): MessageHeader.destination.name
+MessageHeader (MessageHeader): MessageHeader.source.name
+MessageHeader (MessageHeader): MessageHeader.destination.target
+MessageHeader (MessageHeader): MessageHeader.destination.endpoint
+MessageHeader (MessageHeader): MessageHeader.source.endpoint
+MessageHeader (MessageHeader): MessageHeader.responsible
+MessageHeader (MessageHeader): MessageHeader.response.identifier
+MessageHeader (MessageHeader): MessageHeader.enterer
+MessageHeader (MessageHeader): MessageHeader.event
+MessageHeader (MessageHeader): MessageHeader.timestamp
+NamingSystem (NamingSystem): NamingSystem.date
+NamingSystem (NamingSystem): NamingSystem.uniqueId.period
+NamingSystem (NamingSystem): NamingSystem.kind
+NamingSystem (NamingSystem): NamingSystem.type
+NamingSystem (NamingSystem): NamingSystem.uniqueId.type
+NamingSystem (NamingSystem): NamingSystem.responsible
+NamingSystem (NamingSystem): NamingSystem.contact.name
+NamingSystem (NamingSystem): NamingSystem.name
+NamingSystem (NamingSystem): NamingSystem.useContext
+NamingSystem (NamingSystem): NamingSystem.publisher
+NamingSystem (NamingSystem): NamingSystem.contact.telecom
+NamingSystem (NamingSystem): NamingSystem.uniqueId.value
+NamingSystem (NamingSystem): NamingSystem.replacedBy
+NamingSystem (NamingSystem): NamingSystem.status
+NutritionOrder (NutritionOrder): NutritionOrder.identifier
+NutritionOrder (NutritionOrder): NutritionOrder.dateTime
+NutritionOrder (NutritionOrder): NutritionOrder.orderer
+NutritionOrder (NutritionOrder): NutritionOrder.patient
+NutritionOrder (NutritionOrder): NutritionOrder.supplement.type
+NutritionOrder (NutritionOrder): NutritionOrder.enteralFormula.baseFormulaType
+NutritionOrder (NutritionOrder): NutritionOrder.encounter
+NutritionOrder (NutritionOrder): NutritionOrder.oralDiet.type
+NutritionOrder (NutritionOrder): NutritionOrder.status
+NutritionOrder (NutritionOrder): NutritionOrder.enteralFormula.additiveType
+Observation (Observation): Observation.effective
+Observation (Observation): Observation.identifier
+Observation (Observation): Observation.code | Observation.component.code
+Observation (Observation): Observation.performer
+Observation (Observation): Observation.method
+Observation (Observation): Observation.value.as(Quantity) | Observation.component.value.as(Quantity)
+Observation (Observation): Observation.subject
+Observation (Observation): Observation.value.as(CodeableConcept) | Observation.component.value.as(CodeableConcept)
+Observation (Observation): Observation.value.as(DateTime) | Observation.value.as(Period)
+Observation (Observation): Observation.dataAbsentReason | Observation.component.dataAbsentReason
+Observation (Observation): Observation.encounter
+Observation (Observation): Observation.related.type
+Observation (Observation): Observation.related.target
+Observation (Observation): Observation.subject
+Observation (Observation): Observation.specimen
+Observation (Observation): Observation.category
+Observation (Observation): Observation.value.as(String) | Observation.component.value.as(String)
+Observation (Observation): Observation.device
+Observation (Observation): Observation.status
+OperationDefinition (OperationDefinition): OperationDefinition.date
+OperationDefinition (OperationDefinition): OperationDefinition.code
+OperationDefinition (OperationDefinition): OperationDefinition.instance
+OperationDefinition (OperationDefinition): OperationDefinition.kind
+OperationDefinition (OperationDefinition): OperationDefinition.type
+OperationDefinition (OperationDefinition): OperationDefinition.version
+OperationDefinition (OperationDefinition): OperationDefinition.parameter.profile
+OperationDefinition (OperationDefinition): OperationDefinition.url
+OperationDefinition (OperationDefinition): OperationDefinition.system
+OperationDefinition (OperationDefinition): OperationDefinition.name
+OperationDefinition (OperationDefinition): OperationDefinition.useContext
+OperationDefinition (OperationDefinition): OperationDefinition.publisher
+OperationDefinition (OperationDefinition): OperationDefinition.status
+OperationDefinition (OperationDefinition): OperationDefinition.base
+Order (Order): Order.date
+Order (Order): Order.identifier
+Order (Order): Order.subject
+Order (Order): Order.subject
+Order (Order): Order.source
+Order (Order): Order.detail
+Order (Order): Order.when.schedule
+Order (Order): Order.target
+Order (Order): Order.when.code
+OrderResponse (OrderResponse): OrderResponse.date
+OrderResponse (OrderResponse): OrderResponse.request
+OrderResponse (OrderResponse): OrderResponse.identifier
+OrderResponse (OrderResponse): OrderResponse.orderStatus
+OrderResponse (OrderResponse): OrderResponse.fulfillment
+OrderResponse (OrderResponse): OrderResponse.who
+OrderSet (OrderSet): OrderSet.moduleMetadata.identifier
+OrderSet (OrderSet): OrderSet.moduleMetadata.topic
+OrderSet (OrderSet): OrderSet.moduleMetadata.description
+OrderSet (OrderSet): OrderSet.moduleMetadata.title
+OrderSet (OrderSet): OrderSet.moduleMetadata.version
+OrderSet (OrderSet): OrderSet.moduleMetadata.status
+Organization (Organization): Organization.identifier
+Organization (Organization): Organization.partOf
+Organization (Organization): Organization.name
+Organization (Organization): Organization.address
+Organization (Organization): Organization.address.state
+Organization (Organization): Organization.name
+Organization (Organization): Organization.address.use
+Organization (Organization): Organization.active
+Organization (Organization): Organization.type
+Organization (Organization): Organization.address.city
+Organization (Organization): Organization.address.postalCode
+Organization (Organization): Organization.address.country
+Patient (Patient): Patient.birthDate
+Patient (Patient): Patient.deceased.exists()
+Patient (Patient): Patient.address.state
+Patient (Patient): Patient.gender
+Patient (Patient): Patient.animal.species
+Patient (Patient): Patient.link.other
+Patient (Patient): Patient.communication.language
+Patient (Patient): Patient.animal.breed
+Patient (Patient): Patient.address.country
+Patient (Patient): Patient.deceased.as(DateTime)
+Patient (Patient): Patient.name
+Patient (Patient): Patient.telecom
+Patient (Patient): Patient.address.city
+Patient (Patient): Patient.telecom.where(system='email')
+Patient (Patient): Patient.identifier
+Patient (Patient): Patient.name.given
+Patient (Patient): Patient.address
+Patient (Patient): Patient.active
+Patient (Patient): Patient.address.postalCode
+Patient (Patient): Patient.careProvider
+Patient (Patient): Patient.telecom.where(system='phone')
+Patient (Patient): Patient.managingOrganization
+Patient (Patient): Patient.name
+Patient (Patient): Patient.address.use
+Patient (Patient): Patient.name.family
+PaymentNotice (PaymentNotice): PaymentNotice.identifier
+PaymentNotice (PaymentNotice): PaymentNotice.response.as(Identifier)
+PaymentNotice (PaymentNotice): PaymentNotice.organization.as(Identifier)
+PaymentNotice (PaymentNotice): PaymentNotice.created
+PaymentNotice (PaymentNotice): PaymentNotice.request.as(Identifier)
+PaymentNotice (PaymentNotice): PaymentNotice.paymentStatus
+PaymentNotice (PaymentNotice): PaymentNotice.organization.as(Reference)
+PaymentNotice (PaymentNotice): PaymentNotice.provider.as(Reference)
+PaymentNotice (PaymentNotice): PaymentNotice.response.as(Reference)
+PaymentNotice (PaymentNotice): PaymentNotice.provider.as(Identifier)
+PaymentNotice (PaymentNotice): PaymentNotice.request.as(Reference)
+PaymentNotice (PaymentNotice): PaymentNotice.statusDate
+PaymentReconciliation (PaymentReconciliation): PaymentReconciliation.requestProvider.as(Identifier)
+PaymentReconciliation (PaymentReconciliation): PaymentReconciliation.requestOrganization.as(Identifier)
+PaymentReconciliation (PaymentReconciliation): PaymentReconciliation.identifier
+PaymentReconciliation (PaymentReconciliation): PaymentReconciliation.disposition
+PaymentReconciliation (PaymentReconciliation): PaymentReconciliation.organization.as(Identifier)
+PaymentReconciliation (PaymentReconciliation): PaymentReconciliation.created
+PaymentReconciliation (PaymentReconciliation): PaymentReconciliation.request.as(Identifier)
+PaymentReconciliation (PaymentReconciliation): PaymentReconciliation.organization.as(Reference)
+PaymentReconciliation (PaymentReconciliation): PaymentReconciliation.requestProvider.as(Reference)
+PaymentReconciliation (PaymentReconciliation): PaymentReconciliation.requestOrganization.as(Reference)
+PaymentReconciliation (PaymentReconciliation): PaymentReconciliation.request.as(Reference)
+PaymentReconciliation (PaymentReconciliation): PaymentReconciliation.outcome
+Person (Person): Person.identifier
+Person (Person): Person.address
+Person (Person): Person.birthDate
+Person (Person): Person.address.state
+Person (Person): Person.gender
+Person (Person): Person.link.target
+Person (Person): Person.link.target
+Person (Person): Person.link.target
+Person (Person): Person.address.postalCode
+Person (Person): Person.address.country
+Person (Person): Person.name
+Person (Person): Person.telecom.where(system='phone')
+Person (Person): Person.link.target
+Person (Person): Person.managingOrganization
+Person (Person): Person.name
+Person (Person): Person.address.use
+Person (Person): Person.telecom
+Person (Person): Person.address.city
+Person (Person): Person.telecom.where(system='email')
+Practitioner (Practitioner): Practitioner.identifier | Practitioner.practitionerRole.identifier
+Practitioner (Practitioner): Practitioner.name.given
+Practitioner (Practitioner): Practitioner.practitionerRole.specialty
+Practitioner (Practitioner): Practitioner.address
+Practitioner (Practitioner): Practitioner.practitionerRole.role
+Practitioner (Practitioner): Practitioner.address.state
+Practitioner (Practitioner): Practitioner.gender
+Practitioner (Practitioner): Practitioner.address.postalCode
+Practitioner (Practitioner): Practitioner.address.country
+Practitioner (Practitioner): Practitioner.name
+Practitioner (Practitioner): Practitioner.telecom.where(system='phone') or Practitioner.practitionerRole.telecom.where(system='phone')
+Practitioner (Practitioner): Practitioner.practitionerRole.organization
+Practitioner (Practitioner): Practitioner.name
+Practitioner (Practitioner): Practitioner.address.use
+Practitioner (Practitioner): Practitioner.telecom | Practitioner.practitionerRole.telecom
+Practitioner (Practitioner): Practitioner.practitionerRole.location
+Practitioner (Practitioner): Practitioner.name.family
+Practitioner (Practitioner): Practitioner.address.city
+Practitioner (Practitioner): Practitioner.communication
+Practitioner (Practitioner): Practitioner.telecom.where(system='email') or Practitioner.practitionerRole.telecom.where(system='email')
+PractitionerRole (PractitionerRole): PractitionerRole.identifier
+PractitionerRole (PractitionerRole): PractitionerRole.specialty
+PractitionerRole (PractitionerRole): PractitionerRole.role
+PractitionerRole (PractitionerRole): PractitionerRole.practitioner
+PractitionerRole (PractitionerRole): PractitionerRole.telecom.where(system='phone')
+PractitionerRole (PractitionerRole): PractitionerRole.organization
+PractitionerRole (PractitionerRole): PractitionerRole.telecom
+PractitionerRole (PractitionerRole): PractitionerRole.location
+PractitionerRole (PractitionerRole): PractitionerRole.telecom.where(system='email')
+Procedure (Procedure): Procedure.performed
+Procedure (Procedure): Procedure.identifier
+Procedure (Procedure): Procedure.code
+Procedure (Procedure): Procedure.performer.actor
+Procedure (Procedure): Procedure.subject
+Procedure (Procedure): Procedure.subject
+Procedure (Procedure): Procedure.location
+Procedure (Procedure): Procedure.encounter
+Procedure (Procedure): Procedure.category
+ProcedureRequest (ProcedureRequest): ProcedureRequest.identifier
+ProcedureRequest (ProcedureRequest): ProcedureRequest.performer
+ProcedureRequest (ProcedureRequest): ProcedureRequest.subject
+ProcedureRequest (ProcedureRequest): ProcedureRequest.subject
+ProcedureRequest (ProcedureRequest): ProcedureRequest.orderer
+ProcedureRequest (ProcedureRequest): ProcedureRequest.encounter
+ProcessRequest (ProcessRequest): ProcessRequest.identifier
+ProcessRequest (ProcessRequest): ProcessRequest.organization.as(Identifier)
+ProcessRequest (ProcessRequest): ProcessRequest.action
+ProcessRequest (ProcessRequest): ProcessRequest.organization.as(Reference)
+ProcessRequest (ProcessRequest): ProcessRequest.provider.as(Reference)
+ProcessRequest (ProcessRequest): ProcessRequest.provider.as(Identifier)
+ProcessResponse (ProcessResponse): ProcessResponse.requestProvider.as(Identifier)
+ProcessResponse (ProcessResponse): ProcessResponse.requestOrganization.as(Identifier)
+ProcessResponse (ProcessResponse): ProcessResponse.identifier
+ProcessResponse (ProcessResponse): ProcessResponse.organization.as(Identifier)
+ProcessResponse (ProcessResponse): ProcessResponse.request.as(Identifier)
+ProcessResponse (ProcessResponse): ProcessResponse.organization.as(Reference)
+ProcessResponse (ProcessResponse): ProcessResponse.requestProvider.as(Reference)
+ProcessResponse (ProcessResponse): ProcessResponse.requestOrganization.as(Reference)
+ProcessResponse (ProcessResponse): ProcessResponse.request.as(Reference)
+Protocol (Protocol): Protocol.identifier
+Protocol (Protocol): Protocol.subject
+Provenance (Provenance): Provenance.signature.type
+Provenance (Provenance): Provenance.entity.type
+Provenance (Provenance): Provenance.agent.actor
+Provenance (Provenance): Provenance.target
+Provenance (Provenance): Provenance.period.start
+Provenance (Provenance): Provenance.period.end
+Provenance (Provenance): Provenance.location
+Provenance (Provenance): Provenance.agent.userId
+Provenance (Provenance): Provenance.entity.reference
+Provenance (Provenance): Provenance.target
+Questionnaire (Questionnaire): Questionnaire.date
+Questionnaire (Questionnaire): Questionnaire.identifier
+Questionnaire (Questionnaire): Questionnaire.item.concept
+Questionnaire (Questionnaire): Questionnaire.useContext
+Questionnaire (Questionnaire): Questionnaire.publisher
+Questionnaire (Questionnaire): Questionnaire.title
+Questionnaire (Questionnaire): Questionnaire.version
+Questionnaire (Questionnaire): Questionnaire.status
+QuestionnaireResponse (QuestionnaireResponse): QuestionnaireResponse.authored
+QuestionnaireResponse (QuestionnaireResponse): QuestionnaireResponse.questionnaire
+QuestionnaireResponse (QuestionnaireResponse): QuestionnaireResponse.subject
+QuestionnaireResponse (QuestionnaireResponse): QuestionnaireResponse.author
+QuestionnaireResponse (QuestionnaireResponse): QuestionnaireResponse.subject
+QuestionnaireResponse (QuestionnaireResponse): QuestionnaireResponse.encounter
+QuestionnaireResponse (QuestionnaireResponse): QuestionnaireResponse.source
+QuestionnaireResponse (QuestionnaireResponse): QuestionnaireResponse.status
+ReferralRequest (ReferralRequest): ReferralRequest.authored
+ReferralRequest (ReferralRequest): ReferralRequest.requester
+ReferralRequest (ReferralRequest): ReferralRequest.parent
+ReferralRequest (ReferralRequest): ReferralRequest.specialty
+ReferralRequest (ReferralRequest): ReferralRequest.patient
+ReferralRequest (ReferralRequest): ReferralRequest.recipient
+ReferralRequest (ReferralRequest): ReferralRequest.context
+ReferralRequest (ReferralRequest): ReferralRequest.type
+ReferralRequest (ReferralRequest): ReferralRequest.priority
+ReferralRequest (ReferralRequest): ReferralRequest.category
+ReferralRequest (ReferralRequest): ReferralRequest.basedOn
+ReferralRequest (ReferralRequest): ReferralRequest.status
+RelatedPerson (RelatedPerson): RelatedPerson.identifier
+RelatedPerson (RelatedPerson): RelatedPerson.address
+RelatedPerson (RelatedPerson): RelatedPerson.birthDate
+RelatedPerson (RelatedPerson): RelatedPerson.address.state
+RelatedPerson (RelatedPerson): RelatedPerson.gender
+RelatedPerson (RelatedPerson): RelatedPerson.address.postalCode
+RelatedPerson (RelatedPerson): RelatedPerson.address.country
+RelatedPerson (RelatedPerson): RelatedPerson.name
+RelatedPerson (RelatedPerson): RelatedPerson.telecom.where(system='phone')
+RelatedPerson (RelatedPerson): RelatedPerson.patient
+RelatedPerson (RelatedPerson): RelatedPerson.name
+RelatedPerson (RelatedPerson): RelatedPerson.address.use
+RelatedPerson (RelatedPerson): RelatedPerson.telecom
+RelatedPerson (RelatedPerson): RelatedPerson.address.city
+RelatedPerson (RelatedPerson): RelatedPerson.telecom.where(system='email')
+RiskAssessment (RiskAssessment): RiskAssessment.date
+RiskAssessment (RiskAssessment): RiskAssessment.identifier
+RiskAssessment (RiskAssessment): RiskAssessment.condition
+RiskAssessment (RiskAssessment): RiskAssessment.performer
+RiskAssessment (RiskAssessment): RiskAssessment.method
+RiskAssessment (RiskAssessment): RiskAssessment.subject
+RiskAssessment (RiskAssessment): RiskAssessment.subject
+RiskAssessment (RiskAssessment): RiskAssessment.encounter
+Schedule (Schedule): Schedule.actor
+Schedule (Schedule): Schedule.planningHorizon
+Schedule (Schedule): Schedule.identifier
+Schedule (Schedule): Schedule.serviceType
+SearchParameter (SearchParameter): SearchParameter.code
+SearchParameter (SearchParameter): SearchParameter.name
+SearchParameter (SearchParameter): SearchParameter.useContext
+SearchParameter (SearchParameter): SearchParameter.description
+SearchParameter (SearchParameter): SearchParameter.type
+SearchParameter (SearchParameter): SearchParameter.url
+SearchParameter (SearchParameter): SearchParameter.base
+SearchParameter (SearchParameter): SearchParameter.target
+Sequence (Sequence): Sequence.patient
+Sequence (Sequence): Sequence.referenceSeq.chromosome
+Sequence (Sequence): Sequence.variant.start
+Sequence (Sequence): Sequence.variant.end
+Sequence (Sequence): Sequence.type
+Slot (Slot): Slot.schedule
+Slot (Slot): Slot.identifier
+Slot (Slot): Slot.start
+Slot (Slot): Slot.serviceType
+Slot (Slot): Slot.status
+Specimen (Specimen): Specimen.container.type
+Specimen (Specimen): Specimen.identifier
+Specimen (Specimen): Specimen.parent
+Specimen (Specimen): Specimen.container.identifier
+Specimen (Specimen): Specimen.collection.bodySite
+Specimen (Specimen): Specimen.subject
+Specimen (Specimen): Specimen.subject
+Specimen (Specimen): Specimen.collection.collected
+Specimen (Specimen): Specimen.accessionIdentifier
+Specimen (Specimen): Specimen.type
+Specimen (Specimen): Specimen.collection.collector
+StructureDefinition (StructureDefinition): StructureDefinition.date
+StructureDefinition (StructureDefinition): StructureDefinition.identifier
+StructureDefinition (StructureDefinition): StructureDefinition.code
+StructureDefinition (StructureDefinition): StructureDefinition.snapshot.element.binding.valueSet
+StructureDefinition (StructureDefinition): StructureDefinition.kind
+StructureDefinition (StructureDefinition): StructureDefinition.display
+StructureDefinition (StructureDefinition): StructureDefinition.description
+StructureDefinition (StructureDefinition): StructureDefinition.experimental
+StructureDefinition (StructureDefinition): StructureDefinition.contextType
+StructureDefinition (StructureDefinition): StructureDefinition.abstract
+StructureDefinition (StructureDefinition): StructureDefinition.baseType
+StructureDefinition (StructureDefinition): StructureDefinition.version
+StructureDefinition (StructureDefinition): StructureDefinition.url
+StructureDefinition (StructureDefinition): StructureDefinition.snapshot.element.path | StructureDefinition.differential.element.path
+StructureDefinition (StructureDefinition): StructureDefinition.context
+StructureDefinition (StructureDefinition): StructureDefinition.name
+StructureDefinition (StructureDefinition): StructureDefinition.useContext
+StructureDefinition (StructureDefinition): StructureDefinition.snapshot.element.base.path | StructureDefinition.differential.element.base.path
+StructureDefinition (StructureDefinition): StructureDefinition.publisher
+StructureDefinition (StructureDefinition): StructureDefinition.derivation
+StructureDefinition (StructureDefinition): StructureDefinition.status
+StructureDefinition (StructureDefinition): StructureDefinition.baseDefinition
+StructureMap (StructureMap): StructureMap.date
+StructureMap (StructureMap): StructureMap.identifier
+StructureMap (StructureMap): StructureMap.name
+StructureMap (StructureMap): StructureMap.useContext
+StructureMap (StructureMap): StructureMap.publisher
+StructureMap (StructureMap): StructureMap.description
+StructureMap (StructureMap): StructureMap.experimental
+StructureMap (StructureMap): StructureMap.version
+StructureMap (StructureMap): StructureMap.url
+StructureMap (StructureMap): StructureMap.status
+Subscription (Subscription): Subscription.channel.payload
+Subscription (Subscription): Subscription.criteria
+Subscription (Subscription): Subscription.contact
+Subscription (Subscription): Subscription.tag
+Subscription (Subscription): Subscription.channel.type
+Subscription (Subscription): Subscription.channel.endpoint
+Subscription (Subscription): Subscription.status
+Substance (Substance): Substance.identifier
+Substance (Substance): Substance.instance.identifier
+Substance (Substance): Substance.code | Substance.ingredient.substance.as(CodeableConcept)
+Substance (Substance): Substance.instance.quantity
+Substance (Substance): Substance.ingredient.substance.as(Reference)
+Substance (Substance): Substance.instance.expiry
+Substance (Substance): Substance.category
+SupplyDelivery (SupplyDelivery): SupplyDelivery.identifier
+SupplyDelivery (SupplyDelivery): SupplyDelivery.receiver
+SupplyDelivery (SupplyDelivery): SupplyDelivery.patient
+SupplyDelivery (SupplyDelivery): SupplyDelivery.supplier
+SupplyDelivery (SupplyDelivery): SupplyDelivery.status
+SupplyRequest (SupplyRequest): SupplyRequest.date
+SupplyRequest (SupplyRequest): SupplyRequest.identifier
+SupplyRequest (SupplyRequest): SupplyRequest.kind
+SupplyRequest (SupplyRequest): SupplyRequest.patient
+SupplyRequest (SupplyRequest): SupplyRequest.supplier
+SupplyRequest (SupplyRequest): SupplyRequest.source
+SupplyRequest (SupplyRequest): SupplyRequest.status
+Task (Task): Task.owner
+Task (Task): Task.requester
+Task (Task): Task.identifier
+Task (Task): Task.parent
+Task (Task): Task.code
+Task (Task): Task.performerType
+Task (Task): Task.created
+Task (Task): Task.focus
+Task (Task): Task.priority
+Task (Task): Task.stage
+Task (Task): Task.statusReason
+Task (Task): Task.for
+Task (Task): Task.lastModified
+Task (Task): Task.definition
+Task (Task): Task.status
+TestScript (TestScript): TestScript.identifier
+TestScript (TestScript): TestScript.test.metadata.capability.description
+TestScript (TestScript): TestScript.setup.metadata.capability.description
+TestScript (TestScript): TestScript.name
+TestScript (TestScript): TestScript.description
+TestScript (TestScript): TestScript.metadata.capability.description
+TestScript (TestScript): TestScript.url
+ValueSet (ValueSet): ValueSet.date
+ValueSet (ValueSet): ValueSet.compose.include.system
+ValueSet (ValueSet): ValueSet.identifier
+ValueSet (ValueSet): ValueSet.name
+ValueSet (ValueSet): ValueSet.useContext
+ValueSet (ValueSet): ValueSet.publisher
+ValueSet (ValueSet): ValueSet.description
+ValueSet (ValueSet): ValueSet.version
+ValueSet (ValueSet): ValueSet.url
+ValueSet (ValueSet): ValueSet.status
+ValueSet (ValueSet): ValueSet.expansion.identifier
+VisionPrescription (VisionPrescription): VisionPrescription.prescriber
+VisionPrescription (VisionPrescription): VisionPrescription.identifier
+VisionPrescription (VisionPrescription): VisionPrescription.patient
+VisionPrescription (VisionPrescription): VisionPrescription.dateWritten
+VisionPrescription (VisionPrescription): VisionPrescription.encounter
+SimpleQuantity (SimpleQuantity): comparator.empty()

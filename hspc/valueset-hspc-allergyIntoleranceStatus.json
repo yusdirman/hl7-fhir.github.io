@@ -1,0 +1,77 @@
+{
+  "resourceType": "ValueSet",
+  "id": "hspc-allergyIntoleranceStatus",
+  "meta": {
+    "lastUpdated": "2016-06-06T20:14:04.181+00:00",
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>HSPC Allergy/Intolerance Status Value Set</h2><p>SELECT SNOMED CT and Intermountain Healthcare HDD code system values.</p><p><b>Copyright Statement:</b> This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement.</p><p>This value set includes codes from the following code systems:</p><ul><li>Include these codes as defined in http://snomed.info/sct<table><tr><td><b>Code</b></td><td><b>Display</b></td></tr><tr><td>55561003</td><td>Active (qualifier value)</td><td/></tr><tr><td>260385009</td><td>Negative (qualifier value)</td><td/></tr><tr><td>261665006</td><td>Unknown (qualifier value)</td><td/></tr><tr><td>255545003</td><td>Definite (qualifier value)</td><td/></tr><tr><td>410605003</td><td>Confirmed present (qualifier value)</td><td/></tr></table></li><li>Include all codes defined in <a href=\"../codesystem-allergyIntoleranceStatus.html\">http://hl7.org/fhir/hspc-allergyintolerancestatus</a></li></ul></div>"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/valueset-oid",
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.50"
+    }
+  ],
+  "url": "http://hl7.org/fhir/ValueSet/hspc-allergyIntoleranceStatus",
+  "version": "0.01",
+  "name": "HSPC Allergy/Intolerance Status Value Set",
+  "status": "draft",
+  "experimental": true,
+  "publisher": "Health Services Platform Consortium (HSPC)",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "other",
+          "value": "http://hl7.org/fhir"
+        },
+        {
+          "system": "email",
+          "value": "fhir@lists.hl7.org"
+        }
+      ]
+    }
+  ],
+  "date": "2015-07-31",
+  "description": "SELECT SNOMED CT and Intermountain Healthcare HDD code system values.",
+  "immutable": true,
+  "copyright": "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement.",
+  "extensible": true,
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "55561003",
+            "display": "Active (qualifier value)"
+          },
+          {
+            "code": "260385009",
+            "display": "Negative (qualifier value)"
+          },
+          {
+            "code": "261665006",
+            "display": "Unknown (qualifier value)"
+          },
+          {
+            "code": "255545003",
+            "display": "Definite (qualifier value)"
+          },
+          {
+            "code": "410605003",
+            "display": "Confirmed present (qualifier value)"
+          }
+        ]
+      },
+      {
+        "system": "http://hl7.org/fhir/hspc-allergyintolerancestatus"
+      }
+    ]
+  }
+}

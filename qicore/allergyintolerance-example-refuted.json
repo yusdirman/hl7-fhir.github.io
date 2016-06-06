@@ -1,0 +1,46 @@
+{
+  "resourceType": "AllergyIntolerance",
+  "id": "allergyintolerance-example-refuted",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: allergyintolerance-example-refuted</p><p><b>identifier</b>: 49476534</p><p><b>status</b>: refuted</p><p><b>category</b>: food</p><p><b>substance</b>: Cashew nuts <span>(Details : {SNOMED CT code '227493005' = 'Cashew nut (substance)', given as 'Cashew nuts'})</span></p><p><b>patient</b>: <a>Patient/example</a></p><p><b>recordedDate</b>: Oct 9, 2014 2:58:00 PM</p><p><b>recorder</b>: <a>Practitioner/example</a></p></div>"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/allergyintolerance-reasonRefuted",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/v3/ActReason",
+            "code": "MED",
+            "display": "Medical Status Altered"
+          }
+        ]
+      }
+    }
+  ],
+  "identifier": [
+    {
+      "system": "http://acme.com/ids/patients/risks",
+      "value": "49476534"
+    }
+  ],
+  "status": "refuted",
+  "category": "food",
+  "substance": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "227493005",
+        "display": "Cashew nuts"
+      }
+    ]
+  },
+  "patient": {
+    "reference": "Patient/example"
+  },
+  "recordedDate": "2014-10-09T14:58:00+11:00",
+  "recorder": {
+    "reference": "Practitioner/example"
+  }
+}

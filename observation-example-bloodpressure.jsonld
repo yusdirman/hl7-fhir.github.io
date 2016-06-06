@@ -1,0 +1,205 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Observation",
+  "resourceType": "Observation",
+  "Resource.id": {
+    "value": "blood-pressure"
+  },
+  "Resource.meta": {
+    "Meta.lastUpdated": {
+      "value": "2014-01-30T22:35:23+11:00"
+    }
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: blood-pressure</p><p><b>meta</b>: </p><p><b>identifier</b>: urn:uuid:187e0c12-8dd2-67e2-99b2-bf273c878281</p><p><b>status</b>: final</p><p><b>category</b>: Vital Signs <span>(Details : {http://hl7.org/fhir/observation-category code 'vital-signs' = 'Vital Signs', given as 'Vital Signs'})</span></p><p><b>code</b>: Blood pressure systolic &amp; diastolic <span>(Details : {LOINC code '55284-4' = 'Blood pressure systolic and diastolic', given as 'Blood pressure systolic &amp; diastolic'})</span></p><p><b>subject</b>: <a>Patient/example</a></p><p><b>effective</b>: Sep 17, 2012</p><p><b>performer</b>: <a>Practitioner/example</a></p><p><b>interpretation</b>: Below low normal <span>(Details : {http://hl7.org/fhir/v2/0078 code 'L' = 'Low', given as 'low'})</span></p><p><b>bodySite</b>: Right arm <span>(Details : {SNOMED CT code '368209003' = 'Right upper arm structure (body structure)', given as 'Right arm'})</span></p><blockquote><p><b>component</b></p><p><b>code</b>: Systolic blood pressure <span>(Details : {LOINC code '8480-6' = 'Systolic blood pressure', given as 'Systolic blood pressure'}; {SNOMED CT code '271649006' = 'Systolic blood pressure (observable entity)', given as 'Systolic blood pressure'}; {http://acme.org/devices/clinical-codes code 'bp-s' = '??', given as 'Systolic Blood pressure'})</span></p><p><b>value</b>: 107 mmHg<span> (Details: http://unitsofmeasure.org code mm[Hg] = 'mmHg')</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Diastolic blood pressure <span>(Details : {LOINC code '8462-4' = 'Diastolic blood pressure', given as 'Diastolic blood pressure'})</span></p><p><b>value</b>: 60 mmHg<span> (Details: http://unitsofmeasure.org code mm[Hg] = 'mmHg')</span></p></blockquote></div>"
+    }
+  },
+  "Observation.identifier": [
+    {
+      "Identifier.system": {
+        "value": "urn:ietf:rfc:3986"
+      },
+      "Identifier.value": {
+        "value": "urn:uuid:187e0c12-8dd2-67e2-99b2-bf273c878281"
+      }
+    }
+  ],
+  "Observation.status": {
+    "value": "final"
+  },
+  "Observation.category": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "value": "http://hl7.org/fhir/observation-category"
+          },
+          "Coding.code": {
+            "value": "vital-signs"
+          },
+          "Coding.display": {
+            "value": "Vital Signs"
+          }
+        }
+      ]
+    }
+  ],
+  "Observation.code": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://loinc.org"
+        },
+        "Coding.code": {
+          "value": "55284-4"
+        },
+        "Coding.display": {
+          "value": "Blood pressure systolic & diastolic"
+        }
+      }
+    ],
+    "concept": "http://loinc.org/owl#55284-4"
+  },
+  "Observation.subject": {
+    "Reference.reference": {
+      "value": "Patient/example"
+    },
+    "reference": "http://hl7.org/fhir//Patient/example"
+  },
+  "Observation.effectiveDateTime": {
+    "value": "2012-09-17"
+  },
+  "Observation.performer": [
+    {
+      "Reference.reference": {
+        "value": "Practitioner/example"
+      }
+    }
+  ],
+  "Observation.interpretation": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/v2/0078"
+        },
+        "Coding.code": {
+          "value": "L"
+        },
+        "Coding.display": {
+          "value": "low"
+        }
+      }
+    ],
+    "CodeableConcept.text": {
+      "value": "Below low normal"
+    }
+  },
+  "Observation.bodySite": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "value": "368209003"
+        },
+        "Coding.display": {
+          "value": "Right arm"
+        }
+      }
+    ],
+    "concept": "http://snomed.info/sct#368209003"
+  },
+  "Observation.component": [
+    {
+      "Observation.component.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://loinc.org"
+            },
+            "Coding.code": {
+              "value": "8480-6"
+            },
+            "Coding.display": {
+              "value": "Systolic blood pressure"
+            }
+          },
+          {
+            "Coding.system": {
+              "value": "http://snomed.info/sct"
+            },
+            "Coding.code": {
+              "value": "271649006"
+            },
+            "Coding.display": {
+              "value": "Systolic blood pressure"
+            }
+          },
+          {
+            "Coding.system": {
+              "value": "http://acme.org/devices/clinical-codes"
+            },
+            "Coding.code": {
+              "value": "bp-s"
+            },
+            "Coding.display": {
+              "value": "Systolic Blood pressure"
+            }
+          }
+        ],
+        "concept": "http://loinc.org/owl#8480-6",
+        "concept": "http://snomed.info/sct#271649006"
+      },
+      "Observation.component.valueQuantity": {
+        "Quantity.value": {
+          "value": 107
+        },
+        "Quantity.unit": {
+          "value": "mmHg"
+        },
+        "Quantity.system": {
+          "value": "http://unitsofmeasure.org"
+        },
+        "Quantity.code": {
+          "value": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "Observation.component.code": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://loinc.org"
+            },
+            "Coding.code": {
+              "value": "8462-4"
+            },
+            "Coding.display": {
+              "value": "Diastolic blood pressure"
+            }
+          }
+        ],
+        "concept": "http://loinc.org/owl#8462-4"
+      },
+      "Observation.component.valueQuantity": {
+        "Quantity.value": {
+          "value": 60
+        },
+        "Quantity.unit": {
+          "value": "mmHg"
+        },
+        "Quantity.system": {
+          "value": "http://unitsofmeasure.org"
+        },
+        "Quantity.code": {
+          "value": "mm[Hg]"
+        }
+      }
+    }
+  ]
+}

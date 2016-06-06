@@ -1,0 +1,127 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/DecisionSupportServiceModule",
+  "resourceType": "DecisionSupportServiceModule",
+  "Resource.id": {
+    "value": "example"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Guideline Appropriate Ordering Module</div>"
+    }
+  },
+  "DecisionSupportServiceModule.moduleMetadata": {
+    "ModuleMetadata.identifier": [
+      {
+        "Identifier.use": {
+          "value": "official"
+        },
+        "Identifier.value": {
+          "value": "guildeline-appropriate-ordering"
+        }
+      }
+    ],
+    "ModuleMetadata.version": {
+      "value": "1.0.0"
+    },
+    "ModuleMetadata.title": {
+      "value": "Guideline Appropriate Ordering Module"
+    },
+    "ModuleMetadata.type": {
+      "value": "module"
+    },
+    "ModuleMetadata.status": {
+      "value": "draft"
+    },
+    "ModuleMetadata.description": {
+      "value": "Guideline appropriate ordering is used to assess appropriateness of an order given a patient, a proposed order, and a set of clinical indications."
+    },
+    "ModuleMetadata.publicationDate": {
+      "value": "2015-07-22"
+    },
+    "ModuleMetadata.topic": [
+      {
+        "CodeableConcept.text": {
+          "value": "Guideline Appropriate Ordering"
+        }
+      },
+      {
+        "CodeableConcept.text": {
+          "value": "Appropriate Use Criteria"
+        }
+      }
+    ]
+  },
+  "DecisionSupportServiceModule.parameter": [
+    {
+      "ParameterDefinition.name": {
+        "value": "patient"
+      },
+      "ParameterDefinition.use": {
+        "value": "in"
+      },
+      "ParameterDefinition.type": {
+        "value": "Patient"
+      },
+      "ParameterDefinition.profile": {
+        "Reference.reference": {
+          "value": "http://hl7.org/fhir/StructureDefinition/gao-patient"
+        },
+        "reference": "http://hl7.org/fhir/StructureDefinition/gao-patient"
+      }
+    },
+    {
+      "ParameterDefinition.name": {
+        "value": "order"
+      },
+      "ParameterDefinition.use": {
+        "value": "in"
+      },
+      "ParameterDefinition.type": {
+        "value": "Order"
+      },
+      "ParameterDefinition.profile": {
+        "Reference.reference": {
+          "value": "http://hl7.org/fhir/StructureDefinition/gao-order"
+        },
+        "reference": "http://hl7.org/fhir/StructureDefinition/gao-order"
+      }
+    },
+    {
+      "ParameterDefinition.name": {
+        "value": "order"
+      },
+      "ParameterDefinition.use": {
+        "value": "out"
+      },
+      "ParameterDefinition.type": {
+        "value": "Order"
+      },
+      "ParameterDefinition.profile": {
+        "Reference.reference": {
+          "value": "http://hl7.org/fhir/StructureDefinition/gao-order"
+        },
+        "reference": "http://hl7.org/fhir/StructureDefinition/gao-order"
+      }
+    },
+    {
+      "ParameterDefinition.name": {
+        "value": "result"
+      },
+      "ParameterDefinition.use": {
+        "value": "out"
+      },
+      "ParameterDefinition.type": {
+        "value": "Basic"
+      },
+      "ParameterDefinition.profile": {
+        "Reference.reference": {
+          "value": "http://hl7.org/fhir/StructureDefinition/gao-result"
+        },
+        "reference": "http://hl7.org/fhir/StructureDefinition/gao-result"
+      }
+    }
+  ]
+}

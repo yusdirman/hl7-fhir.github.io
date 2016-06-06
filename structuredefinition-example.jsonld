@@ -1,0 +1,1043 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/StructureDefinition",
+  "resourceType": "StructureDefinition",
+  "Resource.id": {
+    "value": "example"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: example</p><p><b>url</b>: <a>http://hl7.org/fhir/StructureDefinition/example</a></p><p><b>identifier</b>: 1.2.36.90146595217.4.2</p><p><b>version</b>: 2</p><p><b>name</b>: Example Lipid Profile</p><p><b>display</b>: Example Lipid Profile</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>publisher</b>: Health Intersections Pty Ltd</p><h3>Contacts</h3><table><tr><td>-</td><td><b>Name</b></td><td><b>Telecom</b></td></tr><tr><td>*</td><td>Grahame Grieve</td><td>grahame@healthintersections.com.au</td></tr></table><p><b>date</b>: May 12, 2012</p><p><b>description</b>: Describes how the lab report is used for a standard Lipid Profile - Cholesterol, Triglyceride and Cholesterol fractions. Uses LOINC codes</p><p><b>useContext</b>: ?? <span>(Details : {urn:iso:std:iso:3166 code 'AU' = '??)</span></p><p><b>requirements</b>: Provide an example to demonstrate how to use StructureDefinition</p><p><b>copyright</b>: Createive Commons 0, per FHIR specification</p><p><b>code</b>: 314079002 (Details: SNOMED CT code 314079002 = 'Hyperlipidemia screening test (procedure)', stated as '314079002')</p><p><b>fhirVersion</b>: 1.0.0</p><h3>Mappings</h3><table><tr><td>-</td><td><b>Identity</b></td><td><b>Uri</b></td><td><b>Name</b></td><td><b>Comments</b></td></tr><tr><td>*</td><td>m1</td><td><a>https://www.rcpa.edu.au/getattachment/0961c6d1-ec80-4500-8dc0-de516500e05b/Lipid-and-lipoprotein-testing.aspx</a></td><td>RCPA Lipid Report recommendations</td><td>Actual mappings haven't yet been filled out</td></tr></table><p><b>kind</b>: resource</p><p><b>abstract</b>: false</p><p><b>baseType</b>: DiagnosticReport</p><p><b>baseDefinition</b>: <a>http://hl7.org/fhir/StructureDefinition/DiagnosticReport</a></p><p><b>derivation</b>: constraint</p><h3>Snapshots</h3><table><tr><td>-</td><td><b>Element</b></td></tr><tr><td>*</td><td>todo-bundle</td></tr></table></div>"
+    }
+  },
+  "StructureDefinition.url": {
+    "value": "http://hl7.org/fhir/StructureDefinition/example"
+  },
+  "StructureDefinition.identifier": [
+    {
+      "Identifier.system": {
+        "value": "urn:ietf:rfc:3986"
+      },
+      "Identifier.value": {
+        "value": "1.2.36.90146595217.4.2"
+      }
+    }
+  ],
+  "StructureDefinition.version": {
+    "value": "2"
+  },
+  "StructureDefinition.name": {
+    "value": "Example Lipid Profile"
+  },
+  "StructureDefinition.display": {
+    "value": "Example Lipid Profile"
+  },
+  "StructureDefinition.status": {
+    "value": "draft"
+  },
+  "StructureDefinition.experimental": {
+    "value": true
+  },
+  "StructureDefinition.publisher": {
+    "value": "Health Intersections Pty Ltd"
+  },
+  "StructureDefinition.contact": [
+    {
+      "StructureDefinition.contact.name": {
+        "value": "Grahame Grieve"
+      },
+      "StructureDefinition.contact.telecom": [
+        {
+          "ContactPoint.system": {
+            "value": "email"
+          },
+          "ContactPoint.value": {
+            "value": "grahame@healthintersections.com.au"
+          }
+        }
+      ]
+    }
+  ],
+  "StructureDefinition.date": {
+    "value": "2012-05-12"
+  },
+  "StructureDefinition.description": {
+    "value": "Describes how the lab report is used for a standard Lipid Profile - Cholesterol, Triglyceride and Cholesterol fractions. Uses LOINC codes"
+  },
+  "StructureDefinition.useContext": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "value": "urn:iso:std:iso:3166"
+          },
+          "Coding.code": {
+            "value": "AU"
+          }
+        }
+      ]
+    }
+  ],
+  "StructureDefinition.requirements": {
+    "value": "Provide an example to demonstrate how to use StructureDefinition"
+  },
+  "StructureDefinition.copyright": {
+    "value": "Createive Commons 0, per FHIR specification"
+  },
+  "StructureDefinition.code": [
+    {
+      "Coding.system": {
+        "value": "http://snomed.info/sct"
+      },
+      "Coding.code": {
+        "value": "314079002"
+      },
+      "Coding.display": {
+        "value": "314079002"
+      }
+    }
+  ],
+  "StructureDefinition.fhirVersion": {
+    "value": "1.0.0"
+  },
+  "StructureDefinition.mapping": [
+    {
+      "StructureDefinition.mapping.identity": {
+        "value": "m1"
+      },
+      "StructureDefinition.mapping.uri": {
+        "value": "https://www.rcpa.edu.au/getattachment/0961c6d1-ec80-4500-8dc0-de516500e05b/Lipid-and-lipoprotein-testing.aspx"
+      },
+      "StructureDefinition.mapping.name": {
+        "value": "RCPA Lipid Report recommendations"
+      },
+      "StructureDefinition.mapping.comments": {
+        "value": "Actual mappings haven't yet been filled out"
+      }
+    }
+  ],
+  "StructureDefinition.kind": {
+    "value": "resource"
+  },
+  "StructureDefinition.abstract": {
+    "value": false
+  },
+  "StructureDefinition.baseType": {
+    "value": "DiagnosticReport"
+  },
+  "StructureDefinition.baseDefinition": {
+    "value": "http://hl7.org/fhir/StructureDefinition/DiagnosticReport"
+  },
+  "StructureDefinition.derivation": {
+    "value": "constraint"
+  },
+  "StructureDefinition.snapshot": {
+    "StructureDefinition.snapshot.element": [
+      {
+        "ElementDefinition.path": {
+          "value": "DiagnosticReport"
+        },
+        "ElementDefinition.name": {
+          "value": "LipidProfile"
+        },
+        "ElementDefinition.short": {
+          "value": "Lipid Lab Report"
+        },
+        "ElementDefinition.definition": {
+          "value": "The findings and interpretation of a general lipd lab profile."
+        },
+        "ElementDefinition.comments": {
+          "value": "In this profile, mustSupport means that authoring systems must include the ability to report these elements, and processing systems must cater for them by either displaying them to the user or considering them appropriately in decision support systems."
+        },
+        "ElementDefinition.min": {
+          "value": 1
+        },
+        "ElementDefinition.max": {
+          "value": "1"
+        },
+        "ElementDefinition.base": {
+          "ElementDefinition.base.path": {
+            "value": "DiagnosticReport"
+          },
+          "ElementDefinition.base.min": {
+            "value": 1
+          },
+          "ElementDefinition.base.max": {
+            "value": "1"
+          }
+        },
+        "ElementDefinition.type": [
+          {
+            "ElementDefinition.type.code": {
+              "value": "Resource"
+            }
+          }
+        ],
+        "ElementDefinition.isModifier": {
+          "value": false
+        }
+      },
+      {
+        "ElementDefinition.path": {
+          "value": "DiagnosticReport.extension"
+        },
+        "ElementDefinition.slicing": {
+          "ElementDefinition.slicing.discriminator": [
+            {
+              "value": "url"
+            }
+          ],
+          "ElementDefinition.slicing.ordered": {
+            "value": false
+          },
+          "ElementDefinition.slicing.rules": {
+            "value": "open"
+          }
+        },
+        "ElementDefinition.short": {
+          "value": "Additional Content defined by implementations"
+        },
+        "ElementDefinition.definition": {
+          "value": "May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."
+        },
+        "ElementDefinition.comments": {
+          "value": "there can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core simplicity for everyone."
+        },
+        "ElementDefinition.min": {
+          "value": 0
+        },
+        "ElementDefinition.max": {
+          "value": "*"
+        },
+        "ElementDefinition.base": {
+          "ElementDefinition.base.path": {
+            "value": "DiagnosticReport.extension"
+          },
+          "ElementDefinition.base.min": {
+            "value": 0
+          },
+          "ElementDefinition.base.max": {
+            "value": "*"
+          }
+        },
+        "ElementDefinition.type": [
+          {
+            "ElementDefinition.type.code": {
+              "value": "Extension"
+            }
+          }
+        ],
+        "ElementDefinition.isModifier": {
+          "value": false
+        }
+      },
+      {
+        "ElementDefinition.path": {
+          "value": "DiagnosticReport.text"
+        },
+        "ElementDefinition.short": {
+          "value": "Text summary of the resource, for human interpretation"
+        },
+        "ElementDefinition.definition": {
+          "value": "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety."
+        },
+        "ElementDefinition.comments": {
+          "value": "Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative."
+        },
+        "ElementDefinition.alias": [
+          {
+            "value": "narrative"
+          },
+          {
+            "value": "html"
+          },
+          {
+            "value": "xhtml"
+          },
+          {
+            "value": "display"
+          }
+        ],
+        "ElementDefinition.min": {
+          "value": 0
+        },
+        "ElementDefinition.max": {
+          "value": "1"
+        },
+        "ElementDefinition.base": {
+          "ElementDefinition.base.path": {
+            "value": "DiagnosticReport.text"
+          },
+          "ElementDefinition.base.min": {
+            "value": 0
+          },
+          "ElementDefinition.base.max": {
+            "value": "1"
+          }
+        },
+        "ElementDefinition.type": [
+          {
+            "ElementDefinition.type.code": {
+              "value": "Narrative"
+            }
+          }
+        ],
+        "ElementDefinition.isModifier": {
+          "value": false
+        }
+      },
+      {
+        "ElementDefinition.path": {
+          "value": "DiagnosticReport.contained"
+        },
+        "ElementDefinition.short": {
+          "value": "Contained, inline Resources"
+        },
+        "ElementDefinition.definition": {
+          "value": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope."
+        },
+        "ElementDefinition.comments": {
+          "value": "This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again."
+        },
+        "ElementDefinition.alias": [
+          {
+            "value": "inline resources"
+          },
+          {
+            "value": "anonymous resources"
+          },
+          {
+            "value": "contained resources"
+          }
+        ],
+        "ElementDefinition.min": {
+          "value": 0
+        },
+        "ElementDefinition.max": {
+          "value": "*"
+        },
+        "ElementDefinition.base": {
+          "ElementDefinition.base.path": {
+            "value": "DiagnosticReport.contained"
+          },
+          "ElementDefinition.base.min": {
+            "value": 0
+          },
+          "ElementDefinition.base.max": {
+            "value": "*"
+          }
+        },
+        "ElementDefinition.type": [
+          {
+            "ElementDefinition.type.code": {
+              "value": "Resource"
+            }
+          }
+        ],
+        "ElementDefinition.isModifier": {
+          "value": false
+        }
+      },
+      {
+        "ElementDefinition.path": {
+          "value": "DiagnosticReport.status"
+        },
+        "ElementDefinition.short": {
+          "value": "registered|interim|final|amended|cancelled|withdrawn"
+        },
+        "ElementDefinition.definition": {
+          "value": "The status of the diagnostic report as a whole."
+        },
+        "ElementDefinition.comments": {
+          "value": "This is labeled as \"Is Modifier\" because applications need to take appropriate action if a report is withdrawn."
+        },
+        "ElementDefinition.min": {
+          "value": 1
+        },
+        "ElementDefinition.max": {
+          "value": "1"
+        },
+        "ElementDefinition.base": {
+          "ElementDefinition.base.path": {
+            "value": "DiagnosticReport.status"
+          },
+          "ElementDefinition.base.min": {
+            "value": 1
+          },
+          "ElementDefinition.base.max": {
+            "value": "1"
+          }
+        },
+        "ElementDefinition.type": [
+          {
+            "ElementDefinition.type.code": {
+              "value": "code"
+            }
+          }
+        ],
+        "ElementDefinition.isModifier": {
+          "value": false
+        },
+        "ElementDefinition.binding": {
+          "ElementDefinition.binding.strength": {
+            "value": "required"
+          },
+          "ElementDefinition.binding.valueSetReference": {
+            "Reference.reference": {
+              "value": "http://hl7.org/fhir/ValueSet/observation-status"
+            },
+            "reference": "http://hl7.org/fhir/ValueSet/observation-status"
+          }
+        }
+      },
+      {
+        "ElementDefinition.path": {
+          "value": "DiagnosticReport.issued"
+        },
+        "ElementDefinition.short": {
+          "value": "Date this version was released"
+        },
+        "ElementDefinition.definition": {
+          "value": "The date and/or time that this version of the report was released from the source diagnostic service."
+        },
+        "ElementDefinition.comments": {
+          "value": "May be different from the update time of the resource itself, because that is the status of the record (potentially a secondary copy), not the actual release time of the report."
+        },
+        "ElementDefinition.min": {
+          "value": 1
+        },
+        "ElementDefinition.max": {
+          "value": "1"
+        },
+        "ElementDefinition.base": {
+          "ElementDefinition.base.path": {
+            "value": "DiagnosticReport.issued"
+          },
+          "ElementDefinition.base.min": {
+            "value": 1
+          },
+          "ElementDefinition.base.max": {
+            "value": "1"
+          }
+        },
+        "ElementDefinition.type": [
+          {
+            "ElementDefinition.type.code": {
+              "value": "dateTime"
+            }
+          }
+        ],
+        "ElementDefinition.isModifier": {
+          "value": false
+        }
+      },
+      {
+        "ElementDefinition.path": {
+          "value": "DiagnosticReport.subject"
+        },
+        "ElementDefinition.short": {
+          "value": "The subject of the report"
+        },
+        "ElementDefinition.definition": {
+          "value": "The subject of the report. Usually, but not always, this is a patient. However diagnostic services also perform analyses on specimens collected from a variety of other sources."
+        },
+        "ElementDefinition.min": {
+          "value": 1
+        },
+        "ElementDefinition.max": {
+          "value": "1"
+        },
+        "ElementDefinition.base": {
+          "ElementDefinition.base.path": {
+            "value": "DiagnosticReport.subject"
+          },
+          "ElementDefinition.base.min": {
+            "value": 1
+          },
+          "ElementDefinition.base.max": {
+            "value": "1"
+          }
+        },
+        "ElementDefinition.type": [
+          {
+            "ElementDefinition.type.code": {
+              "value": "Reference"
+            },
+            "ElementDefinition.type.profile": [
+              {
+                "value": "http://hl7.org/fhir/StructureDefinition/Patient"
+              }
+            ]
+          },
+          {
+            "ElementDefinition.type.code": {
+              "value": "Reference"
+            },
+            "ElementDefinition.type.profile": [
+              {
+                "value": "http://hl7.org/fhir/StructureDefinition/Group"
+              }
+            ]
+          },
+          {
+            "ElementDefinition.type.code": {
+              "value": "Reference"
+            },
+            "ElementDefinition.type.profile": [
+              {
+                "value": "http://hl7.org/fhir/StructureDefinition/Device"
+              }
+            ]
+          }
+        ],
+        "ElementDefinition.isModifier": {
+          "value": false
+        }
+      },
+      {
+        "ElementDefinition.path": {
+          "value": "DiagnosticReport.performer"
+        },
+        "ElementDefinition.short": {
+          "value": "Responsible Diagnostic Service"
+        },
+        "ElementDefinition.definition": {
+          "value": "The diagnostic service that is responsible for issuing the report."
+        },
+        "ElementDefinition.comments": {
+          "value": "This is not necessarily the source of the atomic data items - it's the entity that takes responsibility for the clinical report."
+        },
+        "ElementDefinition.min": {
+          "value": 1
+        },
+        "ElementDefinition.max": {
+          "value": "1"
+        },
+        "ElementDefinition.base": {
+          "ElementDefinition.base.path": {
+            "value": "DiagnosticReport.performer"
+          },
+          "ElementDefinition.base.min": {
+            "value": 1
+          },
+          "ElementDefinition.base.max": {
+            "value": "1"
+          }
+        },
+        "ElementDefinition.type": [
+          {
+            "ElementDefinition.type.code": {
+              "value": "Reference"
+            },
+            "ElementDefinition.type.profile": [
+              {
+                "value": "http://hl7.org/fhir/StructureDefinition/Observation"
+              }
+            ]
+          }
+        ],
+        "ElementDefinition.isModifier": {
+          "value": false
+        }
+      },
+      {
+        "ElementDefinition.path": {
+          "value": "DiagnosticReport.identifier"
+        },
+        "ElementDefinition.short": {
+          "value": "Id for external references to this report"
+        },
+        "ElementDefinition.definition": {
+          "value": "The local ID assigned to the report by the order filler, usually by the Information System of the diagnostic service provider."
+        },
+        "ElementDefinition.min": {
+          "value": 0
+        },
+        "ElementDefinition.max": {
+          "value": "1"
+        },
+        "ElementDefinition.base": {
+          "ElementDefinition.base.path": {
+            "value": "DiagnosticReport.identifier"
+          },
+          "ElementDefinition.base.min": {
+            "value": 0
+          },
+          "ElementDefinition.base.max": {
+            "value": "*"
+          }
+        },
+        "ElementDefinition.type": [
+          {
+            "ElementDefinition.type.code": {
+              "value": "Identifier"
+            }
+          }
+        ],
+        "ElementDefinition.isModifier": {
+          "value": false
+        }
+      },
+      {
+        "ElementDefinition.path": {
+          "value": "DiagnosticReport.request"
+        },
+        "ElementDefinition.short": {
+          "value": "What was requested"
+        },
+        "ElementDefinition.definition": {
+          "value": "Details concerning a single pathology test requested."
+        },
+        "ElementDefinition.comments": {
+          "value": "Note: Usually there is one test request for each result, however in some circumstances multiple test requests may be represented using a single Pathology test result resource. Note that there are also cases where one request leads to multiple reports."
+        },
+        "ElementDefinition.min": {
+          "value": 0
+        },
+        "ElementDefinition.max": {
+          "value": "*"
+        },
+        "ElementDefinition.base": {
+          "ElementDefinition.base.path": {
+            "value": "DiagnosticReport.request"
+          },
+          "ElementDefinition.base.min": {
+            "value": 0
+          },
+          "ElementDefinition.base.max": {
+            "value": "*"
+          }
+        },
+        "ElementDefinition.type": [
+          {
+            "ElementDefinition.type.code": {
+              "value": "Reference"
+            },
+            "ElementDefinition.type.profile": [
+              {
+                "value": "http://hl7.org/fhir/StructureDefinition/DiagnosticOrder"
+              }
+            ]
+          }
+        ],
+        "ElementDefinition.isModifier": {
+          "value": false
+        }
+      },
+      {
+        "ElementDefinition.path": {
+          "value": "DiagnosticReport.category"
+        },
+        "ElementDefinition.short": {
+          "value": "Biochemistry, Haematology etc."
+        },
+        "ElementDefinition.definition": {
+          "value": "The section of the diagnostic service that performs the examination e.g. biochemistry, haematology, MRI."
+        },
+        "ElementDefinition.min": {
+          "value": 0
+        },
+        "ElementDefinition.max": {
+          "value": "1"
+        },
+        "ElementDefinition.base": {
+          "ElementDefinition.base.path": {
+            "value": "DiagnosticReport.category"
+          },
+          "ElementDefinition.base.min": {
+            "value": 0
+          },
+          "ElementDefinition.base.max": {
+            "value": "1"
+          }
+        },
+        "ElementDefinition.type": [
+          {
+            "ElementDefinition.type.code": {
+              "value": "CodeableConcept"
+            }
+          }
+        ],
+        "ElementDefinition.isModifier": {
+          "value": false
+        },
+        "ElementDefinition.binding": {
+          "ElementDefinition.binding.strength": {
+            "value": "preferred"
+          },
+          "ElementDefinition.binding.valueSetReference": {
+            "Reference.reference": {
+              "value": "http://hl7.org/fhir/ValueSet/diagnostic-service-sections"
+            },
+            "reference": "http://hl7.org/fhir/ValueSet/diagnostic-service-sections"
+          }
+        }
+      },
+      {
+        "ElementDefinition.path": {
+          "value": "DiagnosticReport.effectiveDateTime"
+        },
+        "ElementDefinition.short": {
+          "value": "Diagnostically relevant time of diagnostic report"
+        },
+        "ElementDefinition.definition": {
+          "value": "The diagnostically relevant time for this report - that is, the point in time at which the observations that are reported in this diagnostic report relate to the patient."
+        },
+        "ElementDefinition.comments": {
+          "value": "If the diagnostic procedure was performed on the patient, this is the time it was performed. If there is specimens, the diagnostically relevant time can be derived from the specimen collection times, but the specimen information is not always available, and the exact relationship between the specimens and the diagnostically relevant time is not always automatic."
+        },
+        "ElementDefinition.min": {
+          "value": 1
+        },
+        "ElementDefinition.max": {
+          "value": "1"
+        },
+        "ElementDefinition.base": {
+          "ElementDefinition.base.path": {
+            "value": "DiagnosticReport.effective[x]"
+          },
+          "ElementDefinition.base.min": {
+            "value": 1
+          },
+          "ElementDefinition.base.max": {
+            "value": "1"
+          }
+        },
+        "ElementDefinition.type": [
+          {
+            "ElementDefinition.type.code": {
+              "value": "dateTime"
+            }
+          }
+        ],
+        "ElementDefinition.isModifier": {
+          "value": false
+        }
+      },
+      {
+        "ElementDefinition.path": {
+          "value": "DiagnosticReport.result"
+        },
+        "ElementDefinition.slicing": {
+          "ElementDefinition.slicing.discriminator": [
+            {
+              "value": "reference.code"
+            }
+          ],
+          "ElementDefinition.slicing.ordered": {
+            "value": false
+          },
+          "ElementDefinition.slicing.rules": {
+            "value": "open"
+          }
+        },
+        "ElementDefinition.short": {
+          "value": "Lipid Lab Results"
+        },
+        "ElementDefinition.definition": {
+          "value": "Lipid Lab Results."
+        },
+        "ElementDefinition.min": {
+          "value": 4
+        },
+        "ElementDefinition.max": {
+          "value": "4"
+        },
+        "ElementDefinition.base": {
+          "ElementDefinition.base.path": {
+            "value": "DiagnosticReport.result"
+          },
+          "ElementDefinition.base.min": {
+            "value": 0
+          },
+          "ElementDefinition.base.max": {
+            "value": "*"
+          }
+        },
+        "ElementDefinition.type": [
+          {
+            "ElementDefinition.type.code": {
+              "value": "Reference"
+            },
+            "ElementDefinition.type.profile": [
+              {
+                "value": "http://hl7.org/fhir/StructureDefinition/Observation"
+              }
+            ]
+          }
+        ],
+        "ElementDefinition.isModifier": {
+          "value": false
+        }
+      },
+      {
+        "ElementDefinition.path": {
+          "value": "DiagnosticReport.result"
+        },
+        "ElementDefinition.name": {
+          "value": "Cholesterol"
+        },
+        "ElementDefinition.short": {
+          "value": "Cholesterol Result"
+        },
+        "ElementDefinition.definition": {
+          "value": "Reference to Cholesterol Result."
+        },
+        "ElementDefinition.min": {
+          "value": 1
+        },
+        "ElementDefinition.max": {
+          "value": "1"
+        },
+        "ElementDefinition.base": {
+          "ElementDefinition.base.path": {
+            "value": "DiagnosticReport.result"
+          },
+          "ElementDefinition.base.min": {
+            "value": 0
+          },
+          "ElementDefinition.base.max": {
+            "value": "*"
+          }
+        },
+        "ElementDefinition.type": [
+          {
+            "ElementDefinition.type.code": {
+              "value": "Reference"
+            },
+            "ElementDefinition.type.profile": [
+              {
+                "value": "http://hl7.org/fhir/StructureDefinition/cholesterol"
+              }
+            ]
+          }
+        ],
+        "ElementDefinition.isModifier": {
+          "value": false
+        }
+      },
+      {
+        "ElementDefinition.path": {
+          "value": "DiagnosticReport.result"
+        },
+        "ElementDefinition.name": {
+          "value": "Triglyceride"
+        },
+        "ElementDefinition.short": {
+          "value": "Triglyceride Result"
+        },
+        "ElementDefinition.definition": {
+          "value": "Group of elements for Triglyceride result."
+        },
+        "ElementDefinition.min": {
+          "value": 1
+        },
+        "ElementDefinition.max": {
+          "value": "1"
+        },
+        "ElementDefinition.base": {
+          "ElementDefinition.base.path": {
+            "value": "DiagnosticReport.result"
+          },
+          "ElementDefinition.base.min": {
+            "value": 0
+          },
+          "ElementDefinition.base.max": {
+            "value": "*"
+          }
+        },
+        "ElementDefinition.type": [
+          {
+            "ElementDefinition.type.code": {
+              "value": "Reference"
+            },
+            "ElementDefinition.type.profile": [
+              {
+                "value": "http://hl7.org/fhir/StructureDefinition/triglyceride"
+              }
+            ]
+          }
+        ],
+        "ElementDefinition.isModifier": {
+          "value": false
+        }
+      },
+      {
+        "ElementDefinition.path": {
+          "value": "DiagnosticReport.result"
+        },
+        "ElementDefinition.name": {
+          "value": "HDL Cholesterol"
+        },
+        "ElementDefinition.short": {
+          "value": "HDL Cholesterol Result"
+        },
+        "ElementDefinition.definition": {
+          "value": "Group of elements for HDL Cholesterol result."
+        },
+        "ElementDefinition.min": {
+          "value": 1
+        },
+        "ElementDefinition.max": {
+          "value": "1"
+        },
+        "ElementDefinition.base": {
+          "ElementDefinition.base.path": {
+            "value": "DiagnosticReport.result"
+          },
+          "ElementDefinition.base.min": {
+            "value": 0
+          },
+          "ElementDefinition.base.max": {
+            "value": "*"
+          }
+        },
+        "ElementDefinition.type": [
+          {
+            "ElementDefinition.type.code": {
+              "value": "Reference"
+            },
+            "ElementDefinition.type.profile": [
+              {
+                "value": "http://hl7.org/fhir/StructureDefinition/hdlcholesterol"
+              }
+            ]
+          }
+        ],
+        "ElementDefinition.isModifier": {
+          "value": false
+        }
+      },
+      {
+        "ElementDefinition.path": {
+          "value": "DiagnosticReport.result"
+        },
+        "ElementDefinition.name": {
+          "value": "LDL Cholesterol"
+        },
+        "ElementDefinition.short": {
+          "value": "LDL Cholesterol result, if reported"
+        },
+        "ElementDefinition.definition": {
+          "value": "LDL Cholesterol result, if reported."
+        },
+        "ElementDefinition.min": {
+          "value": 0
+        },
+        "ElementDefinition.max": {
+          "value": "1"
+        },
+        "ElementDefinition.base": {
+          "ElementDefinition.base.path": {
+            "value": "DiagnosticReport.result"
+          },
+          "ElementDefinition.base.min": {
+            "value": 0
+          },
+          "ElementDefinition.base.max": {
+            "value": "*"
+          }
+        },
+        "ElementDefinition.type": [
+          {
+            "ElementDefinition.type.code": {
+              "value": "Reference"
+            },
+            "ElementDefinition.type.profile": [
+              {
+                "value": "http://hl7.org/fhir/StructureDefinition/ldlcholesterol"
+              }
+            ]
+          }
+        ],
+        "ElementDefinition.isModifier": {
+          "value": false
+        }
+      },
+      {
+        "ElementDefinition.path": {
+          "value": "DiagnosticReport.conclusion"
+        },
+        "ElementDefinition.short": {
+          "value": "Clinical Interpretation of Lipid Panel"
+        },
+        "ElementDefinition.definition": {
+          "value": "May include diagnosis or suggestions for follow up testing."
+        },
+        "ElementDefinition.comments": {
+          "value": "It's not unusual for the lab to make some kind of interpretative comment on the set of results."
+        },
+        "ElementDefinition.min": {
+          "value": 0
+        },
+        "ElementDefinition.max": {
+          "value": "1"
+        },
+        "ElementDefinition.base": {
+          "ElementDefinition.base.path": {
+            "value": "DiagnosticReport.conclusion"
+          },
+          "ElementDefinition.base.min": {
+            "value": 0
+          },
+          "ElementDefinition.base.max": {
+            "value": "1"
+          }
+        },
+        "ElementDefinition.type": [
+          {
+            "ElementDefinition.type.code": {
+              "value": "string"
+            }
+          }
+        ],
+        "ElementDefinition.isModifier": {
+          "value": false
+        }
+      },
+      {
+        "ElementDefinition.path": {
+          "value": "DiagnosticReport.representation"
+        },
+        "ElementDefinition.short": {
+          "value": "Entire Report as issued"
+        },
+        "ElementDefinition.definition": {
+          "value": "Rich text representation of the entire result as issued by the diagnostic service. Multiple formats are allowed but they SHALL be semantically equivalent."
+        },
+        "ElementDefinition.comments": {
+          "value": "Possible formats: text/html, text/plain, text/rtf, application/msword, application/pdf, application/rtf, application/vnd.oasis.opendocument.text, application/vnd.openxmlformats-officedocument.wordprocessingml.document. Application/pdf is recommended as the most reliable and interoperable in this context."
+        },
+        "ElementDefinition.min": {
+          "value": 0
+        },
+        "ElementDefinition.max": {
+          "value": "*"
+        },
+        "ElementDefinition.base": {
+          "ElementDefinition.base.path": {
+            "value": "DiagnosticReport.representation"
+          },
+          "ElementDefinition.base.min": {
+            "value": 0
+          },
+          "ElementDefinition.base.max": {
+            "value": "*"
+          }
+        },
+        "ElementDefinition.type": [
+          {
+            "ElementDefinition.type.code": {
+              "value": "Attachment"
+            }
+          }
+        ],
+        "ElementDefinition.isModifier": {
+          "value": false
+        }
+      }
+    ]
+  }
+}

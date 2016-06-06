@@ -1,0 +1,68 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Condition",
+  "resourceType": "Condition",
+  "Resource.id": {
+    "value": "cond-uslab-example1"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: cond-uslab-example1</p><p><b>patient</b>: <a>Todd Lerr</a></p><p><b>code</b>: Increased lead level <span>(Details : {SNOMED CT code '407152001' = 'Increased blood lead level (finding)', given as 'Increased blood lead level'})</span></p><p><b>category</b>: Diagnosis <span>(Details : {http://hl7.org/fhir/condition-category code 'diagnosis' = 'Diagnosis', given as 'Diagnosis'})</span></p><p><b>verificationStatus</b>: provisional</p><p><b>note</b>: Elevated lead levels on screening</p></div>"
+    }
+  },
+  "Condition.patient": {
+    "Reference.reference": {
+      "value": "Patient/patient-uslab-example1"
+    },
+    "Reference.display": {
+      "value": "Todd Lerr"
+    },
+    "reference": "http://hl7.org/fhir//Patient/patient-uslab-example1"
+  },
+  "Condition.code": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://snomed.info/sct"
+        },
+        "Coding.code": {
+          "value": "407152001"
+        },
+        "Coding.display": {
+          "value": "Increased blood lead level"
+        }
+      }
+    ],
+    "CodeableConcept.text": {
+      "value": "Increased lead level"
+    },
+    "concept": "http://snomed.info/sct#407152001"
+  },
+  "Condition.category": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/condition-category"
+        },
+        "Coding.code": {
+          "value": "diagnosis"
+        },
+        "Coding.display": {
+          "value": "Diagnosis"
+        }
+      }
+    ]
+  },
+  "Condition.verificationStatus": {
+    "value": "provisional"
+  },
+  "Condition.note": [
+    {
+      "Annotation.text": {
+        "value": "Elevated lead levels on screening"
+      }
+    }
+  ]
+}

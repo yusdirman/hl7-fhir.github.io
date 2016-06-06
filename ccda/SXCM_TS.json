@@ -1,0 +1,48 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "SXCM_TS",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+      "valueUri": "urn:hl7-org:v3"
+    }
+  ],
+  "url": "http://hl7.org/fhir/StructureDefinition/SXCM_TS",
+  "name": "V3 Data type SXCM_TS (GeneralTimingSpecification)",
+  "display": "V3 Data type SXCM_TS (GeneralTimingSpecification)",
+  "status": "active",
+  "experimental": false,
+  "publisher": "HL7",
+  "description": "A set of points in time, specifying the timing of events and actions and the cyclical validity-patterns that may exist for certain kinds of information, such as phone numbers (evening, daytime), addresses (so called \"snowbirds,\" residing closer to the equator during winter and farther from the equator during summer) and office hours.",
+  "kind": "logical",
+  "abstract": true,
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/TS",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "path": "SXCM_TS",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "SXCM_TS.operator",
+        "representation": [
+          "xmlAttr"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      }
+    ]
+  }
+}

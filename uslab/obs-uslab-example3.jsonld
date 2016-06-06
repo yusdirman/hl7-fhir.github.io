@@ -1,0 +1,125 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Observation",
+  "resourceType": "Observation",
+  "Resource.id": {
+    "value": "obs-uslab-example3"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: obs-uslab-example3</p><p><b>identifier</b>: lab test result ID = 3456 (OFFICIAL)</p><p><b>status</b>: final</p><p><b>code</b>: Miscellaneous Culture <span>(Details : {LOINC code '6463-4' = 'Bacteria identified in Unspecified specimen by Culture', given as 'Bacteria identified in Unspecified specimen by Culture'}; {urn:oid:2.16.840.1.113883.3.72.5.24 code 'MSCBACT' = '??', given as 'Misc Culture'})</span></p><p><b>subject</b>: <a>Todd Lerr</a></p><p><b>effective</b>: Dec 5, 2014</p><p><b>issued</b>: Dec 6, 2014 3:42:15 PM</p><p><b>performer</b>: <a>Dr Leonard T Bloodraw Jr</a></p><p><b>value</b>: Moderate Growth of gram-positive cocci bacteria</p><p><b>interpretation</b>: Abnormal <span>(Details : {http://hl7.org/fhir/v2/0078 code 'A' = 'Abnormal)</span></p><p><b>specimen</b>: <a>Blood sample</a></p></div>"
+    }
+  },
+  "DomainResource.extension": [
+    {
+      "Extension.url": {
+        "value": "http://hl7.org/fhir/StructureDefinition/uslab-observationkind"
+      },
+      "Extension.valueCode": {
+        "value": "result"
+      }
+    }
+  ],
+  "Observation.identifier": [
+    {
+      "Identifier.use": {
+        "value": "official"
+      },
+      "Identifier.type": {
+        "CodeableConcept.text": {
+          "value": "lab test result ID"
+        }
+      },
+      "Identifier.system": {
+        "value": "http://lis.acmelabs.org/identifiers/labtestresult"
+      },
+      "Identifier.value": {
+        "value": "3456"
+      }
+    }
+  ],
+  "Observation.status": {
+    "value": "final"
+  },
+  "Observation.code": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://loinc.org"
+        },
+        "Coding.code": {
+          "value": "6463-4"
+        },
+        "Coding.display": {
+          "value": "Bacteria identified in Unspecified specimen by Culture"
+        }
+      },
+      {
+        "Coding.system": {
+          "value": "urn:oid:2.16.840.1.113883.3.72.5.24"
+        },
+        "Coding.code": {
+          "value": "MSCBACT"
+        },
+        "Coding.display": {
+          "value": "Misc Culture"
+        }
+      }
+    ],
+    "CodeableConcept.text": {
+      "value": "Miscellaneous Culture"
+    },
+    "concept": "http://loinc.org/owl#6463-4"
+  },
+  "Observation.subject": {
+    "Reference.reference": {
+      "value": "Patient/patient-uslab-example1"
+    },
+    "Reference.display": {
+      "value": "Todd Lerr"
+    },
+    "reference": "http://hl7.org/fhir//Patient/patient-uslab-example1"
+  },
+  "Observation.effectiveDateTime": {
+    "value": "2014-12-05"
+  },
+  "Observation.issued": {
+    "value": "2014-12-06T15:42:15-08:00"
+  },
+  "Observation.performer": [
+    {
+      "Reference.reference": {
+        "value": "Practitioner/pract-uslab-example1"
+      },
+      "Reference.display": {
+        "value": "Dr Leonard T Bloodraw Jr"
+      }
+    }
+  ],
+  "Observation.valueString": {
+    "value": "Moderate Growth of gram-positive cocci bacteria"
+  },
+  "Observation.interpretation": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/v2/0078"
+        },
+        "Coding.code": {
+          "value": "A"
+        }
+      }
+    ]
+  },
+  "Observation.specimen": {
+    "Reference.reference": {
+      "value": "Specimen/spec-uslab-example1"
+    },
+    "Reference.display": {
+      "value": "Blood sample"
+    },
+    "reference": "http://hl7.org/fhir//Specimen/spec-uslab-example1"
+  }
+}

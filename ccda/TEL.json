@@ -1,0 +1,198 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "TEL",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+      "valueUri": "urn:hl7-org:v3"
+    }
+  ],
+  "url": "http://hl7.org/fhir/StructureDefinition/TEL",
+  "name": "V3 Data type TEL (TelecommunicationAddress)",
+  "display": "V3 Data type TEL (TelecommunicationAddress)",
+  "status": "active",
+  "experimental": false,
+  "publisher": "HL7",
+  "description": "A telephone number (voice or fax), e-mail address, or other locator for a resource mediated by telecommunication equipment. The address is specified as a Universal Resource Locator (URL) qualified by time specification and use codes that help in deciding which address to use for a given time and purpose.",
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/ANY",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "path": "TEL",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "TEL.nullFlavor",
+        "representation": [
+          "xmlAttr"
+        ],
+        "label": "Exceptional Value Detail",
+        "definition": "If a value is an exceptional value (NULL-value), this specifies in what way and why proper information is missing.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/v3-NullFlavor"
+          }
+        }
+      },
+      {
+        "path": "TEL.value",
+        "representation": [
+          "xmlAttr"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "uri"
+          }
+        ]
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-defaulttype",
+            "valueString": "SXPR_TS"
+          }
+        ],
+        "path": "TEL.useablePeriod",
+        "representation": [
+          "typeAttr"
+        ],
+        "label": "Useable Period",
+        "definition": "Specifies the periods of time during which the telecommunication address can be used. For a telephone number, this can indicate the time of day in which the party can be reached on that telephone. For a web address, it may specify a time range in which the web content is promised to be available under the given address.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "IVL_TS"
+          },
+          {
+            "code": "EIVL_TS"
+          },
+          {
+            "code": "PIVL_TS"
+          },
+          {
+            "code": "SXPR_TS"
+          }
+        ]
+      },
+      {
+        "path": "TEL.use",
+        "representation": [
+          "xmlAttr"
+        ],
+        "label": "Use Code",
+        "definition": "One or more codes advising a system or user which telecommunication address in a set of like addresses to select for a given telecommunication need.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/v3-AddressUse"
+          }
+        }
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "path": "TEL",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "TEL.value",
+        "representation": [
+          "xmlAttr"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "uri"
+          }
+        ]
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-defaulttype",
+            "valueString": "SXPR_TS"
+          }
+        ],
+        "path": "TEL.useablePeriod",
+        "representation": [
+          "typeAttr"
+        ],
+        "label": "Useable Period",
+        "definition": "Specifies the periods of time during which the telecommunication address can be used. For a telephone number, this can indicate the time of day in which the party can be reached on that telephone. For a web address, it may specify a time range in which the web content is promised to be available under the given address.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "IVL_TS"
+          },
+          {
+            "code": "EIVL_TS"
+          },
+          {
+            "code": "PIVL_TS"
+          },
+          {
+            "code": "SXPR_TS"
+          }
+        ]
+      },
+      {
+        "path": "TEL.use",
+        "representation": [
+          "xmlAttr"
+        ],
+        "label": "Use Code",
+        "definition": "One or more codes advising a system or user which telecommunication address in a set of like addresses to select for a given telecommunication need.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/v3-AddressUse"
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Immunization",
+  "resourceType": "Immunization",
+  "Resource.id": {
+    "value": "notGiven"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: notGiven</p><p><b>status</b>: completed</p><p><b>date</b>: Jan 10, 2013</p><p><b>vaccineCode</b>: DTP <span>(Details : {http://hl7.org/fhir/sid/cvx code '01' = '??', given as 'DTP'})</span></p><p><b>patient</b>: <a>Patient/example</a></p><p><b>wasNotGiven</b>: true</p><p><b>reported</b>: false</p><h3>Explanations</h3><table><tr><td>-</td><td><b>ReasonNotGiven</b></td></tr><tr><td>*</td><td>medical precaution <span>(Details : {http://hl7.org/fhir/v3/ActReason code 'MEDPREC' = 'medical precaution', given as 'medical precaution'})</span></td></tr></table></div>"
+    }
+  },
+  "Immunization.status": {
+    "value": "completed"
+  },
+  "Immunization.date": {
+    "value": "2013-01-10"
+  },
+  "Immunization.vaccineCode": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://hl7.org/fhir/sid/cvx"
+        },
+        "Coding.code": {
+          "value": "01"
+        },
+        "Coding.display": {
+          "value": "DTP"
+        }
+      }
+    ]
+  },
+  "Immunization.patient": {
+    "Reference.reference": {
+      "value": "Patient/example"
+    },
+    "reference": "http://hl7.org/fhir//Patient/example"
+  },
+  "Immunization.wasNotGiven": {
+    "value": true
+  },
+  "Immunization.reported": {
+    "value": false
+  },
+  "Immunization.explanation": {
+    "Immunization.explanation.reasonNotGiven": [
+      {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://hl7.org/fhir/v3/ActReason"
+            },
+            "Coding.code": {
+              "value": "MEDPREC"
+            },
+            "Coding.display": {
+              "value": "medical precaution"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

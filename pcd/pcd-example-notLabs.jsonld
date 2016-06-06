@@ -1,0 +1,156 @@
+{
+  "@context": "http://hl7.org/fhir/jsonld/Contract",
+  "resourceType": "Contract",
+  "Resource.id": {
+    "value": "pcd-example-notLabs"
+  },
+  "DomainResource.text": {
+    "Narrative.status": {
+      "value": "generated"
+    },
+    "Narrative.div": {
+      "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">The following scenario is based on existing jurisdictional policy and are realized in existing systems in Canada. \n\tThe default policy is one of implied consent for the provision of care, so these scenarios all deal with withdrawal or withholding consent for that purpose. \n\tIn other jurisdictions, where an express consent model is used (Opt-In), these would examples would contain the phrase &quot;consent to&quot; rather \n\tthan &quot;withhold&quot; or &quot;withdraw&quot; consent for.\n    <p>\n\tspecific to use-case 1. Withhold or withdraw consent for disclosure of records related to specific domain (e.g. DI, LAB, etc.)\n\t</p><p>\n    Patient &quot;P. van de Heuvel&quot; wishes to withhold disclosure of all of her lab orders and results to any provider. \n   </p>\n   </div>"
+    }
+  },
+  "Contract.issued": {
+    "value": "2014-08-17"
+  },
+  "Contract.subject": [
+    {
+      "Reference.reference": {
+        "value": "Patient/f001"
+      },
+      "Reference.display": {
+        "value": "P. van de Heuvel"
+      }
+    }
+  ],
+  "Contract.authority": [
+    {
+      "Reference.reference": {
+        "value": "Organization/Infoway"
+      },
+      "Reference.display": {
+        "value": "Canada Infoway"
+      }
+    }
+  ],
+  "Contract.domain": [
+    {
+      "Reference.reference": {
+        "value": "Location/Infoway"
+      },
+      "Reference.display": {
+        "value": "Canada Infoway"
+      }
+    }
+  ],
+  "Contract.type": {
+    "CodeableConcept.coding": [
+      {
+        "Coding.system": {
+          "value": "http://loinc.org"
+        },
+        "Coding.code": {
+          "value": "57016-8"
+        }
+      }
+    ],
+    "concept": "http://loinc.org/owl#57016-8"
+  },
+  "Contract.subType": [
+    {
+      "CodeableConcept.coding": [
+        {
+          "Coding.system": {
+            "value": "http://www.infoway-inforoute.ca.org/Consent-subtype-codes"
+          },
+          "Coding.code": {
+            "value": "Opt-In"
+          },
+          "Coding.display": {
+            "value": "Default Authorization with exceptions."
+          }
+        }
+      ]
+    }
+  ],
+  "Contract.term": [
+    {
+      "Contract.term.type": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://hl7.org/fhir/consent-term-type-codes"
+            },
+            "Coding.code": {
+              "value": "withhold-object-type"
+            }
+          }
+        ]
+      },
+      "Contract.term.subType": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://hl7.org/fhir/resource-types"
+            },
+            "Coding.code": {
+              "value": "Order"
+            }
+          }
+        ]
+      },
+      "Contract.term.text": {
+        "value": "Withhold orders from any provider."
+      }
+    },
+    {
+      "Contract.term.type": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://hl7.org/fhir/consent-term-type-codes"
+            },
+            "Coding.code": {
+              "value": "withhold-object-type"
+            }
+          }
+        ]
+      },
+      "Contract.term.subType": {
+        "CodeableConcept.coding": [
+          {
+            "Coding.system": {
+              "value": "http://hl7.org/fhir/resource-types"
+            },
+            "Coding.code": {
+              "value": "OrderResponse"
+            }
+          }
+        ]
+      },
+      "Contract.term.text": {
+        "value": "Withhold order results from any provider."
+      }
+    }
+  ],
+  "Contract.friendly": [
+    {
+      "Contract.friendly.contentAttachment": {
+        "Attachment.title": {
+          "value": "The terms of the consent in friendly consumer speak."
+        }
+      }
+    }
+  ],
+  "Contract.legal": [
+    {
+      "Contract.legal.contentAttachment": {
+        "Attachment.title": {
+          "value": "The terms of the consent in lawyer speak."
+        }
+      }
+    }
+  ]
+}
